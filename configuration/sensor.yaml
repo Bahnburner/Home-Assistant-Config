@@ -1,0 +1,34 @@
+- platform: darksky
+  api_key: !secret darksky
+  monitored_conditions:
+    - icon
+    - summary
+    - precip_intensity
+    - precip_probability
+    - temperature
+    - temperature_max
+    - temperature_min
+- platform: template
+  sensors:
+    current_activity:
+      friendly_name: 'Current Activity'
+      value_template: '{{ states.remote.living_room.attributes.current_activity }}'
+    hallway_light:
+      value_template: '{{ states.light.pantry.attributes.brightness }}'
+    floor_lamp:
+      value_template: '{{ states.light.floor_lamp.attributes.brightness }}'
+    color_temp_lr:
+      value_template: '{{ states.light.floor_lamp.attributes.color_temp }}'
+    color_temp_br:
+      value_template: '{{ states.light.tristans_nightstand.attributes.color_temp }}'
+#- platform: command_line
+#  name: CPU Temperature
+#  command: "cat /sys/class/thermal/thermal_zone0/temp"
+#  value_template: '{{ value | multiply(0.0018) | round(1) +32 }}'
+#  unit_of_measurement: "°F"
+#- platform: systemmonitor
+#  resources:
+#    - type: disk_use_percent
+#      arg: /
+#    - type: memory_use_percent
+#    - type: processor_use
