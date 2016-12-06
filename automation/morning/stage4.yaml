@@ -1,4 +1,4 @@
-alias: Morning Routine - Livingroom
+alias: Morning - Stage 4
 hide_entity: True
 trigger:
   platform: time
