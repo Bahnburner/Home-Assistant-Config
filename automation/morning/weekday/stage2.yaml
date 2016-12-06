@@ -28,32 +28,3 @@ action:
     data:
       color_temp: 250
       brightness: 254
-      
-alias: Morning - Weekend - Stage 2
-hide_entity: True
-trigger:
-  platform: time
-  after: '08:30:00'
-condition:
-  condition: and
-  conditions:
-  - condition: time
-    weekday:
-      - sat
-      - sun
-  - condition: state
-    entity_id: group.tristal
-    state: 'home'
-action:
-  - service: light.turn_on
-    entity_id: group.master_bedroom
-    data:
-      color_temp: 250
-      brightness: 254
-      transition: 1800
-  - service: light.turn_on
-    entity_id: group.living_room_lights
-    data:
-      color_temp: 250
-      brightness: 254
-
