@@ -1,0 +1,5 @@
+platform: myq
+name: Garage Door
+username: !secret myq_user
+password: !secret myq_pass
+brand: chamberlain
