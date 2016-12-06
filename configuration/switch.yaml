@@ -1,0 +1,27 @@
+- platform: template
+  switches:
+    vacation_mode:
+      value_template: "{{ states.group.vacation_mode.state == 'off' }}"
+      turn_on:
+        service: automation.turn_off
+        entity_id: group.vacation_mode
+      turn_off:
+        service: automation.turn_on
+        entity_id: group.vacation_mode
+    routines:
+      value_template: "{{ states.group.routines.state == 'off' }}"
+      turn_on:
+        service: automation.turn_off
+        entity_id: group.routines
+      turn_off:
+        - service: automation.turn_on
+          entity_id: group.routines
+        - service: automation.turn_off
+          entity_id: group.simulate_presence
+- platform: mqtt
+  name: 'Christmas Lights'
+  state_topic: "smartthings/Christmas Lights/switch"
+  command_topic: "smartthings/Christmas Lights/switch"
+  payload_on: "on"
+  payload_off: "off"
+  retain: true
