@@ -1,0 +1,32 @@
+alias: Morning Routine - Livingroom
+hide_entity: True
+trigger:
+  platform: time
+  after: '9:30:00'
+condition:
+  condition: and
+  conditions:
+  - condition: state
+    entity_id: group.family
+    state: 'home'
+  - condition: state
+    entity_id: light.floor_lamp
+    state: 'on'
+  - condition: template
+    value_template: '{{ states.light.floor_lamp.attributes.color_temp == 250 }}'
+action:
+  - service: light.turn_on
+    entity_id: group.living_room_lights
+    data:
+      color_temp: 366
+      brightness: 254
+      transition: 1800
+  - condition: state
+    entity_id: light.tristans_nightstand
+    state: 'on'
+  - service: light.turn_on  
+    entity_id: group.master_bedroom
+    data:
+      color_temp: 366
+      brightness: 254
+      transition: 1800
