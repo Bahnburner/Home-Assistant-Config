@@ -1,0 +1,18 @@
+switch.vacation_mode:
+  friendly_name: 'Vacation Mode'
+  icon: mdi:airplane
+switch.routines:
+  friendly_name: 'Disable All Automations'
+  icon: mdi:power
+switch.door_front:
+  friendly_name: 'Front Door'
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/kevo.jpg  
+switch.door_rear:
+  friendly_name: 'Back Door'
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/kevo.jpg
+switch.kevo_rear_hidden:
+  hidden: true
+switch.kevo_front_hidden:
+  hidden: true  
+switch.christmas_lights:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/tree.png
