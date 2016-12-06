@@ -1,0 +1,276 @@
+# SENSORS
+    sun.sun:
+      hidden: true
+    sensor.dark_sky_icon:
+      hidden: true
+    sensor.dark_sky_temperature:
+      friendly_name: 'Current'
+    sensor.dark_sky_summary:
+      friendly_name: 'Forecast'
+    sensor.dark_sky_precip_probability:
+      friendly_name: 'Chance of Precipitation'
+    sensor.dark_sky_precip_intensity:
+      friendly_name: 'Rain Gauge'
+      hidden: true
+    sensor.dark_sky_daily_high_temperature:
+      friendly_name: 'High'
+    sensor.dark_sky_daily_low_temperature:
+      friendly_name: 'Low'
+    sensor.dark_sky_precip:
+      friendly_name: 'Precipitation Type'
+    sensor.downstairs_temperature:
+      friendly_name: 'Downstairs Temperature'
+    sensor.upstairs_temperature:
+      friendly_name: 'Upstairs Temperature'
+    sensor.harmony_living_room:
+      hidden: true
+    sensor.current_activity:
+      hidden: false
+      entity_picture: http://wreckage.johndenverschoolofflight.com/hass/harmony.png
+      friendly_name: "Current Activity"
+    sensor.hallway_light:
+      hidden: true
+    sensor.floor_lamp:
+      hidden: true
+    sensor.color_temp_lr:
+      hidden: true
+    sensor.color_temp_br:
+      hidden: true
+    sensor.cpu_temperature:
+      friendly_name: 'CPU Temp'
+    sensor.cpu_use:
+      friendly_name: 'CPU Usage'
+    sensor.disk_use_:
+      friendly_name: 'Disk Usage'
+    sensor.ram_use:
+      friendly_name: 'RAM Usage'
+    sensor.door_status_front:
+      hidden: true
+    sensor.door_status_rear:
+      hidden: true
+    sensor.downstairs_nest_protect_battery_health:
+      hidden: true
+    sensor.downstairs_nest_protect_co_status:
+      hidden: true
+    sensor.downstairs_nest_protect_smoke_status:
+      hidden: true
+    sensor.downstairs_thermostat_humidity:
+      hidden: true
+    sensor.downstairs_thermostat_operation_mode:
+      hidden: true
+    sensor.downstairs_thermostat_target:
+      hidden: true
+    sensor.downstairs_thermostat_temperature:
+      hidden: true
+    sensor.upstairs_nest_protect_battery_health:
+      hidden: true
+    sensor.upstairs_nest_protect_co_status:
+      hidden: true
+    sensor.upstairs_nest_protect_smoke_status:
+      hidden: true
+    sensor.upstairs_thermostat_humidity:
+      hidden: true
+    sensor.upstairs_thermostat_operation_mode:
+      hidden: true
+    sensor.upstairs_thermostat_target:
+      hidden: true
+    sensor.upstairs_thermostat_temperature:
+      hidden: true
+    binary_sensor.downstairs_nest_protect_online:
+      hidden: true
+    binary_sensor.downstairs_thermostat_fan:
+      hidden: true
+    binary_sensor.downstairs_thermostat_has_leaf:
+      hidden: true
+    binary_sensor.downstairs_thermostat_is_locked:
+      hidden: true
+    binary_sensor.downstairs_thermostat_is_using_emergency_heat:
+      hidden: true
+    binary_sensor.downstairs_thermostat_online:
+      hidden: true
+    binary_sensor.upstairs_nest_protect_online:
+      hidden: true
+    binary_sensor.upstairs_thermostat_fan:
+      hidden: true
+    binary_sensor.upstairs_thermostat_has_leaf:
+      hidden: true
+    binary_sensor.upstairs_thermostat_is_locked:
+      hidden: true
+    binary_sensor.upstairs_thermostat_is_using_emergency_heat:
+      hidden: true
+    binary_sensor.upstairs_thermostat_online:
+      hidden: true
+
+# CLIMATE
+    climate.downstairs:
+      entity_picture: http://wreckage.johndenverschoolofflight.com/hass/nest.png
+      min_temp: 55
+      max_temp: 80
+      unit_of_measurement: °F
+    climate.upstairs:
+      entity_picture: http://wreckage.johndenverschoolofflight.com/hass/nest.png
+      min_temp: 55
+      max_temp: 80
+      unit_of_measurement: °F
+
+# LIGHTS
+    light.floor_lamp:
+      entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+    light.table_lamp:
+      entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+    light.tristans_nightstand:
+      entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+    light.crystals_nightstand:
+      entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+    light.pantry:
+      entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+    light.front_door:
+      entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+    light.cabinet_lights:
+      entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+    light.dining_room_left:
+      entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+      hidden: false
+    light.dining_room_right:
+      entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+      hidden: false
+    light.foyer_left:
+      entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+      hidden: false
+    light.foyer_right:
+      entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+      hidden: false
+    light.master_hallway_left:
+      entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+      hidden: false
+    light.master_hallway_right:
+      entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+      hidden: false
+    light.stairway:
+      entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+      hidden: false
+
+# GROUPS
+    group.living_room:
+      friendly_name: 'Living Room'
+    group.all_garage_doors:
+      friendly_name: 'Garage'
+    group.family:
+      friendly_name: 'Family'
+    group.tristal:
+      hidden: true
+    group.living_room_lights:
+      hidden: true
+    group.master_bedroom_lights:
+      hidden: true
+    group.inputs:
+      hidden: true
+    group.override:
+      friendly_name: 'Automation Override'
+    group.simulate_presence:
+      friendly_name: 'Simulate Presence'
+      icon: mdi:account-multiple
+    group.master_bedroom:
+      friendly_name: 'Master Bedroom'
+    group.gtg:
+      hidden: true
+    group.system_monitor:
+      friendly_name: 'System Monitor' 
+    group.dining_room:
+      friendly_name: 'Dining Room'
+    group.master_hallway:
+      friendly_name: 'Master Hallway'
+    group.door_locks:
+      friendly_name: 'Door Locks'
+     
+    
+# SCRIPTS
+    script.go_tigers_go:
+      hidden: true
+    script.timer_off:
+      hidden: true
+    script.open_the_garage:
+      hidden: true
+    script.close_the_garage:
+      hidden: true
+    script.goodnight:
+      hidden: true
+    script.goodbye:
+      hidden: true
+    script.pause:
+      hidden: true
+    script.nightlight:
+      hidden: true
+    script.pause_directv:
+      hidden: true
+    script.pause_other:
+      hidden: true
+    script.unpause:
+      hidden: true
+    script.unpause_other:
+      hidden: true
+    script.mute:
+      hidden: true
+    script.who_dat:
+      hidden: true
+    script.christmas:
+      hidden: true
+    script.lock_doors:
+      hidden: true
+    script.unlock_doors:
+      hidden: true
+    script.lock_front_door:
+      hidden: true
+    script.unlock_front_door:
+      hidden: true
+    script.lock_rear_door:
+      hidden: true
+    script.unlock_rear_door:
+      hidden: true
+
+# MEDIA PLAYERS
+    media_player.living_room_home:
+      friendly_name: 'Google Home'
+    media_player.livingroom:
+      friendly_name: 'Living Room'
+      hidden: true
+    media_player.guestroom:
+      friendly_name: 'Guest Room'
+      hidden: true
+    media_player.garage:
+      friendly_name: 'Garage Stereo'
+    media_player.galaxy_s7_edge:
+      hidden: true
+    media_player.multiroom:
+      hidden: true
+    media_player.multiroom_2:
+      hidden: true
+
+# SWITCHES
+    switch.vacation_mode:
+      friendly_name: 'Vacation Mode'
+      icon: mdi:airplane
+    switch.routines:
+      friendly_name: 'Disable All Automations'
+      icon: mdi:power
+    switch.door_front:
+      friendly_name: 'Front Door'
+      entity_picture: http://wreckage.johndenverschoolofflight.com/hass/kevo.jpg  
+    switch.door_rear:
+      friendly_name: 'Back Door'
+      entity_picture: http://wreckage.johndenverschoolofflight.com/hass/kevo.jpg
+    switch.kevo_rear_hidden:
+      hidden: true
+    switch.kevo_front_hidden:
+      hidden: true  
+    switch.christmas_lights:
+      entity_picture: http://wreckage.johndenverschoolofflight.com/hass/tree.png
+
+# MISC
+    cover.garage_door_opener:
+      friendly_name: 'Garage Door'
+      entity_picture: http://wreckage.johndenverschoolofflight.com/hass/garagedoor.jpg
+    cover.myq:
+      hidden: true
+    remote.living_room:
+      hidden: true

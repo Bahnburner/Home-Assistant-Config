@@ -1,0 +1,456 @@
+tristans_phone:
+  name: Tristan
+  mac: 60:F1:89:7C:A8:8D
+  picture: http://wreckage.johndenverschoolofflight.com/hass/Tristan.jpg
+  track: yes
+  hide_if_away: no
+
+crystals_phone:
+  name: Crystal
+  mac: 60:F1:89:1C:03:BB
+  picture: http://wreckage.johndenverschoolofflight.com/hass/Crystal.jpg
+  track: yes
+  hide_if_away: no
+
+erins_phone:
+  name: Erin
+  mac: 24:A0:74:0D:F5:D9
+  picture: http://wreckage.johndenverschoolofflight.com/hass/Erin.jpg
+  track: yes
+  hide_if_away: yes
+
+matts_phone:
+  hide_if_away: true
+  mac: FC:C2:DE:92:C6:CC
+  picture: http://wreckage.johndenverschoolofflight.com/hass/Matt.jpg
+  name: Matt
+  track: yes
+
+taylors_phone:
+  hide_if_away: true
+  mac: 08:74:02:1A:53:B8
+  picture: http://wreckage.johndenverschoolofflight.com/hass/Taylor.jpg
+  name: Taylor
+  track: yes
+  
+donnas_phone:
+  hide_if_away: true
+  mac: 58:7F:57:E9:53:D5
+  name: Donna
+  picture: http://wreckage.johndenverschoolofflight.com/hass/Donna.jpg
+  track: true
+
+##########################################################################################
+
+09aa01ac29150hc8:
+  hide_if_away: false
+  mac: 18:B4:30:1E:58:B3
+  name: 09AA01AC29150HC8
+  picture: null
+  track: false
+
+e0e5cfbc0675:
+  hide_if_away: false
+  mac: E0:E5:CF:BC:06:75
+  name: e0e5cfbc0675
+  picture: null
+  track: false
+
+cc95d7e2fc1e:
+  hide_if_away: false
+  mac: CC:95:D7:E2:FC:1E
+  name: cc95d7e2fc1e
+  picture: null
+  track: false
+
+18b4303a77e6:
+  hide_if_away: false
+  mac: 18:B4:30:3A:77:E6
+  name: 18b4303a77e6
+  picture: null
+  track: false
+
+android493185647aba6dc8:
+  hide_if_away: false
+  mac: AC:22:0B:40:50:45
+  name: android-493185647aba6dc8
+  picture: null
+  track: false
+
+tristansmbp:
+  hide_if_away: false
+  mac: 28:CF:E9:14:3D:ED
+  name: Tristans-MBP
+  picture: null
+  track: false
+
+5cf821af497c:
+  hide_if_away: false
+  mac: 5C:F8:21:AF:49:7C
+  name: 5cf821af497c
+  picture: null
+  track: false
+
+ringdoorbell:
+  hide_if_away: false
+  mac: 00:1D:C9:22:61:21
+  name: RingDoorbell
+  picture: null
+  track: false
+
+theatresmini:
+  hide_if_away: false
+  mac: F8:1E:DF:F6:2A:53
+  name: Theatres-Mini
+  picture: null
+  track: false
+
+philipshue:
+  hide_if_away: false
+  mac: 00:17:88:28:B0:37
+  name: Philips-hue
+  picture: null
+  track: false
+
+raspberrypi:
+  hide_if_away: false
+  mac: B8:27:EB:CB:04:5D
+  name: raspberrypi
+  picture: null
+  track: false
+
+7c72e4903059:
+  hide_if_away: false
+  mac: 7C:72:E4:90:30:59
+  name: 7c72e4903059
+  picture: null
+  track: false
+
+18b4302e0162:
+  hide_if_away: false
+  mac: 18:B4:30:2E:01:62
+  name: 18b4302e0162
+  picture: null
+  track: false
+
+chromecast:
+  hide_if_away: false
+  mac: A4:77:33:FA:68:C2
+  name: Chromecast
+  picture: null
+  track: false
+
+androidaec8ad02acb41c70:
+  hide_if_away: false
+  mac: 08:62:66:0E:54:97
+  name: android-aec8ad02acb41c70
+  picture: null
+  track: false
+
+09aa01ac341516g4:
+  hide_if_away: false
+  mac: 18:B4:30:6D:59:28
+  name: 09AA01AC341516G4
+  picture: null
+  track: false
+
+xboxone:
+  hide_if_away: false
+  mac: 58:82:A8:71:F7:C1
+  name: XboxOne
+  picture: null
+  track: false
+
+harmonyhub:
+  hide_if_away: false
+  mac: 00:04:20:F0:DC:9B
+  name: HarmonyHub
+  picture: null
+  track: false
+
+a47733a30898:
+  hide_if_away: false
+  mac: A4:77:33:A3:08:98
+  name: a47733a30898
+  picture: null
+  track: false
+
+myqed1:
+  hide_if_away: false
+  mac: 64:52:99:23:A6:5A
+  name: MyQ-ED1
+  picture: null
+  track: false
+
+directvhr54ec0da62a:
+  hide_if_away: false
+  mac: CC:4E:EC:0D:A6:29
+  name: DIRECTV-HR54-EC0DA62A
+  picture: null
+  track: false
+
+android2216017f68c14ea2:
+  hide_if_away: false
+  mac: 88:79:7E:C0:21:DA
+  name: android-2216017f68c14ea2
+  picture: null
+  track: false
+
+android7f6d92eee60b60d9:
+  hide_if_away: false
+  mac: 40:88:05:A9:E6:48
+  name: android-7f6d92eee60b60d9
+  picture: null
+  track: false
+
+00367694c1c4:
+  hide_if_away: false
+  mac: 00:36:76:94:C1:C4
+  name: 00367694c1c4
+  picture: null
+  track: false
+
+kindle3cf30d9f4:
+  hide_if_away: false
+  mac: 74:C2:46:F0:A9:76
+  name: kindle-3cf30d9f4
+  picture: null
+  track: false
+
+android709be915fa857fb:
+  hide_if_away: false
+  mac: D0:5B:A8:D4:4A:DF
+  name: android-709be915fa857fb
+  picture: null
+  track: false
+
+iphone:
+  hide_if_away: false
+  mac: 74:8D:08:09:62:B4
+  name: iPhone
+  picture: null
+  track: false
+
+tiffanysiphone:
+  hide_if_away: false
+  mac: A4:B8:05:D1:49:9E
+  name: Tiffanys-iPhone
+  picture: null
+  track: false
+
+kevinsiphone:
+  hide_if_away: false
+  mac: 70:81:EB:E7:76:04
+  name: Kevins-iPhone
+  picture: null
+  track: false
+
+donna:
+  hide_if_away: false
+  mac: AC:E0:10:57:2C:1B
+  name: Donna
+  picture: null
+  track: false
+
+iphone3:
+  hide_if_away: false
+  mac: 6C:40:08:2E:46:A9
+  name: iPhone-3
+  picture: null
+  track: false
+
+f4f5d8b48674:
+  hide_if_away: false
+  mac: F4:F5:D8:B4:86:74
+  name: f4f5d8b48674
+  picture: null
+  track: false
+
+b827eb3e8665:
+  hide_if_away: false
+  mac: B8:27:EB:3E:86:65
+  name: b827eb3e8665
+  picture:
+  track: false
+
+b827eb6bd330:
+  hide_if_away: false
+  mac: B8:27:EB:6B:D3:30
+  name: b827eb6bd330
+  picture:
+  track: false
+
+kevo:
+  hide_if_away: false
+  mac: BLE_C4:BE:84:D7:B4:83
+  name: Kevo
+  picture:
+  track: false
+
+ble_0862660e5496:
+  hide_if_away: false
+  mac: BLE_08:62:66:0E:54:96
+  name: ble 0862660e5496
+  picture:
+  track: false
+
+ble_f4f5d8b48675:
+  hide_if_away: false
+  mac: BLE_F4:F5:D8:B4:86:75
+  name: ble f4f5d8b48675
+  picture:
+  track: false
+
+ble_7b4be12feedd:
+  hide_if_away: false
+  mac: BLE_7B:4B:E1:2F:EE:DD
+  name: ble 7b4be12feedd
+  picture:
+  track: false
+
+ble_a47733a30899:
+  hide_if_away: false
+  mac: BLE_A4:77:33:A3:08:99
+  name: ble a47733a30899
+  picture:
+  track: false
+
+ble_cc0af7c32e4a:
+  hide_if_away: false
+  mac: BLE_CC:0A:F7:C3:2E:4A
+  name: ble cc0af7c32e4a
+  picture:
+  track: false
+
+kevo_2:
+  hide_if_away: false
+  mac: BLE_90:59:AF:18:33:8E
+  name: Kevo
+  picture:
+  track: false
+
+ble_c761dc96290f:
+  hide_if_away: false
+  mac: BLE_C7:61:DC:96:29:0F
+  name: ble c761dc96290f
+  picture:
+  track: false
+
+ble_6919a1ce2672:
+  hide_if_away: false
+  mac: BLE_69:19:A1:CE:26:72
+  name: ble 6919a1ce2672
+  picture:
+  track: false
+
+ble_5e0037314c6a:
+  hide_if_away: false
+  mac: BLE_5E:00:37:31:4C:6A
+  name: ble 5e0037314c6a
+  picture:
+  track: false
+
+ble_5039ef65fc72:
+  hide_if_away: false
+  mac: BLE_50:39:EF:65:FC:72
+  name: ble 5039ef65fc72
+  picture:
+  track: false
+
+ble_767ab7e71cd0:
+  hide_if_away: false
+  mac: BLE_76:7A:B7:E7:1C:D0
+  name: ble 767ab7e71cd0
+  picture:
+  track: false
+
+ble_a47733fa68c3:
+  hide_if_away: false
+  mac: BLE_A4:77:33:FA:68:C3
+  name: ble a47733fa68c3
+  picture:
+  track: false
+
+crystal:
+  hide_if_away: false
+  mac: 00:23:6C:85:7D:A4
+  name: Crystal
+  picture:
+  track: false
+
+theatresmini_2:
+  hide_if_away: false
+  mac: D4:9A:20:D9:10:94
+  name: Theatres-Mini
+  picture:
+  track: false
+
+iphone_2:
+  hide_if_away: false
+  mac: B8:17:C2:10:D0:83
+  name: iPhone
+  picture:
+  track: false
+
+android399aefed30e1b08:
+  hide_if_away: false
+  mac: C0:BD:D1:63:0F:7D
+  name: android-399aefed30e1b08
+  picture:
+  track: false
+
+24fd5b004064:
+  hide_if_away: false
+  mac: 24:FD:5B:00:40:64
+  name: 24fd5b004064
+  picture:
+  track: false
+
+android89e5988762ca3afd:
+  hide_if_away: false
+  mac: 84:10:0D:6A:9F:DD
+  name: android-89e5988762ca3afd
+  picture:
+  track: false
+
+android5d0f1a4fcadcee2b:
+  hide_if_away: false
+  mac: 40:88:05:9D:BE:CE
+  name: android-5d0f1a4fcadcee2b
+  picture:
+  track: false
+
+michellesiphone:
+  hide_if_away: false
+  mac: 08:74:02:52:AD:8E
+  name: MichellesIphone
+  picture:
+  track: false
+
+justinsiphone2:
+  hide_if_away: false
+  mac: 5C:97:F3:40:2B:B7
+  name: JustinsiPhone2
+  picture:
+  track: false
+
+gears2e6b1:
+  hide_if_away: false
+  mac: 4C:66:41:47:E5:34
+  name: GearS2-E6B1
+  picture:
+  track: false
+
+android901d6119b21947fb:
+  hide_if_away: false
+  mac: 2C:0E:3D:89:C6:5C
+  name: android-901d6119b21947fb
+  picture:
+  track: false
+
+androide97de187115fc6:
+  hide_if_away: false
+  mac: AC:5F:3E:DB:C9:9B
+  name: android-e97de187115fc6
+  picture:
+  track: false

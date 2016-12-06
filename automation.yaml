@@ -1,0 +1,1147 @@
+################################################################
+##                        Christmas                           ##
+################################################################
+    
+  - alias: Christmas Lights ON
+    hide_entity: True
+    trigger: 
+      platform: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation }}'
+      below: 5   
+    action:
+      service: switch.turn_on
+      entity_id: switch.christmas_lights
+         
+  - alias: Christmas Lights OFF
+    hide_entity: True
+    trigger:
+      platform: time
+      after: '00:00:00'
+    action:
+      - service: switch.turn_off
+        entity_id: switch.christmas_lights
+
+################################################################
+##                         Morning                            ##
+################################################################
+    
+  - alias: Morning Routine - Bedroom Stage 1
+    hide_entity: True
+    trigger:
+      platform: time
+      after: '07:00:00'
+    condition:
+      condition: and
+      conditions:
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+      - condition: state
+        entity_id: group.tristal
+        state: 'home'
+    action:
+      - service: light.turn_on
+        entity_id: group.master_bedroom
+        data:
+          color_temp: 250
+          brightness: 50
+          transition: 60
+
+  - alias: Morning Routine - Bedroom Stage 2
+    hide_entity: True
+    trigger:
+      platform: time
+      after: '07:30:00'
+    condition:
+      condition: and
+      conditions:
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+      - condition: state
+        entity_id: group.tristal
+        state: 'home'
+    action:
+      - service: light.turn_on
+        entity_id: group.master_bedroom
+        data:
+          color_temp: 250
+          brightness: 254
+          transition: 1800
+      - service: light.turn_on
+        entity_id: group.living_room_lights
+        data:
+          color_temp: 250
+          brightness: 254
+
+  - alias: Morning Routine - Bedroom Stage 3
+    hide_entity: True
+    trigger:
+      platform: time
+      after: '11:00:00'
+    condition:
+      condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+    action:
+      service: light.turn_off
+      entity_id: group.master_bedroom
+
+  - alias: Morning Routine - Livingroom
+    hide_entity: True
+    trigger:
+      platform: time
+      after: '9:30:00'
+    condition:
+      condition: and
+      conditions:
+      - condition: state
+        entity_id: group.family
+        state: 'home'
+      - condition: state
+        entity_id: light.floor_lamp
+        state: 'on'
+      - condition: template
+        value_template: '{{ states.light.floor_lamp.attributes.color_temp == 250 }}'
+    action:
+      - service: light.turn_on
+        entity_id: group.living_room_lights
+        data:
+          color_temp: 366
+          brightness: 254
+          transition: 1800
+      - condition: state
+        entity_id: light.tristans_nightstand
+        state: 'on'
+      - service: light.turn_on  
+        entity_id: group.master_bedroom
+        data:
+          color_temp: 366
+          brightness: 254
+          transition: 1800
+
+  - alias: Morning Routine - Kitchen Hallway
+    hide_entity: True
+    trigger:
+      platform: time
+      after: '07:00:00'
+    condition:
+      condition: state
+      entity_id: group.tristal
+      state: 'home'
+    action:
+      service: light.turn_on
+      entity_id: light.pantry
+      data:
+        brightness: 254
+        transition: 900
+
+################################################################
+##                          Rain                              ##
+################################################################
+
+  - alias: Rain - House Empty - Start
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: sensor.dark_sky_icon
+        state: 'rain'
+      - platform: state
+        entity_id: sun.sun
+        state: 'above_horizon'
+    condition:
+      - condition: state
+        entity_id: sun.sun
+        state: 'above_horizon'
+      - condition: state
+        entity_id: group.living_room
+        state: 'off'
+      - condition: state
+        entity_id: group.family
+        state: 'not_home'
+      - condition: state
+        entity_id: sensor.dark_sky_icon
+        state: 'rain'
+    action:
+      service: light.turn_on
+      entity_id: group.living_room_lights
+      data:
+        color_temp: 366
+        brightness: 150
+        transition: 5
+
+  - alias: Rain - House Empty - Stop
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: sensor.dark_sky_icon
+        from: 'rain'
+    condition:
+      - condition: numeric_state
+        entity_id: sun.sun
+        value_template: '{{ state.attributes.elevation }}'
+        above: 5
+      - condition: state
+        entity_id: group.family
+        state: 'not_home'
+    action:
+      service: light.turn_off
+      entity_id: group.living_room
+      data:
+        transition: 5
+
+  - alias: Rain - House Occupied
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: sensor.dark_sky_icon
+        state: 'rain'
+      - platform: state
+        entity_id: sun.sun
+        state: 'above_horizon'
+    condition:
+      - condition: state
+        entity_id: sun.sun
+        state: 'above_horizon'
+      - condition: state
+        entity_id: group.family
+        state: 'home'
+      - condition: state
+        entity_id: light.floor_lamp
+        state: 'off'
+      - condition: state
+        entity_id: sensor.dark_sky_icon
+        state: 'rain'
+    action:
+      service: light.turn_on
+      entity_id: group.living_room
+      data:
+        color_temp: 366
+        brightness: 254
+        transition: 5
+
+################################################################
+##                       Dawn / Dusk                          ##
+################################################################
+
+  - alias: Sunset - House Empty
+    hide_entity: True
+    trigger:
+      platform: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation }}'
+      below: 5
+    condition:
+      - condition: state
+        entity_id: light.floor_lamp
+        state: 'off'
+      - condition: state
+        entity_id: group.family
+        state: 'not_home'
+    action:
+      service: light.turn_on
+      entity_id: group.living_room
+      data:
+        color_temp: 366
+        brightness: 150
+        transition: 600
+
+  - alias: Sunrise - House Empty
+    hide_entity: True
+    trigger:
+      platform: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation }}'
+      above: 5
+    condition: 
+      condition: state
+      entity_id: group.family
+      state: 'not_home'
+    action:
+      - service: light.turn_off
+        entity_id: group.living_room
+      - service: light.turn_off
+        entity_id: light.pantry
+
+  - alias: Sunset - House Occupied
+    hide_entity: True
+    trigger:
+      platform: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation }}'
+      below: 5
+    condition:
+      condition: state
+      entity_id: group.family
+      state: 'home'
+    action:
+      - service: light.turn_on
+        entity_id: group.living_room
+        data:
+          color_temp: 366
+          brightness: 254
+          transition: 600
+      - service: light.turn_on
+        entity_id: light.pantry
+        data:
+          color_temp: 366
+          brightness: 254
+          transition: 600
+
+################################################################
+##                        AWAY mode                           ##
+################################################################
+
+  - alias: Away Mode - Day
+    hide_entity: True
+    trigger:
+      platform: state
+      entity_id: group.family
+      from: 'home'
+      to: 'not_home'
+    condition:
+      - condition: numeric_state
+        entity_id: sun.sun
+        value_template: '{{ state.attributes.elevation }}'
+        above: 5
+      - condition: template
+        value_template: '{{ states.sensor.dark_sky_icon != rain }}'
+    action:
+      - entity_id: climate.downstairs
+        service: climate.set_away_mode
+        data:
+         away_mode: 'on'
+      - service: light.turn_off
+        entity_id: group.living_room
+      - service: light.turn_off
+        entity_id: light.pantry
+      - service: remote.turn_off
+        entity_id: remote.living_room
+#      - service: ifttt.trigger
+#        data: {"event":"PowerOff"}
+
+  - alias: Away Mode - Rain
+    hide_entity: True
+    trigger:
+      platform: state
+      entity_id: group.family
+      from: 'home'
+      to: 'not_home'
+    condition:
+      - condition: numeric_state
+        entity_id: sun.sun
+        value_template: '{{ state.attributes.elevation }}'
+        above: 5
+      - condition: template
+        value_template: '{{ states.sensor.dark_sky_icon == rain }}'
+    action:
+      - entity_id: climate.downstairs
+        service: climate.set_away_mode
+        data:
+         away_mode: 'on'
+      - service: light.turn_on
+        entity_id: group.living_room
+        data:
+         color_temp: 366
+         brightness: 100
+      - service: light.turn_off
+        entity_id: light.pantry
+      - service: remote.turn_off
+        entity_id: remote.living_room
+#      - service: ifttt.trigger
+#        data: {"event":"PowerOff"}
+
+        
+  - alias: Away Mode - Night
+    hide_entity: True
+    trigger:
+      platform: state
+      entity_id: group.family
+      from: 'home'
+      to: 'not_home'
+    condition:
+      - condition: numeric_state
+        entity_id: sun.sun
+        value_template: '{{ state.attributes.elevation }}'
+        below: 5
+    action:
+      - entity_id: climate.downstairs
+        service: climate.set_away_mode
+        data:
+         away_mode: 'on'
+      - service: light.turn_on
+        entity_id: group.living_room
+        data:
+         color_temp: 366
+         brightness: 100
+      - service: light.turn_off
+        entity_id: light.pantry
+      - service: remote.turn_off
+        entity_id: remote.living_room
+#      - service: ifttt.trigger
+#        data: {"event":"PowerOff"}
+
+
+  - alias: Away Mode - Bedroom
+    hide_entity: True
+    trigger:
+      platform: state
+      entity_id: group.tristal
+      from: 'home'
+      to: 'not_home'
+    action:
+      - service: light.turn_off
+        entity_id: group.master_bedroom
+
+  - alias: Away Mode - General
+    hide_entity: True
+    trigger:
+      platform: state
+      entity_id: group.family
+      from: 'home'
+      to: 'not_home'
+    action:
+      - service: light.turn_off
+        entity_id: group.foyer
+      - service: light.turn_off
+        entity_id: group.master_hallway
+      - service: light.turn_off
+        entity_id: group.dining_room
+      - service: light.turn_off
+        entity_id: group.stairway
+      - service: cover.close_cover
+        entity_id: cover.garage_door_opener
+      - service: script.turn_on
+        entity_id: script.lock_doors
+
+  - alias: Away Mode - Puppies
+    hide_entity: True
+    trigger:
+      platform: state
+      entity_id: group.family
+      from: 'home'
+      to: 'not_home'
+    action:
+      - service: media_player.volume_set
+        entity_id: media_player.living_room_home
+        data: 
+          volume_level: 0.5
+      - service: media_player.play_media
+        entity_id: media_player.living_room_home
+        data:
+          media_content_id: "http://wegr-fm.akacast.akamaistream.net/7/628/20075/v1/auth.akacast.akamaistream.net/wegr-fm"
+          media_content_type: "audio/mp3"
+
+################################################################
+##                        Home Mode                           ##
+################################################################
+
+  - alias: Home Mode - Climate
+    hide_entity: True
+    trigger:
+      platform: state
+      entity_id: group.family
+      from: 'not_home'
+      to: 'home'
+    action:
+      - service: climate.set_away_mode
+        entity_id: climate.downstairs
+        data:
+         away_mode: 'off'
+      - service: light.turn_on
+        entity_id: light.pantry
+        data:
+          brightness: 254        
+
+  - alias: Home Mode - Livingroom
+    hide_entity: True
+    trigger:
+      platform: state
+      entity_id: group.family
+      from: 'not_home'
+      to: 'home'
+    condition:
+      condition: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation }}'
+      below: 5
+    action:
+      - service: light.turn_on
+        entity_id: group.living_room
+        data:
+          color_temp: 366
+          brightness: 254
+      - condition: time
+        after: '22:30:00'
+      - service: light.turn_on
+        entity_id: group.living_room_lights
+        data: 
+          brightness: 250
+          color_temp: 500
+          transition: 1800
+
+  - alias: Home Mode - Bedroom
+    hide_entity: True
+    trigger:
+      platform: state
+      entity_id: group.tristal
+      from: 'not_home'
+      to: 'home'
+    condition:
+      condition: time
+      after: '23:00:00'
+    action:
+      service: light.turn_on
+      entity_id: group.master_bedroom
+      data:
+        brightness: 254
+        color_temp: 500
+
+  - alias: Home Mode - Puppies
+    hide_entity: True
+    trigger:
+      platform: state
+      entity_id: group.family
+      from: 'not_home'
+      to: 'home'
+    action:
+      service: media_player.turn_off
+      entity_id: media_player.living_room_home
+
+################################################################
+##                          Bedtime                           ##
+################################################################
+
+  - alias: Bedtime - Livingroom Lights
+    hide_entity: True
+    trigger:
+      platform: time
+      after: '22:30:00'
+    condition:
+      - condition: state
+        entity_id: group.family
+        state: 'home'
+      - condition: state
+        entity_id: group.living_room_lights
+        state: 'on'
+    action: 
+      service: light.turn_on
+      entity_id: group.living_room_lights
+      data: 
+        color_temp: 500
+        transition: 3600
+
+  - alias: Bedtime - Kitchen Uplighting
+    hide_entity: True
+    trigger:
+      platform: time
+      after: '22:30:00'
+    condition:
+      condition: and
+      conditions:
+        - condition: time
+          weekday:
+            - mon
+            - tue
+            - wed
+            - thu
+            - fri
+        - condition: state
+          entity_id: group.family
+          state: 'home'
+        - condition: state
+          entity_id: light.cabinet_lights
+          state: 'on'
+    action: 
+      service: light.turn_on
+      entity_id: light.cabinet_lights
+      data: 
+        color_temp: 500
+        transition: 3600
+
+  - alias: Bedtime - Bedroom Lights
+    hide_entity: True
+    trigger:
+      platform: time
+      after: '22:30:00'
+    condition:
+      condition: state
+      entity_id: group.tristal
+      state: 'home'
+    action:
+      service: light.turn_on
+      entity_id: group.master_bedroom
+      data:
+        brightness: 150
+        color_temp: 500
+
+################################################################
+##                         Overnight                          ##
+################################################################
+  
+  - alias: Overnight - Kitchen Hallway Dim
+    hide_entity: true
+    trigger:
+      platform: time
+      after: '22:00:00'
+    condition:
+      condition: state
+      entity_id: light.pantry
+      state: 'on'
+    action:
+      service: light.turn_on
+      entity_id: light.pantry
+      data:
+        brightness: 50
+        transition: 30
+        
+  - alias: Overnight - Kitchen Hallway ReDim
+    hide_entity: true
+    trigger:
+      platform: numeric_state
+      entity_id: sensor.hallway_light
+      above: 51
+    condition:
+      condition: or
+      conditions:
+        - condition: time
+          after: '22:00:00'
+        - condition: time  
+          before: '07:00:00'
+    action:
+      - delay:
+          minutes: 5
+      - service: light.turn_on
+        entity_id: light.pantry
+        data:
+          brightness: 50
+          transition: 30
+
+################################################################
+##                     Kitchen Uplighting                     ##
+################################################################
+
+  - alias: Kitchen Uplighting - Weekdays
+    hide_entity: true
+    trigger:
+      - platform: state
+        entity_id: sensor.floor_lamp
+      - platform: state
+        entity_id: group.living_room_lights
+        state: 'on'
+      - platform: state
+        entity_id: group.family
+        to: 'home'
+    condition:
+      condition: and
+      conditions:
+      - condition: state
+        entity_id: group.family
+        state: 'home'
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+      - condition: time
+        after: '05:00:00'
+        before: '22:30:00'
+    action: 
+      - service: light.turn_on
+        entity_id: light.cabinet_lights
+        data:
+          color_temp: 250
+        data_template:
+          brightness: >
+            {{ states.light.floor_lamp.attributes.brightness }}
+
+  - alias: Kitchen Uplighting - Weekday Nights
+    hide_entity: true
+    trigger:
+      - platform: state
+        entity_id: sensor.floor_lamp
+      - platform: state
+        entity_id: group.living_room_lights
+        state: 'on'
+      - platform: state
+        entity_id: group.family
+        to: 'home'
+    condition:
+      condition: and
+      conditions:
+      - condition: or
+        conditions:
+          - condition: time
+            before: '05:00:00'
+          - condition: time
+            after: '22:30:00'
+      - condition: state
+        entity_id: group.family
+        state: 'home'
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+    action: 
+      - service: light.turn_on
+        entity_id: light.cabinet_lights
+        data:
+          color_temp: 450
+        data_template:
+          brightness: >
+            {{ states.light.floor_lamp.attributes.brightness }}
+
+  - alias: Kitchen Uplighting - Weekends
+    hide_entity: true
+    trigger:
+      - platform: state
+        entity_id: sensor.floor_lamp
+      - platform: state
+        entity_id: group.living_room_lights
+      - platform: state
+        entity_id: group.family
+        to: 'home'
+    condition:
+      condition: and
+      conditions:
+      - condition: time
+        weekday:
+          - sat
+          - sun
+      - condition: state
+        entity_id: group.family
+        state: 'home'
+    action: 
+      service: light.turn_on
+      entity_id: light.cabinet_lights
+      data: 
+        xy_color: [0.1605,0.3299]
+      data_template:
+        brightness: >
+          {{ states.light.floor_lamp.attributes.brightness }}
+
+  - alias: Kitchen Uplighting - Off
+    hide_entity: true
+    trigger:
+      - platform: state
+        entity_id: group.living_room_lights
+        state: 'off'
+      - platform: state
+        entity_id: group.family
+        to: 'not_home'
+    action: 
+      service: light.turn_off
+      entity_id: light.cabinet_lights
+
+################################################################
+##                  Exterior Lights - Front                   ##
+################################################################
+
+  - alias: Exterior Front - Dusk
+    hide_entity: True
+    trigger:
+      platform: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation }}'
+      below: 5
+    action:
+      service: light.turn_on
+      entity_id: light.front_door
+      data:
+        brightness: 254
+        transition: 300      
+        
+  - alias: Exterior Front - Dawn
+    hide_entity: True
+    trigger:
+      platform: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation }}'
+      above: 5
+    action:
+      service: light.turn_off
+      entity_id: light.front_door
+      data:
+        transition: 60
+
+################################################################
+##                Google Home Color Temp Fix                  ##
+################################################################
+
+  - alias: Color Temp Fix - Living Room - Morning
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: group.living_room_lights
+        to: 'on'
+      - platform: state
+        entity_id: sensor.color_temp_lr
+        state: '278'
+    condition:
+      condition: time
+      after: '05:00:00'
+      before: '09:30:00'
+    action:
+      service: light.turn_on
+      entity_id: group.living_room_lights
+      data:
+        color_temp: 250
+        
+  - alias: Color Temp Fix - Master Bedroom - Morning
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: group.master_bedroom
+        to: 'on'
+      - platform: state
+        entity_id: sensor.color_temp_br
+        state: '278'
+    condition:
+      condition: time
+      after: '05:00:00'
+      before: '09:30:00'
+    action:
+      service: light.turn_on
+      entity_id: group.master_bedroom
+      data:
+        color_temp: 250 
+        
+  - alias: Color Temp Fix - Living Room - Day
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: group.living_room_lights
+        to: 'on'    
+      - platform: state
+        entity_id: sensor.color_temp_lr
+        state: '278'
+    condition:
+      condition: time
+      after: '09:30:00'
+      before: '22:30:00'
+    action:
+      service: light.turn_on
+      entity_id: group.living_room_lights
+      data:
+        color_temp: 366
+        
+  - alias: Color Temp Fix - Master Bedroom - Day
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: group.master_bedroom
+        state: 'on'
+      - platform: state
+        entity_id: sensor.color_temp_br
+        state: '278'
+    condition:
+      condition: time
+      after: '09:30:00'
+      before: '22:30:00'
+    action:
+      service: light.turn_on
+      entity_id: group.master_bedroom
+      data:
+        color_temp: 366
+        
+  - alias: Color Temp Fix - Living Room - Night
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: group.living_room_lights
+        to: 'on'
+      - platform: state
+        entity_id: sensor.color_temp_lr
+        state: '278'
+    condition:
+      condition: or
+      conditions:
+        - condition: time
+          after: '22:30:00'
+        - condition: time
+          before: '05:00:00'
+    action:
+      service: light.turn_on
+      entity_id: group.living_room_lights
+      data:
+        color_temp: 500
+        transition: 30
+        
+  - alias: Color Temp Fix - Master Bedroom - Night
+    hide_entity: True
+    trigger:
+      - platform: state
+        entity_id: group.master_bedroom
+        to: 'on'
+      - platform: state
+        entity_id: sensor.color_temp_br
+        state: '278'
+    condition:
+      condition: or
+      conditions:
+        - condition: time
+          after: '22:30:00'
+        - condition: time
+          before: '05:00:00'
+    action:
+      service: light.turn_on
+      entity_id: group.master_bedroom
+      data:
+        color_temp: 500
+        transition: 30
+
+################################################################
+##               Logitech Harmony Automations                 ##
+################################################################
+
+  - alias: Harmony - DirecTV
+    hide_entity: True
+    trigger:
+      platform: state
+      entity_id: input_select.harmony
+      state: 'Watch DirecTV'
+    action:
+      - service: remote.turn_on
+        entity_id: remote.living_room
+        data: {"activity": "19594181"}
+      - service: input_select.select_option
+        entity_id: input_select.harmony
+        data_template:
+          option: "Select Input"
+
+  - alias: Harmony - Plex
+    hide_entity: True
+    trigger:
+      platform: state
+      entity_id: input_select.harmony
+      state: 'Watch Plex'
+    action:
+      - service: remote.turn_on
+        entity_id: remote.living_room
+        data: {"activity": "19755764"}
+      - service: input_select.select_option
+        entity_id: input_select.harmony
+        data_template:
+          option: "Select Input"
+
+  - alias: Harmony - Netflix
+    hide_entity: True
+    trigger:
+      platform: state
+      entity_id: input_select.harmony
+      state: 'Watch Netflix'
+    action:
+      - service: remote.turn_on
+        entity_id: remote.living_room
+        data: {"activity": "19755673"}
+      - service: input_select.select_option
+        entity_id: input_select.harmony
+        data_template:
+          option: "Select Input"
+
+  - alias: Harmony - Hulu
+    hide_entity: True
+    trigger:
+      platform: state
+      entity_id: input_select.harmony
+      state: 'Watch Hulu'
+    action:
+      - service: remote.turn_on
+        entity_id: remote.living_room
+        data: {"activity": "20619552"}
+      - service: input_select.select_option
+        entity_id: input_select.harmony
+        data_template:
+          option: "Select Input"
+
+  - alias: Harmony - Prime Video
+    hide_entity: True
+    trigger:
+      platform: state
+      entity_id: input_select.harmony
+      state: 'Watch Prime Video'
+    action:
+      - service: remote.turn_on
+        entity_id: remote.living_room
+        data: {"activity": "19752038"}
+      - service: input_select.select_option
+        entity_id: input_select.harmony
+        data_template:
+          option: "Select Input"
+
+  - alias: Harmony - Chromecast
+    hide_entity: True
+    trigger:
+      platform: state
+      entity_id: input_select.harmony
+      state: 'Watch Chromecast'
+    action:
+      - service: remote.turn_on
+        entity_id: remote.living_room
+        data: {"activity": "19938341"}
+      - service: input_select.select_option
+        entity_id: input_select.harmony
+        data_template:
+          option: "Select Input"
+
+  - alias: Harmony - Power Off
+    hide_entity: True
+    trigger:
+      platform: state
+      entity_id: input_select.harmony
+      state: 'Power Off'
+    action:
+      - service: remote.turn_on
+        entity_id: remote.living_room
+        data: {"activity": "-1"}
+      - service: input_select.select_option
+        entity_id: input_select.harmony
+        data_template:
+          option: "Select Input"
+          
+  - alias: Harmony Light Control - Start
+    hide_entity: true
+    trigger: 
+      - platform: state
+        entity_id: sensor.current_activity
+        to: 'Watch Plex'
+      - platform: state
+        entity_id: sensor.current_activity
+        to: 'Watch Netflix'
+      - platform: state
+        entity_id: sensor.current_activity
+        to: 'Watch Hulu'
+      - platform: state
+        entity_id: sensor.current_activity
+        to: 'Watch Prime Video'
+    condition: 
+      - condition: state
+        entity_id: group.living_room_lights
+        state: 'on'
+      - condition: state
+        entity_id: sun.sun
+        state: 'below_horizon'
+    action:
+      service: light.turn_on
+      entity_id: group.living_room_lights
+      data:
+        brightness: 60
+        
+  - alias: Harmony Light Control - End
+    hide_entity: true
+    trigger: 
+      - platform: state
+        entity_id: sensor.current_activity
+        from: 'Watch Plex'
+      - platform: state
+        entity_id: sensor.current_activity
+        from: 'Watch Netflix'
+      - platform: state
+        entity_id: sensor.current_activity
+        from: 'Watch Hulu'
+      - platform: state
+        entity_id: sensor.current_activity
+        from: 'Watch Prime Video'
+    condition: 
+      - condition: or
+        conditions:
+          - condition: state
+            entity_id: sensor.current_activity
+            state: 'Watch DirecTV'
+          - condition: state
+            entity_id: sensor.current_activity
+            state: 'Watch Chromecast'
+          - condition: state
+            entity_id: sensor.current_activity
+            state: 'PowerOff'
+      - condition: state
+        entity_id: group.living_room_lights
+        state: 'on'
+      - condition: state
+        entity_id: sensor.floor_lamp
+        state: '60'
+      - condition: state
+        entity_id: sun.sun
+        state: 'below_horizon'
+    action: 
+      service: light.turn_on
+      entity_id: group.living_room_lights
+      data:
+        brightness: 254
+          
+        
+
+################################################################
+##                    Simulate Presence                       ##
+################################################################
+
+  - alias: Simulate Presence 1
+    hide_entity: True
+    trigger:
+      platform: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation }}'
+      below: 5
+    action:
+      service: light.turn_on
+      entity_id: group.living_room
+      data:
+        brightness: 254
+        transition: 900
+
+  - alias: Simulate Presence 2
+    hide_entity: True
+    trigger:
+      platform: time
+      after: '20:30:00'
+    action:
+      - service: light.turn_on
+        entity_id: group.living_room
+        data:
+          brightness: 100
+      - service: remote.turn_on
+        entity_id: remote.living_room
+        data: {"activity": "Watch DirecTV"}
+#      - service: ifttt.trigger
+#        data: {"event": "DirecTV"}
+
+  - alias: Simulate Presence 3
+    hide_entity: True
+    trigger:
+      platform: time
+      after: '23:45:00'
+    action:
+      - service: light.turn_off
+        entity_id: group.living_room
+      - service: remote.turn_off
+        entity_id: remote.living_room 
+#      - service: ifttt.trigger
+#        data: {"event":"PowerOff"}
+
+
+  - alias: Simulate Presence 4
+    hide_entity: True
+    trigger:
+      platform: event
+      event_type: homeassistant_start
+    action:
+      service: automation.turn_off
+      entity_id: group.simulate_presence

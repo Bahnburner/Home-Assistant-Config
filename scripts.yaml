@@ -1,0 +1,255 @@
+#####################################################################
+#####################################################################
+##                                                                 ##
+##                             Scripts                             ##
+##                                                                 ##
+#####################################################################
+#####################################################################
+
+#####################################################################
+##                            Door Locks                           ##
+#####################################################################
+
+  lock_doors:
+    sequence:
+      - service: switch.turn_on
+        entity_id: switch.door_front
+      - delay:
+          seconds: 30
+      - service: switch.turn_on
+        entity_id: switch.door_rear
+        
+  unlock_doors:
+    sequence:
+      - service: switch.turn_off
+        entity_id: switch.door_front
+      - delay:
+          seconds: 30
+      - service: switch.turn_off
+        entity_id: switch.door_rear
+
+  lock_front_door:
+    sequence:
+        service: switch.turn_on
+        entity_id: switch.door_front
+
+  unlock_front_door:
+    sequence:
+        service: switch.turn_off
+        entity_id: switch.door_front
+
+  lock_rear_door:
+    sequence:
+        service: switch.turn_on
+        entity_id: switch.door_rear
+
+  unlock_rear_door:
+    sequence:
+        service: switch.turn_off
+        entity_id: switch.door_rear
+
+
+#####################################################################
+##                         Christmas Party                         ##
+#####################################################################
+
+  christmas:
+    sequence:
+      - service: light.turn_on
+        entity_id: 
+          - group.dining_room
+          - group.master_hallway
+          - group.stairway
+        data: 
+          xy_color: [0.677, 0.322]
+          brightness: 254
+      - service: light.turn_on
+        entity_id:
+         - group.living_room_lights
+         - group.foyer
+         - light.cabinet_lights
+        data:
+          xy_color: [0.172, 0.735]
+          brightness: 254
+      - service: media_player.play_media
+        entity_id: media_player.livingroom
+        data:
+          media_content_id: "http://hybrid.servemp3.com/storage/fireplace.mp4"
+          media_content_type: "video/mp4"
+
+#####################################################################
+##                            WHO DAT!                             ##
+#####################################################################
+
+  who_dat:
+    sequence:
+      - service: media_player.play_media
+        entity_id: media_player.living_room_home
+        data:
+          media_content_id: "http://wreckage.johndenverschoolofflight.com/hass/Halftime.mp3"
+          media_content_type: "audio/mp3"  
+
+#####################################################################
+##                           GO TIGERS GO!                         ##
+#####################################################################
+
+  go_tigers_go:
+    sequence:
+      - service: media_player.play_media
+        entity_id: media_player.living_room_home
+        data:
+          media_content_id: "http://wreckage.johndenverschoolofflight.com/hass/GoTigersGo.mp3"
+          media_content_type: "audio/mp3"        
+      - service: script.turn_off
+        data:
+          entity_id: script.timer_off
+      - service: light.turn_on
+        data:
+          entity_id: group.living_room_lights
+          xy_color: [0.167, 0.04]
+      - service: script.turn_on
+        data:
+          entity_id: script.timer_off
+
+  timer_off:
+    sequence:
+      - delay:
+          seconds: 30
+      - service: light.turn_on
+        data:
+          entity_id: group.living_room_lights
+          color_temp: 366
+
+#####################################################################
+#####################################################################
+##                                                                 ##
+##                          Google Home                            ##
+##                                                                 ##
+#####################################################################
+#####################################################################
+
+  goodbye:
+    sequence:
+      - condition: state
+        entity_id: group.family
+        state: 'home'
+      - service: automation.trigger
+        data_template:
+          entity_id: >
+            {% if states.sun.sun.attributes.elevation <= 5 %}
+              automation.away_mode__night
+            {% elif is_state('sensor.dark_sky_icon', 'rain') %}
+              automation.away_mode__rain
+            {% else %}
+              automation.away_mode__day
+            {% endif %}
+      - service: automation.trigger
+        data:
+          entity_id: automation.away_mode__bedroom
+      - service: cover.open_cover
+        data:
+          entity_id: cover.garage_door_opener
+      - service: script.turn_on
+        entity_id: script.lock_doors
+
+  pause:
+    sequence:
+      - service: script.turn_on
+        data_template:
+          entity_id: >
+            {% if is_state('sensor.current_activity', 'Watch DirecTV') %}
+              script.pause_directv 
+            {% else %}
+              script.pause_other
+            {% endif %}
+
+  unpause:
+    sequence:
+      - service: script.turn_on
+        data_template:
+          entity_id: >
+            {% if is_state('sensor.current_activity', 'Watch DirecTV') %}
+              script.pause_directv 
+            {% else %}
+              script.unpause_other
+            {% endif %}
+
+  pause_directv:
+    sequence:
+      - service: remote.send_command
+        entity_id: remote.living_room
+        data: {"device": "35163109", "command": "Pause"}
+        
+  pause_other:
+    sequence:
+      - service: remote.send_command
+        entity_id: remote.living_room
+        data: {"device": "35163105", "command": "Pause"}
+        
+  unpause_other:          
+    sequence:
+      - service: remote.send_command
+        entity_id: remote.living_room
+        data: {"device": "35163105", "command": "Play"}
+
+  mute:
+    sequence:
+      - service: remote.send_command
+        entity_id: remote.living_room
+        data: {"device": "35163105", "command": "Mute"}
+
+  goodnight:
+    sequence:
+      - service: cover.close_cover
+        entity_id: cover.garage_door_opener
+      - service: input_select.select_option
+        entity_id: input_select.harmony
+        data:
+          option: 'Power Off'
+#      - service: ifttt.trigger
+#        data: {"event":"PowerOff"}
+      - service: light.turn_on
+        entity_id: light.pantry
+        data:
+          brightness: 100
+          transition: 15
+      - service: light.turn_off
+        entity_id: group.living_room_lights
+        data:
+          transition: 300
+      - service: script.turn_on
+        entity_id: script.lock_doors
+        
+
+  close_the_garage:
+    sequence:
+      service: cover.close_cover
+      entity_id: cover.garage_door_opener
+
+  open_the_garage:
+    sequence:
+      - condition: state
+        entity_id: group.family
+        state: 'home'
+      - service: cover.open_cover
+        entity_id: cover.garage_door_opener
+
+  nightlight:
+    sequence:
+      - service: light.turn_on
+        entity_id: 
+          - group.living_room_lights
+          - light.cabinet_lights
+        data:
+          brightness: 50
+          transition: 5
+      - delay:
+          minutes: 10
+      - condition: template
+        value_template: '{{ states.light.floor_lamp.attributes.brightness == 50 }}'
+      - service: light.turn_off
+        entity_id: 
+          - group.living_room_lights
+          - light.cabinet_lights
+        data:
+          transition: 10
