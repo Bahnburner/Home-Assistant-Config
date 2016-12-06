@@ -1,0 +1,16 @@
+media_player.living_room_home:
+  friendly_name: 'Google Home'
+media_player.livingroom:
+  friendly_name: 'Living Room'
+  hidden: true
+media_player.guestroom:
+  friendly_name: 'Guest Room'
+  hidden: true
+media_player.garage:
+  friendly_name: 'Garage Stereo'
+media_player.galaxy_s7_edge:
+  hidden: true
+media_player.multiroom:
+  hidden: true
+media_player.multiroom_2:
+  hidden: true
