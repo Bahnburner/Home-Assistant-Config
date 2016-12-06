@@ -1,10 +1,10 @@
--alias: Away Mode - Bedroom
- hide_entity: True
- trigger:
-   platform: state
-   entity_id: group.tristal
-   from: 'home'
-   to: 'not_home'
- action:
-   - service: light.turn_off
-     entity_id: group.master_bedroom
+- alias: Away Mode - Bedroom
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: group.tristal
+    from: 'home'
+    to: 'not_home'
+  action:
+    - service: light.turn_off
+      entity_id: group.master_bedroom
