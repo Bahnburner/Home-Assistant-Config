@@ -1,0 +1,24 @@
+alias: Sunset - House Occupied
+hide_entity: True
+trigger:
+  platform: numeric_state
+  entity_id: sun.sun
+  value_template: '{{ state.attributes.elevation }}'
+  below: 5
+condition:
+  condition: state
+  entity_id: group.family
+  state: 'home'
+action:
+  - service: light.turn_on
+    entity_id: group.living_room
+    data:
+      color_temp: 366
+      brightness: 254
+      transition: 600
+  - service: light.turn_on
+    entity_id: light.pantry
+    data:
+      color_temp: 366
+      brightness: 254
+      transition: 600
