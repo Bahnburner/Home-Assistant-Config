@@ -19,7 +19,7 @@ sun:
 
 http: !include ./configuration/http.yaml
 
-automation: !include_dir_list automation
+automation: !include automation.yaml
 
 script: !include scripts.yaml
 
