@@ -1,11 +1,3 @@
-#####################################################################
-#####################################################################
-##                                                                 ##
-##                          Initialization                         ##
-##                                                                 ##
-#####################################################################
-#####################################################################
-
 homeassistant:
   name: Hidden Ridge
   latitude: !secret latitude
@@ -15,399 +7,44 @@ homeassistant:
   time_zone: America/Chicago
   customize: !include customize.yaml
 
-http:
-  api_password: !secret http_password
-  trusted_networks:
-     - 10.0.0.1
-
 frontend:
 updater:
 discovery:
 #conversation:
+recorder:
+  purge_days: 7
 history:
 logbook:
 sun:
+
+http: !include ./configuration/http.yaml
 
 automation: !include automation.yaml
 
 script: !include scripts.yaml
 
-#####################################################################
-#####################################################################
-##                                                                 ##
-##                           Components                            ##
-##                                                                 ##
-#####################################################################
-#####################################################################
-
-######################
-# HARMONY HUB
-######################
-
 remote: !include ./configuration/remote.yaml
 
-input_select:
-  harmony:
-    name: Harmony Control
-    options:
-      - Select Input
-      - Watch DirecTV
-      - Watch Plex
-      - Watch Netflix
-      - Watch Hulu
-      - Watch Prime Video
-      - Watch Chromecast
-      - Watch Smart TV
-      - Power Off
-    icon: mdi:monitor
+input_select: !include ./configuration/input_select.yaml
 
-######################
-# HUE HUB
-######################
+light: !include ./configuration/light.yaml
 
-light:
-  platform: hue
-  scan_interval: 10
-  host: 10.0.0.208
-  allow_unreachable: true
+nest: !include ./configuration/nest.yaml
 
-######################
-# NEST
-######################
+climate: !include ./configuration/climate.yaml
 
-nest:
-  client_id: !secret nest_client
-  client_secret: !secret nest_secret
+cover: !include ./configuration/cover.yaml
 
-climate:
-  platform: nest
+ifttt: !include ./configuration/ifttt.yaml
 
-######################
-# MyQ CONTROLER
-######################
+media_player: !include ./configuration/media_player.yaml
 
-cover:
-  platform: myq
-  name: Garage Door
-  username: !secret myq_user
-  password: !secret myq_pass
-  brand: chamberlain
+device_tracker: !include ./configuration/device_tracker.yaml
 
-######################
-# IFTTT
-######################
+mqtt: !include ./configuration/mqtt.yaml
 
-ifttt:
-  key: !secret ifttt
+sensor: !include ./configuration/sensor.yaml
 
-######################
-# GOOGLE CAST
-######################
+switch: !include ./configuration/switch.yaml
 
-media_player:
-  platform: cast
-  host: 10.0.0.155
-
-media_player 2:
-  platform: cast
-  host: 10.0.0.156
-
-media_player 3:
-  platform: cast
-  host: 10.0.0.157
-
-######################
-# ASUS WRT
-######################
-
-device_tracker:
-  platform: asuswrt
-  host: 10.0.0.1
-  protocol: ssh
-  mode: router
-  username: !secret router_user
-  password: !secret router_pass
-  track_new_devices: false
-  consider_home: 300
-
-######################
-# SMARTTHINGS HUB
-######################
-  
-mqtt:
-  broker: 10.0.0.212
-  client_id: home-assistant
-  birth_message:
-    topic: 'hass/status'
-    payload: 'online'
-    qos: 1
-    retain: true
-
-######################
-# SENSORS
-######################
-
-sensor:
-  - platform: darksky
-    api_key: !secret darksky
-    monitored_conditions:
-      - icon
-      - summary
-      - precip_intensity
-      - precip_probability
-      - temperature
-      - temperature_max
-      - temperature_min
-  - platform: template
-    sensors:
-      current_activity:
-        friendly_name: 'Current Activity'
-        value_template: '{{ states.remote.living_room.attributes.current_activity }}'
-      hallway_light:
-        value_template: '{{ states.light.pantry.attributes.brightness }}'
-      floor_lamp:
-        value_template: '{{ states.light.floor_lamp.attributes.brightness }}'
-      color_temp_lr:
-        value_template: '{{ states.light.floor_lamp.attributes.color_temp }}'
-      color_temp_br:
-        value_template: '{{ states.light.tristans_nightstand.attributes.color_temp }}'
-#  - platform: command_line
-#    name: CPU Temperature
-#    command: "cat /sys/class/thermal/thermal_zone0/temp"
-#    value_template: '{{ value | multiply(0.0018) | round(1) +32 }}'
-#    unit_of_measurement: "°F"
-#  - platform: systemmonitor
-#    resources:
-#      - type: disk_use_percent
-#        arg: /
-#      - type: memory_use_percent
-#      - type: processor_use
-
-######################
-# SWITCHES
-######################
-
-switch:
-  - platform: template
-    switches:
-      vacation_mode:
-        value_template: "{{ states.group.vacation_mode.state == 'off' }}"
-        turn_on:
-          service: automation.turn_off
-          entity_id: group.vacation_mode
-        turn_off:
-          service: automation.turn_on
-          entity_id: group.vacation_mode
-      routines:
-        value_template: "{{ states.group.routines.state == 'off' }}"
-        turn_on:
-          service: automation.turn_off
-          entity_id: group.routines
-        turn_off:
-          - service: automation.turn_on
-            entity_id: group.routines
-          - service: automation.turn_off
-            entity_id: group.simulate_presence
-  - platform: mqtt
-    name: 'Christmas Lights'
-    state_topic: "smartthings/Christmas Lights/switch"
-    command_topic: "smartthings/Christmas Lights/switch"
-    payload_on: "on"
-    payload_off: "off"
-    retain: true
-
-
-######################
-# KEVO PLUS
-######################
-    
-switch 2:
-  - platform: command_line
-    switches:
-      kevo_front_hidden:
-        command_on: "sh /home/hass/.homeassistant/kevo/lock-front.sh"
-        command_off: "sh /home/hass/.homeassistant/kevo/unlock-front.sh"
-        command_state: "sh /home/hass/.homeassistant/kevo/status-front.sh"
-        value_template: '{{ return_value == "Locked" }}'
-      kevo_rear_hidden:
-        command_on: "sh /home/hass/.homeassistant/kevo/lock-rear.sh"
-        command_off: "sh /home/hass/.homeassistant/kevo/unlock-rear.sh"
-        command_state: "sh /home/hass/.homeassistant/kevo/status-rear.sh"
-        value_template: '{{ return_value == "Locked" }}'
-  - platform: template
-    switches:
-      door_front: 
-        value_template: '{{ states.sensor.door_status_front.state == "Locked" }}'
-        turn_on: 
-          service: switch.turn_on
-          entity_id: switch.kevo_front_hidden
-        turn_off:
-          service: switch.turn_off
-          entity_id: switch.kevo_front_hidden
-      door_rear:
-        value_template: '{{ states.sensor.door_status_rear.state == "Locked" }}'
-        turn_on: 
-          service: switch.turn_on
-          entity_id: switch.kevo_rear_hidden
-        turn_off:
-          service: switch.turn_off
-          entity_id: switch.kevo_rear_hidden
-
-sensor 2:
-  - platform: command_line
-    name: Door Status Front
-    command: "sh /home/hass/.homeassistant/kevo/status-front.sh"
-    scan_interval: 10
-  - platform: command_line  
-    name: Door Status Rear
-    command: "sh /home/hass/.homeassistant/kevo/status-rear.sh"
-    scan_interval: 10
-
-#####################################################################
-#####################################################################
-##                                                                 ##
-##                             Groups                              ##
-##                                                                 ##
-#####################################################################
-#####################################################################
-
-group:
-  door_locks:
-    - switch.door_front
-    - switch.door_rear
-  christmas:
-    switch.christmas_lights
-  master_bedroom:
-    - light.tristans_nightstand
-    - light.crystals_nightstand
-  living_room_lights:
-    - light.floor_lamp
-    - light.table_lamp
-  living_room:
-    - sensor.current_activity
-    - input_select.harmony
-    - light.floor_lamp
-    - light.table_lamp
-    - climate.downstairs
-  living_room_home:
-    - media_player.living_room_home
-  dining_room:
-    - light.dining_room_left
-    - light.dining_room_right
-  foyer:
-    - light.foyer_left
-    - light.foyer_right
-  master_hallway:
-    - light.master_hallway_left
-    - light.master_hallway_right
-  stairway:
-    - light.stairway
-  kitchen:
-    - light.cabinet_lights
-    - light.pantry
-  exterior:
-    - light.front_door
-  upstairs:
-    - climate.upstairs
-  chromecasts:
-    - media_player.livingroom
-    - media_player.guestroom
-  garage:
-    - cover.garage_door_opener
-    - media_player.garage
-  weather:
-#    - sun.sun
-    - sensor.dark_sky_temperature
-    - sensor.dark_sky_daily_high_temperature
-    - sensor.dark_sky_daily_low_temperature
-    - sensor.dark_sky_summary
-    - sensor.dark_sky_precip_probability
-#    - sensor.dark_sky_precip_intensity
-  family:
-    - device_tracker.tristans_phone
-    - device_tracker.crystals_phone
-    - device_tracker.erins_phone
-    - device_tracker.matts_phone
-    - device_tracker.taylors_phone
-    - device_tracker.donnas_phone
-  tristal:
-    - device_tracker.tristans_phone
-    - device_tracker.crystals_phone
-  routines:
-    - automation.morning_routine__bedroom_stage_1
-    - automation.morning_routine__bedroom_stage_2
-    - automation.morning_routine__bedroom_stage_3
-    - automation.morning_routine__livingroom
-    - automation.morning_routine__kitchen_hallway
-    - automation.rain__house_empty_start
-    - automation.rain__house_empty_stop
-    - automation.rain__house_occupied
-    - automation.sunset__house_empty
-    - automation.sunrise__house_empty
-    - automation.sunset__house_occupied
-    - automation.away_mode__day
-    - automation.away_mode__rain
-    - automation.away_mode__night
-    - automation.away_mode__bedroom
-    - automation.home_mode__climate
-    - automation.home_mode__livingroom
-    - automation.home_mode__bedroom
-    - automation.bedtime__livingroom_lights
-    - automation.bedtime__kitchen_uplighting
-    - automation.bedtime__bedroom_lights
-    - automation.overnight__kitchen_hallway_dim
-    - automation.overnight__kitchen_hallway_redim
-    - automation.exterior_front__dusk
-    - automation.exterior_front__dim
-    - automation.exterior_front__dawn
-    - automation.kitchen_uplighting__weekdays
-    - automation.kitchen_uplighting__weekday_nights
-    - automation.kitchen_uplighting__weekends
-    - automation.kitchen_uplighting__off
-    - automation.color_temp_fix__living_room__morning
-    - automation.color_temp_fix__living_room__day
-    - automation.color_temp_fix__living_room__night
-    - automation.color_temp_fix__master_bedroom__morning
-    - automation.color_temp_fix__master_bedroom__day
-    - automation.color_temp_fix__master_bedroom__night
-    - automation.away_mode__puppies
-    - automation.home_mode__puppies
-  inputs:
-    - automation.harmony__directv
-    - automation.harmony__plex
-    - automation.harmony__netflix
-    - automation.harmony__hulu
-    - automation.harmony__video
-    - automation.harmony__chromecast
-    - automation.harmony__power_off
-    - automation.input__select
-  vacation_mode:
-    - automation.rain__house_empty_start
-    - automation.sunset__house_empty
-    - automation.sunrise__house_empty
-    - automation.away_mode__puppies
-    - automation.home_mode__puppies
-  simulate_presence:
-    - automation.simulate_presence_1
-    - automation.simulate_presence_2
-    - automation.simulate_presence_3
-    - automation.simulate_presence_4
-  gtg:
-    - script.go_tigers_go
-    - script.timer_off
-  google_home:
-    - script.goodbye
-    - script.goodnight
-    - script.open_the_garage
-    - script.close_the_garage
-    - script.pause
-    - script.nightlight
-  system_monitor:
-    - sensor.cpu_use
-    - sensor.cpu_temperature
-    - sensor.disk_use_
-    - sensor.ram_use
-  override:
-    - switch.vacation_mode
-    - group.simulate_presence
-    - switch.routines
+group: !include ./configuration/group.yaml
