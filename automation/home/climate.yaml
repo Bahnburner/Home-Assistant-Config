@@ -1,0 +1,16 @@
+alias: Home Mode - Climate
+hide_entity: True
+trigger:
+  platform: state
+  entity_id: group.family
+  from: 'not_home'
+  to: 'home'
+action:
+  - service: climate.set_away_mode
+    entity_id: climate.downstairs
+    data:
+      away_mode: 'off'
+  - service: light.turn_on
+    entity_id: light.pantry
+    data:
+      brightness: 254 
