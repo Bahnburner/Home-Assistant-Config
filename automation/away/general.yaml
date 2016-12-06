@@ -1,29 +1,29 @@
-alias: Away Mode - General
-hide_entity: True
-trigger:
-  platform: state
-  entity_id: group.family
-  from: 'home'
-  to: 'not_home'
-action:
-  - service: media_player.volume_set
-    entity_id: media_player.living_room_home
-    data: 
-      volume_level: 0.5
-  - service: media_player.play_media
-    entity_id: media_player.living_room_home
-    data:
-      media_content_id: "http://wegr-fm.akacast.akamaistream.net/7/628/20075/v1/auth.akacast.akamaistream.net/wegr-fm"
-      media_content_type: "audio/mp3"
-  - service: light.turn_off
-    entity_id: group.foyer
-  - service: light.turn_off
-    entity_id: group.master_hallway
-  - service: light.turn_off
-    entity_id: group.dining_room
-  - service: light.turn_off
-    entity_id: group.stairway
-  - service: cover.close_cover
-    entity_id: cover.garage_door_opener
-  - service: script.turn_on
-    entity_id: script.lock_doors
+- alias: Away Mode - General
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: group.family
+    from: 'home'
+    to: 'not_home'
+  action:
+    - service: media_player.volume_set
+      entity_id: media_player.living_room_home
+      data: 
+        volume_level: 0.5
+    - service: media_player.play_media
+      entity_id: media_player.living_room_home
+      data:
+        media_content_id: "http://wegr-fm.akacast.akamaistream.net/7/628/20075/v1/auth.akacast.akamaistream.net/wegr-fm"
+        media_content_type: "audio/mp3"
+    - service: light.turn_off
+      entity_id: group.foyer
+    - service: light.turn_off
+      entity_id: group.master_hallway
+    - service: light.turn_off
+      entity_id: group.dining_room
+    - service: light.turn_off
+      entity_id: group.stairway
+    - service: cover.close_cover
+      entity_id: cover.garage_door_opener
+    - service: script.turn_on
+      entity_id: script.lock_doors
