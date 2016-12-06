@@ -1,0 +1,8 @@
+platform: asuswrt
+host: 10.0.0.1
+protocol: ssh
+mode: router
+username: !secret router_user
+password: !secret router_pass
+track_new_devices: false
+consider_home: 300
