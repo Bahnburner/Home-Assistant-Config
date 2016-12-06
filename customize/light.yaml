@@ -1,0 +1,35 @@
+light.floor_lamp:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+light.table_lamp:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+light.tristans_nightstand:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+light.crystals_nightstand:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+light.pantry:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+light.front_door:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+light.cabinet_lights:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+light.dining_room_left:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  hidden: false
+light.dining_room_right:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  hidden: false
+light.foyer_left:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  hidden: false
+light.foyer_right:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  hidden: false
+light.master_hallway_left:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  hidden: false
+light.master_hallway_right:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  hidden: false
+light.stairway:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  hidden: false
