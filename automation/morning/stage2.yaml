@@ -29,7 +29,7 @@ action:
       color_temp: 250
       brightness: 254
       
-      alias: Morning - Weekend - Stage 2
+alias: Morning - Weekend - Stage 2
 hide_entity: True
 trigger:
   platform: time
