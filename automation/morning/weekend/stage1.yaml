@@ -1,0 +1,22 @@
+alias: Morning - Weekend - Stage 1
+hide_entity: True
+trigger:
+  platform: time
+  after: '08:00:00'
+condition:
+  condition: and
+  conditions:
+  - condition: time
+    weekday:
+      - sat
+      - sun
+  - condition: state
+    entity_id: group.tristal
+    state: 'home'
+action:
+  - service: light.turn_on
+    entity_id: group.master_bedroom
+    data:
+      color_temp: 250
+      brightness: 50
+      transition: 60
