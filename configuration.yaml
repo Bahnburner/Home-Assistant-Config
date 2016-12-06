@@ -5,7 +5,7 @@ homeassistant:
   elevation: 360
   unit_system: imperial
   time_zone: America/Chicago
-  customize:   customize: !include_dir_merge_named customize
+  customize: !include_dir_merge_named customize
 
 frontend:
 updater:
