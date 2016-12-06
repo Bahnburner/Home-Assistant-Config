@@ -1,0 +1,42 @@
+script.go_tigers_go:
+  hidden: true
+script.timer_off:
+  hidden: true
+script.open_the_garage:
+  hidden: true
+script.close_the_garage:
+  hidden: true
+script.goodnight:
+  hidden: true
+script.goodbye:
+  hidden: true
+script.pause:
+  hidden: true
+script.nightlight:
+  hidden: true
+script.pause_directv:
+  hidden: true
+script.pause_other:
+  hidden: true
+script.unpause:
+  hidden: true
+script.unpause_other:
+  hidden: true
+script.mute:
+  hidden: true
+script.who_dat:
+  hidden: true
+script.christmas:
+  hidden: true
+script.lock_doors:
+  hidden: true
+script.unlock_doors:
+  hidden: true
+script.lock_front_door:
+  hidden: true
+script.unlock_front_door:
+  hidden: true
+script.lock_rear_door:
+  hidden: true
+script.unlock_rear_door:
+  hidden: true
