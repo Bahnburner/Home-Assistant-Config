@@ -1,0 +1,29 @@
+alias: Rain - House Empty - Start
+hide_entity: True
+trigger:
+  - platform: state
+    entity_id: sensor.dark_sky_icon
+    state: 'rain'
+  - platform: state
+    entity_id: sun.sun
+    state: 'above_horizon'
+condition:
+  - condition: state
+    entity_id: sun.sun
+    state: 'above_horizon'
+  - condition: state
+    entity_id: group.living_room
+    state: 'off'
+  - condition: state
+    entity_id: group.family
+    state: 'not_home'
+  - condition: state
+    entity_id: sensor.dark_sky_icon
+    state: 'rain'
+action:
+  service: light.turn_on
+  entity_id: group.living_room_lights
+  data:
+    color_temp: 366
+    brightness: 150
+    transition: 5
