@@ -1,0 +1,31 @@
+group.living_room:
+  friendly_name: 'Living Room'
+group.all_garage_doors:
+  friendly_name: 'Garage'
+group.family:
+  friendly_name: 'Family'
+group.tristal:
+  hidden: true
+group.living_room_lights:
+  hidden: true
+group.master_bedroom_lights:
+  hidden: true
+group.inputs:
+  hidden: true
+group.override:
+  friendly_name: 'Automation Override'
+group.simulate_presence:
+  friendly_name: 'Simulate Presence'
+  icon: mdi:account-multiple
+group.master_bedroom:
+  friendly_name: 'Master Bedroom'
+group.gtg:
+  hidden: true
+group.system_monitor:
+  friendly_name: 'System Monitor' 
+group.dining_room:
+  friendly_name: 'Dining Room'
+group.master_hallway:
+  friendly_name: 'Master Hallway'
+group.door_locks:
+  friendly_name: 'Door Locks'
