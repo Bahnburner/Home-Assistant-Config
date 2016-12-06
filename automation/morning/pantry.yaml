@@ -1,0 +1,15 @@
+alias: Morning - Pantry
+hide_entity: True
+trigger:
+  platform: time
+  after: '07:00:00'
+condition:
+  condition: state
+  entity_id: group.family
+  state: 'home'
+action:
+  service: light.turn_on
+  entity_id: light.pantry
+  data:
+    brightness: 254
+    transition: 900
