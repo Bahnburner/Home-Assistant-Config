@@ -1,0 +1,13 @@
+harmony:
+  name: Harmony Control
+  options:
+    - Select Input
+    - Watch DirecTV
+    - Watch Plex
+    - Watch Netflix
+    - Watch Hulu
+    - Watch Prime Video
+    - Watch Chromecast
+    - Watch Smart TV
+    - Power Off
+  icon: mdi:monitor
