@@ -1,0 +1,17 @@
+deps
+
+home-assistant.db
+
+home-assistant_v2.db
+
+home-assistant.log
+
+*.conf
+
+*.sqlite
+
+secrets.yaml
+
+.HA_VERSION
+
+known_devices.yaml
