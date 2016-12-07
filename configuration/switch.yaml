@@ -1,3 +1,24 @@
+- platform: flux
+  lights:
+    - light.floor_lamp
+    - light.table_lamp
+    - light.cabinet_lights
+    - light.tristans_nightstand
+    - light.crystals_nightstand
+    - light.foyer_left
+    - light.foyer_right
+    - light.dining_room_left
+    - light.dining_room_right
+    - light.master_hallway_left
+    - light.master_hallway_right
+    - light.stairway
+  name: Fluxer
+  start_time: '7:00'
+  stop_time: '23:00'
+  start_colortemp: 4500
+  sunset_colortemp: 3000
+  stop_colortemp: 1900
+  mode: xy
 - platform: template
   switches:
     vacation_mode:
