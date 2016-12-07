@@ -1,21 +1,21 @@
-alias: Sunset - Unoccupied
-hide_entity: True
-trigger:
-  platform: numeric_state
-  entity_id: sun.sun
-  value_template: '{{ state.attributes.elevation }}'
-  below: 5
-condition:
-  - condition: state
-    entity_id: light.floor_lamp
-    state: 'off'
-  - condition: state
-    entity_id: group.family
-    state: 'not_home'
-action:
-  service: light.turn_on
-  entity_id: group.living_room
-  data:
-    color_temp: 366
-    brightness: 150
-    transition: 600
+- alias: Sunset - Unoccupied
+  hide_entity: True
+  trigger:
+    platform: numeric_state
+    entity_id: sun.sun
+    value_template: '{{ state.attributes.elevation }}'
+    below: 5
+  condition:
+    - condition: state
+      entity_id: light.floor_lamp
+      state: 'off'
+    - condition: state
+      entity_id: group.family
+      state: 'not_home'
+  action:
+    service: light.turn_on
+    entity_id: group.living_room
+    data:
+      color_temp: 366
+      brightness: 150
+      transition: 600
