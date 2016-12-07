@@ -1,0 +1,22 @@
+- alias: Color Temp Fix - Master Bedroom - Night
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: group.master_bedroom
+      to: 'on'
+    - platform: state
+      entity_id: sensor.color_temp_br
+      state: '278'
+  condition:
+    condition: or
+    conditions:
+      - condition: time
+        after: '22:30:00'
+      - condition: time
+        before: '05:00:00'
+  action:
+    service: light.turn_on
+    entity_id: group.master_bedroom
+    data:
+      color_temp: 500
+      transition: 30
