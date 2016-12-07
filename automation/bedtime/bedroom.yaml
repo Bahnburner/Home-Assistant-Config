@@ -1,0 +1,15 @@
+- alias: Bedtime - Bedroom Lights
+  hide_entity: True
+  trigger:
+    platform: time
+    after: '22:30:00'
+  condition:
+    condition: state
+    entity_id: group.tristal
+    state: 'home'
+  action:
+    service: light.turn_on
+    entity_id: group.master_bedroom
+    data:
+      brightness: 150
+      color_temp: 500
