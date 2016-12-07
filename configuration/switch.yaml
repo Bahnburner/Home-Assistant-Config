@@ -46,10 +46,10 @@
     kevo_front_hidden:
       command_on: "sh /home/hass/.homeassistant/kevo/lock-front.sh"
       command_off: "sh /home/hass/.homeassistant/kevo/unlock-front.sh"
-      command_state: "sh /home/hass/.homeassistant/kevo/status-front.sh"
+      command_state: ""
       value_template: '{{ return_value == "Locked" }}'
     kevo_rear_hidden:
       command_on: "sh /home/hass/.homeassistant/kevo/lock-rear.sh"
       command_off: "sh /home/hass/.homeassistant/kevo/unlock-rear.sh"
-      command_state: "sh /home/hass/.homeassistant/kevo/status-rear.sh"
+      command_state: ""
       value_template: '{{ return_value == "Locked" }}'
