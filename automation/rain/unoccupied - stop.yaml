@@ -1,19 +1,19 @@
-alias: Rain - Unoccupied - Stop
-hide_entity: True
-trigger:
-  - platform: state
-    entity_id: sensor.dark_sky_icon
-    from: 'rain'
-condition:
-  - condition: numeric_state
-    entity_id: sun.sun
-    value_template: '{{ state.attributes.elevation }}'
-    above: 5
-  - condition: state
-    entity_id: group.family
-    state: 'not_home'
-action:
-  service: light.turn_off
-  entity_id: group.living_room
-  data:
-    transition: 5
+- alias: Rain - Unoccupied - Stop
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: sensor.dark_sky_icon
+      from: 'rain'
+  condition:
+    - condition: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation }}'
+      above: 5
+    - condition: state
+      entity_id: group.family
+      state: 'not_home'
+  action:
+    service: light.turn_off
+    entity_id: group.living_room
+    data:
+      transition: 5
