@@ -1,0 +1,12 @@
+- alias: Exterior Front - Dawn
+  hide_entity: True
+  trigger:
+    platform: numeric_state
+    entity_id: sun.sun
+    value_template: '{{ state.attributes.elevation }}'
+    above: 5
+  action:
+    service: light.turn_off
+    entity_id: light.front_door
+    data:
+      transition: 60
