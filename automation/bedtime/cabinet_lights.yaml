@@ -1,0 +1,27 @@
+- alias: Bedtime - Kitchen Uplighting
+  hide_entity: True
+  trigger:
+    platform: time
+    after: '22:30:00'
+  condition:
+    condition: and
+    conditions:
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+      - condition: state
+        entity_id: group.family
+        state: 'home'
+      - condition: state
+        entity_id: light.cabinet_lights
+        state: 'on'
+  action: 
+    service: light.turn_on
+    entity_id: light.cabinet_lights
+    data: 
+      color_temp: 500
+      transition: 3600
