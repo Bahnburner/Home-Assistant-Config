@@ -1,0 +1,37 @@
+- alias: Overnight - Kitchen Hallway Dim
+  hide_entity: true
+  trigger:
+    platform: time
+    after: '22:00:00'
+  condition:
+    condition: state
+    entity_id: light.pantry
+    state: 'on'
+  action:
+    service: light.turn_on
+    entity_id: light.pantry
+    data:
+      brightness: 50
+      transition: 30
+       
+- alias: Overnight - Kitchen Hallway ReDim
+  hide_entity: true
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.hallway_light
+    above: 51
+  condition:
+    condition: or
+    conditions:
+      - condition: time
+        after: '22:00:00'
+      - condition: time  
+        before: '07:00:00'
+  action:
+    - delay:
+        minutes: 5
+    - service: light.turn_on
+      entity_id: light.pantry
+      data:
+        brightness: 50
+        transition: 30
