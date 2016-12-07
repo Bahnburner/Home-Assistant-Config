@@ -1,26 +1,26 @@
-alias: Home Mode - Livingroom
-hide_entity: True
-trigger:
-  platform: state
-  entity_id: group.family
-  from: 'not_home'
-  to: 'home'
-condition:
-  condition: numeric_state
-  entity_id: sun.sun
-  value_template: '{{ state.attributes.elevation }}'
-  below: 5
-action:
-  - service: light.turn_on
-    entity_id: group.living_room
-    data:
-      color_temp: 366
-      brightness: 254
-  - condition: time
-    after: '22:30:00'
-  - service: light.turn_on
-    entity_id: group.living_room_lights
-    data: 
-      brightness: 250
-      color_temp: 500
-      transition: 1800
+- alias: Home Mode - Livingroom
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: group.family
+    from: 'not_home'
+    to: 'home'
+  condition:
+    condition: numeric_state
+    entity_id: sun.sun
+    value_template: '{{ state.attributes.elevation }}'
+    below: 5
+  action:
+    - service: light.turn_on
+      entity_id: group.living_room
+      data:
+        color_temp: 366
+        brightness: 254
+    - condition: time
+      after: '22:30:00'
+    - service: light.turn_on
+      entity_id: group.living_room_lights
+      data: 
+        brightness: 250
+        color_temp: 500
+        transition: 1800
