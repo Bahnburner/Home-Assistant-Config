@@ -1,16 +1,16 @@
-alias: Home Mode - Bedroom
-hide_entity: True
-trigger:
-  platform: state
-  entity_id: group.tristal
-  from: 'not_home'
-  to: 'home'
-condition:
-  condition: time
-  after: '23:00:00'
-action:
-  service: light.turn_on
-  entity_id: group.master_bedroom
-  data:
-    brightness: 254
-    color_temp: 500
+- alias: Home Mode - Bedroom
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: group.tristal
+    from: 'not_home'
+    to: 'home'
+  condition:
+    condition: time
+    after: '23:00:00'
+  action:
+    service: light.turn_on
+    entity_id: group.master_bedroom
+    data:
+      brightness: 254
+      color_temp: 500
