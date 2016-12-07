@@ -24,11 +24,11 @@
 - platform: command_line
   name: Door Status Front
   command: "sh /home/hass/.homeassistant/kevo/status-front.sh"
-  scan_interval: 10
+  scan_interval: 30
 - platform: command_line  
   name: Door Status Rear
   command: "sh /home/hass/.homeassistant/kevo/status-rear.sh"
-  scan_interval: 10
+  scan_interval: 30
 #- platform: command_line
 #  name: CPU Temperature
 #  command: "cat /sys/class/thermal/thermal_zone0/temp"
