@@ -1,0 +1,35 @@
+- alias: Kitchen Uplighting - Weekdays
+  hide_entity: true
+  trigger:
+    - platform: state
+      entity_id: sensor.floor_lamp
+    - platform: state
+      entity_id: group.living_room_lights
+      state: 'on'
+    - platform: state
+      entity_id: group.family
+      to: 'home'
+  condition:
+    condition: and
+    conditions:
+    - condition: state
+      entity_id: group.family
+      state: 'home'
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+    - condition: time
+      after: '05:00:00'
+      before: '22:30:00'
+  action: 
+    - service: light.turn_on
+      entity_id: light.cabinet_lights
+      data:
+        color_temp: 250
+      data_template:
+        brightness: >
+          {{ states.light.floor_lamp.attributes.brightness }}
