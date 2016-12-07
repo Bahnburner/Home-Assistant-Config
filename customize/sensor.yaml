@@ -75,3 +75,5 @@ sensor.upstairs_thermostat_target:
   hidden: true
 sensor.upstairs_thermostat_temperature:
   hidden: true
+sensor.time:
+  hidden: true
