@@ -26,5 +26,5 @@
       entity_id: light.pantry
     - service: remote.turn_off
       entity_id: remote.living_room
-#  - service: ifttt.trigger
-#    data: {"event":"PowerOff"}
+#    - service: ifttt.trigger
+#      data: {"event":"PowerOff"}
