@@ -1,0 +1,52 @@
+- alias: Simulate Presence 1
+  hide_entity: True
+  trigger:
+    platform: numeric_state
+    entity_id: sun.sun
+    value_template: '{{ state.attributes.elevation }}'
+    below: 5
+  action:
+    service: light.turn_on
+    entity_id: group.living_room
+    data:
+      brightness: 254
+      transition: 900
+
+- alias: Simulate Presence 2
+  hide_entity: True
+  trigger:
+    platform: time
+    after: '20:30:00'
+  action:
+    - service: light.turn_on
+      entity_id: group.living_room
+      data:
+        brightness: 100
+    - service: remote.turn_on
+      entity_id: remote.living_room
+      data: {"activity": "Watch DirecTV"}
+#    - service: ifttt.trigger
+#      data: {"event": "DirecTV"}
+
+- alias: Simulate Presence 3
+  hide_entity: True
+  trigger:
+    platform: time
+    after: '23:45:00'
+  action:
+    - service: light.turn_off
+      entity_id: group.living_room
+    - service: remote.turn_off
+      entity_id: remote.living_room 
+#    - service: ifttt.trigger
+#      data: {"event":"PowerOff"}
+
+
+- alias: Simulate Presence 4
+  hide_entity: True
+  trigger:
+    platform: event
+    event_type: homeassistant_start
+  action:
+    service: automation.turn_off
+    entity_id: group.simulate_presence
