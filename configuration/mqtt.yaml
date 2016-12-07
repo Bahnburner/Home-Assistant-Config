@@ -1,5 +1,4 @@
 broker: 10.0.0.212
-client_id: home-assistant
 birth_message:
   topic: 'hass/status'
   payload: 'online'
