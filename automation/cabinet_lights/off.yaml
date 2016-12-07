@@ -1,0 +1,12 @@
+- alias: Kitchen Uplighting - Off
+  hide_entity: true
+  trigger:
+    - platform: state
+      entity_id: group.living_room_lights
+      state: 'off'
+    - platform: state
+      entity_id: group.family
+      to: 'not_home'
+  action: 
+    service: light.turn_off
+    entity_id: light.cabinet_lights
