@@ -12,15 +12,15 @@
     below: 5
   action:
     - service: light.turn_on
-      entity_id: group.living_room
+      entity_id: group.living_room_lights
       data:
         color_temp: 366
         brightness: 254
-    - condition: time
-      after: '22:30:00'
-    - service: light.turn_on
-      entity_id: group.living_room_lights
-      data: 
-        brightness: 250
-        color_temp: 500
-        transition: 1800
+      data_template:
+        color_temp: >
+          {% if (states.sensor.time.state | round(2)) <= 22.49 %}
+            366
+          {% elif (states.sensor.time.state | round(2)) >= 22.50 %}
+            500
+          {% else %}
+          {% endif %}
