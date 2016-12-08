@@ -6,7 +6,7 @@
       state: 'on'
     - platform: state
       entity_id: sensor.color_temp_lr
-      state: '278'
+      state: [0.4573, 0.41]
   action:
     service: light.turn_on
     entity_id: group.living_room_lights
@@ -29,7 +29,7 @@
       state: 'on'
     - platform: state
       entity_id: sensor.color_temp_br
-      state: '278'
+      state: [0.4573, 0.41]
   action:
     service: light.turn_on
     entity_id: group.master_bedroom
