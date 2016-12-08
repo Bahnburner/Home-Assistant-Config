@@ -1,4 +1,4 @@
-server_port: 8124
+server_port: 8123
 api_password: !secret http_password
 trusted_networks:
    - 10.0.0.1
