@@ -49,14 +49,14 @@
   hide_entity: True
   trigger:
     - platform: state
-      entity_id: group.living_room_lights
+      entity_id: light.cabinet_lights
       state: 'on'
     - platform: state
-      entity_id: sensor.color_temp_lr
+      entity_id: sensor.color_temp_cl
       state: '[0.402,0.3768]'
   action:
     service: light.turn_on
-    entity_id: group.living_room_lights
+    entity_id: light.cabinet_lights
     data_template:
       color_temp: >
         {% if (states.sensor.time.state | round(2)) <= 09.50 %}
