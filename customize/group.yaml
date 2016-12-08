@@ -1,9 +1,48 @@
+group.christmas:
+  friendly_name: 'Christmas'
+  order: 1
+group.door_locks:
+  friendly_name: 'Door Locks'
+  order: 2
 group.living_room:
   friendly_name: 'Living Room'
-group.all_garage_doors:
+  order: 3
+group.upstairs:
+  friendly_name: 'Upstairs'
+  order: 4
+group.master_bedroom:
+  friendly_name: 'Master Bedroom'
+  order: 5
+group.kitchen:
+  friendly_name: 'Kitchen'
+  order: 6
+group.dining_room:
+  friendly_name: 'Dining Room'
+  order: 7
+group.master_hallway:
+  friendly_name: 'Master Hallway'
+  order: 8
+group.foyer:
+  friendly_name: 'Foyer'
+  order: 9
+group.stairway:
+  friendly_name: 'Stairway'
+  order: 10
+group.garage
   friendly_name: 'Garage'
+  order: 11
+group.exterior:
+  friendly_name: 'Exterior'
+  order: 12
 group.family:
   friendly_name: 'Family'
+  order: 13
+group.weather:
+  friendly_name: 'Weather'
+  order: 14
+group.override:
+  friendly_name: 'Automation Override'
+  order: 99
 group.tristal:
   hidden: true
 group.living_room_lights:
@@ -17,15 +56,7 @@ group.override:
 group.simulate_presence:
   friendly_name: 'Simulate Presence'
   icon: mdi:account-multiple
-group.master_bedroom:
-  friendly_name: 'Master Bedroom'
 group.gtg:
   hidden: true
-group.system_monitor:
-  friendly_name: 'System Monitor' 
-group.dining_room:
-  friendly_name: 'Dining Room'
-group.master_hallway:
-  friendly_name: 'Master Hallway'
-group.door_locks:
-  friendly_name: 'Door Locks'
+#group.system_monitor:
+#  friendly_name: 'System Monitor' 
