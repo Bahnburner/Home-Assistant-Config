@@ -35,6 +35,8 @@ sensor.color_temp_lr:
   hidden: true
 sensor.color_temp_br:
   hidden: true
+sensor.color_temp_cl:
+  hidden: true
 sensor.cpu_temperature:
   friendly_name: 'CPU Temp'
 sensor.cpu_use:
