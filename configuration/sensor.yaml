@@ -21,6 +21,8 @@
       value_template: '{{ states.light.floor_lamp.attributes.color_temp }}'
     color_temp_br:
       value_template: '{{ states.light.tristans_nightstand.attributes.color_temp }}'
+    time:
+      value_template: '{{(now().strftime("%H") | int) + (now().strftime("%M")|int / 60) | round(2)}}'
 - platform: command_line
   name: Door Status Front
   command: "sh /home/hass/.homeassistant/kevo/status-front.sh"
@@ -29,9 +31,7 @@
   name: Door Status Rear
   command: "sh /home/hass/.homeassistant/kevo/status-rear.sh"
   scan_interval: 30
-- platform: time_date
-  display_options:
-    - 'time'
+
 #- platform: command_line
 #  name: CPU Temperature
 #  command: "cat /sys/class/thermal/thermal_zone0/temp"
