@@ -40,3 +40,5 @@ script.lock_rear_door:
   hidden: true
 script.unlock_rear_door:
   hidden: true
+script.revert:
+  hidden: true
