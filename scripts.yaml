@@ -173,7 +173,7 @@
       - service: light.turn_on
         entity_id: group.cabinet_lights
         data:
-          brightness: 
+          brightness: 254
           
   goodbye:
     sequence:
