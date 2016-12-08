@@ -144,28 +144,28 @@
           brightness: 254
         data_template:
           color_temp: >
-          {% if (states.sensor.time.state | round(2)) <= 09.50 %}
-            250
-          {% elif (states.sensor.time.state | round(2)) <= 22.49 %}
-            366
-          {% elif (states.sensor.time.state | round(2)) >= 22.50 %}
-            500
-          {% else %}
-          {% endif %}
+            {% if (states.sensor.time.state | round(2)) <= 09.50 %}
+              250
+            {% elif (states.sensor.time.state | round(2)) <= 22.49 %}
+              366
+            {% elif (states.sensor.time.state | round(2)) >= 22.50 %}
+              500
+            {% else %}
+            {% endif %}
       - service: light.turn_on
         entity_id: group.cabinet_lights
         data: 
           brightness: 254
         data_template:
           color_temp: >
-          {% if (states.sensor.time.state | round(2)) <= 09.50 %}
-            250
-          {% elif (states.sensor.time.state | round(2)) <= 22.49 %}
-            366
-          {% elif (states.sensor.time.state | round(2)) >= 22.50 %}
-            500
-          {% else %}
-          {% endif %}
+            {% if (states.sensor.time.state | round(2)) <= 09.50 %}
+              250
+            {% elif (states.sensor.time.state | round(2)) <= 22.49 %}
+              366
+            {% elif (states.sensor.time.state | round(2)) >= 22.50 %}
+              500
+            {% else %}
+            {% endif %}
       - condition: time
         weekday:
           - sat
