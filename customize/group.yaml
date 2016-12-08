@@ -28,7 +28,7 @@ group.foyer:
 group.stairway:
   friendly_name: 'Stairway'
   order: 10
-group.garage
+group.garage:
   friendly_name: 'Garage'
   order: 11
 group.exterior:
