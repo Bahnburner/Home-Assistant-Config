@@ -1,3 +1,5 @@
+christmas:
+  switch.christmas_lights
 door_locks:
   - switch.door_front
   - switch.door_rear
@@ -9,8 +11,6 @@ living_room:
   - climate.downstairs
 living_room_home:
   - media_player.living_room_home
-christmas:
-  switch.christmas_lights
 upstairs:
   - climate.upstairs
 garage:
