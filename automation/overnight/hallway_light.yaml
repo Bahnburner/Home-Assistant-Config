@@ -1,4 +1,4 @@
-- alias: Overnight - Kitchen Hallway Dim
+- alias: Overnight - Pantry Dim
   hide_entity: true
   trigger:
     platform: time
@@ -14,7 +14,7 @@
       brightness: 50
       transition: 30
        
-- alias: Overnight - Kitchen Hallway ReDim
+- alias: Overnight - Pantry ReDim
   hide_entity: true
   trigger:
     platform: numeric_state
