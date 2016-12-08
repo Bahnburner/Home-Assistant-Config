@@ -22,14 +22,18 @@
         - wed
         - thu
         - fri
-    - condition: time
-      after: '05:00:00'
-      before: '23:00:00'
   action: 
     - service: light.turn_on
       entity_id: light.cabinet_lights
-      data:
-        color_temp: 250
       data_template:
+        color_temp: >
+          {% if (states.sensor.time.state | round(2)) <= 09.50 %}
+            250
+          {% elif (states.sensor.time.state | round(2)) <= 22.49 %}
+            366
+          {% elif (states.sensor.time.state | round(2)) >= 22.50 %}
+            400
+          {% else %}
+          {% endif %}
         brightness: >
           {{ states.light.floor_lamp.attributes.brightness }}
