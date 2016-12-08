@@ -32,7 +32,7 @@
           {% elif (states.sensor.time.state | round(2)) <= 22.49 %}
             366
           {% elif (states.sensor.time.state | round(2)) >= 22.50 %}
-            400
+            450
           {% else %}
           {% endif %}
         brightness: >
