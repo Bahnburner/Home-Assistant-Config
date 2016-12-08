@@ -51,8 +51,6 @@ group.master_bedroom_lights:
   hidden: true
 group.inputs:
   hidden: true
-group.override:
-  friendly_name: 'Automation Override'
 group.simulate_presence:
   friendly_name: 'Simulate Presence'
   icon: mdi:account-multiple
