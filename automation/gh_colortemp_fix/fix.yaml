@@ -10,16 +10,16 @@
   action:
     service: light.turn_on
     entity_id: group.living_room_lights
-        data_template:
-          color_temp: >
-          {% if (states.sensor.time.state | round(2)) <= 09.50 %}
-            250
-          {% elif (states.sensor.time.state | round(2)) <= 22.49 %}
-            366
-          {% elif (states.sensor.time.state | round(2)) >= 22.50 %}
-            500
-          {% else %}
-          {% endif %}
+      data_template:
+        color_temp: >
+        {% if (states.sensor.time.state | round(2)) <= 09.50 %}
+          250
+        {% elif (states.sensor.time.state | round(2)) <= 22.49 %}
+          366
+        {% elif (states.sensor.time.state | round(2)) >= 22.50 %}
+          500
+        {% else %}
+        {% endif %}
 
 - alias: Color Temp Fix - Bedroom
   hide_entity: True
@@ -33,13 +33,13 @@
   action:
     service: light.turn_on
     entity_id: group.master_bedroom
-        data_template:
-          color_temp: >
-          {% if (states.sensor.time.state | round(2)) <= 09.50 %}
-            250
-          {% elif (states.sensor.time.state | round(2)) <= 22.49 %}
-            366
-          {% elif (states.sensor.time.state | round(2)) >= 22.50 %}
-            500
-          {% else %}
-          {% endif %}
+      data_template:
+        color_temp: >
+        {% if (states.sensor.time.state | round(2)) <= 09.50 %}
+          250
+        {% elif (states.sensor.time.state | round(2)) <= 22.49 %}
+          366
+        {% elif (states.sensor.time.state | round(2)) >= 22.50 %}
+          500
+        {% else %}
+        {% endif %}
