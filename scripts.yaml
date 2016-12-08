@@ -274,18 +274,18 @@
         entity_id: group.master_hallway
         data:
           transition: 300
-     - service: light.turn_off
-       entity_id: group.foyer
-       data:
-         transition: 300
-     - service: light.turn_off
-       entity_id: group.dining_room
-       data:
-         transition: 300
-     - service: light.turn_off
-       entity_id: group.stairway
-       data:
-         transition: 300
+      - service: light.turn_off
+        entity_id: group.foyer
+        data:
+          transition: 300
+      - service: light.turn_off
+        entity_id: group.dining_room
+        data:
+          transition: 300
+      - service: light.turn_off
+        entity_id: group.stairway
+        data:
+          transition: 300
 
   close_the_garage:
     sequence:
