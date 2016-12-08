@@ -18,9 +18,9 @@
     floor_lamp:
       value_template: '{{ states.light.floor_lamp.attributes.brightness }}'
     color_temp_lr:
-      value_template: '{{ states.light.floor_lamp.attributes.color_temp }}'
+      value_template: '{{ states.light.floor_lamp.attributes.xy_color }}'
     color_temp_br:
-      value_template: '{{ states.light.tristans_nightstand.attributes.color_temp }}'
+      value_template: '{{ states.light.tristans_nightstand.attributes.xy_color }}'
     time:
       value_template: '{{(now().strftime("%H") | int) + (now().strftime("%M")|int / 60) | round(2)}}'
 - platform: command_line
