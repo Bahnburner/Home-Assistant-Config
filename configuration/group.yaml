@@ -1,14 +1,8 @@
+christmas:
+  switch.christmas_lights
 door_locks:
   - switch.door_front
   - switch.door_rear
-christmas:
-  switch.christmas_lights
-master_bedroom:
-  - light.tristans_nightstand
-  - light.crystals_nightstand
-living_room_lights:
-  - light.floor_lamp
-  - light.table_lamp
 living_room:
   - sensor.current_activity
   - input_select.harmony
@@ -17,30 +11,43 @@ living_room:
   - climate.downstairs
 living_room_home:
   - media_player.living_room_home
+upstairs:
+  - climate.upstairs
+garage:
+  - cover.garage_door_opener
+  - media_player.garage
+living_room_lights:
+  - light.floor_lamp
+  - light.table_lamp
+master_bedroom:
+  - light.tristans_nightstand
+  - light.crystals_nightstand
+master_hallway:
+  - light.master_hallway_left
+  - light.master_hallway_right
+kitchen:
+  - light.cabinet_lights
+  - light.pantry
 dining_room:
   - light.dining_room_left
   - light.dining_room_right
 foyer:
   - light.foyer_left
   - light.foyer_right
-master_hallway:
-  - light.master_hallway_left
-  - light.master_hallway_right
 stairway:
   - light.stairway
-kitchen:
-  - light.cabinet_lights
-  - light.pantry
 exterior:
   - light.front_door
-upstairs:
-  - climate.upstairs
+family:
+  - device_tracker.tristans_phone
+  - device_tracker.crystals_phone
+  - device_tracker.erins_phone
+  - device_tracker.matts_phone
+  - device_tracker.taylors_phone
+  - device_tracker.donnas_phone
 chromecasts:
   - media_player.livingroom
   - media_player.guestroom
-garage:
-  - cover.garage_door_opener
-  - media_player.garage
 weather:
 #  - sun.sun
   - sensor.dark_sky_temperature
@@ -49,13 +56,10 @@ weather:
   - sensor.dark_sky_summary
   - sensor.dark_sky_precip_probability
 #  - sensor.dark_sky_precip_intensity
-family:
-  - device_tracker.tristans_phone
-  - device_tracker.crystals_phone
-  - device_tracker.erins_phone
-  - device_tracker.matts_phone
-  - device_tracker.taylors_phone
-  - device_tracker.donnas_phone
+override:
+  - switch.vacation_mode
+  - group.simulate_presence
+  - switch.routines
 tristal:
   - device_tracker.tristans_phone
   - device_tracker.crystals_phone
@@ -137,7 +141,4 @@ system_monitor:
   - sensor.cpu_temperature
   - sensor.disk_use_
   - sensor.ram_use
-override:
-  - switch.vacation_mode
-  - group.simulate_presence
-  - switch.routines
+
