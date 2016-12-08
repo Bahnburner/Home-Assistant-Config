@@ -1,0 +1,28 @@
+- alias: Kitchen Uplighting - Weekends
+  hide_entity: true
+  trigger:
+    - platform: state
+      entity_id: sensor.floor_lamp
+    - platform: state
+      entity_id: group.living_room_lights
+    - platform: state
+      entity_id: group.family
+      to: 'home'
+  condition:
+    condition: and
+    conditions:
+    - condition: time
+      weekday:
+        - sat
+        - sun
+    - condition: state
+      entity_id: group.family
+      state: 'home'
+  action:
+    service: light.turn_on
+    entity_id: light.cabinet_lights
+    data:
+      xy_color: [0.1605,0.3299]
+    data_template:
+      brightness: >
+        {{ states.light.floor_lamp.attributes.brightness }}
