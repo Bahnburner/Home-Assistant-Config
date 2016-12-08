@@ -1,0 +1,45 @@
+- alias: Color Temp Fix - Livingroom
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: group.living_room_lights
+      state: 'on'
+    - platform: state
+      entity_id: sensor.color_temp_lr
+      state: '278'
+  action:
+    service: light.turn_on
+    entity_id: group.living_room_lights
+        data_template:
+          color_temp: >
+          {% if (states.sensor.time.state | round(2)) <= 09.50 %}
+            250
+          {% elif (states.sensor.time.state | round(2)) <= 22.49 %}
+            366
+          {% elif (states.sensor.time.state | round(2)) >= 22.50 %}
+            500
+          {% else %}
+          {% endif %}
+
+- alias: Color Temp Fix - Bedroom
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: group.master_bedroom
+      state: 'on'
+    - platform: state
+      entity_id: sensor.color_temp_br
+      state: '278'
+  action:
+    service: light.turn_on
+    entity_id: group.master_bedroom
+        data_template:
+          color_temp: >
+          {% if (states.sensor.time.state | round(2)) <= 09.50 %}
+            250
+          {% elif (states.sensor.time.state | round(2)) <= 22.49 %}
+            366
+          {% elif (states.sensor.time.state | round(2)) >= 22.50 %}
+            500
+          {% else %}
+          {% endif %}
