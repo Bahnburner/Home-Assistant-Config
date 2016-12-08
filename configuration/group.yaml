@@ -1,5 +1,3 @@
-christmas:
-  switch.christmas_lights
 door_locks:
   - switch.door_front
   - switch.door_rear
@@ -9,10 +7,12 @@ living_room:
   - light.floor_lamp
   - light.table_lamp
   - climate.downstairs
-upstairs:
-  - climate.upstairs
 living_room_home:
   - media_player.living_room_home
+christmas:
+  switch.christmas_lights
+upstairs:
+  - climate.upstairs
 garage:
   - cover.garage_door_opener
   - media_player.garage
