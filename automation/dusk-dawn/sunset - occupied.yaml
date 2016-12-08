@@ -1,4 +1,4 @@
-- alias: Sunset - House Occupied
+- alias: Sunset - Occupied
   hide_entity: True
   trigger:
     platform: numeric_state
