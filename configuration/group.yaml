@@ -9,10 +9,10 @@ living_room:
   - light.floor_lamp
   - light.table_lamp
   - climate.downstairs
-living_room_home:
-  - media_player.living_room_home
 upstairs:
   - climate.upstairs
+living_room_home:
+  - media_player.living_room_home
 garage:
   - cover.garage_door_opener
   - media_player.garage
