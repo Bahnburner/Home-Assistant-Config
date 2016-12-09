@@ -1,16 +1,5 @@
-- alias: Away Mode - Night
-  hide_entity: True
-  trigger:
-    platform: state
-    entity_id: group.family
-    from: 'home'
-    to: 'not_home'
-  condition:
-    - condition: numeric_state
-      entity_id: sun.sun
-      value_template: '{{ state.attributes.elevation }}'
-      below: 5
-  action:
+away_mode__night:
+  sequence:
     - entity_id: climate.downstairs
       service: climate.set_away_mode
       data:
