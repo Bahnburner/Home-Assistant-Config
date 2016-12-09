@@ -21,7 +21,7 @@ http: !include ./configuration/http.yaml
 
 automation: !include_dir_merge_list automation
 
-script: !include scripts.yaml
+script: !include_dir_merge_list script
 
 remote: !include ./configuration/remote.yaml
 
