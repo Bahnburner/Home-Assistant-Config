@@ -6,6 +6,10 @@
     from: 'home'
     to: 'not_home'
   action:
+    - service: light.turn_off
+      entity_id: light.pantry
+    - service: remote.turn_off
+      entity_id: remote.living_room
     - service: media_player.volume_set
       entity_id: media_player.living_room_home
       data: 
@@ -27,3 +31,13 @@
       entity_id: cover.garage_door_opener
     - service: script.turn_on
       entity_id: script.lock_doors
+    - service: automation.trigger
+      data_template:
+        entity_id: >
+          {% if states.sun.sun.attributes.elevation <= 5 %}
+            script.away_mode__night
+          {% elif is_state('sensor.dark_sky_icon', 'rain') %}
+            script.away_mode__rain
+          {% else %}
+            script.away_mode__day
+          {% endif %}
