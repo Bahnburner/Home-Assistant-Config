@@ -1,0 +1,4 @@
+  unlock_rear_door:
+    sequence:
+        service: switch.turn_off
+        entity_id: switch.door_rear
