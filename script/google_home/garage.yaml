@@ -1,0 +1,12 @@
+close_the_garage:
+  sequence:
+    service: cover.close_cover
+    entity_id: cover.garage_door_opener
+
+open_the_garage:
+  sequence:
+    - condition: state
+      entity_id: group.family
+      state: 'home'
+    - service: cover.open_cover
+      entity_id: cover.garage_door_opener
