@@ -37,3 +37,9 @@ unpause_other:
     - service: remote.send_command
       entity_id: remote.living_room
       data: {"device": "35163105", "command": "Play"}
+      
+mute:
+  sequence:
+    - service: remote.send_command
+      entity_id: remote.living_room
+      data: {"device": "35163105", "command": "Mute"}
