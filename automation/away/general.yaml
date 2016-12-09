@@ -31,7 +31,7 @@
       entity_id: cover.garage_door_opener
     - service: script.turn_on
       entity_id: script.lock_doors
-    - service: automation.trigger
+    - service: script.turn_on
       data_template:
         entity_id: >
           {% if states.sun.sun.attributes.elevation <= 5 %}
