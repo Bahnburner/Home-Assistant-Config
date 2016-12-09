@@ -1,4 +1,3 @@
 platform: hue
-scan_interval: 10
 host: 10.0.0.208
 allow_unreachable: true
