@@ -1,0 +1,12 @@
+goodbye:
+  sequence:
+    - condition: state
+      entity_id: group.family
+      state: 'home'
+    - service: remote.turn_off
+      entity_id: remote.living_room
+    - service: cover.open_cover
+      data:
+        entity_id: cover.garage_door_opener
+    - service: script.turn_on
+      entity_id: script.lock_doors
