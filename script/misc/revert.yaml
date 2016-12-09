@@ -1,0 +1,50 @@
+revert:
+  sequence:
+    - service: light.turn_off
+      entity_id: group.master_hallway
+    - service: light.turn_off
+      entity_id: group.foyer
+    - service: light.turn_off
+      entity_id: group.dining_room
+    - service: light.turn_off
+      entity_id: group.stairway
+    - service: light.turn_on
+      entity_id: group.living_room_lights
+      data: 
+        brightness: 254
+      data_template:
+        color_temp: >
+          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+            500
+          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+            250
+          {% elif (states.sensor.time.state | round(2)) <= 22.49 %}
+            366
+          {% elif (states.sensor.time.state | round(2)) >= 22.50 %}
+            500
+          {% else %}
+          {% endif %}
+    - service: light.turn_on
+      entity_id: group.cabinet_lights
+      data: 
+        brightness: 254
+      data_template:
+        color_temp: >
+          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+            500
+          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+            250
+          {% elif (states.sensor.time.state | round(2)) <= 22.49 %}
+            366
+          {% elif (states.sensor.time.state | round(2)) >= 22.50 %}
+            500
+          {% else %}
+          {% endif %}
+    - condition: time
+      weekday:
+        - sat
+        - sun
+    - service: light.turn_on
+      entity_id: group.cabinet_lights
+      data:
+        brightness: 254
