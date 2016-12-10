@@ -8,34 +8,20 @@ goodnight:
         option: 'Power Off'
 #      - service: ifttt.trigger
 #        data: {"event":"PowerOff"}
+    - service: light.turn_off
+      entity_id:
+        - group.foyer
+        - group.master_hallway
+        - group.dining_room
+        - group.stairway
+        - group.living_room_lights
+        - light.cabinet_lights
+      data:
+        transition: 300
     - service: light.turn_on
       entity_id: light.pantry
       data:
         brightness: 100
         transition: 15
-    - service: light.turn_off
-      entity_id: group.living_room_lights
-      data:
-        transition: 300
-    - service: light.turn_off
-      entity_id: light.cabinet_lights
-      data:
-        transition: 300
     - service: script.turn_on
       entity_id: script.lock_doors
-    - service: light.turn_off
-      entity_id: group.master_hallway
-      data:
-        transition: 300
-    - service: light.turn_off
-      entity_id: group.foyer
-      data:
-        transition: 300
-    - service: light.turn_off
-      entity_id: group.dining_room
-      data:
-        transition: 300
-    - service: light.turn_off
-      entity_id: group.stairway
-      data:
-        transition: 300
