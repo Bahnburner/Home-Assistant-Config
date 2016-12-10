@@ -7,6 +7,7 @@ nightlight:
       data:
         brightness: 50
         transition: 5
+        color_temp: 500
     - delay:
         minutes: 10
     - condition: template
@@ -17,3 +18,4 @@ nightlight:
         - light.cabinet_lights
       data:
         transition: 10
+        color_temp: 500
