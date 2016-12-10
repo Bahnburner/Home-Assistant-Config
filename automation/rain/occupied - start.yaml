@@ -28,7 +28,7 @@
       transition: 5
     data_template:
       color_temp: >
-        {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+        {% if (states.sensor.time.state | round(2)) <= 09.50 %}
           250
         {% else %}
           366
