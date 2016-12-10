@@ -3,7 +3,8 @@
   trigger:
     - platform: state
       entity_id: group.living_room_lights
-      state: 'off'
+      from: 'on'
+      to: 'off'
     - platform: state
       entity_id: group.family
       to: 'not_home'
