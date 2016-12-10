@@ -3,7 +3,8 @@
   trigger:
     - platform: state
       entity_id: group.living_room_lights
-      state: 'on'
+      from: 'off'
+      to: 'on'
     - platform: state
       entity_id: sensor.color_temp_lr
       state: '[0.402, 0.3768]'
@@ -28,7 +29,8 @@
   trigger:
     - platform: state
       entity_id: group.master_bedroom
-      state: 'on'
+      from: 'off'
+      to: 'on'
     - platform: state
       entity_id: sensor.color_temp_br
       state: '[0.402, 0.3768]'
@@ -54,7 +56,8 @@
   trigger:
     - platform: state
       entity_id: light.cabinet_lights
-      state: 'on'
+      from: 'off'
+      to: 'on'
     - platform: state
       entity_id: sensor.color_temp_cl
       state: '[0.402, 0.3768]'
