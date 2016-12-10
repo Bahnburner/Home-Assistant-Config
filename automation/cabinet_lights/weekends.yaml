@@ -5,6 +5,8 @@
       entity_id: sensor.floor_lamp
     - platform: state
       entity_id: group.living_room_lights
+      from: 'off'
+      to: 'on'
     - platform: state
       entity_id: group.family
       to: 'home'
