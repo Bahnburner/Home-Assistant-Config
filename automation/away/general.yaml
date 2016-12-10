@@ -22,15 +22,12 @@
         media_content_id: "http://wegr-fm.akacast.akamaistream.net/7/628/20075/v1/auth.akacast.akamaistream.net/wegr-fm"
         media_content_type: "audio/mp3"
     - service: light.turn_off
-      entity_id: light.pantry
-    - service: light.turn_off
-      entity_id: group.foyer
-    - service: light.turn_off
-      entity_id: group.master_hallway
-    - service: light.turn_off
-      entity_id: group.dining_room
-    - service: light.turn_off
-      entity_id: group.stairway
+      entity_id:
+        - light.pantry
+        - group.foyer
+        - group.master_hallway
+        - group.dining_room
+        - group.stairway
     - service: cover.close_cover
       entity_id: cover.garage_door_opener
     - service: script.turn_on
