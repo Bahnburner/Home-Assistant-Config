@@ -21,6 +21,5 @@
     - service: light.turn_on
       entity_id: light.pantry
       data:
-        color_temp: 366
         brightness: 254
         transition: 600
