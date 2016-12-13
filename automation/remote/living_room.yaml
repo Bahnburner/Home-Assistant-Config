@@ -3,106 +3,33 @@
   trigger:
     platform: state
     entity_id: input_select.harmony
-    state: 'Watch DirecTV'
+      from: 'Select Input'
   action:
     - service: remote.turn_on
       entity_id: remote.living_room
-      data: {"activity": "19594181"}
+      data template:
+        activity:
+          {% if is_state("input_select.harmony", "Watch DirecTV") %}
+            19594181
+          {% elif is_state("input_select.harmony", "Watch Plex") %}
+            19755764
+          {% elif is_state("input_select.harmony", "Watch Netflix") %}
+            19755673
+          {% elif is_state("input_select.harmony", "Watch Hulu") %}
+            20619552
+          {% elif is_state("input_select.harmony", "Watch Prime Video") %}
+            19752038
+          {% elif is_state("input_select.harmony", "Watch Chromecast") %}
+            19938341
+          {% elif is_state("input_select.harmony", "Watch Power OFf") %}
+            -1
+          {% else %}
+          {% endif %}
     - service: input_select.select_option
       entity_id: input_select.harmony
       data_template:
         option: "Select Input"
 
-- alias: Harmony - Plex
-  hide_entity: True
-  trigger:
-    platform: state
-    entity_id: input_select.harmony
-    state: 'Watch Plex'
-  action:
-    - service: remote.turn_on
-      entity_id: remote.living_room
-      data: {"activity": "19755764"}
-    - service: input_select.select_option
-      entity_id: input_select.harmony
-      data_template:
-        option: "Select Input"
-
-- alias: Harmony - Netflix
-  hide_entity: True
-  trigger:
-    platform: state
-    entity_id: input_select.harmony
-    state: 'Watch Netflix'
-  action:
-    - service: remote.turn_on
-      entity_id: remote.living_room
-      data: {"activity": "19755673"}
-    - service: input_select.select_option
-      entity_id: input_select.harmony
-      data_template:
-        option: "Select Input"
-
-- alias: Harmony - Hulu
-  hide_entity: True
-  trigger:
-    platform: state
-    entity_id: input_select.harmony
-    state: 'Watch Hulu'
-  action:
-    - service: remote.turn_on
-      entity_id: remote.living_room
-      data: {"activity": "20619552"}
-    - service: input_select.select_option
-      entity_id: input_select.harmony
-      data_template:
-        option: "Select Input"
-
-- alias: Harmony - Prime Video
-  hide_entity: True
-  trigger:
-    platform: state
-    entity_id: input_select.harmony
-    state: 'Watch Prime Video'
-  action:
-    - service: remote.turn_on
-      entity_id: remote.living_room
-      data: {"activity": "19752038"}
-    - service: input_select.select_option
-      entity_id: input_select.harmony
-      data_template:
-        option: "Select Input"
-
-- alias: Harmony - Chromecast
-  hide_entity: True
-  trigger:
-    platform: state
-    entity_id: input_select.harmony
-    state: 'Watch Chromecast'
-  action:
-    - service: remote.turn_on
-      entity_id: remote.living_room
-      data: {"activity": "19938341"}
-    - service: input_select.select_option
-      entity_id: input_select.harmony
-      data_template:
-        option: "Select Input"
-
-- alias: Harmony - Power Off
-  hide_entity: True
-  trigger:
-    platform: state
-    entity_id: input_select.harmony
-    state: 'Power Off'
-  action:
-    - service: remote.turn_on
-      entity_id: remote.living_room
-      data: {"activity": "-1"}
-    - service: input_select.select_option
-      entity_id: input_select.harmony
-      data_template:
-        option: "Select Input"
-        
 - alias: Harmony Light Control - Start
   hide_entity: true
   trigger: 
