@@ -5,9 +5,11 @@ switch.routines:
   friendly_name: 'Disable All Automations'
   icon: mdi:power
 switch.door_front:
+  icon: mdi:key-variant
   friendly_name: 'Front Door'
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/kevo.jpg  
 switch.door_rear:
+  icon: mdi:key-variant
   friendly_name: 'Back Door'
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/kevo.jpg
 switch.kevo_rear_hidden:
