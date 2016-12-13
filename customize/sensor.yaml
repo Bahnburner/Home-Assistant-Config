@@ -46,8 +46,10 @@ sensor.disk_use_:
 sensor.ram_use:
   friendly_name: 'RAM Usage'
 sensor.door_status_front:
+  icon: mdi:key-variant
   hidden: true
 sensor.door_status_rear:
+  icon: mdi:key-variant
   hidden: true
 sensor.downstairs_nest_protect_battery_health:
   hidden: true
