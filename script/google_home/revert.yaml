@@ -1,5 +1,14 @@
 revert:
   sequence:
+    - service: light.turn_on
+      entity_id:
+        - group.master_hallway
+        - group.foyer
+        - group.dining_room
+        - group.stairway
+      data:
+        brightness: 254
+        color_temp: 366
     - service: light.turn_off
       entity_id:
         - group.master_hallway
