@@ -31,6 +31,10 @@ group.override:
   friendly_name: 'Automation Override'
 group.tristal:
   hidden: true
+device_tracker.tristans_phone_bluetooth:
+  hidden: true
+device_tracker.crystals_phone_bluetooth:
+  hidden: true
 group.living_room_lights:
   hidden: true
 group.master_bedroom_lights:
