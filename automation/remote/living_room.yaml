@@ -8,7 +8,7 @@
     - service: remote.turn_on
       entity_id: remote.living_room
       data template:
-        activity:
+        activity: >
           {% if is_state("input_select.harmony", "Watch DirecTV") %}
             19594181
           {% elif is_state("input_select.harmony", "Watch Plex") %}
