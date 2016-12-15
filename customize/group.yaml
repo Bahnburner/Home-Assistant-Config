@@ -1,6 +1,5 @@
 group.christmas:
   friendly_name: 'Christmas'
-
 group.door_locks:
   friendly_name: 'Door Locks'
 group.living_room:
