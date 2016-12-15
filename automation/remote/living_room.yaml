@@ -3,7 +3,7 @@
   trigger:
     platform: state
     entity_id: input_select.harmony
-      from: 'Select Input'
+    from: 'Select Input'
   action:
     - service: remote.turn_on
       entity_id: remote.living_room
