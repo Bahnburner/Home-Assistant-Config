@@ -1,7 +1,7 @@
-- platform: bluetooth_le_tracker
-  track_new_devices: false
-  interval_seconds: 1
-  consider_home: 300
+
+- platform: bluetooth_tracker
+  track_new_devices: true
+  interval_seconds: 10
 - platform: asuswrt
   host: 10.0.0.1
   protocol: ssh
