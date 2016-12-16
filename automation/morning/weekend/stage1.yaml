@@ -13,6 +13,9 @@
     - condition: state
       entity_id: group.tristal
       state: 'home'
+    - condition: state
+      entity_id: group.master_bedroom
+      state: 'off'
   action:
     - service: light.turn_on
       entity_id: group.master_bedroom
