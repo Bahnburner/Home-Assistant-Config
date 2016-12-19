@@ -7,7 +7,7 @@
     below: 5
   action:
     service: light.turn_on
-    entity_id: group.living_room
+    entity_id: light.living_room
     data:
       brightness: 254
       transition: 900
@@ -19,7 +19,7 @@
     after: '20:30:00'
   action:
     - service: light.turn_on
-      entity_id: group.living_room
+      entity_id: light.living_room
       data:
         brightness: 100
     - service: remote.turn_on
@@ -32,17 +32,38 @@
   hide_entity: True
   trigger:
     platform: time
+    after: '22:30:00'
+  action:
+    service: light.turn_on
+    entity_id: light.master_bedroom
+    data:
+      brightness: 150
+      color_temp: 500
+      transition: 60
+
+- alias: Simulate Presence 4
+  hide_entity: True
+  trigger:
+    platform: time
     after: '23:45:00'
   action:
     - service: light.turn_off
-      entity_id: group.living_room
+      entity_id: light.living_room
     - service: remote.turn_off
       entity_id: remote.living_room 
 #    - service: ifttt.trigger
 #      data: {"event":"PowerOff"}
 
+- alias: Simulate Presence 5
+  hide_entity: True
+  trigger:
+    platform: time
+    after: '00:15:00'
+  action:
+    - service: light.turn_off
+      entity_id: light_master_bedroom
 
-- alias: Simulate Presence 4
+- alias: Simulate Presence 6
   hide_entity: True
   trigger:
     platform: event
