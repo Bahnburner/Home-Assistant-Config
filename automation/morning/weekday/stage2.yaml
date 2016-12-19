@@ -18,13 +18,13 @@
       state: 'home'
   action:
     - service: light.turn_on
-      entity_id: group.master_bedroom
+      entity_id: light.master_bedroom
       data:
         color_temp: 250
         brightness: 254
         transition: 1800
     - service: light.turn_on
-      entity_id: group.living_room_lights
+      entity_id: light.living_room
       data:
         color_temp: 250
         brightness: 254
