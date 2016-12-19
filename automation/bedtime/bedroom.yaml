@@ -13,3 +13,4 @@
     data:
       brightness: 150
       color_temp: 500
+      transition: 60
