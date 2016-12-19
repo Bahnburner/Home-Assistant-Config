@@ -51,6 +51,8 @@ sensor.door_status_front:
 sensor.door_status_rear:
   icon: mdi:key-variant
   hidden: true
+sensor.downstairs_thermostat_hvac_state:
+  hidden: true
 sensor.downstairs_nest_protect_battery_health:
   hidden: true
 sensor.downstairs_nest_protect_co_status:
@@ -64,6 +66,8 @@ sensor.downstairs_thermostat_operation_mode:
 sensor.downstairs_thermostat_target:
   hidden: true
 sensor.downstairs_thermostat_temperature:
+  hidden: true
+sensor.upstairs_thermostat_hvac_state:
   hidden: true
 sensor.upstairs_nest_protect_battery_health:
   hidden: true
