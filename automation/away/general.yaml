@@ -24,9 +24,9 @@
     - service: light.turn_off
       entity_id:
         - light.pantry
-        - group.foyer
-        - group.master_hallway
-        - group.dining_room
+        - light.foyer
+        - light.master_hallway
+        - light.dining_room
         - group.stairway
     - service: cover.close_cover
       entity_id: cover.garage_door_opener
