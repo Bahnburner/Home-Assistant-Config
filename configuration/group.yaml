@@ -6,8 +6,7 @@ door_locks:
 living_room:
   - sensor.current_activity
   - input_select.harmony
-  - light.floor_lamp
-  - light.table_lamp
+  - light.living_room
   - climate.downstairs
 living_room_home:
   - media_player.living_room_home
@@ -23,17 +22,14 @@ master_bedroom:
   - light.tristans_nightstand
   - light.crystals_nightstand
 master_hallway:
-  - light.master_hallway_left
-  - light.master_hallway_right
+  - light.master_hallway
 kitchen:
   - light.cabinet_lights
   - light.pantry
 dining_room:
-  - light.dining_room_left
-  - light.dining_room_right
+  - light.dining_room
 foyer:
-  - light.foyer_left
-  - light.foyer_right
+  - light.foyer
 stairway:
   - light.stairway
 exterior:
