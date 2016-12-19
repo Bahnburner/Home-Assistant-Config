@@ -16,11 +16,11 @@
     hallway_light:
       value_template: '{{ states.light.pantry.attributes.brightness }}'
     floor_lamp:
-      value_template: '{{ states.light.floor_lamp.attributes.brightness }}'
+      value_template: '{{ states.light.living_room.attributes.brightness }}'
     color_temp_lr:
-      value_template: '{{ states.light.floor_lamp.attributes.xy_color }}'
+      value_template: '{{ states.light.living_room.attributes.xy_color }}'
     color_temp_br:
-      value_template: '{{ states.light.tristans_nightstand.attributes.xy_color }}'
+      value_template: '{{ states.light.master_bedroom.attributes.xy_color }}'
     color_temp_cl:
       value_template: '{{ states.light.cabinet_lights.attributes.xy_color }}'
     time:
