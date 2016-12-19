@@ -15,7 +15,7 @@
       value_template: '{{ states.remote.living_room.attributes.current_activity }}'
     hallway_light:
       value_template: '{{ states.light.pantry.attributes.brightness }}'
-    floor_lamp:
+    brightness_lr:
       value_template: '{{ states.light.living_room.attributes.brightness }}'
     color_temp_lr:
       value_template: '{{ states.light.living_room.attributes.xy_color }}'
