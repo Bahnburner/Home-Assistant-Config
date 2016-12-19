@@ -27,9 +27,9 @@ sensor.current_activity:
   hidden: false
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/harmony.png
   friendly_name: "Current Activity"
-sensor.hallway_light:
+sensor.brightness_pntry:
   hidden: true
-sensor.floor_lamp:
+sensor.brightness_lr:
   hidden: true
 sensor.color_temp_lr:
   hidden: true
