@@ -102,6 +102,8 @@ routines:
   - automation.simulate_presence_2
   - automation.simulate_presence_3
   - automation.simulate_presence_4
+  - automation.simulate_presence_5
+  - automation.simulate_presence_6
   - automation.sunrise__unoccupied
   - automation.sunset__occupied
   - automation.sunset__unoccupied
@@ -125,6 +127,8 @@ simulate_presence:
   - automation.simulate_presence_2
   - automation.simulate_presence_3
   - automation.simulate_presence_4
+  - automation.simulate_presence_5
+  - automation.simulate_presence_6
 gtg:
   - script.go_tigers_go
   - script.timer_off
