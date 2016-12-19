@@ -13,7 +13,7 @@
     current_activity:
       friendly_name: 'Current Activity'
       value_template: '{{ states.remote.living_room.attributes.current_activity }}'
-    hallway_light:
+    brightness_pntry:
       value_template: '{{ states.light.pantry.attributes.brightness }}'
     brightness_lr:
       value_template: '{{ states.light.living_room.attributes.brightness }}'
