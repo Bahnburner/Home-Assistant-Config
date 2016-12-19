@@ -2,9 +2,9 @@
   hide_entity: true
   trigger:
     - platform: state
-      entity_id: sensor.floor_lamp
+      entity_id: sensor.living_room_brightness
     - platform: state
-      entity_id: group.living_room_lights
+      entity_id: light.living_room
       from: 'off'
       to: 'on'
     - platform: state
@@ -39,4 +39,4 @@
           {% else %}
           {% endif %}
         brightness: >
-          {{ states.light.floor_lamp.attributes.brightness }}
+          {{ states.light.living_room.attributes.brightness }}
