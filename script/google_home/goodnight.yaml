@@ -2,10 +2,8 @@ goodnight:
   sequence:
     - service: cover.close_cover
       entity_id: cover.garage_door_opener
-    - service: input_select.select_option
-      entity_id: input_select.harmony
-      data:
-        option: 'Power Off'
+    - service: remote.turn_off
+      entity_id: remote.living_room
 #      - service: ifttt.trigger
 #        data: {"event":"PowerOff"}
     - service: light.turn_off
