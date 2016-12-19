@@ -2,7 +2,7 @@
   hide_entity: True
   trigger:
     - platform: state
-      entity_id: group.living_room_lights
+      entity_id: light.living_room
       from: 'off'
       to: 'on'
     - platform: state
@@ -10,7 +10,7 @@
       state: '[0.402, 0.3768]'
   action:
     service: light.turn_on
-    entity_id: group.living_room_lights
+    entity_id: light.living_room
     data_template:
       color_temp: >
         {% if (states.sensor.time.state | round(2)) <= 05.00 %}
@@ -28,7 +28,7 @@
   hide_entity: True
   trigger:
     - platform: state
-      entity_id: group.master_bedroom
+      entity_id: light.master_bedroom
       from: 'off'
       to: 'on'
     - platform: state
@@ -36,7 +36,7 @@
       state: '[0.402, 0.3768]'
   action:
     service: light.turn_on
-    entity_id: group.master_bedroom
+    entity_id: light.master_bedroom
     data_template:
       color_temp: >
         {% if (states.sensor.time.state | round(2)) <= 05.00 %}
