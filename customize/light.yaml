@@ -46,8 +46,6 @@ light.stairway:
   hidden: false
 light.exterior_front:
   hidden: true
-light.foyer_right:
-  hidden: true
 light.kitchen:
   hidden: true
 light.kitchen_hallway:
