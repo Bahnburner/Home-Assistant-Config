@@ -2,23 +2,23 @@ revert:
   sequence:
     - service: light.turn_on
       entity_id:
-        - group.master_hallway
-        - group.foyer
-        - group.dining_room
-        - group.stairway
+        - light.master_hallway
+        - light.foyer
+        - light.dining_room
+        - light.stairway
       data:
         brightness: 254
         color_temp: 366
     - service: light.turn_off
       entity_id:
-        - group.master_hallway
-        - group.foyer
-        - group.dining_room
-        - group.stairway
+        - light.master_hallway
+        - light.foyer
+        - light.dining_room
+        - light.stairway
     - service: light.turn_on
       entity_id: 
-        - group.living_room_lights
-        - group.master_bedroom
+        - light.living_room
+        - light.master_bedroom
       data: 
         brightness: 254
       data_template:
@@ -34,7 +34,7 @@ revert:
           {% else %}
           {% endif %}
     - service: light.turn_on
-      entity_id: group.cabinet_lights
+      entity_id: light.cabinet_lights
       data: 
         brightness: 254
       data_template:
@@ -54,9 +54,9 @@ revert:
         - sat
         - sun
     - service: light.turn_on
-      entity_id: group.cabinet_lights
+      entity_id: light.cabinet_lights
       data:
         xy_color: [0.1605,0.3299]
       data_template:
         brightness: >
-          {{ states.light.floor_lamp.attributes.brightness }}
+          {{ states.light.living_room.attributes.brightness }}
