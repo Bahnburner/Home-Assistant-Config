@@ -9,7 +9,7 @@
     state: 'home'
   action:
     service: light.turn_on
-    entity_id: group.master_bedroom
+    entity_id: light.master_bedroom
     data:
       brightness: 150
       color_temp: 500
