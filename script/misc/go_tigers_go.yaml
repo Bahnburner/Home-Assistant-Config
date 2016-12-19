@@ -1,5 +1,9 @@
 go_tigers_go:
   sequence:
+    - service: media_player.volume_set
+      entity_id: media_player.living_room_home
+      data: 
+        volume_level: 0.8
     - service: media_player.play_media
       entity_id: media_player.living_room_home
       data:
@@ -9,8 +13,8 @@ go_tigers_go:
       data:
         entity_id: script.timer_off
     - service: light.turn_on
+      entity_id: light.living_room
       data:
-        entity_id: group.living_room_lights
         xy_color: [0.167, 0.04]
     - service: script.turn_on
       data:
@@ -21,6 +25,6 @@ timer_off:
     - delay:
         seconds: 30
     - service: light.turn_on
+      entity_id: light.living_room
       data:
-        entity_id: group.living_room_lights
         color_temp: 366
