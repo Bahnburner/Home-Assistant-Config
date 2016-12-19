@@ -2,16 +2,16 @@ christmas:
   sequence:
     - service: light.turn_on
       entity_id: 
-        - group.dining_room
-        - group.master_hallway
-        - group.stairway
+        - light.dining_room
+        - light.master_hallway
+        - light.stairway
       data: 
         xy_color: [0.677, 0.322]
         brightness: 254
     - service: light.turn_on
       entity_id:
-       - group.living_room_lights
-       - group.foyer
+       - light.living_room
+       - light.foyer
        - light.cabinet_lights
       data:
         xy_color: [0.172, 0.735]
