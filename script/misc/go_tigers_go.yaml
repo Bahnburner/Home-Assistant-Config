@@ -28,3 +28,9 @@ timer_off:
       entity_id: light.living_room
       data:
         color_temp: 366
+    - delay:
+        seconds: 45 
+    - service: media_player.volume_set
+      entity_id: media_player.living_room_home
+      data: 
+        volume_level: 0.5
