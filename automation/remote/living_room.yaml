@@ -47,14 +47,14 @@
       to: 'Watch Prime Video'
   condition: 
     - condition: state
-      entity_id: group.living_room_lights
+      entity_id: light.living_room
       state: 'on'
     - condition: state
       entity_id: sun.sun
       state: 'below_horizon'
   action:
     service: light.turn_on
-    entity_id: group.living_room_lights
+    entity_id: light.living_room
     data:
       brightness: 60
       
@@ -86,16 +86,16 @@
           entity_id: sensor.current_activity
           state: 'PowerOff'
     - condition: state
-      entity_id: group.living_room_lights
+      entity_id: light.living_room
       state: 'on'
     - condition: state
-      entity_id: sensor.floor_lamp
+      entity_id: sensor.brightness_lr
       state: '60'
     - condition: state
       entity_id: sun.sun
       state: 'below_horizon'
   action: 
     service: light.turn_on
-    entity_id: group.living_room_lights
+    entity_id: light.living_room
     data:
       brightness: 254
