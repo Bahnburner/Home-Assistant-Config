@@ -15,14 +15,14 @@
       entity_id: group.family
       state: 'home'
     - condition: state
-      entity_id: light.floor_lamp
+      entity_id: light.living_room
       state: 'off'
     - condition: state
       entity_id: sensor.dark_sky_icon
       state: 'rain'
   action:
     service: light.turn_on
-    entity_id: group.living_room
+    entity_id: light.living_room
     data:
       brightness: 254
       transition: 5
