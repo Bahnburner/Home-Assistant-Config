@@ -12,7 +12,7 @@
     below: 5
   action:
     - service: light.turn_on
-      entity_id: group.living_room_lights
+      entity_id: light.living_room
       data:
         brightness: 254
       data_template:
