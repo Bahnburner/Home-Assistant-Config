@@ -19,21 +19,22 @@ light.cabinet_lights:
 light.dining_room:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.dining_room_left:
-    hidden: true
-    entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  hidden: true
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.dining_room_right:
-    hidden: true
-    entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  hidden: true
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.foyer:
-    entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.foyer_left:
-    hidden: true
-    entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  hidden: true
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.foyer_right:
-    entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  hidden: true
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.master_hallway:
-    hidden: false
-    entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  hidden: false
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.master_hallway_left:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
   hidden: true
@@ -43,3 +44,15 @@ light.master_hallway_right:
 light.stairway:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
   hidden: false
+light.exterior_front:
+  hidden: true
+light.foyer_right:
+  hidden: true
+light.kitchen:
+  hidden: true
+light.kitchen_hallway:
+  hidden: true
+light.master_bedroom:
+  hidden: true
+light.stairway_2:
+  hidden: true
