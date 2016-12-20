@@ -9,6 +9,16 @@
     entity_id: group.family
     state: 'not_home'
   action: 
-    service: script.turn_on
-    entity_id: script.home_mode__garage_hot_start
+    - service: automation.trigger
+      entity_id: automation.home_mode__livingroom
+    - service: media_player.turn_off
+      entity_id: media_player.living_room_home
+    - delay:
+        minutes: 1
+    - condition: state
+      entity_id: group.family
+      state: 'not_home'
+    - service: automation.trigger
+      entity_id: automation.away_mode__general
+      
     
