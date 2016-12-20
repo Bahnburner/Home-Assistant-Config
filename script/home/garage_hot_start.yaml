@@ -2,6 +2,10 @@ home_mode__garage_hot_start:
   sequence:
     - service: script.turn_off
       entity_id: script.hot_start_off
+    - service: light.turn_on
+      entity_id: light.pantry
+      data: 
+        brightness: 254
     - service: script.turn_on
       entity_id: script.timer_off
 
