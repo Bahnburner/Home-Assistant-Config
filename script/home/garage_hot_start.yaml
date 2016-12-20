@@ -13,6 +13,10 @@ hot_start_off:
   sequence:
     - delay:
         minutes: 1
+    - service: light.turn_on
+      entity_id: light.floor_lamp
+      data:
+        xy_color: [0.167, 0.04]
     - service: automation.trigger
       entity_id: automation.away_mode__general
     - service: script.turn_off
