@@ -2,10 +2,10 @@ home_mode__garage_hot_start:
   sequence:
     - service: script.turn_off
       entity_id: script.hot_start_off
-    - service: light.turn_on
-      entity_id: light.pantry
-      data: 
-        brightness: 254
+    - service: automation.trigger
+      entity_id: automation.home_mode__livingroom
+    - service: media_player.turn_off
+      entity_id: media_player.living_room_home
     - service: script.turn_on
       entity_id: script.timer_off
 
@@ -13,5 +13,7 @@ hot_start_off:
   sequence:
     - delay:
         minutes: 1
+    - service: automation.trigger
+      entity_id: automation.away_mode__general
     - service: script.turn_off
       entity_id: script.home_mode__garage_hot_start
