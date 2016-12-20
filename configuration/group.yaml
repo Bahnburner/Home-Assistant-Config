@@ -108,7 +108,6 @@ routines:
   - automation.sunrise__unoccupied
   - automation.sunset__occupied
   - automation.sunset__unoccupied
-  - automation.home_mode__garage_hot_start
 inputs:
   - automation.harmony__directv
   - automation.harmony__plex
