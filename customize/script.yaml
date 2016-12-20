@@ -48,3 +48,7 @@ script.away_mode__night:
   hidden: true
 script.away_mode__rain:
   hidden: true
+script.home_mode__garage_hot_start:
+  hidden: true
+script.hot_start_off:
+  hidden: true
