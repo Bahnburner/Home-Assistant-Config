@@ -6,6 +6,8 @@ media_player.livingroom:
 media_player.guestroom:
   friendly_name: 'Guest Room'
   hidden: true
+media_player.guestroom:
+  hidden: true
 media_player.garage:
   friendly_name: 'Garage Stereo'
 media_player.galaxy_s7_edge:
