@@ -48,7 +48,6 @@ family:
   - device_tracker.matts_phone
   - device_tracker.taylors_phone
   - device_tracker.donnas_phone
-  - script.home_mode__garage_hot_start
 chromecasts:
   - media_player.livingroom
   - media_player.guestroom
@@ -108,6 +107,7 @@ routines:
   - automation.sunrise__unoccupied
   - automation.sunset__occupied
   - automation.sunset__unoccupied
+  - automation.home_mode__garage_hot_start
 inputs:
   - automation.harmony__directv
   - automation.harmony__plex
