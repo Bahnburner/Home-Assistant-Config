@@ -4,7 +4,6 @@ home_mode__garage_hot_start:
       data:
         entity_id: script.hot_start_off
     - service: script.turn_on
-      data:
         entity_id: script.timer_off
 
 hot_start_off:
@@ -12,5 +11,4 @@ hot_start_off:
     - delay:
         minutes: 1
     - service: script.turn_off
-      data:
-        entity_id: script.home_mode__garage_hot_start:
+      entity_id: script.home_mode__garage_hot_start
