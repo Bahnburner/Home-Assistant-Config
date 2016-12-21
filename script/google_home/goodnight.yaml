@@ -7,7 +7,7 @@ goodnight:
 #      - service: ifttt.trigger
 #        data: {"event":"PowerOff"}
     - service: automation.turn_off
-    - entity_id: 
+      entity_id: 
         - automation.kitchen_uplighting__weekends
         - automation.kitchen_uplighting__weekdays
         - automation.kitchen_uplighting__off
@@ -31,7 +31,7 @@ goodnight:
     - delay:
         minutes: 5
     - service: automation.turn_on
-    - entity_id: 
+      entity_id: 
         - automation.kitchen_uplighting__weekends
         - automation.kitchen_uplighting__weekdays
         - automation.kitchen_uplighting__off
