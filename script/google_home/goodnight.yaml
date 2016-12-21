@@ -13,6 +13,10 @@ goodnight:
         - automation.kitchen_uplighting__off
         - automation.color_temp_fix__cabinet_lights
     - service: light.turn_off
+      entity_id: light.living_room
+      data:
+        transition: 300
+    - service: light.turn_off
       entity_id:
         - light.foyer
         - light.master_hallway
@@ -21,7 +25,7 @@ goodnight:
         - light.living_room
         - light.cabinet_lights
       data:
-        transition: 300
+        transition: 30
     - service: light.turn_on
       entity_id: light.pantry
       data:
