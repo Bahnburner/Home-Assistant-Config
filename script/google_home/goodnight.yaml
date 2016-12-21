@@ -6,6 +6,11 @@ goodnight:
       entity_id: remote.living_room
 #      - service: ifttt.trigger
 #        data: {"event":"PowerOff"}
+    - service: automation.turn_off
+    - entity_id: 
+        - automation.kitchen_uplighting__weekends
+        - automation.kitchen_uplighting__weekdays
+        - automation.kitchen_uplighting__off
     - service: light.turn_off
       entity_id:
         - light.foyer
@@ -23,3 +28,8 @@ goodnight:
         transition: 15
     - service: script.turn_on
       entity_id: script.lock_doors
+    - service: automation.turn_on
+    - entity_id: 
+        - automation.kitchen_uplighting__weekends
+        - automation.kitchen_uplighting__weekdays
+        - automation.kitchen_uplighting__off
