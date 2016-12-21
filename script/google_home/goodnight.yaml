@@ -11,13 +11,14 @@ goodnight:
         - automation.kitchen_uplighting__weekends
         - automation.kitchen_uplighting__weekdays
         - automation.kitchen_uplighting__off
+        - automation.color_temp_fix__cabinet_lights
     - service: light.turn_off
       entity_id:
         - light.foyer
         - light.master_hallway
         - light.dining_room
         - light.stairway
-        - light.living_room_lights
+        - light.living_room
         - light.cabinet_lights
       data:
         transition: 300
@@ -35,3 +36,4 @@ goodnight:
         - automation.kitchen_uplighting__weekends
         - automation.kitchen_uplighting__weekdays
         - automation.kitchen_uplighting__off
+        - automation.color_temp_fix__cabinet_lights
