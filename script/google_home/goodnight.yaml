@@ -22,7 +22,6 @@ goodnight:
         - light.master_hallway
         - light.dining_room
         - light.stairway
-        - light.living_room
         - light.cabinet_lights
       data:
         transition: 30
