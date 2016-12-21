@@ -13,7 +13,7 @@ goodnight:
         - automation.kitchen_uplighting__off
         - automation.color_temp_fix__cabinet_lights
     - service: light.turn_off
-      entity_id: light.living_room
+      entity_id: group.living_room_lights
       data:
         transition: 300
     - service: light.turn_off
@@ -34,6 +34,7 @@ goodnight:
       entity_id: script.lock_doors
     - delay:
         minutes: 6
+    - service: light.turn_off
     - service: automation.turn_on
       entity_id: 
         - automation.kitchen_uplighting__weekends
