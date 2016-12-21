@@ -26,7 +26,7 @@
       - condition: time
         after: '22:00:00'
       - condition: time  
-        before: '06:40:00'
+        before: '06:50:00'
   action:
     - delay:
         minutes: 5
