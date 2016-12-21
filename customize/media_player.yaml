@@ -6,7 +6,7 @@ media_player.livingroom:
 media_player.guestroom:
   friendly_name: 'Guest Room'
   hidden: true
-media_player.guestroom:
+media_player.guestroom_2:
   hidden: true
 media_player.garage:
   friendly_name: 'Garage Stereo'
