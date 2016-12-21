@@ -35,6 +35,7 @@ goodnight:
     - delay:
         minutes: 6
     - service: light.turn_off
+      entity_id: light.living_room
     - service: automation.turn_on
       entity_id: 
         - automation.kitchen_uplighting__weekends
