@@ -6,16 +6,6 @@ goodnight:
       entity_id: remote.living_room
 #      - service: ifttt.trigger
 #        data: {"event":"PowerOff"}
-    - service: automation.turn_off
-      entity_id: 
-        - automation.kitchen_uplighting__weekends
-        - automation.kitchen_uplighting__weekdays
-        - automation.kitchen_uplighting__off
-        - automation.color_temp_fix__cabinet_lights
-    - service: light.turn_off
-      entity_id: group.living_room_lights
-      data:
-        transition: 300
     - service: light.turn_off
       entity_id:
         - light.foyer
@@ -31,16 +21,20 @@ goodnight:
         transition: 15
     - service: script.turn_on
       entity_id: script.lock_doors
+    - condition: state
+      entity_id: light.living_room
+      state: 'on'
+    - service: light.turn_on
+      entity_id:
+        - light.living_room
+        - light.cabinet_lights
+      data:
+        brightness: 100
+        transition: 30
     - delay:
         minutes: 5
-        seconds: 30
     - service: light.turn_off
       entity_id: 
         - light.living_room
         - light.cabinet_lights
-    - service: automation.turn_on
-      entity_id: 
-        - automation.kitchen_uplighting__weekends
-        - automation.kitchen_uplighting__weekdays
-        - automation.kitchen_uplighting__off
-        - automation.color_temp_fix__cabinet_lights
+
