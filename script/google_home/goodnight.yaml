@@ -50,12 +50,12 @@ goodnight:
         
 goodnight_timer_off:
   sequence:
-    - delay:
+    - delay: 
         minutes: 5
     - condition: state
-      entity_id: sensor.brightness_lr
-      state: 100
+      entity_id: light.brightness_lr
+      state: '100'
     - service: light.turn_off
-      entity_id: 
+      entity_id:
         - light.living_room
         - light.cabinet_lights
