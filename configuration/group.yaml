@@ -36,9 +36,7 @@ exterior:
   - light.front_door
 tristal:
   - device_tracker.tristans_phone
-  - device_tracker.tristans_phone_bluetooth
   - device_tracker.crystals_phone
-  - device_tracker.crystals_phone_bluetooth
 family:
   - device_tracker.tristans_phone
   - device_tracker.crystals_phone
