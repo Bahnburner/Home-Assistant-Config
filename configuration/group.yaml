@@ -41,9 +41,7 @@ tristal:
   - device_tracker.crystals_phone_bluetooth
 family:
   - device_tracker.tristans_phone
-  - device_tracker.tristans_phone_bluetooth
   - device_tracker.crystals_phone
-  - device_tracker.crystals_phone_bluetooth
   - device_tracker.erins_phone
   - device_tracker.matts_phone
   - device_tracker.taylors_phone
