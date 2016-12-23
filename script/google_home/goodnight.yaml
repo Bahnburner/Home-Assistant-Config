@@ -52,9 +52,8 @@ goodnight_timer_off:
   sequence:
     - delay: 
         minutes: 5
-    - condition: state
-      entity_id: light.brightness_lr
-      state: '100'
+    - condition: template
+      value_template: '{{ states.light.livingroom.attributes.brightness <= 100 }}'
     - service: light.turn_off
       entity_id:
         - light.living_room
