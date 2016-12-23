@@ -8,6 +8,8 @@ script.close_the_garage:
   hidden: true
 script.goodnight:
   hidden: true
+script.goodnight_timer_off:
+  hidden: true
 script.goodbye:
   hidden: true
 script.pause:
