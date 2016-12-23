@@ -64,65 +64,57 @@ override:
   - group.simulate_presence
   - switch.routines
 routines:
-  - automation.away_mode__bedroom
-  - automation.away_mode__day
-  - automation.away_mode__general
-  - automation.away_mode__night
-  - automation.away_mode__rain
-  - automation.bedtime__bedroom_lights
-  - automation.bedtime__kitchen_uplighting
-  - automation.bedtime__livingroom_lights
-  - automation.christmas_lights_off
-  - automation.christmas_lights_on
-  - automation.color_temp_fix__bedroom
-  - automation.color_temp_fix__cabinet_lights
-  - automation.color_temp_fix__livingroom
-  - automation.exterior_front__dawn
-  - automation.exterior_front__dusk
-  - automation.home_mode__bedroom
-  - automation.home_mode__climate
-  - automation.home_mode__livingroom
-  - automation.kitchen_uplighting__off
-  - automation.kitchen_uplighting__weekdays
-  - automation.kitchen_uplighting__weekends
-  - automation.morning__pantry
-  - automation.morning__stage_1
-  - automation.morning__stage_2
-  - automation.morning__stage_3
-  - automation.morning__stage_4
-  - automation.morning__weekend__stage_1
-  - automation.morning__weekend__stage_2
-  - automation.morning__weekend__stage_3
-  - automation.overnight__pantry_dim
-  - automation.overnight__pantry_redim
-  - automation.rain__occupied
-  - automation.rain__unoccupied_start
-  - automation.rain__unoccupied_stop
-  - automation.simulate_presence_1
-  - automation.simulate_presence_2
-  - automation.simulate_presence_3
-  - automation.simulate_presence_4
-  - automation.simulate_presence_5
-  - automation.simulate_presence_6
-  - automation.sunrise__unoccupied
-  - automation.sunset__occupied
-  - automation.sunset__unoccupied
-  - automation.home_mode__garage_hot_start
+  automation.morning__stage_1
+  automation.simulate_presence_4
+  automation.morning__pantry
+  automation.morning__weekend__stage_2
+  automation.kitchen_uplighting__weekdays
+  automation.home_mode__livingroom
+  automation.bedtime__livingroom_lights
+  automation.simulate_presence_1
+  automation.overnight__pantry_dim
+  automation.home_mode__garage_hot_start
+  automation.simulate_presence_2
+  automation.sunset__occupied
+  automation.morning__stage_2
+  automation.color_temp_fix__cabinet_lights
+  automation.simulate_presence_3
+  automation.home_mode__bedroom
+  automation.rain__occupied
+  automation.kitchen_uplighting__weekends
+  automation.kitchen_uplighting__off
+  automation.exterior_front__dawn
+  automation.bedtime__bedroom_lights
+  automation.morning__weekend__stage_3
+  automation.away_mode__bedroom
+  automation.christmas_lights_off
+  automation.home_mode__general
+  automation.overnight__pantry_redim
+  automation.color_temp_fix__livingroom
+  automation.rain__unoccupied__stop
+  automation.morning__stage_3
+  automation.exterior_front__dusk
+  automation.christmas_lights_on
+  automation.sunrise__unoccupied
+  automation.simulate_presence_6
+  automation.harmony_light_control__end
+  automation.simulate_presence_5
+  automation.sunset__unoccupied
+  automation.bedtime__kitchen_uplighting
+  automation.rain__unoccupied__start
+  automation.morning__weekend__stage_1
+  automation.color_temp_fix__bedroom
+  automation.morning__stage_4
+  automation.harmony_light_control__start
+  automation.away_mode__general
 inputs:
-  - automation.harmony__directv
-  - automation.harmony__plex
-  - automation.harmony__netflix
-  - automation.harmony__hulu
-  - automation.harmony__video
-  - automation.harmony__chromecast
-  - automation.harmony__power_off
-  - automation.input__select
+  - automation.harmony
 vacation_mode:
-  - automation.rain__unoccupied
+  - automation.rain__unoccupied__start
+  - automation.rain__unoccupied__stop
   - automation.sunset__unoccupied
   - automation.sunrise__unoccupied
   - automation.away_mode__general
-  - automation.home_mode__general
 simulate_presence:
   - automation.simulate_presence_1
   - automation.simulate_presence_2
@@ -130,20 +122,3 @@ simulate_presence:
   - automation.simulate_presence_4
   - automation.simulate_presence_5
   - automation.simulate_presence_6
-gtg:
-  - script.go_tigers_go
-  - script.timer_off
-google_home:
-  - script.revert
-  - script.goodbye
-  - script.goodnight
-  - script.open_the_garage
-  - script.close_the_garage
-  - script.pause
-  - script.nightlight
-system_monitor:
-  - sensor.cpu_use
-  - sensor.cpu_temperature
-  - sensor.disk_use_
-  - sensor.ram_use
-
