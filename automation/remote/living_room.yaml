@@ -14,7 +14,7 @@
           {% elif is_state("input_select.harmony", "Watch Plex") %}
             19755764
           {% elif is_state("input_select.harmony", "Watch Netflix") %}
-            19755673
+            23422788
           {% elif is_state("input_select.harmony", "Watch Hulu") %}
             20619552
           {% elif is_state("input_select.harmony", "Watch Prime Video") %}
