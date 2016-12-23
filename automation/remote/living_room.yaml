@@ -1,4 +1,4 @@
-- alias: Harmony - DirecTV
+- alias: Harmony
   hide_entity: True
   trigger:
     platform: state
