@@ -13,11 +13,11 @@
     - service: remote.turn_off
       entity_id: remote.living_room
     - service: media_player.volume_set
-      entity_id: media_player.living_room_home
+      entity_id: media_player.google_home
       data: 
         volume_level: 0.5
     - service: media_player.play_media
-      entity_id: media_player.living_room_home
+      entity_id: media_player.google_home
       data:
         media_content_id: "http://wegr-fm.akacast.akamaistream.net/7/628/20075/v1/auth.akacast.akamaistream.net/wegr-fm"
         media_content_type: "audio/mp3"
