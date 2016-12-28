@@ -2,7 +2,7 @@
   hide_entity: True
   trigger:
     platform: time
-    after: '22:30:05'
+    after: '22:30:00'
   condition:
     condition: and
     conditions:
