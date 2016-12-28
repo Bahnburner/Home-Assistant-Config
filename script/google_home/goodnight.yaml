@@ -13,6 +13,11 @@ goodnight:
       entity_id: 
         - automation.kitchen_uplighting__weekends
         - automation.kitchen_uplighting__weekdays
+    - service: media_player.turn_off
+      entity_id: 
+        - media_player.google_home
+        - media_player.dining_room
+        - media_player.downstairs
     - service: light.turn_off
       entity_id:
         - light.foyer
