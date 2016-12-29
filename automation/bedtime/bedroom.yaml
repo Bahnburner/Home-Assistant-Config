@@ -2,7 +2,7 @@
   hide_entity: True
   trigger:
     platform: time
-    after: '22:31:00'
+    after: '22:29:00'
   condition:
     condition: state
     entity_id: group.tristal
