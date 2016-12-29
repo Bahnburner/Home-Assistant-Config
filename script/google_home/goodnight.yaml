@@ -1,12 +1,7 @@
 goodnight:
   sequence:
     - service: script.turn_off
-      data:
-         entity_id: script.goodnight_timer_off
-    - service: cover.close_cover
-      entity_id: cover.garage_door_opener
-    - service: remote.turn_off
-      entity_id: remote.living_room
+      entity_id: script.goodnight_timer_off
 #      - service: ifttt.trigger
 #        data: {"event":"PowerOff"}
     - service: automation.turn_off
@@ -31,8 +26,6 @@ goodnight:
       data:
         brightness: 100
         transition: 15
-    - service: script.turn_on
-      entity_id: script.lock_doors
     - condition: state
       entity_id: light.living_room
       state: 'on'
@@ -50,6 +43,12 @@ goodnight:
         color_temp: 450
         brightness: 100
         transition: 30
+    - service: script.turn_on
+      entity_id: script.lock_doors
+    - service: cover.close_cover
+      entity_id: cover.garage_door_opener
+    - service: remote.turn_off
+      entity_id: remote.living_room
     - delay:
         seconds: 30
     - service: automation.turn_on
@@ -57,8 +56,7 @@ goodnight:
         - automation.kitchen_uplighting__weekends
         - automation.kitchen_uplighting__weekdays
     - service: script.turn_on
-      data:
-        entity_id: script.goodnight_timer_off
+      entity_id: script.goodnight_timer_off
         
 goodnight_timer_off:
   sequence:
