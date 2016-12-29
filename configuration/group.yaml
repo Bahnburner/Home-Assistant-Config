@@ -95,7 +95,6 @@ routines:
   - automation.harmony_light_control__end
   - automation.simulate_presence_5
   - automation.sunset__unoccupied
-  - automation.bedtime__kitchen_uplighting
   - automation.rain__unoccupied__start
   - automation.morning__weekend__stage_1
   - automation.color_temp_fix__bedroom
