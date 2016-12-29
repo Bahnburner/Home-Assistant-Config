@@ -30,9 +30,8 @@
           state: 'home'
         - condition: state
           entity_id: light.cabinet_lights
-          state: 'on'
-    action: 
-      service: light.turn_on
+          state: 'on' 
+    - service: light.turn_on
       entity_id: light.cabinet_lights
       data: 
         color_temp: 400
