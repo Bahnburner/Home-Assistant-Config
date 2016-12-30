@@ -1,4 +1,4 @@
-- alias: Christmas Lights ON
+- alias: NYE 
   hide_entity: True
   trigger:
     platform: time
