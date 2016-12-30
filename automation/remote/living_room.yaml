@@ -21,7 +21,7 @@
             19752038
           {% elif is_state("input_select.harmony", "Watch Chromecast") %}
             19938341
-          {% elif is_state("input_select.harmony", "Watch Power OFf") %}
+          {% elif is_state("input_select.harmony", "Watch Power Off") %}
             -1
           {% else %}
           {% endif %}
