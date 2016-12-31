@@ -2,10 +2,10 @@
   hide_entity: True
   trigger:
     platform: time
-    after: '00:00:00'
+    after: '00:37:00'
   condition:
     condition: template
-    value_template: '{{ now().month == 1 and now().day == 1 }}'
+    value_template: '{{ now().month == 12 and now().day == 31 }}'
   action:
     - service: media_player.play_media
       entity_id: media_player.downstairs
