@@ -2,7 +2,7 @@
   hide_entity: True
   trigger:
     platform: time
-    after: '00:47:33'
+    after: '23:59:27'
   condition:
     condition: template
     value_template: '{{ now().month == 12 and now().day == 31 }}'
