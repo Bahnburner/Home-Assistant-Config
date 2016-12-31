@@ -24,6 +24,46 @@
         - light.stairway
       data:
         flash: short
+    - service: light.turn_on
+      entity_id:
+        - light.living_room
+        - light.dining_room
+        - light.foyer
+        - light.cabinet_lights
+        - light.master_hallway
+        - light.stairway
+      data:
+        flash: short
+    - service: light.turn_on
+      entity_id:
+        - light.living_room
+        - light.dining_room
+        - light.foyer
+        - light.cabinet_lights
+        - light.master_hallway
+        - light.stairway
+      data:
+        flash: short
+    - service: light.turn_on
+      entity_id:
+        - light.living_room
+        - light.dining_room
+        - light.foyer
+        - light.cabinet_lights
+        - light.master_hallway
+        - light.stairway
+      data:
+        flash: short
+    - service: light.turn_on
+      entity_id:
+        - light.living_room
+        - light.dining_room
+        - light.foyer
+        - light.cabinet_lights
+        - light.master_hallway
+        - light.stairway
+      data:
+        flash: short        
     - delay:
         seconds: 2
     - service: light.turn_on
