@@ -14,7 +14,7 @@
         media_content_type: "audio/mp3"  
     - delay:
         seconds: 2
-    - service: lights.turn_on
+    - service: light.turn_on
       entity_id:
         - light.living_room
         - light.dining_room
@@ -26,7 +26,7 @@
         flash: short
     - delay:
         seconds: 2
-    - service: lights.turn_on
+    - service: light.turn_on
       entity_id:
         - light.living_room
         - light.dining_room
