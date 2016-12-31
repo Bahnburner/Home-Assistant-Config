@@ -1,3 +1,6 @@
+TEST
+
+
 homeassistant:
   name: Hidden Ridge
   latitude: !secret latitude
