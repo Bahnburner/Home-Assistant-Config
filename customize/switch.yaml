@@ -18,3 +18,4 @@ switch.kevo_front_hidden:
   hidden: true  
 switch.christmas_lights:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/tree.png
+  hidden: true
