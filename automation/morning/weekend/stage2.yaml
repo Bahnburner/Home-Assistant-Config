@@ -21,7 +21,7 @@
         brightness: 254
         transition: 1800
     - service: light.turn_on
-      entity_id: light.living_room_lights
+      entity_id: light.living_room
       data:
         color_temp: 250
         brightness: 254
