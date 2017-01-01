@@ -1,28 +1,28 @@
-- alias: NYE 
-  hide_entity: True
-  trigger:
-    platform: time
-    after: '23:59:27'
-  condition:
-    condition: template
-    value_template: '{{ now().month == 12 and now().day == 31 }}'
-  action:
-    - service: media_player.play_media
-      entity_id: media_player.downstairs
-      data:
-        media_content_id: "http://wreckage.johndenverschoolofflight.com/hass/auld_lang_syne.mp3"
-        media_content_type: "audio/mp3"  
-    - service: light.turn_on
-      entity_id:
-        - light.living_room
-        - light.dining_room
-        - light.foyer
-        - light.cabinet_lights
-        - light.master_hallway
-        - light.stairway
-      data:
-        effect: colorloop
-    - delay:
-        seconds: 129
-    - service: script.turn_on
-      entity_id: script.revert
+#- alias: NYE 
+#  hide_entity: True
+#  trigger:
+#    platform: time
+#    after: '00:00:00'
+#  condition:
+#    condition: template
+#    value_template: '{{ now().month == 1 and now().day == 1 }}'
+#  action:
+#    - service: media_player.play_media
+#      entity_id: media_player.downstairs
+#      data:
+#        media_content_id: "http://wreckage.johndenverschoolofflight.com/hass/auld_lang_syne.mp3"
+#        media_content_type: "audio/mp3"  
+#    - service: light.turn_on
+#      entity_id:
+#        - light.living_room
+#        - light.dining_room
+#        - light.foyer
+#        - light.cabinet_lights
+#        - light.master_hallway
+#        - light.stairway
+#      data:
+#        effect: colorloop
+#    - delay:
+#        seconds: 129
+#    - service: script.turn_on
+#      entity_id: script.revert
