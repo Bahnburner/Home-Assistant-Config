@@ -1,22 +1,22 @@
-- alias: Christmas Lights ON
-  hide_entity: True
-  trigger: 
-    platform: numeric_state
-    entity_id: sun.sun
-    value_template: '{{ state.attributes.elevation }}'
-    below: 5
-  condition:
-    condition: template
-    value_template: '{{ now().month == 12 }}'
-  action:
-    service: switch.turn_on
-    entity_id: switch.christmas_lights
-     
-- alias: Christmas Lights OFF
-  hide_entity: True
-  trigger:
-    platform: time
-    after: '00:00:00'
-  action:
-    - service: switch.turn_off
-      entity_id: switch.christmas_lights
+#- alias: Christmas Lights ON
+#  hide_entity: True
+#  trigger: 
+#    platform: numeric_state
+#    entity_id: sun.sun
+#    value_template: '{{ state.attributes.elevation }}'
+#    below: 5
+#  condition:
+#    condition: template
+#    value_template: '{{ now().month == 12 }}'
+#  action:
+#    service: switch.turn_on
+#    entity_id: switch.christmas_lights
+#     
+#- alias: Christmas Lights OFF
+#  hide_entity: True
+#  trigger:
+#    platform: time
+#    after: '00:00:00'
+#  action:
+#    - service: switch.turn_off
+#      entity_id: switch.christmas_lights
