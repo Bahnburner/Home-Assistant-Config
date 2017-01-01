@@ -16,3 +16,7 @@ media_player.multiroom:
   hidden: true
 media_player.multiroom_2:
   hidden: true
+media_player.plex_web_chrome
+  hidden: true
+media_player.plex_web_safari
+  hidden: true
