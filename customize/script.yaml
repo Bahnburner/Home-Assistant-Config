@@ -54,3 +54,5 @@ script.home_mode__garage_hot_start:
   hidden: false
 script.hot_start_off:
   hidden: true
+script.good_morning
+  hidden: true
