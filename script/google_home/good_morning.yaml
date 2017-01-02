@@ -1,0 +1,48 @@
+good_morning:
+  sequence:
+    - service: tts.google_say
+      data_template:
+        message: >
+          {% if  (now().strftime("%H")) | int > 12 and (now().strftime("%M")) | int >= 10 %}
+            Good Morning. The current time is {{(now().strftime("%H")) | int -12 }}{{ (now().strftime("%M")) | int }}.
+          {% elif  (now().strftime("%H")) | int > 12 and (now().strftime("%M")) | int == 0 %}
+            Good Morning. The current time is {{ (now().strftime("%H")) | int -12 }} O'Clock.
+          {% elif  (now().strftime("%H")) | int > 12 and (now().strftime("%M")) | int <= 0 %}
+            Good Morning. The current time is {{(now().strftime("%H")) | int -12}} oh {{ (now().strftime("%M")) | int }}.
+          {% elif  (now().strftime("%H")) | int < 12 and (now().strftime("%M")) | int >= 10 %}
+            Good Afternoon. The current time is {{(now().strftime("%H")) | int -12 }}{{ (now().strftime("%M")) | int }}.
+          {% elif  (now().strftime("%H")) | int < 12 and (now().strftime("%M")) | int == 0 %}
+            Good Afternoon. The current time is {{ (now().strftime("%H")) | int -12 }} O'Clock.
+          {% elif  (now().strftime("%H")) | int < 12 and (now().strftime("%M")) | int <= 10 %}
+            Good Afternoon. The current time is {{(now().strftime("%H")) | int -12 }} oh {{ (now().strftime("%M")) | int }}.
+          {% elif  (now().strftime("%H")) | int < 12 and (now().strftime("%H")) | int > 18 and (now().strftime("%M")) | int >= 10 %}
+            Good Evening. The current time is {{(now().strftime("%H")) | int -12 }}{{ (now().strftime("%M")) | int }}.
+          {% elif  (now().strftime("%H")) | int < 12 and (now().strftime("%H")) | int > 18 and (now().strftime("%M")) | int == 0 %}
+            Good Evening. The current time is {{ (now().strftime("%H")) | int -12 }} O'Clock.
+          {% elif  (now().strftime("%H")) | int < 12 and (now().strftime("%H")) | int > 18 and (now().strftime("%M")) | int <= 10 %}
+            Good Evening. The current time is {{(now().strftime("%H")) | int -12 }} oh {{ (now().strftime("%M")) | int }}.
+          {% endif %}
+            The current temperature is {{states.sensor.dark_sky_temperature.state}} and there is a {{states.sensor.dark_sky_precip_probability.state}} percent chance of rain today.
+    - service: remote.turn_on
+      entity_id: remote.living_room
+      data:
+        activity: 19594181
+    - condition: and
+      conditions: 
+        - condition: time
+          weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+        - condition: time
+          before: '10:00:00'
+    - service: remote.send_command
+      entity_id: remote.living_room
+      device: 35163109
+      command: 'DirectionUp'
+    - service: remote.send_command
+      entity_id: remote.living_room
+      device: 35163109
+      command: 'Enter'
