@@ -85,3 +85,5 @@ sensor.upstairs_thermostat_temperature:
   hidden: true
 sensor.time:
   hidden: true
+sensor.drive_time_to_work:
+  hidden: true
