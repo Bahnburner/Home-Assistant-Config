@@ -1,0 +1,13 @@
+- alias: Garage door open
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: cover.garage_door_opener
+    state: 'open'
+    for:
+      minutes: 10
+  action:
+    service: tts.google_say
+    entity_id: media_player.downstairs
+    data: 
+      message: "Just a heads up, the garage is currently open."
