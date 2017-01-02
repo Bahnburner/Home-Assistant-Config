@@ -40,9 +40,11 @@ good_morning:
           before: '10:00:00'
     - service: remote.send_command
       entity_id: remote.living_room
-      device: 35163109
-      command: 'DirectionUp'
+      data:
+        device: 35163109
+        command: 'DirectionUp'
     - service: remote.send_command
       entity_id: remote.living_room
-      device: 35163109
-      command: 'Enter'
+      data:
+        device: 35163109
+        command: 'Enter'
