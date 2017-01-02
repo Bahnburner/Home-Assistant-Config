@@ -6,8 +6,12 @@
     state: 'open'
     for:
       minutes: 10
+  condition:
+    condition: state
+    entity_id: group.family
+    state: 'home'
   action:
     service: tts.google_say
     entity_id: media_player.downstairs
     data: 
-      message: "Just a heads up, the garage is currently open."
+      message: 'Just a heads up, the garage is currently open.'
