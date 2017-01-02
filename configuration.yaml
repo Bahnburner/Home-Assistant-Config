@@ -49,5 +49,4 @@ switch: !include ./configuration/switch.yaml
 
 group: !include ./configuration/group.yaml
 
-tts:
-  - platform: google
+tts: !include ./configuration/tts.yaml
