@@ -48,3 +48,6 @@ sensor: !include ./configuration/sensor.yaml
 switch: !include ./configuration/switch.yaml
 
 group: !include ./configuration/group.yaml
+
+tts:
+  - platform: google
