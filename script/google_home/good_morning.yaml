@@ -36,6 +36,8 @@ good_morning:
           - fri
         - condition: time
           before: '10:00:00'
+    - delay:
+        seconds: 30
     - service: remote.send_command
       entity_id: remote.living_room
       data:
@@ -45,4 +47,4 @@ good_morning:
       entity_id: remote.living_room
       data:
         device: 35163109
-        command: 'Enter'
+        command: 'Select'
