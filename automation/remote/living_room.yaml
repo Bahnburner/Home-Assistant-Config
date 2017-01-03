@@ -101,9 +101,6 @@
       entity_id: light.living_room
       state: 'on'
     - condition: state
-      entity_id: sensor.brightness_lr
-      state: '60'
-    - condition: state
       entity_id: sun.sun
       state: 'below_horizon'
   action: 
