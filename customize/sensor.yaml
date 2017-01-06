@@ -17,6 +17,8 @@ sensor.dark_sky_daily_low_temperature:
   friendly_name: 'Low'
 sensor.dark_sky_precip:
   friendly_name: 'Precipitation Type'
+snesor.dark_sky_precip_type:
+  hidden: true
 sensor.downstairs_temperature:
   friendly_name: 'Downstairs Temperature'
 sensor.upstairs_temperature:
