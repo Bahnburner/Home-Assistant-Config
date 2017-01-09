@@ -1,5 +1,6 @@
 binary_sensor.downstairs_nest_protect_online:
-  hidden: true
+  friendly_name: "Protect"
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/
 binary_sensor.downstairs_thermostat_fan:
   hidden: true
 binary_sensor.downstairs_thermostat_has_leaf:
@@ -21,4 +22,5 @@ binary_sensor.upstairs_thermostat_is_locked:
 binary_sensor.upstairs_thermostat_is_using_emergency_heat:
   hidden: true
 binary_sensor.upstairs_thermostat_online:
-  hidden: true
+  friendly_name: "Protect"
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/
