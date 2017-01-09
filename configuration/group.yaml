@@ -15,10 +15,12 @@ living_room:
   - input_select.harmony
   - light.living_room
   - climate.downstairs
+  - binary_sensor.downstairs_nest_protect_online
 living_room_home:
   - media_player.google_home
 upstairs:
   - climate.upstairs
+  - binary_sensor.upstairs_nest_protect_online
 garage:
   - cover.garage_door_opener
 living_room_lights:
