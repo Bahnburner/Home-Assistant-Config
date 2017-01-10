@@ -103,6 +103,8 @@ routines:
   - automation.morning__stage_4
   - automation.harmony_light_control__start
   - automation.away_mode__general
+  - automation.nest_protect_emergency
+  - automation.nest_protect_normal
 inputs:
   - automation.harmony
 vacation_mode:
