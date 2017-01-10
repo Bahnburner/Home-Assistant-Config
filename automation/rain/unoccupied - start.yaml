@@ -25,7 +25,7 @@
     entity_id: light.living_room
     data:
       brightness: 150
-      transition: 5
+      transition: 60
     data_template:
       color_temp: >
         {% if (states.sensor.time.state | round(2)) <= 09.50 %}
