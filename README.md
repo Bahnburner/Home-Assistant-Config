@@ -7,10 +7,15 @@
 <ul>
 <li>Phillips Hue bulbs and lightstrips</li>
 <li>Nest Thermostats</li>
+<li>Nest Smoke Alarms</li>
 <li>Presence detection via Asus-WRT</li>
 <li>Google Home</li>
 <li>Google Chromecast</li>
 <li>Logitech Harmony Ultimate</li>
 <li>Kwikset Kevo deadbolts (using unofficial API)</li>
+<li>Chamberlain MyQ Garage door opener</li>
 <li>Darksky weather forecasting</li>
+<li>Smartthings Hub</li>
+<li>GE Z-wave wall receipticles</li>
+
 </ul>
