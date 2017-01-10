@@ -16,6 +16,12 @@
 - alias: Nest protect normal
   hide_entity: true
   trigger: 
+    platform: state
+    entity_id:
+      - sensor.upstairs_nest_protect_smoke_status
+      - sensor.upstairs_nest_protect_co_status
+      - sensor.downstairs_nest_protect_smoke_status
+      - sensor.downstairs_nest_protect_co_status
     from: 'Emergency'
   action:
     - service: script.trigger
