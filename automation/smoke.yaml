@@ -1,0 +1,28 @@
+- alias: Nest protect emergency
+  hide_entity: true
+  trigger: 
+    platform: state
+    entity_id:
+      - sensor.upstairs_nest_protect_smoke_status
+      - sensor.upstairs_nest_protect_co_status
+      - sensor.downstairs_nest_protect_smoke_status
+      - sensor.downstairs_nest_protect_co_status
+    to: 'Emergency'
+  action:
+    service: light.turn_on
+    data:
+      brightness: 254
+    
+- alias: Nest protect normal
+  hide_entity: true
+  trigger: 
+    from: 'Emergency'
+  action:
+    - service: script.trigger
+      entity_id: script.revert
+    - condition: state
+      entity_id: group.family
+      state: 'not_home'
+    - service: automation.trigger
+      entity_id: automation.away_mode__general
+      
