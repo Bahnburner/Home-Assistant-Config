@@ -15,7 +15,7 @@
 <li>Kwikset Kevo deadbolts <i>(using unofficial API)</i></li>
 <li>Chamberlain MyQ Garage door opener</li>
 <li>Darksky weather forecasting</li>
-<li>Smartthings Hub</li>
+<li>Smartthings Hub <i>via MQTT</i></li>
 <li>GE Z-wave wall receipticles</li>
 
 </ul>
