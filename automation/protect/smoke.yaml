@@ -12,6 +12,7 @@
     service: light.turn_on
     data:
       brightness: 254
+      color_temp: 300
     
 - alias: Nest protect normal
   hide_entity: true
