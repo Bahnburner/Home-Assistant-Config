@@ -1,9 +1,11 @@
 climate.downstairs:
+  friendly_name: "Thermostat"
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/nest.png
   min_temp: 55
   max_temp: 80
   unit_of_measurement: °F
 climate.upstairs:
+  friendly_name: "Thermostat"
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/nest.png
   min_temp: 55
   max_temp: 80
