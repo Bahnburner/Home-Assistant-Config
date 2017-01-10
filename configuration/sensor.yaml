@@ -33,6 +33,10 @@
       value_template: '{{ states.light.cabinet_lights.attributes.xy_color }}'
     time:
       value_template: '{{(now().strftime("%H") | int) + (now().strftime("%M")|int / 60) | round(2)}}'
+    protect_down:
+      value_template: '{% if is_state("binary_sensor.downstairs_nest_protect_online", "on") %}Ready{% else %}Error{% endif %}'    
+    protect_up:
+      value_template: '{% if is_state("binary_sensor.upstairs_nest_protect_online", "on") %}Ready{% else %}Error{% endif %}'
 - platform: command_line
   name: Door Status Front
   command: "sh /home/hass/.homeassistant/kevo/status-front.sh"
