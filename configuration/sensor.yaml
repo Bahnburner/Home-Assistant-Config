@@ -5,7 +5,7 @@
     - summary
     - precip_intensity
     - precip_probability
-    - precip_type
+#    - precip_type
     - temperature
     - temperature_max
     - temperature_min
