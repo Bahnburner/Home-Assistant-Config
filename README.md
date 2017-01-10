@@ -8,7 +8,7 @@
 <li>Phillips Hue bulbs and lightstrips</li>
 <li>Nest Thermostats</li>
 <li>Nest Smoke Alarms</li>
-<li>Presence detection via Asus-WRT</li>
+<li>Presence detection <i>via Asus-WRT</i></li>
 <li>Google Home</li>
 <li>Google Chromecast</li>
 <li>Logitech Harmony Ultimate</li>
