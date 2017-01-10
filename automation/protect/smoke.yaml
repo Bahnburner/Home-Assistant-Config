@@ -9,10 +9,15 @@
       - sensor.downstairs_nest_protect_co_status
     to: 'Emergency'
   action:
-    service: light.turn_on
-    data:
-      brightness: 254
-      color_temp: 300
+    - service: light.turn_on
+      data:
+        brightness: 254
+        color_temp: 300
+    - condition: state
+      entity_id: group.family
+      state: 'home'
+    - service: script.trigger
+      entity_id: script.unlock_doors
     
 - alias: Nest protect normal
   hide_entity: true
