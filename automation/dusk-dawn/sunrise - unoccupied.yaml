@@ -11,6 +11,8 @@
     state: 'not_home'
   action:
     - service: light.turn_off
-      entity_id: light.living_room
-    - service: light.turn_off
-      entity_id: light.pantry
+      entity_id: 
+        - light.living_room
+        - light.pantry
+      data: 
+        transition: 60
