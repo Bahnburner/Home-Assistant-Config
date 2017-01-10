@@ -12,7 +12,7 @@
 <li>Google Home</li>
 <li>Google Chromecast</li>
 <li>Logitech Harmony Ultimate</li>
-<li>Kwikset Kevo deadbolts (using unofficial API)</li>
+<li>Kwikset Kevo deadbolts <i>(using unofficial API)</i></li>
 <li>Chamberlain MyQ Garage door opener</li>
 <li>Darksky weather forecasting</li>
 <li>Smartthings Hub</li>
