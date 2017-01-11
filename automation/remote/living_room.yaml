@@ -21,10 +21,22 @@
             19752038
           {% elif is_state("input_select.harmony", "Watch Chromecast") %}
             19938341
-          {% elif is_state("input_select.harmony", "Watch Power Off") %}
-            -1
           {% else %}
           {% endif %}
+    - service: input_select.select_option
+      entity_id: input_select.harmony
+      data_template:
+        option: "Select Input"
+
+- alias: Harmony Off
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: input_select.harmony
+    to: 'Power Off'
+  action:
+    - service: remote.turn_off
+      entity_id: remote.living_room
     - service: input_select.select_option
       entity_id: input_select.harmony
       data_template:
