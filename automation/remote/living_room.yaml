@@ -9,17 +9,17 @@
       entity_id: remote.living_room
       data_template:
         activity: >
-          {% if is_state("input_select.harmony", "DirecTV") %}
+          {% if is_state("input_select.harmony", "Watch DirecTV") %}
             19594181
-          {% elif is_state("input_select.harmony", "Plex") %}
+          {% elif is_state("input_select.harmony", "Watch Plex") %}
             19755764
-          {% elif is_state("input_select.harmony", "Netflix") %}
+          {% elif is_state("input_select.harmony", "Watch Netflix") %}
             23422788
-          {% elif is_state("input_select.harmony", "Hulu") %}
+          {% elif is_state("input_select.harmony", "Watch Hulu") %}
             20619552
-          {% elif is_state("input_select.harmony", "Prime Video") %}
+          {% elif is_state("input_select.harmony", "Watch Prime Video") %}
             19752038
-          {% elif is_state("input_select.harmony", "Chromecast") %}
+          {% elif is_state("input_select.harmony", "Watch Chromecast") %}
             19938341
           {% else %}
           {% endif %}
@@ -47,16 +47,16 @@
   trigger: 
     - platform: state
       entity_id: sensor.current_activity
-      to: 'Plex'
+      to: 'Watch Plex'
     - platform: state
       entity_id: sensor.current_activity
-      to: 'Netflix'
+      to: 'Watch Netflix'
     - platform: state
       entity_id: sensor.current_activity
-      to: 'Hulu'
+      to: 'Watch Hulu'
     - platform: state
       entity_id: sensor.current_activity
-      to: 'Prime Video'
+      to: 'Watch Prime Video'
   condition: 
     - condition: state
       entity_id: light.living_room
@@ -87,25 +87,25 @@
   trigger: 
     - platform: state
       entity_id: sensor.current_activity
-      from: 'Plex'
+      from: 'Watch Plex'
     - platform: state
       entity_id: sensor.current_activity
-      from: 'Netflix'
+      from: 'Watch Netflix'
     - platform: state
       entity_id: sensor.current_activity
-      from: 'Hulu'
+      from: 'Watch Hulu'
     - platform: state
       entity_id: sensor.current_activity
-      from: 'Prime Video'
+      from: 'Watch Prime Video'
   condition: 
     - condition: or
       conditions:
         - condition: state
           entity_id: sensor.current_activity
-          state: 'DirecTV'
+          state: 'Watch DirecTV'
         - condition: state
           entity_id: sensor.current_activity
-          state: 'Chromecast'
+          state: 'Watch Chromecast'
         - condition: state
           entity_id: sensor.current_activity
           state: 'PowerOff'
