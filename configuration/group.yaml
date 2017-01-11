@@ -107,6 +107,7 @@ routines:
   - automation.nest_protect_normal
 inputs:
   - automation.harmony
+  - automation.harmony_off
 vacation_mode:
   - automation.rain__unoccupied__start
   - automation.rain__unoccupied__stop
