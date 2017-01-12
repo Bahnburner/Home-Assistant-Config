@@ -10,8 +10,8 @@ christmas:
 door_locks:
   - switch.door_front
   - switch.door_rear
-  - kevo_front_hidden
-  - kevo_rear_hidden
+  - switch.kevo_front_hidden
+  - swithc.kevo_rear_hidden
 living_room:
   - sensor.current_activity
   - input_select.harmony
