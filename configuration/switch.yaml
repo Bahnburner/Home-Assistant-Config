@@ -18,22 +18,6 @@
           entity_id: group.routines
         - service: automation.turn_off
           entity_id: group.simulate_presence
-    door_front: 
-      value_template: '{{ states.sensor.door_status_front.state == "Locked" }}'
-      turn_on: 
-        service: switch.turn_on
-        entity_id: switch.kevo_front_hidden
-      turn_off:
-        service: switch.turn_off
-        entity_id: switch.kevo_front_hidden
-    door_rear:
-      value_template: '{{ states.sensor.door_status_rear.state == "Locked" }}'
-      turn_on: 
-        service: switch.turn_on
-        entity_id: switch.kevo_rear_hidden
-      turn_off:
-        service: switch.turn_off
-        entity_id: switch.kevo_rear_hidden
 - platform: mqtt
   name: 'Christmas Lights'
   state_topic: "smartthings/Christmas Lights/switch"
@@ -43,12 +27,12 @@
   retain: true
 - platform: command_line
   switches:
-    kevo_front_hidden:
+    door_front:
       command_on: "python /home/hass/.homeassistant/kevo/lock-front.py"
       command_off: "python /home/hass/.homeassistant/kevo/unlock-front.py"
       command_state: "python /home/hass/.homeassistant/kevo/status-front.py"
       value_template: '{{ value == "Locked" }}'
-    kevo_rear_hidden:
+    door_rear:
       command_on: "python /home/hass/.homeassistant/kevo/lock-rear.py"
       command_off: "python /home/hass/.homeassistant/kevo/unlock-rear.py"
       command_state: "python /home/hass/.homeassistant/kevo/status-rear.py"
