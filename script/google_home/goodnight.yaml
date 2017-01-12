@@ -43,8 +43,7 @@ goodnight:
         color_temp: 450
         brightness: 100
         transition: 30
-    - service: script.turn_on
-      entity_id: script.lock_doors
+    - service: script.lock_doors
     - service: cover.close_cover
       entity_id: cover.garage_door_opener
     - service: remote.turn_off
