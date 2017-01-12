@@ -45,5 +45,4 @@
           {% else %}
             script.away_mode__day
           {% endif %}
-    - service: script.turn_on
-      entity_id: script.lock_doors
+    - service: script.lock_doors
