@@ -51,4 +51,4 @@ group: !include ./configuration/group.yaml
 
 tts: !include ./configuration/tts.yaml
 
-shell_command: ./configuration/shell_command.yaml
+shell_command: !include ./configuration/shell_command.yaml
