@@ -38,13 +38,13 @@
     protect_up:
       value_template: '{% if is_state("binary_sensor.upstairs_nest_protect_online", "on") %}Online{% else %}Error{% endif %}'
 - platform: command_line
-  name: Door Status Front
-  command: "python /home/hass/.homeassistant/kevo/status-front.py"
-  scan_interval: 30
-- platform: command_line  
-  name: Door Status Rear
-  command: "python /home/hass/.homeassistant/kevo/status-rear.py"
-  scan_interval: 30
+  sensors:
+    door_status_front:
+      command: "python /home/hass/.homeassistant/kevo/status-front.py"
+      scan_interval: 30 
+    door_status_rear:
+      command: "python /home/hass/.homeassistant/kevo/status-rear.py"
+      scan_interval: 30
 
 #- platform: command_line
 #  name: CPU Temperature
