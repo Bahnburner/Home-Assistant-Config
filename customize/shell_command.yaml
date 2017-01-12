@@ -1,0 +1,4 @@
+shell_command.lock_doors:
+  hidden: true
+shell_command.unlock_doors:
+  hidden: true
