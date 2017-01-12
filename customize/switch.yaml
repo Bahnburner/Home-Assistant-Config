@@ -13,9 +13,9 @@ switch.door_rear:
   friendly_name: 'Back Door'
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/kevo.jpg
 switch.kevo_rear_hidden:
-  hidden: true
+  hidden: false
 switch.kevo_front_hidden:
-  hidden: true  
+  hidden: false
 switch.christmas_lights:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/tree.png
   hidden: true
