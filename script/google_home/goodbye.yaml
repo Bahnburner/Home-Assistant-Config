@@ -13,5 +13,4 @@ goodbye:
     - service: cover.open_cover
       data:
         entity_id: cover.garage_door_opener
-    - service: script.turn_on
-      entity_id: script.lock_doors
+    - service: script.lock_doors
