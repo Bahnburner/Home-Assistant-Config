@@ -11,7 +11,7 @@ fox:
         device: 35163109
         command: 'Select'  
     - condition: template
-      value_template: {{ states.sensor.current_activity.state != "Watch DirecTV"}}
+      value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
       entity_id: remote.living_room
       data:
@@ -47,7 +47,7 @@ comedycentral:
         device: 35163109
         command: 'Select'  
     - condition: template
-      value_template: {{ states.sensor.current_activity.state != "Watch DirecTV"}}
+      value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
       entity_id: remote.living_room
       data:
@@ -89,7 +89,7 @@ cartoonnetwork:
         device: 35163109
         command: 'Select'  
     - condition: template
-      value_template: {{ states.sensor.current_activity.state != "Watch DirecTV"}}
+      value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
       entity_id: remote.living_room
       data:
@@ -131,7 +131,7 @@ FXX:
         device: 35163109
         command: 'Select'  
     - condition: template
-      value_template: {{ states.sensor.current_activity.state != "Watch DirecTV"}}
+      value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
       entity_id: remote.living_room
       data:
@@ -173,7 +173,7 @@ NBC:
         device: 35163109
         command: 'Select'  
     - condition: template
-      value_template: {{ states.sensor.current_activity.state != "Watch DirecTV"}}
+      value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
       entity_id: remote.living_room
       data:
@@ -220,7 +220,7 @@ ESPN:
         device: 35163109
         command: 'Select'  
     - condition: template
-      value_template: {{ states.sensor.current_activity.state != "Watch DirecTV"}}
+      value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
       entity_id: remote.living_room
       data:
@@ -271,7 +271,7 @@ FX:
         device: 35163109
         command: 'Select'  
     - condition: template
-      value_template: {{ states.sensor.current_activity.state != "Watch DirecTV"}}
+      value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
       entity_id: remote.living_room
       data:
@@ -322,7 +322,7 @@ CBS:
         device: 35163109
         command: 'Select'  
     - condition: template
-      value_template: {{ states.sensor.current_activity.state != "Watch DirecTV"}}
+      value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
       entity_id: remote.living_room
       data:
@@ -373,7 +373,7 @@ FX:
         device: 35163109
         command: 'Select'  
     - condition: template
-      value_template: {{ states.sensor.current_activity.state != "Watch DirecTV"}}
+      value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
       entity_id: remote.living_room
       data:
