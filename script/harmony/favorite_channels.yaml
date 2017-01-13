@@ -69,7 +69,6 @@ comedycentral:
       data:
         device: 35163109
         command: 'Select' 
-        
 
 cartoonnetwork:
   sequence:
@@ -153,8 +152,7 @@ fxx:
         device: 35163109
         command: 'Select' 
 
-
-NBC:
+nbc:
   sequence:
     - service: remote.send_command
       entity_id: remote.living_room
@@ -298,7 +296,7 @@ fx:
         device: 35163109
         command: 'Select' 
         
-CBS:
+cbs:
   sequence:
     - service: remote.send_command
       entity_id: remote.living_room
@@ -349,7 +347,7 @@ CBS:
         device: 35163109
         command: 'Select' 
         
-ABC:
+abc:
   sequence:
     - service: remote.send_command
       entity_id: remote.living_room
