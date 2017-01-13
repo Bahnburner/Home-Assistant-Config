@@ -1,0 +1,42 @@
+pause:
+  sequence:
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state('sensor.current_activity', 'Watch DirecTV') %}
+            script.pause_directv 
+          {% else %}
+            script.pause_other
+          {% endif %}
+
+unpause:
+  sequence:
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state('sensor.current_activity', 'Watch DirecTV') %}
+            script.pause_directv 
+          {% else %}
+            script.unpause_other
+          {% endif %}
+
+pause_directv:
+  sequence:
+    - service: remote.send_command
+      entity_id: remote.living_room
+      data: {"device": "35163109", "command": "Green"} 
+    - service: remote.send_command
+      entity_id: remote.living_room
+      data: {"device": "35163109", "command": "Pause"}
+        
+pause_other:
+  sequence:
+    - service: remote.send_command
+      entity_id: remote.living_room
+      data: {"device": "35163105", "command": "Pause"}
+        
+unpause_other:          
+  sequence:
+    - service: remote.send_command
+      entity_id: remote.living_room
+      data: {"device": "35163105", "command": "Play"}
