@@ -37,7 +37,7 @@ good_morning:
         - condition: time
           before: '10:00:00'
     - delay:
-        seconds: 30
+        seconds: 25
     - service: remote.send_command
       entity_id: remote.living_room
       data:
