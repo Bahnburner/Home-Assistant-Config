@@ -111,9 +111,8 @@ cartoonnetwork:
       data:
         device: 35163109
         command: 'Select' 
-        
 
-FXX:
+fxx:
   sequence:
     - service: remote.send_command
       entity_id: remote.living_room
@@ -197,7 +196,7 @@ NBC:
         command: 'Select'
 
 
-ESPN:
+espn:
   sequence:
     - service: remote.send_command
       entity_id: remote.living_room
@@ -248,7 +247,7 @@ ESPN:
         device: 35163109
         command: 'Select' 
 
-FX:
+fx:
   sequence:
     - service: remote.send_command
       entity_id: remote.living_room
