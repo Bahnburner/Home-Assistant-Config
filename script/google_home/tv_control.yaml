@@ -46,22 +46,3 @@ mute:
     - service: remote.send_command
       entity_id: remote.living_room
       data: {"device": "35163105", "command": "Mute"}
-
-fox:
-  sequence:
-    - service: remote.turn_on
-      entity_id: remote.living_room
-      data:
-        activity: 19594181
-    - delay:
-        seconds: 25
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'Select'
