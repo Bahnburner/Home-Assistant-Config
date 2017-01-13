@@ -350,7 +350,7 @@ CBS:
         device: 35163109
         command: 'Select' 
         
-FX:
+ABC:
   sequence:
     - service: remote.send_command
       entity_id: remote.living_room
