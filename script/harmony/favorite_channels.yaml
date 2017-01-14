@@ -17,7 +17,7 @@ fox:
       data:
         activity: 19594181
     - delay:
-        seconds: 25
+        seconds: 20
     - service: remote.send_command
       entity_id: remote.living_room
       data:
@@ -53,7 +53,7 @@ comedycentral:
       data:
         activity: 19594181
     - delay:
-        seconds: 25
+        seconds: 20
     - service: remote.send_command
       entity_id: remote.living_room
       data:
@@ -94,7 +94,7 @@ cartoonnetwork:
       data:
         activity: 19594181
     - delay:
-        seconds: 25
+        seconds: 20
     - service: remote.send_command
       entity_id: remote.living_room
       data:
@@ -135,7 +135,7 @@ fxx:
       data:
         activity: 19594181
     - delay:
-        seconds: 25
+        seconds: 20
     - service: remote.send_command
       entity_id: remote.living_room
       data:
@@ -176,7 +176,7 @@ nbc:
       data:
         activity: 19594181
     - delay:
-        seconds: 25
+        seconds: 20
     - service: remote.send_command
       entity_id: remote.living_room
       data:
@@ -223,7 +223,7 @@ espn:
       data:
         activity: 19594181
     - delay:
-        seconds: 25
+        seconds: 20
     - service: remote.send_command
       entity_id: remote.living_room
       data:
@@ -274,7 +274,7 @@ fx:
       data:
         activity: 19594181
     - delay:
-        seconds: 25
+        seconds: 20
     - service: remote.send_command
       entity_id: remote.living_room
       data:
@@ -325,7 +325,7 @@ cbs:
       data:
         activity: 19594181
     - delay:
-        seconds: 25
+        seconds: 20
     - service: remote.send_command
       entity_id: remote.living_room
       data:
@@ -376,7 +376,7 @@ abc:
       data:
         activity: 19594181
     - delay:
-        seconds: 25
+        seconds: 20
     - service: remote.send_command
       entity_id: remote.living_room
       data:
