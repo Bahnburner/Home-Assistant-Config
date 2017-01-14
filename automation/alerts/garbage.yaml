@@ -1,0 +1,17 @@
+- alias: Garbage reminder
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: group.family
+    to: 'home'
+    for:
+      minutes: 5
+  condition: 
+    - condition: time
+      weekday: mon
+  action: 
+  action:
+    service: tts.google_say
+    entity_id: media_player.downstairs
+    data: 
+      message: 'Heads up, tomorrow is trash day.'
