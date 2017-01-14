@@ -5,7 +5,7 @@
     entity_id: group.family
     to: 'home'
     for:
-      minutes: 5
+      minutes: 30
   condition: 
     - condition: time
       weekday: mon
