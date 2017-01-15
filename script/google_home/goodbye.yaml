@@ -3,6 +3,7 @@ goodbye:
     - condition: state
       entity_id: group.family
       state: 'home'
+    - service: script.lock_doors
     - service: remote.turn_off
       entity_id: remote.living_room
     - service: media_player.turn_off
@@ -13,4 +14,3 @@ goodbye:
     - service: cover.open_cover
       data:
         entity_id: cover.garage_door_opener
-    - service: script.lock_doors
