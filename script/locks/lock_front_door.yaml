@@ -1,4 +1,0 @@
-lock_front_door:
-  sequence:
-      service: switch.turn_on
-      entity_id: switch.door_front
