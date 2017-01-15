@@ -3,6 +3,11 @@ fox:
     - service: remote.send_command
       entity_id: remote.living_room
       data:
+        device 35163109
+        command: 'InputHdmi5'
+    - service: remote.send_command
+      entity_id: remote.living_room
+      data:
         device: 35163109
         command: 'DirectionUp'
     - service: remote.send_command
@@ -75,6 +80,11 @@ cartoonnetwork:
     - service: remote.send_command
       entity_id: remote.living_room
       data:
+        device 35163109
+        command: 'InputHdmi5'
+    - service: remote.send_command
+      entity_id: remote.living_room
+      data:
         device: 35163109
         command: 'DirectionUp'
     - service: remote.send_command
@@ -113,6 +123,11 @@ cartoonnetwork:
 
 fxx:
   sequence:
+    - service: remote.send_command
+      entity_id: remote.living_room
+      data:
+        device 35163109
+        command: 'InputHdmi5'    
     - service: remote.send_command
       entity_id: remote.living_room
       data:
@@ -157,6 +172,11 @@ nbc:
     - service: remote.send_command
       entity_id: remote.living_room
       data:
+        device 35163109
+        command: 'InputHdmi5'
+    - service: remote.send_command
+      entity_id: remote.living_room
+      data:
         device: 35163109
         command: 'DirectionUp'
     - service: remote.send_command
@@ -196,6 +216,11 @@ nbc:
 
 espn:
   sequence:
+    - service: remote.send_command
+      entity_id: remote.living_room
+      data:
+        device 35163109
+        command: 'InputHdmi5'
     - service: remote.send_command
       entity_id: remote.living_room
       data:
@@ -250,6 +275,11 @@ fx:
     - service: remote.send_command
       entity_id: remote.living_room
       data:
+        device 35163109
+        command: 'InputHdmi5'
+    - service: remote.send_command
+      entity_id: remote.living_room
+      data:
         device: 35163109
         command: 'DirectionUp'
     - service: remote.send_command
@@ -301,6 +331,11 @@ cbs:
     - service: remote.send_command
       entity_id: remote.living_room
       data:
+        device 35163109
+        command: 'InputHdmi5'
+    - service: remote.send_command
+      entity_id: remote.living_room
+      data:
         device: 35163109
         command: 'DirectionUp'
     - service: remote.send_command
@@ -349,6 +384,11 @@ cbs:
         
 abc:
   sequence:
+    - service: remote.send_command
+      entity_id: remote.living_room
+      data:
+        device 35163109
+        command: 'InputHdmi5'
     - service: remote.send_command
       entity_id: remote.living_room
       data:
