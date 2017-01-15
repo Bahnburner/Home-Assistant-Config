@@ -1,2 +1,0 @@
-  lock_doors: python /home/hass/.homeassistant/kevo/lock-all.py
-  unlock_doors: python /home/hass/.homeassistant/kevo/unlock-all.py
