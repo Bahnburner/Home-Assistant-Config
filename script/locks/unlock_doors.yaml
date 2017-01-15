@@ -1,3 +1,8 @@
 unlock_doors:
   sequence:
-    - service: shell_command.unlock_doors
+    - service: switch.turn_off
+      entity_id: switch.door_front
+    - delay:
+        seconds: 20
+    - service: switch.turn_off
+      entity_id: switch.door_rear
