@@ -2,7 +2,9 @@
   hide_entity: true
   trigger:
     platform: state
-    entity_id: group.family
+    entity_id:
+      - device_tracker.tristans_phone
+      - device_tracker.crystals_phone
     to: 'home'
     for:
       minutes: 30
