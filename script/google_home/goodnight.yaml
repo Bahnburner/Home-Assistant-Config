@@ -1,5 +1,10 @@
 goodnight:
   sequence:
+    - service: script.lock_doors
+    - service: cover.close_cover
+      entity_id: cover.garage_door_opener
+    - service: remote.turn_off
+      entity_id: remote.living_room  
     - service: script.turn_off
       entity_id: script.goodnight_timer_off
 #      - service: ifttt.trigger
@@ -43,11 +48,6 @@ goodnight:
         color_temp: 450
         brightness: 100
         transition: 30
-    - service: script.lock_doors
-    - service: cover.close_cover
-      entity_id: cover.garage_door_opener
-    - service: remote.turn_off
-      entity_id: remote.living_room
     - delay:
         seconds: 30
     - service: automation.turn_on
