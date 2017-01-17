@@ -1,3 +1,5 @@
+secrets.yaml
+
 deps
 
 home-assistant.db
@@ -21,3 +23,5 @@ kevo
 backup
 
 beta
+
+tts
