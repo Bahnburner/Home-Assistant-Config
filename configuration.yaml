@@ -12,7 +12,7 @@ updater:
 discovery:
 #conversation:
 recorder:
-  purge_days: 7
+  db_url: postgres://@/hass
 history:
 logbook:
 sun:
