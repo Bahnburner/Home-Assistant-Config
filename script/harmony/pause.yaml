@@ -24,9 +24,6 @@ pause_directv:
   sequence:
     - service: remote.send_command
       entity_id: remote.living_room
-      data: {"device": "35163109", "command": "Red"} 
-    - service: remote.send_command
-      entity_id: remote.living_room
       data: {"device": "35163109", "command": "Pause"}
         
 pause_other:
