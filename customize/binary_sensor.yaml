@@ -22,3 +22,7 @@ binary_sensor.upstairs_thermostat_is_using_emergency_heat:
   hidden: true
 binary_sensor.upstairs_thermostat_online:
   hidden: true
+binary_sensor.ring_doorbell:
+  hidden: true
+binary_sensor.front_door_motion:
+  hidden: true
