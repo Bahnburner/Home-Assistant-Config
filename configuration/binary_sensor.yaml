@@ -1,15 +1,14 @@
-binary_sensor:
-  platform: mqtt
-  sensors: 
-    doorbell:
-      state_topic: "smartthings/Front Door/button"
-      qos: 0
-      payload_on: "pushed"
-      payload_off: "default"
-      sensor_class: occupancy
-    motion:
-      state_topic: "smartthings/Front Door/motion"
-      qos: 0
-      payload_on: "active"
-      payload_off: "inactive"
-      sensor_class: motion
+platform: mqtt
+sensors: 
+  doorbell:
+    state_topic: "smartthings/Front Door/button"
+    qos: 0
+    payload_on: "pushed"
+    payload_off: "default"
+    sensor_class: occupancy
+  motion:
+    state_topic: "smartthings/Front Door/motion"
+    qos: 0
+    payload_on: "active"
+    payload_off: "inactive"
+    sensor_class: motion
