@@ -1,0 +1,14 @@
+alias: Foyer Lights - Doorbell pushed
+trigger: 
+  platform: state
+  entity_id: binary_sensor.ring_doorbell
+  to: 'on'
+action: 
+  - service: script.turn_off
+    entity_id: script.foyer_light_off
+  - service: light.turn_on
+    entity_id: light.foyer
+    data: 
+      brightness: 254
+  - service: script_turn_on
+    entity_id: script.foyer_light_off
