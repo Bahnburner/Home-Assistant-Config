@@ -45,6 +45,8 @@ mqtt: !include ./configuration/mqtt.yaml
 
 sensor: !include ./configuration/sensor.yaml
 
+binary_sensor: !include ./configuration/binary_sensor.yaml
+
 switch: !include ./configuration/switch.yaml
 
 group: !include ./configuration/group.yaml
