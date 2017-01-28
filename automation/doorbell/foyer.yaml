@@ -5,10 +5,10 @@
     to: 'on'
   action: 
     - service: script.turn_off
-      entity_id: script.foyer_light_off
+      entity_id: script.foyer_lights_off
     - service: light.turn_on
       entity_id: light.foyer
       data: 
         brightness: 254
     - service: script.turn_on
-      entity_id: script.foyer_light_off
+      entity_id: script.foyer_lights_off
