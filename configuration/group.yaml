@@ -109,6 +109,8 @@ routines:
   - automation.away_mode__general
   - automation.nest_protect_emergency
   - automation.nest_protect_normal
+  - automation.foyer_lights__doorbell_pushed
+  - automation.exterior_front__motion
 inputs:
   - automation.harmony
   - automation.harmony_off
