@@ -1,4 +1,5 @@
 - alias: Foyer Lights - Doorbell pushed
+  hide_entity: True
   trigger: 
     platform: state
     entity_id: binary_sensor.ring_doorbell
