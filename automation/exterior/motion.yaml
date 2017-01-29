@@ -12,7 +12,7 @@
       entity_id: sun.sun
       value_template: '{{ state.attributes.elevation }}'
       below: 5
-    action:
+  action:
     - service: script.turn_off
       entity_id: script.front_door_motion
     - service: light.turn_on
