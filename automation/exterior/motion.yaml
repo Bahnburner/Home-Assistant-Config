@@ -1,0 +1,9 @@
+  action:
+    - service: script.turn_off
+      entity_id: script.front_door_motion
+    - service: light.turn_on
+      entity_id: light.front_door
+      data:
+        brightness: 254   
+    - service: script.turn_on
+      entity_id: script.front_door_motion
