@@ -4,7 +4,15 @@
     platfrom: state
     entity_id: binary_sensor.front_door_motion
     to: 'on'
-  action:
+  condition:
+    - condition: time
+      after: '00:00:00'
+      before: '10:00:00'
+    - condition: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation }}'
+      below: 5
+    action:
     - service: script.turn_off
       entity_id: script.front_door_motion
     - service: light.turn_on
