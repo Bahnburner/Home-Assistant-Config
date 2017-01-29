@@ -1,4 +1,4 @@
-- alias: Exterior Front - Dusk
+- alias: Exterior Front - Dim
   hide_entity: True
   trigger:
     platform: time
