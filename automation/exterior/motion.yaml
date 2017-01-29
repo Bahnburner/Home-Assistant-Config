@@ -1,3 +1,9 @@
+- alias: Exterior Front - Motion
+  hide_entity: True
+  trigger:
+    platfrom: state
+    entity_id: binary_sensor.front_door_motion
+    to: 'on'
   action:
     - service: script.turn_off
       entity_id: script.front_door_motion
