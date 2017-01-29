@@ -74,3 +74,7 @@ script.comedycentral:
   hidden: true
 script.espn:
   hidden: true
+script.foyer_lights_off: 
+  hidden: true
+script.front_door_motion:
+  hidden: true
