@@ -2,7 +2,7 @@ unlock_doors:
   sequence:
     - service: switch.turn_off
       entity_id: switch.door_front
-    - delay:
-        seconds: 10
+#    - delay:
+#        seconds: 10
     - service: switch.turn_off
       entity_id: switch.door_rear
