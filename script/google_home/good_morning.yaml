@@ -25,6 +25,18 @@ good_morning:
       entity_id: light.living_room
       data: 
         brightness: 254
+      data_template:
+        color_temp: >
+          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+            500
+          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+            250
+          {% elif (states.sensor.time.state | round(2)) <= 22.49 %}
+            366
+          {% elif (states.sensor.time.state | round(2)) >= 22.50 %}
+            500
+          {% else %}
+          {% endif %}
     - service: remote.turn_on
       entity_id: remote.living_room
       data:
