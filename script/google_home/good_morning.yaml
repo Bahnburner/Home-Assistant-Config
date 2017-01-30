@@ -21,7 +21,7 @@ good_morning:
           {% if now().strftime("%H")| int < 11 and now().strftime("%w")| int > 0 and now().strftime("%w")| int < 6 %}  
             Your drive to work should take approximately {{states.sensor.drive_time_to_work.state | round (0)}} minutes.
           {% endif %}
-    - service. light.turn_on
+    - service: light.turn_on
       entity_id: light.living_room
       data: 
         brightness: 254
