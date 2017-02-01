@@ -28,11 +28,13 @@ upstairs:
 garage:
   - cover.garage_door_opener
 living_room_lights:
-  - light.floor_lamp
+  - light.floor_lamp_left
+  - light.floor_lamp_right
   - light.table_lamp
 master_bedroom:
   - light.tristans_nightstand
   - light.crystals_nightstand
+  - light.bedroom_floor_lamp
 master_hallway:
   - light.master_hallway
 kitchen:
