@@ -55,11 +55,11 @@ light.master_bedroom:
 light.stairway_2:
   hidden: true
 light.hgrp0000132096:
-  hidden: true
+  hidden: false
 light.hgrp0000266240:
-  hidden: true
+  hidden: false
 light.hgrp0134091788:
-  hidden: true
+  hidden: false
 light.hgrp0000524300:
-  hidden: true
+  hidden: false
   
