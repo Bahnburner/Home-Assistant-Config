@@ -34,5 +34,5 @@
     - service: light.turn_on
       entity_id: light.cabinet_lights
       data: 
-        color_temp: 400
+        color_temp: 450
         transition: 3600
