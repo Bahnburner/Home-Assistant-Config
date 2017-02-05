@@ -2,8 +2,6 @@ cover.garage_door_opener:
   friendly_name: 'Garage Door'
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/garagedoor.jpg
 cover.myq:
-  hidden: false
-  friendly_name: 'Garage Door'
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/garagedoor.jpg
+  hidden: true
 remote.living_room:
   hidden: true
