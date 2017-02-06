@@ -12,4 +12,4 @@
     entity_id: light.pantry
     data:
       brightness: 254
-      transition: 900
+      transition: 60
