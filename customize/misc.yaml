@@ -5,5 +5,3 @@ cover.myq:
   hidden: true
 remote.living_room:
   hidden: true
-mqtt_eventstream.initialized:
-  hidden: true
