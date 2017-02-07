@@ -43,8 +43,6 @@ device_tracker: !include ./configuration/device_tracker.yaml
 
 mqtt: !include ./configuration/mqtt.yaml
 
-mqtt_eventstream: !include ./configuration/mqtt_eventstream.yaml
-
 sensor: !include ./configuration/sensor.yaml
 
 binary_sensor: !include ./configuration/binary_sensor.yaml
