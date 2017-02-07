@@ -1,0 +1,2 @@
+  publish_topic: HassMain
+  subscribe_topic: HassAlarm
