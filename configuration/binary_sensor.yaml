@@ -12,33 +12,3 @@
   payload_on: "active"
   payload_off: "inactive"
   sensor_class: motion
-- platform: rest
-  name: Front Door
-  resource: http://10.0.0.7:8123/api/states/binary_sensor.front_door
-  sensor_class: opening
-#  value_template: "{{ value_json.attributes.state }}"
-- platform: rest
-  name: Garage Door
-  resource: http://10.0.0.7:8123/api/states/binary_sensor.garage_door
-  sensor_class: opening
-#  value_template: "{{ value_json.attributes.state }}"
-- platform: rest
-  name: Back Door
-  resource: http://10.0.0.7:8123/api/states/binary_sensor.back_door
-  sensor_class: opening
-#  value_template: "{{ value_json.attributes.state }}"
-- platform: rest
-  name: Front Windows
-  resource: http://10.0.0.7:8123/api/states/binary_sensor.front_windows
-  sensor_class: opening
-#  value_template: "{{ value_json.attributes.state }}"
-- platform: rest
-  name: Back Windows
-  resource: http://10.0.0.7:8123/api/states/binary_sensor.back_windows
-  sensor_class: opening
-#  value_template: "{{ value_json.attributes.state }}"
-- platform: rest
-  name: Bedroom Windows
-  resource: http://10.0.0.7:8123/api/states/binary_sensor.bedroom_windows
-  sensor_class: opening
-#  value_template: "{{ value_json.attributes.state }}"
