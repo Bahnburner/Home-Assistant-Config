@@ -13,7 +13,7 @@
   payload_off: "inactive"
   sensor_class: motion
 - platform: rest
-  name: Front Doors
+  name: Front Door
   resource: http://10.0.0.7:8123/api/states/binary_sensor.front_door
   sensor_class: opening
   value_template: "{{ value_json.attributes.state }}"
