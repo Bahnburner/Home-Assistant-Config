@@ -12,3 +12,18 @@
   payload_on: "active"
   payload_off: "inactive"
   sensor_class: motion
+- platform: rest
+  name: Back Door
+  resource: http://10.0.0.7:8123/api/states/binary_sensor.back_door
+- platform: rest
+  name: Front Doors
+  resource: http://10.0.0.7:8123/api/states/binary_sensor.front_doors
+- platform: rest
+  name: Back Windows
+  resource: http://10.0.0.7:8123/api/states/binary_sensor.back_windows
+- platform: rest
+  name: Front Windows
+  resource: http://10.0.0.7:8123/api/states/binary_sensor.front_windows
+- platform: rest
+  name: Bedroom Windows
+  resource: http://10.0.0.7:8123/api/states/binary_sensor.bedroom_windows
