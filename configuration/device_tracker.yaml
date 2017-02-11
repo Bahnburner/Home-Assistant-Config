@@ -2,7 +2,7 @@
 #  track_new_devices: true
 - platform: asuswrt
   host: 10.0.0.1
-  protocol: ssh
+  protocol: telnet
   mode: router
   username: !secret router_user
   password: !secret router_pass
