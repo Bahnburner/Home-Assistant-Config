@@ -49,3 +49,5 @@ group.alarm_zones:
   friendly_name: 'Alarm Zones'
 #group.system_monitor:
 #  friendly_name: 'System Monitor' 
+group.zones:
+  friendly_name: "Alarm Zones"
