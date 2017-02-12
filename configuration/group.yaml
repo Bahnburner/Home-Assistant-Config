@@ -139,3 +139,10 @@ simulate_presence:
 shell_commands:
   - shell_command.lock_doors
   - shell_command.unlock_doors
+zones:
+    - binary_sensor.front_door
+    - binary_sensor.garage_door
+    - binary_sensor.front_windows
+    - binary_sensor.back_door
+    - binary_sensor.back_windows
+    - binary_sensor.bedroom_windows
