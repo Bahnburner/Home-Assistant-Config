@@ -47,5 +47,5 @@ group.gtg:
   hidden: true
 #group.system_monitor:
 #  friendly_name: 'System Monitor' 
-group.zones:
+group.alarm_zones:
   friendly_name: "Alarm Zones"
