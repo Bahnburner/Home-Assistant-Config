@@ -28,10 +28,10 @@ binary_sensor.front_door_motion:
   hidden: true
 binary_sensor.front_door:
   icon: mdi:crop-portrait
-binary_sensor.garage_door:
-  icon: mdi:crop-portrait
 binary_sensor.front_windows:
   icon: mdi:window-closed
+binary_sensor.garage_door:
+  icon: mdi:crop-portrait
 binary_sensor.back_door:
   icon: mdi:crop-portrait
 binary_sensor.back_windows:
