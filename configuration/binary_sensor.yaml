@@ -1,3 +1,11 @@
+- platform: rpi_gpio
+  ports:
+    18: Front Door
+    6: Front Windows
+    27: Garage Door
+    4: Back Door
+    22: Back Windows
+    17: Bedroom Windows
 - platform: mqtt
   name: "Ring Doorbell"
   state_topic: "smartthings/Front Door/button"
