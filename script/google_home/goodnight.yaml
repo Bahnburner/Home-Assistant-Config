@@ -56,7 +56,14 @@ goodnight:
         - automation.kitchen_uplighting__weekdays
     - service: script.turn_on
       entity_id: script.goodnight_timer_off
-        
+    - condition: state
+      entity_id: cover.garage_door_opener
+      state: 'open'
+    - service: tts.google_say
+      entity_id: media_player.downstairs
+      data: 
+        message: 'Heads up, the garage is currently open.'
+    
 goodnight_timer_off:
   sequence:
     - delay: 
