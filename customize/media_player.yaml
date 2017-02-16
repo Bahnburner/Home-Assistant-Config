@@ -1,5 +1,7 @@
 media_player.google_home:
   friendly_name: 'Google Home'
+media_player.google_home_2:
+  friendly_name: 'Downstairs'
 media_player.livingroom:
   friendly_name: 'Living Room'
   hidden: true
