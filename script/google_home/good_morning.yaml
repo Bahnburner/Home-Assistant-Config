@@ -1,7 +1,9 @@
 good_morning:
   sequence:
     - service: tts.google_say
-      entity_id: media_player.downstairs
+      entity_id: 
+        - media_player.downstairs
+        - media_player.google_home_2
       data_template:
         message: >
           {% if  (now().strftime("%H")) | int < 12 and (now().strftime("%M")) | int >= 1 %}
