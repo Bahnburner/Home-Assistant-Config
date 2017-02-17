@@ -1,3 +1,3 @@
 - name: Hidden Ridge
   platform: facebook
-  page_access_token: EAAC1LLYCqUQBALmCkiT67l2SXDCiMoeF7GJDmbMZCvKJOlSaMRsb2jLMI2kXfxGlpj8ADp4N4l06mR6ypqQplrZBeIcCy0As1MNqgg4a1DyvTlbAHK9rxz0lkvg69z51hmC3qpaApChe1jMhgmrGnm6qI7HCVs9uz4onK4OgZDZD
+  page_access_token: !secret facebook_token
