@@ -22,7 +22,7 @@
       target:
         - +19019216688
         - +19016524510
-    data template:
+    data_template:
       message: >
         {% if  states.binary_sensor.back_door.state == 'on' %}
           The back door has just opened.
