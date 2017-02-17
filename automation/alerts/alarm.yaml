@@ -16,6 +16,9 @@
     - condition: state
       entity_id: input_boolean.garage_hot_start
       state: 'off'
+    - condition: state
+      entity_id: input_boolean.disable_alarm
+      state: 'off'
   action:
     service: notify.hidden_ridge
     data:
