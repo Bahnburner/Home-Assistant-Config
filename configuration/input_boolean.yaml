@@ -1,6 +1,6 @@
 
   - garage_hot_start:
-      name: GarageHot Start
+      name: Garage Hot Start
       initial: off
       icon: mdi:car
   - disable_alarm:
