@@ -18,9 +18,10 @@
       state: 'off'
   action:
     service: notify.hidden_ridge
-    target:
-      - '+19019216688'
-      - '+19016524510'
+    data:
+      target:
+        - '+19019216688'
+        - '+19016524510'
     data template:
       message: >
         {% if  states.binary_sensor.back_door.state == 'on' %}
