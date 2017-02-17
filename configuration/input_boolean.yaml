@@ -1,4 +1,4 @@
-input_boolean:
+
   garage_hot_start:
     name: garage_hot_start
     initial: off
