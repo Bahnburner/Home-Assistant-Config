@@ -1,0 +1,39 @@
+- alias: Alarm triggered
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id:
+        - binary_sensor.back_door
+        - binary_sensor.back_windows
+        - binary_sensor.bedroom_windows
+        - binary_sensor.front_door
+        - binary_sensor.garage_door
+      state: 'on'
+  condition:
+    - condition: state
+      entity_id: group.family
+      state: 'not_home'
+    - condition: state
+      entity_id: input_boolean.garage_hot_start
+      state: 'off'
+  action:
+    service: notify.hidden_ridge
+    target:
+      - '+19019216688'
+      - '+19016524510'
+    data template:
+      message: >
+        {% if  states.binary_sensor.back_door.state == 'on' %}
+          The back door has just opened.
+        {% elif states.binary_sensor.front_windows.state == 'on' %}
+          A front window has just opened.
+        {% elif states.binary_sensor.bedroom_windows.state == 'on' %}
+          A bedroom window has just opened.
+        {% elif states.binary_sensor.back_windows.state == 'on' %}
+          A back window has just opened.
+        {% elif states.binary_sensor.front_door.state == 'on' %}
+          The front door has just opened.
+        {% elif states.binary_sensor.garage_door.state == 'on' %}
+          The garage door has just opened.
+        {% else %}
+        {% endif %}
