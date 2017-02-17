@@ -9,6 +9,8 @@
     entity_id: group.family
     state: 'not_home'
   action: 
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.garage_hot_start
     - service: automation.trigger
       entity_id: automation.home_mode__livingroom
     - service: automation.trigger
@@ -17,6 +19,8 @@
       entity_id: automation.home_mode__bedroom
     - delay:
         minutes: 10
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.garage_hot_start
     - condition: state
       entity_id: group.tristal
       state: 'not_home'
