@@ -17,38 +17,22 @@ history:
 logbook:
 sun:
 
-http: !include ./configuration/http.yaml
-
 automation: !include_dir_merge_list automation
-
-script: !include_dir_merge_named script
-
-remote: !include ./configuration/remote.yaml
-
-input_select: !include ./configuration/input_select.yaml
-
-light: !include ./configuration/light.yaml
-
-nest: !include ./configuration/nest.yaml
-
-climate: !include ./configuration/climate.yaml
-
-cover: !include ./configuration/cover.yaml
-
-ifttt: !include ./configuration/ifttt.yaml
-
-media_player: !include ./configuration/media_player.yaml
-
-device_tracker: !include ./configuration/device_tracker.yaml
-
-mqtt: !include ./configuration/mqtt.yaml
-
-sensor: !include ./configuration/sensor.yaml
-
 binary_sensor: !include ./configuration/binary_sensor.yaml
-
-switch: !include ./configuration/switch.yaml
-
+climate: !include ./configuration/climate.yaml
+cover: !include ./configuration/cover.yaml
+device_tracker: !include ./configuration/device_tracker.yaml
 group: !include ./configuration/group.yaml
-
+http: !include ./configuration/http.yaml
+ifttt: !include ./configuration/ifttt.yaml
+input_select: !include ./configuration/input_select.yaml
+light: !include ./configuration/light.yaml
+media_player: !include ./configuration/media_player.yaml
+mqtt: !include ./configuration/mqtt.yaml
+nest: !include ./configuration/nest.yaml
+notify: !include ./configuration/notify.yaml
+remote: !include ./configuration/remote.yaml
+script: !include_dir_merge_named script
+sensor: !include ./configuration/sensor.yaml
+switch: !include ./configuration/switch.yaml
 tts: !include ./configuration/tts.yaml
