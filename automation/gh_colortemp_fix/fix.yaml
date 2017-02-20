@@ -11,13 +11,13 @@
   condition: 
     condition: template
     value_template: >
-       {% if (states.sensor.time.state | round(2)) < 05.00 and states.light.floor_lamp_right.attributes.color_temp == 500 %}
+       {% if (states.sensor.time.state | round(2)) < 05.00 and states.light.floor_lamp_right.attributes.color_temp != 500 %}
           false
-        {% elif (states.sensor.time.state | round(2)) < 09.50 and (states.sensor.time.state | round(2)) >= 05.00 and states.light.floor_lamp_right.attributes.color_temp == 250 %}
+        {% elif (states.sensor.time.state | round(2)) < 09.50 and (states.sensor.time.state | round(2)) >= 05.00 and states.light.floor_lamp_right.attributes.color_temp != 250 %}
           false
-        {% elif (states.sensor.time.state | round(2)) < 22.50 and (states.sensor.time.state | round(2)) >= 9.50 and states.light.floor_lamp_right.attributes.color_temp == 366 %}
+        {% elif (states.sensor.time.state | round(2)) < 22.50 and (states.sensor.time.state | round(2)) >= 9.50 and states.light.floor_lamp_right.attributes.color_temp != 366 %}
           false
-        {% elif (states.sensor.time.state | round(2)) >= 22.50 and states.light.floor_lamp_right.attributes.color_temp == 500 %}
+        {% elif (states.sensor.time.state | round(2)) >= 22.50 and states.light.floor_lamp_right.attributes.color_temp != 500 %}
           false
         {% else %}
           true
@@ -51,13 +51,13 @@
   condition: 
     condition: template
     value_template: >
-       {% if (states.sensor.time.state | round(2)) < 05.00 and states.light.tristans_nightstand.attributes.color_temp == 500 %}
+       {% if (states.sensor.time.state | round(2)) < 05.00 and states.light.tristans_nightstand.attributes.color_temp != 500 %}
           false
-        {% elif (states.sensor.time.state | round(2)) < 09.50 and (states.sensor.time.state | round(2)) >= 05.00 and states.light.tristans_nightstand.attributes.color_temp == 250 %}
+        {% elif (states.sensor.time.state | round(2)) < 09.50 and (states.sensor.time.state | round(2)) >= 05.00 and states.light.tristans_nightstand.attributes.color_temp != 250 %}
           false
-        {% elif (states.sensor.time.state | round(2)) < 22.50 and (states.sensor.time.state | round(2)) >= 9.50 and states.light.tristans_nightstand.attributes.color_temp == 366 %}
+        {% elif (states.sensor.time.state | round(2)) < 22.50 and (states.sensor.time.state | round(2)) >= 9.50 and states.light.tristans_nightstand.attributes.color_temp != 366 %}
           false
-        {% elif (states.sensor.time.state | round(2)) >= 22.50 and states.light.tristans_nightstand.attributes.color_temp == 500 %}
+        {% elif (states.sensor.time.state | round(2)) >= 22.50 and states.light.tristans_nightstand.attributes.color_temp != 500 %}
           false
         {% else %}
           true
@@ -104,13 +104,13 @@
           state: '[0.402, 0.3768]'
     - condition: template
       value_template: >
-         {% if (states.sensor.time.state | round(2)) < 05.00 and states.light.cabinet_lights.attributes.color_temp == 450 %}
+         {% if (states.sensor.time.state | round(2)) < 05.00 and states.light.cabinet_lights.attributes.color_temp != 450 %}
             false
-          {% elif (states.sensor.time.state | round(2)) < 09.50 and (states.sensor.time.state | round(2)) >= 05.00 and states.light.cabinet_lights.attributes.color_temp == 250 %}
+          {% elif (states.sensor.time.state | round(2)) < 09.50 and (states.sensor.time.state | round(2)) >= 05.00 and states.light.cabinet_lights.attributes.color_temp != 250 %}
             false
-          {% elif (states.sensor.time.state | round(2)) < 22.50 and (states.sensor.time.state | round(2)) >= 9.50 and states.light.cabinet_lights.attributes.color_temp == 366 %}
+          {% elif (states.sensor.time.state | round(2)) < 22.50 and (states.sensor.time.state | round(2)) >= 9.50 and states.light.cabinet_lights.attributes.color_temp != 366 %}
             false
-          {% elif (states.sensor.time.state | round(2)) >= 22.50 and states.light.cabinet_lights.attributes.color_temp == 450 %}
+          {% elif (states.sensor.time.state | round(2)) >= 22.50 and states.light.cabinet_lights.attributes.color_temp != 450 %}
             false
           {% else %}
             true
