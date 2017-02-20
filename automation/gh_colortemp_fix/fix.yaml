@@ -90,32 +90,31 @@
       entity_id: sensor.color_temp_cl
       state: '[0.402, 0.3768]'
   condition:
-    condition: or
-    conditions:
-      - condition: time
-        weekday:
-          - mon
-          - tue
-          - wed
-          - thu
-          - fri
-      - condition: state
-        entity_id: sensor.color_temp_cl
-        state: '[0.402, 0.3768]'
-  condition: 
-    condition: template
-    value_template: >
-       {% if (states.sensor.time.state | round(2)) < 05.00 and states.light.cabinet_lights.attributes.color_temp == 450 %}
-          false
-        {% elif (states.sensor.time.state | round(2)) < 09.50 and (states.sensor.time.state | round(2)) >= 05.00 and states.light.cabinet_lights.attributes.color_temp == 250 %}
-          false
-        {% elif (states.sensor.time.state | round(2)) < 22.50 and (states.sensor.time.state | round(2)) >= 9.50 and states.light.cabinet_lights.attributes.color_temp == 366 %}
-          false
-        {% elif (states.sensor.time.state | round(2)) >= 22.50 and states.light.cabinet_lights.attributes.color_temp == 450 %}
-          false
-        {% else %}
-          true
-        {% endif %}        
+    - condition: or
+      conditions:
+        - condition: time
+          weekday:
+            - mon
+            - tue
+            - wed
+            - thu
+            - fri
+        - condition: state
+          entity_id: sensor.color_temp_cl
+          state: '[0.402, 0.3768]'
+    - condition: template
+      value_template: >
+         {% if (states.sensor.time.state | round(2)) < 05.00 and states.light.cabinet_lights.attributes.color_temp == 450 %}
+            false
+          {% elif (states.sensor.time.state | round(2)) < 09.50 and (states.sensor.time.state | round(2)) >= 05.00 and states.light.cabinet_lights.attributes.color_temp == 250 %}
+            false
+          {% elif (states.sensor.time.state | round(2)) < 22.50 and (states.sensor.time.state | round(2)) >= 9.50 and states.light.cabinet_lights.attributes.color_temp == 366 %}
+            false
+          {% elif (states.sensor.time.state | round(2)) >= 22.50 and states.light.cabinet_lights.attributes.color_temp == 450 %}
+            false
+          {% else %}
+            true
+          {% endif %}        
   action:
     service: light.turn_on
     entity_id: light.cabinet_lights
