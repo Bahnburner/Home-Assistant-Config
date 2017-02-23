@@ -1,4 +1,5 @@
 - platform: rpi_gpio
+  sensor_class: opening
   ports:
     22: Front Door
     6: Front Windows
