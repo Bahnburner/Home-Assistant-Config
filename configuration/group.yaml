@@ -36,6 +36,7 @@ master_bedroom:
 master_hallway:
   - light.master_hallway
 kitchen:
+  control: hidden
   - light.cabinet_lights
   - light.pantry
 dining_room:
