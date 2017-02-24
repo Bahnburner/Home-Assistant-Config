@@ -5,7 +5,6 @@
     - summary
     - precip_intensity
     - precip_probability
-#    - precip_type
     - temperature
     - temperature_max
     - temperature_min
@@ -52,15 +51,15 @@
     front_windows:
       friendly_name: 'Front Windows'
       value_template: '{% if is_state("binary_sensor.front_windows", "off") %}Closed{% else %}Open{% endif %}'
-      icon_template: '{% if is_state("binary_sensor.front_windows", "off") %}mdi:crop-portrait{% else %}mdi:logout{% endif %}'
+      icon_template: '{% if is_state("binary_sensor.front_windows", "off") %}mdi:window-closed{% else %}mdi:window-open{% endif %}'
     back_windows:
       friendly_name: 'Back Windows'
       value_template: '{% if is_state("binary_sensor.back_windows", "off") %}Closed{% else %}Open{% endif %}'
-      icon_template: '{% if is_state("binary_sensor.back_windows", "off") %}mdi:crop-portrait{% else %}mdi:logout{% endif %}'
+      icon_template: '{% if is_state("binary_sensor.back_windows", "off") %}mdi:window-closed{% else %}mdi:window-open{% endif %}'
     bedroom_windows:
       friendly_name: 'Bedroom Windows'
       value_template: '{% if is_state("binary_sensor.bedroom_windows", "off") %}Closed{% else %}Open{% endif %}'
-      icon_template: '{% if is_state("binary_sensor.bedroom_windows", "off") %}mdi:crop-portrait{% else %}mdi:logout{% endif %}'
+      icon_template: '{% if is_state("binary_sensor.bedroom_windows", "off") %}mdi:window-closed{% else %}mdi:window-open{% endif %}'
 - platform: command_line
   name: Door Status Front
   command: "python /home/hass/.homeassistant/kevo/status-front.py"
