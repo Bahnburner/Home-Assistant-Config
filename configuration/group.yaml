@@ -63,10 +63,12 @@ weather:
   - sensor.dark_sky_precip_probability
 #  - sensor.dark_sky_precip_intensity
 override:
-  - input_boolean.disable_alarm
-  - switch.vacation_mode
-  - group.simulate_presence
-  - switch.routines
+  control: hidden
+  entities:
+    - input_boolean.disable_alarm
+    - switch.vacation_mode
+    - group.simulate_presence
+    - switch.routines
 routines:
   - automation.alarm_triggered
   - automation.morning__stage_1
