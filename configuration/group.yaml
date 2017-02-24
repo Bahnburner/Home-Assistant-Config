@@ -37,8 +37,9 @@ master_hallway:
   - light.master_hallway
 kitchen:
   control: hidden
-  - light.cabinet_lights
-  - light.pantry
+  entities: 
+    - light.cabinet_lights
+    - light.pantry
 dining_room:
   - light.dining_room
 foyer:
