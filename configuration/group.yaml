@@ -135,9 +135,9 @@ shell_commands:
   - shell_command.lock_doors
   - shell_command.unlock_doors
 alarm_zones:
-    - binary_sensor.front_door
-    - binary_sensor.front_windows
-    - binary_sensor.garage_door
-    - binary_sensor.back_door
-    - binary_sensor.back_windows
-    - binary_sensor.bedroom_windows
+    - sensor.front_door
+    - sensor.front_windows
+    - sensor.garage_door
+    - sensor.back_door
+    - sensor.back_windows
+    - sensor.bedroom_windows
