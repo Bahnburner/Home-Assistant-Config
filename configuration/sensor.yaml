@@ -37,6 +37,30 @@
       value_template: '{% if is_state("binary_sensor.downstairs_nest_protect_online", "on") %}Online{% else %}Error{% endif %}'    
     protect_up:
       value_template: '{% if is_state("binary_sensor.upstairs_nest_protect_online", "on") %}Online{% else %}Error{% endif %}'
+    front_door:
+      friendly_name: 'Front Door'
+      value_template: '{% if is_state("binary_sensor.front_door", "off") %}Closed{% else %}Open{% endif %}'
+      icon_template: '{% if is_state("binary_sensor.front_door", "off") %}mdi:crop-portrait{% else %}mdi:logout{% endif %}'
+    back_door:
+      friendly_name: 'Back Door'
+      value_template: '{% if is_state("binary_sensor.back_door", "off") %}Closed{% else %}Open{% endif %}'
+      icon_template: '{% if is_state("binary_sensor.back_door", "off") %}mdi:crop-portrait{% else %}mdi:logout{% endif %}'
+    garage_door:
+      friendly_name: 'Garage Door'
+      value_template: '{% if is_state("binary_sensor.garage_door", "off") %}Closed{% else %}Open{% endif %}'
+      icon_template: '{% if is_state("binary_sensor.garage_door", "off") %}mdi:crop-portrait{% else %}mdi:logout{% endif %}'
+    front_windows:
+      friendly_name: 'Front Windows'
+      value_template: '{% if is_state("binary_sensor.front_windows", "off") %}Closed{% else %}Open{% endif %}'
+      icon_template: '{% if is_state("binary_sensor.front_windows", "off") %}mdi:crop-portrait{% else %}mdi:logout{% endif %}'
+    back_windows:
+      friendly_name: 'Back Windows'
+      value_template: '{% if is_state("binary_sensor.back_windows", "off") %}Closed{% else %}Open{% endif %}'
+      icon_template: '{% if is_state("binary_sensor.back_windows", "off") %}mdi:crop-portrait{% else %}mdi:logout{% endif %}'
+    bedroom_windows:
+      friendly_name: 'Bedroom Windows'
+      value_template: '{% if is_state("binary_sensor.bedroom_windows", "off") %}Closed{% else %}Open{% endif %}'
+      icon_template: '{% if is_state("binary_sensor.bedroom_windows", "off") %}mdi:crop-portrait{% else %}mdi:logout{% endif %}'
 - platform: command_line
   name: Door Status Front
   command: "python /home/hass/.homeassistant/kevo/status-front.py"
@@ -45,44 +69,3 @@
   name: Door Status Rear
   command: "python /home/hass/.homeassistant/kevo/status-rear.py"
   scan_interval: 30
-#- platform: rest
-#  name: Front Door
-#  resource: http://10.0.0.7:8123/api/states/binary_sensor.front_door
-#  sensor_class: opening
-#  value_template: "{{ value_json.state }}"
-#- platform: rest
-#  name: Garage Door
-#  resource: http://10.0.0.7:8123/api/states/binary_sensor.garage_door
-#  sensor_class: opening
-#  value_template: "{{ value_json.state }}"
-#- platform: rest
-#  name: Back Door
-#  resource: http://10.0.0.7:8123/api/states/binary_sensor.back_door
-#  sensor_class: opening
-#  value_template: "{{ value_json.state }}"
-#- platform: rest
-#  name: Front Windows
-#  resource: http://10.0.0.7:8123/api/states/binary_sensor.front_windows
-#  sensor_class: opening
-#  value_template: "{{ value_json.state }}"
-#- platform: rest
-#  name: Back Windows
-#  resource: http://10.0.0.7:8123/api/states/binary_sensor.back_windows
-#  sensor_class: opening
-#  value_template: "{{ value_json.state }}"
-#- platform: rest
-#  name: Bedroom Windows
-#  resource: http://10.0.0.7:8123/api/states/binary_sensor.bedroom_windows
-#  sensor_class: opening
-#  value_template: "{{ value_json.state }}"
-#- platform: command_line
-#  name: CPU Temperature
-#  command: "cat /sys/class/thermal/thermal_zone0/temp"
-#  value_template: '{{ value | multiply(0.0018) | round(1) +32 }}'
-#  unit_of_measurement: "°F"
-#- platform: systemmonitor
-#  resources:
-#    - type: disk_use_percent
-#      arg: /
-#    - type: memory_use_percent
-#    - type: processor_use
