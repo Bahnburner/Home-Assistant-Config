@@ -17,7 +17,7 @@
 <li>Darksky weather forecasting</li>
 <li>Smartthings Hub <i>via MQTT</i></li>
 <li>GE Z-wave wall receipticles</li>
-<li>Wired magnetic alarm sensors <i>via GPIO</i></li>
+<li>Wired magnetic alarm sensors <i>via RPi GPIO</i></li>
 <li>Facebook Messenger notifications</li> 
 
 </ul>
