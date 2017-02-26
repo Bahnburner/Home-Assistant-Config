@@ -7,8 +7,10 @@ sensor.dark_sky_temperature:
 sensor.dark_sky_summary:
   friendly_name: 'Forecast'
   icon: mdi:eye
+  hidden: true
 sensor.dark_sky_precip_probability:
   friendly_name: 'Chance of Precipitation'
+  hidden: true
 sensor.dark_sky_precip_intensity:
   friendly_name: 'Rain Gauge'
   hidden: true
