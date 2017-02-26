@@ -6,6 +6,7 @@ sensor.dark_sky_temperature:
   friendly_name: 'Current'
 sensor.dark_sky_summary:
   friendly_name: 'Forecast'
+  icon: mdi:eye
 sensor.dark_sky_precip_probability:
   friendly_name: 'Chance of Precipitation'
 sensor.dark_sky_precip_intensity:
