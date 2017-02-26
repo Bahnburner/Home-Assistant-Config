@@ -13,11 +13,11 @@
   qos: 0
   payload_on: "pushed"
   payload_off: "default"
-  sensor_class: occupancy
+  device_class: occupancy
 - platform: mqtt
   name: "Front Door Motion"
   state_topic: "smartthings/Front Door/motion"
   qos: 0
   payload_on: "active"
   payload_off: "inactive"
-  sensor_class: motion
+  device_class: motion
