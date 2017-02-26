@@ -23,8 +23,8 @@
     service: notify.hidden_ridge
     data:
       target:
-        - !secret tristans_phone
-        - !secret crystals_phone
+        - !secret tristans_phone_number
+        - !secret crystals_phone_number
     data_template:
       message: >
         {% if  states.binary_sensor.back_door.state == 'on' %}
