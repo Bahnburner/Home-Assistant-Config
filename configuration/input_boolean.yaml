@@ -1,4 +1,3 @@
-
   - garage_hot_start:
       name: Garage Hot Start
       initial: off
