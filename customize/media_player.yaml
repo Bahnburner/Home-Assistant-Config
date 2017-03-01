@@ -22,5 +22,5 @@ media_player.plex_web_chrome:
   hidden: true
 media_player.plex_web_safari:
   hidden: true
-media_player.bedroom_2
+media_player.bedroom_2:
   hidden: true
