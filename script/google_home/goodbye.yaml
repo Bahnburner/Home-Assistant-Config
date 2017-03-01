@@ -12,6 +12,7 @@ goodbye:
         - media_player.kitchen
         - media_player.downstairs
         - media_player.bedroom
+        - media_player.party_mode
     - service: cover.open_cover
       data:
         entity_id: cover.garage_door_opener
