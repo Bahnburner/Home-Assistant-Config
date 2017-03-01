@@ -1,8 +1,8 @@
-  - garage_hot_start:
-      name: Garage Hot Start
-      initial: off
-      icon: mdi:car
-  - disable_alarm:
-      name: Disable Alarm
-      initial: off
-      icon: mdi:lock
+  garage_hot_start:
+    name: Garage Hot Start
+    initial: off
+    icon: mdi:car
+  disable_alarm:
+    name: Disable Alarm
+    initial: off
+    icon: mdi:lock
