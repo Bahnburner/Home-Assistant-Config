@@ -18,6 +18,7 @@ goodnight:
         - media_player.google_home
         - media_player.kitchen
         - media_player.downstairs
+        - media_player.bedroom
     - service: light.turn_off
       entity_id:
         - light.foyer
