@@ -31,7 +31,7 @@
           500
         {% elif (states.sensor.time.state | round(2)) < 09.50 %}
           250
-        {% elif (states.sensor.time.state | round(2)) <= 21.49 %}
+        {% elif (states.sensor.time.state | round(2)) < 21.50 %}
           366
         {% elif (states.sensor.time.state | round(2)) >= 21.50 %}
           500
@@ -71,7 +71,7 @@
           500
         {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
           250
-        {% elif (states.sensor.time.state | round(2)) <= 22.49 %}
+        {% elif (states.sensor.time.state | round(2)) < 22.50 %}
           366
         {% elif (states.sensor.time.state | round(2)) >= 22.50 %}
           500
@@ -124,7 +124,7 @@
           450
         {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
           250
-        {% elif (states.sensor.time.state | round(2)) <= 22.49 %}
+        {% elif (states.sensor.time.state | round(2)) < 22.50 %}
           300
         {% elif (states.sensor.time.state | round(2)) >= 22.50 %}
           450
