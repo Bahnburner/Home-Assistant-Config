@@ -32,9 +32,9 @@
             450
           {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
             250
-          {% elif (states.sensor.time.state | round(2)) <= 22.49 %}
+          {% elif (states.sensor.time.state | round(2)) <= 21.49 %}
             300
-          {% elif (states.sensor.time.state | round(2)) >= 22.50 %}
+          {% elif (states.sensor.time.state | round(2)) >= 21.50 %}
             450
           {% else %}
           {% endif %}
