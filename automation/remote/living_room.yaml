@@ -46,14 +46,11 @@
   hide_entity: true
   trigger: 
     - platform: state
-      entity_id: sensor.current_activity
-      to: 'Watch Plex'
+      entity_id: media_player.rasplex
+      to: 'playing'
     - platform: state
       entity_id: sensor.current_activity
       to: 'Watch Netflix'
-    - platform: state
-      entity_id: sensor.current_activity
-      to: 'Watch Hulu'
     - platform: state
       entity_id: sensor.current_activity
       to: 'Watch Prime Video'
@@ -86,14 +83,14 @@
   hide_entity: true
   trigger: 
     - platform: state
-      entity_id: sensor.current_activity
-      from: 'Watch Plex'
+      entity_id: media_player.rasplex
+      to: 'paused'
+    - platform: state
+      entity_id: media_player.rasplex
+      to: 'idle'
     - platform: state
       entity_id: sensor.current_activity
       from: 'Watch Netflix'
-    - platform: state
-      entity_id: sensor.current_activity
-      from: 'Watch Hulu'
     - platform: state
       entity_id: sensor.current_activity
       from: 'Watch Prime Video'
@@ -109,6 +106,9 @@
         - condition: state
           entity_id: sensor.current_activity
           state: 'PowerOff'
+        - condition: state
+          entity_id: sensor_current_activity
+          state: 'Watch Plex'
     - condition: state
       entity_id: light.living_room
       state: 'on'
@@ -120,6 +120,7 @@
     entity_id: light.living_room
     data:
       brightness: 254
+      transition: 10
     data_template:
       color_temp: >
         {% if (states.sensor.time.state | round(2)) <= 05.00 %}
