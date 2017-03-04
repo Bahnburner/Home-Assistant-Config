@@ -107,7 +107,7 @@
           entity_id: sensor.current_activity
           state: 'PowerOff'
         - condition: state
-          entity_id: sensor_current_activity
+          entity_id: sensor.current_activity
           state: 'Watch Plex'
     - condition: state
       entity_id: light.living_room
