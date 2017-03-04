@@ -1,8 +1,1 @@
 - platform: cast
-  host: 10.0.0.155
-- platform: cast
-  host: 10.0.0.156
-- platform: cast
-  host: 10.0.0.157
-- platform: cast
-  host: 10.0.0.158
