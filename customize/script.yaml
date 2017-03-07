@@ -78,5 +78,5 @@ script.foyer_lights_off:
   hidden: true
 script.front_door_motion:
   hidden: true
-script.whitenoise
+script.whitenoise:
   hidden: true
