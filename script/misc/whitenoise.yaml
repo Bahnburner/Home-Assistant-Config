@@ -1,1 +1,14 @@
 whitenoise:
+  sequence:
+    - condition: state
+      entity_id: group.family
+      state: 'home'
+    - service: media_player.volume_set
+      entity_id: media_player.bedroom
+      data: 
+        volume_level: 0.1
+    - service: media_player.play_media
+      entity_id: media_player.bedroom
+      data:
+        media_content_id: "http://10.0.0.101/storage/whitenoise.mp3"
+        media_content_type: "audio/mp3" 
