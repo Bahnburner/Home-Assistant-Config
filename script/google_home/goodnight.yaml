@@ -7,8 +7,6 @@ goodnight:
       entity_id: remote.living_room  
     - service: script.turn_off
       entity_id: script.goodnight_timer_off
-#      - service: ifttt.trigger
-#        data: {"event":"PowerOff"}
     - service: automation.turn_off
       entity_id: 
         - automation.kitchen_uplighting__weekends
@@ -59,16 +57,7 @@ goodnight:
         - automation.kitchen_uplighting__weekdays
     - service: script.turn_on
       entity_id: script.goodnight_timer_off
-    - condition: state
-      entity_id: cover.garage_door_opener
-      state: 'open'
-    - service: tts.google_say
-      entity_id:
-        - media_player.downstairs
-        - media_player.google_home_2
-      data: 
-        message: 'Heads up, the garage is currently open.'
-    
+
 goodnight_timer_off:
   sequence:
     - delay: 
