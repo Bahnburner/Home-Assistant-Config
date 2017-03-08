@@ -14,16 +14,16 @@ whitenoise:
       data_template:
         media_content_id: >
           {% if (states.sensor.whitenoise.state == 1 %}
-            "http://10.0.0.101/storage/whitenoise1.mp3"
+            http://10.0.0.101/storage/whitenoise1.mp3
           {% elif (states.sensor.whitenoise.state == 2 %}
-            "http://10.0.0.101/storage/whitenoise2.mp3"
+            http://10.0.0.101/storage/whitenoise2.mp3
           {% elif (states.sensor.whitenoise.state == 3 %}
-            "http://10.0.0.101/storage/whitenoise3.mp3"
+            http://10.0.0.101/storage/whitenoise3.mp3
           {% elif (states.sensor.whitenoise.state == 4 %}
-            "http://10.0.0.101/storage/whitenoise4.mp3"
+            http://10.0.0.101/storage/whitenoise4.mp3
           {% elif (states.sensor.whitenoise.state == 5 %}
-            "http://10.0.0.101/storage/whitenoise5.mp3"            
+            http://10.0.0.101/storage/whitenoise5.mp3            
           {% elif (states.sensor.whitenoise.state == 6 %}
-            "http://10.0.0.101/storage/whitenoise6.mp3"
+            http://10.0.0.101/storage/whitenoise6.mp3
           {% else %}
           {% endif %}
