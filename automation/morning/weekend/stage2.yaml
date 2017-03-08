@@ -25,3 +25,6 @@
       data:
         color_temp: 250
         brightness: 254
+    - service: media_player.turn_off
+      entity_id: 
+        - media_player.bedroom
