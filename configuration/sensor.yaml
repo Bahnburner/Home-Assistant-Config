@@ -68,3 +68,7 @@
   name: Door Status Rear
   command: "python /home/hass/.homeassistant/kevo/status-rear.py"
   scan_interval: 30
+- platform: random
+  name: whitenoise
+  minimum: 1
+  maximum: 3
