@@ -98,3 +98,5 @@ sensor.protect_down:
 sensor.protect_up:
   friendly_name: "Protect"
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/nestprotect.png
+sensor.whitenoise:
+  hidden: true
