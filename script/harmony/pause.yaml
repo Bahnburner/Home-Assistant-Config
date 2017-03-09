@@ -5,6 +5,8 @@ pause:
         entity_id: >
           {% if is_state('sensor.current_activity', 'Watch DirecTV') %}
             script.pause_directv 
+          {% elif is_state('sensor.current_activity', 'Watch Plex') %}
+            script.pause_plex
           {% else %}
             script.pause_other
           {% endif %}
@@ -16,6 +18,8 @@ unpause:
         entity_id: >
           {% if is_state('sensor.current_activity', 'Watch DirecTV') %}
             script.pause_directv 
+          {% elif is_state('sensor.current_activity', 'Watch Plex') %}
+            script.pause_plex
           {% else %}
             script.unpause_other
           {% endif %}
@@ -25,7 +29,12 @@ pause_directv:
     - service: remote.send_command
       entity_id: remote.living_room
       data: {"device": "35163109", "command": "Pause"}
-        
+
+pause_plex:        
+  sequence:
+    - service: media_player.media_play_pause
+      entity_id: media_player.rasplex
+
 pause_other:
   sequence:
     - service: remote.send_command
