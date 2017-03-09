@@ -18,6 +18,8 @@ script.nightlight:
   hidden: true
 script.pause_directv:
   hidden: true
+script.pause_plex:
+  hidden: true
 script.pause_other:
   hidden: true
 script.unpause:
