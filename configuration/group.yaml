@@ -21,6 +21,10 @@ living_room:
 living_room_home:
   - media_player.rasplex
   - media_player.google_home
+master_bedroom:
+  - light.tristans_nightstand
+  - light.crystals_nightstand
+  - light.bedroom_floor_lamp
 upstairs:
   - climate.upstairs
   - sensor.protect_up
@@ -30,10 +34,6 @@ living_room_lights:
   - light.floor_lamp_left
   - light.floor_lamp_right
   - light.table_lamp
-master_bedroom:
-  - light.tristans_nightstand
-  - light.crystals_nightstand
-  - light.bedroom_floor_lamp
 master_hallway:
   - light.master_hallway
 kitchen:
