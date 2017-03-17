@@ -1,7 +1,7 @@
 stpaddysday:
   sequence:
     service: light.turn_on
-    entities:
+    entity_id:
       - light.floor_lamp_left
       - light.floor_lamp_right
       - light.tristans_nightstand
