@@ -1,0 +1,20 @@
+- alias: stpaddysday
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: group.family
+    from: 'not_home'
+    to: 'home'
+  condition:
+    condition: template
+    value_template: '{{ now().month == 3 and now().day == 17 }}'
+  action:
+    - delay:
+        minutes: 5
+    - service: script.turn_on
+      entity_id: script.stpaddysday
+    - service: tts.google_say
+      entity_id:
+      - media_player.party_mode
+    data: 
+      message: 'Happy St. Patrick's Day!'
