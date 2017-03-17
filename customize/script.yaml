@@ -28,9 +28,15 @@ script.unpause_other:
   hidden: true
 script.mute:
   hidden: true
+script.volumeup:
+  hidden: true
+script.volumedown:
+  hidden: true
 script.who_dat:
   hidden: true
 script.christmas:
+  hidden: true
+script.stpaddysday:
   hidden: true
 script.lock_doors:
   hidden: true
