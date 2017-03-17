@@ -17,4 +17,4 @@
       entity_id:
       - media_player.party_mode
       data: 
-        message: 'Happy St. Patrick's Day!'
+        message: 'Happy St. Patricks Day!'
