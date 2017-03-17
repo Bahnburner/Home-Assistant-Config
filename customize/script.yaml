@@ -28,9 +28,9 @@ script.unpause_other:
   hidden: true
 script.mute:
   hidden: true
-script.volumeup:
+script.volume_up:
   hidden: true
-script.volumedown:
+script.volume_down:
   hidden: true
 script.who_dat:
   hidden: true
