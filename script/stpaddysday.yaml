@@ -1,0 +1,12 @@
+stpaddysday:
+  sequence:
+    service: light.turn_on
+    entities:
+      - light.floor_lamp_left
+      - light.floor_lamp_right
+      - light.tristans_nightstand
+      - light.crystals_nightstand
+      - light.cabinet_lights
+    data:
+      brightness: 255
+      color_name: green
