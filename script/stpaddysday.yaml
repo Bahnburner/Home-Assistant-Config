@@ -10,13 +10,3 @@ stpaddysday:
       data:
         brightness: 255
         color_name: green
-    - service: remote.turn_on
-      entity_id: remote.living_room
-      data:
-        activity: 19938341
-    - service: media_player.play_media
-      entity_id: media_player.livingroom
-      data:
-        media_content_id: "http://hybrid.servemp3.com/storage/boondocksaints.mp4"
-        media_content_type: "video/mp4"
-          
