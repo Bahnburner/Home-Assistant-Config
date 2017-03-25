@@ -51,7 +51,7 @@ light.stairway:
   hidden: false
 light.recessed_lights:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
-light.overhead_lights:
+light.overhead_light:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.chandelier:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
