@@ -8,8 +8,21 @@
     payload_low_speed: "33"
     payload_medium_speed: "66"
     payload_high_speed: "99" 
-#    speed_value_template: >
+    payload_on: "on"
+    payload_off: "off"
+    speed_value_template: >
+       {% if (value = 0 %}
+          off
+        {% elif (value > 0 and value <= 33 %}
+          low          
+        {% elif (value > 33 and value <= 66 %}
+          medium
+        {% elif (value > 66 %}
+          high
+        {% else %}
+        {% endif %}
     speeds:
+      - off
       - low
       - medium
       - high
