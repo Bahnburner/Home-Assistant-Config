@@ -2,7 +2,7 @@
   host: 10.0.0.208
   allow_unreachable: true
 - platform: mqtt
-    overhead_light:
+    - overhead_light:
       name: 'Overhead Light'
       state_topic: "smartthings/Overhead Light/switch"
       command_topic: "smartthings/Overhead Light/switch"
