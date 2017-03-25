@@ -35,6 +35,10 @@
         - light.master_hallway
         - light.dining_room
         - group.stairway
+        - light.overhead_light
+        - light.recessed_lights
+        - light.chandelier
+        - light.fan
     - service: cover.close_cover
       entity_id: cover.garage_door_opener
     - service: script.turn_on
