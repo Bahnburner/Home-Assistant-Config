@@ -22,6 +22,7 @@ binary_sensor: !include ./configuration/binary_sensor.yaml
 climate: !include ./configuration/climate.yaml
 cover: !include ./configuration/cover.yaml
 device_tracker: !include ./configuration/device_tracker.yaml
+fan: !include ./configuration/fan.yaml
 group: !include ./configuration/group.yaml
 http: !include ./configuration/http.yaml
 ifttt: !include ./configuration/ifttt.yaml
