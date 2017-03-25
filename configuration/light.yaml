@@ -1,8 +1,7 @@
 - platform: hue
   host: 10.0.0.208
   allow_unreachable: true
-- platform: mqtt
-  lights:  
+- platform: mqtt 
     christmas_lights:
       name: 'Christmas Lights'
       state_topic: "smartthings/Christmas Lights/switch"
