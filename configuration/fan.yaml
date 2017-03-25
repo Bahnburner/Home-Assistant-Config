@@ -1,0 +1,15 @@
+  - platform: mqtt
+    name: "Bedroom Fan"
+    state_topic: "smartthings/Fan/switch"
+    command_topic: "smartthings/Fan/switch"
+    speed_state_topic: "smartthings/Fan/level"
+    speed_command_topic: "smartthings/Fan/level"
+    qos: 0
+    payload_low_speed: "33"
+    payload_medium_speed: "66"
+    payload_high_speed: "99" 
+#    speed_value_template: >
+    speeds:
+      - low
+      - medium
+      - high
