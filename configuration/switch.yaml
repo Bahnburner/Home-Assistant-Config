@@ -51,6 +51,16 @@
       payload_on: "on"
       payload_off: "off"
       retain: true
+    fan:
+      name: 'Fan'
+      state_topic: "smartthings/Fan/switch"
+      command_topic: "smartthings/Fan/switch"
+      brightness_scale: 100
+      brightness_state_topic: "smartthings/Fan/level"
+      brightness_command_topic: "smartthings/Fan/level"
+      payload_on: "on"
+      payload_off: "off"
+      retain: true
 - platform: command_line
   scan_interval: 30
   switches:
