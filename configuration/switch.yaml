@@ -18,6 +18,13 @@
           entity_id: group.routines
         - service: automation.turn_off
           entity_id: group.simulate_presence
+- platform: mqtt
+  name: 'Christmas Lights'
+  state_topic: "smartthings/Christmas Lights/switch"
+  command_topic: "smartthings/Christmas Lights/switch"
+  payload_on: "on"
+  payload_off: "off"
+  retain: true
 - platform: command_line
   scan_interval: 30
   switches:
