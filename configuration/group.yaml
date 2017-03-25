@@ -16,6 +16,7 @@ living_room:
   - sensor.current_activity
   - input_select.harmony
   - light.living_room
+  - light.fan
   - climate.downstairs
   - sensor.protect_down
 living_room_home:
@@ -45,6 +46,8 @@ kitchen:
     - light.pantry
 dining_room:
   - light.dining_room
+breakfast_nook:
+  - light.chandelier
 foyer:
   - light.foyer
 stairway:
@@ -146,7 +149,3 @@ alarm_zones:
     - sensor.back_door
     - sensor.back_windows
     - sensor.bedroom_windows
-
-
-light.chandelier:
-light.fan:
