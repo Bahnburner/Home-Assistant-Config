@@ -1,13 +1,14 @@
 - platform: hue
   host: 10.0.0.208
   allow_unreachable: true
- #   overhead_light:
- #     name: 'Overhead Light'
- #     state_topic: "smartthings/Overhead Light/switch"
- #     command_topic: "smartthings/Overhead Light/switch"
- #     payload_on: "on"
- #     payload_off: "off"
- #     retain: true
+- platform: mqtt
+    overhead_light:
+      name: 'Overhead Light'
+      state_topic: "smartthings/Overhead Light/switch"
+      command_topic: "smartthings/Overhead Light/switch"
+      payload_on: "on"
+      payload_off: "off"
+      retain: true
  #   recessed_lights:
  #     name: 'Recessed Lights'
  #     state_topic: "smartthings/Recessed Lights/switch"
