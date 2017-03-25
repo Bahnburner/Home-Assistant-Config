@@ -2,13 +2,13 @@
   host: 10.0.0.208
   allow_unreachable: true
 - platform: mqtt 
-    christmas_lights:
-      name: 'Christmas Lights'
-      state_topic: "smartthings/Christmas Lights/switch"
-      command_topic: "smartthings/Christmas Lights/switch"
-      payload_on: "on"
-      payload_off: "off"
-      retain: true
+  christmas_lights:
+  name: 'Christmas Lights'
+  state_topic: "smartthings/Christmas Lights/switch"
+  command_topic: "smartthings/Christmas Lights/switch"
+  payload_on: "on"
+  payload_off: "off"
+  retain: true
  #   overhead_light:
  #     name: 'Overhead Light'
  #     state_topic: "smartthings/Overhead Light/switch"
