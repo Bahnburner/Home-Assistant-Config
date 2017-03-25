@@ -43,11 +43,10 @@ kitchen:
     - light.overhead_lights
     - light.recessed_lights
     - light.cabinet_lights
+    - light.chandelier
     - light.pantry
 dining_room:
   - light.dining_room
-breakfast_nook:
-  - light.chandelier
 foyer:
   - light.foyer
 stairway:
