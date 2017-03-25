@@ -11,7 +11,7 @@
     payload_on: "on"
     payload_off: "off"
     speed_value_template: >
-       {% if (value = 0 %}
+       {% if (value == 0 %}
           off
         {% elif (value > 0 and value <= 33 %}
           low          
