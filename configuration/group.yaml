@@ -38,7 +38,9 @@ master_hallway:
   - light.master_hallway
 kitchen:
   control: hidden
-  entities: 
+  entities:
+    - light.overhead_lights
+    - light.recessed_lights
     - light.cabinet_lights
     - light.pantry
 dining_room:
@@ -144,3 +146,7 @@ alarm_zones:
     - sensor.back_door
     - sensor.back_windows
     - sensor.bedroom_windows
+
+
+light.chandelier:
+light.fan:
