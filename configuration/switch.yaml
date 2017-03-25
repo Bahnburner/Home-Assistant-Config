@@ -19,12 +19,35 @@
         - service: automation.turn_off
           entity_id: group.simulate_presence
 - platform: mqtt
-  name: 'Christmas Lights'
-  state_topic: "smartthings/Christmas Lights/switch"
-  command_topic: "smartthings/Christmas Lights/switch"
-  payload_on: "on"
-  payload_off: "off"
-  retain: true
+  switches:
+    christmas_lights:
+      name: 'Christmas Lights'
+      state_topic: "smartthings/Christmas Lights/switch"
+      command_topic: "smartthings/Christmas Lights/switch"
+      payload_on: "on"
+      payload_off: "off"
+      retain: true
+    overhead_light:
+      name: 'Overhead Light'
+      state_topic: "smartthings/Overhead Light/switch"
+      command_topic: "smartthings/Overhead Light/switch"
+      payload_on: "on"
+      payload_off: "off"
+      retain: true
+    recessed_lights:
+      name: 'Recessed Lights'
+      state_topic: "smartthings/Recessed Lights/switch"
+      command_topic: "smartthings/Recessed Lights/switch"
+      payload_on: "on"
+      payload_off: "off"
+      retain: true
+    chandelier:
+      name: 'Chandelier'
+      state_topic: "smartthings/Chandelier/switch"
+      command_topic: "smartthings/Chandelier/switch"
+      payload_on: "on"
+      payload_off: "off"
+      retain: true
 - platform: command_line
   scan_interval: 30
   switches:
