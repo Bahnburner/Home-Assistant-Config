@@ -6,3 +6,6 @@
     name: Disable Alarm
     initial: off
     icon: mdi:lock
+  fan_check:
+    name: Fan Check
+    initial: off
