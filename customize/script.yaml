@@ -88,3 +88,7 @@ script.front_door_motion:
   hidden: true
 script.whitenoise:
   hidden: true
+script.fan_off:
+  hidden: true
+script.fan_on:
+  hidden: true
