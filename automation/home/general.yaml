@@ -16,7 +16,6 @@
         - light.recessed_lights
       data:
         brightness: 254 
-    - service: light.turn_on
-      entity_id: light.fan
+    - service: script.fan_off
     - service: media_player.turn_off
       entity_id: media_player.google_home
