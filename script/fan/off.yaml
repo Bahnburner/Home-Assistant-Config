@@ -1,0 +1,9 @@
+fan_off:
+  sequence:
+    - condition: state
+      entity_id: light.fan
+      state: 'on'
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.fan_check
+    - service: light.turn_off
+      entity_id: light.fan
