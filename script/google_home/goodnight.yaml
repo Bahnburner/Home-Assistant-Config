@@ -39,6 +39,7 @@ goodnight:
     - service: light.turn_on
       entity_id:
         - light.living_room
+        - light.recessed_lights
       data:
         color_temp: 500
         brightness: 100
@@ -50,6 +51,10 @@ goodnight:
         color_temp: 450
         brightness: 100
         transition: 30
+    - service: light.turn_off
+      entity_id:
+        - light.chandelier
+        - light.overhead_light
     - delay:
         seconds: 30
     - service: automation.turn_on
