@@ -18,6 +18,7 @@ goodnight:
         - media_player.downstairs
         - media_player.bedroom
         - media_player.party_mode
+    - service: script.fan_off
     - service: light.turn_off
       entity_id:
         - light.foyer
