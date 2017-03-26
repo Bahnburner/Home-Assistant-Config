@@ -17,6 +17,7 @@
         - media_player.downstairs
         - media_player.bedroom
         - media_player.party_mode
+    - service: script.fan_off
     - service: remote.turn_off
       entity_id: remote.living_room
     - service: media_player.volume_set
