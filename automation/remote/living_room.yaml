@@ -84,6 +84,7 @@
   trigger: 
     - platform: state
       entity_id: media_player.rasplex
+      from: 'playing'
       to: 'paused'
     - platform: state
       entity_id: media_player.rasplex
