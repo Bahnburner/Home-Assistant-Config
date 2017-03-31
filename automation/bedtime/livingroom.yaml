@@ -29,14 +29,14 @@
             - wed
             - thu
             - fri
-        - delay:
-            seconds: 15
         - condition: state
           entity_id: group.family
           state: 'home'
         - condition: state
           entity_id: light.cabinet_lights
           state: 'on' 
+    - delay:
+        seconds: 15
     - service: light.turn_on
       entity_id: light.cabinet_lights
       data: 
