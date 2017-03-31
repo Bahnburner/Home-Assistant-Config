@@ -12,7 +12,11 @@
       state: 'on'
   action: 
     - service: light.turn_on
-      entity_id: light.living_room
+      entity_id:
+        - light.floor_lamp_left
+        - light.floor_lamp_right
+        - light.table_lamp
+        - light.living_room
       data: 
         color_temp: 500
         transition: 3600
@@ -25,6 +29,8 @@
             - wed
             - thu
             - fri
+        - delay:
+            seconds: 15
         - condition: state
           entity_id: group.family
           state: 'home'
