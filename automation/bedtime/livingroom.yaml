@@ -2,7 +2,7 @@
   hide_entity: True
   trigger:
     platform: time
-    after: '21:30:00'
+    after: '21:29:00'
   condition:
     - condition: state
       entity_id: group.family
@@ -13,9 +13,6 @@
   action: 
     - service: light.turn_on
       entity_id:
-        - light.floor_lamp_left
-        - light.floor_lamp_right
-        - light.table_lamp
         - light.living_room
       data: 
         color_temp: 500
