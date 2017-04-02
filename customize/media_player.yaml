@@ -26,3 +26,5 @@ media_player.bedroom_2:
   hidden: true
 media_player.party_mode_2:
   hidden: true
+media_player.rasplex:
+  hidden: true
