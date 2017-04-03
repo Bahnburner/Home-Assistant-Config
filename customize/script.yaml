@@ -6,6 +6,8 @@ script.open_the_garage:
   hidden: true
 script.close_the_garage:
   hidden: true
+script.bedtime_lights
+  hidden: true
 script.goodnight:
   hidden: true
 script.goodnight_timer_off:
