@@ -6,7 +6,7 @@ script.open_the_garage:
   hidden: true
 script.close_the_garage:
   hidden: true
-script.bedtime_lights
+script.bedtime_light:
   hidden: true
 script.goodnight:
   hidden: true
