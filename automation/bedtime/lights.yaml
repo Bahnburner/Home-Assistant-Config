@@ -1,8 +1,8 @@
-- alias: Bedtime - Livingroom Lights
+- alias: Bedtime - Lights
   hide_entity: True
   trigger:
     platform: time
-    after: '21:29:00'
+    after: '21:30:00'
   condition:
     - condition: state
       entity_id: group.family
@@ -11,11 +11,7 @@
       entity_id: light.living_room
       state: 'on'
   action: 
-    - service: light.turn_on
-      entity_id: light.living_room
-      data: 
-        color_temp: 500
-        transition: 3600
+    - service: script.bedtime_lights
     - condition: and
       conditions:
         - condition: time
@@ -25,9 +21,6 @@
             - wed
             - thu
             - fri
-        - condition: state
-          entity_id: group.family
-          state: 'home'
         - condition: state
           entity_id: light.cabinet_lights
           state: 'on' 
