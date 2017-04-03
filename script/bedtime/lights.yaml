@@ -1,1 +1,16 @@
-
+bedtime_lights:
+  sequence:
+    - service: light.turn_on
+      entity_id: light.living_room
+      data: 
+        color_temp: 500
+        transition: 3600
+    - condition: state
+      entity_id: group.tristal
+      state: 'home'
+    - service: light.turn_on
+      entity_id: light.master_bedroom
+      data:
+        brightness: 150
+        color_temp: 500
+        transition: 60
