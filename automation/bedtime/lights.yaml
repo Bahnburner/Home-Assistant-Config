@@ -2,7 +2,7 @@
   hide_entity: True
   trigger:
     platform: time
-    after: '21:30:00'
+    after: '21:45:00'
   condition:
     - condition: state
       entity_id: group.family
@@ -30,4 +30,4 @@
       entity_id: light.cabinet_lights
       data: 
         color_temp: 450
-        transition: 3600
+        transition: 1800
