@@ -1,9 +1,14 @@
 - alias: Home Mode - Garage Hot Start
   hide_entity: true
   trigger:
-    platform: state
-    entity_id: cover.garage_door_opener
-    to: 'open'
+    - platform: state
+      entity_id: cover.garage_door_opener
+      from: 'closed'
+      to: 'open'
+    - platform: state
+      entity_id: sensor.front_door
+      from: 'closed'
+      to: 'open'
   condition: 
     condition: state
     entity_id: group.family
