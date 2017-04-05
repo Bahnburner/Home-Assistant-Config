@@ -13,6 +13,7 @@ door_locks:
     - switch.door_front
     - switch.door_rear
 living_room:
+  control: hidden
   - sensor.current_activity
   - input_select.harmony
   - light.living_room
