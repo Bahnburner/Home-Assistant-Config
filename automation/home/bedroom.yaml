@@ -12,7 +12,7 @@
     below: 5
   action:
     service: light.turn_on
-    entity_id: light.master_bedroom
+    entity_id: light.master_bedroom_2
     data:
       brightness: 254
     data_template:
