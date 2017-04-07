@@ -4,7 +4,7 @@
     - platform: state
       entity_id: sensor.brightness_lr
     - platform: state
-      entity_id: light.living_room
+      entity_id: light.living_room_2
       from: 'off'
       to: 'on'
     - platform: state
@@ -39,4 +39,4 @@
           {% else %}
           {% endif %}
         brightness: >
-          {{ states.light.living_room.attributes.brightness }}
+          {{ states.light.living_room_2.attributes.brightness }}
