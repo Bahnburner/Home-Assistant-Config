@@ -10,9 +10,8 @@ christmas:
         brightness: 254
     - service: light.turn_on
       entity_id:
-       - light.living_room
+       - light.communal
        - light.foyer
-       - light.cabinet_lights
       data:
         xy_color: [0.172, 0.735]
         brightness: 254
