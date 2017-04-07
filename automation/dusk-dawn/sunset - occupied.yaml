@@ -12,8 +12,8 @@
   action:
     - service: light.turn_on
       entity_id: 
-        - light.living_room
-        - light.master_bedroom
+        - light.living_room_2
+        - light.master_bedroom_2
       data:
         color_temp: 366
         brightness: 254
