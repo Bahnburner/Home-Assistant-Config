@@ -10,22 +10,22 @@
       entity_id: group.family
       state: 'home'
     - condition: state
-      entity_id: light.living_room
+      entity_id: light.living_room_2
       state: 'on'
     - condition: template
-      value_template: '{{ states.light.living_room.attributes.color_temp == 250 }}'
+      value_template: '{{ states.light.living_room_2.attributes.color_temp == 250 }}'
   action:
     - service: light.turn_on
-      entity_id: light.living_room
+      entity_id: light.living_room_2
       data:
         color_temp: 366
         brightness: 254
         transition: 1800
     - condition: state
-      entity_id: light.master_bedroom
+      entity_id: light.master_bedroom_2
       state: 'on'
     - service: light.turn_on  
-      entity_id: light.master_bedroom
+      entity_id: light.master_bedroom_2
       data:
         color_temp: 366
         brightness: 254
