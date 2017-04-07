@@ -13,4 +13,4 @@
       - fri
   action:
     service: light.turn_off
-    entity_id: light.master_bedroom
+    entity_id: light.master_bedroom_2
