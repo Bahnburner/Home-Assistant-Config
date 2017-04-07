@@ -13,7 +13,7 @@ go_tigers_go:
       data:
         entity_id: script.timer_off
     - service: light.turn_on
-      entity_id: light.living_room
+      entity_id: light.living_room_2
       data:
         xy_color: [0.167, 0.04]
     - service: script.turn_on
@@ -25,7 +25,7 @@ timer_off:
     - delay:
         seconds: 30
     - service: light.turn_on
-      entity_id: light.living_room
+      entity_id: light.living_room_2
       data:
         color_temp: 366
     - delay:
