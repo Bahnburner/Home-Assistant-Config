@@ -19,7 +19,7 @@
   sensors:
     current_activity:
       friendly_name: 'Current Activity'
-      value_template: '{{ states.remote.living_room_2.attributes.current_activity }}'
+      value_template: '{{ states.remote.living_room.attributes.current_activity }}'
     brightness_pntry:
       value_template: '{{ states.light.pantry.attributes.brightness }}'
     brightness_lr:
