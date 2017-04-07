@@ -34,11 +34,11 @@ goodnight:
         brightness: 100
         transition: 15
     - condition: state
-      entity_id: light.living_room
+      entity_id: light.living_room_2
       state: 'on'
     - service: light.turn_on
       entity_id:
-        - light.living_room
+        - light.living_room_2
       data:
         color_temp: 500
         brightness: 100
@@ -71,6 +71,4 @@ goodnight_timer_off:
     - condition: template
       value_template: '{{ states.light.living_room.attributes.brightness <= 200 }}'
     - service: light.turn_off
-      entity_id:
-        - light.living_room
-        - light.cabinet_lights
+      entity_id: light.communal
