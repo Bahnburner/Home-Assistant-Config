@@ -12,7 +12,7 @@
   action:
     - service: light.turn_off
       entity_id: 
-        - light.living_room
+        - light.living_room_2
         - light.pantry
       data: 
         transition: 60
