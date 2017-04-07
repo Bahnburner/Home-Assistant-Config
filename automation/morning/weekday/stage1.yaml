@@ -17,11 +17,11 @@
       entity_id: group.tristal
       state: 'home'
     - condition: state
-      entity_id: light.master_bedroom
+      entity_id: light.master_bedroom_2
       state: 'off'
   action:
     - service: light.turn_on
-      entity_id: light.master_bedroom
+      entity_id: light.master_bedroom_2
       data:
         color_temp: 250
         brightness: 50
