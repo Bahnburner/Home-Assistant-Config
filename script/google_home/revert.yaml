@@ -17,8 +17,8 @@ revert:
         - light.stairway
     - service: light.turn_on
       entity_id: 
-        - light.living_room
-        - light.master_bedroom
+        - light.living_room_2
+        - light.master_bedroom_2
       data: 
         brightness: 254
       data_template:
@@ -59,4 +59,4 @@ revert:
         xy_color: [0.1605,0.3299]
       data_template:
         brightness: >
-          {{ states.light.living_room.attributes.brightness }}
+          {{ states.light.living_room_2.attributes.brightness }}
