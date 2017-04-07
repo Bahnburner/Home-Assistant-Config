@@ -1,5 +1,7 @@
-light.living_room:
+light.living_room_2:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+light.living_room:
+  hidden: true
 light.floor_lamp_left:
   hidden: true
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
@@ -64,6 +66,8 @@ light.kitchen:
 light.kitchen_hallway:
   hidden: true
 light.master_bedroom:
+  hidden: true
+light.master_bedroom_2:
   hidden: true
 light.stairway_2:
   hidden: true
