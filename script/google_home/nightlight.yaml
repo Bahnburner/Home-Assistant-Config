@@ -2,8 +2,7 @@ nightlight:
   sequence:
     - service: light.turn_on
       entity_id: 
-        - light.living_room
-        - light.cabinet_lights
+        - light.communal
       data:
         brightness: 50
         transition: 5
@@ -11,11 +10,10 @@ nightlight:
     - delay:
         minutes: 10
     - condition: template
-      value_template: '{{ states.light.living_room.attributes.brightness == 50 }}'
+      value_template: '{{ states.light.living_room_2.attributes.brightness == 50 }}'
     - service: light.turn_off
       entity_id: 
-        - light.living_room
-        - light.cabinet_lights
+        - light.communal
       data:
         transition: 10
         color_temp: 500
