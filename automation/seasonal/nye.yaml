@@ -14,10 +14,9 @@
 #        media_content_type: "audio/mp3"  
 #    - service: light.turn_on
 #      entity_id:
-#        - light.living_room
+#        - light.communal
 #        - light.dining_room
 #        - light.foyer
-#        - light.cabinet_lights
 #        - light.master_hallway
 #        - light.stairway
 #      data:
