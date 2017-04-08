@@ -8,7 +8,7 @@
       entity_id: group.family
       state: 'home'
     - condition: state
-      entity_id: light.living_room_2
+      entity_id: light.living_room
       state: 'on'
   action: 
     - service: script.bedtime_lights

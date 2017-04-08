@@ -4,7 +4,7 @@
     - platform: state
       entity_id: sensor.brightness_lr
     - platform: state
-      entity_id: light.living_room_2
+      entity_id: light.living_room
       from: 'off'
       to: 'on'
     - platform: state
@@ -27,4 +27,4 @@
       xy_color: [0.1605,0.3299]
     data_template:
       brightness: >
-        {{ states.light.living_room_2.attributes.brightness }}
+        {{ states.light.living_room.attributes.brightness }}

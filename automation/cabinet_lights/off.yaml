@@ -2,7 +2,7 @@
   hide_entity: true
   trigger:
     - platform: state
-      entity_id: light.living_room_2
+      entity_id: light.living_room
       from: 'on'
       to: 'off'
     - platform: state
