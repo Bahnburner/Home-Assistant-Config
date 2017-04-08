@@ -2,7 +2,7 @@
 #  hide_entity: True
 #  trigger:
 #    - platform: state
-#      entity_id: light.living_room_2
+#      entity_id: light.living_room
 #      from: 'off'
 #      to: 'on'
 #    - platform: state
@@ -11,20 +11,20 @@
 #  condition: 
 #    condition: template
 #    value_template: >
-#       {% if (states.sensor.time.state | round(2)) < 05.00 and states.light.living_room_2.attributes.color_temp == 500 %}
+#       {% if (states.sensor.time.state | round(2)) < 05.00 and states.light.living_room.attributes.color_temp == 500 %}
 #          false
-#        {% elif (states.sensor.time.state | round(2)) < 09.50 and (states.sensor.time.state | round(2)) >= 05.00 and states.light.living_room_2.attributes.color_temp == 250 %}
+#        {% elif (states.sensor.time.state | round(2)) < 09.50 and (states.sensor.time.state | round(2)) >= 05.00 and states.light.living_room.attributes.color_temp == 250 %}
 #          false
-#        {% elif (states.sensor.time.state | round(2)) < 22.50 and (states.sensor.time.state | round(2)) >= 9.50 and states.light.living_room_2.attributes.color_temp == 366 %}
+#        {% elif (states.sensor.time.state | round(2)) < 22.50 and (states.sensor.time.state | round(2)) >= 9.50 and states.light.living_room.attributes.color_temp == 366 %}
 #          false
-#        {% elif (states.sensor.time.state | round(2)) >= 22.50 and states.light.living_room_2.attributes.color_temp == 500 %}
+#        {% elif (states.sensor.time.state | round(2)) >= 22.50 and states.light.living_room.attributes.color_temp == 500 %}
 #          false
 #        {% else %}
 #          true
 #        {% endif %}
 #  action:
 #    service: light.turn_on
-#    entity_id: light.living_room_2
+#    entity_id: light.living_room
 #    data_template:
 #      color_temp: >
 #        {% if (states.sensor.time.state | round(2)) < 05.00 %}
@@ -42,7 +42,7 @@
 #  hide_entity: True
 #  trigger:
 #    - platform: state
-#      entity_id: light.master_bedroom_2
+#      entity_id: light.master_bedroom
 #      from: 'off'
 #      to: 'on'
 #    - platform: state
@@ -51,20 +51,20 @@
 #  condition: 
 #    condition: template
 #    value_template: >
-#       {% if (states.sensor.time.state | round(2)) < 05.00 and states.light.master_bedroom_2.attributes.color_temp == 500 %}
+#       {% if (states.sensor.time.state | round(2)) < 05.00 and states.light.master_bedroom.attributes.color_temp == 500 %}
 #          false
-#        {% elif (states.sensor.time.state | round(2)) < 09.50 and (states.sensor.time.state | round(2)) >= 05.00 and states.light.master_bedroom_2.attributes.color_temp == 250 %}
+#        {% elif (states.sensor.time.state | round(2)) < 09.50 and (states.sensor.time.state | round(2)) >= 05.00 and states.light.master_bedroom.attributes.color_temp == 250 %}
 #          false
-#        {% elif (states.sensor.time.state | round(2)) < 22.50 and (states.sensor.time.state | round(2)) >= 9.50 and states.light.master_bedroom_2.attributes.color_temp == 366 %}
+#        {% elif (states.sensor.time.state | round(2)) < 22.50 and (states.sensor.time.state | round(2)) >= 9.50 and states.light.master_bedroom.attributes.color_temp == 366 %}
 #          false
-#        {% elif (states.sensor.time.state | round(2)) >= 22.50 and states.light.master_bedroom_2.attributes.color_temp == 500 %}
+#        {% elif (states.sensor.time.state | round(2)) >= 22.50 and states.light.master_bedroom.attributes.color_temp == 500 %}
 #          false
 #        {% else %}
 #          true
 #        {% endif %}
 #  action:
 #    service: light.turn_on
-#    entity_id: light.master_bedroom_2
+#    entity_id: light.master_bedroom
 #    data_template:
 #      color_temp: >
 #        {% if (states.sensor.time.state | round(2)) <= 05.00 %}

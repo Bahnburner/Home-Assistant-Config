@@ -15,14 +15,14 @@
       state: 'home'
   action:
     - service: light.turn_on
-      entity_id: light.master_bedroom_2
+      entity_id: light.master_bedroom
       data:
         color_temp: 250
         brightness: 254
         transition: 1800
     - service: script.fan_on
     - service: light.turn_on
-      entity_id: light.living_room_2
+      entity_id: light.living_room
       data:
         color_temp: 250
         brightness: 254

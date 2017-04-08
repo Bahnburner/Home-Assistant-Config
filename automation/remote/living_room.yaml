@@ -59,14 +59,14 @@
       to: 'Watch Prime Video'
   condition: 
     - condition: state
-      entity_id: light.living_room_2
+      entity_id: light.living_room
       state: 'on'
     - condition: state
       entity_id: sun.sun
       state: 'below_horizon'
   action:
     service: light.turn_on
-    entity_id: light.living_room_2
+    entity_id: light.living_room
     data:
       brightness: 60
     data_template:
@@ -107,14 +107,14 @@
           entity_id: sensor.current_activity
           state: 'PowerOff'
     - condition: state
-      entity_id: light.living_room_2
+      entity_id: light.living_room
       state: 'on'
     - condition: state
       entity_id: sun.sun
       state: 'below_horizon'
   action: 
     service: light.turn_on
-    entity_id: light.living_room_2
+    entity_id: light.living_room
     data:
       brightness: 254
     data_template:

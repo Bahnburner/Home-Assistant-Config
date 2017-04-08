@@ -1,7 +1,7 @@
 who_dat:
   sequence:
     - service: media_player.play_media
-      entity_id: media_player.living_room_home
+      entity_id: media_player.google_home
       data:
         media_content_id: "http://wreckage.johndenverschoolofflight.com/hass/Halftime.mp3"
         media_content_type: "audio/mp3"  

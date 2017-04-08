@@ -17,8 +17,8 @@ revert:
         - light.stairway
     - service: light.turn_on
       entity_id: 
-        - light.living_room_2
-        - light.master_bedroom_2
+        - light.living_room
+        - light.master_bedroom
       data: 
         brightness: 254
       data_template:

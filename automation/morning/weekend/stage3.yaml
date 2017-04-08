@@ -10,4 +10,4 @@
       - sun
   action:
     service: light.turn_off
-    entity_id: light.master_bedroom_2
+    entity_id: light.master_bedroom

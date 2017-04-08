@@ -24,7 +24,7 @@ good_morning:
             Your drive to work should take approximately {{states.sensor.drive_time_to_work.state | round (0)}} minutes.
           {% endif %}
     - service: light.turn_on
-      entity_id: light.living_room_2
+      entity_id: light.living_room
       data: 
         brightness: 254
       data_template:
