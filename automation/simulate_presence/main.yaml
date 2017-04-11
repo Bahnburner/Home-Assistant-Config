@@ -35,7 +35,7 @@
     after: '22:30:00'
   action:
     service: light.turn_on
-    entity_id: light.master_bedroom_2
+    entity_id: light.master_bedroom
     data:
       brightness: 150
       color_temp: 500
@@ -61,7 +61,7 @@
     after: '00:15:00'
   action:
     - service: light.turn_off
-      entity_id: light.master_bedroom_2
+      entity_id: light.master_bedroom
 
 - alias: Simulate Presence 6
   hide_entity: True
