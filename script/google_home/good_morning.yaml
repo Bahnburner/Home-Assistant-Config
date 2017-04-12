@@ -39,6 +39,7 @@ good_morning:
             500
           {% else %}
           {% endif %}
+    - service: script.fan_on
     - service: remote.turn_on
       entity_id: remote.living_room
       data:
