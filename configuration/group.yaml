@@ -136,6 +136,8 @@ simulate_presence:
   - automation.simulate_presence_4
   - automation.simulate_presence_5
   - automation.simulate_presence_6
+  - automation.simulate_presence_7
+  - automation.simulate_presence_8
 shell_commands:
   - shell_command.lock_doors
   - shell_command.unlock_doors
