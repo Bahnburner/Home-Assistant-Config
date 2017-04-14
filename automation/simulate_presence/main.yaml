@@ -32,7 +32,7 @@
     - service: light.turn_on
       entity_id: light.chandelier
     - delay:
-      seconds: 5
+        seconds: 5
     - service: light.turn_off
       entity_id: light.overhead_light
       
@@ -47,7 +47,7 @@
         - light.chandelier
         - light.recessed_lights
     - delay:
-      seconds: 60
+        seconds: 60
     - service: light.turn_on
       entity_id: light.living_room
       data:
