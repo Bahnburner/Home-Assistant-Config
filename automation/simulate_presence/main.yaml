@@ -12,7 +12,7 @@
       brightness: 254
       transition: 900
 
-- alias: Simulate Presence 7
+- alias: Simulate Presence 2
   hide_entity: True
   trigger:
     platform: time
@@ -23,7 +23,7 @@
       - light.overhead_light
       - light.recessed_lights
     
-- alias: Simulate Presence 8
+- alias: Simulate Presence 3
   hide_entity: True
   trigger:
     platform: time
@@ -36,7 +36,7 @@
     - service: light.turn_off
       entity_id: light.overhead_light
       
-- alias: Simulate Presence 2
+- alias: Simulate Presence 4
   hide_entity: True
   trigger:
     platform: time
@@ -56,7 +56,7 @@
       entity_id: remote.living_room
       data: {"activity": "Watch DirecTV"}
 
-- alias: Simulate Presence 3
+- alias: Simulate Presence 5
   hide_entity: True
   trigger:
     platform: time
@@ -69,7 +69,7 @@
       color_temp: 500
       transition: 60
 
-- alias: Simulate Presence 4
+- alias: Simulate Presence 6
   hide_entity: True
   trigger:
     platform: time
@@ -80,7 +80,7 @@
     - service: remote.turn_off
       entity_id: remote.living_room 
 
-- alias: Simulate Presence 5
+- alias: Simulate Presence 7
   hide_entity: True
   trigger:
     platform: time
@@ -89,7 +89,7 @@
     - service: light.turn_off
       entity_id: light.master_bedroom
 
-- alias: Simulate Presence 6
+- alias: Simulate Presence 8
   hide_entity: True
   trigger:
     platform: homeassistant
