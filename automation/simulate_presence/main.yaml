@@ -12,12 +12,40 @@
       brightness: 254
       transition: 900
 
+- alias: Simulate Presence 7
+  trigger:
+    platform: time
+    after: '19:00:00'
+  action:
+    service: light.turn_on
+    entity_id:
+      - light.overhead_light
+      - light.recessed_lights
+    
+- alias: Simulate Presence 8
+  trigger:
+    platform: time
+    after: '19:45:00'
+  action:
+    - service: light.turn_on
+      entity_id: light.chandelier
+    - delay:
+      seconds: 5
+    - service: light.turn_off
+      entity_id: light.overhead_light
+      
 - alias: Simulate Presence 2
   hide_entity: True
   trigger:
     platform: time
     after: '20:30:00'
   action:
+    - service: light.turn_off
+      entity_id: 
+        - light.chandelier
+        - light.recessed_lights
+    - delay:
+      seconds: 60
     - service: light.turn_on
       entity_id: light.living_room
       data:
@@ -25,8 +53,6 @@
     - service: remote.turn_on
       entity_id: remote.living_room
       data: {"activity": "Watch DirecTV"}
-#    - service: ifttt.trigger
-#      data: {"event": "DirecTV"}
 
 - alias: Simulate Presence 3
   hide_entity: True
@@ -51,8 +77,6 @@
       entity_id: light.living_room
     - service: remote.turn_off
       entity_id: remote.living_room 
-#    - service: ifttt.trigger
-#      data: {"event":"PowerOff"}
 
 - alias: Simulate Presence 5
   hide_entity: True
