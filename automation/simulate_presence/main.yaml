@@ -13,6 +13,7 @@
       transition: 900
 
 - alias: Simulate Presence 7
+  hide_entity: True
   trigger:
     platform: time
     after: '19:00:00'
@@ -23,6 +24,7 @@
       - light.recessed_lights
     
 - alias: Simulate Presence 8
+  hide_entity: True
   trigger:
     platform: time
     after: '19:45:00'
