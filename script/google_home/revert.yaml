@@ -59,4 +59,4 @@ revert:
         xy_color: [0.1605,0.3299]
       data_template:
         brightness: >
-          {{ states.light.living_room_2.attributes.brightness }}
+          {{ states.light.living_room.attributes.brightness }}
