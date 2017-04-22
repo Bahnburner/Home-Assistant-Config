@@ -23,11 +23,11 @@
     brightness_pntry:
       value_template: '{{ states.light.pantry.attributes.brightness }}'
     brightness_lr:
-      value_template: '{{ states.light.living_room_2.attributes.brightness }}'
+      value_template: '{{ states.light.living_room.attributes.brightness }}'
     color_temp_lr:
-      value_template: '{{ states.light.living_room_2.attributes.xy_color }}'
+      value_template: '{{ states.light.living_room.attributes.xy_color }}'
     color_temp_br:
-      value_template: '{{ states.light.master_bedroom_2.attributes.xy_color }}'
+      value_template: '{{ states.light.master_bedroom.attributes.xy_color }}'
     color_temp_cl:
       value_template: '{{ states.light.cabinet_lights.attributes.xy_color }}'
     time:
