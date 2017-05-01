@@ -27,7 +27,7 @@ group.family:
 group.weather:
   friendly_name: 'Weather'
 group.override:
-  friendly_name: 'Automation Override'
+  friendly_name: 'Administration'
 group.tristal:
   hidden: true
 device_tracker.tristans_phone_bluetooth:
