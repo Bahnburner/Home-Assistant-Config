@@ -36,26 +36,3 @@
       state: 'not_home'
     - service: automation.trigger
       entity_id: automation.away_mode__general
-      
-- alias: Garage Notify
-  hide_entity: true
-  trigger:
-    - platform: state
-      entity_id: cover.garage_door_opener
-      from: 'closed'
-      to: 'open'
-  condition:
-    condition: state
-    entity_id: group.family
-    state: 'home'
-  action:
-    - service: turn_on.light
-      entity_id: light.foyer
-      data:
-        brightness: 255
-        flash: short
-    - service: turn_on.light
-      entity_id: light.foyer
-      data:
-        brightness: 255
-        flash: short
