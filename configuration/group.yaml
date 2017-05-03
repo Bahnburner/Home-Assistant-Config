@@ -98,6 +98,7 @@ routines:
   - automation.morning__stage_2
   - automation.exterior_front__motion
   - automation.home_mode__garage_hot_start
+  - automation.garage_notify
   - automation.foyer_lights__doorbell_pushed
   - automation.harmony_off
   - automation.nest_protect_normal
