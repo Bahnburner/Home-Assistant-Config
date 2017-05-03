@@ -17,3 +17,26 @@
       - media_player.google_home_2
     data: 
       message: 'Heads up, the garage is currently open.'
+
+- alias: Garage Notify
+  hide_entity: true
+  trigger:
+    - platform: state
+      entity_id: cover.garage_door_opener
+      from: 'closed'
+      to: 'open'
+  condition:
+    condition: state
+    entity_id: group.family
+    state: 'home'
+  action:
+    - service: turn_on.light
+      entity_id: light.foyer
+      data:
+        brightness: 255
+        flash: short
+    - service: turn_on.light
+      entity_id: light.foyer
+      data:
+        brightness: 255
+        flash: short
