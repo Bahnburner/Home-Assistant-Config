@@ -37,7 +37,7 @@
     - service: automation.trigger
       entity_id: automation.away_mode__general
       
-- alias: Home Mode - Garage Hot Start
+- alias: Home Mode - Garage Notify
   hide_entity: true
   trigger:
     - platform: state
