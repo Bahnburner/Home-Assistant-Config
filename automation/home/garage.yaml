@@ -37,7 +37,7 @@
     - service: automation.trigger
       entity_id: automation.away_mode__general
       
-- alias: Home Mode - Garage Notify
+- alias: Garage Notify
   hide_entity: true
   trigger:
     - platform: state
@@ -58,5 +58,4 @@
       entity_id: light.foyer
       data:
         brightness: 255
-        flash: short      
-    
+        flash: short
