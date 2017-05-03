@@ -30,12 +30,12 @@
     entity_id: group.family
     state: 'home'
   action:
-    - service: turn_on.light
+    - service: light.turn_on
       entity_id: light.foyer
       data:
         brightness: 255
         flash: short
-    - service: turn_on.light
+    - service: light.turn_on
       entity_id: light.foyer
       data:
         brightness: 255
