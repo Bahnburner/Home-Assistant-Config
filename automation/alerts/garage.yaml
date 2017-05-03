@@ -35,7 +35,7 @@
       data:
         brightness: 255
         flash: short
-    - delay
+    - delay:
       seconds: 1
     - service: light.turn_on
       entity_id: light.foyer
