@@ -37,4 +37,3 @@ script: !include_dir_merge_named script
 sensor: !include ./configuration/sensor.yaml
 switch: !include ./configuration/switch.yaml
 tts: !include ./configuration/tts.yaml
-twilio: !include ./configuration/twiilo.yaml
