@@ -1,6 +1,3 @@
 - name: Hidden Ridge
   platform: facebook
   page_access_token: !secret facebook_token
-- name: Hidden Ridge Text
-  platform: twilio_sms
-  from_number: +19014250562
