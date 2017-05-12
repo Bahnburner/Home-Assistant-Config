@@ -1,3 +1,2 @@
-twilio:
-  account_sid: !secret twiilo_sid
-  auth_token: !secret twiilo_token
+account_sid: !secret twiilo_sid
+auth_token: !secret twiilo_token
