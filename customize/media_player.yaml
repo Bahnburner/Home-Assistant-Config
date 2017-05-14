@@ -27,6 +27,8 @@ media_player.bedroom_2:
 media_player.party_mode_2:
   hidden: true
 media_player.rasplex:
-  hidden: true
+  hidden: false
 media_player.directv_rid023856045325:
+  hidden: true
+media_player.galaxy_s8:
   hidden: true
