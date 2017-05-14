@@ -7,9 +7,9 @@
     to: 'not_home'
   action:
     - entity_id: climate.downstairs
-      service: climate.set_away_mode
+      service: climate.set_hold_mode
       data:
-        away_mode: true
+        hold_mode: away
     - service: media_player.turn_off
       entity_id: 
         - media_player.google_home
