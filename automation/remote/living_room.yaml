@@ -93,8 +93,10 @@
 #      from: 'Watch Plex'
     - platform: state
       entity_id: media_player.rasplex
-      from: 'playing'
       to: 'paused'
+    - platform: state
+      entity_id: media_player.rasplex
+      to: 'idle'     
     - platform: state
       entity_id: sensor.current_activity
       from: 'Watch Netflix'
