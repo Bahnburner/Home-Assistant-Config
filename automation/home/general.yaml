@@ -6,10 +6,10 @@
     from: 'not_home'
     to: 'home'
   action:
-    - service: climate.set_away_mode
+    - service: climate.set_hold_mode
       entity_id: climate.downstairs
       data:
-        away_mode: 'off'
+        hold_mode: 'home'
     - service: light.turn_on
       entity_id: 
         - light.pantry
