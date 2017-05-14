@@ -22,8 +22,8 @@ living_room:
     - climate.downstairs
     - sensor.protect_down
 living_room_home:
-  - media_player.rasplex
   - media_player.google_home
+  - media_player.rasplex
 master_bedroom:
   - light.tristans_nightstand
   - light.crystals_nightstand
