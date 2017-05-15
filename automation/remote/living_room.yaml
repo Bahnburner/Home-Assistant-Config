@@ -88,9 +88,9 @@
 - alias: Harmony Light Control - End
   hide_entity: true
   trigger: 
-#    - platform: state
-#      entity_id: sensor.current_activity
-#      from: 'Watch Plex'
+    - platform: state
+      entity_id: sensor.current_activity
+      from: 'Watch Plex'
     - platform: state
       entity_id: media_player.rasplex
       to: 'paused'
