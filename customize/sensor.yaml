@@ -42,20 +42,6 @@ sensor.color_temp_br:
   hidden: true
 sensor.color_temp_cl:
   hidden: true
-sensor.cpu_temperature:
-  friendly_name: 'CPU Temp'
-sensor.cpu_use:
-  friendly_name: 'CPU Usage'
-sensor.disk_use_:
-  friendly_name: 'Disk Usage'
-sensor.ram_use:
-  friendly_name: 'RAM Usage'
-sensor.door_status_front:
-  icon: mdi:key-variant
-  hidden: true
-sensor.door_status_rear:
-  icon: mdi:key-variant
-  hidden: true
 sensor.downstairs_thermostat_hvac_state:
   hidden: true
 sensor.downstairs_nest_protect_battery_health:
