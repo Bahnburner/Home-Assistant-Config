@@ -17,6 +17,12 @@
     arrival_time: '09:15:00'
 - platform: template
   sensors:
+    door_status_rear:
+      friendly_name: Door Status Rear
+      value_template: '{{ states.switch.door_rear.state }}'
+    door_status_front:
+      friendly_name: Door Status Front
+      value_template: '{{ states.switch.door_front.state }}'
     current_activity:
       friendly_name: 'Current Activity'
       value_template: '{{ states.remote.living_room.attributes.current_activity }}'
@@ -60,14 +66,14 @@
       friendly_name: 'Bedroom Windows'
       value_template: '{% if is_state("binary_sensor.bedroom_windows", "off") %}Closed{% else %}Open{% endif %}'
       icon_template: '{% if is_state("binary_sensor.bedroom_windows", "off") %}mdi:window-closed{% else %}mdi:window-open{% endif %}'
-- platform: command_line
-  name: Door Status Front
-  command: "python /home/hass/.homeassistant/kevo/status-front.py"
-  scan_interval: 30
-- platform: command_line  
-  name: Door Status Rear
-  command: "python /home/hass/.homeassistant/kevo/status-rear.py"
-  scan_interval: 30
+#- platform: command_line
+#  name: Door Status Front
+#  command: "python /home/hass/.homeassistant/kevo/status-front.py"
+#  scan_interval: 30
+#- platform: command_line  
+#  name: Door Status Rear
+#  command: "python /home/hass/.homeassistant/kevo/status-rear.py"
+#  scan_interval: 30
 - platform: random
   name: whitenoise
   minimum: 1
