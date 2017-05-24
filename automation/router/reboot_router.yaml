@@ -1,12 +1,33 @@
+
+- alias: Wan Down - on
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.wan_up
+      state: 'on'
+  action:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.wan_down
+
+- alias: Wan Down - off
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.wan_up
+      state: 'off'
+  action:
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.wan_down
+
 - alias: Wan Down
   hide_entity: True
   trigger:
     - platform: state
-      entity_id: switch.wan_down
+      entity_id: input_boolean.wan_down
       state: 'on'
       for:
         minutes: 20
   action:
     - service: shell_command.wan_down
-    - service: switch.turn_off
-      entity_id: switch.wan_down
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.wan_down
