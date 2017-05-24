@@ -9,3 +9,5 @@
   fan_check:
     name: Fan Check
     initial: off
+  wan_down:
+    initial: off
