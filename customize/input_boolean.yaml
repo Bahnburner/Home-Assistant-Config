@@ -2,3 +2,5 @@ input_boolean.garage_hot_start:
   hidden: true
 input_boolean.fan_check:
   hidden: true
+input_boolean.wan_down:
+  hidden: true
