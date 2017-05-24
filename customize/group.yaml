@@ -18,6 +18,7 @@ group.foyer:
   friendly_name: 'Foyer'
 group.stairway:
   friendly_name: 'Stairway'
+  hidden: true
 group.garage:
   friendly_name: 'Garage'
 group.exterior:
