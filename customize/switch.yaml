@@ -15,5 +15,3 @@ switch.door_rear:
 switch.christmas_lights:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/tree.png
   hidden: true
-switch.wan_down:
-  hidden: true
