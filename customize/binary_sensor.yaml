@@ -44,3 +44,5 @@ binary_sensor.back_windows:
 binary_sensor.bedroom_windows:
   icon: mdi:window-closed
   hidden: true
+binary_sensor.wan_up:
+  hidden: true
