@@ -48,7 +48,7 @@ light.master_hallway_right:
   hidden: true
 light.stairway:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
-  hidden: false
+  hidden: true
 light.recessed_lights:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.overhead_light:
