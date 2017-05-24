@@ -155,3 +155,7 @@ alarm_zones:
     - sensor.back_door
     - sensor.back_windows
     - sensor.bedroom_windows
+windows:
+    - sensor.front_windows
+    - sensor.back_windows
+    - sensor.bedroom_windows
