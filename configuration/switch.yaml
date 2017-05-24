@@ -18,8 +18,6 @@
           entity_id: group.routines
         - service: automation.turn_off
           entity_id: group.simulate_presence
-    wan_down:
-      value_template: "{{ states.binary_sensor.wan_up.state == 'off' }}"
 - platform: mqtt
   name: 'Christmas Lights'
   state_topic: "smartthings/Christmas Lights/switch"
