@@ -46,7 +46,7 @@ group.simulate_presence:
   icon: mdi:account-multiple
 group.gtg:
   hidden: true
-#group.system_monitor:
-#  friendly_name: 'System Monitor' 
 group.alarm_zones:
   friendly_name: "Alarm Zones"
+group.windows:
+  hidden: true
