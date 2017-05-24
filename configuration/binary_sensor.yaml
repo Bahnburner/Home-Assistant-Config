@@ -21,3 +21,9 @@
   payload_on: "active"
   payload_off: "inactive"
   device_class: motion
+- platform: command_line
+  command: 'ping -c 1 8.8.8.8 | grep "1 received" | wc -l'
+  name: 'is_comcast_online'
+  sensor_class: connectivity
+  payload_on: 1
+  payload_off: 0
