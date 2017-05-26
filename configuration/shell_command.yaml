@@ -1,3 +1,3 @@
-- wan_down: ssh root@10.0.0.1 'reboot'
-- update: pip3 install homeassistant --update
-- reboot: sudo shutdown -r +5 Home Assistant will be restarting in 5 minutes to install updates. 
+wan_down: ssh root@10.0.0.1 'reboot'
+update: pip3 install homeassistant --update
+reboot: sudo shutdown -r +5 Home Assistant will be restarting in 5 minutes to install updates. 
