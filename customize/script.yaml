@@ -94,3 +94,5 @@ script.fan_off:
   hidden: true
 script.fan_on:
   hidden: true
+script.update_hass:
+  hidden: true
