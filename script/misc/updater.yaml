@@ -8,7 +8,7 @@ update_hass:
         message: "Home Assistant will restart in 5 minutes to install updates."
     - service: shell_command.reboot
     - delay: 
-      minutes: 4
+        minutes: 4
     - service: tts.google_say
       entity_id:
         - media_player.party_mode
