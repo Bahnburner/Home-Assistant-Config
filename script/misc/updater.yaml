@@ -1,4 +1,4 @@
-updater:
+update_hass:
   sequence:
     - service: shell_command.update
     - service: tts.google_say
