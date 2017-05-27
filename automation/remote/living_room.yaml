@@ -16,7 +16,7 @@
           {% elif is_state("input_select.harmony", "Watch Netflix") %}
             23422788
           {% elif is_state("input_select.harmony", "Watch Hulu") %}
-            20619552
+            26564988
           {% elif is_state("input_select.harmony", "Watch Prime Video") %}
             19752038
           {% elif is_state("input_select.harmony", "Watch Chromecast") %}
@@ -103,6 +103,9 @@
     - platform: state
       entity_id: sensor.current_activity
       from: 'Watch Prime Video'
+    - platform: state
+      entity_id: sensor.current_activity
+      from: 'Watch Hulu'      
   condition: 
     - condition: or
       conditions:
