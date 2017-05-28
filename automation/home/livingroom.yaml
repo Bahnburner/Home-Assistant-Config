@@ -26,4 +26,5 @@
           {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
             500
           {% else %}
+            500
           {% endif %}
