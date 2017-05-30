@@ -37,8 +37,6 @@ living_room_lights:
   - light.floor_lamp_left
   - light.floor_lamp_right
   - light.table_lamp
-master_hallway:
-  - light.master_hallway
 kitchen:
   control: hidden
   entities:
