@@ -40,15 +40,6 @@ light.foyer_right:
 light.master_hallway:
   hidden: false
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
-light.master_hallway_left:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
-  hidden: true
-light.master_hallway_right:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
-  hidden: true
-light.stairway:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
-  hidden: true
 light.recessed_lights:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.overhead_light:
