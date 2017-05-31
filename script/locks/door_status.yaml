@@ -40,4 +40,6 @@ both_doors_open:
         - media_player.google_home_2
       message: 'Heads up, I can't lock the doors because they're currently open. Please close both doors.'
     - service: input_boolean.turn_on
-      entity_id: input_boolean.both_doors_open
+      entity_id:
+        - input_boolean.front_door_open
+        - input_boolean.back_door_open
