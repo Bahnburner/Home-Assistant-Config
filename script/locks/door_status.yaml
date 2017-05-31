@@ -19,7 +19,7 @@ front_door_open:
         - media_player.downstairs
         - media_player.google_home_2
       data:
-        message: '"Heads up, I cant lock the front door because its currently open. Please close the front door."
+        message: "Heads up, I cant lock the front door because its currently open. Please close the front door."
     - service: switch.turn_on
       entity_id: switch.door_rear
     - service: input_boolean.turn_on
