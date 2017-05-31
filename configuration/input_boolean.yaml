@@ -15,5 +15,3 @@
     initial: off
   back_door_open:
     initial: off
-  both_doors_open
-    initial: off
