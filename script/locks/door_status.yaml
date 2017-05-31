@@ -1,0 +1,43 @@
+status_check:
+  sequence:
+    service: >
+            {% if states.sensor.front_door.state == "Closed" and states.sensor.back_door.state == "Closed" %}
+              script.lock_doors
+            {% elif states.sensor.front_door.state == "Open" and states.sensor.back_door.state == "Closed" %}
+              script.front_door_open
+            {% elif states.sensor.front_door.state == "Closed" and states.sensor.back_door.state == "Open" %}
+              script.back_door_open
+            {% elif states.sensor.front_door.state == "Open" and states.sensor.back_door.state == "Open" %}
+              script.both_doors_open
+            {% else %}
+            {% endif %}
+            
+front_door_open:
+  sequence:
+    - service: tts.google_say
+      entity_id:
+        - media_player.party_mode
+        - media_player.google_home_2
+      message: 'Heads up, I can't lock the front door because it's currently open. Please close the front door.'
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.front_door_open
+      
+back_door_open:
+  sequence:
+    - service: tts.google_say
+      entity_id:
+        - media_player.party_mode
+        - media_player.google_home_2
+      message: 'Heads up, I can't lock the back door because it's currently open. Please close the back door.'
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.back_door_open
+      
+both_doors_open:
+  sequence:
+    - service: tts.google_say
+      entity_id:
+        - media_player.party_mode
+        - media_player.google_home_2
+      message: 'Heads up, I can't lock the doors because they're currently open. Please close both doors.'
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.both_doors_open
