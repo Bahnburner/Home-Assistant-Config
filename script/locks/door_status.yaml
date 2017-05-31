@@ -18,7 +18,8 @@ front_door_open:
       entity_id:
         - media_player.downstairs
         - media_player.google_home_2
-      message: 'Heads up, I can't lock the front door because it's currently open. Please close the front door.'
+      data:
+        message: 'Heads up, I can't lock the front door because it's currently open. Please close the front door.'
     - service: switch.turn_on
       entity_id: switch.door_rear
     - service: input_boolean.turn_on
@@ -30,7 +31,8 @@ back_door_open:
       entity_id:
         - media_player.downstairs
         - media_player.google_home_2
-      message: 'Heads up, I can't lock the back door because it's currently open. Please close the back door.'
+      data:
+        message: 'Heads up, I can't lock the back door because it's currently open. Please close the back door.'
     - service: switch.turn_on
       entity_id: switch.door_front
     - service: input_boolean.turn_on
@@ -42,7 +44,8 @@ both_doors_open:
       entity_id:
         - media_player.downstairs
         - media_player.google_home_2
-      message: 'Heads up, I can't lock the doors because they're currently open. Please close both doors.'
+      data:
+        message: 'Heads up, I can't lock the doors because they're currently open. Please close both doors.'
     - service: input_boolean.turn_on
       entity_id:
         - input_boolean.front_door_open
