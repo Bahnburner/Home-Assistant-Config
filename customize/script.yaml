@@ -96,3 +96,11 @@ script.fan_on:
   hidden: true
 script.update_hass:
   hidden: true
+script.door_status_check:
+  hidden: true
+script.front_door_open:
+  hidden: true
+script.back_door_open:
+  hidden: true
+script.both_doors_open:
+  hidden: true
