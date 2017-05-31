@@ -1,7 +1,7 @@
 door_status_check:
   sequence:
     service: script.turn_on
-      data_template:
+    data_template:
       entity_id: >
             {% if states.sensor.front_door.state == "Closed" and states.sensor.back_door.state == "Closed" %}
               script.lock_doors
