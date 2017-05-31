@@ -1,6 +1,6 @@
 goodnight:
   sequence:
-    - service: script.lock_doors
+    - service: script.door_status_check
     - service: cover.close_cover
       entity_id: cover.garage_door_opener
     - service: remote.turn_off
