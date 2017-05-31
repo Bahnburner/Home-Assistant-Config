@@ -56,6 +56,8 @@ light.kitchen_hallway:
   hidden: true
 light.master_bedroom:
   hidden: true
+light.stairway:
+  hidden: true
 light.stairway_2:
   hidden: true
 light.hgrp0000132096:
