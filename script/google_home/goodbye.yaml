@@ -8,7 +8,7 @@ goodbye:
         entity_id: cover.garage_door_opener
     - service: remote.turn_off
       entity_id: remote.living_room
-    - service: script.lock_doors
+    - service: script.door_status_check
     - service: media_player.turn_off
       entity_id: 
         - media_player.google_home
