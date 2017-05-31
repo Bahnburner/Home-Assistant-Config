@@ -1,4 +1,4 @@
-status_check:
+door_status_check:
   sequence:
     service: >
             {% if states.sensor.front_door.state == "Closed" and states.sensor.back_door.state == "Closed" %}
