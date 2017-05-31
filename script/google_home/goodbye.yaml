@@ -4,8 +4,7 @@ goodbye:
       entity_id: group.family
       state: 'home'
     - service: cover.open_cover
-      data:
-        entity_id: cover.garage_door_opener
+      entity_id: cover.garage_door_opener
     - service: remote.turn_off
       entity_id: remote.living_room
     - service: script.door_status_check
