@@ -4,3 +4,10 @@ input_boolean.fan_check:
   hidden: true
 input_boolean.wan_down:
   hidden: true
+input_boolean.front_door_open:
+  hidden: true
+input_boolean.back_door_open:
+  hidden: true
+input_boolean.both_doors_open:
+  hidden: true
+  
