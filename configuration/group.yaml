@@ -119,6 +119,9 @@ routines:
   - automation.kitchen_uplighting__weekdays
   - automation.windows_open
   - automation.windows_closed
+  - automation.lock_on_close__front_door
+  - automation.lock_on_close__back_door
+  - automation.input_boolean_off
   - automation.simulate_presence_1
   - automation.simulate_presence_2
   - automation.simulate_presence_3
