@@ -1,3 +1,13 @@
+- platform: wunderground
+  api_key: 1e3e716e93f82a3c
+  monitored_conditions:
+    - alerts
+    - feelslike_f
+    - temp_f
+    - temperature_string
+    - weather
+    - wind_mph
+    - wind_gust_mph
 - platform: darksky
   api_key: !secret darksky
   monitored_conditions:
