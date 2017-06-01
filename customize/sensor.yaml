@@ -86,3 +86,5 @@ sensor.protect_up:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/nestprotect.png
 sensor.whitenoise:
   hidden: true
+sensor.pws_alerts:
+  hidden: true
