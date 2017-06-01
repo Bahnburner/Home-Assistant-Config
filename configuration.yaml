@@ -17,6 +17,11 @@ history:
     - updater
     - input_select
 logbook:
+  exclude:
+  domains:
+    - group
+    - updater
+    - input_select
 recorder:
   db_url: postgres://@/hass
   purge_days: 7
