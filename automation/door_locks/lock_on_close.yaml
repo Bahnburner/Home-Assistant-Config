@@ -3,8 +3,8 @@
   trigger: 
     platform: state
     entity_id: sensor.front_door
-    from: 'open'
-    to: 'closed'
+    from: 'Open'
+    to: 'Closed'
   condition:
     condition: state
     entity_id: input_boolean.front_door_open
@@ -24,8 +24,8 @@
   trigger: 
     platform: state
     entity_id: sensor.back_door
-    from: 'open'
-    to: 'closed'
+    from: 'Open'
+    to: 'Closed'
   condition:
     condition: state
     entity_id: input_boolean.back_door_open
