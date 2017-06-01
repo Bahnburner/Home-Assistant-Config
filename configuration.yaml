@@ -11,6 +11,11 @@ config:
 discovery:
 frontend:
 history:
+  exclude:
+  domains:
+    - group
+    - updater
+    - input_select
 logbook:
 recorder:
   db_url: postgres://@/hass
