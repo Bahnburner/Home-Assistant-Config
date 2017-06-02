@@ -110,7 +110,7 @@
     - condition: or
       conditions:
         - condition: state
-          entity_id: media_player.rasplex
+          entity_id: sensor.current_activity
           state: 'Watch Plex'
         - condition: state
           entity_id: sensor.current_activity
