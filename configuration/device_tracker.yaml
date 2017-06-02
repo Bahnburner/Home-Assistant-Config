@@ -1,5 +1,6 @@
 - platform: bluetooth_tracker
   track_new_devices: true
+- platform: bluetooth_le_tracker
 - platform: asuswrt
   host: 10.0.0.1
   protocol: telnet
