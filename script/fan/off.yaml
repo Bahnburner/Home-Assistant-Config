@@ -4,9 +4,9 @@ fan_off:
       entity_id: light.fan
       state: 'on'
     - service: input_boolean.turn_on
+      entity_id: input_boolean.fan_check
       data_template:
         speed: >
           {{states.light.fan.attributes.brightness}}
-      entity_id: input_boolean.fan_check
     - service: light.turn_off
       entity_id: light.fan
