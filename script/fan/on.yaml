@@ -7,6 +7,3 @@ fan_on:
       entity_id: input_boolean.fan_check
     - service: light.turn_on
       entity_id: light.fan
-      data_template:
-        brightness: >
-          {{states.input_boolean.fan_check.attributes.speed}}
