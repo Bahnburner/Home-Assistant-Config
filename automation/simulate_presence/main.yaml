@@ -16,7 +16,7 @@
   hide_entity: True
   trigger:
     platform: time
-    after: '19:00:00'
+    at: '19:00:00'
   action:
     service: light.turn_on
     entity_id:
@@ -27,7 +27,7 @@
   hide_entity: True
   trigger:
     platform: time
-    after: '19:45:00'
+    at: '19:45:00'
   action:
     - service: light.turn_on
       entity_id: light.chandelier
@@ -40,7 +40,7 @@
   hide_entity: True
   trigger:
     platform: time
-    after: '20:30:00'
+    at: '20:30:00'
   action:
     - service: light.turn_off
       entity_id: 
@@ -60,7 +60,7 @@
   hide_entity: True
   trigger:
     platform: time
-    after: '22:30:00'
+    at: '22:30:00'
   action:
     service: light.turn_on
     entity_id: light.master_bedroom
@@ -73,7 +73,7 @@
   hide_entity: True
   trigger:
     platform: time
-    after: '23:45:00'
+    at: '23:45:00'
   action:
     - service: light.turn_off
       entity_id: light.living_room
@@ -84,7 +84,7 @@
   hide_entity: True
   trigger:
     platform: time
-    after: '00:15:00'
+    at: '00:15:00'
   action:
     - service: light.turn_off
       entity_id: light.master_bedroom
