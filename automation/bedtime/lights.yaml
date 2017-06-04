@@ -2,7 +2,7 @@
   hide_entity: True
   trigger:
     platform: time
-    after: '22:15:00'
+    at: '22:15:00'
   condition:
     - condition: state
       entity_id: group.family
