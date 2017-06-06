@@ -5,6 +5,7 @@ family:
   - device_tracker.matts_phone
   - device_tracker.taylors_phone
   - device_tracker.donnas_phone
+  - device_tracker.stephens_phone
 christmas:
   switch.christmas_lights
 door_locks:
