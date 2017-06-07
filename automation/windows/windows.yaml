@@ -5,6 +5,8 @@
     entity_id: group.windows
     from: 'closed'
     to: 'open'
+    for:
+      minutes: 5
   condition: 
     condition: state
     entity_id: group.family
