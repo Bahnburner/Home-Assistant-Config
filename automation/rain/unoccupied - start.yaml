@@ -3,10 +3,10 @@
   trigger:
     - platform: state
       entity_id: sensor.dark_sky_icon
-      state: 'rain'
+      to: 'rain'
     - platform: state
       entity_id: sun.sun
-      state: 'above_horizon'
+      to: 'above_horizon'
   condition:
     - condition: state
       entity_id: sun.sun
