@@ -3,7 +3,7 @@
   trigger:
     platform: state
     entity_id: cover.garage_door_opener
-    state: 'open'
+    to: 'open'
     for:
       minutes: 10
   condition:
