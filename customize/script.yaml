@@ -104,3 +104,5 @@ script.back_door_open:
   hidden: true
 script.both_doors_open:
   hidden: true
+script.nest_hot_start:
+  hidden: true
