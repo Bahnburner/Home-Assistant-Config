@@ -1,0 +1,15 @@
+nest_hot_start:
+  sequence:
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+    - condition: time
+      after: '04:00:00'
+    - service: climate.set_away_mode
+      entity_id: climate.downstairs
+      data:
+        away_mode: false
