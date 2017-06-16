@@ -22,3 +22,7 @@ whitenoise:
           {% else %}
             http://10.0.0.101/storage/whitenoise1.mp3
           {% endif %}
+    - service: media_player.volume_set
+      entity_id: media_player.bedroom
+      data: 
+        volume_level: 0.08
