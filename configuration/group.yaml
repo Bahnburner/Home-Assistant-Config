@@ -42,9 +42,9 @@ kitchen:
   control: hidden
   entities:
     - light.overhead_light
+    - light.chandelier
     - light.recessed_lights
     - light.cabinet_lights
-    - light.chandelier
     - light.pantry
 dining_room:
   - light.dining_room
