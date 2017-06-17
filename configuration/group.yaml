@@ -44,8 +44,8 @@ kitchen:
     - light.overhead_light
     - light.chandelier
     - light.recessed_lights
-    - light.cabinet_lights
     - light.pantry
+    - light.cabinet_lights
 dining_room:
   - light.dining_room
 foyer:
