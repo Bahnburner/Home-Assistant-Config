@@ -1,5 +1,8 @@
-family:
+tristans_phone:
   - device_tracker.tristans_phone
+  - device_tracker.tristans_phone_bt
+family:
+  - group.tristans_phone
   - device_tracker.crystals_phone
   - device_tracker.erins_phone
   - device_tracker.matts_phone
