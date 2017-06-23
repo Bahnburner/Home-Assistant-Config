@@ -1,4 +1,6 @@
-device_tracker.tristans_phone:
+device_tracker.tristans_phone_wifi:
   hidden: true
 device_tracker.tristans_phone_bt:
+  hidden: true
+device_tracker.crystals_phone_wifi:
   hidden: true
