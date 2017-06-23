@@ -1,0 +1,12 @@
+- alias: Simulate Presence 8
+  hide_entity: True
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    - delay: 
+        seconds: 60
+    - condition: state
+      entity_id: input_boolean.wan_down
+      to: 'on'
+    - service: shell_command.reboot_now
