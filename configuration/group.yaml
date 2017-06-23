@@ -1,9 +1,11 @@
 tristans_phone:
-  - device_tracker.tristans_phone
+  - device_tracker.tristans_phone_wifi
   - device_tracker.tristans_phone_bt
+crystals_phone:
+  - device_tracker.crystals_phone_wifi
 family:
   - group.tristans_phone
-  - device_tracker.crystals_phone
+  - group.crystals_phone
   - device_tracker.erins_phone
   - device_tracker.matts_phone
   - device_tracker.taylors_phone
