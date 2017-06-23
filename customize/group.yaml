@@ -46,3 +46,6 @@ group.alarm_zones:
   friendly_name: "Alarm Zones"
 group.windows:
   hidden: true
+group.tristans_phone:
+  friendly_name: 'Tristan'
+  entity_picture: http://graph.facebook.com/293900462/picture?type=large
