@@ -28,6 +28,6 @@
       for:
         minutes: 20
   action:
-    - service: shell_command.wan_down
+    - service: shell_command.reboot_router
     - service: input_boolean.turn_off
       entity_id: input_boolean.wan_down
