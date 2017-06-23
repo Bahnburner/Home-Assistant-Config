@@ -11,6 +11,9 @@ family:
   - device_tracker.taylors_phone
   - device_tracker.donnas_phone
   - device_tracker.stephens_phone
+tristal:
+  - group.tristans_phone
+  - group.crystals_phone
 christmas:
   switch.christmas_lights
 door_locks:
@@ -59,9 +62,6 @@ stairway:
   - light.stairway
 exterior:
   - light.front_door
-tristal:
-  - device_tracker.tristans_phone
-  - device_tracker.crystals_phone
 chromecasts:
   - media_player.livingroom
   - media_player.guestroom
