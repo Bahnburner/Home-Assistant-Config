@@ -8,7 +8,7 @@
         - binary_sensor.bedroom_windows
         - binary_sensor.front_door
         - binary_sensor.garage_door
-      state: 'on'
+      to: 'on'
   condition:
     - condition: state
       entity_id: group.family
