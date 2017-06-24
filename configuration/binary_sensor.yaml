@@ -1,5 +1,5 @@
 - platform: rpi_gpio
-  sensor_class: opening
+  device_class: opening
   ports:
     22: Front Door
     6: Front Windows
@@ -24,7 +24,7 @@
 - platform: command_line
   command: 'ping -c 1 8.8.8.8 | grep "1 received" | wc -l'
   name: 'wan_up'
-  sensor_class: connectivity
+  device_class: connectivity
   payload_on: 1
   payload_off: 0
   scan_interval: 60
