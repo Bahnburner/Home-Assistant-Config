@@ -37,17 +37,14 @@ light.foyer_left:
 light.foyer_right:
   hidden: true
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
-light.master_hallway:
-  hidden: false
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.recessed_lights:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/smartthings.png
 light.overhead_light:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/smartthings.png
 light.chandelier:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/smartthings.png
 light.fan:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/fan.png
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/smartthings.png
 light.exterior_front:
   hidden: true
 light.kitchen:
