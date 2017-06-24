@@ -16,12 +16,20 @@ history:
       - group
       - updater
       - input_select
+  include:
+    entities: 
+      - group.tristans_phone
+      - group.crystals_phone
 logbook:
   exclude:
     domains:
       - group
       - updater
       - input_select
+  include:
+    entities: 
+      - group.tristans_phone
+      - group.crystals_phone
 recorder:
   db_url: postgres://@/hass
   purge_days: 7
@@ -30,6 +38,10 @@ recorder:
       - group
       - updater
       - input_select
+  include:
+    entities: 
+      - group.tristans_phone
+      - group.crystals_phone
 sun:
 updater:
 
