@@ -169,7 +169,7 @@ windows:
     - sensor.back_windows
     - sensor.bedroom_windows
 settings:
-  icon: mdi: settings
+  icon: mdi:settings
   view: yes
     entities: 
       - group.override
