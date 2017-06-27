@@ -29,6 +29,7 @@ group.weather:
   friendly_name: 'Weather'
 group.override:
   friendly_name: 'Administration'
+  hidden: true
 group.tristal:
   hidden: true
 group.living_room_lights:
