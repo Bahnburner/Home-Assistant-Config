@@ -171,5 +171,5 @@ windows:
 settings:
   icon: mdi:settings
   view: yes
-    entities: 
-      - group.override
+  entities:
+    - group.override
