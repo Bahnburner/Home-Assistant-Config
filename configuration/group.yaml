@@ -77,7 +77,6 @@ weather:
 override:
   control: hidden
   entities:
-    - updater.updater
     - input_boolean.disable_alarm
     - switch.vacation_mode
     - group.simulate_presence
@@ -169,3 +168,8 @@ windows:
     - sensor.front_windows
     - sensor.back_windows
     - sensor.bedroom_windows
+settings:
+  icon: mdi: settings
+  view: yes
+    entities: 
+    - group.override
