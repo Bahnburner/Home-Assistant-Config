@@ -107,7 +107,7 @@
 - platform: command_line
   name: CPU Temperature
   command: "cat /sys/class/thermal/thermal_zone0/temp"
-#  value_template: '{{ value | multiply(0.0018) | round(1) +32 }}'
+  value_template: '{{ value | multiply(0.0018) | round(1) +32 }}'
   unit_of_measurement: "°F"
 - platform: systemmonitor
   resources:
