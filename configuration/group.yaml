@@ -211,6 +211,6 @@ devices:
   - sensor.directv_genie
 system_monitor:
   - sensor.cpu_use
-  - sensor.cpu_temp
+  - sensor.cpu_temperature
   - sensor.disk_use_
   - sensor.ram_use
