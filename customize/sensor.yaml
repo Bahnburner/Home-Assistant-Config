@@ -97,18 +97,18 @@ sensor.harmonyhub:
 sensor.smartthingshub:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/smartthings.png
 sensor.macmini:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/harmony.png
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/plex.png
 sensor.myq:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/myq.png
 sensor.google_home:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/tree.png
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/cast.png
 sensor.viziocrave360:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/tree.png
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/cast.png
 sensor.chromecast:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/tree.png
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/cast.png
 sensor.chromecast_audio:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/tree.png
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/cast.png
 sensor.directvgenie:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/tree.png
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/directv.png
 sensor.rasplex:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/tree.png
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/plex.png
