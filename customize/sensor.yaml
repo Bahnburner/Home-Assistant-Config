@@ -88,3 +88,27 @@ sensor.whitenoise:
   hidden: true
 sensor.pws_alerts:
   hidden: true
+sensor.huebridge:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+sensor.kevobridge:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/kevo.png
+sensor.harmonyhub:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/harmony.png
+sensor.smarthingshub:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/smarthings.png
+sensor.macmini:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/harmony.png
+sensor.myq:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/myq.png
+sensor.google_home:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/tree.png
+sensor.viziocrave360:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/tree.png
+sensor.chromecast:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/tree.png
+sensor.chromecast_audio:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/tree.png
+sensor.directvgenie:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/tree.png
+sensor.rasplex:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/tree.png
