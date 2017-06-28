@@ -6,3 +6,27 @@ device_tracker.crystals_phone_wifi:
   hidden: true
 device_tracker.crystals_phone_bt:
   hidden: true
+device_tracker.chromecast:
+  hidden: true
+device_tracker.chromecast_audio:
+  hidden: true
+device_tracker.directv_genie:
+  hidden: true
+device_tracker.google_home:
+  hidden: true
+device_tracker.harmonyhub:
+  hidden: true
+device_tracker.kevobridge:
+  hidden: true
+device_tracker.macmini:
+  hidden: true
+device_tracker.myq:
+  hidden: true
+device_tracker.philipshue:
+  hidden: true
+device_tracker.rasplex:
+  hidden: true
+device_tracker.smarthingshub:
+  hidden: true
+device_tracker.viziocrave360:
+  hidden: true
