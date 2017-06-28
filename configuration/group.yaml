@@ -24,6 +24,7 @@ settings:
   icon: mdi:settings
   entities:
     - group.override
+    - group.system_monitor
     - group.devices
 tristans_phone:
   - device_tracker.tristans_phone_wifi
@@ -208,4 +209,8 @@ devices:
   - sensor.chromecast
   - sensor.chromecast_audio
   - sensor.directv_genie
-
+system_monitor:
+  - sensor.cpu_use
+  - sensor.cpu_temp
+  - sensor.disk_use_
+  - sensor.ram_use
