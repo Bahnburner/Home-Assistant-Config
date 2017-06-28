@@ -84,7 +84,6 @@
       friendly_name: 'Mac Mini'
     directv_genie:
       value_template: '{% if is_state("device_tracker.directv_genie", "home") %}Online{% else %}Offline{% endif %}'
-      icon: http://wreckage.johndenverschoolofflight.com/hass/tree.png
       friendly_name: 'DirecTv Genie'
     google_home:
       value_template: '{% if is_state("device_tracker.google_home", "home") %}Online{% else %}Offline{% endif %}'
