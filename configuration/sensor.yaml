@@ -74,7 +74,7 @@
       value_template: '{% if is_state("device_tracker.kevobridge", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Kevo Bridge'
     smarthingshub:
-      value_template: '{% if is_state("device_tracker.smartthingshub", "home") %}Online{% else %}Offline{% endif %}'
+      value_template: '{% if is_state("device_tracker.smarthingshub", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'SmarThings Hub'
     myq:
       value_template: '{% if is_state("device_tracker.myq", "home") %}Online{% else %}Offline{% endif %}'
