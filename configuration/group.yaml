@@ -200,11 +200,12 @@ devices:
   - sensor.kevobridge
   - sensor.harmonyhub
   - sensor.smarthingshub
-  - sensor.macmini
   - sensor.myq
+  - sensor.macmini
+  - sensor.rasplex
   - sensor.google_home
   - sensor.viziocrave360
   - sensor.chromecast
   - sensor.chromecast_audio
   - sensor.directv_genie
-  - sensor.rasplex
+
