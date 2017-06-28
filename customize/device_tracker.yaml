@@ -26,7 +26,7 @@ device_tracker.huebridge:
   hidden: true
 device_tracker.rasplex:
   hidden: true
-device_tracker.smarthingshub:
+device_tracker.smartthingshub:
   hidden: true
 device_tracker.viziocrave360:
   hidden: true
