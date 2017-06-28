@@ -19,6 +19,16 @@ default_view:
     - group.master_bedroom
     - group.upstairs
     - group.foyer
+lights:
+  view: yes
+  icon: mdi:lightbulb
+  entities:
+    - group.living_room_lights
+    - group.master_bedroom
+    - group.foyer
+    - group.exterior
+    - group.dining_room
+    - group.kitchen
 settings:
   view: yes
   icon: mdi:settings
