@@ -108,7 +108,7 @@ sensor.chromecast:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/cast.png
 sensor.chromecast_audio:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/cast.png
-sensor.directvgenie:
+sensor.directv_genie:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/directv.png
 sensor.rasplex:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/plex.png
