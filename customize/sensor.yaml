@@ -20,7 +20,7 @@ sensor.dark_sky_daily_low_temperature:
   friendly_name: 'Low'
 sensor.dark_sky_precip:
   friendly_name: 'Precipitation Type'
-snesor.dark_sky_precip_type:
+sensor.dark_sky_precip_type:
   hidden: true
 sensor.downstairs_temperature:
   friendly_name: 'Downstairs Temperature'
@@ -94,8 +94,8 @@ sensor.kevobridge:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/kevo.png
 sensor.harmonyhub:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/harmony.png
-sensor.smarthingshub:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/smarthings.png
+sensor.smartthingshub:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/smartthings.png
 sensor.macmini:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/harmony.png
 sensor.myq:
