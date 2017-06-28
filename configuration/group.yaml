@@ -1,3 +1,30 @@
+default_view:
+  view: yes
+  icon: mdi:home
+  entities: 
+    - group.family
+    - group.door_locks
+    - group.garage
+    - group.exterior
+    - group.alarm_zones
+    - group.living_room
+    - group.dining_room
+    - group.weather
+    - group.living_room_home
+    - group.kitchen
+    - media_player.party_mode
+    - media_player.downstairs
+    - media_player.kitchen
+    - media_player.bedroom
+    - group.master_bedroom
+    - group.upstairs
+    - group.foyer
+settings:
+  view: yes
+  icon: mdi:settings
+  entities:
+    - group.override
+    - group.devices
 tristans_phone:
   - device_tracker.tristans_phone_wifi
   - device_tracker.tristans_phone_bt
@@ -158,14 +185,26 @@ shell_commands:
   - shell_command.lock_doors
   - shell_command.unlock_doors
 alarm_zones:
-    - sensor.front_door
-    - sensor.front_windows
-    - sensor.garage_door
-    - sensor.back_door
-    - sensor.back_windows
-    - sensor.bedroom_windows
+  - sensor.front_door
+  - sensor.front_windows
+  - sensor.garage_door
+  - sensor.back_door
+  - sensor.back_windows
+  - sensor.bedroom_windows
 windows:
-    - sensor.front_windows
-    - sensor.back_windows
-    - sensor.bedroom_windows
-
+  - sensor.front_windows
+  - sensor.back_windows
+  - sensor.bedroom_windows
+devices:
+  - sensor.huebridge
+  - sensor.kevobridge
+  - sensor.harmonyhub
+  - sensor.smarthingshub
+  - sensor.macmini
+  - sensor.myq
+  - sensor.google_home
+  - sensor.viziocrave360
+  - sensor.chromecast
+  - sensor.chromecast_audio
+  - sensor.directv_genie
+  - sensor.rasplex
