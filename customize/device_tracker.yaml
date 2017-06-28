@@ -22,7 +22,7 @@ device_tracker.macmini:
   hidden: true
 device_tracker.myq:
   hidden: true
-device_tracker.philipshue:
+device_tracker.huebridge:
   hidden: true
 device_tracker.rasplex:
   hidden: true
