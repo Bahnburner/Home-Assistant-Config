@@ -66,27 +66,21 @@
       icon_template: '{% if is_state("binary_sensor.bedroom_windows", "off") %}mdi:window-closed{% else %}mdi:window-open{% endif %}'
     huebridge:
       value_template: '{% if is_state("device_tracker.huebridge", "home") %}Online{% else %}Offline{% endif %}'
-      icon: http://wreckage.johndenverschoolofflight.com/hass/hue.png
       friendly_name: 'Hue Bridge'
     harmonyhub:
       value_template: '{% if is_state("device_tracker.harmonyhub", "home") %}Online{% else %}Offline{% endif %}'
-      icon: http://wreckage.johndenverschoolofflight.com/hass/harmony.png
       friendly_name: 'Harmony Hub'
     kevobridge:
       value_template: '{% if is_state("device_tracker.kevobridge", "home") %}Online{% else %}Offline{% endif %}'
-      icon: http://wreckage.johndenverschoolofflight.com/hass/kevo.png
       friendly_name: 'Kevo Bridge'
     smarthingshub:
       value_template: '{% if is_state("device_tracker.smartthingshub", "home") %}Online{% else %}Offline{% endif %}'
-      icon: http://wreckage.johndenverschoolofflight.com/hass/smarthings.png
       friendly_name: 'SmarThings Hub'
     myq:
       value_template: '{% if is_state("device_tracker.myq", "home") %}Online{% else %}Offline{% endif %}'
-      icon: http://wreckage.johndenverschoolofflight.com/hass/MyQ.png
       friendly_name: 'MyQ Bridge'
     macmini:
       value_template: '{% if is_state("device_tracker.macmini", "home") %}Online{% else %}Offline{% endif %}'
-      icon: http://wreckage.johndenverschoolofflight.com/hass/tree.png
       friendly_name: 'Mac Mini'
     directv_genie:
       value_template: '{% if is_state("device_tracker.directv_genie", "home") %}Online{% else %}Offline{% endif %}'
@@ -94,23 +88,18 @@
       friendly_name: 'DirecTv Genie'
     google_home:
       value_template: '{% if is_state("device_tracker.google_home", "home") %}Online{% else %}Offline{% endif %}'
-      icon: http://wreckage.johndenverschoolofflight.com/hass/tree.png
       friendly_name: 'Google Home' 
     chromecast:
       value_template: '{% if is_state("device_tracker.chromecast", "home") %}Online{% else %}Offline{% endif %}'
-      icon: http://wreckage.johndenverschoolofflight.com/hass/tree.png
       friendly_name: 'Chromecast'
     chromecast_audio:
       value_template: '{% if is_state("device_tracker.chromecast_audio", "home") %}Online{% else %}Offline{% endif %}'
-      icon: http://wreckage.johndenverschoolofflight.com/hass/tree.png
       friendly_name: 'Chromecast Audio'  
     viziocrave360:
       value_template: '{% if is_state("device_tracker.viziocrave360", "home") %}Online{% else %}Offline{% endif %}'
-      icon: http://wreckage.johndenverschoolofflight.com/hass/tree.png
       friendly_name: 'Vizio Crave 360' 
     rasplex:
       value_template: '{% if is_state("device_tracker.rasplex", "home") %}Online{% else %}Offline{% endif %}'
-      icon: http://wreckage.johndenverschoolofflight.com/hass/tree.png
       friendly_name: 'RasPlex'
 - platform: random
   name: whitenoise
