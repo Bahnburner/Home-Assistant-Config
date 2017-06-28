@@ -33,6 +33,7 @@ group.tristal:
   hidden: true
 group.living_room_lights:
   hidden: false
+  friendly_name: 'Living Room'
 group.master_bedroom_lights:
   hidden: true
 group.inputs:
