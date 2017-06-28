@@ -115,3 +115,12 @@
       arg: /
     - type: memory_use_percent
     - type: processor_use
+sensor:
+  - platform: speedtest
+    minute:
+      - 6
+      - 00
+    monitored_conditions:
+      - ping
+      - download
+      - upload
