@@ -106,6 +106,8 @@
   maximum: 3
 - platform: command_line
   name: CPU Temperature
+  scan_interval:
+    seconds: 10
   command: "cat /sys/class/thermal/thermal_zone0/temp"
   value_template: '{{ value | multiply(0.0018) | round(1) +32 }}'
   unit_of_measurement: "°F"
