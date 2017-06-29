@@ -46,6 +46,7 @@ settings:
   icon: mdi:settings
   name: Settings
   entities:
+    - updater.updater
     - group.override
     - group.system_monitor
     - group.devices
