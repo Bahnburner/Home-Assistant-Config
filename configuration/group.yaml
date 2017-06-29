@@ -219,7 +219,7 @@ devices:
   - sensor.huebridge
   - sensor.kevobridge
   - sensor.harmonyhub
-  - sensor.smarthingshub
+  - sensor.smartthingshub
   - sensor.myq
   - sensor.macmini
   - sensor.rasplex
