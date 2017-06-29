@@ -11,7 +11,6 @@ default_view:
     - group.alarm_zones
     - group.living_room
     - group.dining_room
-
     - group.living_room_home
     - group.kitchen
     - group.master_bedroom
@@ -36,6 +35,9 @@ media:
     - media_player.downstairs
     - media_player.kitchen
     - media_player.bedroom
+    - media_player.livingroom
+    - media_player.directv_rid023856045325
+    - media_player.guestroom
 settings:
   view: yes
   icon: mdi:settings
