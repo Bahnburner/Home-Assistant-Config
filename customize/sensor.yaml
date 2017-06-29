@@ -101,7 +101,7 @@ sensor.macmini:
 sensor.myq:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/myq.png
 sensor.google_home:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/cast.png
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/googlehome.png
 sensor.viziocrave360:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/cast.png
 sensor.chromecast:
