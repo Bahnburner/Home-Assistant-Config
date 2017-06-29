@@ -5,12 +5,13 @@ default_view:
     - group.family
     - group.door_locks
     - group.garage
+    - group.weather
     - group.exterior
     - group.foyer
     - group.alarm_zones
     - group.living_room
     - group.dining_room
-    - group.weather
+
     - group.living_room_home
     - group.kitchen
     - group.master_bedroom
