@@ -21,15 +21,20 @@
       entity_id: sensor.dark_sky_icon
       state: 'rain'
   action:
-    service: light.turn_on
-    entity_id: light.living_room
-    data:
-      brightness: 150
-      transition: 60
-    data_template:
-      color_temp: >
-        {% if (states.sensor.time.state | round(2)) <= 09.50 %}
-          250
-        {% else %}
-          366
-        {% endif %}
+    - service: light.turn_on
+      entity: light.front_door
+      data: 
+        brightness: 254
+        transition: 60
+    - service: light.turn_on
+      entity_id: light.living_room
+      data:
+        brightness: 150
+        transition: 60
+      data_template:
+        color_temp: >
+          {% if (states.sensor.time.state | round(2)) <= 09.50 %}
+            250
+          {% else %}
+            366
+          {% endif %}
