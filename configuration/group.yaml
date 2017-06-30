@@ -130,7 +130,6 @@ override:
   control: hidden
   entities:
     - input_boolean.disable_alarm
-    - switch.vacation_mode
     - group.simulate_presence
     - switch.routines
 routines:
@@ -182,7 +181,6 @@ routines:
  - automation.simulate_presence_5
  - automation.simulate_presence_6
  - automation.simulate_presence_7
- - automation.simulate_presence_8
  - automation.sunrise__unoccupied
  - automation.sunset__occupied
  - automation.sunset__unoccupied
@@ -202,7 +200,6 @@ simulate_presence:
   - automation.simulate_presence_5
   - automation.simulate_presence_6
   - automation.simulate_presence_7
-  - automation.simulate_presence_8
 shell_commands:
   - shell_command.lock_doors
   - shell_command.unlock_doors
