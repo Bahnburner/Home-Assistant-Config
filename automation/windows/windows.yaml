@@ -17,7 +17,7 @@
     data:
       operation_mode: 'eco'
  
-- alias: Windows Open
+- alias: Windows Closed
   hide_entity: True
   trigger:
     platform: state
