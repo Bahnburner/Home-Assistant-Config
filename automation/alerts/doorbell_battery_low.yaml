@@ -1,7 +1,7 @@
 - alias: Doorbell Battery Low
   hide_entity: True
   trigger:
-    - platform: state
+    - platform: numeric_state
       entity_id: sensor.doorbell_battery
       below: 15
   action:
