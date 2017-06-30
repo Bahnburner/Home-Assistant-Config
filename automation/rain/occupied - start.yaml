@@ -22,7 +22,7 @@
       state: 'rain'
   action:
     - service: light.turn_on
-      entity: light.front_door
+      entity_id: light.front_door
       data: 
         brightness: 254
         transition: 60
