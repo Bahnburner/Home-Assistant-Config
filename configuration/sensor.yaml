@@ -119,4 +119,8 @@
       arg: /
     - type: memory_use_percent
     - type: processor_use
-  
+- platform: mqtt
+  state_topic: "smartthings/Front Door/battery"
+  name: "Battery Tablet"
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.value }}'
