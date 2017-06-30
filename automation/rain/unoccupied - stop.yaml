@@ -4,8 +4,6 @@
     - platform: state
       entity_id: sensor.dark_sky_icon
       from: 'rain'
-      for: 
-        minutes: 20
   condition:
     - condition: numeric_state
       entity_id: sun.sun
