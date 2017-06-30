@@ -8,7 +8,6 @@ default_view:
     - group.garage
     - group.weather
     - group.exterior
-    - group.foyer
     - group.alarm_zones
     - group.living_room
     - group.dining_room
@@ -16,6 +15,7 @@ default_view:
     - group.kitchen
     - group.master_bedroom
     - group.upstairs
+    - group.foyer
 lights:
   view: yes
   icon: mdi:lightbulb
