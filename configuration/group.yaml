@@ -233,6 +233,7 @@ devices:
   - sensor.chromecast
   - sensor.chromecast_audio
   - sensor.directv_genie
+  - sensor.doorbell_battery
 system_monitor:
   - sensor.cpu_use
   - sensor.cpu_temperature
