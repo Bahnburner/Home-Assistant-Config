@@ -3,7 +3,7 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.rain
-      to: true
+      to: 'on'
     - platform: state
       entity_id: sun.sun
       to: 'above_horizon'
@@ -19,7 +19,7 @@
       state: 'not_home'
     - condition: state
       entity_id: binary_sensor.rain
-      state: true
+      state: 'on'
   action:
     - service: light.turn_on
       entity_id: light.front_door
