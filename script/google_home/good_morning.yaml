@@ -25,9 +25,9 @@ good_morning:
           {% elif states.sensor.pws_precip_1d.state | int >= 50 %}
             Don't forget your umbrella. There is a {{ states.sensor.pws_precip_1d.state}} percent chance of rain today.
           {% endif %}
-          {% if now().strftime("%H")| int < 11 and now().strftime("%w")| int > 0 and now().strftime("%w")| int < 6 %}  
-            Your drive to work should take approximately {{states.sensor.drive_time_to_work.state | round (0)}} minutes.
-          {% endif %}
+#          {% if now().strftime("%H")| int < 11 and now().strftime("%w")| int > 0 and now().strftime("%w")| int < 6 %}  
+#            Your drive to work should take approximately {{states.sensor.drive_time_to_work.state | round (0)}} minutes.
+#          {% endif %}
     - service: light.turn_on
       entity_id: light.recessed_lights
       data:
