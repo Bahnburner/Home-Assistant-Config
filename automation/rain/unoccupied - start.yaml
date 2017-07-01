@@ -2,8 +2,8 @@
   hide_entity: True
   trigger:
     - platform: state
-      entity_id: sensor.dark_sky_icon
-      to: 'rain'
+      entity_id: binary_sensor.rain
+      to: true
     - platform: state
       entity_id: sun.sun
       to: 'above_horizon'
@@ -18,8 +18,8 @@
       entity_id: group.family
       state: 'not_home'
     - condition: state
-      entity_id: sensor.dark_sky_icon
-      state: 'rain'
+      entity_id: binary_sensor.rain
+      state: true
   action:
     - service: light.turn_on
       entity_id: light.front_door
