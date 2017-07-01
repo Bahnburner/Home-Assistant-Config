@@ -2,6 +2,8 @@
   api_key: 1e3e716e93f82a3c
   monitored_conditions:
     - alerts
+    - weather_1d
+    - precip_1d
 - platform: darksky
   api_key: !secret darksky
   monitored_conditions:
