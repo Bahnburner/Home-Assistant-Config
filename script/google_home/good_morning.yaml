@@ -65,4 +65,4 @@ good_morning:
       entity_id: remote.living_room
       data:
         device: 35163109
-        command: ['1', '3', 'OK']
+        command: ['1', '3', 'NumberEnter']
