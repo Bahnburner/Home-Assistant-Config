@@ -7,11 +7,11 @@ switch.routines:
 switch.door_front:
   icon: mdi:key-variant
   friendly_name: 'Front Door'
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/kevo.jpg  
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/kevo.png  
 switch.door_rear:
   icon: mdi:key-variant
   friendly_name: 'Back Door'
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/kevo.jpg
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/kevo.png
 switch.christmas_lights:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/tree.png
   hidden: true
