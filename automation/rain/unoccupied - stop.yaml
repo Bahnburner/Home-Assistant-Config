@@ -3,7 +3,7 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.rain
-      to: false
+      to: 'off'
       for:
         minutes: 20
   condition:
