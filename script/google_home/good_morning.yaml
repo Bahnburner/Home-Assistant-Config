@@ -19,7 +19,7 @@ good_morning:
           {% elif  (now().strftime("%H")) | int > 12 and (now().strftime("%H")) | int >= 18 and (now().strftime("%M")) | int == 0 %}
             Good Evening. The current time is {{ (now().strftime("%l")) }} O'Clock.
           {% endif %}
-            The current temperature is {{states.sensor.dark_sky_temperature.state | round(0)}} degrees and the weather forecast for today is {{ states.sensor.pws_weather_1d.state }}.
+            The current temperature is {{states.sensor.dark_sky_temperature.state | round(0)}} degrees.
           {% if states.sensor.dark_sky_daily_high_temperature.state | int <= 45%}
             Don't forget your coat. The high today is projected to be {{ states.sensor.dark_sky_daily_high_temperature.state}}
           {% elif states.sensor.pws_precip_1d.state | int >= 50 %}
