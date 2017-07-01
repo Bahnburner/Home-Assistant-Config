@@ -2,8 +2,10 @@
   hide_entity: True
   trigger:
     - platform: state
-      entity_id: sensor.dark_sky_icon
-      from: 'rain'
+      entity_id: binary_sensor.rain
+      to: false
+      for:
+        minutes: 20
   condition:
     - condition: numeric_state
       entity_id: sun.sun
