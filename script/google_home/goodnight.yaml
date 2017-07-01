@@ -1,5 +1,9 @@
 goodnight:
   sequence:
+    - service: climate.set_temperature
+      entity_id: climate.downstairs
+      data:
+        target_temp_high: 72
     - service: script.door_status_check
     - service: cover.close_cover
       entity_id: cover.garage_door_opener
