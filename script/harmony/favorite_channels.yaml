@@ -17,7 +17,7 @@ fox:
       data:
         activity: 19594181
     - delay:
-        seconds: 20
+        seconds: 15
     - service: remote.send_command
       entity_id: remote.living_room
       data:
@@ -35,17 +35,7 @@ comedycentral:
       entity_id: remote.living_room
       data:
         device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'Select'  
+        command: ['2', '4', '9', 'Select'] 
     - condition: template
       value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
@@ -53,22 +43,12 @@ comedycentral:
       data:
         activity: 19594181
     - delay:
-        seconds: 20
+        seconds: 15
     - service: remote.send_command
       entity_id: remote.living_room
       data:
         device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'Select' 
+        command: ['2', '4', '9', 'Select'] 
 
 cartoonnetwork:
   sequence:
@@ -81,17 +61,7 @@ cartoonnetwork:
       entity_id: remote.living_room
       data:
         device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionLeft'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'Select'  
+        command: ['2', '9', '6', 'Select']  
     - condition: template
       value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
@@ -99,22 +69,12 @@ cartoonnetwork:
       data:
         activity: 19594181
     - delay:
-        seconds: 20
+        seconds: 15
     - service: remote.send_command
       entity_id: remote.living_room
       data:
         device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionLeft'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'Select' 
+        command: ['2', '9', '6', 'Select'] 
 
 fxx:
   sequence:
@@ -127,17 +87,7 @@ fxx:
       entity_id: remote.living_room
       data:
         device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionRight'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'Select'  
+        command: ['2', '5', '9', 'Select']  
     - condition: template
       value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
@@ -145,22 +95,12 @@ fxx:
       data:
         activity: 19594181
     - delay:
-        seconds: 20
+        seconds: 15
     - service: remote.send_command
       entity_id: remote.living_room
       data:
         device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionRight'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'Select' 
+        command: ['2', '5', '9', 'Select']   
 
 nbc:
   sequence:
@@ -173,17 +113,7 @@ nbc:
       entity_id: remote.living_room
       data:
         device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionDown'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'Select'  
+        command: ['5', 'Select']   
     - condition: template
       value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
@@ -191,24 +121,13 @@ nbc:
       data:
         activity: 19594181
     - delay:
-        seconds: 20
-    - service: remote.send_command
+        seconds: 15
+     - service: remote.send_command
       entity_id: remote.living_room
       data:
         device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionDown'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'Select'
-
-
+        command: ['5', 'Select'] 
+        
 espn:
   sequence:
     - service: remote.send_command
@@ -220,22 +139,7 @@ espn:
       entity_id: remote.living_room
       data:
         device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionLeft'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'Select'  
+        command: ['2', '0', '6', 'Select'] 
     - condition: template
       value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
@@ -243,27 +147,12 @@ espn:
       data:
         activity: 19594181
     - delay:
-        seconds: 20
+        seconds: 15
     - service: remote.send_command
       entity_id: remote.living_room
       data:
         device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionLeft'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'Select' 
+        command: ['2', '0', '6', 'Select'] 
 
 fx:
   sequence:
@@ -276,22 +165,7 @@ fx:
       entity_id: remote.living_room
       data:
         device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionRight'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'Select'  
+        command: ['2', '4', '8', 'Select'] 
     - condition: template
       value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
@@ -299,27 +173,12 @@ fx:
       data:
         activity: 19594181
     - delay:
-        seconds: 20
+        seconds: 15
     - service: remote.send_command
       entity_id: remote.living_room
       data:
         device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionRight'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'Select' 
+        command: ['2', '4', '8', 'Select'] 
         
 cbs:
   sequence:
@@ -332,22 +191,7 @@ cbs:
       entity_id: remote.living_room
       data:
         device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionDown'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionLeft'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'Select'  
+        command: ['3', 'Select'] 
     - condition: template
       value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
@@ -355,27 +199,12 @@ cbs:
       data:
         activity: 19594181
     - delay:
-        seconds: 20
+        seconds: 15
     - service: remote.send_command
       entity_id: remote.living_room
       data:
         device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionDown'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionLeft'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'Select' 
+        command: ['3', 'Select'] 
         
 abc:
   sequence:
@@ -388,22 +217,7 @@ abc:
       entity_id: remote.living_room
       data:
         device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionDown'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionRight'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'Select'  
+        command: ['2', '4', 'Select'] 
     - condition: template
       value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
@@ -411,24 +225,9 @@ abc:
       data:
         activity: 19594181
     - delay:
-        seconds: 20
+        seconds: 15
     - service: remote.send_command
       entity_id: remote.living_room
       data:
         device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionDown'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'DirectionRight'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'Select' 
+        command: ['2', '4', 'Select']
