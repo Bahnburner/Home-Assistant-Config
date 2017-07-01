@@ -9,12 +9,7 @@ fox:
       entity_id: remote.living_room
       data:
         device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'Select'  
+        command: ['1', '3', 'Select']
     - condition: template
       value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
@@ -27,12 +22,7 @@ fox:
       entity_id: remote.living_room
       data:
         device: 35163109
-        command: 'DirectionUp'
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data:
-        device: 35163109
-        command: 'Select'
+        command: ['1', '3', 'Select']
 
 comedycentral:
   sequence:
