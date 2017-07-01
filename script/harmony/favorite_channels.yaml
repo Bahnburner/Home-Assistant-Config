@@ -3,7 +3,7 @@ fox:
     - service: remote.send_command
       entity_id: remote.living_room
       data:
-        device: 35163109
+        device: 35163105
         command: 'InputHdmi5'
     - service: remote.send_command
       entity_id: remote.living_room
@@ -29,7 +29,7 @@ comedycentral:
     - service: remote.send_command
       entity_id: remote.living_room
       data:
-        device: 35163109
+        device: 35163105
         command: 'InputHdmi5' 
     - service: remote.send_command
       entity_id: remote.living_room
@@ -55,7 +55,7 @@ cartoonnetwork:
     - service: remote.send_command
       entity_id: remote.living_room
       data:
-        device: 35163109
+        device: 35163105
         command: 'InputHdmi5'
     - service: remote.send_command
       entity_id: remote.living_room
@@ -81,7 +81,7 @@ fxx:
     - service: remote.send_command
       entity_id: remote.living_room
       data:
-        device: 35163109
+        device: 35163105
         command: 'InputHdmi5'    
     - service: remote.send_command
       entity_id: remote.living_room
@@ -107,7 +107,7 @@ nbc:
     - service: remote.send_command
       entity_id: remote.living_room
       data:
-        device: 35163109
+        device: 35163105
         command: 'InputHdmi5'
     - service: remote.send_command
       entity_id: remote.living_room
@@ -133,7 +133,7 @@ espn:
     - service: remote.send_command
       entity_id: remote.living_room
       data:
-        device: 35163109
+        device: 35163105
         command: 'InputHdmi5'
     - service: remote.send_command
       entity_id: remote.living_room
@@ -159,7 +159,7 @@ fx:
     - service: remote.send_command
       entity_id: remote.living_room
       data:
-        device: 35163109
+        device: 35163105
         command: 'InputHdmi5'
     - service: remote.send_command
       entity_id: remote.living_room
@@ -185,7 +185,7 @@ cbs:
     - service: remote.send_command
       entity_id: remote.living_room
       data:
-        device: 35163109
+        device: 35163105
         command: 'InputHdmi5'
     - service: remote.send_command
       entity_id: remote.living_room
@@ -211,7 +211,7 @@ abc:
     - service: remote.send_command
       entity_id: remote.living_room
       data:
-        device: 35163109
+        device: 35163105
         command: 'InputHdmi5'
     - service: remote.send_command
       entity_id: remote.living_room
