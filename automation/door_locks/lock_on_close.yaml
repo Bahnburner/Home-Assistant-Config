@@ -47,7 +47,7 @@
     entity_id:
       - input_boolean.front_door_open
       - input_boolean.back_door_open
-    state: 'on'
+    to: 'on'
     for:
       minutes: 10
   action:
