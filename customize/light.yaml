@@ -10,8 +10,10 @@ light.table_lamp:
   hidden: false
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.tristans_nightstand:
+  friendly_name: "Tristan's Nightstand"
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.crystals_nightstand:
+  friendly_name: "Crystal's Nightstand"
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.bedroom_floor_lamp:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
