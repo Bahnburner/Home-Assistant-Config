@@ -13,8 +13,6 @@ frontend:
 history:
 logbook:
 recorder:
-  db_url: postgres://@/hass
-  purge_days: 14
 sun:
 updater:
 
