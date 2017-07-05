@@ -103,7 +103,7 @@
       value_template: '{% if is_state("device_tracker.rasplex", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'RasPlex'
     hass_update_available:
-      friendly_name: 'HASS Update Available'
+      friendly_name: 'Update Available'
       value_template: >-
         {%- if states.sensor.current_hass_version.state != states.sensor.installed_hass_version.state -%}
            {{ states.sensor.current_hass_version.state }}
