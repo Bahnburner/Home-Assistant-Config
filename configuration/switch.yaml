@@ -41,4 +41,4 @@
       command_on: "sh /home/hass/.homeassistant/git_pull.sh"
     update:
       friendly_name: 'Update now'
-      command_on: "sh /home/hass/.homeassistant/upgrade.sh
+      command_on: "sh /home/hass/.homeassistant/upgrade.sh"
