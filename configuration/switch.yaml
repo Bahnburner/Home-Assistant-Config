@@ -16,6 +16,14 @@
       turn_off:
         - service: automation.turn_on
           entity_id: group.routines
+    git_pull:
+      friendly_name: "Update Configuration"
+      turn_on:
+        service: shell_command.git_pull
+    update:
+      friendly_name: 'Update now'
+      turn_on:
+        service: shell_command.update
 - platform: mqtt
   name: 'Christmas Lights'
   state_topic: "smartthings/Christmas Lights/switch"
