@@ -35,3 +35,13 @@
   payload_on: "on"
   payload_off: "off"
   retain: true
+- platform: mqtt
+  name: 'saved brightness'
+  state_topic: "smartthings/saved brightness/switch"
+  command_topic: "smartthings/saved brightness/switch"
+  brightness_scale: 254
+  brightness_state_topic: "smartthings/saved brightness/level"
+  brightness_command_topic: "smartthings/saved brightness/level"
+  payload_on: "on"
+  payload_off: "off"
+  retain: true
