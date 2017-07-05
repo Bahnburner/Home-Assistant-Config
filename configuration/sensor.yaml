@@ -134,8 +134,12 @@
   name: "Doorbell Battery"
   unit_of_measurement: "%"
 - platform: command_line
+  scan_interval:
+    minutes: 60
   command: python3 -c "import requests; print(requests.get('https://pypi.python.org/pypi/homeassistant/json').json()['info']['version'])"
   name: Current HASS Version
 - platform: command_line
+  scan_interval:
+    minutes: 60
   command: "/usr/local/bin/hass --version"
   name: Installed HASS Version
