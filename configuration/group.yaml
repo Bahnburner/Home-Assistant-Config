@@ -223,9 +223,9 @@ devices:
   - sensor.macmini
   - sensor.rasplex
   - sensor.google_home
-  - sensor.viziocrave360
   - sensor.chromecast
   - sensor.chromecast_audio
+  - sensor.viziocrave360
   - sensor.directv_genie
   - sensor.doorbell_battery
 system_monitor:
