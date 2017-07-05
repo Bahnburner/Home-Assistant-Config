@@ -72,7 +72,7 @@
       entity_id: light.saved_brightness
       data_template:
         brightness: 
-          {{states.light.living_room.attributes.brightness}}
+          '{{states.light.living_room.attributes.brightness | int}}'
     - service: light.turn_on
       entity_id: light.living_room
       data:
@@ -137,7 +137,7 @@
     entity_id: light.living_room
     data_template:
       brightness:
-        {{states.light.saved_brightness.attributes.brightness}}
+        '{{states.light.saved_brightness.attributes.brightness | int }}'
       color_temp: >
         {% if (states.sensor.time.state | round(2)) <= 05.00 %}
           500
