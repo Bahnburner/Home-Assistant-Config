@@ -16,14 +16,6 @@
       turn_off:
         - service: automation.turn_on
           entity_id: group.routines
-    git_pull:
-      friendly_name: "Update Configuration"
-      turn_on:
-        service: shell_command.git_pull
-    update:
-      friendly_name: 'Update now'
-      turn_on:
-        service: shell_command.update
 - platform: mqtt
   name: 'Christmas Lights'
   state_topic: "smartthings/Christmas Lights/switch"
@@ -44,3 +36,9 @@
       command_off: "python /home/hass/.homeassistant/kevo/unlock-rear.py"
       command_state: "python /home/hass/.homeassistant/kevo/status-rear.py"
       value_template: '{{ value == "Locked" }}'
+    git_pull:
+      friendly_name: "Update Configuration"
+      command_on: "sh /home/hass/.homeassistant/git_pull.sh"
+    update:
+      friendly_name: 'Update now'
+      command_on: "sh /home/hass/.homeassistant/upgrade.sh
