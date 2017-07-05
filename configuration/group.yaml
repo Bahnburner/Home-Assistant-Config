@@ -135,6 +135,7 @@ override:
     - switch.vacation_mode
     - group.simulate_presence
     - switch.routines
+    - switch.git_pull
 routines:
   - automation.alarm_triggered
   - automation.away_mode__bedroom
