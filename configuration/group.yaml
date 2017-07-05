@@ -129,12 +129,11 @@ weather:
 override:
   control: hidden
   entities:
+    - sensor.hass_update_available
     - input_boolean.disable_alarm
     - switch.vacation_mode
     - group.simulate_presence
     - switch.routines
-    - shell_command.git_pull
-    - shell_command.update
 routines:
   - automation.alarm_triggered
   - automation.away_mode__bedroom
