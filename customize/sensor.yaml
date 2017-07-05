@@ -115,3 +115,6 @@ sensor.rasplex:
 sensor.doorbell_battery:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/ring.png
   friendly_name: 'Ring Doorbell'
+hass_update_available:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hass.png
+  hidden: true
