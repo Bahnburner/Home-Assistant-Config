@@ -129,7 +129,7 @@ weather:
 override:
   control: hidden
   entities:
-    - sensor.hass_update_available
+    - group.update_available
     - input_boolean.disable_alarm
     - switch.vacation_mode
     - group.simulate_presence
@@ -234,3 +234,5 @@ system_monitor:
   - sensor.cpu_temperature
   - sensor.disk_use_
   - sensor.ram_use
+update_available:
+  - sensor.hass_update_available
