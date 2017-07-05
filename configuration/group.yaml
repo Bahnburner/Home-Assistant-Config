@@ -129,13 +129,11 @@ weather:
 override:
   control: hidden
   entities:
-    - group.update_available
-    - switch.update
+    - updater.updater
     - input_boolean.disable_alarm
     - switch.vacation_mode
     - group.simulate_presence
     - switch.routines
-    - switch.git_pull
 routines:
   - automation.alarm_triggered
   - automation.away_mode__bedroom
@@ -173,7 +171,6 @@ routines:
   - automation.morning__weekend__stage_3
   - automation.nest_protect_emergency
   - automation.nest_protect_normal
-  - automation.no_update_available
   - automation.overnight__pantry_dim
   - automation.overnight__pantry_redim
   - automation.rain__occupied
@@ -182,7 +179,6 @@ routines:
   - automation.sunrise__unoccupied
   - automation.sunset__occupied
   - automation.sunset__unoccupied
-  - automation.update_available
   - automation.wan_down
   - automation.wan_down__off
   - automation.wan_down__on
@@ -238,5 +234,3 @@ system_monitor:
   - sensor.cpu_temperature
   - sensor.disk_use_
   - sensor.ram_use
-update_available:
-  - sensor.hass_update_available
