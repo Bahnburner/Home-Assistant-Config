@@ -1,0 +1,10 @@
+- alias: 'update available'
+  trigger:
+  platform: state
+    entity_id: updater.updater
+  action:
+    service: notify.hidden_ridge
+    data:
+      target: !secret tristans_phone_number
+    data_template:
+      message: "A new version of Home Assistant is now available."
