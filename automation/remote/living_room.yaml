@@ -71,7 +71,7 @@
     - service: light.turn_on
       entity_id: light.saved_brightness
       data_template: >
-        brightness: {{states.light.living_room.attributes.brightness}}
+        brightness: {% states.light.living_room.attributes.brightness %}
     - service: light.turn_on
       entity_id: light.living_room
       data:
