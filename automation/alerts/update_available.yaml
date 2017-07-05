@@ -13,9 +13,9 @@
       data:
         target:
         - !secret tristans_phone_number
-    data_template:
-      message: >
-        Version {{states.sensor.hass_update_available.state}} is now available. 
+      data_template:
+        message: >
+          Version {{states.sensor.hass_update_available.state}} is now available. 
     
 - alias: No Update Available
   hide_entity: True
