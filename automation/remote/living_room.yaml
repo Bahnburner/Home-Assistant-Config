@@ -70,7 +70,7 @@
   action:
     - service: light.turn_on
       entity_id: light.saved_brightness
-      data_template: >
+      data_template:
         brightness: {{states.light.living_room.attributes.brightness}}
     - service: light.turn_on
       entity_id: light.living_room
@@ -135,7 +135,7 @@
     service: light.turn_on
     entity_id: light.living_room
     data_template:
-      brightness: >
+      brightness:
         {{states.light.saved_brightness.attributes.brightness}}
       color_temp: >
         {% if (states.sensor.time.state | round(2)) <= 05.00 %}
