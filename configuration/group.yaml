@@ -171,6 +171,7 @@ routines:
   - automation.morning__weekend__stage_3
   - automation.nest_protect_emergency
   - automation.nest_protect_normal
+  - automation.no_update_available
   - automation.overnight__pantry_dim
   - automation.overnight__pantry_redim
   - automation.rain__occupied
@@ -179,6 +180,7 @@ routines:
   - automation.sunrise__unoccupied
   - automation.sunset__occupied
   - automation.sunset__unoccupied
+  - automation.update_available
   - automation.wan_down
   - automation.wan_down__off
   - automation.wan_down__on
