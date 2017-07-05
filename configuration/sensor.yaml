@@ -102,6 +102,14 @@
     rasplex:
       value_template: '{% if is_state("device_tracker.rasplex", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'RasPlex'
+    hass_update_available:
+      friendly_name: 'HASS Update Available'
+      value_template: >-
+        {%- if states.sensor.current_hass_version.state != states.sensor.installed_hass_version.state -%}
+           {{ states.sensor.current_hass_version.state }}
+        {%- else -%}
+           No
+        {%- endif -%}
 - platform: random
   name: whitenoise
   minimum: 1
@@ -125,3 +133,9 @@
   state_topic: "smartthings/Front Door/battery"
   name: "Doorbell Battery"
   unit_of_measurement: "%"
+- platform: command_line
+  command: python3 -c "import requests; print(requests.get('https://pypi.python.org/pypi/homeassistant/json').json()['info']['version'])"
+  name: Current HASS Version
+- platform: command_line
+  command: "/usr/local/bin/hass --version"
+  name: Installed HASS Version
