@@ -133,6 +133,8 @@ override:
     - switch.vacation_mode
     - group.simulate_presence
     - switch.routines
+    - shell_command.git_pull
+    - shell_command.update
 routines:
   - automation.alarm_triggered
   - automation.away_mode__bedroom
