@@ -102,6 +102,9 @@
     rasplex:
       value_template: '{% if is_state("device_tracker.rasplex", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'RasPlex'
+    ring:
+      value_template: '{% if is_state("device_tracker.ring", "not_home") %}Offline{% elif states.sensor.doorbell_battery.state | int <= 95 %} {{states.sensor.doorbell_battery.state}} % {% elif is_state("device_tracker.ring", "home") %}Online{% endif %}'
+      friendly_name: 'RasPlex'
 - platform: random
   name: whitenoise
   minimum: 1
