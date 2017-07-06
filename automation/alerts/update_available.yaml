@@ -1,7 +1,7 @@
 - alias: 'update available'
   trigger:
-  platform: state
-  entity_id: updater.updater
+    platform: state
+    entity_id: updater.updater
   action:
     service: notify.hidden_ridge
     data:
