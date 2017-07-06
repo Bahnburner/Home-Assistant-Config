@@ -228,7 +228,7 @@ devices:
   - sensor.chromecast_audio
   - sensor.viziocrave360
   - sensor.directv_genie
-  - sensor.doorbell_battery
+  - sensor.ring
 system_monitor:
   - sensor.cpu_use
   - sensor.cpu_temperature
