@@ -112,7 +112,7 @@ sensor.directv_genie:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/directv.png
 sensor.rasplex:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/plex.png
-sensor.doorbell_battery:
+sensor.ring:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/ring.png
   friendly_name: 'Ring Doorbell'
 sensor.hass_update_available:
