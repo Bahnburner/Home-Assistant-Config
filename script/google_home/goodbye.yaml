@@ -1,5 +1,11 @@
 goodbye:
   sequence:
+    - service: media_player.volume_set
+      entity_id: 
+        - media_player.google_home
+        - media_player.downstairs
+      data: 
+        volume_level: 0.5
     - condition: state
       entity_id: group.family
       state: 'home'
