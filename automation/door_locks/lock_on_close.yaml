@@ -10,6 +10,12 @@
     entity_id: input_boolean.front_door_open
     state: 'on'
   action:
+    - service: media_player.volume_set
+      entity_id: 
+        - media_player.google_home
+        - media_player.downstairs
+      data: 
+        volume_level: 0.5
     - service: tts.google_say
       entity_id:
         - media_player.downstairs
@@ -31,6 +37,12 @@
     entity_id: input_boolean.back_door_open
     state: 'on'
   action:
+    - service: media_player.volume_set
+      entity_id: 
+        - media_player.google_home
+        - media_player.downstairs
+      data: 
+        volume_level: 0.5
     - service: tts.google_say
       entity_id:
         - media_player.downstairs
