@@ -16,6 +16,12 @@ door_status_check:
             
 front_door_open:
   sequence:
+    - service: media_player.volume_set
+      entity_id: 
+        - media_player.google_home
+        - media_player.downstairs
+      data: 
+        volume_level: 0.5
     - service: tts.google_say
       entity_id:
         - media_player.downstairs
@@ -29,6 +35,12 @@ front_door_open:
       
 back_door_open:
   sequence:
+    - service: media_player.volume_set
+      entity_id: 
+        - media_player.google_home
+        - media_player.downstairs
+      data: 
+        volume_level: 0.5
     - service: tts.google_say
       entity_id:
         - media_player.downstairs
@@ -42,6 +54,12 @@ back_door_open:
       
 both_doors_open:
   sequence:
+    - service: media_player.volume_set
+      entity_id: 
+        - media_player.google_home
+        - media_player.downstairs
+      data: 
+        volume_level: 0.5
     - service: tts.google_say
       entity_id:
         - media_player.downstairs
