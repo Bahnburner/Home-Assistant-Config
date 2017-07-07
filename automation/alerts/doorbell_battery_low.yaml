@@ -9,6 +9,5 @@
     data:
       target:
         - !secret tristans_phone_number
-        - !secret crystals_phone_number
       message: "The Ring doorbell's battery is critically low. Please recharge it."
         
