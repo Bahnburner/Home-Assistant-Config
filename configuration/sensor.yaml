@@ -39,11 +39,11 @@
     time:
       value_template: '{{(now().strftime("%H") | int) + (now().strftime("%M")|int / 60) | round(2)}}'
     protect_down:
-      value_template: '{% if is_state("binary_sensor.downstairs_nest_protect_online", "on") %}Online{% else %}Error{% endif %}'    
+      value_template: '{% if  states.sensor.downstairs_nest_protect_battery_health.state == "Ok" and states.sensor.downstairs_nest_protect_co_status.state == "Ok" and states.sensor.downstairs_nest_protect_smoke_status.state == "Ok" %}Online{% elif states.sensor.kithen_nest_protect_co_status.state == "Emergency" or states.sensor.downstairs_nest_protect_smoke_status.state == "Emergency" %}Emergency {% elif states.sensor.downstairs_nest_protect_battery_health.state == "Replace" %}Low Battery {% else %}Error{% endif %}'    
     protect_kitchen:
-      value_template: '{% if is_state("binary_sensor.kitchen_nest_protect_online", "on") %}Online{% else %}Error{% endif %}'
+      value_template: '{% if  states.sensor.kitchen_nest_protect_battery_health.state == "Ok" and states.sensor.kitchen_nest_protect_co_status.state == "Ok" and states.sensor.kitchen_nest_protect_smoke_status.state == "Ok" %}Online{% elif states.sensor.kithen_nest_protect_co_status.state == "Emergency" or states.sensor.kitchen_nest_protect_smoke_status.state == "Emergency" %}Emergency {% elif states.sensor.kitchen_nest_protect_battery_health.state == "Replace" %}Low Battery {% else %}Error{% endif %}'
     protect_up:
-      value_template: '{% if is_state("binary_sensor.upstairs_nest_protect_online", "on") %}Online{% else %}Error{% endif %}'      
+      value_template: '{% if  states.sensor.upstairs_nest_protect_battery_health.state == "Ok" and states.sensor.upstairs_nest_protect_co_status.state == "Ok" and states.sensor.upstairs_nest_protect_smoke_status.state == "Ok" %}Online{% elif states.sensor.kithen_nest_protect_co_status.state == "Emergency" or states.sensor.upstairs_nest_protect_smoke_status.state == "Emergency" %}Emergency {% elif states.sensor.upstairs_nest_protect_battery_health.state == "Replace" %}Low Battery {% else %}Error{% endif %}'      
     front_door:
       friendly_name: 'Front Door'
       value_template: '{% if is_state("binary_sensor.front_door", "off") %}Closed{% else %}Open{% endif %}'
