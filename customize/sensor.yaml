@@ -81,6 +81,9 @@ sensor.drive_time_to_work:
 sensor.protect_down:
   friendly_name: "Protect"
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/nestprotect.png
+sensor.protect_kitchen:
+  friendly_name: "Protect"
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/nestprotect.png  
 sensor.protect_up:
   friendly_name: "Protect"
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/nestprotect.png
