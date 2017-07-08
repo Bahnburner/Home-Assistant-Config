@@ -7,6 +7,8 @@
       - sensor.upstairs_nest_protect_co_status
       - sensor.downstairs_nest_protect_smoke_status
       - sensor.downstairs_nest_protect_co_status
+      - sensor.kitchen_nest_protect_smoke_status
+      - sensor.kitchen_nest_protect_co_status
     to: 'Emergency'
   action:
     - service: light.turn_on
@@ -28,6 +30,8 @@
       - sensor.upstairs_nest_protect_co_status
       - sensor.downstairs_nest_protect_smoke_status
       - sensor.downstairs_nest_protect_co_status
+      - sensor.kitchen_nest_protect_smoke_status
+      - sensor.kitchen_nest_protect_co_status
     from: 'Emergency'
   action:
     - service: script.trigger
