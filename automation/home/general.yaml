@@ -16,8 +16,6 @@
         - light.recessed_lights
       data:
         brightness: 254
-    - service: switch.turn_off
-      entity_id: switch.door_rear
     - service: script.fan_on
     - service: media_player.turn_off
       entity_id: media_player.google_home
