@@ -2,7 +2,10 @@
   hide_entity: True
   trigger:
     platform: state
-    entity_id: group.windows
+    entity_id: 
+      - sensor.front_windows
+      - sensor.back_windows
+      - sensor.bedroom_windows
     from: 'closed'
     to: 'open'
     for:
@@ -21,7 +24,10 @@
   hide_entity: True
   trigger:
     platform: state
-    entity_id: group.windows
+    entity_id: 
+      - sensor.front_windows
+      - sensor.back_windows
+      - sensor.bedroom_windows
     from: 'open'
     to: 'closed'
   condition: 
