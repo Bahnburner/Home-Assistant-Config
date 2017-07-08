@@ -107,6 +107,7 @@ kitchen:
     - light.recessed_lights
     - light.pantry
     - light.cabinet_lights
+    - sensor.protect_kitchen
 dining_room:
   - light.dining_room
 foyer:
