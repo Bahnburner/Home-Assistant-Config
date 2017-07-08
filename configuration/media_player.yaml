@@ -1,5 +1,3 @@
 - platform: cast
 - platform: plex
 - platform: directv
-  host: 169.254.10.183
-  port: 63444
