@@ -11,19 +11,21 @@
     value_template: '{{ state.attributes.elevation }}'
     below: 5
   action:
-    service: light.turn_on
-    entity_id: light.master_bedroom
-    data:
-      brightness: 254
-    data_template:
-      color_temp: >
-        {% if (states.sensor.time.state | round(2)) <= 05.00 %}
-          500
-        {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
-          250
-        {% elif (states.sensor.time.state | round(2)) < 22.25 %}
-          366
-        {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
-          500
-        {% else %}
-        {% endif %}
+    - service: switch.turn_off
+      entity_id: switch.door_rear
+    - service: light.turn_on
+      entity_id: light.master_bedroom
+      data:
+        brightness: 254
+      data_template:
+        color_temp: >
+          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+            500
+          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+            250
+          {% elif (states.sensor.time.state | round(2)) < 22.25 %}
+            366
+          {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+            500
+          {% else %}
+          {% endif %}
