@@ -40,8 +40,10 @@
       value_template: '{{(now().strftime("%H") | int) + (now().strftime("%M")|int / 60) | round(2)}}'
     protect_down:
       value_template: '{% if is_state("binary_sensor.downstairs_nest_protect_online", "on") %}Online{% else %}Error{% endif %}'    
+    protect_kitchen:
+      value_template: '{% if is_state("binary_sensor.kitchen_nest_protect_online", "on") %}Online{% else %}Error{% endif %}'
     protect_up:
-      value_template: '{% if is_state("binary_sensor.upstairs_nest_protect_online", "on") %}Online{% else %}Error{% endif %}'
+      value_template: '{% if is_state("binary_sensor.upstairs_nest_protect_online", "on") %}Online{% else %}Error{% endif %}'      
     front_door:
       friendly_name: 'Front Door'
       value_template: '{% if is_state("binary_sensor.front_door", "off") %}Closed{% else %}Open{% endif %}'
