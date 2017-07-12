@@ -47,9 +47,6 @@
             script.away_mode__day
           {% endif %}
     - service: script.lock_doors
-    - condition: state
-      entity_id: group.simulate_presence
-      state: 'off'
     - service: media_player.play_media
       entity_id: media_player.google_home
       data:
