@@ -151,3 +151,15 @@
           500
         {% else %}
         {% endif %}
+
+- alias: Set Saved Brightness
+  hide_entity: True
+  trigger:
+    - platform: homeassistant
+      event: start
+  action:
+
+    - service: light.turn_on
+      entity_id: light.saved_brightness
+      data:
+        brightness: 254
