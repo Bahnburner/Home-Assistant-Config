@@ -39,7 +39,7 @@
     - service: script.turn_on
       data_template:
         entity_id: >
-          {% if states.sun.sun.attributes.elevation <= 5 %}
+          {% if states.sun.sun.attributes.elevation <= 12 %}
             script.away_mode__night
           {% elif is_state('sensor.dark_sky_icon', 'rain') %}
             script.away_mode__rain
