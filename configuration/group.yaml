@@ -177,6 +177,7 @@ routines:
   - automation.rain__occupied
   - automation.rain__unoccupied__start
   - automation.rain__unoccupied__stop
+  - automation.set_saved_brightness
   - automation.sunrise__unoccupied
   - automation.sunset__occupied
   - automation.sunset__unoccupied
