@@ -26,7 +26,7 @@ lights:
     - group.foyer
     - group.exterior
     - group.dining_room
-    - group.kitchen
+    - group.kitchen_lights
 media:
   view: yes
   icon: mdi:cast
