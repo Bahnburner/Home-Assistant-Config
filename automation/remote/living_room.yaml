@@ -64,9 +64,10 @@
     - condition: state
       entity_id: light.living_room
       state: 'on'
-    - condition: state
+    - condition: numeric_state
       entity_id: sun.sun
-      state: 'below_horizon'
+      value_template: '{{ state.attributes.elevation }}'
+      below: 12
   action:
     - service: light.turn_on
       entity_id: light.saved_brightness
