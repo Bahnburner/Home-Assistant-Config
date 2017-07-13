@@ -4,7 +4,7 @@
 #    platform: numeric_state
 #    entity_id: sun.sun
 #    value_template: '{{ state.attributes.elevation }}'
-#    below: 5
+#    below: 12
 #  condition:
 #    condition: template
 #    value_template: '{{ now().month == 12 }}'
