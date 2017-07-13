@@ -10,6 +10,8 @@ group.master_bedroom:
   friendly_name: 'Master Bedroom'
 group.kitchen:
   friendly_name: 'Kitchen'
+group.kitchen_lights:
+  friendly_name: 'Kitchen'
 group.dining_room:
   friendly_name: 'Dining Room'
 group.master_hallway:
