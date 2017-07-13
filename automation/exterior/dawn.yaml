@@ -4,7 +4,7 @@
     platform: numeric_state
     entity_id: sun.sun
     value_template: '{{ state.attributes.elevation }}'
-    above: 12
+    above: 5
   action:
     service: light.turn_off
     entity_id: light.front_door
