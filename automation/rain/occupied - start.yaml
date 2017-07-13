@@ -1,4 +1,4 @@
-- alias: Rain - Occupied
+- alias: Rain - Occupied - Start
   hide_entity: True
   trigger:
     - platform: state
