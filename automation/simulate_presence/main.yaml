@@ -94,10 +94,6 @@
   trigger:
     - platform: homeassistant
       event: start
-    - platform: state
-      entity_id: automation.simulate_presence_8
-      from: 'off'
-      to: 'on'
   action:
     - service: automation.turn_off
       entity_id: group.simulate_presence
