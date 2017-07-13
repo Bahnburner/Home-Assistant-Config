@@ -108,6 +108,13 @@ kitchen:
     - light.pantry
     - light.cabinet_lights
     - sensor.protect_kitchen
+kitchen_lights:
+  entities:
+    - light.overhead_light
+    - light.chandelier
+    - light.recessed_lights
+    - light.pantry
+    - light.cabinet_lights
 dining_room:
   - light.dining_room
 foyer:
