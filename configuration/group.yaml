@@ -181,7 +181,8 @@ routines:
   - automation.nest_protect_normal
   - automation.overnight__pantry_dim
   - automation.overnight__pantry_redim
-  - automation.rain__occupied
+  - automation.rain__occupied__start
+  - automation.rain__occupied__stop  
   - automation.rain__unoccupied__start
   - automation.rain__unoccupied__stop
   - automation.set_saved_brightness
