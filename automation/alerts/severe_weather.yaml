@@ -14,7 +14,7 @@
         - media_player.party_mode
       data_template: 
         message: >
-          The National Weather Service in Memphis Tennessee has issued a {{states.sensor.pws_alerts.attributes.description}} in your area. Please take necessary precautions.
+          The National Weather Service in Memphis Tennessee has issued a {{states.sensor.pws_alerts.attributes.Description}} in your area. Please take necessary precautions.
     - service: media_player.volume_set
       entity_id: 
         - media_player.party_mode
