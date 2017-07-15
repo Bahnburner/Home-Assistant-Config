@@ -1,2 +1,3 @@
 - platform: cast
 - platform: plex
+  scan_interval: 10
