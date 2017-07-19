@@ -9,7 +9,8 @@ homeassistant:
 
 config:
 discovery:
-frontend: !include ./themes/themes.yaml
+frontend: 
+    themes: !include ./themes/themes.yaml
 history:
   exclude:
     domains:
