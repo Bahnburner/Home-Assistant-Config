@@ -30,9 +30,9 @@
       command_on: "python /home/hass/.homeassistant/kevo/lock-front.py"
       command_off: "python /home/hass/.homeassistant/kevo/unlock-front.py"
       command_state: "python /home/hass/.homeassistant/kevo/status-front.py"
-      value_template: '{{ value == "Locked" }}'
+      value_template: {% if value == "Locked" %}true{% elif value == "Unlocked" %}false{% else %}{% endif %}
     door_rear:
       command_on: "python /home/hass/.homeassistant/kevo/lock-rear.py"
       command_off: "python /home/hass/.homeassistant/kevo/unlock-rear.py"
       command_state: "python /home/hass/.homeassistant/kevo/status-rear.py"
-      value_template: '{{ value == "Locked" }}'
+      value_template: {% if value == "Locked" %}true{% elif value == "Unlocked" %}false{% else %}{% endif %}
