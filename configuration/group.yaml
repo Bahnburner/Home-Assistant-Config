@@ -155,6 +155,7 @@ routines:
   - automation.garage_door_open
   - automation.garage_notify
   - automation.garbage_reminder
+  - automation.goodnight
   - automation.harmony
   - automation.harmony_light_control__end
   - automation.harmony_light_control__start
