@@ -1,13 +1,14 @@
 - alias: Severe Weather
   hide_entity: True
   trigger:
-    platform: numeric_state
+    platform: state
     entity_id: sensor.pws_alerts
-    above: 0
   condition:
-    condition: state
-    entity_id: group.family
-    state: 'home'
+    - condition: state
+      entity_id: group.family
+      state: 'home'
+    - condition: template  
+      value_template: '{{states.sensor.pws_alerts.state != 0}}'
   action:
     - service: tts.google_say
       entity_id:
