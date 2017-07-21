@@ -14,7 +14,7 @@
         - condition: time
           after: '07:00:00'
         - condition: template
-          value_template: {{states.sensor.pws_alerts.attributes.Description == 'Severe Thunderstorm Warning' or states.sensor.pws_alerts.attributes.Description == 'Tornado Warning' }}
+          value_template: '{{states.sensor.pws_alerts.attributes.Description == "Severe Thunderstorm Warning" or states.sensor.pws_alerts.attributes.Description == "Tornado Warning" }}'
   action:
     - service: tts.google_say
       entity_id:
