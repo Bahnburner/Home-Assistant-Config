@@ -1,1 +1,20 @@
-
+- alias: Goodnight
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: light.master_bedroom
+    to: 'off'
+  condition:
+    - condition: state
+      entity_id: group.tristal
+      state: 'home'
+    - condition: state
+      entity_id: input_boolean.goodnight_initiated
+      state: 'on'
+    - condition: template
+      value_template: '{{ states.light.living_room.attributes.brightness <= 200 }}'
+  action: 
+    - service: light.turn_off
+      entity_id: light.communal
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.goodnight_initiated
