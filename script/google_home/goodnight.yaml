@@ -1,5 +1,7 @@
 goodnight:
   sequence:
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.goodnight_initiated
     - service: climate.set_temperature
       entity_id: climate.downstairs
       data:
@@ -77,3 +79,5 @@ goodnight_timer_off:
       value_template: '{{ states.light.living_room.attributes.brightness <= 200 }}'
     - service: light.turn_off
       entity_id: light.communal
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.goodnight_initiated
