@@ -10,7 +10,7 @@
     - condition: template  
       value_template: '{{states.sensor.pws_alerts.state | int > 0}}
     - condition: template
-        value_template: '{{states.sensor.pws_alerts.attributes.Description == "Severe Thunderstorm Warning" or states.sensor.pws_alerts.attributes.Description == "Tornado Warning" or states.sensor.pws_alerts.attributes.Description_WRN == "Tornado Warning" or states.sensor.pws_alerts.attributes.Description_WRN == "Severe Thunderstorm Warning" or states.sensor.pws_alerts.attributes.Description == "Winter Storm Warning" or states.sensor.pws_alerts.attributes.Description_WRN == "Winter Storm Warning"}}'
+      value_template: '{{ states.sensor.pws_alerts.attributes.Description == "Severe Thunderstorm Warning" or states.sensor.pws_alerts.attributes.Description == "Tornado Warning" or states.sensor.pws_alerts.attributes.Description_WRN == "Tornado Warning" or states.sensor.pws_alerts.attributes.Description_WRN == "Severe Thunderstorm Warning" or states.sensor.pws_alerts.attributes.Description == "Winter Storm Warning" or states.sensor.pws_alerts.attributes.Description_WRN == "Winter Storm Warning" }}'
   action:
     - service: tts.google_say
       entity_id:
