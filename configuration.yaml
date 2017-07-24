@@ -9,6 +9,8 @@ homeassistant:
 
 config:
 discovery:
+  ignore: 
+    - harmony
 frontend: 
     themes: !include ./themes/themes.yaml
 history:
