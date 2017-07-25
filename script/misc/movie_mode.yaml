@@ -1,1 +1,17 @@
-
+movie_mode:
+  sequence:
+    - service: light.turn_off
+      entity_id:
+        - light.table_lamp
+        - light.cabinet_light
+        - light.recessed_lights
+        - light.overhead_light
+        - light.chandelier
+    - service: light.turn_on
+      entity_id:
+        - light.floor_lamp_left
+        - light.floor_lamp_right
+      data:
+        brightness: 50
+        color_temp: 500
+        transition: 15
