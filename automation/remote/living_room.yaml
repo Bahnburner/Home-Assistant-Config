@@ -158,8 +158,28 @@
     - platform: homeassistant
       event: start
   action:
-
     - service: light.turn_on
       entity_id: light.saved_brightness
       data:
         brightness: 254
+
+- alias: Mute TV for Music
+# Why am I even talking to you, you ruined my life
+  hide_entity: true
+  trigger: 
+    - platform: state
+      entity_id: media_player.party_mode
+      from: "paused"
+      to: "playing"
+    - platform: state
+      entity_id: media_player.party_mode
+      from: "playing"
+      to: "off"
+    - platform: state
+      entity_id: media_player.party_mode
+      from: "playing"
+      to: "paused"
+  action: 
+    - service: remote.send_command
+      entity_id: remote.living_room
+      data: {"device": "35163105", "command": "Mute"}
