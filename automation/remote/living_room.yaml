@@ -164,7 +164,7 @@
         brightness: 254
 
 - alias: Mute TV for Music
-# Why am I even talking to you, you ruined my life
+# 'Cause I like to party
   hide_entity: true
   trigger: 
     - platform: state
