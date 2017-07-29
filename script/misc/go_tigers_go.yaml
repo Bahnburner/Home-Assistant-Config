@@ -1,11 +1,11 @@
 go_tigers_go:
   sequence:
     - service: media_player.volume_set
-      entity_id: media_player.google_home
+      entity_id: media_player.downstairs
       data: 
         volume_level: 0.8
     - service: media_player.play_media
-      entity_id: media_player.google_home
+      entity_id: media_player.downstairs
       data:
         media_content_id: "http://wreckage.johndenverschoolofflight.com/hass/GoTigersGo.mp3"
         media_content_type: "audio/mp3"        
@@ -23,14 +23,27 @@ go_tigers_go:
 timer_off:
   sequence:
     - delay:
-        seconds: 30
+        seconds: 60
     - service: light.turn_on
       entity_id: light.living_room
       data:
-        color_temp: 366
+      data_template:
+        color_temp: >
+          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+            500
+          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+            250
+          {% elif (states.sensor.time.state | round(2)) < 22.25 %}
+            366
+          {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+            500
+          {% else %}
+            366
+          {% endif %}
+
     - delay:
-        seconds: 45 
+        seconds: 60
     - service: media_player.volume_set
-      entity_id: media_player.google_home
+      entity_id: media_player.downstairs
       data: 
         volume_level: 0.5
