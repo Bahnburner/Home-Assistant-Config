@@ -86,6 +86,7 @@ living_room:
 living_room_home:
   - media_player.google_home
   - media_player.rasplex
+  - media_player.party_mode
 master_bedroom:
   - light.tristans_nightstand
   - light.crystals_nightstand
