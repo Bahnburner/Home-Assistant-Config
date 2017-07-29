@@ -22,7 +22,6 @@ timer_off:
         seconds: 60
     - service: light.turn_on
       entity_id: light.living_room
-      data:
       data_template:
         color_temp: >
           {% if (states.sensor.time.state | round(2)) <= 05.00 %}
