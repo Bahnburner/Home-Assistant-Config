@@ -59,3 +59,17 @@ group.devices:
   friendly_name: 'Critical Devices'
 group.system_monitor:
   friendly_name: 'System Monitor'
+media_player_livingroom:
+  hidden: true
+media_player_google_home:
+  hidden: true
+media_player_rasplex:
+  hidden: true
+media_player_kitchen:
+  hidden: true
+media_player_bedroom:
+  hidden: true
+media_player_downstairs:
+  hidden: true
+media_player_party_mode:
+  hidden: true
