@@ -9,9 +9,15 @@ default_view:
     - group.weather
     - group.exterior
     - group.alarm_zones
+    - group.media_player_livingroom
+    - group.media_player_google_home
+    - group.media_player_rasplex
+    - group.media_player_kitchen
+    - group.media_player_bedroom
+    - group.media_player_downstairs
+    - group.media_player_party_mode
     - group.living_room
     - group.dining_room
-    - group.living_room_home
     - group.kitchen
     - group.master_bedroom
     - group.upstairs
@@ -83,9 +89,6 @@ living_room:
     - light.fan
     - climate.downstairs
     - sensor.protect_down
-living_room_home:
-  - media_player.google_home
-  - media_player.rasplex
 master_bedroom:
   - light.tristans_nightstand
   - light.crystals_nightstand
@@ -245,3 +248,17 @@ system_monitor:
   - sensor.cpu_temperature
   - sensor.disk_use_
   - sensor.ram_use
+group.media_player_livingroom
+  - media_player.livingroom
+group.media_player_google_home
+  - media_player.google_home
+group.media_player_rasplex
+  - media_player.rasplex
+group.media_player_kitchen
+  - media_player.kitchen
+group.media_player_bedroom
+  - media_player.bedroom
+group.media_player_downstairs
+  - media_player.downstairs
+group.media_player_party_mode
+  - media_player.party_mode
