@@ -4,10 +4,10 @@
 - platform: directv
   host: 10.0.0.151
   port: 8080
-  name: MANCAVE
+  name: DirecTV Genie
   device: 0
 - platform: directv
   host: 10.0.0.151
   port: 8080
-  name: LIVINGROOM
+  name: DirecTV Genie Mini
   device: 00367694C1C4
