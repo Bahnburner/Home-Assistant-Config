@@ -16,6 +16,7 @@ default_view:
     - group.media_player_bedroom
     - group.media_player_downstairs
     - group.media_player_party_mode
+    - group.media_player_livingroom_tv
     - group.living_room
     - group.dining_room
     - group.kitchen
@@ -45,7 +46,8 @@ media:
     - media_player.kitchen
     - media_player.bedroom
     - media_player.livingroom
-    - media_player.directv_rid023856045325
+    - media_player.livingroom_tv
+    - media_player.mancave_tv
     - media_player.guestroom
 settings:
   view: yes
