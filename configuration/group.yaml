@@ -252,6 +252,10 @@ system_monitor:
   - sensor.ram_use
 media_player_livingroom:
   - media_player.livingroom
+media_player_livingroom_tv:
+  - media_player.livingroom_tv
+media_player_mancave_tv:
+  - media_player.mancave_tv
 media_player_google_home:
   - media_player.google_home
 media_player_rasplex:
