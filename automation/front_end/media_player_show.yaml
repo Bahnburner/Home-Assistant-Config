@@ -11,6 +11,7 @@
       - media_player.kitchen
       - media_player.bedroom
       - media_player.livingroom
+      - media_player.livingroom_tv
     to: 'playing'
   action:
     service: group.set_visibility
