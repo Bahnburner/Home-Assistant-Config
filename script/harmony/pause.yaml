@@ -29,11 +29,6 @@ pause_directv:
     - service: media_player.media_pause
       entity_id: media_player.living_room_tv
 
-pause_directv:
-  sequence:
-    - service: media_player.media_pause
-      entity_id: media_player.living_room_tv
-
 pause_plex:        
   sequence:
     - service: media_player.media_play_pause
