@@ -1,10 +1,5 @@
-bedtime_lights:
+bedtime_lights_bedroom:
   sequence:
-    - service: light.turn_on
-      entity_id: light.living_room
-      data: 
-        color_temp: 500
-        transition: 1800
     - condition: state
       entity_id: group.tristal
       state: 'home'
@@ -16,3 +11,13 @@ bedtime_lights:
         color_temp: 500
         transition: 60
         brightness: 150
+
+bedtime_lights_livingroom:
+  sequence:
+    - condition: template
+      value_template: '{{ states.light.floor_lamp_left.attributes.color_temp != 500 and states.light.floor_lamp_right.attributes.color_temp != 500 and states.light.table_lamp.state != "off" }}'
+    - service: light.turn_on
+      entity_id: light.living_room
+      data: 
+        color_temp: 500
+        transition: 1800
