@@ -17,7 +17,7 @@ unpause:
       data_template:
         entity_id: >
           {% if is_state('sensor.current_activity', 'Watch DirecTV') %}
-            script.pause_directv 
+            script.unpause_directv 
           {% elif is_state('sensor.current_activity', 'Watch Plex') %}
             script.pause_plex
           {% else %}
