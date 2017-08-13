@@ -10,6 +10,10 @@
       data:
         visible: false
     - service: group.set_visibility
+      entity_id: group.media_player_livingroom_tv
+      data:
+        visible: false
+    - service: group.set_visibility
       entity_id: group.media_player_google_home
       data:
         visible: false
