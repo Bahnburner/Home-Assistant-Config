@@ -3,6 +3,5 @@ unlock_doors:
     - service: lock.unlock
       entity_id: lock.front_door
     - delay:
-        seconds: 10
     - service: lock.unlock
       entity_id: lock.back_door
