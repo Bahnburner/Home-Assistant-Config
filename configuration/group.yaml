@@ -80,8 +80,8 @@ christmas:
 door_locks:
   control: hidden
   entities: 
-    - switch.door_front
-    - switch.door_rear
+    - lock.front_door
+    - lock.back_door
 living_room:
   control: hidden
   entities:
