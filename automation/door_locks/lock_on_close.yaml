@@ -22,8 +22,8 @@
         - media_player.google_home_2
       data:
         message: 'Locking the front door.'
-    - service: switch.turn_on
-      entity_id: switch.door_front
+    - service: lock.lock
+      entity_id: lock.front_door
 
 - alias: lock on close - back door
   hide_entity: true
@@ -49,8 +49,8 @@
         - media_player.google_home_2
       data:
         message: 'Locking the back door.'
-    - service: switch.turn_on
-      entity_id: switch.door_rear
+    - service: lock.lock
+      entity_id: lock.back_door
 
 - alias: input_boolean off
   hide_entity: True
