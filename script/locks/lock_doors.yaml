@@ -2,7 +2,7 @@ lock_doors:
   sequence:
     - service: lock.lock
       entity_id: lock.front_door
-    - delay:
-        seconds: 10
+#    - delay:
+#        seconds: 10
     - service: lock.lock
       entity_id: lock.back_door
