@@ -1,8 +1,8 @@
 lock_doors:
   sequence:
-    - service: switch.turn_on
-      entity_id: switch.door_front
+    - service: lock.lock
+      entity_id: lock.front_door
     - delay:
         seconds: 10
-    - service: switch.turn_on
-      entity_id: switch.door_rear
+    - service: lock.lock
+      entity_id: lock.back_door
