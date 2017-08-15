@@ -1,4 +1,4 @@
-movie_mode:
+movie_mode_on:
   sequence:
     - service: light.turn_off
       entity_id:
@@ -12,6 +12,27 @@ movie_mode:
         - light.floor_lamp_left
         - light.floor_lamp_right
       data:
-        brightness: 50
+        brightness: 60
         color_temp: 500
         transition: 15
+
+movie_mode_off:
+  sequence:
+    - service: light.turn_on
+      entity_id: light.living_room
+      data:
+        brightness: 150
+        transition: 15
+      data_template:
+        color_temp: >
+          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+            500
+          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+            250
+          {% elif (states.sensor.time.state | round(2)) < 22.25 %}
+            366
+          {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+            500
+          {% else %}
+            366
+          {% endif %}
