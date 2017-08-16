@@ -119,11 +119,11 @@
       command: "cat /sys/class/thermal/thermal_zone0/temp"
       value_template: '{{ value | multiply(0.0018) | round(1) +32 }}'
       unit_of_measurement: "°F"
-    air_quality:
-      scan_interval:
-        minutes: 10
-      command: 'curl -X GET -H "Content-type: application/json" -H "Accept: application/json" "http://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=38016&distance=25&API_KEY=BB4DF57E-645A-4867-935F-3BC241441002"'
-      value_template: '{{value_json.AQI}}'
+#    air_quality:
+#      scan_interval:
+#        minutes: 10
+#      command: 'curl -X GET -H "Content-type: application/json" -H "Accept: application/json" "http://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=38016&distance=25&API_KEY=BB4DF57E-645A-4867-935F-3BC241441002"'
+#      value_template: '{{value_json.AQI}}'
 - platform: systemmonitor
   scan_interval:
     seconds: 10
