@@ -29,9 +29,12 @@
   alias: 'Hide Media Player Group'
   hide_entity: true
   trigger:
-    platform: state
-    entity_id: remote.living_room
-    from: 'Watch DirecTv'
+    - platform: state
+      entity_id: sensor.current_activity
+      from: 'Watch DirecTv'
+    - platform: state
+      entity_id: sensor.current_activity
+      to: 'PowerOff'
   action:
     - service: group.set_visibility
       data_template:
