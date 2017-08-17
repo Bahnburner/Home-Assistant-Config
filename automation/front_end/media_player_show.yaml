@@ -24,7 +24,7 @@
   hide_entity: true
   trigger:
     platform: state
-    entity_id: remote.living_room
+    entity_id: sensor.current_activity
     to: 'Watch DirecTv'
   action:
     - service: group.set_visibility
