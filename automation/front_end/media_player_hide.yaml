@@ -24,3 +24,16 @@
       data_template:
         entity_id: '{{ trigger.entity_id | replace("media_player.","group.media_player_") }}'
         visible: False
+
+- id: media_player_hide_directv
+  alias: 'Hide Media Player Group'
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: remote.living_room
+    from: 'Watch DirecTv'
+  action:
+    - service: group.set_visibility
+      data_template:
+        entity_id: group.media_player_livingroom_tv
+        visible: False
