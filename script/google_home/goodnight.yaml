@@ -36,7 +36,9 @@ goodnight:
         transition: 30
     - service: script.whitenoise
     - service: light.turn_on
-      entity_id: light.pantry
+      entity_id:
+        - light.pantry
+        - light.front_door
       data:
         brightness: 100
         transition: 15
