@@ -6,7 +6,7 @@
     to: 'on'
   condition:
     - condition: template
-      value_template: '{{ states.light.front_door.attributes.brightness >= 100 and states.light.front_door.attributes.brightness < 254 }}'
+      value_template: '{{ states.light.front_door.attributes.brightness >= 100 }}'
     - condition: numeric_state
       entity_id: sun.sun
       value_template: '{{ state.attributes.elevation }}'
@@ -18,3 +18,5 @@
       entity_id: light.front_door
       data:
         brightness: 254
+    - service: script.turn_on
+      entity_id: script.front_door_motion
