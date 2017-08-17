@@ -1,7 +1,7 @@
 - name: Hidden Ridge
   platform: facebook
   page_access_token: !secret facebook_token
-- name: NOTIFIER_NAME
+- name: Amazon SMS
   platform: aws_sns
   aws_access_key_id: !secret aws_access_key_id
   aws_secret_access_key: !secret aws_secret_access_key 
