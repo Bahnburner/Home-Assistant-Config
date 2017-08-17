@@ -9,39 +9,39 @@
       entity_id: group.media_player_livingroom
       data_template:
         visible: >
-          {% if states.group.media_player_livingroom.state == "playing" %}true{%else%}false{%endif%}
+          {% if states.media_player.livingroom.state == "playing" %}true{%else%}false{%endif%}
     - service: group.set_visibility
       entity_id: group.media_player_livingroom_tv
       data_template:
         visible: >
-          {% if states.group.media_player_livingroom_tv.state == "playing" and states.sensor.current_activity.state == "Watch DirecTV" %}true{%else%}false{%endif%}
+          {% if states.media_player.livingroom_tv.state == "playing" and states.sensor.current_activity.state == "Watch DirecTV" %}true{%else%}false{%endif%}
     - service: group.set_visibility
       entity_id: group.media_player_google_home
       data_template:
         visible: >
-          {% if states.group.media_player_google_home.state == "playing" %}true{%else%}false{%endif%}
+          {% if states.media_player.google_home.state == "playing" %}true{%else%}false{%endif%}
     - service: group.set_visibility
       entity_id: group.media_player_rasplex
       data_template:
         visible: >
-          {% if states.group.media_player_rasplex.state == "playing" %}true{%else%}false{%endif%}
+          {% if states.media_player.rasplex.state == "playing" %}true{%else%}false{%endif%}
     - service: group.set_visibility
       entity_id: group.media_player_kitchen
       data_template:
         visible: >
-          {% if states.group.media_player_kitchen.state == "playing" %}true{%else%}false{%endif%}
+          {% if states.media_player.kitchen.state == "playing" %}true{%else%}false{%endif%}
     - service: group.set_visibility
       entity_id: group.media_player_bedroom
       data_template:
         visible: >
-          {% if states.group.media_player_bedroom.state == "playing" %}true{%else%}false{%endif%}
+          {% if states.media_player.bedroom.state == "playing" %}true{%else%}false{%endif%}
     - service: group.set_visibility
       entity_id: group.media_player_downstairs
       data_template:
         visible: >
-          {% if states.group.media_player_downstairs.state == "playing" %}true{%else%}false{%endif%}    
+          {% if states.media_player.downstairs.state == "playing" %}true{%else%}false{%endif%}    
     - service: group.set_visibility
       entity_id: group.media_player_party_mode
       data_template:
         visible: >
-          {% if states.group.media_player_party_mode.state == "playing" %}true{%else%}false{%endif%}
+          {% if states.media_player.party_mode.state == "playing" %}true{%else%}false{%endif%}
