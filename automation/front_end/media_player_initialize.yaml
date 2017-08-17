@@ -7,33 +7,41 @@
   action:
     - service: group.set_visibility
       entity_id: group.media_player_livingroom
-      data:
-        visible: false
+      data_template:
+        visible: >
+          {% if states.group.media_player_livingroom.state == "playing" %}true{%else%}false{%endif%}
     - service: group.set_visibility
       entity_id: group.media_player_livingroom_tv
-      data:
-        visible: false
+      data_template:
+        visible: >
+          {% if states.group.media_player_livingroom_tv.state == "playing" or states.sensor.current_activity.state == "Watch DirecTV" %}true{%else%}false{%endif%}
     - service: group.set_visibility
       entity_id: group.media_player_google_home
-      data:
-        visible: false
+      data_template:
+        visible: >
+          {% if states.group.media_player_google_home.state == "playing" %}true{%else%}false{%endif%}
     - service: group.set_visibility
       entity_id: group.media_player_rasplex
-      data:
-        visible: false
+      data_template:
+        visible: >
+          {% if states.group.media_player_rasplex.state == "playing" %}true{%else%}false{%endif%}
     - service: group.set_visibility
       entity_id: group.media_player_kitchen
-      data:
-        visible: false
+      data_template:
+        visible: >
+          {% if states.group.media_player_kitchen.state == "playing" %}true{%else%}false{%endif%}
     - service: group.set_visibility
       entity_id: group.media_player_bedroom
-      data:
-        visible: false
+      data_template:
+        visible: >
+          {% if states.group.media_player_bedroom.state == "playing" %}true{%else%}false{%endif%}
     - service: group.set_visibility
       entity_id: group.media_player_downstairs
-      data:
-        visible: false       
+      data_template:
+        visible: >
+          {% if states.group.media_player_downstairs.state == "playing" %}true{%else%}false{%endif%}    
     - service: group.set_visibility
       entity_id: group.media_player_party_mode
-      data:
-        visible: false
+      data_template:
+        visible: >
+          {% if states.group.media_player_party_mode.state == "playing" %}true{%else%}false{%endif%}
