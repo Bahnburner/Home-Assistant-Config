@@ -4,5 +4,5 @@
 - name: NOTIFIER_NAME
   platform: aws_sns
   aws_access_key_id: !secret aws_access_key_id
-  aws_secret_access_key: !aws_secret_access_key 
+  aws_secret_access_key: !secret aws_secret_access_key 
   region_name: 'us-east-1'
