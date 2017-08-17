@@ -3,6 +3,6 @@
   page_access_token: !secret facebook_token
 - name: NOTIFIER_NAME
   platform: aws_sns
-  aws_access_key_id: AKIAIBDVTML2WKQ7RZCA
-  aws_secret_access_key: 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
+  aws_access_key_id: AKIAJOSXVZOD4MS2QUAQ
+  aws_secret_access_key: 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
   region_name: 'us-east-1'
