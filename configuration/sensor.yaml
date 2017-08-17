@@ -112,7 +112,7 @@
   minimum: 1
   maximum: 3
 - platform: command_line
-  name: cpu_temperature
+  name: CPU Temperature
   scan_interval:
     seconds: 10
   command: "cat /sys/class/thermal/thermal_zone0/temp"
