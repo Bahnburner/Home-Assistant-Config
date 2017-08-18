@@ -150,7 +150,7 @@ history:
       - script.whitenoise
       - script.who_dat
       - sensor.brightness_lr
-      - sensor.brightness_pntry
+      - sensor.brightness_pantry
       - sensor.color_temp_br
       - sensor.color_temp_cl
       - sensor.color_temp_lr
