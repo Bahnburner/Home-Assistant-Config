@@ -18,7 +18,7 @@
   hide_entity: true
   trigger:
     platform: numeric_state
-    entity_id: sensor.brightness_pntry
+    entity_id: sensor.brightness_pantry
     above: 101
   condition:
     condition: or
