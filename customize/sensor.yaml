@@ -32,7 +32,7 @@ sensor.current_activity:
   hidden: false
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/harmony.png
   friendly_name: "Current Activity"
-sensor.brightness_pntry:
+sensor.brightness_pantry:
   hidden: true
 sensor.brightness_lr:
   hidden: true
