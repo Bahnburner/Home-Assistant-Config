@@ -1,8 +1,31 @@
 lock_doors:
   sequence:
+    - service: script.turn_on
+      data_template:
+        entity_id: >
+          {% if is_state("lock.front_door", "unlocked") and is_state("lock.back_door", "unlocked") %}
+            script.lock_both_doors
+          {% elif is_state("lock.front_door", "unlocked") and is_state("lock.back_door", "locked") %}
+            script.lock_front_door
+          {% elif is_state("lock.front_door", "locked") and is_state("lock.back_door", "unlocked") %}
+            script.lock_back_door
+          {% endif %}        
+
+lock_both_doors:
+  sequence:
     - service: lock.lock
       entity_id: lock.front_door
     - delay:
         seconds: 10
     - service: lock.lock
+      entity_id: lock.back_door
+
+lock_front_door:
+  sequence:
+    - service.lock.lock
+      entity_id: lock.front_door
+
+lock_back_door:
+  sequence:
+    - service.lock.lock
       entity_id: lock.back_door
