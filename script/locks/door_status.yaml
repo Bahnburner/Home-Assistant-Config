@@ -28,10 +28,13 @@ front_door_open:
         - media_player.google_home_2
       data:
         message: "Heads up, I cant lock the front door because its currently open. Please close the front door."
-    - service: lock.lock
-      entity_id: lock.back_door
     - service: input_boolean.turn_on
       entity_id: input_boolean.front_door_open
+    - condition: template
+      value_template: {{ states.lock.back_door.state == "unlocked" }}
+    - service: lock.lock
+      entity_id: lock.back_door
+
       
 back_door_open:
   sequence:
@@ -47,11 +50,13 @@ back_door_open:
         - media_player.google_home_2
       data:
         message: "Heads up, I cant lock the back door because its currently open. Please close the back door."
-    - service: lock.lock
-      entity_id: lock.front_door
     - service: input_boolean.turn_on
       entity_id: input_boolean.back_door_open
-      
+    - condition: template
+      value_template: {{ states.lock.front_door.state == "unlocked" }}
+    - service: lock.lock
+      entity_id: lock.front_door
+
 both_doors_open:
   sequence:
     - service: media_player.volume_set
