@@ -31,7 +31,7 @@ front_door_open:
     - service: input_boolean.turn_on
       entity_id: input_boolean.front_door_open
     - condition: template
-      value_template: {{ states.lock.back_door.state == "unlocked" }}
+      value_template: '{{ states.lock.back_door.state == "unlocked" }}'
     - service: lock.lock
       entity_id: lock.back_door
 
@@ -53,7 +53,7 @@ back_door_open:
     - service: input_boolean.turn_on
       entity_id: input_boolean.back_door_open
     - condition: template
-      value_template: {{ states.lock.front_door.state == "unlocked" }}
+      value_template: '{{ states.lock.front_door.state == "unlocked" }}'
     - service: lock.lock
       entity_id: lock.front_door
 
