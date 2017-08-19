@@ -22,10 +22,10 @@ lock_both_doors:
 
 lock_front_door:
   sequence:
-    - service.lock.lock
+    - service: lock.lock
       entity_id: lock.front_door
 
 lock_back_door:
   sequence:
-    - service.lock.lock
+    - service: lock.lock
       entity_id: lock.back_door
