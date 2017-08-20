@@ -159,6 +159,8 @@
       event: start
   action:
     - service: light.turn_on
-      entity_id: light.saved_brightness
+      entity_id: 
+        - light.saved_brightness
+        - light.movie_mode
       data:
         brightness: 254
