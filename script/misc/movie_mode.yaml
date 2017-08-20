@@ -1,5 +1,10 @@
 movie_mode_on:
   sequence:
+    - service: light.turn_on
+      entity_id: light.movie_mode
+      data_template:
+        brightness: 
+          '{{states.light.living_room.attributes.brightness | int}}'
     - service: light.turn_off
       entity_id:
         - light.table_lamp
@@ -21,9 +26,10 @@ movie_mode_off:
     - service: light.turn_on
       entity_id: light.living_room
       data:
-        brightness: 150
         transition: 15
       data_template:
+        brightness:
+          '{{states.light.movie_mode.attributes.brightness | int }}'
         color_temp: >
           {% if (states.sensor.time.state | round(2)) <= 05.00 %}
             500
