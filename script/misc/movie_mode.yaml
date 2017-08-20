@@ -8,10 +8,11 @@ movie_mode_on:
     - service: light.turn_off
       entity_id:
         - light.table_lamp
-        - light.cabinet_light
+        - light.cabinet_lights
         - light.recessed_lights
         - light.overhead_light
         - light.chandelier
+        - light.pantry
     - service: light.turn_on
       entity_id:
         - light.floor_lamp_left
