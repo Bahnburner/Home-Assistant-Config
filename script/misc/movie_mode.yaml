@@ -13,6 +13,8 @@ movie_mode_on:
         - light.overhead_light
         - light.chandelier
         - light.pantry
+      data:
+        transition: 15
     - service: light.turn_on
       entity_id:
         - light.floor_lamp_left
@@ -43,3 +45,9 @@ movie_mode_off:
           {% else %}
             366
           {% endif %}
+    - service: light.turn_on
+      entity_id: 
+        - light.pantry
+        - light.cabinet_lights
+      data:
+        transition: 15
