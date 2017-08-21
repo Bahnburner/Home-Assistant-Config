@@ -1,5 +1,7 @@
 good_morning:
   sequence:
+    - service: lock.unlock
+      entity_id: lock.back_door
     - service: media_player.volume_set
       entity_id: 
         - media_player.google_home
