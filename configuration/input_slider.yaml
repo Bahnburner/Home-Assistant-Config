@@ -1,10 +1,11 @@
 input_slider:
-  - harmony_dim:
-      name: Harmony Dim
-      initial: 254
-      min: 0
-      max: 254
+  - target_temp:
+      name: Target Heater Temperature Slider
+      min: 1
+      max: 30
       step: 1
+      unit_of_measurement: step  
+      icon: mdi:target
   - movie_mode:
       name: Movie Mode
       initial: 254
