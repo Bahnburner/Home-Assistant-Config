@@ -31,7 +31,7 @@
   trigger:
     - platform: state
       entity_id: sensor.current_activity
-      from: 'Watch DirecTv'
+      from: 'Watch DirecTV'
     - platform: state
       entity_id: sensor.current_activity
       to: 'PowerOff'
