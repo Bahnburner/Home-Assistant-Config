@@ -189,6 +189,7 @@ http: !include ./configuration/http.yaml
 ifttt: !include ./configuration/ifttt.yaml
 input_boolean: !include ./configuration/input_boolean.yaml
 input_select: !include ./configuration/input_select.yaml
+input_slider: !include ./configuration/input_slider.yaml
 light: !include ./configuration/light.yaml
 lock: !include ./configuration/lock.yaml
 media_player: !include ./configuration/media_player.yaml
