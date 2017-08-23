@@ -20,12 +20,12 @@
       visible: True
 
 - id: media_player_show_directv
-  alias: 'Hide Media Player Group'
+  alias: 'Show Media Player Group'
   hide_entity: true
   trigger:
     platform: state
     entity_id: sensor.current_activity
-    to: 'Watch DirecTv'
+    to: 'Watch DirecTV'
   action:
     - service: group.set_visibility
       data_template:
