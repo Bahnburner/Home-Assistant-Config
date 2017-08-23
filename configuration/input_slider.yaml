@@ -1,0 +1,13 @@
+input_slider:
+  harmony_dim:
+    name: Harmony Dim
+    initial: 254
+    min: 0
+    max: 254
+    step: 1
+  movie_mode:
+    name: Movie Mode
+    initial: 254
+    min: 0
+    max: 254
+    step: 1
