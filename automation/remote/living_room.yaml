@@ -71,7 +71,7 @@
   action:
     - service: input_slider.select_value
       entity_id: input_slider.harmony_dim
-        data_template:
+      data_template:
           value: >
             '{{states.light.living_room.attributes.brightness | int}}'
     - service: light.turn_on
