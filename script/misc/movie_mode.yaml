@@ -1,9 +1,9 @@
 movie_mode_on:
   sequence:
-    service: input_slider.select_value
-    entity_id: input_slider.movie_mode
-    data_template:
-      value: '{{states.light.living_room.attributes.brightness | int}}'
+    - service: input_slider.select_value
+      entity_id: input_slider.movie_mode
+      data_template:
+        value: '{{states.light.living_room.attributes.brightness | int}}'
     - service: light.turn_off
       entity_id:
         - light.table_lamp
