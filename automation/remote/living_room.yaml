@@ -69,8 +69,8 @@
       value_template: '{{ state.attributes.elevation }}'
       below: 12
   action:
-    - service: light.turn_on
-      entity_id: light.saved_brightness
+    service: input_slider.select_value
+    entity_id: input_slider.harmony_dim
       data_template:
         brightness: 
           '{{states.light.living_room.attributes.brightness | int}}'
@@ -139,7 +139,7 @@
     entity_id: light.living_room
     data_template:
       brightness:
-        '{{states.light.saved_brightness.attributes.brightness | int }}'
+        '{{states.input_slider.harmony_dim.state | int }}'
       color_temp: >
         {% if (states.sensor.time.state | round(2)) <= 05.00 %}
           500
