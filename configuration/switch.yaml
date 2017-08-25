@@ -16,18 +16,6 @@
       turn_off:
         - service: automation.turn_on
           entity_id: group.routines
-    switch_xbox:
-      value_template: "{{ is_state('remote.bedroom', 'Switch xbox') }}"
-      turn_on:
-        service: remote.turn_on
-        entity_id: remote.bedroom
-        data:
-          activity: 25977203
-      turn_off:
-        service: remote.turn_off
-        entity_id: remote.bedroom
-        data:
-          activity: 25977203
 - platform: mqtt
   name: 'Christmas Lights'
   state_topic: "smartthings/Christmas Lights/switch"
