@@ -1,0 +1,10 @@
+reboot:
+  sequence: 
+    - service: media_player.play_media
+      entity_id: media_player.downstairs
+      data:
+        media_content_id: "http://10.0.0.212/reboot.mp3"
+        media_content_type: "audio/mp3"
+    - delay:
+        seconds: 5
+    - service: shell_command.reboot_now
