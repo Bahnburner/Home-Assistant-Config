@@ -26,7 +26,28 @@ movie_mode_on:
 movie_mode_off:
   sequence:
     - service: light.turn_on
-      entity_id: light.living_room
+      entity_id:
+        - light.floor_lamp_left
+        - light.floor_lamp_right
+      data:
+        transition: 15
+      data_template:
+        brightness:
+          '{{states.input_slider.movie_mode.attributes.state | int }}'
+        color_temp: >
+          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+            500
+          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+            250
+          {% elif (states.sensor.time.state | round(2)) < 22.25 %}
+            366
+          {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+            500
+          {% else %}
+            366
+          {% endif %}
+    - service: light.turn_on
+      entity_id: light.table_lamp
       data:
         transition: 15
       data_template:
