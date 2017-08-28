@@ -23,7 +23,7 @@ movie_mode_on:
         color_temp: 500
         transition: 15
 
-movie_mode_on:
+movie_mode_off:
   sequence:
     - service: light.turn_on
       data:
