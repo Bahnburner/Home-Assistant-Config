@@ -2,18 +2,18 @@ media_player.google_home:
   friendly_name: 'Google Home'
 media_player.google_home_2:
   friendly_name: 'Downstairs'
-media_player.livingroom:
-  friendly_name: 'Living Room'
+#media_player.livingroom:
+#  friendly_name: 'Living Room'
 media_player.kitchen:
   friendly_name: 'Kitchen'
 media_player.kitchen_2:
   hidden: true
 media_player.directv_rid023856045325:
   friendly_name: 'DirecTV Genie'
-
 media_player.guestroom:
   friendly_name: 'Guest Room'
-
+media_player.viziocastdisplay9422:
+  friendly_name: 'Livingroom'
 media_player.guestroom_2:
   hidden: true
 media_player.galaxy_s7_edge:
