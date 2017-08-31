@@ -11,3 +11,6 @@
   port: 8080
   name: Livingroom TV
   device: 00367694C1C4
+- platform: vizio
+  host: 10.0.0.93
+  access_token: Zebdyu99si
