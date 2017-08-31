@@ -6,7 +6,7 @@
       event: start
   action:
     - service: group.set_visibility
-      entity_id: group.media_player.viziocastdisplay9422
+      entity_id: group.media_player_viziocastdisplay9422
       data_template:
         visible: >
           {% if states.media_player.viziocastdisplay9422.state == "playing" %}true{%else%}false{%endif%}
