@@ -9,9 +9,8 @@ default_view:
     - group.weather
     - group.exterior
     - group.alarm_zones
-    - group.media_player_livingroom
+    - group.media_player_viziocastdisplay9422
     - group.media_player_google_home
-    - group.media_player_rasplex
     - group.media_player_kitchen
     - group.media_player_bedroom
     - group.media_player_downstairs
@@ -40,12 +39,11 @@ media:
   name: Media Players
   entities:
     - media_player.google_home
-    - media_player.rasplex
+    - media_player.viziocastdisplay9422
     - media_player.party_mode
     - media_player.downstairs
     - media_player.kitchen
     - media_player.bedroom
-    - media_player.livingroom
     - media_player.livingroom_tv
     - media_player.mancave_tv
     - media_player.guestroom
@@ -250,16 +248,15 @@ system_monitor:
   - sensor.cpu_temperature
   - sensor.disk_use_
   - sensor.ram_use
-media_player_livingroom:
-  - media_player.livingroom
+media_player.viziocastdisplay9422:
+  - media_player.viziocastdisplay9422
 media_player_livingroom_tv:
   - media_player.livingroom_tv
 media_player_mancave_tv:
   - media_player.mancave_tv
 media_player_google_home:
   - media_player.google_home
-media_player_rasplex:
-  - media_player.rasplex
+
 media_player_kitchen:
   - media_player.kitchen
 media_player_bedroom:
