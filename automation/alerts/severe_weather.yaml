@@ -17,7 +17,7 @@
         - media_player.party_mode
       data_template: 
         message: >
-            Heads up. The National Weather Service has issued a 
+          Heads up. The National Weather Service has issued a 
           {% if states.sensor.pws_alerts.attributes.Description_TOR == "Tornado Warning" %}
             Tornado Warning
           {% elif states.sensor.pws_alerts.attributes.Description_WRN == "Severe Tunderstorm Warning" or states.sensor.pws_alerts.attributes.Description_WRN == "Winter Storm Warning" %}
