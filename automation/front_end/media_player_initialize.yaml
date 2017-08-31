@@ -6,10 +6,10 @@
       event: start
   action:
     - service: group.set_visibility
-      entity_id: group.media_player_livingroom
+      entity_id: group.media_player.viziocastdisplay9422
       data_template:
         visible: >
-          {% if states.media_player.livingroom.state == "playing" %}true{%else%}false{%endif%}
+          {% if states.media_player.viziocastdisplay9422.state == "playing" %}true{%else%}false{%endif%}
     - service: group.set_visibility
       entity_id: group.media_player_livingroom_tv
       data_template:
@@ -20,11 +20,11 @@
       data_template:
         visible: >
           {% if states.media_player.google_home.state == "playing" %}true{%else%}false{%endif%}
-    - service: group.set_visibility
-      entity_id: group.media_player_rasplex
-      data_template:
-        visible: >
-          {% if states.media_player.rasplex.state == "playing" %}true{%else%}false{%endif%}
+#    - service: group.set_visibility
+#      entity_id: group.media_player_rasplex
+#      data_template:
+#        visible: >
+#          {% if states.media_player.rasplex.state == "playing" %}true{%else%}false{%endif%}
     - service: group.set_visibility
       entity_id: group.media_player_kitchen
       data_template:
