@@ -108,6 +108,7 @@ sensor.google_home:
 sensor.viziocrave360:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/cast.png
 sensor.chromecast:
+  hidden: true
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/cast.png
 sensor.chromecast_audio:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/cast.png
