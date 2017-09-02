@@ -38,7 +38,7 @@ pause_other:
   sequence:
     - service: remote.send_command
       entity_id: remote.living_room
-      data: {"device": "35163105", "command": "Pause"}
+      data: {"device": "47158865", "command": "Pause"}
         
 unpause_directv:
   sequence:
@@ -49,4 +49,4 @@ unpause_other:
   sequence:
     - service: remote.send_command
       entity_id: remote.living_room
-      data: {"device": "35163105", "command": "Play"}
+      data: {"device": "47158865", "command": "Play"}
