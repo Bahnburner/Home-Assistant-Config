@@ -12,15 +12,11 @@
           {% if is_state("input_select.harmony", "Watch DirecTV") %}
             19594181
           {% elif is_state("input_select.harmony", "Watch Plex") %}
-            19755764
+            28102020
           {% elif is_state("input_select.harmony", "Watch Netflix") %}
-            23422788
-          {% elif is_state("input_select.harmony", "Watch Hulu") %}
-            26564988
-          {% elif is_state("input_select.harmony", "Watch Prime Video") %}
-            19752038
-          {% elif is_state("input_select.harmony", "Watch Chromecast") %}
-            19938341
+            28121828
+          {% elif is_state("input_select.harmony", "Watch Smartcast") %}
+            28101990
           {% else %}
           {% endif %}
     - service: input_select.select_option
@@ -54,12 +50,6 @@
     - platform: state
       entity_id: sensor.current_activity
       to: 'Watch Netflix'
-    - platform: state
-      entity_id: sensor.current_activity
-      to: 'Watch Hulu'
-    - platform: state
-      entity_id: sensor.current_activity
-      to: 'Watch Prime Video'
   condition: 
     - condition: state
       entity_id: light.living_room
@@ -105,12 +95,6 @@
     - platform: state
       entity_id: sensor.current_activity
       from: 'Watch Netflix'
-    - platform: state
-      entity_id: sensor.current_activity
-      from: 'Watch Prime Video'
-    - platform: state
-      entity_id: sensor.current_activity
-      from: 'Watch Hulu'      
   condition: 
     - condition: or
       conditions:
@@ -122,7 +106,7 @@
           state: 'Watch DirecTV'
         - condition: state
           entity_id: sensor.current_activity
-          state: 'Watch Chromecast'
+          state: 'Watch Smartcast'
         - condition: state
           entity_id: sensor.current_activity
           state: 'PowerOff'
