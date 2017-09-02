@@ -11,7 +11,7 @@
       - media_player.bedroom
       - media_player.livingroom
       - media_player.livingroom_tv
-#      - media_player.rasplex
+      - media_player.rasplex
     to: 'playing'
   action:
     service: group.set_visibility
