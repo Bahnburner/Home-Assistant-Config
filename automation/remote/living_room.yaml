@@ -147,3 +147,15 @@
         - light.movie_mode
       data:
         brightness: 254
+
+- alias: Harmony Cast Control - Start
+  hide_entity: true
+  trigger: 
+    - platform: state
+      entity_id: media_player.livingroom
+      to: 'playing'
+  action: 
+    - service: remote.turn_on
+      entity_id: remote.living_room
+      data:
+        activity: 28122446
