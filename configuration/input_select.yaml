@@ -3,11 +3,8 @@ harmony:
   options:
     - Select Input
     - Watch DirecTV
+    - Watch Smartcast
+    - Watch Netflix    
     - Watch Plex
-    - Watch Netflix
-    - Watch Prime Video
-    - Watch Hulu
-    - Watch Chromecast
-    - Watch Smart TV
     - Power Off
   icon: mdi:monitor
