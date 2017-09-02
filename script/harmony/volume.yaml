@@ -2,16 +2,16 @@ volume_up:
   sequence:
     - service: remote.send_command
       entity_id: remote.living_room
-      data: {"device": "35163105", "command": "VolumeUp"}
+      data: {"device": "47158865", "command": "VolumeUp"}
     - service: remote.send_command
       entity_id: remote.living_room
-      data: {"device": "35163105", "command": "VolumeUp"}
+      data: {"device": "47158865", "command": "VolumeUp"}
       
 volume_down:
   sequence:
     - service: remote.send_command
       entity_id: remote.living_room
-      data: {"device": "35163105", "command": "VolumeDown"}
+      data: {"device": "47158865", "command": "VolumeDown"}
     - service: remote.send_command
       entity_id: remote.living_room
-      data: {"device": "35163105", "command": "VolumeDown"}
+      data: {"device": "47158865", "command": "VolumeDown"}
