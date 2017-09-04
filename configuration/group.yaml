@@ -16,7 +16,7 @@ default_view:
     - group.media_player_downstairs
     - group.media_player_party_mode
     - group.media_player_livingroom_tv
-#    - group.media_player_rasplex
+    - group.media_player_rasplex
     - group.living_room
     - group.dining_room
     - group.kitchen
@@ -263,5 +263,5 @@ media_player_bedroom:
   - media_player.bedroom
 media_player_downstairs:
   - media_player.downstairs
-#media_player_rasplex:
-#  - media_player.rasplex
+media_player_rasplex:
+  - media_player.rasplex
