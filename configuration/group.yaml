@@ -48,6 +48,7 @@ media:
     - media_player.livingroom_tv
     - media_player.mancave_tv
     - media_player.guestroom
+    - media_player.rasplex
 settings:
   view: yes
   icon: mdi:settings
