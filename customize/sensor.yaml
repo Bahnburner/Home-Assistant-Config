@@ -106,7 +106,9 @@ sensor.myq:
 sensor.google_home:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/googlehome.png
 sensor.viziocrave360:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/cast.png
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/smartcast.png
+sensor.vizio_m70e3:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/smartcast.png
 sensor.chromecast:
   hidden: true
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/cast.png
