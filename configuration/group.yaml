@@ -242,6 +242,7 @@ devices:
   - sensor.chromecast
   - sensor.chromecast_audio
   - sensor.viziocrave360
+  - sensor.vizio_m70e3
   - sensor.directv_genie
   - sensor.ring
 system_monitor:
