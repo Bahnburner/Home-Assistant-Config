@@ -101,6 +101,9 @@
     viziocrave360:
       value_template: '{% if is_state("device_tracker.viziocrave360", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Vizio Crave 360' 
+    vizio_m70e3:
+      value_template: '{% if is_state("device_tracker.vizio_m70e3", "home") %}Online{% else %}Offline{% endif %}'
+      friendly_name: 'Vizio M70' 
     rasplex:
       value_template: '{% if is_state("device_tracker.rasplex", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'RasPlex'
