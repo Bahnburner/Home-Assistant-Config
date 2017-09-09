@@ -57,13 +57,13 @@
   condition:
     - condition: state
       entity_id: sensor.current_activity
-      to: 'Watch DirecTV'
+      state: 'Watch DirecTV'
     - condition: state
       entity_id: sensor.current_activity
-      to: 'Watch Plex'
+      state: 'Watch Plex'
     - condition: state
       entity_id: sensor.current_activity
-      to: 'PowerOff'
+      state: 'PowerOff'
   action:
     - service: group.set_visibility
       data_template:
