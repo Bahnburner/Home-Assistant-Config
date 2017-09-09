@@ -40,3 +40,32 @@
       data_template:
         entity_id: group.media_player_livingroom_tv
         visible: False
+
+- id: media_player_hide_smartcast
+  alias: 'Hide Media Player Group'
+  hide_entity: true
+  trigger:
+    - platform: state
+      entity_id: sensor.current_activity
+      from: 'Watch SmartCast'
+    - platform: state
+      entity_id: sensor.current_activity
+      from: 'Watch Chromecast'
+    - platform: state
+      entity_id: sensor.current_activity
+      to: 'PowerOff'
+  condition:
+    - condition: state
+      entity_id: sensor.current_activity
+      to: 'Watch DirecTV'
+    - condition: state
+      entity_id: sensor.current_activity
+      to: 'Watch Plex'
+    - condition: state
+      entity_id: sensor.current_activity
+      to: 'PowerOff'
+  action:
+    - service: group.set_visibility
+      data_template:
+        entity_id: group.media_player_livingroom
+        visible: False
