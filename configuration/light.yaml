@@ -13,7 +13,7 @@
   name: 'Recessed Lights'
   state_topic: "smartthings/Recessed Lights/switch"
   command_topic: "smartthings/Recessed Lights/switch"
-  brightness_scale: 100:
+  brightness_scale: 100
   brightness_state_topic: "smartthings/Recessed Lights/level"
   brightness_command_topic: "smartthings/Recessed Lights/level"
   payload_on: "on"
