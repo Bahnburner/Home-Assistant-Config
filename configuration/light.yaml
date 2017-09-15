@@ -20,19 +20,6 @@
   payload_off: "off"
   retain: true
 - platform: mqtt
-  name: 'Rope Light'
-  state_topic: "smartthings/Rope light/switch"
-  command_topic: "smartthings/Rope light/switch"
-  brightness_scale: 100
-  brightness_state_topic: "smartthings/Rope light/level"
-  brightness_command_topic: "smartthings/Rope light/level"
-  payload_on: "on"
-  payload_off: "off"
-  color_temp_command_topic: "smartthings/Rope light/colorTemperature"
-  color_temp_state_topic: "smartthings/Rope light/colorTemperature"
-  color_temp_value_template: >
-  {% if value>500 %}{{ ((value - 2700) / 10.857142857142857) + 157 }}{% else %}{{ ((value - 157) * 10.857142857142857) + 2700 }}{% endif %}
-- platform: mqtt
   name: 'Chandelier'
   state_topic: "smartthings/Chandelier/switch"
   command_topic: "smartthings/Chandelier/switch"
