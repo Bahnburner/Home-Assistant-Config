@@ -47,6 +47,8 @@ light.chandelier:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/smartthings.png
 light.fan:
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/smartthings.png
+light.flood_lights:
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/lightify.png
 light.exterior_front:
   hidden: true
 light.kitchen:
