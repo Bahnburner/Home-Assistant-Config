@@ -3,8 +3,8 @@
   allow_unreachable: true
   scan_interval: 10
 - platform: osramlightify
-  host: 192.168.0.50
-  allow_lightify_groups: 
+  host: 10.0.0.31
+  allow_lightify_groups: true
 - platform: mqtt
   name: 'Overhead Light'
   state_topic: "smartthings/Overhead Light/switch"
