@@ -1,18 +1,18 @@
 door_status_check:
   sequence:
-    - service: script.turn_on
-      data_template:
-        entity_id: >
-              {% if states.sensor.front_door.state == "Closed" and states.sensor.back_door.state == "Closed" %}
-                script.lock_doors
-              {% elif states.sensor.front_door.state == "Open" and states.sensor.back_door.state == "Closed" %}
-                script.front_door_open
-              {% elif states.sensor.front_door.state == "Closed" and states.sensor.back_door.state == "Open" %}
-                script.back_door_open
-              {% elif states.sensor.front_door.state == "Open" and states.sensor.back_door.state == "Open" %}
-                script.both_doors_open
-              {% else %}
-              {% endif %}
+    service: script.turn_on
+    data_template:
+      entity_id: >
+            {% if states.sensor.front_door.state == "Closed" and states.sensor.back_door.state == "Closed" %}
+              script.lock_doors
+            {% elif states.sensor.front_door.state == "Open" and states.sensor.back_door.state == "Closed" %}
+              script.front_door_open
+            {% elif states.sensor.front_door.state == "Closed" and states.sensor.back_door.state == "Open" %}
+              script.back_door_open
+            {% elif states.sensor.front_door.state == "Open" and states.sensor.back_door.state == "Open" %}
+              script.both_doors_open
+            {% else %}
+            {% endif %}
             
 front_door_open:
   sequence:
