@@ -7,6 +7,8 @@
     above: 5
   action:
     service: light.turn_off
-    entity_id: light.front_door
+    entity_id: 
+      - light.front_door
+      - light.flood_lights
     data:
       transition: 60
