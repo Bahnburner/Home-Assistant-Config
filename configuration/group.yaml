@@ -235,6 +235,7 @@ windows:
 devices:
   - sensor.huebridge
   - sensor.kevobridge
+  - sensor.lightifybridge
   - sensor.harmonyhub
   - sensor.smartthingshub
   - sensor.myq
