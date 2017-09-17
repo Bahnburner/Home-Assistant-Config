@@ -110,7 +110,7 @@
     ring:
       value_template: '{% if is_state("device_tracker.ring", "not_home") %}Offline{% elif states.sensor.doorbell_battery.state | int <= 95 and states.sensor.doorbell_battery.state != "unknown" %} {{states.sensor.doorbell_battery.state}} % {% elif is_state("device_tracker.ring", "home") %}Online{% elif states.sensor.doorbell_battery.state == "unknown" and states.device_tracker.ring.state == "home" %}Online{% endif %}'
       friendly_name: 'Ring Doorbell'
-    lightify_bridge:
+    lightifybridge:
       value_template: '{% if is_state("device_tracker.lightify_bridge", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Lightify Bridge'
 - platform: random
