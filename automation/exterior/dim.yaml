@@ -5,7 +5,9 @@
     at: '00:00:00'
   action:
     - service: light.turn_on
-      entity_id: light.front_door
+      entity_id:  
+        - light.front_door
+        - light.flood_lights
       data:
         brightness: 100
         transition: 300      
