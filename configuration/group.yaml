@@ -128,7 +128,8 @@ stairway:
   - light.stairway
 exterior:
   - light.front_door
-  - light.flood_lights
+  - light.front_floods
+  - light.rear_floods
 chromecasts:
   - media_player.livingroom
   - media_player.guestroom
