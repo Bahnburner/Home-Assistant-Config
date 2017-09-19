@@ -1,4 +1,4 @@
-- alias: Exterior Front - Brighten
+- alias: Exterior - Brighten
   hide_entity: True
   trigger:
     platform: numeric_state
@@ -9,7 +9,8 @@
     service: light.turn_on
     entity_id: 
       - light.front_door
-      - light.flood_lights
+      - light.front_floods
+      - light.rear_floods
     data:
       brightness: 254
       transition: 60
