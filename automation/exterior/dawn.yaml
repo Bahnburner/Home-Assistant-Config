@@ -9,6 +9,7 @@
     service: light.turn_off
     entity_id: 
       - light.front_door
-      - light.flood_lights
+      - light.front_floods
+      - light.rear_floods
     data:
       transition: 60
