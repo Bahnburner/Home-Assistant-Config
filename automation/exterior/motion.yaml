@@ -17,7 +17,7 @@
     - service: light.turn_on
       entity_id:  
         - light.front_door
-        - light.flood_lights
+        - light.front_floods
       data:
         brightness: 254
     - service: script.turn_on
