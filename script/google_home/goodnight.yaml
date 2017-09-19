@@ -39,7 +39,8 @@ goodnight:
       entity_id:
         - light.pantry
         - light.front_door
-        - light.flood_lights
+        - light.front_floods
+        - light.rear_floods
       data:
         brightness: 100
         transition: 15
