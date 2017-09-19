@@ -7,7 +7,9 @@ front_door_motion:
       value_template: '{{ state.attributes.elevation }}'
       below: -5
     - service: light.turn_on
-      entity_id: light.front_door
+      entity_id: 
+        - light.front_door
+        - light.front_floods
       data:
         brightness: 100
         transition: 30
