@@ -53,6 +53,9 @@ light.front_floods:
 light.rear_floods:
   friendly_name: "Rear Flood Lights"
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/lightify.png
+light.rear_floods:
+  friendly_name: "Bias Lights"
+  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/lightify.png
 light.exterior_front:
   hidden: true
 light.kitchen:
