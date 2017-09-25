@@ -33,8 +33,18 @@
         brightness: 1
     - service: light.turn_on
       entity_id: light.bias_light
-      data:
-        brightness: 175
+      data_template:
+        brightness: >
+          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+            255
+          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+            175
+          {% elif (states.sensor.time.state | round(2)) < 22.25 %}
+            175
+          {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+            255
+          {% else %}
+          {% endif %}
         transition: 10
         
 - alias: Bias Light - Off
