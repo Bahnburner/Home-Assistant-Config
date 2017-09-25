@@ -22,6 +22,12 @@ movie_mode_on:
         brightness: 60
         color_temp: 500
         transition: 15
+    - service: light.turn_on
+      entity_id: light.bias_light
+      data:
+        color_temp: 500
+        brightness: 175
+        transition: 15
 
 movie_mode_off:
   sequence:
@@ -43,11 +49,11 @@ movie_mode_off:
           {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
             250
           {% elif (states.sensor.time.state | round(2)) < 22.25 %}
-            366
+            300
           {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
             500
           {% else %}
-            366
+            300
           {% endif %}
     - service: light.turn_on
       entity_id: 
@@ -55,3 +61,21 @@ movie_mode_off:
         - light.cabinet_lights
       data:
         transition: 15
+    - service: light.turn_on
+      entity_id: light.bias_light
+      data:
+        transition: 15
+        brightness: 175
+      data_template:
+        color_temp: >
+          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+            500
+          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+            250
+          {% elif (states.sensor.time.state | round(2)) < 22.25 %}
+            300
+          {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+            500
+          {% else %}
+            300
+          {% endif %}
