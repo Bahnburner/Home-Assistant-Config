@@ -4,17 +4,10 @@
     - platform: state
       entity_id: sensor.current_activity
       from: 'PowerOff'
-    - platform: numeric_state
-      entity_id: sun.sun
-      value_template: '{{ state.attributes.elevation }}'
-      below: 12
   condition:
-    - condition: numeric_state
-      entity_id: sun.sun
-      value_template: '{{ state.attributes.elevation }}'
-      below: 12
-    - condition: template
-      value_template: '{{ states.sensor.current_activity.state != "PowerOff" }}'
+    - condition: state
+      entity_id: light.bias_light
+      state: 'on'
   action: 
     - service: light.turn_on
       entity_id: light.bias_light
