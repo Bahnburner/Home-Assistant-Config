@@ -18,7 +18,7 @@
     - service: light.turn_on
       entity_id: light.living_room
       data:
-        color_temp: 366
+        color_temp: 300
         brightness: 254
         transition: 1800
     - condition: state
@@ -27,6 +27,6 @@
     - service: light.turn_on  
       entity_id: light.master_bedroom
       data:
-        color_temp: 366
+        color_temp: 300
         brightness: 254
         transition: 1800
