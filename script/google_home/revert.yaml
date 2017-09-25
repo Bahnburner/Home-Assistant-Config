@@ -26,7 +26,7 @@ revert:
           {% if (states.sensor.time.state | round(2)) <= 05.00 %}
             500
           {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
-            250
+            200
           {% elif (states.sensor.time.state | round(2)) < 22.25 %}
             300
           {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
@@ -42,7 +42,7 @@ revert:
           {% if (states.sensor.time.state | round(2)) <= 05.00 %}
             450
           {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
-            250
+            200
           {% elif (states.sensor.time.state | round(2)) < 22.25 %}
             300
           {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
