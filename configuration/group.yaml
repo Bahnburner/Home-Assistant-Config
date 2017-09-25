@@ -155,6 +155,9 @@ routines:
   - automation.away_mode__bedroom
   - automation.away_mode__general
   - automation.bedtime__lights
+  - automation.bias_light__on
+  - automation.bias_light__off
+  - automation.bias_light__fade
   - automation.exterior_front__dawn
   - automation.exterior_front__dim
   - automation.exterior_front__dusk
