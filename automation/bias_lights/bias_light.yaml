@@ -13,8 +13,6 @@
       entity_id: sun.sun
       value_template: '{{ state.attributes.elevation }}'
       below: 12
-    - condition: template
-      value_template: '{{ states.sensor.current_activity.state != "PowerOff" }}'
   action: 
     - service: light.turn_on
       entity_id: light.bias_light
