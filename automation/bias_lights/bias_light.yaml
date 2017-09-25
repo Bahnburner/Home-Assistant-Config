@@ -1,0 +1,38 @@
+- alias: Bias Light - On
+  hide_entity: true
+  trigger:
+    - platform: state
+      entity_id: sensor.current_activity
+      from: 'PowerOff'
+    - platform: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation }}'
+      below: 12
+  condition:
+    - condition: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation }}'
+      below: 12
+    - condition: template
+      value_template: '{{ states.sensor.current_activity.state != "PowerOff" }}'
+  action: 
+    - service: light.turn_on
+      entity_id: light.bias_light
+      data_template:
+        color_temp: >
+          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+            450
+          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+            250
+          {% elif (states.sensor.time.state | round(2)) < 22.25 %}
+            300
+          {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+            450
+          {% else %}
+          {% endif %}
+        brightness: 1
+    - service: light.turn_on
+      entity_id: light.bias_light
+      data:
+        brightness: 175
+        transition: 10
