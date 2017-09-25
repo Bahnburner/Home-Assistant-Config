@@ -31,7 +31,7 @@ good_morning:
           {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
             250
           {% elif (states.sensor.time.state | round(2)) < 22.25 %}
-            366
+            300
           {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
             500
           {% else %}
