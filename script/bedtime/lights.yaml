@@ -17,7 +17,9 @@ bedtime_lights_livingroom:
     - condition: template
       value_template: '{{ states.light.floor_lamp_left.attributes.color_temp != 500 and states.light.floor_lamp_right.attributes.color_temp != 500 and states.light.table_lamp.state != "off" }}'
     - service: light.turn_on
-      entity_id: light.living_room
+      entity_id: 
+        - light.living_room
+        - light.bias_light
       data: 
         color_temp: 500
         transition: 1800
