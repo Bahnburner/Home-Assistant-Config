@@ -16,6 +16,6 @@
     service: light.turn_on
     entity_id: light.living_room
     data:
-      color_temp: 366
+      color_temp: 300
       brightness: 150
       transition: 600
