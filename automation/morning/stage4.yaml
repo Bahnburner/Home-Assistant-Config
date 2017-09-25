@@ -13,7 +13,7 @@
       entity_id: light.living_room
       state: 'on'
     - condition: template
-      value_template: '{{ states.light.living_room.attributes.color_temp == 250 }}'
+      value_template: '{{ states.light.living_room.attributes.color_temp == 200 }}'
   action:
     - service: light.turn_on
       entity_id: light.living_room
