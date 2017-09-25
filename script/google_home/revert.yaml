@@ -8,7 +8,7 @@ revert:
         - light.stairway
       data:
         brightness: 254
-        color_temp: 366
+        color_temp: 300
     - service: light.turn_off
       entity_id:
         - light.master_hallway
@@ -28,7 +28,7 @@ revert:
           {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
             250
           {% elif (states.sensor.time.state | round(2)) < 22.25 %}
-            366
+            300
           {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
             500
           {% else %}
