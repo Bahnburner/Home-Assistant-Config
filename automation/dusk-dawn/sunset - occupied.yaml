@@ -15,7 +15,7 @@
         - light.living_room
         - light.master_bedroom
       data:
-        color_temp: 366
+        color_temp: 300
         brightness: 254
         transition: 600
     - service: light.turn_on
