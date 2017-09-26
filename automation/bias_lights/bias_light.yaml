@@ -40,7 +40,6 @@
             255
           {% else %}
           {% endif %}
-        transition: 10
         
 - alias: Bias Light - Off
   hide_entity: true
