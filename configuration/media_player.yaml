@@ -14,3 +14,4 @@
 - platform: vizio
   host: 10.0.0.93
   access_token: Zebdyu99si
+  scan_interval: 5
