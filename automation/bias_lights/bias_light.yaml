@@ -7,7 +7,7 @@
   condition:
     - condition: state
       entity_id: light.bias_light
-      state: 'on'
+      state: 'off'
   action: 
     - service: light.turn_on
       entity_id: light.bias_light
