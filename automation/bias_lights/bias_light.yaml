@@ -6,10 +6,10 @@
       to: 'on'
     - platform: state
       entity_id: remote.living_room
-      state: 'on'
+      to: 'on'
     - platform: state
       entity_id: media_player.livingroom_tv
-      state: 'on'
+      to: 'on'
   condition:
     - condition: state
       entity_id: light.bias_light
