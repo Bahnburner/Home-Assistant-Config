@@ -2,8 +2,8 @@
   hide_entity: true
   trigger:
     - platform: state
-      entity_id: sensor.current_activity
-      from: 'PowerOff'
+      entity_id: media_player.vizio_smartcast
+      to: 'on'
   condition:
     - condition: state
       entity_id: light.bias_light
@@ -44,8 +44,8 @@
   hide_entity: true
   trigger:
     - platform: state
-      entity_id: sensor.current_activity
-      to: 'PowerOff'
+      entity_id: media_player.vizio_smartcast
+      to: 'off'
   condition:
     - condition: state
       entity_id: light.bias_light
