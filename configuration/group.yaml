@@ -49,7 +49,6 @@ media:
     - media_player.mancave_tv
     - media_player.guestroom
     - media_player.rasplex
-    - media_player.vizio_smartcast
 settings:
   view: yes
   icon: mdi:settings
