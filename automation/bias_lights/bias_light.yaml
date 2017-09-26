@@ -29,10 +29,6 @@
             500
           {% else %}
           {% endif %}
-        brightness: 1
-    - service: light.turn_on
-      entity_id: light.bias_light
-      data_template:
         brightness: >
           {% if (states.sensor.time.state | round(2)) <= 05.00 %}
             255
