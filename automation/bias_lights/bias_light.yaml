@@ -4,6 +4,12 @@
     - platform: state
       entity_id: media_player.vizio_smartcast
       to: 'on'
+    - platform: state
+      entity_id: remote.living_room
+      state: 'on'
+    - platform: state
+      entity_id: media_player.livingroom_tv
+      state: 'on'
   condition:
     - condition: state
       entity_id: light.bias_light
@@ -45,6 +51,12 @@
   trigger:
     - platform: state
       entity_id: media_player.vizio_smartcast
+      to: 'off'
+    - platform: state
+      entity_id: media_player.vizio_smartcast
+      to: 'unknown'
+    - platform: state
+      entity_id: remote.living_room
       to: 'off'
   condition:
     - condition: state
