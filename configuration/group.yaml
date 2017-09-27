@@ -158,6 +158,7 @@ routines:
   - automation.bias_light__on
   - automation.bias_light__off
   - automation.bias_light__fade
+  - automation.evening__lights
   - automation.exterior_front__dawn
   - automation.exterior_front__dim
   - automation.exterior_front__dusk
