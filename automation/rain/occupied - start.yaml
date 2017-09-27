@@ -33,8 +33,15 @@
         transition: 60
       data_template:
         color_temp: >
-          {% if (states.sensor.time.state | round(2)) <= 09.50 %}
+          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+            500
+          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
             200
-          {% else %}
+          {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+            500
+          {% elif states.sun.sun.attributes.elevation < 5 %}
+            366
+          {% elif (states.sensor.time.state | round(2)) > 9.50 %}
             300
+          {% else %}
           {% endif %}
