@@ -10,7 +10,7 @@
     - condition: numeric_state
       entity_id: sun.sun
       value_template: '{{ state.attributes.elevation }}'
-      above: 12
+      above: 8
     - condition: state
       entity_id: group.family
       state: 'not_home'
