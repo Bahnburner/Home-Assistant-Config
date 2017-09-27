@@ -59,12 +59,13 @@ movie_mode_off:
             500
           {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
             200
-          {% elif (states.sensor.time.state | round(2)) < 22.25 %}
-            300
           {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
             500
-          {% else %}
+          {% elif states.sun.sun.attributes.elevation < 8 %}
+            366
+          {% elif (states.sensor.time.state | round(2)) > 9.50 %}
             300
+          {% else %}
           {% endif %}
     - service: light.turn_on
       entity_id: 
@@ -95,7 +96,7 @@ movie_mode_off:
             200
           {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
             500
-          {% elif states.sun.sun.attributes.elevation < 5 %}
+          {% elif states.sun.sun.attributes.elevation < 8 %}
             300
           {% elif (states.sensor.time.state | round(2)) > 9.50 %}
             250
