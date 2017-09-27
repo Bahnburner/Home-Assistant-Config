@@ -1,0 +1,44 @@
+evening_lights_livingroom:
+  sequence:
+    - condition: template
+      value_template: '{{ states.light.floor_lamp_left.attributes.color_temp != 500 and states.light.floor_lamp_right.attributes.color_temp != 500 and states.light.table_lamp.state != "off" }}'
+    - service: light.turn_on
+      entity_id: light.living_room
+      data: 
+        color_temp: 366
+        transition: 300
+    - condition: state
+      entity_id: light.bias_light
+      state: 'on'
+    - service: light.turn_on
+      entity_id: light.bias_light
+      data: 
+        color_temp: 300
+        transition: 1800
+      data_template:
+        brightness: >
+          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+            255
+          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+            175
+          {% elif (states.sensor.time.state | round(2)) < 22.25 %}
+            175
+          {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+            255
+          {% else %}
+          {% endif %}
+          
+          
+bedtime_lights_bedroom:
+  sequence:
+    - condition: state
+      entity_id: group.tristal
+      state: 'home'
+    - condition: state
+      entity_id: light.master_bedroom
+      state: 'on'
+    - service: light.turn_on
+      entity_id: light.master_bedroom
+      data:
+        color_temp: 366
+        transition: 60
