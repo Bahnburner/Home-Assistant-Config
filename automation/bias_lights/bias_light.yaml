@@ -20,7 +20,7 @@
       data_template:
         color_temp: >
           {% if (states.sensor.time.state | round(2)) <= 05.00 %}
-            450
+            500
           {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
             200
           {% elif (states.sensor.time.state | round(2)) <= 18.00 %}
