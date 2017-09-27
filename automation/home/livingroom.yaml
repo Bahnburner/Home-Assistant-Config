@@ -6,10 +6,13 @@
     from: 'not_home'
     to: 'home'
   condition:
-    condition: numeric_state
-    entity_id: sun.sun
-    value_template: '{{ state.attributes.elevation }}'
-    below: 12
+    - condition: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation }}'
+      below: 12
+    - condition: state
+      entity_id: binary_sensor.rain
+      state: 'on'
   action:
     - service: light.turn_on
       entity_id: light.living_room
