@@ -21,10 +21,11 @@
             500
           {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
             200
-          {% elif (states.sensor.time.state | round(2)) < 22.25 %}
+          {% elif (states.sensor.time.state | round(2)) <= 18.00 %}
             300
           {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
             500
+          {% elif states.sun.sun.attributes.elevation < 5 %}
+            366
           {% else %}
-            300
           {% endif %}
