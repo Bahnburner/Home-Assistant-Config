@@ -23,6 +23,8 @@
             450
           {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
             200
+          {% elif (states.sensor.time.state | round(2)) <= 18.00 %}
+            250
           {% elif (states.sensor.time.state | round(2)) < 22.25 %}
             300
           {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
@@ -81,6 +83,6 @@
     - service: light.turn_on  
       entity_id: light.bias_light
       data:
-        color_temp: 300
+        color_temp: 250
         brightness: 254
         transition: 1800
