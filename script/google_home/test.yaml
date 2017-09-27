@@ -1,4 +1,4 @@
-good_morning:
+test:
   sequence:   
    - service: tts.google_say
       entity_id:
