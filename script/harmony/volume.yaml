@@ -1,17 +1,13 @@
 volume_up:
   sequence:
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data: {"device": "47158865", "command": "VolumeUp"}
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data: {"device": "47158865", "command": "VolumeUp"}
+    - service: media_player.volume_up
+      entity_id: media_player.vizio_smartcast
+    - service: media_player.volume_up
+      entity_id: media_player.vizio_smartcast
       
 volume_down:
   sequence:
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data: {"device": "47158865", "command": "VolumeDown"}
-    - service: remote.send_command
-      entity_id: remote.living_room
-      data: {"device": "47158865", "command": "VolumeDown"}
+    - service: media_player.volume_down
+      entity_id: media_player.vizio_smartcast
+    - service: media_player.volume_down
+      entity_id: media_player.vizio_smartcast
