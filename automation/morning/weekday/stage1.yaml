@@ -23,6 +23,6 @@
     - service: light.turn_on
       entity_id: light.master_bedroom
       data:
-        color_temp: 200
+        color_temp: 500
         brightness: 50
         transition: 60
