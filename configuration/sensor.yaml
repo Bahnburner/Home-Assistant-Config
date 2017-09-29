@@ -141,4 +141,6 @@
 - platform: mqtt
   state_topic: "smartthings/Front Door/battery"
   name: "Doorbell Battery"
-  unit_of_measurement: "%"
+  unit_of_measurement: "%
+- platform: dnsip
+  scan_interval: 300
