@@ -1,0 +1,12 @@
+- alias: IP address changed
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: sensor.myipopendnscom
+  action:
+    service: notify.hidden_ridge
+    data:
+      target:
+        - !secret tristans_phone_number
+    data:
+      message: "Your IP address has changed. Please update DNS records."
