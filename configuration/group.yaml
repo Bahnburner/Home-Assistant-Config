@@ -177,6 +177,7 @@ routines:
   - automation.home_mode__general
   - automation.home_mode__livingroom
   - automation.input_boolean_off
+  - automatoin.ip_address_changed
   - automation.kitchen_uplighting__off
   - automation.kitchen_uplighting__weekdays
   - automation.kitchen_uplighting__weekends
