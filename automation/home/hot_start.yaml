@@ -1,0 +1,23 @@
+
+- alias: Home Mode - Hot Start
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: group.family
+    from: 'work'
+    to: 'not_home'
+  condition:
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+    - condition: time
+      after: '16:00:00'
+  action:
+    - service: climate.set_away_mode
+      entity_id: climate.downstairs
+      data:
+        away_mode: false
