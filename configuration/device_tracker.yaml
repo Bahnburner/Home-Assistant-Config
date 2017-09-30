@@ -10,4 +10,4 @@
   password: !secret router_pass
   track_new_devices: false
   consider_home: 300
-- platform: locative
+
