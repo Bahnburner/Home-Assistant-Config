@@ -61,6 +61,7 @@ settings:
 tristans_phone:
   - device_tracker.tristans_phone_wifi
   - device_tracker.tristans_phone_bt
+  - device_tracker.d9d77886f788b4b9
 crystals_phone:
   - device_tracker.crystals_phone_wifi
   - device_tracker.crystals_phone_bt
