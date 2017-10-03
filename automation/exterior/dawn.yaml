@@ -6,10 +6,12 @@
     value_template: '{{ state.attributes.elevation }}'
     above: 8
   action:
-    service: light.turn_off
-    entity_id: 
-      - light.front_door
-      - light.front_floods
-      - light.rear_floods
-    data:
-      transition: 60
+    - service: automation.turn_off
+      entity_id: automation.exterior_front__dim
+    - service: light.turn_off
+      entity_id: 
+        - light.front_door
+        - light.front_floods
+        - light.rear_floods
+      data:
+        transition: 60
