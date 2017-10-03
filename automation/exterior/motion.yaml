@@ -11,6 +11,8 @@
       entity_id: sun.sun
       value_template: '{{ state.attributes.elevation }}'
       below: 0
+    - condition: time
+      after: '00:00:00'
   action:
     - service: script.turn_off
       entity_id: script.front_door_motion
