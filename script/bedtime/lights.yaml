@@ -21,6 +21,9 @@ bedtime_lights_bedroom:
 
 bedtime_lights_livingroom:
   sequence:
+    - condition: state
+      entity_id: group.family
+      state: 'home'
     - condition: template
       value_template: '{{ states.light.floor_lamp_left.attributes.color_temp != 500 and states.light.floor_lamp_right.attributes.color_temp != 500 and states.light.table_lamp.state != "off" }}'
     - service: light.turn_on
