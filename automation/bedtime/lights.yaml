@@ -3,13 +3,6 @@
   trigger:
     platform: time
     at: '22:15:00'
-  condition:
-    - condition: state
-      entity_id: group.family
-      state: 'home'
-    - condition: state
-      entity_id: light.living_room
-      state: 'on'
   action: 
     - service: script.bedtime_lights_bedroom
     - service: script.bedtime_lights_livingroom
