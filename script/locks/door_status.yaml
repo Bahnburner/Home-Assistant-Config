@@ -18,14 +18,12 @@ front_door_open:
   sequence:
     - service: media_player.volume_set
       entity_id: 
-        - media_player.google_home
         - media_player.downstairs
       data: 
         volume_level: 0.5
     - service: tts.google_say
       entity_id:
         - media_player.downstairs
-        - media_player.google_home_2
       data:
         message: "Heads up, I cant lock the front door because its currently open. Please close the front door."
     - service: input_boolean.turn_on
@@ -40,14 +38,12 @@ back_door_open:
   sequence:
     - service: media_player.volume_set
       entity_id: 
-        - media_player.google_home
         - media_player.downstairs
       data: 
         volume_level: 0.5
     - service: tts.google_say
       entity_id:
         - media_player.downstairs
-        - media_player.google_home_2
       data:
         message: "Heads up, I cant lock the back door because its currently open. Please close the back door."
     - service: input_boolean.turn_on
@@ -61,14 +57,12 @@ both_doors_open:
   sequence:
     - service: media_player.volume_set
       entity_id: 
-        - media_player.google_home
         - media_player.downstairs
       data: 
         volume_level: 0.5
     - service: tts.google_say
       entity_id:
         - media_player.downstairs
-        - media_player.google_home_2
       data:
         message: "Heads up, I cant lock the doors because theyre currently open. Please close both doors."
     - service: input_boolean.turn_on
