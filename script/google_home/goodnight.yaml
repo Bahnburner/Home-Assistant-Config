@@ -103,8 +103,8 @@ goodnight_bedroom:
         transition: 30
       data_template:
         brightness: > 
-          {% if states.light.master_bedroom.state == 'off' %}
-            5
+          {% if states.light.master_bedroom.state == 'off' or states.light.master_bedroom.attributes.brightness < 50 %}
+            50
           {% else %}
             {{ states.light.master_bedroom.attributes.brightness }}
           {% endif %}
