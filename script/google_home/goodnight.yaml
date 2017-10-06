@@ -96,11 +96,15 @@ goodnight_livingroom:
 
 goodnight_bedroom:
   sequence: 
-    - condition: state
-      entity_id: light.master_bedroom
-      state: 'on'
     - service: light.turn_on
       entity_id: light.master_bedroom
       data:
         color_temp: 500
         transition: 30
+      data_template:
+        brightness: > 
+          {% if states.light.master_bedroom.state == 'off' %}
+            5
+          {% else %}
+            {{ states.light.master_bedroom.attributes.brightness }}
+          {% endif %}
