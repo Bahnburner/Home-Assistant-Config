@@ -1,7 +1,7 @@
 movie_mode_on:
   sequence:
-    - service: input_slider.select_value
-      entity_id: input_slider.movie_mode
+    - service: input_number.select_value
+      entity_id: input_number.movie_mode
       data_template:
         value: '{{states.light.living_room.attributes.brightness | int}}'
     - service: light.turn_off
@@ -47,13 +47,13 @@ movie_mode_off:
         transition: 15
       data_template:
         entity_id: >
-          {% if states.input_slider.movie_mode.state | int == (states.light.floor_lamp_left.attributes.brightness | int + states.light.floor_lamp_right.attributes.brightness | int) /2%}
+          {% if states.input_number.movie_mode.state | int == (states.light.floor_lamp_left.attributes.brightness | int + states.light.floor_lamp_right.attributes.brightness | int) /2%}
             light.table_lamp
           {% else %}
             light.living_room
           {% endif %}
         brightness:
-          '{{ states.input_slider.movie_mode.state | int }}'
+          '{{ states.input_number.movie_mode.state | int }}'
         color_temp: >
           {% if (states.sensor.time.state | round(2)) <= 05.00 %}
             500
