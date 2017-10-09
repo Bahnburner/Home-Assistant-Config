@@ -1,0 +1,4 @@
+intent_script:
+  Temperature:
+    speech:
+      text: The temperature at home is {{ states('sensor.home_temp') }} degrees
