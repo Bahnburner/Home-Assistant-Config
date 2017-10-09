@@ -182,6 +182,7 @@ recorder:
 sun:
 updater:
 
+apiai: !include ./configuration/apiai.yaml
 automation: !include_dir_merge_list automation
 binary_sensor: !include ./configuration/binary_sensor.yaml
 climate: !include ./configuration/climate.yaml
