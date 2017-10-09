@@ -1,4 +1,4 @@
 intent_script:
   Temperature:
     speech:
-      text: The temperature at home is {{ states('sensor.downstairs_thermostat_temperature') }} degrees
+      text: The temperature at home is {{ states('sensor.downstairs_thermostat_temperature') }} degrees.
