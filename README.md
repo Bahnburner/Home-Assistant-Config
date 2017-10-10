@@ -11,7 +11,7 @@
 <li>Nest Smoke Alarms</li>
 <li>Presence detection <i>via Asus-WRT</i></li>
 <li>Google Home</li>
-<li>Google Chromecasts, Google Cast sisplays and Google Cast speakers</li>
+<li>Google Chromecasts, Google Cast displays and Google Cast speakers</li>
 <li>Logitech Harmony Ultimate</li>
 <li>Kwikset Kevo deadbolts <i>using unofficial API</i></li>
 <li>Chamberlain MyQ Garage door opener</li>
