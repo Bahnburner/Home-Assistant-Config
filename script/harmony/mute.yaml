@@ -2,4 +2,5 @@ mute:
   sequence:
     - service: media_player.volume_mute
       entity_id: media_player.vizio_smartcast
-      is_volume_muted: true
+      data: 
+        is_volume_muted: true
