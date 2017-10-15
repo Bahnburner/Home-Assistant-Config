@@ -1,7 +1,19 @@
 who_dat:
   sequence:
+    - service: media_player.volume_mute
+      entity_id: media_player.vizio_smartcast
+      data: 
+        is_volume_muted: true
     - service: media_player.play_media
       entity_id: media_player.downstairs
       data:
         media_content_id: "http://wreckage.johndenverschoolofflight.com/hass/Halftime.mp3"
         media_content_type: "audio/mp3"  
+    - delay: 
+        seconds 60
+    - service: media_player.media_stop
+      entity_id: media_player.downstairs
+    - service: media_player.volume_mute
+      entity_id: media_player.vizio_smartcast
+      data: 
+        is_volume_muted: true
