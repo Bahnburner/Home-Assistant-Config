@@ -4,5 +4,5 @@ trusted_networks:
    - 10.0.0.0/24
 ip_ban_enabled: True
 login_attempts_threshold: 3
-#ssl_certificate: /etc/letsencrypt/live/smrtho.us/fullchain.pem
-#ssl_key: /etc/letsencrypt/live/smrtho.us/privkey.pem
+ssl_certificate: /etc/letsencrypt/live/smrtho.us/fullchain.pem
+ssl_key: /etc/letsencrypt/live/smrtho.us/privkey.pem
