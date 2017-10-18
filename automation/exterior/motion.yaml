@@ -6,7 +6,7 @@
     to: 'on'
   condition:
     - condition: template
-      value_template: '{{ states.light.front_door.attributes.brightness >= 100 }}'
+      value_template: '{{ states.light.front_door.attributes.brightness <= 100 }}'
     - condition: numeric_state
       entity_id: sun.sun
       value_template: '{{ state.attributes.elevation }}'
