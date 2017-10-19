@@ -1,8 +1,8 @@
 lock.front_door:
   icon: mdi:key-variant
   friendly_name: 'Front Door'
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/kevo.png  
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/kevo.png  
 lock.back_door:
   icon: mdi:key-variant
   friendly_name: 'Back Door'
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/kevo.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/kevo.png
