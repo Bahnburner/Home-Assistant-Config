@@ -1,11 +1,5 @@
 bedtime_lights_bedroom:
   sequence: 
-    - condition: state
-      entity_id: group.tristal
-      state: 'home'
-    - condition: state
-      entity_id: light.master_bedroom
-      state: 'on'
     - service: light.turn_on
       entity_id: light.master_bedroom
       data:
@@ -16,7 +10,7 @@ bedtime_lights_bedroom:
           {% if states.light.master_bedroom.attributes.brightness >= 150 %}
             150
           {% else %}
-            {{ states.light.master_bedroom.attributes.brightness }}
+            {{ states.light.master_bedroom.attributes.brightness | int }}
           {% endif %}
 
 bedtime_lights_livingroom:
