@@ -30,7 +30,7 @@ sensor.harmony_living_room:
   hidden: true
 sensor.current_activity:
   hidden: false
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/harmony.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/harmony.png
   friendly_name: "Current Activity"
 sensor.brightness_pantry:
   hidden: true
@@ -80,49 +80,49 @@ sensor.drive_time_to_work:
   hidden: true
 sensor.protect_down:
   friendly_name: "Protect"
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/nestprotect.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/nestprotect.png
 sensor.protect_kitchen:
   friendly_name: "Protect"
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/nestprotect.png  
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/nestprotect.png  
 sensor.protect_up:
   friendly_name: "Protect"
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/nestprotect.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/nestprotect.png
 sensor.whitenoise:
   hidden: true
 sensor.pws_alerts:
   hidden: true
 sensor.huebridge:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/hue.png
 sensor.kevobridge:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/kevo.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/kevo.png
 sensor.harmonyhub:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/harmony.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/harmony.png
 sensor.smartthingshub:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/smartthings.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/smartthings.png
 sensor.macmini:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/plex.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/plex.png
 sensor.myq:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/myq.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/myq.png
 sensor.google_home:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/googlehome.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/googlehome.png
 sensor.viziocrave360:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/smartcast.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/smartcast.png
 sensor.vizio_m70e3:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/smartcast.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/smartcast.png
 sensor.chromecast:
   hidden: true
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/cast.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/cast.png
 sensor.chromecast_audio:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/cast.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/cast.png
 sensor.directv_genie:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/directv.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/directv.png
 sensor.rasplex:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/plex.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/plex.png
 sensor.ring:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/ring.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/ring.png
   friendly_name: 'Ring Doorbell'
 sensor.lightifybridge:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/lightify.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/lightify.png
 sensor.hass_update_available:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hass.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/hass.png
   hidden: true
