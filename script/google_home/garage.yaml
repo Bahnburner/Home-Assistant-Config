@@ -1,9 +1,9 @@
-close_the_garage:
+close_garage:
   sequence:
     service: cover.close_cover
     entity_id: cover.garage_door_opener
 
-open_the_garage:
+open_garage:
   sequence:
     - condition: state
       entity_id: group.family
