@@ -1,5 +1,5 @@
 bedtime_lights_bedroom:
-  sequence:
+  sequence: 
     - condition: state
       entity_id: group.tristal
       state: 'home'
@@ -11,7 +11,7 @@ bedtime_lights_bedroom:
       data:
         color_temp: 500
         transition: 60
-      data_template:  
+      data_template:
         brightness: >
           {% if states.light.master_bedroom.attributes.brightness >= 150 %}
             150
