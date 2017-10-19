@@ -5,13 +5,7 @@ bedtime_lights_bedroom:
       data:
         color_temp: 500
         transition: 60
-      data_template:
-        brightness: >
-          {% if states.light.master_bedroom.attributes.brightness >= 150 %}
-            150
-          {% else %}
-            {{ states.light.master_bedroom.attributes.brightness | int }}
-          {% endif %}
+
 
 bedtime_lights_livingroom:
   sequence:
