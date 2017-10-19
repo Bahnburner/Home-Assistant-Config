@@ -1,4 +1,4 @@
-- name: Hidden Ridge
+- name: messenger_notifications
   platform: facebook
   page_access_token: !secret facebook_token
 #- name: Amazon SMS
@@ -6,3 +6,7 @@
 #  aws_access_key_id: !secret aws_access_key_id
 #  aws_secret_access_key: !secret aws_secret_access_key 
 #  region_name: 'us-east-1'
+- name: chrome_notifications
+  platform: html5
+  gcm_api_key: 'gcm-sender-key'
+  gcm_sender_id: 'gcm-sender-id'
