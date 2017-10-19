@@ -18,7 +18,7 @@ evening_lights_livingroom:
         brightness: 175
           
           
-bedtime_lights_bedroom:
+evening_lights_bedroom:
   sequence:
     - condition: state
       entity_id: group.tristal
