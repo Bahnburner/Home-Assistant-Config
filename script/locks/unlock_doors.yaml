@@ -1,5 +1,8 @@
 unlock_doors:
   sequence:
+    - condition: state
+      entity_id: group.family
+      state: 'home'
     - service: lock.unlock
       entity_id: lock.front_door
     - delay:
