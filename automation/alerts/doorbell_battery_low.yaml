@@ -5,7 +5,7 @@
       entity_id: sensor.doorbell_battery
       below: 15
   action:
-    service: notify.hidden_ridge
+    service: notify.messenger_notifications
     data:
       target:
         - !secret tristans_phone_number
