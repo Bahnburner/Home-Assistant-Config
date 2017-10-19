@@ -1,61 +1,61 @@
 light.living_room:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.floor_lamp_left:
   hidden: false
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.floor_lamp_right:
   hidden: false
   entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.table_lamp:
   hidden: false
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.tristans_nightstand:
   friendly_name: "Tristan's Nightstand"
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.crystals_nightstand:
   friendly_name: "Crystal's Nightstand"
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.bedroom_floor_lamp:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.pantry:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.front_door:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.cabinet_lights:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.dining_room:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.dining_room_left:
   hidden: true
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.dining_room_right:
   hidden: true
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.foyer:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.foyer_left:
   hidden: true
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.foyer_right:
   hidden: true
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/hue.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/hue.png
 light.recessed_lights:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/smartthings.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/smartthings.png
 light.overhead_light:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/smartthings.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/smartthings.png
 light.chandelier:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/smartthings.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/smartthings.png
 light.fan:
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/smartthings.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/smartthings.png
 light.front_floods:
   friendly_name: "Front Flood Lights"
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/lightify.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/lightify.png
 light.rear_floods:
   friendly_name: "Rear Flood Lights"
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/lightify.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/lightify.png
 light.bias_light:
   friendly_name: "Bias Light"
-  entity_picture: http://wreckage.johndenverschoolofflight.com/hass/lightify.png
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/lightify.png
 light.exterior_front:
   hidden: true
 light.kitchen:
