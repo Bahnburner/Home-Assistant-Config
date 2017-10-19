@@ -11,6 +11,7 @@ default_view:
     - group.alarm_zones
     - group.media_player_livingroom
     - group.media_player_google_home
+    - group.media_player_google_home_mini
     - group.media_player_kitchen
     - group.media_player_bedroom
     - group.media_player_downstairs
@@ -40,6 +41,7 @@ media:
   name: Media Players
   entities:
     - media_player.google_home
+    - media_player.google_home_mini
     - media_player.livingroom
     - media_player.party_mode
     - media_player.downstairs
@@ -249,6 +251,7 @@ devices:
   - sensor.macmini
   - sensor.rasplex
   - sensor.google_home
+  - sensor.google_home_mini
   - sensor.chromecast
   - sensor.chromecast_audio
   - sensor.viziocrave360
@@ -268,6 +271,8 @@ media_player_mancave_tv:
   - media_player.mancave_tv
 media_player_google_home:
   - media_player.google_home
+media_player_google_home_mini:
+  - media_player.google_home_mini
 media_player_kitchen:
   - media_player.kitchen
 media_player_bedroom:
