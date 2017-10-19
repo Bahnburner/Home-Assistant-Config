@@ -1,0 +1,7 @@
+project_id: home-assistant-44f2a
+client_id: !secret assistant_client_id
+access_token: !secret assistant_access_token
+exposed_domains:
+  - lock
+  - cover
+  - script
