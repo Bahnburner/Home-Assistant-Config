@@ -41,3 +41,19 @@ lock_back_door:
   sequence:
     - service: lock.lock
       entity_id: lock.back_door
+
+unlock_front_door_remotely:
+  sequence: 
+    - condition: state
+      entity_id: group.family
+      state: 'home'
+    - service: lock.unlock
+      entity_id: lock.front_door
+
+unlock_back_door_remotely:
+  sequence: 
+    - condition: state
+      entity_id: group.family
+      state: 'home'
+    - service: lock.unlock
+      entity_id: lock.back_door
