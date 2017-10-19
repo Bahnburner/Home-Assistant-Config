@@ -4,7 +4,7 @@
     - platform: state
       entity_id: sensor.myipopendnscom
   action:
-    service: notify.hidden_ridge
+    service: notify.messenger_notifications
     data:
       target:
         - !secret tristans_phone_number
