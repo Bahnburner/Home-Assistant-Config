@@ -21,6 +21,11 @@
         visible: >
           {% if states.media_player.google_home.state == "playing" %}true{%else%}false{%endif%}
     - service: group.set_visibility
+      entity_id: group.media_player_google_home_mini
+      data_template:
+        visible: >
+          {% if states.media_player.google_home_mini.state == "playing" %}true{%else%}false{%endif%}
+    - service: group.set_visibility
       entity_id: group.media_player_rasplex
       data_template:
         visible: >
