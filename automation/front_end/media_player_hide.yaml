@@ -5,6 +5,7 @@
     platform: state
     entity_id: 
       - media_player.google_home
+      - media_player.google_home_mini
       - media_player.rasplex
       - media_player.party_mode
       - media_player.downstairs
