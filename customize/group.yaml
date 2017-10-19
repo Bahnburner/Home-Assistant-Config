@@ -51,10 +51,10 @@ group.windows:
   hidden: true
 group.tristans_phone:
   friendly_name: 'Tristan'
-  entity_picture: http://graph.facebook.com/293900462/picture?type=large
+  entity_picture: https://graph.facebook.com/293900462/picture?type=large
 group.crystals_phone:
   friendly_name: 'Crystal'
-  entity_picture: http://graph.facebook.com/38904979/picture?type=large
+  entity_picture: https://graph.facebook.com/38904979/picture?type=large
 group.devices:
   friendly_name: 'Critical Devices'
 group.system_monitor:
