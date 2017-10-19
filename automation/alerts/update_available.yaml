@@ -3,7 +3,7 @@
     platform: state
     entity_id: updater.updater
   action:
-    service: notify.hidden_ridge
+    service: notify.messenger_notifications
     data:
       target: !secret tristans_phone_number
     data_template:
