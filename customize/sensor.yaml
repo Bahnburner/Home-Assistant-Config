@@ -105,6 +105,8 @@ sensor.myq:
   entity_picture: https://wreckage.johndenverschoolofflight.com/hass/myq.png
 sensor.google_home:
   entity_picture: https://wreckage.johndenverschoolofflight.com/hass/googlehome.png
+sensor.google_home_mini:
+  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/google_home_mini.png
 sensor.viziocrave360:
   entity_picture: https://wreckage.johndenverschoolofflight.com/hass/smartcast.png
 sensor.vizio_m70e3:
