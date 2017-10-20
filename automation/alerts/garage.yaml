@@ -51,7 +51,9 @@
   hide_entity: true
   trigger:
     platform: event
-    event_type: html5_notification.close_garage
+    event_type: html5_notification.clicked
+    event_data:
+     action: close_garage
   action:
     - service: cover.close
       entity_id: cover.garage_door_opener
