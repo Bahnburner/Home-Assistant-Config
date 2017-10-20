@@ -1,19 +1,19 @@
 test:
   sequence:      
     service: notify.chrome_notifications
-    target:
-      - Tristans Phone
-      - Tristans Work Laptop
-      - Crystals Phone
     data:
       data:
-       title: "Intruder Detected"
-       actions:
-         - action: open
-           icon: "/static/icons/favicon-192x192.png"
-           title: Open Home Assistant
-         - action: activate_siren
-           title: Activate Siren  
+        target:
+          - Tristans Phone
+          - Tristans Work Laptop
+          - Crystals Phone
+        title: "Intruder Detected"
+        actions:
+          - action: open
+            icon: "/static/icons/favicon-192x192.png"
+            title: Open Home Assistant
+          - action: activate_siren
+            title: Activate Siren  
     data_template:
       message: >
         {% if  states.binary_sensor.back_door.state == 'on' %}
