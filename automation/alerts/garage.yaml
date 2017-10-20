@@ -35,17 +35,20 @@
   action:
     service: notify.chrome_notifications
     data:
-      title: "Home Assistant Alert"
-      target:
-        - Tristans Phone
-        - Crystals Phone
-      actions:
-      - action: open
-        icon: "/static/icons/favicon-192x192.png"
-        title: Open Home Assistant
-      - action: close_garage
-        title: Close Garage Door  
-      message: "The Garage Door is open."
+      data:
+        title: "Home Assistant Alert"
+        url: "https://smrtho.us"
+        message: "The Garage Door is open."
+        target:
+          - Tristans Phone
+          - Crystals Phone
+        actions:
+        - action: open
+          icon: "/static/icons/favicon-192x192.png"
+          title: Open Home Assistant
+        - action: close_garage
+          title: Close Garage Door  
+
 
 - alias: 'Close Garage Event'
   hide_entity: true
@@ -61,10 +64,12 @@
         minutes: 1
     - service: notify.chrome_notifications
       data:
-        title: "Home Assistant Alert"
-        target:
-          - Tristans Phone
-          - Crystals Phone
+        data:
+          title: "Home Assistant Alert"
+          url: "https://smrtho.us"
+          target:
+            - Tristans Phone
+            - Crystals Phone
       data_template:
         message: >
           {% if  states.cover.garage_door_opener.state == 'closed' %}
