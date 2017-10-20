@@ -29,6 +29,7 @@
         - Crystals Phone
       actions:
       - action: open
+        icon: "/static/icons/favicon-192x192.png"
         title: Open Home Assistant
       - action: activate_siren
         title: Activate Siren  
