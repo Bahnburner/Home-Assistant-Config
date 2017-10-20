@@ -27,7 +27,7 @@
           - Tristans Phone
           - Tristans Work Laptop
           - Crystals Phone
-        title: "Intruder Detected"
+        title: "Home Assistant Alert"
         url: "https://smrtho.us"
         actions:
           - action: open
