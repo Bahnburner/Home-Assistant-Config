@@ -1,0 +1,33 @@
+test:
+  sequence:      
+    service: notify.chrome_notifications
+    target:
+      - Tristans Phone
+      - Tristans Work Laptop
+      - Crystals Phone
+    data:
+      data:
+       title: "Intruder Detected"
+       actions:
+         - action: open
+           icon: "/static/icons/favicon-192x192.png"
+           title: Open Home Assistant
+         - action: activate_siren
+           title: Activate Siren  
+    data_template:
+      message: >
+        {% if  states.binary_sensor.back_door.state == 'on' %}
+          The back door has just opened unexpectedly.
+        {% elif states.binary_sensor.front_windows.state == 'on' %}
+          A front window has just opened unexpectedly.
+        {% elif states.binary_sensor.bedroom_windows.state == 'on' %}
+          A bedroom window has just opened unexpectedly.
+        {% elif states.binary_sensor.back_windows.state == 'on' %}
+          A back window has just opened unexpectedly.
+        {% elif states.binary_sensor.front_door.state == 'on' %}
+          The front door has just opened unexpectedly.
+        {% elif states.binary_sensor.garage_door.state == 'on' %}
+          The garage door has just opened unexpectedly.
+        {% else %}
+          Error.
+        {% endif %}
