@@ -3,8 +3,7 @@
     platform: state
     entity_id: updater.updater
   action:
-    service: notify.messenger_notifications
+    service: notify.chrome_notifications
     data:
-      target: !secret tristans_phone_number
-    data_template:
-      message: "A new version of Home Assistant is now available."
+      target: Tristans Phone 
+      message: "Home Assistant update available."
