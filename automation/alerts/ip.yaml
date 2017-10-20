@@ -4,8 +4,9 @@
     - platform: state
       entity_id: sensor.myipopendnscom
   action:
-    service: notify.messenger_notifications
+    service: notify.chrome_notifications
     data:
       target:
-        - !secret tristans_phone_number
-      message: "Your IP address has changed. Please update DNS records."
+        - Tristans Phone
+    data_template: >
+      message: "Your IP address has changed to "{{states.sensor.myipopendnscom.state}}". Please update dreamhost DNS records."
