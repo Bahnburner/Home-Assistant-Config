@@ -9,4 +9,5 @@
       target:
         - Tristans Phone
     data_template:
-      message: "Your IP address has changed to "{{states.sensor.myipopendnscom.state}}". Please update dreamhost DNS records."
+      message: >
+      Your IP address has changed to {{states.sensor.myipopendnscom.state}}. Please update dreamhost DNS records.
