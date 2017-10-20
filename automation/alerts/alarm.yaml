@@ -27,7 +27,6 @@
         - Tristans Phone
         - Tristans Work Laptop
         - Crystals Phone
-    data:
       actions:
       - action: open
         icon: "/static/icons/favicon-192x192.png"
