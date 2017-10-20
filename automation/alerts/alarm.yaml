@@ -31,9 +31,10 @@
         url: "https://smrtho.us"
         actions:
           - action: open
-            icon: "/static/icons/favicon-192x192.png"
+            icon: "/local/chrome.png"
             title: Open Home Assistant
           - action: activate_siren
+            icon: "/local/alarm.png"
             title: Activate Siren  
     data_template:
       message: >
