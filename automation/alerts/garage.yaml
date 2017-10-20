@@ -58,7 +58,7 @@
     - service: cover.close
       entity_id: cover.garage_door_opener
     - delay: 
-      minutes: 1
+        minutes: 1
     - service: notify.chrome_notifications
       data:
         title: "Home Assistant Alert"
