@@ -6,13 +6,13 @@
     event_type: html5_notification.activate_siren
   action:
     - service: media_player.turn_on
-      entity_id: media_player.party_mode
+      entity_id: media_player.google_home
     - service: media_player.set_volume
-      entity_id: media_player.party_mode
+      entity_id: media_player.google_home
       data: 
-        volume_level: 0.25
+        volume_level: 0.50
     - service: media_player.play_media
-      entity_id: media_player.party_mode
+      entity_id: media_player.google_home
       data:
         media_content_type: "audio/mp3" 
         media_content_id: http://10.0.0.101/storage/siren.mp3
