@@ -48,4 +48,5 @@
         {% elif states.binary_sensor.garage_door.state == 'on' %}
           The garage door has just opened unexpectedly.
         {% else %}
+          Error.
         {% endif %}
