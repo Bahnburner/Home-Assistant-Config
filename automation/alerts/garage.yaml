@@ -12,8 +12,7 @@
     state: 'home'
   action:
     - service: media_player.volume_set
-      entity_id: 
-        - media_player.downstairs
+      entity_id: media_player.downstairs
       data: 
         volume_level: 0.5
     - service: tts.google_say
