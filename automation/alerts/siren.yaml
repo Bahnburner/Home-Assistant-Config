@@ -3,7 +3,9 @@
   hide_entity: true
   trigger:
     platform: event
-    event_type: html5_notification.activate_siren
+    event_type: html5_notification.clicked
+    event_data:
+     action: activate_siren
   action:
     - service: media_player.turn_on
       entity_id: media_player.google_home
