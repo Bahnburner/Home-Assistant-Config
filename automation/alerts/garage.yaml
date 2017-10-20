@@ -1,4 +1,4 @@
-- alias: Garage door open
+- alias: Garage door open - Home
   hide_entity: True
   trigger:
     platform: state
@@ -21,7 +21,60 @@
         - media_player.downstairs
       data: 
         message: 'Heads up, the garage is currently open.'
+ 
+- alias: Garage door open - Away
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: cover.garage_door_opener
+    to: 'open'
+    for:
+      minutes: 10
+  condition:
+    condition: state
+    entity_id: group.family
+    state: 'not_home'
+  action:
+    service: notify.chrome_notifications
+    data:
+      title: "Home Assistant Alert"
+      target:
+        - Tristans Phone
+        - Crystals Phone
+      actions:
+      - action: open
+        icon: "/static/icons/favicon-192x192.png"
+        title: Open Home Assistant
+      - action: close_garage
+        title: Close Garage Door  
+      message: "The Garage Door is open."
 
+- alias: 'Close Garage Event'
+  hide_entity: true
+  trigger:
+    platform: event
+    event_type: html5_notification.close_garage
+  action:
+    - service: cover.close
+      entity_id: cover.garage_door_opener
+    - delay: 
+      minutes: 1
+    - service: notify.chrome_notifications
+      data:
+        title: "Home Assistant Alert"
+        target:
+          - Tristans Phone
+          - Crystals Phone
+      data_template:
+        message: >
+        {% if  states.cover.garage_door_opener.state == 'closed' %}
+          The garage is now closed.
+        {% elif states.cover.garage_door_opener.state == 'open' %}
+          An error occurred closing the garage. 
+        {% else %}
+          An error occurred closing the garage. 
+        {% endif %}
+    
 - alias: Garage Notify
   hide_entity: true
   trigger:
