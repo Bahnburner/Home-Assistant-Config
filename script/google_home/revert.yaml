@@ -15,7 +15,7 @@ revert:
       entity: light.foyer
   #If the TV is currently on, turn on the bias light and adjusts brightness and color temperature.     
     - service_template: >
-        {%f states.light.dining_room.state == 'on'%}
+        {%i f states.light.dining_room.state == 'on'%}
           light.turn_on
         {%else%} 
            light.turn_off
