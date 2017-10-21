@@ -1,7 +1,7 @@
 cover.garage_door_opener:
   device_class: garage
   friendly_name: 'Garage Door'
-  entity_picture: https://wreckage.johndenverschoolofflight.com/hass/myq.png
+  entity_picture: /local/myq.png
 cover.myq:
   hidden: true
 remote.living_room:
