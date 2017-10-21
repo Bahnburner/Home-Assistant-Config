@@ -55,7 +55,7 @@ light.rear_floods:
   entity_picture: /local/resources/images/devices/lightify.png
 light.bias_light:
   friendly_name: "Bias Light"
-  entity_picture: h/local/resources/images/devices/lightify.png
+  entity_picture: /local/resources/images/devices/lightify.png
 light.exterior_front:
   hidden: true
 light.kitchen:
