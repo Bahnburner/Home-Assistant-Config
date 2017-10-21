@@ -10,7 +10,7 @@
       entity_id: media_player.party_mode
       data:
         media_content_type: "audio/mp3" 
-        media_content_id: http://10.0.0.101/storage/siren.mp3
+        media_content_id: /local/siren.mp3
     - service: media_player.set_volume
       entity_id: media_player.party_mode
       data: 
