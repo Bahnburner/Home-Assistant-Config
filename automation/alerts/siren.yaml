@@ -1,5 +1,4 @@
-- id: media_player_initialize
-  alias: 'Activate Siren'
+- alias: 'Activate Siren'
   hide_entity: true
   trigger:
     platform: event
@@ -7,14 +6,12 @@
     event_data:
      action: activate_siren
   action:
-    - service: media_player.turn_on
-      entity_id: media_player.party_mode
-    - service: media_player.set_volume
-      entity_id: media_player.party_mode
-      data: 
-        volume_level: 0.90
     - service: media_player.play_media
       entity_id: media_player.party_mode
       data:
         media_content_type: "audio/mp3" 
         media_content_id: http://10.0.0.101/storage/siren.mp3
+    - service: media_player.set_volume
+      entity_id: media_player.party_mode
+      data: 
+        volume_level: 1.0
