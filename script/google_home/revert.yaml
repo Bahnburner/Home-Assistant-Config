@@ -2,9 +2,9 @@ revert:
   sequence:
   #Check if light is on, if it is, correct color temp and brightness and then turn it off
     - service_template: >
-        {%f states.light.foyer.state == 'on'%}
+        {% if states.light.foyer.state == 'on' %}
           light.turn_on
-        {%else%} 
+        {% else %} 
           light.turn_off
         {% endif %}
       entity_id: light.foyer
@@ -15,9 +15,9 @@ revert:
       entity: light.foyer
   #If the TV is currently on, turn on the bias light and adjusts brightness and color temperature.     
     - service_template: >
-        {% if states.light.dining_room.state == 'on'%}
+        {% if states.light.dining_room.state == 'on' %}
           light.turn_on
-        {%else%} 
+        {% else %} 
            light.turn_off
         {% endif %}
       entity_id: light.dining_room
