@@ -1,24 +1,70 @@
 revert:
   sequence:
-    - service: light.turn_on
-      entity_id:
-        - light.master_hallway
-        - light.foyer
-        - light.dining_room
-        - light.stairway
+  #Check if light is on, if it is, correct color temp and brightness and then turn it off
+    - service_template: >
+        {%f states.light.foyer.state == 'on'%}
+          light.turn_on
+        {%else%} 
+          light.turn_off
+        {% endif %}
+      entity_id: light.foyer
       data:
         brightness: 254
-        color_temp: 300
+        color_temp: 300  
     - service: light.turn_off
-      entity_id:
-        - light.master_hallway
-        - light.foyer
-        - light.dining_room
-        - light.stairway
+      entity: light.foyer
+  #If the TV is currently on, turn on the bias light and adjusts brightness and color temperature.     
+    - service_template: >
+        {%f states.light.dining_room.state == 'on'%}
+          light.turn_on
+        {%else%} 
+           light.turn_off
+        {% endif %}
+      entity_id: light.dining_room
+      data:
+        brightness: 254
+        color_temp: 300  
+    - service: light.turn_off
+      entity: light.dining_room      
+    - service_template: >
+        {% if states.remote.living_room.state == 'on'%}
+          light.turn_on
+        {% else %} 
+          light.turn_off
+        {% endif %}
+      entity_id: light.bias_light
+      data_template:
+        brightness: >
+          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+            255
+          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+            175
+          {% elif (states.sensor.time.state | round(2)) < 22.25 %}
+            175
+          {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+            255
+          {% else %}
+          {% endif %} 
+        color_temp: >
+          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+            500
+          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+            200
+          {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+            500
+          {% elif states.sun.sun.attributes.elevation < 8 %}
+            300
+          {% elif (states.sensor.time.state | round(2)) > 9.50 %}
+            250
+          {% else %}
+          {% endif %}
+        color_temp: 300  
+    - service: light.turn_off
+      entity: light.dining_room
+  #Turn on livingroom lights to max brightness and the appropriate color temperature. 
     - service: light.turn_on
       entity_id: 
         - light.living_room
-        - light.master_bedroom
       data: 
         brightness: 254
       data_template:
@@ -35,6 +81,59 @@ revert:
             300
           {% else %}
           {% endif %}
+  #If the bedroom lights are on, set them to the appropriate color temperature. 
+    - service_template: >
+        {% if states.light.master_bedroom.state == 'on' %}
+          light.turn_on
+        {% else %}
+          light.turn_off
+        {% endif %}
+      entity_id: 
+        - light.master_bedroom
+      data_template:
+        color_temp: >
+          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+            500
+          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+            200
+          {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+            500
+          {% elif states.sun.sun.attributes.elevation < 8 %}
+            366
+          {% elif (states.sensor.time.state | round(2)) > 9.50 %}
+            300
+          {% else %}
+          {% endif %}
+  #Fix the pantry light
+    - service: light.turn_on
+      entity_id: light.pantry
+      data_template: 
+        brightness: >
+          {% if (states.sensor.time.state | round(2)) <= 06.83 %}
+            100
+          {% elif (states.sensor.time.state | round(2)) <= 22.00 %}
+            254
+          {% elif (states.sensor.time.state | round(2)) >= 22.00 %}
+            100
+          {% else %}
+          {% endif %}
+  #Fix exterior lights
+    - service_template: > 
+        {% if states.sun.sun.attributes.elevation > 8 %}
+          light.turn_on
+        {% else %}
+          light.turn_off
+        {% endif %}
+      entity_id: 
+        - light.flood_lights
+      data_template:
+        brightness: >
+          {% if (states.sensor.time.state | round(2)) <= 06.83 %}
+            100
+          {% else %}
+            254
+          {% endif %}
+  #Fix the cabinet lights
     - service: light.turn_on
       entity_id: light.cabinet_lights
       data: 
