@@ -57,8 +57,7 @@ revert:
           {% elif (states.sensor.time.state | round(2)) > 9.50 %}
             250
           {% else %}
-          {% endif %}
-        color_temp: 300  
+          {% endif %}  
     - service: light.turn_off
       entity: light.dining_room
   #Turn on livingroom lights to max brightness and the appropriate color temperature. 
