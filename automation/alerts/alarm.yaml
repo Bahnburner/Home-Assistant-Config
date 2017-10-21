@@ -31,10 +31,10 @@
         url: "https://smrtho.us"
         actions:
           - action: open
-            icon: "/local/chrome.png"
+            icon: "/local/resources/images/notifications/chrome.png"
             title: Open Home Assistant
           - action: activate_siren
-            icon: "/local/alarm.png"
+            icon: "/local/resources/images/notifications/alarm.png"
             title: Activate Siren  
     data_template:
       message: >

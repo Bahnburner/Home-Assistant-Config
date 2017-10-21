@@ -30,7 +30,7 @@ sensor.harmony_living_room:
   hidden: true
 sensor.current_activity:
   hidden: false
-  entity_picture: /local/harmony.png
+  entity_picture: /local/resources/images/devices/harmony.png
   friendly_name: "Current Activity"
 sensor.brightness_pantry:
   hidden: true
@@ -80,51 +80,51 @@ sensor.drive_time_to_work:
   hidden: true
 sensor.protect_down:
   friendly_name: "Protect"
-  entity_picture: /local/nestprotect.png
+  entity_picture: /local/resources/images/devices/nestprotect.png
 sensor.protect_kitchen:
   friendly_name: "Protect"
-  entity_picture: /local/nestprotect.png  
+  entity_picture: /local/resources/images/devices/nestprotect.png  
 sensor.protect_up:
   friendly_name: "Protect"
-  entity_picture: /local/nestprotect.png
+  entity_picture: /local/resources/images/devices/nestprotect.png
 sensor.whitenoise:
   hidden: true
 sensor.pws_alerts:
   hidden: true
 sensor.huebridge:
-  entity_picture: /local/hue.png
+  entity_picture: /local/resources/images/devices/hue.png
 sensor.kevobridge:
-  entity_picture: /local/kevo.png
+  entity_picture: /local/resources/images/devices/kevo.png
 sensor.harmonyhub:
-  entity_picture: /local/harmony.png
+  entity_picture: /local/resources/images/devices/harmony.png
 sensor.smartthingshub:
-  entity_picture: /local/smartthings.png
+  entity_picture: /local/resources/images/devices/smartthings.png
 sensor.macmini:
-  entity_picture: /local/plex.png
+  entity_picture: /local/resources/images/devices/plex.png
 sensor.myq:
-  entity_picture: /local/myq.png
+  entity_picture: /local/resources/images/devices/myq.png
 sensor.google_home:
-  entity_picture: /local/googlehome.png
+  entity_picture: /local/resources/images/devices/googlehome.png
 sensor.google_home_mini:
-  entity_picture: /local/google_home_mini.png
+  entity_picture: /local/resources/images/devices/google_home_mini.png
 sensor.viziocrave360:
-  entity_picture: /local/smartcast.png
+  entity_picture: /local/resources/images/devices/smartcast.png
 sensor.vizio_m70e3:
-  entity_picture: /local/smartcast.png
+  entity_picture: /local/resources/images/devices/smartcast.png
 sensor.chromecast:
   hidden: true
-  entity_picture: /local/cast.png
+  entity_picture: /local/resources/images/devices/cast.png
 sensor.chromecast_audio:
-  entity_picture: /local/cast.png
+  entity_picture: /local/resources/images/devices/cast.png
 sensor.directv_genie:
-  entity_picture: /local/directv.png
+  entity_picture: /local/resources/images/devices/directv.png
 sensor.rasplex:
-  entity_picture: /local/plex.png
+  entity_picture: /local/resources/images/devices/plex.png
 sensor.ring:
-  entity_picture: /local/ring.png
+  entity_picture: /local/resources/images/devices/ring.png
   friendly_name: 'Ring Doorbell'
 sensor.lightifybridge:
-  entity_picture: /local/lightify.png
+  entity_picture: /local/resources/images/devices/lightify.png
 sensor.hass_update_available:
-  entity_picture: /local/hass.png
+  entity_picture: /local/resources/images/devices/hass.png
   hidden: true

@@ -10,7 +10,7 @@
 #    - service: media_player.play_media
 #      entity_id: media_player.downstairs
 #      data:
-#        media_content_id: "httsp://wreckage.johndenverschoolofflight.com/hass/auld_lang_syne.mp3"
+#        media_content_id: "/local/resources/audio/auld_lang_syne.mp3"
 #        media_content_type: "audio/mp3"  
 #    - service: light.turn_on
 #      entity_id:

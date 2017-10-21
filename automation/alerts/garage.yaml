@@ -44,10 +44,10 @@
           - Crystals Phone
         actions:
         - action: open
-          icon: "/local/chrome.png"
+          icon: "/local/resources/images/notifications/chrome.png"
           title: Open Home Assistant
         - action: close_garage
-          icon: "/local/garage.png"
+          icon: "/local/resources/images/notifications/garage.png"
           title: Close Garage Door  
 
 

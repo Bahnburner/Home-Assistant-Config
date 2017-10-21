@@ -7,11 +7,11 @@ switch.routines:
 #switch.door_front:
 #  icon: mdi:key-variant
 #  friendly_name: 'Front Door'
-#  entity_picture: /local/kevo.png  
+#  entity_picture: /local/resources/images/devices/kevo.png  
 #switch.door_rear:
 #  icon: mdi:key-variant
 #  friendly_name: 'Back Door'
-#  entity_picture: /local/kevo.png
+#  entity_picture: /local/resources/images/devices/kevo.png
 switch.christmas_lights:
-  entity_picture: /local/tree.png
+  entity_picture: /local/resources/images/devices/tree.png
   hidden: true

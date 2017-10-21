@@ -1,61 +1,61 @@
 light.living_room:
-  entity_picture: /local/hue.png
+  entity_picture: /local/resources/images/devices/hue.png
 light.floor_lamp_left:
   hidden: false
-  entity_picture: /local/hue.png
+  entity_picture: /local/resources/images/devices/hue.png
 light.floor_lamp_right:
   hidden: false
-  entity_picture: /local/hue.png
+  entity_picture: /local/resources/images/devices/hue.png
 light.table_lamp:
   hidden: false
-  entity_picture: /local/hue.png
+  entity_picture: /local/resources/images/devices/hue.png
 light.tristans_nightstand:
   friendly_name: "Tristan's Nightstand"
-  entity_picture: /local/hue.png
+  entity_picture: /local/resources/images/devices/hue.png
 light.crystals_nightstand:
   friendly_name: "Crystal's Nightstand"
-  entity_picture: /local/hue.png
+  entity_picture: /local/resources/images/devices/hue.png
 light.bedroom_floor_lamp:
-  entity_picture: /local/hue.png
+  entity_picture: /local/resources/images/devices/hue.png
 light.pantry:
-  entity_picture: /local/hue.png
+  entity_picture: /local/resources/images/devices/hue.png
 light.front_door:
-  entity_picture: /local/hue.png
+  entity_picture: /local/resources/images/devices/hue.png
 light.cabinet_lights:
-  entity_picture: /local/hue.png
+  entity_picture: /local/resources/images/devices/hue.png
 light.dining_room:
-  entity_picture: /local/hue.png
+  entity_picture: /local/resources/images/devices/hue.png
 light.dining_room_left:
   hidden: true
-  entity_picture: /local/hue.png
+  entity_picture: /local/resources/images/devices/hue.png
 light.dining_room_right:
   hidden: true
-  entity_picture: /local/hue.png
+  entity_picture: /local/resources/images/devices/hue.png
 light.foyer:
-  entity_picture: /local/hue.png
+  entity_picture: /local/resources/images/devices/hue.png
 light.foyer_left:
   hidden: true
-  entity_picture: /local/hue.png
+  entity_picture: /local/resources/images/devices/hue.png
 light.foyer_right:
   hidden: true
-  entity_picture: /local/hue.png
+  entity_picture: /local/resources/images/devices/hue.png
 light.recessed_lights:
-  entity_picture: /local/smartthings.png
+  entity_picture: /local/resources/images/devices/smartthings.png
 light.overhead_light:
-  entity_picture: /local/smartthings.png
+  entity_picture: /local/resources/images/devices/smartthings.png
 light.chandelier:
-  entity_picture: /local/smartthings.png
+  entity_picture: /local/resources/images/devices/smartthings.png
 light.fan:
-  entity_picture: /local/smartthings.png
+  entity_picture: /local/resources/images/devices/smartthings.png
 light.front_floods:
   friendly_name: "Front Flood Lights"
-  entity_picture: /local/lightify.png
+  entity_picture: /local/resources/images/devices/lightify.png
 light.rear_floods:
   friendly_name: "Rear Flood Lights"
-  entity_picture: /local/lightify.png
+  entity_picture: /local/resources/images/devices/lightify.png
 light.bias_light:
   friendly_name: "Bias Light"
-  entity_picture: h/local/lightify.png
+  entity_picture: h/local/resources/images/devices/lightify.png
 light.exterior_front:
   hidden: true
 light.kitchen:
