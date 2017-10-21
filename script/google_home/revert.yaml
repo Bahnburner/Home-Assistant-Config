@@ -12,7 +12,7 @@ revert:
         brightness: 254
         color_temp: 300  
     - service: light.turn_off
-      entity: light.foyer
+      entity_id: light.foyer
   #If the TV is currently on, turn on the bias light and adjusts brightness and color temperature.     
     - service_template: >
         {% if states.light.dining_room.state == 'on' %}
@@ -25,7 +25,7 @@ revert:
         brightness: 254
         color_temp: 300  
     - service: light.turn_off
-      entity: light.dining_room      
+      entity_id: light.dining_room      
     - service_template: >
         {% if states.remote.living_room.state == 'on'%}
           light.turn_on
@@ -59,7 +59,7 @@ revert:
           {% else %}
           {% endif %}  
     - service: light.turn_off
-      entity: light.dining_room
+      entity_id: light.dining_room
   #Turn on livingroom lights to max brightness and the appropriate color temperature. 
     - service: light.turn_on
       entity_id: 
