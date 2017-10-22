@@ -118,7 +118,7 @@ revert:
           {% endif %}
   #Fix exterior lights
     - service_template: > 
-        {% if states.sun.sun.attributes.elevation > 8 %}
+        {% if states.sun.sun.attributes.elevation < 8 %}
           light.turn_on
         {% else %}
           light.turn_off
