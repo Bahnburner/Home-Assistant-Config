@@ -5,11 +5,6 @@
     entity_id: group.family
     from: 'not_home'
     to: 'home'
-  condition:
-    condition: numeric_state
-    entity_id: sun.sun
-    value_template: '{{ state.attributes.elevation }}'
-    below: 8
   action:
     - service: light.turn_on
       entity_id: light.living_room
