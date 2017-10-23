@@ -45,11 +45,11 @@
     paper-slider-secondary-color: "#FFE0B2"
   dark_theme:
     # Main Stuff #
-    primary-color: "#1ABA92" # Primary (most of the UI)
+    primary-color: "#03A9F4" # Primary (most of the UI)
     primary-background-color: "#303030" # Primary background colour (dialogs, e.t.c)
     secondary-background-color: "#303030" # Secondary background colour (main UI background)
     paper-card-background-color: "#424242" # Card background colour
-    paper-item-icon-color: "#1ABA92" # Icon colour
+    paper-item-icon-color: "#03A9F4" # Icon colour
     primary-text-color: "#FFFFFF" # Primary text colour
     secondary-text-color: "rgba(255, 255, 255, 0.7)" # Secondary text colour
     disabled-text-color: "rgba(255, 255, 255, 0.5)" # Disabled text colour
@@ -62,13 +62,13 @@
     paper-grey-200: "#616161" # Listbox selected item background colour
 
     # Switches #
-    paper-toggle-button-checked-ink-color: "#1ABA92"
-    paper-toggle-button-checked-button-color: "#1ABA92"
-    paper-toggle-button-checked-bar-color: "#1ABA92"
+    paper-toggle-button-checked-ink-color: "#03A9F4"
+    paper-toggle-button-checked-button-color: "#03A9F4"
+    paper-toggle-button-checked-bar-color: "#03A9F4"
 
     # Sliders #
-    paper-slider-knob-color: "#1ABA92"
-    paper-slider-knob-start-color: "#1ABA92"
-    paper-slider-pin-color: "#1ABA92"
-    paper-slider-active-color: "#1ABA92"
+    paper-slider-knob-color: "#03A9F4"
+    paper-slider-knob-start-color: "#03A9F4"
+    paper-slider-pin-color: "#03A9F4"
+    paper-slider-active-color: "#03A9F4"
     paper-slider-secondary-color: "#33F2D8"
