@@ -5,5 +5,5 @@
     at: '07:00:00'
   action:
     service: frontend.set_theme
-    date:
+    data:
       name: 'default'
