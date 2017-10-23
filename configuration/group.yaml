@@ -259,10 +259,10 @@ devices:
   - sensor.directv_genie
   - sensor.ring
 system_monitor:
-  - sensor.cpu_use
+  - sensor.cpu
   - sensor.cpu_temperature
-  - sensor.disk_use_
-  - sensor.ram_use
+  - sensor.disk
+  - sensor.ram
 media_player_livingroom:
   - media_player.livingroom
 media_player_livingroom_tv:
