@@ -6,4 +6,4 @@
 
   action:
     service: frontend.set_theme
-    name: default
+    name: 'default'
