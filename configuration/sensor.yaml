@@ -23,6 +23,15 @@
     arrival_time: '09:15:00'
 - platform: template
   sensors:
+    cpu:
+      friendly_name: 'CPU utilization'
+      value_template: '{{ states.sensor.cpu_used.state }}%'
+    ram:
+      friendly_name: 'RAM utilization'
+      value_template: '{{ states.sensor.ram_used.state }}%'
+    disk:
+      friendly_name: 'SD utilization'
+      value_template: '{{states.sensor.disk_used_.state}}%'
     current_activity:
       friendly_name: 'Current Activity'
       value_template: '{{ states.remote.living_room.attributes.current_activity }}'
