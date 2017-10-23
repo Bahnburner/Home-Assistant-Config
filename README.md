@@ -10,7 +10,7 @@
 <li>Nest Thermostats</li>
 <li>Nest Smoke Alarms</li>
 <li>Presence detection <i>via Asus-WRT</i></li>
-<li>Google Home</li>
+<li>Google Home/Assistant</li>
 <li>Google Chromecasts, Google Cast displays and Google Cast speakers</li>
 <li>Logitech Harmony Ultimate</li>
 <li>Kwikset Kevo deadbolts <i>using unofficial API and <a href="http://github.com/gaggle331">@Gaggle331's</a> custom component</i></li>
