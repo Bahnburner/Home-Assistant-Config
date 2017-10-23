@@ -1,5 +1,7 @@
 goodnight:
   sequence:
+    - service: frontend.set_theme
+      name: dark_theme
     - service: input_boolean.turn_on
       entity_id: input_boolean.goodnight_initiated
     - service: climate.set_temperature

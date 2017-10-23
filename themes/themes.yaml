@@ -55,6 +55,7 @@
     disabled-text-color: "rgba(255, 255, 255, 0.5)" # Disabled text colour
     divider-color: "rgba(255, 255, 255, 0.12)" # Divider colour
     paper-card-header-color: "#FFFFFF" # Card header text colour
+    table-row-alternative-background-color: "#424242" # Attribute text background color
 
     # Nav Menu #
     paper-listbox-background-color: "#424242" # Listbox background colour
