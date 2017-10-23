@@ -13,12 +13,12 @@
 <li>Google Home</li>
 <li>Google Chromecasts, Google Cast displays and Google Cast speakers</li>
 <li>Logitech Harmony Ultimate</li>
-<li>Kwikset Kevo deadbolts <i>using unofficial API</i></li>
+<li>Kwikset Kevo deadbolts <i>using unofficial API and @gaggle3131's custom component</i></li>
 <li>Chamberlain MyQ Garage door opener</li>
 <li>Darksky weather forecasting</li>
 <li>Smartthings Hub <i>via MQTT</i></li>
 <li>GE Z-wave wall receipticles</li>
 <li>Wired magnetic alarm sensors <i>via RPi GPIO</i></li>
-<li>Facebook Messenger notifications</li> 
+<li>HTML5 push notifications</li> 
 
 </ul>
