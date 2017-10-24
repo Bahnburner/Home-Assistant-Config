@@ -18,4 +18,6 @@
   goodnight_initiated:
     initial: off
   away_override:
+    name: Disable Away Mode
+    mdi: run
     initial: off
