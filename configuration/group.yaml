@@ -200,8 +200,8 @@ devices:
   - sensor.directv_genie
   - sensor.ring
 system_monitor:
-  - sensor.cpu
   - sensor.cpu_temperature
+  - sensor.cpu
   - sensor.disk
   - sensor.ram
 media_player_livingroom:
