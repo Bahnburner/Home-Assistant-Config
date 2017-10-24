@@ -134,3 +134,6 @@ sensor.lightifybridge:
 sensor.hass_update_available:
   entity_picture: /local/resources/images/devices/hass.png
   hidden: true
+sensor:
+  - platform: cert_expiry
+    host: smrtho.us
