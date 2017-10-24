@@ -8,3 +8,5 @@ input_boolean.front_door_open:
   hidden: true
 input_boolean.back_door_open:
   hidden: true
+input_boolean.away_override:
+  hidden: true
