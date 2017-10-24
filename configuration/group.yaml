@@ -150,6 +150,7 @@ override:
   entities:
     - updater.updater
     - input_boolean.disable_alarm
+    - input_boolean.away_override
     - switch.vacation_mode
     - group.simulate_presence
     - switch.routines
@@ -216,7 +217,6 @@ vacation_mode:
   - automation.rain__unoccupied__stop
   - automation.sunset__unoccupied
   - automation.sunrise__unoccupied
-  - automation.away_mode__general
 inputs:
   - automation.harmony
   - automation.harmony_off
