@@ -25,14 +25,11 @@
   sensors:
     cpu:
       friendly_name: 'CPU utilization'
-      icon: mdi:speedometer
       value_template: '{{ states.sensor.cpu_used.state }}%'
     ram:
-      icon: mdi:memory
       friendly_name: 'RAM utilization'
       value_template: '{{ states.sensor.ram_used.state }}%'
     disk:
-      icon: mdi:harddisk
       friendly_name: 'SD utilization'
       value_template: '{{states.sensor.disk_used_.state}}%'
     current_activity:
