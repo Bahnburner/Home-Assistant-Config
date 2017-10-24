@@ -24,13 +24,13 @@
 - platform: template
   sensors:
     cpu:
-      friendly_name: 'CPU utilization'
+      friendly_name: 'CPU Utilization'
       value_template: '{{ states.sensor.cpu_used.state }}%'
     ram:
-      friendly_name: 'RAM utilization'
+      friendly_name: 'RAM Utilization'
       value_template: '{{ states.sensor.ram_used.state }}%'
     disk:
-      friendly_name: 'SD utilization'
+      friendly_name: 'Disk Utilization'
       value_template: '{{states.sensor.disk_used_.state}}%'
     current_activity:
       friendly_name: 'Current Activity'
