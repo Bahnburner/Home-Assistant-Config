@@ -19,5 +19,5 @@
     initial: off
   away_override:
     name: Disable Away Mode
-    mdi: run
+    icon: mdi:run
     initial: off
