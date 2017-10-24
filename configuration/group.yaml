@@ -74,7 +74,7 @@ family:
   - device_tracker.taylors_phone
   - device_tracker.donnas_phone
   - device_tracker.stephens_phone
-  - input_boolean.away_override:
+  - input_boolean.away_override
 tristal:
   - group.tristans_phone
   - group.crystals_phone
