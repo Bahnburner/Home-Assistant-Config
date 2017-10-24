@@ -13,6 +13,19 @@
     data:
       brightness: 100
       transition: 30
+      
+- alias: Overnight - Pantry Off
+  hide_entity: true
+  trigger:
+    platform: time
+    at: '00:00:00'
+  condition:
+    condition: state
+    entity_id: light.pantry
+    state: 'on'
+  action:
+    service: light.turn_off
+    entity_id: light.pantry
        
 - alias: Overnight - Pantry ReDim
   hide_entity: true
@@ -35,3 +48,20 @@
       data:
         brightness: 100
         transition: 30
+
+- alias: Overnight - Pantry ReOff
+  hide_entity: true
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.brightness_pantry
+    above: 101
+  condition:
+    condition: or
+    conditions:
+      - condition: time  
+        before: '06:50:00'
+  action:
+    - delay:
+        minutes: 5
+    - service: light.turn_off
+      entity_id: light.pantry
