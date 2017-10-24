@@ -17,3 +17,5 @@
     initial: off
   goodnight_initiated:
     initial: off
+  away_override:
+    initial: off
