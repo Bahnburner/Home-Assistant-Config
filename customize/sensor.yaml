@@ -1,3 +1,9 @@
+sensor.cpu:
+  icon: mdi:speedometer
+sensor.disk:
+  icon: mdi:harddisk
+sensor.ram:
+  icon: mdi:memory
 sun.sun:
   hidden: true
 sensor.dark_sky_icon:
