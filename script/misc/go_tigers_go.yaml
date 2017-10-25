@@ -1,7 +1,7 @@
 go_tigers_go:
   sequence:
     - service: media_player.play_media
-      entity_id: media_player.downstairs
+      entity_id: media_player.party_mode
       data:
         media_content_id: "/local/audio/GoTigersGo.mp3"
         media_content_type: "audio/mp3"        
