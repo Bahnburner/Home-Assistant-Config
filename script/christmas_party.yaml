@@ -4,7 +4,6 @@ christmas:
       entity_id: 
         - light.dining_room
         - light.master_hallway
-        - light.stairway
       data: 
         xy_color: [0.677, 0.322]
         brightness: 254
@@ -16,7 +15,7 @@ christmas:
         xy_color: [0.172, 0.735]
         brightness: 254
     - service: media_player.play_media
-      entity_id: media_player.livingroom
+      entity_id: media_player.livingroom_tv
       data:
         media_content_id: "http://hybrid.servemp3.com/storage/fireplace.mp4"
         media_content_type: "video/mp4"
