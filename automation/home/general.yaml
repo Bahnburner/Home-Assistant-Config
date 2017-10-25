@@ -18,4 +18,4 @@
         brightness: 254
     - service: script.fan_on
     - service: media_player.turn_off
-      entity_id: media_player.google_home
+      entity_id: media_player.livingroom_assistant
