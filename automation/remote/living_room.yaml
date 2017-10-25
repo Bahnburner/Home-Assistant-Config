@@ -178,7 +178,7 @@
   hide_entity: true
   trigger: 
     - platform: state
-      entity_id: media_player.livingroom
+      entity_id: media_player.livingroom_tv
       to: 'playing'
   action: 
     - service: remote.turn_on
