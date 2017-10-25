@@ -8,7 +8,7 @@
       entity_id: remote.living_room
       to: 'on'
     - platform: state
-      entity_id: media_player.livingroom_tv
+      entity_id: media_player.livingroom_directv
       to: 'on'
   condition:
     - condition: state
