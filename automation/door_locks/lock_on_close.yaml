@@ -12,14 +12,12 @@
   action:
     - service: media_player.volume_set
       entity_id: 
-        - media_player.google_home
-        - media_player.downstairs
+        - media_player.all_assistants
       data: 
         volume_level: 0.5
     - service: tts.google_say
       entity_id:
-        - media_player.downstairs
-        - media_player.google_home_2
+        - media_player.all_assistants
       data:
         message: 'Locking the front door.'
     - service: lock.lock
@@ -39,14 +37,13 @@
   action:
     - service: media_player.volume_set
       entity_id: 
-        - media_player.google_home
-        - media_player.downstairs
+        - media_player.all_assistants
+
       data: 
         volume_level: 0.5
     - service: tts.google_say
       entity_id:
-        - media_player.downstairs
-        - media_player.google_home_2
+        - media_player.all_assistants
       data:
         message: 'Locking the back door.'
     - service: lock.lock
