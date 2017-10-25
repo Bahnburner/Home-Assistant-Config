@@ -12,11 +12,11 @@
     state: 'home'
   action:
     - service: media_player.volume_set
-      entity_id: media_player.party_mode
+      entity_id: media_player.all_assistants
       data: 
         volume_level: 0.5
     - service: tts.google_say
-      entity_id: media_player.party_mode
+      entity_id: media_player.all_assistants
       data: 
         message: 'Heads up, the garage is currently open.'
  
