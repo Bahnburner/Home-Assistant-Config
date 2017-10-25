@@ -7,11 +7,11 @@
      action: activate_siren
   action:
     - service: media_player.play_media
-      entity_id: media_player.party_mode
+      entity_id: media_player.all_speakers
       data:
         media_content_type: "audio/mp3" 
         media_content_id: "/local/resources/audio/siren.mp3"
     - service: media_player.set_volume
-      entity_id: media_player.party_mode
+      entity_id: media_player.all_speakers
       data: 
         volume_level: 1.0
