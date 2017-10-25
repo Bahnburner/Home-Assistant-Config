@@ -7,9 +7,11 @@
       - media_player.livingroom_assistant
       - media_player.kitchen_assistant
       - media_player.all_speakers
+      - media_player.all_assistants
       - media_player.party_mode
       - media_player.dining_room_speaker
       - media_player.bedroom_speaker
+      - media_player.bedroom_assistant
       - media_player.livingroom_tv
       - media_player.livingroom_directv
       - media_player.rasplex
