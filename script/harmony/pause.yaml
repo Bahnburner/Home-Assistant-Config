@@ -27,7 +27,7 @@ unpause:
 pause_directv:
   sequence:
     - service: media_player.media_pause
-      entity_id: media_player.livingroom_tv
+      entity_id: media_player.livingroom_directv
 
 pause_plex:        
   sequence:
@@ -43,7 +43,7 @@ pause_other:
 unpause_directv:
   sequence:
     - service: media_player.media_play
-      entity_id: media_player.livingroom_tv
+      entity_id: media_player.livingroom_directv
 
 unpause_other:          
   sequence:
