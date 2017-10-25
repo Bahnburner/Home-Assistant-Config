@@ -4,12 +4,12 @@
 - platform: directv
   host: 10.0.0.151
   port: 8080
-  name: Mancave TV
+  name: Mancave DirecTV
   device: 0
 - platform: directv
   host: 10.0.0.151
   port: 8080
-  name: Livingroom TV
+  name: Livingroom DirecTV
   device: 00367694C1C4
 - platform: vizio
   host: 10.0.0.93
