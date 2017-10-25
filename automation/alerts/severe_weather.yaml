@@ -14,7 +14,7 @@
   action:
     - service: tts.google_say
       entity_id:
-        - media_player.party_mode
+        - media_player.all_assistants
       data_template: 
         message: >
           Heads up. The National Weather Service has issued a 
@@ -26,6 +26,6 @@
             for this area.
     - service: media_player.volume_set
       entity_id: 
-        - media_player.party_mode
+        - media_player.all_assistants
       data: 
         volume_level: 0.5
