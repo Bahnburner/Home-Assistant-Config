@@ -11,7 +11,7 @@
         visible: >
           {% if states.media_player.livingroom.state == "playing" %}true{%else%}false{%endif%}
     - service: group.set_visibility
-      entity_id: group.media_player_livingroom_tv
+      entity_id: group.media_player_livingroom_directv
       data_template:
         visible: >
           {% if states.media_player.livingroom_directv.state == "playing" and states.sensor.current_activity.state == "Watch DirecTV" %}true{%else%}false{%endif%}
