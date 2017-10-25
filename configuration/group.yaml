@@ -9,13 +9,15 @@ default_view:
     - group.weather
     - group.exterior
     - group.alarm_zones
-    - group.media_player_livingroom
-    - group.media_player_google_home
-    - group.media_player_google_home_mini
-    - group.media_player_kitchen
-    - group.media_player_bedroom
-    - group.media_player_downstairs
+    - group.media_player_livingroom_tv
+    - group.media_player_livingroom_assistant
+    - group.media_player_kitchen_assistant
+    - group.media_player_dining_room_speaker
+    - group.media_player_bedroom_speaker
+    - group.media_player_bedroom_assistant
     - group.media_player_party_mode
+    - group.media_player_all_speakers
+    - group.media_player_all_assistants
     - group.media_player_livingroom_directv
     - group.media_player_rasplex
     - group.living_room
@@ -40,16 +42,17 @@ media:
   icon: mdi:cast
   name: Media Players
   entities:
-    - media_player.google_home
-    - media_player.google_home_mini
-    - media_player.livingroom
+    - media_player.livingroom_assistant
+    - media_player.kitchen_assistant
+    - media_player.bedroom_assistant
+    - media_player.livingroom_tv
     - media_player.party_mode
-    - media_player.downstairs
-    - media_player.kitchen
-    - media_player.bedroom
+    - media_player.all_speakers
+    - media_player.dining_room_speaker
+    - media_player.bedroom_speaker
     - media_player.livingroom_directv
     - media_player.mancave_tv
-    - media_player.guestroom
+    - media_player.guestroom_tv
     - media_player.rasplex
 settings:
   view: yes
@@ -134,8 +137,8 @@ exterior:
   - light.front_floods
   - light.rear_floods
 chromecasts:
-  - media_player.livingroom
-  - media_player.guestroom
+  - media_player.livingroom_tv
+  - media_player.guestroom_tv
 weather:
 #  - sun.sun
   - sensor.dark_sky_temperature
@@ -204,21 +207,27 @@ system_monitor:
   - sensor.cpu
   - sensor.disk
   - sensor.ram
-media_player_livingroom:
-  - media_player.livingroom
 media_player_livingroom_tv:
   - media_player.livingroom_tv
+media_player_livingroom_directv:
+  - media_player.livingroom_directv
 media_player_mancave_tv:
   - media_player.mancave_tv
-media_player_google_home:
-  - media_player.google_home
-media_player_google_home_mini:
-  - media_player.google_home_mini
-media_player_kitchen:
-  - media_player.kitchen
-media_player_bedroom:
-  - media_player.bedroom
-media_player_downstairs:
-  - media_player.downstairs
+media_player_livingroom_assistant:
+  - media_player.livingroom_assistant
+media_player_kitchen_assistant:
+  - media_player.kitchen_assistant
+media_player_dining_room_speaker:
+  - media_player.dining_room_speaker
+media_player_bedroom_speaker:
+  - media_player.bedroom_speaker
+media_player_party_mode:
+  - media_player.party_mode
 media_player_rasplex:
   - media_player.rasplex
+media_player_all_speakers:
+  - media_player.all_speakers
+media_player_all_assistants:
+  - media_player.all_assistants
+media_player_bedroom_assistant:
+  - media_player.bedroom_assistant
