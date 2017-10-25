@@ -4,14 +4,15 @@
   trigger:
     platform: state
     entity_id: 
-      - media_player.google_home
-      - media_player.google_home_mini
+      - media_player.livingroom_assistant
+      - media_player.kitchen_assistant
       - media_player.rasplex
+      - media_player.all_speakers
       - media_player.party_mode
-      - media_player.downstairs
-      - media_player.kitchen
-      - media_player.bedroom
-      - media_player.livingroom
+      - media_player.dining_room_speaker
+      - media_player.bedroom_speaker
+      - media_player.bedroom_assistant
+      - media_player.livingroom_tv
       - media_player.livingroom_directv
     from: 'playing'
   action:
@@ -68,5 +69,5 @@
   action:
     - service: group.set_visibility
       data_template:
-        entity_id: group.media_player_livingroom
+        entity_id: group.media_player_livingroom_tv
         visible: False
