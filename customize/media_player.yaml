@@ -1,32 +1,8 @@
-media_player.google_home:
-  friendly_name: 'Google Home'
-media_player.google_home_2:
-  friendly_name: 'Downstairs'
-#media_player.livingroom:
-#  friendly_name: 'Living Room'
-media_player.kitchen:
-  friendly_name: 'Kitchen'
-media_player.kitchen_2:
-  hidden: true
-media_player.directv_rid023856045325:
-  friendly_name: 'DirecTV Genie'
-media_player.guestroom:
-  friendly_name: 'Guest Room'
-media_player.viziocastdisplay9422:
-  friendly_name: 'Livingroom'
-media_player.guestroom_2:
-  hidden: true
-media_player.galaxy_s7_edge:
-  hidden: true
-media_player.downstairs_2:
-  hidden: true
-media_player.plex_web_chrome:
-  hidden: true
-media_player.plex_web_safari:
-  hidden: true
-media_player.bedroom_2:
-  hidden: true
-media_player.party_mode_2:
-  hidden: true
-media_player.galaxy_s8:
-  hidden: true
+media_player.livingroom_assistant:
+  friendly_name: 'Livingroom Assistant'
+media_player.dining_room_speaker:
+  friendly_name: 'Dining Room Speaker'
+media_player.guestroom_tv:
+  friendly_name: 'Guest Room TV'
+media_player.livingroom_tv:
+  friendly_name: 'Livingroom TV'
