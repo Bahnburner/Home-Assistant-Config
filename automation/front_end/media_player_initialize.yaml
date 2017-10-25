@@ -14,7 +14,7 @@
       entity_id: group.media_player_livingroom_tv
       data_template:
         visible: >
-          {% if states.media_player.livingroom_tv.state == "playing" and states.sensor.current_activity.state == "Watch DirecTV" %}true{%else%}false{%endif%}
+          {% if states.media_player.livingroom_directv.state == "playing" and states.sensor.current_activity.state == "Watch DirecTV" %}true{%else%}false{%endif%}
     - service: group.set_visibility
       entity_id: group.media_player_google_home
       data_template:
