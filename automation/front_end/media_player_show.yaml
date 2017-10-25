@@ -30,5 +30,5 @@
   action:
     - service: group.set_visibility
       data_template:
-        entity_id: group.media_player_livingroom_tv
+        entity_id: group.media_player_livingroom_directv
         visible: true
