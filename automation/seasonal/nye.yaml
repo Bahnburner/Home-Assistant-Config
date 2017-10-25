@@ -8,7 +8,7 @@
 #    value_template: '{{ now().month == 1 and now().day == 1 }}'
 #  action:
 #    - service: media_player.play_media
-#      entity_id: media_player.downstairs
+#      entity_id: media_player.party_mode
 #      data:
 #        media_content_id: "/local/resources/audio/auld_lang_syne.mp3"
 #        media_content_type: "audio/mp3"  
@@ -18,7 +18,6 @@
 #        - light.dining_room
 #        - light.foyer
 #        - light.master_hallway
-#        - light.stairway
 #      data:
 #        effect: colorloop
 #    - delay:
