@@ -5,14 +5,14 @@ who_dat:
       data: 
         is_volume_muted: true
     - service: media_player.play_media
-      entity_id: media_player.downstairs
+      entity_id: media_player.party_mode
       data:
         media_content_id: "/local/resources/audio/Halftime.mp3"
         media_content_type: "audio/mp3"  
     - delay: 
         seconds: 60
     - service: media_player.media_stop
-      entity_id: media_player.downstairs
+      entity_id: media_player.party_mode
     - service: media_player.volume_mute
       entity_id: media_player.vizio_smartcast
       data: 
