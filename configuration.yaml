@@ -179,6 +179,13 @@ history:
       - switch.vacation_mode
       - zone.home
 logbook:
+  exclude:
+    entities:
+      - sensor.cpu
+      - sensor.disk
+      - sensor.ram
+      - sensor.air_quality
+      - sensor.rasplex
 recorder:
 #  db_url: postgres://@/hass
   purge_interval: 1
