@@ -1,0 +1,59 @@
+- alias: System temp too high
+  hide_entity: True
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.cpu_temperature
+    above: 175
+  action:
+    service: notify.chrome_notifications
+    data:
+      data:
+        title: "Home Assistant Alert"
+        url: "https://smrtho.us"
+        message: "System temperature has exceeded 175°."
+        target:
+          - Tristans Phone
+        actions:
+        - action: open
+          icon: "/local/resources/images/notifications/chrome.png"
+          title: Open Home Assistant
+        - action: restart_system
+          icon: "/local/resources/images/notifications/restart.png"
+          title: Restart System  
+          
+- alias: System CPU too high
+  hide_entity: True
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.cpu_used
+    above: 50
+    for:
+      minutes: 10
+  action:
+    service: notify.chrome_notifications
+    data:
+      data:
+        title: "Home Assistant Alert"
+        url: "https://smrtho.us"
+        message: "System CPU usage has exceeded 50% for an extended period."
+        target:
+          - Tristans Phone
+        actions:
+        - action: open
+          icon: "/local/resources/images/notifications/chrome.png"
+          title: Open Home Assistant
+        - action: restart_system
+          icon: "/local/resources/images/notifications/restart.png"
+          title: Restart System            
+          
+- alias: 'Restart System Event'
+  hide_entity: true
+  trigger:
+    platform: event
+    event_type: html5_notification.clicked
+    event_data:
+     action: restart_system
+  action:
+    - service: shell_command.reboot_now
+    
+  
