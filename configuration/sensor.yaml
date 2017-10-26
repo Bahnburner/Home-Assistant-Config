@@ -101,9 +101,12 @@
     google_home:
       value_template: '{% if is_state("device_tracker.google_home", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Google Home' 
-    google_home_mini:
-      value_template: '{% if is_state("device_tracker.google_home", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Google Home Mini'  
+    google_home_mini_kitchen:
+      value_template: '{% if is_state("device_tracker.google_home_mini_kitchen", "home") %}Online{% else %}Offline{% endif %}'
+      friendly_name: 'Google Home Mini (Kitchen)'  
+    google_home_mini_bedroom:
+      value_template: '{% if is_state("device_tracker.google_home_mini_bedroom", "home") %}Online{% else %}Offline{% endif %}'
+      friendly_name: 'Google Home Mini (Bedroom)' 
     chromecast:
       value_template: '{% if is_state("device_tracker.chromecast", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Chromecast'
