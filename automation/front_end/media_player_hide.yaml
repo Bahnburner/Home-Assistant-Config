@@ -44,6 +44,8 @@
         entity_id: group.media_player_livingroom_directv
         visible: False
 
+
+# Extra scripting because Vizio component doesn't deactivate correctly.
 - id: media_player_hide_smartcast
   alias: 'Hide Media Player Group'
   hide_entity: true
