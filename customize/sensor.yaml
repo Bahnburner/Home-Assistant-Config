@@ -111,8 +111,10 @@ sensor.myq:
   entity_picture: /local/resources/images/devices/myq.png
 sensor.google_home:
   entity_picture: /local/resources/images/devices/googlehome.png
-sensor.google_home_mini:
-  entity_picture: /local/resources/images/devices/google_home_mini.png
+sensor.google_home_mini_kitchen:
+  entity_picture: /local/resources/images/devices/google_home.png
+sensor.google_home_mini_bedroom:
+  entity_picture: /local/resources/images/devices/google_home.png
 sensor.viziocrave360:
   entity_picture: /local/resources/images/devices/smartcast.png
 sensor.vizio_m70e3:
