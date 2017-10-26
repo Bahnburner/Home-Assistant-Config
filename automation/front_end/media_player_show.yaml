@@ -22,8 +22,9 @@
       entity_id: '{{ trigger.entity_id | replace("media_player.","group.media_player_") }}'
       visible: True
 
+# Extra scripting because Directv component doesn't deactivate mini genies correctly.
 - id: media_player_show_directv
-  alias: 'Show Media Player Group'
+  alias: 'Show Media Player Group - DirecTV'
   hide_entity: true
   trigger:
     platform: state
