@@ -63,6 +63,7 @@ settings:
     - group.override
     - group.system_monitor
     - group.devices
+    - group.cast_devices
 tristans_phone:
   - device_tracker.tristans_phone_wifi
   - device_tracker.tristans_phone_bt
