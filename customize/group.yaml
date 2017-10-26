@@ -57,5 +57,7 @@ group.crystals_phone:
   entity_picture: https://graph.facebook.com/38904979/picture?type=large
 group.devices:
   friendly_name: 'Critical Devices'
+group.cast_devices:
+  friendly_name: 'Cast Devices'
 group.system_monitor:
   friendly_name: 'System Monitor'
