@@ -194,14 +194,16 @@ devices:
   - sensor.myq
   - sensor.macmini
   - sensor.rasplex
+  - sensor.directv_genie
+  - sensor.ring
+cast_devices:
   - sensor.google_home
-  - sensor.google_home_mini
+  - sensor.google_home_mini_kitchen
+  - sensor.google_home_mini_bedroom
   - sensor.chromecast
   - sensor.chromecast_audio
   - sensor.viziocrave360
   - sensor.vizio_m70e3
-  - sensor.directv_genie
-  - sensor.ring
 system_monitor:
   - sensor.cpu_temperature
   - sensor.cpu
