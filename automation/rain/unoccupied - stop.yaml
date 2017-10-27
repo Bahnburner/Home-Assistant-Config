@@ -15,9 +15,13 @@
       entity_id: group.family
       state: 'not_home'
   action:
-    service: light.turn_off
-    entity_id: 
-      - light.living_room
-      - light.front_door
-    data:
-      transition: 60
+    - service: light.turn_off
+      entity_id: 
+        - light.living_room
+        - light.front_door
+      data:
+        transition: 60
+    - service: light.turn_on
+      entity_id: light.flood_lights
+      data:
+        brightness: 254
