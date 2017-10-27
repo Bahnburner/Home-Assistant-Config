@@ -15,10 +15,9 @@
       entity_id: group.family
       state: 'home'
   action:
-    service: light.turn_off
-    entity_id: 
-      - light.front_door
-    data:
-      transition: 60
+    - service: light.turn_off
+      entity_id: light.front_door
+      data:
+        transition: 60
     - service: light.turn_off
       entity_id: light.flood_lights
