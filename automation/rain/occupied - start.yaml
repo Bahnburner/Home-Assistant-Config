@@ -30,11 +30,6 @@
       entity_id: light.flood_lights
       data:
         brightness: 254
-    - service: light.turn_on
-      entity_id: light.living_room
-      data:
-        brightness: 254
-        transition: 60
       data_template:
         color_temp: >
           {% if (states.sensor.time.state | round(2)) <= 05.00 %}
