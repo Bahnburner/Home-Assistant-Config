@@ -162,5 +162,3 @@
   unit_of_measurement: "%"
 - platform: dnsip
   scan_interval: 300
-- platform: cert_expiry
-  host: smrtho.us
