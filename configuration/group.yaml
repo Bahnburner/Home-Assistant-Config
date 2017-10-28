@@ -64,6 +64,8 @@ settings:
     - group.system_monitor
     - group.devices
     - group.cast_devices
+    - camera.front_door
+    - camera.backyard
 tristans_phone:
   - device_tracker.tristans_phone_wifi
   - device_tracker.tristans_phone_bt
