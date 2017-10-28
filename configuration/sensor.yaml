@@ -25,8 +25,8 @@
   sensors:
     cpu:
       friendly_name: 'CPU Utilization'
-      value_template: '{{ states.sensor.cpu_used.state | float(1) }}"
-      unit_of_measurement: "%"
+      value_template: '{{ states.sensor.cpu_used.state | float(1) }}'
+      unit_of_measurement: '%'
     ram:
       friendly_name: 'RAM Utilization'
       value_template: '{{ states.sensor.ram_used.state }}'
