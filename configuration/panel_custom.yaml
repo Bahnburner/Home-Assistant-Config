@@ -1,0 +1,15 @@
+- name: transmission
+  sidebar_title: Transmission
+  sidebar_icon: mdi:folder-download
+  url_path: transmission
+  webcomponent_path: http://smrtho.us:9091
+- name: pihole
+  sidebar_title: Pi-Hole
+  sidebar_icon: mdi:sitemap
+  url_path: pihole
+  webcomponent_path: http://pi.hole
+- name: plex
+  sidebar_title: Plex
+  sidebar_icon: mdi:plex
+  url_path: plex
+  webcomponent_path: https://app.plex.tv/web/app
