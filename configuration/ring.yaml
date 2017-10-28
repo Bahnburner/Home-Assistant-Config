@@ -1,0 +1,3 @@
+
+username: !secret ring_user
+password: !secret ring_pass
