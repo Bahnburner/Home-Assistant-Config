@@ -21,7 +21,7 @@
     - condition: template
       value_template: >
         {% for state in states.media_player if state.entity_id == trigger.entity_id %}
-           {{ trigger.to_state.state == state.state }}
+           {{ trigger.to_state.state == 'playing' }}
         {% endfor %}
     - service: group.set_visibility
       data_template:
