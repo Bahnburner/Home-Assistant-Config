@@ -29,11 +29,11 @@
       unit_of_measurement: '%'
     ram:
       friendly_name: 'RAM Utilization'
-      value_template: '{{ states.sensor.ram_used.state }}'
+      value_template: '{{ states.sensor.ram_used.state | float(1) }}'
       unit_of_measurement: '%'
     disk:
       friendly_name: 'Disk Utilization'
-      value_template: '{{states.sensor.disk_used_.state}}'
+      value_template: '{{states.sensor.disk_used_.state | float(1) }}'
       unit_of_measurement: '%'
     current_activity:
       friendly_name: 'Current Activity'
