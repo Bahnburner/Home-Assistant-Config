@@ -29,6 +29,9 @@
       data:
         color_temp: 200
         brightness: 254
+    - service: media_player.media_stop
+      entity_id: 
+        - media_player.bedroom_speaker
     - service: media_player.volume_set
       entity_id: media_player.bedroom_speaker
       data: 
