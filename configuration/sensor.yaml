@@ -163,3 +163,9 @@
 - platform: dnsip
   scan_interval: 300
 - platform: ring
+  monitored_conditions:
+    - battery
+    - last_activity
+    - last_ding
+    - last_motion
+    - volume
