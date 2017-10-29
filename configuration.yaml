@@ -196,8 +196,7 @@ camera: !include ./configuration/camera.yaml
 climate: !include ./configuration/climate.yaml
 cover: !include ./configuration/cover.yaml
 device_tracker: !include ./configuration/device_tracker.yaml
-ffmpeg: 
-  ffmpeg_bin: /usr/local/bin/ffmpeg
+ffmpeg:
 google_assistant: !include ./configuration/google_assistant.yaml
 group: !include ./configuration/group.yaml
 http: !include ./configuration/http.yaml
