@@ -60,7 +60,7 @@ goodnight:
           light.turn_off
         {% endif %}
       entity_id: light.pantry
-      date: 
+      data: 
         brightness: 100
         transition: 15
     - service: script.goodnight_livingroom
