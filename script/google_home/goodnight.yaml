@@ -47,11 +47,20 @@ goodnight:
       entity_id: automation.exterior_front__dim
     - service: light.turn_on
       entity_id:
-        - light.pantry
         - light.front_door
         - light.front_floods
         - light.rear_floods
       data:
+        brightness: 100
+        transition: 15
+    - service_template: >
+        {% if states.light.pantry.state == 'on' %}
+          light.turn_on
+        {% else %}
+          light.turn_off
+        {% endif %}
+      entity_id: light.pantry
+      date: 
         brightness: 100
         transition: 15
     - service: script.goodnight_livingroom
