@@ -170,5 +170,5 @@
     - last_motion
     - volume
 - platform: time_date
-    display_options:
-      - 'time'
+  display_options:
+    - 'time'
