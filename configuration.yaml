@@ -26,6 +26,7 @@ history:
     domains:
       - automation
     entities:
+      - sensor.time_2
       - binary_sensor.downstairs_thermostat_has_leaf
       - binary_sensor.downstairs_thermostat_is_locked
       - binary_sensor.downstairs_thermostat_is_using_emergency_heat
@@ -178,6 +179,7 @@ history:
 logbook:
   exclude:
     entities:
+      - sensor.time_2
       - sensor.cpu
       - sensor.disk
       - sensor.ram
