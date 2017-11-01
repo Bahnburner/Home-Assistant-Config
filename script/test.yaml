@@ -1,4 +1,4 @@
-good_morning:
+test:
   sequence:
     - service: media_player.volume_set
       entity_id: media_player.livingroom_assistant
