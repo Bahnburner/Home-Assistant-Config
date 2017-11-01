@@ -1,3 +1,2 @@
-google:
-  client_id: !secret calendar_client_id
-  client_secret: !secret calendar_client_secret
+client_id: !secret calendar_client_id
+client_secret: !secret calendar_client_secret
