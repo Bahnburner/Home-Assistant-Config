@@ -12,4 +12,4 @@ test:
           {% set hour = (now().strftime("%l")) | int %}
           {% set mhour = (now().strftime("%H")) | int %}
           {% set minute = (now().strftime("%M")) | int %}
-          Good{% if mhour < 12 %} morning.{% elif mhour < 18 %} afternoon.{% else %} evening.{% endif %} The current time is {% if minute > 0 %}{{ states.sensor.time_2.state }}.{% else %}{{ mhour }} o'clock.{% endif %}
+          Good{% if mhour < 12 %} morning.{% elif mhour < 18 %} afternoon.{% else %} evening.{% endif %} The current time is {% if minute > 0 %}{{states.sensor.time_2.state | replace('08:','15:')}}.{% else %}{{ mhour }} o'clock.{% endif %}
