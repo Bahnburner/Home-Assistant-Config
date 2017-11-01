@@ -1,33 +1,15 @@
-test:
-  sequence:      
-    service: notify.chrome_notifications
-    data:
-      data:
-        target:
-          - Tristans Phone
-          - Tristans Work Laptop
-          - Crystals Phone
-        title: "Intruder Detected"
-        actions:
-          - action: open
-            icon: "/static/icons/favicon-192x192.png"
-            title: Open Home Assistant
-          - action: activate_siren
-            title: Activate Siren  
-    data_template:
-      message: >
-        {% if  states.binary_sensor.back_door.state == 'on' %}
-          The back door has just opened unexpectedly.
-        {% elif states.binary_sensor.front_windows.state == 'on' %}
-          A front window has just opened unexpectedly.
-        {% elif states.binary_sensor.bedroom_windows.state == 'on' %}
-          A bedroom window has just opened unexpectedly.
-        {% elif states.binary_sensor.back_windows.state == 'on' %}
-          A back window has just opened unexpectedly.
-        {% elif states.binary_sensor.front_door.state == 'on' %}
-          The front door has just opened unexpectedly.
-        {% elif states.binary_sensor.garage_door.state == 'on' %}
-          The garage door has just opened unexpectedly.
-        {% else %}
-          Error.
-        {% endif %}
+good_morning:
+  sequence:
+    - service: media_player.volume_set
+      entity_id: media_player.all_assistants
+      data: 
+        volume_level: 0.5
+    - service: tts.google_say
+      entity_id: media_player.all_assistants
+      data_template:
+        message: >
+          {% set time = (now().strftime("%l:%M")) | string%}
+          {% set hour = (now().strftime("%l")) | int %}
+          {% set mhour = (now().strftime("%H")) | int %}
+          {% set minute = (now().strftime("%M")) | int %}
+          Good{% if mhour < 12 %} morning.{% elif mhour < 18 %} afternoon.{% else %} evening.{% endif %} The current time is {% if minute > 0 %}{{ time }}.{% else %}{{ mhour }} o'clock.{% endif %}
