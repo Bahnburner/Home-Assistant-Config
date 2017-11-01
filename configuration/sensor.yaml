@@ -169,3 +169,6 @@
     - last_ding
     - last_motion
     - volume
+- platform: time_date
+    display_options:
+      - 'time'
