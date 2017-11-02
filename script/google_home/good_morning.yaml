@@ -42,7 +42,7 @@ good_morning:
             {% if (h|int) > 12%}{% set hh= (h|int)-12 %}{% set q= "pm" %}{% else %}{% set hh= (h|int)%}{% set q= "am"%}{% endif%}
             {% if states.calendar.crystals_calendar.attributes.all_day == true %}
               {% if M==now().strftime("%-m") and D==now().strftime("%-d") %}Crystal has an all day event today titled {{states.calendar.crystals_calendar.attributes.message}}.
-              {% elif ((now().strftime("%-d")|int)+2) == (D|int) %}Crystal has an all day event tomorrow titled {{states.calendar.crystals_calendar.attributes.message}}.
+              {% elif ((now().strftime("%-d")|int)+1) == (D|int) %}Crystal has an all day event tomorrow titled {{states.calendar.crystals_calendar.attributes.message}}.
               {% endif %}
             {% else %}
               {% if M==now().strftime("%-m") and D==now().strftime("%-d") %} Crystal has a calendar event today at {{hh}}:{{m}}{{q}} called {{states.calendar.crystals_calendar.attributes.message}}.
