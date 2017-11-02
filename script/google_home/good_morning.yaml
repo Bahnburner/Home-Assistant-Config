@@ -7,7 +7,8 @@ good_morning:
     - service: tts.google_say
       entity_id: media_player.all_assistants
       data_template:
-        message: >          {% set hour = (now().strftime("%l")) | int %}
+        message: >
+          {% set hour = (now().strftime("%l")) | int %}
           {% set mhour = (now().strftime("%H")) | int %}
           {% set minute = (now().strftime("%M")) | int %}
           Good{% if mhour < 12 %} morning.{% elif mhour < 18 %} afternoon.{% else %} evening.{% endif %}
