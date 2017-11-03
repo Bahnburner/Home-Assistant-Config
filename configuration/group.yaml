@@ -54,6 +54,7 @@ media:
     - media_player.mancave_tv
     - media_player.guestroom_tv
     - media_player.rasplex
+    - media_player.all_assistants
 settings:
   view: yes
   icon: mdi:settings
