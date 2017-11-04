@@ -3,10 +3,9 @@
     platform: state
     entity_id: updater.updater
   action:
-    service: notify.chrome_notifications
+    service: notify.hidden_ridge
     data:
-      data:
-        target: Tristans Phone 
-        title: "Home Assistant Alert"
-        url: "https://home-assistant.io/blog/"
-        message: "Home Assistant update available."
+      target:
+        - !secret tristans_phone_number
+        - !secret crystals_phone_number
+      message: "Home Assistant update available."
