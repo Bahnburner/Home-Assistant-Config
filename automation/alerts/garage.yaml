@@ -33,23 +33,12 @@
     entity_id: group.family
     state: 'not_home'
   action:
-    service: notify.chrome_notifications
+    service: notify.hidden_ridge
     data:
-      data:
-        title: "Home Assistant Alert"
-        url: "https://smrtho.us"
-        message: "The Garage Door is open."
-        target:
-          - Tristans Phone
-          - Crystals Phone
-        actions:
-        - action: open
-          icon: "/local/resources/images/notifications/chrome.png"
-          title: Open Home Assistant
-        - action: close_garage
-          icon: "/local/resources/images/notifications/garage.png"
-          title: Close Garage Door  
-
+      target:
+        - !secret tristans_phone_number
+        - !secret crystals_phone_number
+      message: "The Garage Door is open."
 
 - alias: 'Close Garage Event'
   hide_entity: true
