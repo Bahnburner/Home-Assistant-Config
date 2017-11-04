@@ -20,7 +20,8 @@ discovery:
     - harmony
     - directv
 frontend: 
-    themes: !include ./themes/themes.yaml
+  themes: !include ./themes/themes.yaml
+map:
 history:
   exclude:
     domains:
