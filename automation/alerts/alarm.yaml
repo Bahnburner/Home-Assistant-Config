@@ -20,36 +20,24 @@
       entity_id: input_boolean.disable_alarm
       state: 'off'
   action:
-    service: notify.chrome_notifications
+    service: notify.hidden_ridge
     data:
-      data:
-        target:
-          - Tristans Phone
-          - Tristans Work Laptop
-          - Crystals Phone
-        title: "Home Assistant Alert"
-        url: "https://smrtho.us"
-        actions:
-          - action: open
-            icon: "/local/resources/images/notifications/chrome.png"
-            title: Open Home Assistant
-          - action: activate_siren
-            icon: "/local/resources/images/notifications/alarm.png"
-            title: Activate Siren  
+      target:
+        - !secret tristans_phone_number
+        - !secret crystals_phone_number
     data_template:
       message: >
         {% if  states.binary_sensor.back_door.state == 'on' %}
-          The back door has just opened unexpectedly.
+          The back door has just opened.
         {% elif states.binary_sensor.front_windows.state == 'on' %}
-          A front window has just opened unexpectedly.
+          A front window has just opened.
         {% elif states.binary_sensor.bedroom_windows.state == 'on' %}
-          A bedroom window has just opened unexpectedly.
+          A bedroom window has just opened.
         {% elif states.binary_sensor.back_windows.state == 'on' %}
-          A back window has just opened unexpectedly.
+          A back window has just opened.
         {% elif states.binary_sensor.front_door.state == 'on' %}
-          The front door has just opened unexpectedly.
+          The front door has just opened.
         {% elif states.binary_sensor.garage_door.state == 'on' %}
-          The garage door has just opened unexpectedly.
+          The garage door has just opened.
         {% else %}
-          Error.
         {% endif %}
