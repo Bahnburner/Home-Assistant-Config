@@ -4,12 +4,9 @@
     - platform: state
       entity_id: sensor.myipopendnscom
   action:
-    service: notify.chrome_notifications
+    service: notify.hidden_ridge
     data:
-      data:
-        target:
-          - Tristans Phone
-        title: "Home Assistant Alert"
-        url: "https://smrtho.us"
+      target:
+        - !secret tristans_phone_number
       data_template:
         message: "Your IP address has changed to {{states.sensor.myipopendnscom.state}}. Please update dreamhost DNS records."
