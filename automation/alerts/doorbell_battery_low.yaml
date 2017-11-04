@@ -5,10 +5,8 @@
       entity_id: sensor.doorbell_battery
       below: 15
   action:
-    service: notify.chrome_notifications
+    service: notify.hidden_ridge
     data:
-      data:
-        target: Tristans Phone
-        title: "Home Assistant Alert"
-        message: "The Ring doorbell's battery is critically low. Please recharge it."
-        url: "https://smrtho.us/states/group.settings"
+      target:
+        - !secret tristans_phone_number
+      message: "The Ring doorbell's battery is critically low. Please recharge it."
