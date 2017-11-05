@@ -7,7 +7,7 @@ who_dat:
     - service: media_player.play_media
       entity_id: media_player.party_mode
       data:
-        media_content_id: "/local/resources/audio/Halftime.mp3"
+        media_content_id: "https://smrtho.us/local/resources/audio/Halftime.mp3"
         media_content_type: "audio/mp3"  
     - delay: 
         seconds: 60
