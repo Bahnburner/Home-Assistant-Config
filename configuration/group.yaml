@@ -164,7 +164,7 @@ vacation_mode:
   - automation.rain__unoccupied__stop
   - automation.sunset__unoccupied
   - automation.sunrise__unoccupied
-  - automation.puppy_music
+  - automation.away_mode__puppies
 inputs:
   - automation.harmony
   - automation.harmony_off
