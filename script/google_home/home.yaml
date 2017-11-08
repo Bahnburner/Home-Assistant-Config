@@ -2,7 +2,8 @@ home:
   sequence:
     - service: cover.close_cover
       entity_id: cover.garage_door_opener  
-    - service: script.nest_hot_start
+    - service: automation.trigger
+      entity_id: automation.home_mode__garage_hot_start
     - service: remote.turn_on
       entity_id: remote.living_room
       data:
