@@ -1,0 +1,20 @@
+- alias: Away Mode - Puppies
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: group.family
+    from: 'home'
+    to: 'not_home'
+  action:
+    - service: media_player.turn_on
+      entity_id: media_player.livigroom_assistant
+    - service: media_player.volume_set
+      entity_id: media_player.livingroom_assistant
+      data: 
+        volume_level: 0.50
+    - service: media_player.play_media
+      entity_id: media_player.livingroom_assistant
+      data:
+#        media_content_id: "http://wegr-fm.akacast.akamaistream.net/7/628/20075/v1/auth.akacast.akamaistream.net/wegr-fm"
+        media_content_id: "http://91.221.151.155/listen.mp3"
+        media_content_type: "audio/mp3"
