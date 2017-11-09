@@ -1,6 +1,6 @@
 - platform: cast
 - platform: plex
-  scan_interval: 10
+  scan_interval: 5
 - platform: directv
   host: 10.0.0.151
   port: 8080
