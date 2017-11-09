@@ -7,7 +7,7 @@
     to: 'not_home'
   action:
     - delay:
-        minutes: 2
+        minutes: 1
     - service: media_player.turn_on
       entity_id: media_player.livigroom_assistant
     - service: media_player.volume_set
