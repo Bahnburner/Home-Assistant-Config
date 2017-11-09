@@ -33,6 +33,8 @@ goodnight:
         - media_player.bedroom_assistant
         - media_player.party_mode
         - media_player.all_speakers
+        - media_player.garage_speaker
+        - media_player.house_party_protocol
     - service: script.fan_off
     - service: light.turn_off
       entity_id:
