@@ -22,6 +22,7 @@ default_view:
     - group.media_player_livingroom_directv
     - group.media_player_rasplex
     - group.media_player_house_party_protocol
+    - group.media_player_bathroom_assistant
     - group.living_room
     - group.dining_room
     - group.kitchen
@@ -58,6 +59,7 @@ media:
     - media_player.rasplex
     - media_player.all_assistants
     - media_player.garage_speaker
+    - media_player.bathroom_assistant
 settings:
   view: yes
   icon: mdi:settings
@@ -205,11 +207,13 @@ devices:
   - sensor.directv_genie
   - sensor.ring
 cast_devices:
-  - sensor.google_home
+  - sensor.google_home_livingroom
   - sensor.google_home_mini_kitchen
   - sensor.google_home_mini_bedroom
-  - sensor.chromecast
-  - sensor.chromecast_audio
+  - sensor.google_home_mini_bathroom
+  - sensor.chromecast_man_cave
+  - sensor.chromecast_audio_dining_room
+  - sensor.chromecast_audio_garage
   - sensor.viziocrave360
   - sensor.vizio_m70e3
 system_monitor:
@@ -245,3 +249,5 @@ media_player_garage_speaker:
   - media_player.garage_speaker
 media_player_house_party_protocol:
   - media_player.house_party_protocol
+media_player_bathroom_assistant:
+  - media_player.bathroom_assistant
