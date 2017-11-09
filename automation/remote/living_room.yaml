@@ -137,7 +137,7 @@
       value_template: '{{ state.attributes.elevation }}'
       below: 12
     - condition: template
-      value_template: '{{ states.light.table_lamp != 'off' }}'
+      value_template: '{{ states.light.table_lamp != "off" }}'
   action: 
     service: light.turn_on
     entity_id: light.living_room
