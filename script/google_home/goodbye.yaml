@@ -27,3 +27,4 @@ goodbye:
         - media_player.all_speakers
         - media_player.garage_speaker
         - media_player.house_party_protocol
+        - media_player.bathroom_assistant
