@@ -15,6 +15,8 @@
       - media_player.bedroom_assistant
       - media_player.livingroom_tv
       - media_player.livingroom_directv
+      - media_player.garage_speaker
+      - media_player.house_party_protocol
     from: 'playing'
   action:
     - delay: 00:00:10
