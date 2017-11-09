@@ -6,3 +6,5 @@ media_player.guestroom_tv:
   friendly_name: 'Guest Room TV'
 media_player.livingroom_tv:
   friendly_name: 'Livingroom TV'
+media_player.garage_speaker:
+  friendly_name: 'Garage Speaker'
