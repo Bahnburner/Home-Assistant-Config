@@ -15,11 +15,13 @@ default_view:
     - group.media_player_dining_room_speaker
     - group.media_player_bedroom_speaker
     - group.media_player_bedroom_assistant
+    - group.media_player_garage_speaker
     - group.media_player_party_mode
     - group.media_player_all_speakers
     - group.media_player_all_assistants
     - group.media_player_livingroom_directv
     - group.media_player_rasplex
+    - group.media_player_house_party_protocol
     - group.living_room
     - group.dining_room
     - group.kitchen
@@ -55,6 +57,7 @@ media:
     - media_player.guestroom_tv
     - media_player.rasplex
     - media_player.all_assistants
+    - media_player.garage_speaker
 settings:
   view: yes
   icon: mdi:settings
@@ -238,3 +241,7 @@ media_player_all_assistants:
   - media_player.all_assistants
 media_player_bedroom_assistant:
   - media_player.bedroom_assistant
+media_player_garage_speaker:
+  - media_player.garage_speaker
+media_player_house_party_protocol:
+  - media_player.house_party_protocol
