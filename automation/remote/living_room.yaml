@@ -110,10 +110,7 @@
       from: 'Watch Plex'
     - platform: state
       entity_id: media_player.rasplex
-      to: 'paused'
-    - platform: state
-      entity_id: media_player.rasplex
-      to: 'idle'     
+      from: 'playing'    
     - platform: state
       entity_id: sensor.current_activity
       from: 'Watch Netflix'
@@ -140,7 +137,7 @@
       value_template: '{{ state.attributes.elevation }}'
       below: 12
     - condition: template
-      value_template: '{{ states.light.floor_lamp_left.attributes.color_temp != 500 and states.light.floor_lamp_right.attributes.color_temp != 500 and states.light.table_lamp.state != "off" }}'
+      value_template: '{{ states.light.table_lamp != 'off' }}'
   action: 
     service: light.turn_on
     entity_id: light.living_room
