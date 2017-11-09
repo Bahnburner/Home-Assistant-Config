@@ -60,3 +60,13 @@
       data_template:
         visible: >
           {% if states.media_player.all_assistants.state == "playing" %}true{%else%}false{%endif%}
+    - service: group.set_visibility
+      entity_id: group.media_player_garage_speaker
+      data_template:
+        visible: >
+          {% if states.media_player.garage_speaker.state == "playing" %}true{%else%}false{%endif%}
+    - service: group.set_visibility
+      entity_id: group.media_player_house_party_protocol
+      data_template:
+        visible: >
+          {% if states.media_player.house_party_protocol.state == "playing" %}true{%else%}false{%endif%}  
