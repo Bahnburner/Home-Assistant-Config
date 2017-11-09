@@ -101,21 +101,24 @@
     directv_genie:
       value_template: '{% if is_state("device_tracker.directv_genie", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'DirecTv Genie'
-    google_home:
-      value_template: '{% if is_state("device_tracker.google_home", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Google Home' 
+    google_home_livingroom:
+      value_template: '{% if is_state("device_tracker.google_home_livingroom", "home") %}Online{% else %}Offline{% endif %}'
+      friendly_name: 'Google Home (Livingroom)' 
     google_home_mini_kitchen:
       value_template: '{% if is_state("device_tracker.google_home_mini_kitchen", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Google Home Mini (Kitchen)'  
     google_home_mini_bedroom:
       value_template: '{% if is_state("device_tracker.google_home_mini_bedroom", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Google Home Mini (Bedroom)' 
-    chromecast:
-      value_template: '{% if is_state("device_tracker.chromecast", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Chromecast'
-    chromecast_audio:
-      value_template: '{% if is_state("device_tracker.chromecast_audio", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Chromecast Audio'  
+    chromecast_man_cave:
+      value_template: '{% if is_state("device_tracker.chromecast_man_cave", "home") %}Online{% else %}Offline{% endif %}'
+      friendly_name: 'Chromecast (Man Cave)'
+    chromecast_audio_dining_room:
+      value_template: '{% if is_state("device_tracker.chromecast_audio_dining_room", "home") %}Online{% else %}Offline{% endif %}'
+      friendly_name: 'Chromecast Audio (Dining Room)'
+    chromecast_audio_garage:
+      value_template: '{% if is_state("device_tracker.chromecast_audio_garage", "home") %}Online{% else %}Offline{% endif %}'
+      friendly_name: 'Chromecast Audio (Garage)'  
     viziocrave360:
       value_template: '{% if is_state("device_tracker.viziocrave360", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Vizio Crave 360' 
