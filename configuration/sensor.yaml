@@ -109,7 +109,10 @@
       friendly_name: 'Google Home Mini (Kitchen)'  
     google_home_mini_bedroom:
       value_template: '{% if is_state("device_tracker.google_home_mini_bedroom", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Google Home Mini (Bedroom)' 
+      friendly_name: 'Google Home Mini (Bedroom)'
+    google_home_mini_bathroom:
+      value_template: '{% if is_state("device_tracker.google_home_mini_bathroom", "home") %}Online{% else %}Offline{% endif %}'
+      friendly_name: 'Google Home Mini (Bathroom)' 
     chromecast_man_cave:
       value_template: '{% if is_state("device_tracker.chromecast_man_cave", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Chromecast (Man Cave)'
