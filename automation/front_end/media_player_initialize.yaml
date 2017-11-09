@@ -70,3 +70,8 @@
       data_template:
         visible: >
           {% if states.media_player.house_party_protocol.state == "playing" %}true{%else%}false{%endif%}  
+    - service: group.set_visibility
+      entity_id: group.media_player_bathroom_assistant
+      data_template:
+        visible: >
+          {% if states.media_player.bathroom_assistant.state == "playing" %}true{%else%}false{%endif%}
