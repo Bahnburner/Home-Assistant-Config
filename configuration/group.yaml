@@ -55,6 +55,7 @@ media:
     - media_player.bedroom_speaker
     - media_player.livingroom_directv
     - media_player.mancave_tv
+    - media_player.mancave_directv
     - media_player.guestroom_tv
     - media_player.rasplex
     - media_player.all_assistants
