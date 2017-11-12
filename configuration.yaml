@@ -18,7 +18,6 @@ config:
 discovery:
   ignore: 
     - harmony
-    - directv
 frontend: 
   themes: !include ./themes/themes.yaml
 map:
