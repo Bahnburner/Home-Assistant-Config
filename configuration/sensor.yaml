@@ -137,6 +137,12 @@
     lightifybridge:
       value_template: '{% if is_state("device_tracker.lightify_bridge", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Lightify Bridge'
+    tristan:
+      value_template: '{% if is_state("group.tristans_phone", "home") %}Home{% else %}Not Home{% endif %}'
+      friendly_name: 'Tristan'
+    crystal:
+      value_template: '{% if is_state("group.crystals_phone", "home") %}Home{% else %}Not Home{% endif %}'
+      friendly_name: 'Crystal'
 - platform: random
   name: whitenoise
   minimum: 1
