@@ -14,4 +14,3 @@ switch.routines:
 #  entity_picture: /local/resources/images/devices/kevo.png
 switch.christmas_lights:
   entity_picture: /local/resources/images/devices/tree.png
-  hidden: true
