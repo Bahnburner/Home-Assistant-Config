@@ -26,7 +26,8 @@
 - platform: mqtt
   name: "Anova Circulator"
   state_topic: "hass/anova/status"
-  value_template: {% if value == "running" %}true{% elif value == "stopped"%}False{% else %}{% endif %}
+  value_template: >
+    {% if value == "running" %}true{% elif value == "stopped"%}False{% else %}{% endif %}
   command_topic: "hass/anova"
   payload_on: "start"
   payload_off: "stop"
