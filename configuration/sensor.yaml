@@ -165,14 +165,14 @@
 - platform: mqtt
   state_topic: "smartthings/Front Door/battery"
   name: "Doorbell Battery"
-- platform: mqtt
-  name: "Current Temperature"
-  state_topic: "hass/anova/current_temp"
-  unit_of_measurement: "˚F"
-- platform: mqtt
-  name: "Set Temperature"
-  state_topic: "hass/anova/set_temp"
-  unit_of_measurement: "˚F"
+#- platform: mqtt
+#  name: "Current Temperature"
+#  state_topic: "hass/anova/current_temp"
+#  unit_of_measurement: "˚F"
+#- platform: mqtt
+#  name: "Set Temperature"
+#  state_topic: "hass/anova/set_temp"
+#  unit_of_measurement: "˚F"
 - platform: dnsip
   scan_interval: 300
 - platform: time_date
