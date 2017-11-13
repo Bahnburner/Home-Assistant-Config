@@ -23,15 +23,15 @@
   payload_on: "on"
   payload_off: "off"
   retain: true
-- platform: mqtt
-  name: "Anova Circulator"
-  state_topic: "hass/anova/status"
-  value_template: "{{value == 'running' }}"
-  command_topic: "hass/anova"
-  payload_on: "start"
-  payload_off: "stop"
-  qos: 0
-  retain: true
+#- platform: mqtt
+#  name: "Anova Circulator"
+#  state_topic: "hass/anova/status"
+#  value_template: "{{value == 'running' }}"
+#  command_topic: "hass/anova"
+#  payload_on: "start"
+#  payload_off: "stop"
+#  qos: 0
+#  retain: true
 #- platform: command_line
 #  scan_interval: 30
 #  switches:
