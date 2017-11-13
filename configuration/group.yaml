@@ -63,16 +63,16 @@ media:
     - media_player.all_assistants
     - media_player.garage_speaker
     - media_player.bathroom_assistant
-anova:
-  view: yes
-  icon: mdi:pot-mix
-  name: Anova
-  entities:
-    - group.circulator
-circulator:
-  - switch.anova_circulator
-  - sensor.current_temperature
-  - sensor.set_temperature
+#anova:
+#  view: yes
+#  icon: mdi:pot-mix
+#  name: Anova
+#  entities:
+#    - group.circulator
+#circulator:
+#  - switch.anova_circulator
+#  - sensor.current_temperature
+#  - sensor.set_temperature
 settings:
   view: yes
   icon: mdi:settings
