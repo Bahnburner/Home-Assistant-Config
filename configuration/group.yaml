@@ -29,6 +29,7 @@ default_view:
     - group.master_bedroom
     - group.upstairs
     - group.foyer
+    - group.christmas
 lights:
   view: yes
   icon: mdi:lightbulb
@@ -40,6 +41,7 @@ lights:
     - group.exterior
     - group.dining_room
     - group.kitchen_lights
+    - group.christmas
 media:
   view: yes
   icon: mdi:cast
