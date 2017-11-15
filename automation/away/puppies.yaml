@@ -19,5 +19,5 @@
       data:
 #        media_content_id: "http://wegr-fm.akacast.akamaistream.net/7/628/20075/v1/auth.akacast.akamaistream.net/wegr-fm"
 #        media_content_id: "http://91.221.151.155/listen.mp3"
-      media_content_id: "http://listen.181fm.com/181-eagle_128k.mp3?cb=241184.mp3"
-      media_content_type: "audio/mp3"
+        media_content_id: "http://listen.181fm.com/181-eagle_128k.mp3?cb=241184.mp3"
+        media_content_type: "audio/mp3"
