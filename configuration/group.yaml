@@ -262,7 +262,6 @@ media_player_bathroom_assistant:
   - media_player.bathroom_assistant
 disable_all_automations:
   - automation.activate_siren
-  - automation.alarm_triggered
   - automation.away_mode__bedroom
   - automation.away_mode__general
   - automation.away_mode__puppies
