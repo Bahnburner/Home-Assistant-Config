@@ -14,7 +14,7 @@
     - service_template: >
         {% if states.input_boolean.disable_all_automations.state == 'on' %}
           switch.turn_on
-        {% if states.input_boolean.disable_all_automations.state == 'off' %}
+        {% elif states.input_boolean.disable_all_automations.state == 'off' %}
           switch.turn_off
         {% endif %}
       entity_id: switch.vacation_mode
