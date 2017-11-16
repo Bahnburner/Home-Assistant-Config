@@ -10,3 +10,6 @@ input_boolean.back_door_open:
   hidden: true
 input_boolean.away_override:
   hidden: true
+input_boolean.disable_all_automations:
+  friendly_name: 'Disable All Automations'
+  icon: mdi:power
