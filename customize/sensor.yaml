@@ -121,7 +121,7 @@ sensor.viziocrave360:
   entity_picture: /local/resources/images/devices/smartcast.png
 sensor.vizio_m70e3:
   entity_picture: /local/resources/images/devices/smartcast.png
-sensor.chromecast_mancave:
+sensor.chromecast_man_cave:
   hidden: false
   entity_picture: /local/resources/images/devices/cast.png
 sensor.chromecast_audio_dining_room:
