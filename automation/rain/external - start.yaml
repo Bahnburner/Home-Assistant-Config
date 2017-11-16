@@ -1,0 +1,26 @@
+- alias: Rain - Occupied - Start
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.rain
+      to: 'on'
+    - platform: state
+      entity_id: sun.sun
+      to: 'above_horizon'
+  condition:
+    - condition: state
+      entity_id: sun.sun
+      state: 'above_horizon'
+    - condition: state
+      entity_id: binary_sensor.rain
+      state: 'on'
+  action:
+    - service: light.turn_on
+      entity_id: light.front_door
+      data: 
+        brightness: 254
+        transition: 60
+    - service: light.turn_on
+      entity_id: light.flood_lights
+      data:
+        brightness: 254
