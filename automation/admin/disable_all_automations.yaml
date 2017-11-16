@@ -7,7 +7,7 @@
     - service_template: >
         {% if states.input_boolean.disable_all_automations.state == 'on' %}
           input_boolean.turn_on
-        {% if states.input_boolean.disable_all_automations.state == 'off' %}
+        {% elif states.input_boolean.disable_all_automations.state == 'off' %}
           input_boolean.turn_off
         {% endif %}
       entity_id: input_boolean.disable_alarm
