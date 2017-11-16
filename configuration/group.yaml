@@ -178,10 +178,6 @@ override:
     - group.simulate_presence
     - switch.routines
 vacation_mode:
-  - automation.rain__unoccupied__start
-  - automation.rain__unoccupied__stop
-  - automation.sunset__unoccupied
-  - automation.sunrise__unoccupied
   - automation.away_mode__puppies
 inputs:
   - automation.harmony
