@@ -8,12 +8,6 @@ homeassistant:
   customize: !include_dir_merge_named customize
 
 logger:
-  default: warn
-  logs:
-    homeassistant.components.media_player.directv: fatal
-    homeassistant.components.lock.kevo: fatal
-    homeassistant.components.media_player.vizio: fatal
-    homeassistant.components.media_player: fatal
 config:
 discovery:
   ignore: 
