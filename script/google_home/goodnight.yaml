@@ -9,7 +9,7 @@ goodnight:
       entity_id: climate.downstairs
       data:
         target_temp_high: 72
-        target_temp_low: 64
+        target_temp_low: 66
     - service: script.door_status_check
     - service: cover.close_cover
       entity_id: cover.garage_door_opener
