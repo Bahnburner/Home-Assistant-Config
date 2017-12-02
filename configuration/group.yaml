@@ -291,8 +291,8 @@ disable_all_automations:
   - automation.harmony_light_control__start
   - automation.harmony_off
   - automation.hide_media_player_group
-  - automation.hide_media_player_group_2
-  - automation.hide_media_player_group_3
+  - automation.hide_media_player_directv
+  - automation.hide_media_player_smartcast
   - automation.home_mode__bedroom
   - automation.home_mode__garage_hot_start
   - automation.home_mode__general
