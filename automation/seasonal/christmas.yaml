@@ -19,7 +19,7 @@
       at: '00:00:00'
     - platform: state
       entity_id: input_boolean.goodnight_initiated
-      state: 'on'
+      to: 'on'
   action:
     - service: switch.turn_off
       entity_id: switch.christmas_lights
