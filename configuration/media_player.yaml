@@ -12,6 +12,6 @@
   name: Livingroom DirecTV
   device: 00367694C1C4
 - platform: vizio
-  host: 10.0.0.93
+  host: 10.0.0.51
   access_token: !secret vizio_access_token
 
