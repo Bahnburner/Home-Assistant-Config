@@ -32,7 +32,7 @@
         visible: False
 
 - id: media_player_hide_directv
-  alias: 'Hide Media Player Group'
+  alias: 'Hide Media Player Directv'
   hide_entity: true
   trigger:
     - platform: state
@@ -50,7 +50,7 @@
 
 # Extra scripting because Vizio component doesn't show idle before poweroff.
 - id: media_player_hide_smartcast
-  alias: 'Hide Media Player Group'
+  alias: 'Hide Media Player Smartcast'
   hide_entity: true
   trigger:
     - platform: state
