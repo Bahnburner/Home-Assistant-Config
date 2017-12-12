@@ -206,7 +206,6 @@ mqtt: !include ./configuration/mqtt.yaml
 nest: !include ./configuration/nest.yaml
 notify: !include ./configuration/notify.yaml
 remote: !include ./configuration/remote.yaml
-ring: !include ./configuration/ring.yaml
 script: !include_dir_merge_named script
 sensor: !include ./configuration/sensor.yaml
 shell_command: !include ./configuration/shell_command.yaml
