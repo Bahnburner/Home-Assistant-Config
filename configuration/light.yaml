@@ -1,7 +1,3 @@
-- platform: hue
-  host: 10.0.0.208
-  allow_unreachable: true
-  scan_interval: 10
 - platform: osramlightify
   host: 10.0.0.31
   allow_lightify_groups: true
