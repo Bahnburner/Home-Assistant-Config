@@ -1,0 +1,6 @@
+hue:
+  bridges:
+    - host: 10.0.0.208
+      allow_unreachable: true
+      scan_interval: 10
+      allow_hue_groups: true
