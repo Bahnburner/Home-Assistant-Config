@@ -31,6 +31,26 @@
             250
           {% else %}
           {% endif %}
+      data:
+        brightness: 1
+    - service: light.turn_on
+      entity_id: light.bias_light
+      data:
+        transition: 5
+      data_template:
+        color_temp: >
+          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+            500
+          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+            200
+          {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+            500
+          {% elif states.sun.sun.attributes.elevation < 8 %}
+            300
+          {% elif (states.sensor.time.state | round(2)) > 9.50 %}
+            250
+          {% else %}
+          {% endif %}
         brightness: >
           {% if (states.sensor.time.state | round(2)) <= 05.00 %}
             255
