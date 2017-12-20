@@ -12,6 +12,9 @@
       entity_id: sun.sun
       state: 'above_horizon'
     - condition: state
+      entity_id: light.living_room
+      state: 'off'
+    - condition: state
       entity_id: group.family
       state: 'not_home'
     - condition: state
