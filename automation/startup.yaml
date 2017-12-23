@@ -1,5 +1,5 @@
- - id: media_player_initialize
-  alias: 'Media Player Initialize'
+ - id: startup
+  alias: 'Startup'
   hide_entity: true
   trigger:
     - platform: homeassistant
