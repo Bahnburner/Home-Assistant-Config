@@ -1,1 +1,16 @@
- 
+ - id: media_player_initialize
+  alias: 'Media Player Initialize'
+  hide_entity: true
+  trigger:
+    - platform: homeassistant
+      event: start
+  action:
+    - service: media_player.volume_set
+      entity_id: media_player.livingroom_assistant
+      data: 
+        volume_level: 0.5
+    - service: media_player.play_media
+      entity_id: media_player.livingroom_assistant
+      data:
+        media_content_id: "https://smrtho.us/local/resources/audio/startup.mp3"
+        media_content_type: "audio/mp3"
