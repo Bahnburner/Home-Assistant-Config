@@ -23,8 +23,12 @@
   action:
     service: light.turn_on
     entity_id: light.cabinet_lights
-    data:
-      xy_color: [0.1605,0.3299]
     data_template:
+      xy_color: >
+        {% if now().month == 12 %}
+          [0.17,0.7]
+        {% else %}
+          [0.1605,0.3299]
+        {% endif %}
       brightness: >
         {{ states.light.living_room.attributes.brightness }}
