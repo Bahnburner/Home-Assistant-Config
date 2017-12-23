@@ -1,4 +1,4 @@
- - id: startup
+- id: startup
   alias: 'Startup'
   hide_entity: true
   trigger:
