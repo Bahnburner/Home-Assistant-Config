@@ -4,7 +4,7 @@
 #- platform: bluetooth_le_tracker
 - platform: asuswrt
   host: 10.0.0.1
-  protocol: telnet
+  protocol: ssh
   mode: router
   username: !secret router_user
   password: !secret router_pass
