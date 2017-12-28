@@ -165,8 +165,6 @@
 - platform: mqtt
   state_topic: "smartthings/Front Door/battery"
   name: "Doorbell Battery"
-- platform: cert_expiry
-  host: smrtho.us
 - platform: dnsip
   scan_interval: 300
 - platform: time_date
