@@ -1,1 +1,19 @@
-Home mode delay
+- id: home_mode_delay
+  alias: 'Home Mode Delay'
+  hide_entity: true
+  trigger:
+    - platform: homeassistant
+      event: start
+  action:
+    - service: automation.turn_off
+      entity_id:
+        - automation.home_mode__bedroom
+        - automation.home_mode__livingroom
+        - automation.home_mode__general
+     - delay:
+         seconds: 60
+    - service: automation.turn_on
+      entity_id:
+        - automation.home_mode__bedroom
+        - automation.home_mode__livingroom
+        - automation.home_mode__general
