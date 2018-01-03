@@ -36,4 +36,4 @@
       entity_id: group.christmas
       data_template:
         visible: >
-          {% if now().month == 12 %}true{%else%}false{%endif%}
+          {% if now().month >= 11 %}true{%else%}false{%endif%}
