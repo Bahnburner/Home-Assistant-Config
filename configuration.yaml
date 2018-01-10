@@ -12,7 +12,6 @@ config:
 discovery:
   ignore: 
     - harmony
-    - google_cast
 frontend: 
   javascript_version: es5
   themes: !include ./themes/themes.yaml
