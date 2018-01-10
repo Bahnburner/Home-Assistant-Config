@@ -1,4 +1,5 @@
 - platform: cast
+- platform: cast
   host: 10.0.0.150
 - platform: cast
   host: 10.0.0.155
