@@ -12,6 +12,7 @@ config:
 discovery:
   ignore: 
     - harmony
+    - google_cast
 frontend: 
   themes: !include ./themes/themes.yaml
 map:
