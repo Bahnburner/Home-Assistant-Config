@@ -2,7 +2,11 @@
   hide_entity: true
   trigger:
     - platform: state
+      entity_id: sensor.brightness_lr
+    - platform: state
       entity_id: light.living_room
+      from: 'off'
+      to: 'on'
     - platform: state
       entity_id: group.family
       to: 'home'
