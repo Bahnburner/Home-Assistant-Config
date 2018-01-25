@@ -1,4 +1,22 @@
 - platform: cast
+- platform: cast
+  host: 10.0.0.150
+- platform: cast
+  host: 10.0.0.155
+- platform: cast
+  host: 10.0.0.156
+- platform: cast
+  host: 10.0.0.157
+- platform: cast
+  host: 10.0.0.158
+- platform: cast
+  host: 10.0.0.159
+- platform: cast
+  host: 10.0.0.160
+- platform: cast
+  host: 10.0.0.161
+- platform: cast
+  host: 10.0.0.162
 - platform: plex
   scan_interval: 5
 - platform: directv
