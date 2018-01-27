@@ -86,8 +86,8 @@ good_morning:
             300
           {% else %}
           {% endif %}
-    - service: lock.unlock
-      entity_id: lock.back_door
+    - service: switch.turn_off
+      entity_id: switch.back_door
     - service: script.fan_on
     - service: remote.turn_on
       entity_id: remote.living_room
