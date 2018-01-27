@@ -75,3 +75,8 @@
       data_template:
         visible: >
           {% if states.media_player.bathroom_assistant.state == "playing" %}true{%else%}false{%endif%}
+    - service: group.set_visibility
+      entity_id: group.media_player_master_suite
+      data_template:
+        visible: >
+          {% if states.media_player.master_suite.state == "playing" %}true{%else%}false{%endif%}
