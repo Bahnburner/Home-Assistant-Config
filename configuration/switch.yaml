@@ -32,8 +32,8 @@
 #  payload_off: "stop"
 #  qos: 0
 #  retain: true
-#- platform: command_line
-#  scan_interval: 30
+- platform: command_line
+  scan_interval: 30
   switches:
     front_door:
       command_on: "python /home/hass/.homeassistant/kevo/lock-front.py"
