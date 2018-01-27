@@ -2,9 +2,9 @@
   hide_entity: true
   trigger:
     platform: state
-    entity_id: lock.front_door
-    from: 'unlocked'
-    to: 'locked'
+    entity_id: switch.front_door
+    from: 'on'
+    to: 'off'
   condition:
     - condition: numeric_state
       entity_id: sun.sun
