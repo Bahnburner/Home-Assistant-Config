@@ -25,19 +25,19 @@ lock_doors:
 
 lock_both_doors:
   sequence:
-    - service: lock.lock
+    - service: switch.turn_on
       entity_id: switch.front_door
     - delay:
         seconds: 15
-    - service: lock.lock
+    - service: switch.turn_on
       entity_id: switch.back_door
 
 lock_front_door:
   sequence:
-    - service: lock.lock
+    - service: switch.turn_on
       entity_id: switch.front_door
 
 lock_back_door:
   sequence:
-    - service: lock.lock
+    - service: switch.turn_on
       entity_id: switch.back_door
