@@ -20,6 +20,7 @@ default_view:
     - group.media_player_all_speakers
     - group.media_player_all_assistants
     - group.media_player_livingroom_directv
+    - group.media_player_master_suite
     - group.media_player_rasplex
     - group.media_player_house_party_protocol
     - group.media_player_bathroom_assistant
@@ -262,6 +263,8 @@ media_player_house_party_protocol:
   - media_player.house_party_protocol
 media_player_bathroom_assistant:
   - media_player.bathroom_assistant
+media_player_master_suite:
+  - media_player.master_suite
 disable_all_automations:
   - automation.activate_siren
   - automation.away_mode__bedroom
