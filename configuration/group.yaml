@@ -107,8 +107,8 @@ christmas:
 door_locks:
   control: hidden
   entities: 
-    - lock.front_door
-    - lock.back_door
+    - switch.front_door
+    - switch.back_door
 living_room:
   control: hidden
   entities:
