@@ -3,11 +3,11 @@ lock_doors:
     - service: script.turn_on
       data_template:
         entity_id: >
-          {% if is_state("switch.front_door", "unlocked") and is_state("switch.back_door", "unlocked") %}
+          {% if is_state("switch.front_door", "off") and is_state("switch.back_door", "off") %}
             script.lock_both_doors
-          {% elif is_state("switch.front_door", "unlocked") and is_state("switch.back_door", "locked") %}
+          {% elif is_state("switch.front_door", "off") and is_state("switch.back_door", "on") %}
             script.lock_front_door
-          {% elif is_state("switch.front_door", "locked") and is_state("switch.back_door", "unlocked") %}
+          {% elif is_state("switch.front_door", "on") and is_state("switch.back_door", "off") %}
             script.lock_back_door
           {% endif %}
     - delay:
@@ -15,13 +15,13 @@ lock_doors:
     - service: script.turn_on
       data_template:
         entity_id: >
-          {% if is_state("switch.front_door", "unlocked") and is_state("switch.back_door", "unlocked") %}
+          {% if is_state("switch.front_door", "off") and is_state("switch.back_door", "off") %}
             script.lock_both_doors
-          {% elif is_state("switch.front_door", "unlocked") and is_state("switch.back_door", "locked") %}
+          {% elif is_state("switch.front_door", "off") and is_state("switch.back_door", "on") %}
             script.lock_front_door
-          {% elif is_state("switch.front_door", "locked") and is_state("switch.back_door", "unlocked") %}
+          {% elif is_state("switch.front_door", "on") and is_state("switch.back_door", "off") %}
             script.lock_back_door
-          {% endif %}          
+          {% endif %}              
 
 lock_both_doors:
   sequence:
