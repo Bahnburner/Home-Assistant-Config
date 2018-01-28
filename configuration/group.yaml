@@ -64,6 +64,7 @@ media:
     - media_player.all_assistants
     - media_player.garage_speaker
     - media_player.bathroom_assistant
+    - media_player.master_suite
 #anova:
 #  view: yes
 #  icon: mdi:pot-mix
