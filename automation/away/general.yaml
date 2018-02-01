@@ -11,17 +11,19 @@
       data:
         away_mode: true
     - service: media_player.turn_off
-      entity_id: 
+      entity_id:
+        - media_player.all_assistants
+        - media_player.all_speakers
+        - media_player.bathroom_assistant
+        - media_player.bedroom_assistant
+        - media_player.bedroom_speaker
         - media_player.dining_room_speaker
+        - media_player.house_party_protocol
+        - media_player.garage_speaker
         - media_player.kitchen_assistant
         - media_player.livingroom_assistant
-        - media_player.bedroom_speaker
-        - media_player.bedroom_assistant
+        - media_player.master_suite
         - media_player.party_mode
-        - media_player.all_speakers
-        - media_player.garage_speaker
-        - media_player.house_party_protocol
-        - media_player.bathroom_assistant
     - service: script.fan_off
     - service: remote.turn_off
       entity_id: remote.living_room
