@@ -37,6 +37,7 @@
         - light.overhead_light
         - light.recessed_lights
         - light.chandelier
+        - light.desk_lamp
     - service: cover.close_cover
       entity_id: cover.garage_door_opener
     - service: script.turn_on
