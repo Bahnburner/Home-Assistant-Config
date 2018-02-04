@@ -73,6 +73,7 @@ goodnight:
         - light.chandelier
         - light.overhead_light
         - light.recessed_lights
+        - light.desk_lamp
     - delay:
         seconds: 30
     - service: automation.turn_on
