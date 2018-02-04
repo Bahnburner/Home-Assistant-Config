@@ -126,6 +126,7 @@ master_bedroom:
   - light.crystals_nightstand
   - light.bedroom_floor_lamp
 upstairs:
+  - light.desk_lamp
   - climate.upstairs
   - sensor.protect_up
 garage:
