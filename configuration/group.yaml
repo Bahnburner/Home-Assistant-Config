@@ -232,6 +232,7 @@ cast_devices:
   - sensor.chromecast_audio_garage
   - sensor.viziocrave360
   - sensor.vizio_m70e3
+  - sensor.lg_sj9
 system_monitor:
   - sensor.cpu_temperature
   - sensor.cpu
