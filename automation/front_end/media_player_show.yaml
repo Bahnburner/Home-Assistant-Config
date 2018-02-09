@@ -19,6 +19,7 @@
       - media_player.house_party_protocol
       - media_player.bathroom_assistant
       - media_player.master_suite
+      - media_player.livingroom_speaker
     to: 'playing'
   action:
     service: group.set_visibility
