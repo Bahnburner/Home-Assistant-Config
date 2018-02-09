@@ -11,6 +11,7 @@ default_view:
     - group.alarm_zones
     - group.media_player_livingroom_tv
     - group.media_player_livingroom_assistant
+    - group.media_player_livingroom_speaker
     - group.media_player_kitchen_assistant
     - group.media_player_dining_room_speaker
     - group.media_player_bedroom_speaker
@@ -52,6 +53,7 @@ media:
     - media_player.kitchen_assistant
     - media_player.bedroom_assistant
     - media_player.livingroom_tv
+    - media_player.livingroom_speaker
     - media_player.party_mode
     - media_player.all_speakers
     - media_player.dining_room_speaker
@@ -237,6 +239,8 @@ system_monitor:
   - sensor.ram
 media_player_livingroom_tv:
   - media_player.livingroom_tv
+media_player_livingroom_speaker:
+  - media_player.livingroom_speaker
 media_player_livingroom_directv:
   - media_player.livingroom_directv
 media_player_mancave_tv:
