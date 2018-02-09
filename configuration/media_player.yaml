@@ -17,6 +17,8 @@
   host: 10.0.0.161
 - platform: cast
   host: 10.0.0.162
+- platform: cast
+  host: 10.0.0.163
 - platform: plex
   scan_interval: 5
 - platform: directv
