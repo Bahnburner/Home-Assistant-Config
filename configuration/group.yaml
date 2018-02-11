@@ -236,6 +236,7 @@ cast_devices:
 system_monitor:
   - sensor.cpu_temperature
   - sensor.cpu
+  - sensor.load_5m
   - sensor.disk
   - sensor.ram
 media_player_livingroom_tv:
