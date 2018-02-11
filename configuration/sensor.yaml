@@ -25,15 +25,15 @@
   sensors:
     cpu:
       friendly_name: 'CPU Utilization'
-      value_template: '{{ states.sensor.cpu_used.state | float(1) }}'
+      value_template: '{{ states.sensor.processor_use.state | float(1) }}'
       unit_of_measurement: '%'
     ram:
       friendly_name: 'RAM Utilization'
-      value_template: '{{ states.sensor.ram_used.state | float(1) }}'
+      value_template: '{{ states.sensor.memory_use.state | float(1) }}'
       unit_of_measurement: '%'
     disk:
       friendly_name: 'Disk Utilization'
-      value_template: '{{states.sensor.disk_used_.state | float(1) }}'
+      value_template: '{{states.sensor.disk_use.state | float(1) }}'
       unit_of_measurement: '%'
     current_activity:
       friendly_name: 'Current Activity'
