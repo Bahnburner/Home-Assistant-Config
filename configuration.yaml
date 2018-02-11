@@ -8,6 +8,7 @@ homeassistant:
   customize: !include_dir_merge_named customize
 
 logger:
+  default: warning
 config:
 discovery:
   ignore: 
