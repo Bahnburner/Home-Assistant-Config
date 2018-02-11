@@ -165,6 +165,7 @@
       arg: /
     - type: memory_use_percent
     - type: processor_use
+    - type: load_5m
 - platform: mqtt
   state_topic: "smartthings/Front Door/battery"
   name: "Doorbell Battery"
