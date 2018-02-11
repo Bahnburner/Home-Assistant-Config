@@ -25,7 +25,7 @@
   hide_entity: True
   trigger:
     platform: numeric_state
-    entity_id: sensor.cpu_used
+    entity_id: sensor.processor_use
     above: 50
     for:
       minutes: 10
