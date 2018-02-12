@@ -185,8 +185,6 @@ logbook:
       - sensor.rasplex
 recorder:
 #  db_url: postgres://@/hass
-  purge_interval: 1
-  purge_keep_days: 14
 sun:
 updater:
 
