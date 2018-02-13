@@ -10,7 +10,7 @@ homeassistant:
 logger:
   default: warning
   logs:
-    homeassistant.components.media_player: fatal
+    homeassistant.components.cast: fatal
 config:
 discovery:
   ignore: 
