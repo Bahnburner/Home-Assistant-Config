@@ -4,7 +4,7 @@ fox:
       entity_id: remote.living_room
       data:
         device: 47158865
-        command: 'Inputhdmi2'
+        command: 'Inputhdmi1'
     - service: remote.send_command
       entity_id: remote.living_room
       data:
@@ -30,7 +30,7 @@ comedycentral:
       entity_id: remote.living_room
       data:
         device: 47158865
-        command: 'Inputhdmi2' 
+        command: 'Inputhdmi1' 
     - service: remote.send_command
       entity_id: remote.living_room
       data:
@@ -56,7 +56,7 @@ cartoonnetwork:
       entity_id: remote.living_room
       data:
         device: 47158865
-        command: 'Inputhdmi2'
+        command: 'Inputhdmi1'
     - service: remote.send_command
       entity_id: remote.living_room
       data:
@@ -82,7 +82,7 @@ fxx:
       entity_id: remote.living_room
       data:
         device: 47158865
-        command: 'Inputhdmi2'    
+        command: 'Inputhdmi1'    
     - service: remote.send_command
       entity_id: remote.living_room
       data:
@@ -108,7 +108,7 @@ nbc:
       entity_id: remote.living_room
       data:
         device: 47158865
-        command: 'Inputhdmi2'
+        command: 'Inputhdmi1'
     - service: remote.send_command
       entity_id: remote.living_room
       data:
@@ -134,7 +134,7 @@ espn:
       entity_id: remote.living_room
       data:
         device: 47158865
-        command: 'Inputhdmi2'
+        command: 'Inputhdmi1'
     - service: remote.send_command
       entity_id: remote.living_room
       data:
@@ -160,7 +160,7 @@ fx:
       entity_id: remote.living_room
       data:
         device: 47158865
-        command: 'Inputhdmi2'
+        command: 'Inputhdmi1'
     - service: remote.send_command
       entity_id: remote.living_room
       data:
@@ -186,7 +186,7 @@ cbs:
       entity_id: remote.living_room
       data:
         device: 47158865
-        command: 'Inputhdmi2'
+        command: 'Inputhdmi1'
     - service: remote.send_command
       entity_id: remote.living_room
       data:
@@ -212,7 +212,7 @@ abc:
       entity_id: remote.living_room
       data:
         device: 47158865
-        command: 'Inputhdmi2'
+        command: 'Inputhdmi1'
     - service: remote.send_command
       entity_id: remote.living_room
       data:
