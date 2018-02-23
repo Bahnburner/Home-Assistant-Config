@@ -44,18 +44,6 @@ lights:
     - group.dining_room
     - group.kitchen_lights
     - group.christmas
-lights:
-  view: yes
-  icon: mdi:lightbulb
-  name: Lights
-  entities:
-    - group.living_room_lights
-    - group.master_bedroom
-    - group.foyer
-    - group.exterior
-    - group.dining_room
-    - group.kitchen_lights
-    - group.christmas
 media:
   view: yes
   icon: mdi:cast
