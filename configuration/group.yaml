@@ -9,9 +9,8 @@ default_view:
     - group.master_bedroom 
     - group.upstairs
     - group.kitchen
-    - group.garage
-
     - group.exterior
+    - group.garage
     - group.media_player_livingroom_tv
     - group.media_player_livingroom_assistant
     - group.media_player_livingroom_speaker
