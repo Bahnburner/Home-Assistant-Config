@@ -9,6 +9,7 @@ default_view:
     - group.weather
     - group.exterior
     - group.alarm_zones
+    - group.living_room
     - group.media_player_livingroom_tv
     - group.media_player_livingroom_assistant
     - group.media_player_livingroom_speaker
@@ -25,7 +26,7 @@ default_view:
     - group.media_player_rasplex
     - group.media_player_house_party_protocol
     - group.media_player_bathroom_assistant
-    - group.living_room
+
     - group.dining_room
     - group.kitchen
     - group.master_bedroom
