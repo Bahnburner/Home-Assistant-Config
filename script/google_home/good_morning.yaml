@@ -22,9 +22,9 @@ good_morning:
 #SEVERE WEATHER          
           {% if states.sensor.pws_alerts.state | int > 0 %}We are currently under a {% if states.sensor.pws_alerts.attributes.Description != null %}{{ states.sensor.pws_alerts.attributes.Description | replace(", ", " and a ") + ". "}}{% elif states.sensor.pws_alerts.attributes.Description_WAR != null %}{{ states.sensor.pws_alerts.attributes.Description_WAR | replace(", ", " and a ") + ". "}}  {% elif states.sensor.pws_alerts.attributes.Description_WAT != null %}{{ states.sensor.pws_alerts.attributes.Description_WAT | replace(", ", " and a ") + ". "}}  {% elif states.sensor.pws_alerts.attributes.Description_ADV != null %}{{ states.sensor.pws_alerts.attributes.Description_ADV | replace(", ", " and a ") + ". "}}  {% elif states.sensor.pws_alerts.attributes.Description_FLO != null %}{{ states.sensor.pws_alerts.attributes.Description_FLO | replace(", ", " and a ") + ". "}}{% elif states.sensor.pws_alerts.attributes.Description_SPE != null %}Severe Weather Advisory.{% else %}Significant Weather Advisory.{% endif %}{% endif %}
 #COLD          
-          {% if states.sensor.dark_sky_daily_high_temperature.state | int <= 45%}Don't forget your coat.
-#RAIN          
-          {% elif states.sensor.pws_precip_1d.state | int >= 50 %} Don't forget your umbrella.{% endif %}
+          {% if states.sensor.dark_sky_daily_high_temperature.state | int <= 45%}Don't forget your coat.{%endif%}
+#RAIN    
+          {% if states.sensor.pws_precip_1d.state | int >= 50 %} Don't forget your umbrella.{% endif %}
 
 #TRISTAN'S CALENDAR          
           {% if states.calendar.tristans_calendar.attributes.message != '' %}
