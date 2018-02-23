@@ -7,11 +7,11 @@ default_view:
     - group.door_locks
     - group.living_room
     - group.master_bedroom 
+    - group.upstairs
     - group.kitchen
     - group.garage
-    - group.weather
+
     - group.exterior
-    - group.alarm_zones
     - group.media_player_livingroom_tv
     - group.media_player_livingroom_assistant
     - group.media_player_livingroom_speaker
@@ -29,9 +29,10 @@ default_view:
     - group.media_player_house_party_protocol
     - group.media_player_bathroom_assistant
     - group.dining_room
-    - group.upstairs
     - group.foyer
     - group.christmas
+    - group.weather    
+    - group.alarm_zones
 lights:
   view: yes
   icon: mdi:lightbulb
