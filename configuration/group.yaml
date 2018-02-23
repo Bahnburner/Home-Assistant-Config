@@ -5,6 +5,8 @@ default_view:
   entities: 
     - group.family
     - group.door_locks
+    - group.living_room
+    - group.master_bedroom    
     - group.garage
     - group.weather
     - group.exterior
@@ -25,10 +27,8 @@ default_view:
     - group.media_player_rasplex
     - group.media_player_house_party_protocol
     - group.media_player_bathroom_assistant
-    - group.living_room
     - group.dining_room
     - group.kitchen
-    - group.master_bedroom
     - group.upstairs
     - group.foyer
     - group.christmas
