@@ -17,14 +17,15 @@ good_morning:
           Good{% if mhour < 12 %} morning.{% elif mhour < 18 %} afternoon.{% else %} evening.{% endif %}
 #TIME          
           The current time is {% if minute > 0 %}{{ time }}.{% else %}{{ mhour }} o'clock.{% endif %}
-#TEMP          
-          The current temperature is {{states.sensor.dark_sky_temperature.state | round(0)}} degrees and the weather forecast for today is {{ states.sensor.pws_weather_1d.state | replace("mph", "miles per hour") | replace("High ", "High of ") | replace("Low ", "Low of ") | replace("F.", " degrees.") | replace("F ", "degrees.") | replace("WSW ", "west south west ") | replace("SSW ", "south south west ") | replace("ENE ", "east north east ") | replace("NNE ", "north north east ") | replace("ENE ", "east north east ") | replace("ESE ", "east south east ") | replace("SSE ", "south south east ") | replace("WNW ", "west north west ") | replace("NNW ", "north north west ") | replace("NE ", "north east ") | replace("NE.", "north east.") | replace("SE ", "south east ") | replace("SE.", "south east.") | replace("SW ", "south west ") | replace("SW.", "south west.") | replace("NW ", "north west ") | replace("N ", "north ") | replace("N.", "north.") | replace("S ", "south ") | replace("S.", "south.") | replace("E ", "east ") | replace("E.", "east.") | replace("W ", "west ") | replace("W.", "west.") | replace("WSW.", "west south west.") | replace("SSW.", "south south west.") | replace("ENE.", "east north east.") | replace("NNE.", "north north east.") | replace("ENE.", "east north east.") | replace("ESE.", "east south east.") | replace("SSE.", "south south east.") | replace("WNW.", "west north west.") | replace("NNW.", "north north west.")}} {% if states.sensor.pws_alerts.state | int > 0 %}
+#TEMP        
+          The current temperature is {{states.sensor.dark_sky_temperature.state | round(0)}} degrees and the weather forecast for today is {{ states.sensor.pws_weather_1d.state | replace("mph", "miles per hour") | replace("High ", "High of ") | replace("Low ", "Low of ") | replace("F.", " degrees.") | replace("F ", "degrees.") | replace("WSW ", "west south west ") | replace("SSW ", "south south west ") | replace("ENE ", "east north east ") | replace("NNE ", "north north east ") | replace("ENE ", "east north east ") | replace("ESE ", "east south east ") | replace("SSE ", "south south east ") | replace("WNW ", "west north west ") | replace("NNW ", "north north west ") | replace("NE ", "north east ") | replace("NE.", "north east.") | replace("SE ", "south east ") | replace("SE.", "south east.") | replace("SW ", "south west ") | replace("SW.", "south west.") | replace("NW ", "north west ") | replace("N ", "north ") | replace("N.", "north.") | replace("S ", "south ") | replace("S.", "south.") | replace("E ", "east ") | replace("E.", "east.") | replace("W ", "west ") | replace("W.", "west.") | replace("WSW.", "west south west.") | replace("SSW.", "south south west.") | replace("ENE.", "east north east.") | replace("NNE.", "north north east.") | replace("ENE.", "east north east.") | replace("ESE.", "east south east.") | replace("SSE.", "south south east.") | replace("WNW.", "west north west.") | replace("NNW.", "north north west.")}}
 #SEVERE WEATHER          
           {% if states.sensor.pws_alerts.state | int > 0 %}We are currently under a {% if states.sensor.pws_alerts.attributes.Description != null %}{{ states.sensor.pws_alerts.attributes.Description | replace(", ", " and a ") + ". "}}{% elif states.sensor.pws_alerts.attributes.Description_WAR != null %}{{ states.sensor.pws_alerts.attributes.Description_WAR | replace(", ", " and a ") + ". "}}  {% elif states.sensor.pws_alerts.attributes.Description_WAT != null %}{{ states.sensor.pws_alerts.attributes.Description_WAT | replace(", ", " and a ") + ". "}}  {% elif states.sensor.pws_alerts.attributes.Description_ADV != null %}{{ states.sensor.pws_alerts.attributes.Description_ADV | replace(", ", " and a ") + ". "}}  {% elif states.sensor.pws_alerts.attributes.Description_FLO != null %}{{ states.sensor.pws_alerts.attributes.Description_FLO | replace(", ", " and a ") + ". "}}{% elif states.sensor.pws_alerts.attributes.Description_SPE != null %}Severe Weather Advisory.{% else %}Significant Weather Advisory.{% endif %}{% endif %}
 #COLD          
           {% if states.sensor.dark_sky_daily_high_temperature.state | int <= 45%}Don't forget your coat.
 #RAIN          
           {% elif states.sensor.pws_precip_1d.state | int >= 50 %} Don't forget your umbrella.{% endif %}
+
 #TRISTAN'S CALENDAR          
           {% if states.calendar.tristans_calendar.attributes.message != '' %}
             {% set event_date = states.calendar.tristans_calendar.attributes.start_time.split(" ")[0] %}
@@ -48,7 +49,7 @@ good_morning:
               {% endif %}
             {% endif %}
           {% endif %}
-#CRYSTAL'S CALENDAR          
+#CRYSTAL'S CALENDAR
           {% if states.calendar.crystals_calendar.attributes.message != '' %}
             {% set event_date = states.calendar.crystals_calendar.attributes.start_time.split(" ")[0] %}
             {% set event_time = states.calendar.crystals_calendar.attributes.start_time.split(" ")[1] %}
