@@ -315,6 +315,7 @@ disable_all_automations:
   - automation.kitchen_uplighting__weekends
   - automation.media_player_initialize
   - automation.morning__pantry
+  - automation.morning__pantry__dim
   - automation.morning__stage_1
   - automation.morning__stage_2
   - automation.morning__stage_3
