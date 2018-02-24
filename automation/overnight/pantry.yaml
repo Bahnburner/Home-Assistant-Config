@@ -18,7 +18,7 @@
   hide_entity: true
   trigger:
     platform: time
-    at: '00:00:00'
+    at: '01:30:00'
   condition:
     condition: state
     entity_id: light.pantry
@@ -39,7 +39,7 @@
       - condition: time
         after: '22:00:00'
       - condition: time  
-        before: '06:50:00'
+        before: '01:20:00'
   action:
     - delay:
         minutes: 5
@@ -58,8 +58,10 @@
   condition:
     condition: or
     conditions:
+      - condition: time
+        after: '01:30:00'
       - condition: time  
-        before: '06:50:00'
+        before: '06:20:00'
   action:
     - delay:
         minutes: 5
