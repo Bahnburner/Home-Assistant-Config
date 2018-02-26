@@ -11,6 +11,16 @@ logger:
   default: warning
   logs:
     homeassistant.components.cast: fatal
+  exclude:
+    entities:
+      - sensor.pws_weather_1d
+      - sensor.load_5m
+      - sensor.time_2
+      - sensor.cpu
+      - sensor.disk
+      - sensor.ram
+      - sensor.air_quality
+      - sensor.rasplex
 config:
 discovery:
   ignore: 
@@ -178,6 +188,8 @@ history:
 logbook:
   exclude:
     entities:
+      - sensor.pws_weather_1d
+      - sensor.load_5m
       - sensor.time_2
       - sensor.cpu
       - sensor.disk
@@ -187,7 +199,7 @@ logbook:
 recorder:
 #  db_url: postgres://@/hass
   purge_interval: 1
-  purge_keep_days: 14
+  purge_keep_days: 7
 sun:
 updater:
 
