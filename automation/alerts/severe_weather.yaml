@@ -2,9 +2,9 @@
   hide_entity: True
   trigger:
     - platform: template
-      value_template: {% if states.sensor.pws_alerts.attributes.Description_WRN == "Severe Thunderstorm Warning" %}true{%endif%}
+      value_template: "{% if states.sensor.pws_alerts.attributes.Description_WRN == 'Severe Thunderstorm Warning' %}true{%endif%}"
      - platform: template
-      value_template: {% if states.sensor.pws_alerts.attributes.Description_TOR == "Tornado Warning" %}true{%endif%}
+      value_template: "{% if states.sensor.pws_alerts.attributes.Description_TOR == 'Tornado Warning' %}true{%endif%}"
   condition:
     - condition: state
       entity_id: group.family
