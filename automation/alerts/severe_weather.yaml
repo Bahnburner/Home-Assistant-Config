@@ -3,7 +3,7 @@
   trigger:
     - platform: template
       value_template: "{{ states.sensor.pws_alerts.attributes.Description_WRN == 'Severe Thunderstorm Warning' }}"
-     - platform: template
+    - platform: template
       value_template: "{{ states.sensor.pws_alerts.attributes.Description_TOR == 'Tornado Warning' }}"
   condition:
     - condition: state
