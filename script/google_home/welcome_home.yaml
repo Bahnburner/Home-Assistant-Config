@@ -1,19 +1,19 @@
-  welcome_home:
-    sequence:
-      - wait_template: "{{ states.sensor.garage_door.state == 'Open' }}"
-        timeout: 00:05:00
-      - delay:
+welcome_home:
+  sequence:
+    - wait_template: "{{ states.sensor.garage_door.state == 'Open' }}"
+      timeout: 00:05:00
+    - delay:
         seconds: 10
-      - service: tts.google_say
-        entity_id: media_player.kitchen_assistant
-        data_template:
-          message: >
-            {% if states.group.tristans_phone.state == "Home" and states.group.crystals_phone.state == "Home" %}
-              Welcome home!
-            {% elif states.group.tristans_phone.state == "Home" %}
-              Welcome home, Tristan!
-            {% elif states.group.crystals_phone.state == "Home" %}
-              Welcome home, Crystal!
-            {% else %}
-              Welcome home!
-            {% endif %}
+    - service: tts.google_say
+      entity_id: media_player.kitchen_assistant
+      data_template:
+        message: >
+          {% if states.group.tristans_phone.state == "Home" and states.group.crystals_phone.state == "Home" %}
+            Welcome home!
+          {% elif states.group.tristans_phone.state == "Home" %}
+            Welcome home, Tristan!
+          {% elif states.group.crystals_phone.state == "Home" %}
+            Welcome home, Crystal!
+          {% else %}
+            Welcome home!
+          {% endif %}
