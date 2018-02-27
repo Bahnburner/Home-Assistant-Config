@@ -8,13 +8,8 @@ homeassistant:
   customize: !include_dir_merge_named customize
 
 logger:
-  default: warning
-  logs:
-    homeassistant.components.cast: fatal
 config:
 discovery:
-  ignore: 
-    - harmony
 frontend: 
   javascript_version: es5
   themes: !include ./themes/themes.yaml
