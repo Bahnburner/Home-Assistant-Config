@@ -19,7 +19,6 @@ history:
     domains:
       - automation
     entities:
-      - sensor.load_5m
       - sensor.time_2
       - binary_sensor.downstairs_thermostat_has_leaf
       - binary_sensor.downstairs_thermostat_is_locked
