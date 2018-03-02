@@ -8,6 +8,9 @@ homeassistant:
   customize: !include_dir_merge_named customize
 
 logger:
+  default: info
+  logs:
+    homeassistant.components.media_player: error
 config:
 discovery:
 frontend: 
