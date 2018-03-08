@@ -11,9 +11,7 @@
     state: 'home'
   action:
     - service: light.turn_on
-      entity_id: 
-        - light.living_room
-        - light.master_bedroom
+      entity_id: light.living_room
       data:
         color_temp: 366
         brightness: 254
@@ -21,5 +19,14 @@
     - service: light.turn_on
       entity_id: light.pantry
       data:
+        brightness: 254
+        transition: 600
+    - condition: state
+      entity_id: group.tristal
+      state: 'home'
+    - service:  light.turn_on
+      entity_id: light.master_bedroom
+      data:
+        color_temp: 366
         brightness: 254
         transition: 600
