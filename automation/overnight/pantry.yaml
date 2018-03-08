@@ -24,8 +24,13 @@
     entity_id: light.pantry
     state: 'on'
   action:
-    service: light.turn_off
-    entity_id: light.pantry
+    - service: light.turn_off
+      entity_id: light.pantry
+    - condition: state
+      entity_id: group.family
+      state: 'not_home'
+    - service: light.turn_off
+      entity_id: light.living_room
        
 - alias: Overnight - Pantry ReDim
   hide_entity: true
