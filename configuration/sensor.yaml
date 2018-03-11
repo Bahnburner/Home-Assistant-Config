@@ -134,9 +134,9 @@
     rasplex:
       value_template: '{% if is_state("device_tracker.rasplex", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'RasPlex'
-    ring:
-      value_template: '{% if is_state("device_tracker.ring", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Ring Doorbell'
+    nesthello:
+      value_template: '{% if is_state("device_tracker.nest_hello", "home") %}Online{% else %}Offline{% endif %}'
+      friendly_name: 'Nest Hello'
     lightifybridge:
       value_template: '{% if is_state("device_tracker.lightify_bridge", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Lightify Bridge'
