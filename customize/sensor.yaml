@@ -134,8 +134,8 @@ sensor.directv_genie:
   entity_picture: /local/resources/images/devices/directv.png
 sensor.rasplex:
   entity_picture: /local/resources/images/devices/plex.png
-sensor.ring:
-  entity_picture: /local/resources/images/devices/ring.png
+sensor.nest_hello:
+  entity_picture: /local/resources/images/devices/nesthello.png
   friendly_name: 'Ring Doorbell'
 sensor.lightifybridge:
   entity_picture: /local/resources/images/devices/lightify.png
