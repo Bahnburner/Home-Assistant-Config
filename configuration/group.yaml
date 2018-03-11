@@ -222,7 +222,7 @@ devices:
   - sensor.macmini
   - sensor.rasplex
   - sensor.directv_genie
-  - sensor.nest_hello
+  - sensor.nesthello
 cast_devices:
   - sensor.google_home_livingroom
   - sensor.google_home_mini_kitchen
