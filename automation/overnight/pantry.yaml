@@ -64,7 +64,7 @@
     - condition: time
       after: '01:30:00'
     - condition: time  
-      before: '06:20:00'
+      before: '05:50:00'
   action:
     - delay:
         minutes: 5
