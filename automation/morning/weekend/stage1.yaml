@@ -13,6 +13,9 @@
     - condition: state
       entity_id: group.family
       state: 'home'
+    - condition: state
+      entity_id: light.master_bedroom
+      state: 'off'
   action:
     - service: light.turn_on
       entity_id: light.pantry
