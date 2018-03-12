@@ -4,12 +4,10 @@
     platform: time
     at: '07:00:00'
   condition:
-    condition: and
-    conditions:
-    - condition: time
-      weekday:
-        - sat
-        - sun
+    condition: time
+    weekday:
+      - sat
+      - sun
   action:
     - service: frontend.set_theme
       data:
