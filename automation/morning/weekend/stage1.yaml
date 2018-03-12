@@ -10,10 +10,13 @@
       weekday:
         - sat
         - sun
+  action:
+    - service: frontend.set_theme
+      data:
+        name: 'default'
     - condition: state
       entity_id: group.family
       state: 'home'
-  action:
     - service: light.turn_on
       entity_id: light.pantry
       data:
