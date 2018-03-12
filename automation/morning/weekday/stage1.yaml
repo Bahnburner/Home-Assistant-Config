@@ -26,3 +26,8 @@
         color_temp: 500
         brightness: 50
         transition: 60
+    - service: light.turn_on
+      entity_id: light.pantry
+      data:
+        brightness: 100
+        transition: 60
