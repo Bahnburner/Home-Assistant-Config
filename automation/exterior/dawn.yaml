@@ -14,4 +14,4 @@
         - light.front_floods
         - light.rear_floods
       data:
-        transition: 60
+        transition: 180
