@@ -9,4 +9,5 @@ stpaddysday:
         color_name: green
     - service: tts.google_say
       entity_id: media_player.bedroom_speaker
-      data: "OK google. Play Flogging Molly Radio on All Speakers."
+      data: 
+        message: "OK google. Play Flogging Molly Radio on All Speakers."
