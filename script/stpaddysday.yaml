@@ -1,12 +1,12 @@
 stpaddysday:
   sequence:
     - service: light.turn_on
-      entity_id:
-        - light.bias_light
+      entity_id: 
         - light.cabinet_lights
+        - light.bias_light
       data:
         brightness: 255
-        color_name: green
+        rgb_color: [2,255,0]
     - service: tts.google_say
       entity_id: media_player.bedroom_speaker
       data: 
