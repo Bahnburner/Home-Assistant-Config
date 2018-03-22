@@ -140,6 +140,9 @@
     lightifybridge:
       value_template: '{% if is_state("device_tracker.lightify_bridge", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Lightify Bridge'
+    away_toggle:
+      value_template: '{% if is_state("input_boolean.disable_away_mode", "on") %}Home{% else %}Away{% endif %}'
+      friendly_name: 'Away Toggle'      
 - platform: random
   name: whitenoise
   minimum: 1
