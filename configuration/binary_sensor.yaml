@@ -32,4 +32,6 @@
   sensors:
     rain:
       value_template: '{{ states.sensor.dark_sky_icon.state == "rain"}}'
-
+    away_toggle:
+      value_template: '{{ states.input_boolean.disable_away_mode.state == "on" }}'
+      device_class: presence
