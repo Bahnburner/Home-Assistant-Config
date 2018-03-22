@@ -179,6 +179,7 @@ override:
   control: hidden
   entities:
     - updater.updater
+    - input_boolean.disable_away_mode
     - input_boolean.disable_alarm
     - switch.vacation_mode
     - group.simulate_presence
