@@ -46,3 +46,5 @@ binary_sensor.bedroom_windows:
   hidden: true
 binary_sensor.wan_up:
   hidden: true
+binary_sensor.disable_away_mode:
+  hidden: true
