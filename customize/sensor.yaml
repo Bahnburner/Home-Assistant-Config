@@ -142,3 +142,5 @@ sensor.lightifybridge:
 sensor.hass_update_available:
   entity_picture: /local/resources/images/devices/hass.png
   hidden: true
+sensor.away_toggle:
+  hidden: true
