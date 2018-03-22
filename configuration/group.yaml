@@ -107,6 +107,7 @@ family:
 tristal:
   - group.tristans_phone
   - group.crystals_phone
+  - binary_sensor.disable_away_mode
 christmas:
   switch.christmas_lights
 door_locks:
