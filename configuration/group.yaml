@@ -103,6 +103,7 @@ family:
   - device_tracker.taylors_phone
   - device_tracker.donnas_phone
   - device_tracker.stephens_phone
+  - binary_sensor.disable_away_mode
 tristal:
   - group.tristans_phone
   - group.crystals_phone
