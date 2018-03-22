@@ -103,11 +103,11 @@ family:
   - device_tracker.taylors_phone
   - device_tracker.donnas_phone
   - device_tracker.stephens_phone
-  - binary_sensor.disable_away_mode
+  - binary_sensor.away_toggle
 tristal:
   - group.tristans_phone
   - group.crystals_phone
-  - binary_sensor.disable_away_mode
+  - binary_sensor.away_toggle
 christmas:
   switch.christmas_lights
 door_locks:
