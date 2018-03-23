@@ -96,6 +96,7 @@ crystals_phone:
   - device_tracker.crystals_phone_wifi
   - device_tracker.crystals_phone_bt
 family:
+  - sensor.away_toggle
   - group.tristans_phone
   - group.crystals_phone
   - device_tracker.erins_phone
@@ -103,7 +104,6 @@ family:
   - device_tracker.taylors_phone
   - device_tracker.donnas_phone
   - device_tracker.stephens_phone
-  - sensor.away_toggle
 tristal:
   - group.tristans_phone
   - group.crystals_phone
