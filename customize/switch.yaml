@@ -1,5 +1,5 @@
 switch.vacation_mode:
-  friendly_name: 'Enable Vacation Mode'
+  friendly_name: 'Vacation Mode'
   icon: mdi:airplane
 switch.routines:
   friendly_name: 'Disable All Automations'
