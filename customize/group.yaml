@@ -42,7 +42,7 @@ group.master_bedroom_lights:
 group.inputs:
   hidden: true
 group.simulate_presence:
-  friendly_name: 'Simulate Presence'
+  friendly_name: 'Enable Simulated Presence'
   icon: mdi:account-multiple
 group.gtg:
   hidden: true
