@@ -4,13 +4,15 @@
     - platform: state
       entity_id: binary_sensor.rain
       to: 'on'
-    - platform: state
+    - platform: numeric_state
       entity_id: sun.sun
-      to: 'above_horizon'
+      value_template: '{{ state.attributes.elevation }}'
+      above: 8
   condition:
-    - condition: state
+    - condition: numeric_state
       entity_id: sun.sun
-      state: 'above_horizon'
+      value_template: '{{ state.attributes.elevation }}'
+      above: 8
     - condition: state
       entity_id: binary_sensor.rain
       state: 'on'
