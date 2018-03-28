@@ -7,7 +7,7 @@
     above: 8
   condition: 
     condition: template
-    value_template: '{{ states.binary_sensor.rain.state == 'off' }}'
+    value_template: '{{ states.binary_sensor.rain.state == "off" }}'
   action:
     - service: automation.turn_off
       entity_id: automation.exterior_front__dim
