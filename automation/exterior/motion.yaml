@@ -1,32 +1,8 @@
-- alias: Exterior Front - Driveway Motion
+- alias: Exterior Front - Motion
   hide_entity: True
   trigger:
     platform: state
-    entity_id: binary_sensor.entryway_camera__driveway_activity
-    to: 'on'
-  condition:
-    - condition: template
-      value_template: '{{ states.light.front_floods.attributes.brightness <= 100 }}'
-    - condition: numeric_state
-      entity_id: sun.sun
-      value_template: '{{ state.attributes.elevation }}'
-      below: 0
-  action:
-    - service: script.turn_off
-      entity_id: script.front_door_driveway_motion
-    - service: light.turn_on
-      entity_id:  
-        - light.front_floods
-      data:
-        brightness: 254
-    - service: script.turn_on
-      entity_id: script.front_door_driveway_motion
-
-- alias: Exterior Front - Entranceway Motion
-  hide_entity: True
-  trigger:
-    platform: state
-    entity_id: binary_sensor.entryway_camera__entrance_way_activity
+    entity_id: binary_sensor.front_door_motion
     to: 'on'
   condition:
     - condition: template
@@ -37,11 +13,12 @@
       below: 0
   action:
     - service: script.turn_off
-      entity_id: script.front_door_entranceway_motion
+      entity_id: script.front_door_motion
     - service: light.turn_on
       entity_id:  
         - light.front_door
+        - light.front_floods
       data:
         brightness: 254
     - service: script.turn_on
-      entity_id: script.front_door_entranceway_motion
+      entity_id: script.front_door_motion

@@ -8,11 +8,13 @@ homeassistant:
   customize: !include_dir_merge_named customize
 
 logger:
-  default: info
+  default: warn
   logs:
-    homeassistant.components.media_player: error
+    homeassistant.components.media_player: fatal
 config:
 discovery:
+  ignore: 
+    - harmony
 frontend: 
   javascript_version: es5
   themes: !include ./themes/themes.yaml
@@ -175,8 +177,6 @@ history:
 logbook:
   exclude:
     entities:
-      - sensor.pws_weather_1d
-      - sensor.load_5m
       - sensor.time_2
       - sensor.cpu
       - sensor.disk
@@ -185,8 +185,6 @@ logbook:
       - sensor.rasplex
 recorder:
 #  db_url: postgres://@/hass
-  purge_interval: 1
-  purge_keep_days: 7
 sun:
 updater:
 

@@ -2,32 +2,31 @@ group.christmas:
   friendly_name: 'Christmas'
 group.door_locks:
   friendly_name: 'Door Locks'
-  order: 2
 group.living_room:
   friendly_name: 'Living Room'
-  order: 3
 group.upstairs:
   friendly_name: 'Upstairs'
 group.master_bedroom:
   friendly_name: 'Master Bedroom'
-  order: 4
 group.kitchen:
   friendly_name: 'Kitchen'
-  order: 5
 group.kitchen_lights:
   friendly_name: 'Kitchen'
 group.dining_room:
   friendly_name: 'Dining Room'
-  order: 6
+group.master_hallway:
+  friendly_name: 'Master Hallway'
 group.foyer:
   friendly_name: 'Foyer'
+group.stairway:
+  friendly_name: 'Stairway'
+  hidden: true
 group.garage:
   friendly_name: 'Garage'
 group.exterior:
   friendly_name: 'Exterior'
 group.family:
   friendly_name: 'Family'
-  order: 1
 group.weather:
   friendly_name: 'Weather'
 group.override:

@@ -88,9 +88,8 @@ settings:
     - group.system_monitor
     - group.devices
     - group.cast_devices
-    - camera.downstairs_front_door
-    - camera.downstairs_yard
-    - camera.upstairs_nursery
+    - camera.front_door
+    - camera.backyard
 tristans_phone:
   - device_tracker.tristans_phone_wifi
   - device_tracker.tristans_phone_bt
@@ -98,7 +97,6 @@ crystals_phone:
   - device_tracker.crystals_phone_wifi
   - device_tracker.crystals_phone_bt
 family:
-  - sensor.away_toggle
   - group.tristans_phone
   - group.crystals_phone
   - device_tracker.erins_phone
@@ -109,7 +107,6 @@ family:
 tristal:
   - group.tristans_phone
   - group.crystals_phone
-  - sensor.away_toggle
 christmas:
   switch.christmas_lights
 door_locks:
@@ -182,7 +179,6 @@ override:
   control: hidden
   entities:
     - updater.updater
-    - input_boolean.disable_away_mode
     - input_boolean.disable_alarm
     - switch.vacation_mode
     - group.simulate_presence
@@ -226,7 +222,7 @@ devices:
   - sensor.macmini
   - sensor.rasplex
   - sensor.directv_genie
-  - sensor.nesthello
+  - sensor.ring
 cast_devices:
   - sensor.google_home_livingroom
   - sensor.google_home_mini_kitchen
@@ -319,7 +315,6 @@ disable_all_automations:
   - automation.kitchen_uplighting__weekends
   - automation.media_player_initialize
   - automation.morning__pantry
-  - automation.morning__pantry__dim
   - automation.morning__stage_1
   - automation.morning__stage_2
   - automation.morning__stage_3

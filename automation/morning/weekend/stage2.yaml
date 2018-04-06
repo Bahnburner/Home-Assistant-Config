@@ -11,17 +11,9 @@
         - sat
         - sun
     - condition: state
-      entity_id: group.family
+      entity_id: group.tristal
       state: 'home'
   action:
-    - service: light.turn_on
-      entity_id: light.pantry
-      data:
-        brightness: 255
-        transition: 60
-    - condition: state
-      entity_id: group.tristal
-      state: 'home'   
     - service: light.turn_on
       entity_id: light.master_bedroom
       data:

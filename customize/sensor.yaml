@@ -134,13 +134,11 @@ sensor.directv_genie:
   entity_picture: /local/resources/images/devices/directv.png
 sensor.rasplex:
   entity_picture: /local/resources/images/devices/plex.png
-sensor.nesthello:
-  entity_picture: /local/resources/images/devices/nesthello.png
-  friendly_name: 'Nest Hello'
+sensor.ring:
+  entity_picture: /local/resources/images/devices/ring.png
+  friendly_name: 'Ring Doorbell'
 sensor.lightifybridge:
   entity_picture: /local/resources/images/devices/lightify.png
 sensor.hass_update_available:
   entity_picture: /local/resources/images/devices/hass.png
-  hidden: true
-sensor.away_toggle:
   hidden: true

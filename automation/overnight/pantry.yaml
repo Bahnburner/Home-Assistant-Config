@@ -18,19 +18,14 @@
   hide_entity: true
   trigger:
     platform: time
-    at: '01:30:00'
+    at: '00:00:00'
   condition:
     condition: state
     entity_id: light.pantry
     state: 'on'
   action:
-    - service: light.turn_off
-      entity_id: light.pantry
-    - condition: state
-      entity_id: group.family
-      state: 'not_home'
-    - service: light.turn_off
-      entity_id: light.living_room
+    service: light.turn_off
+    entity_id: light.pantry
        
 - alias: Overnight - Pantry ReDim
   hide_entity: true
@@ -44,7 +39,7 @@
       - condition: time
         after: '22:00:00'
       - condition: time  
-        before: '01:20:00'
+        before: '06:50:00'
   action:
     - delay:
         minutes: 5
@@ -61,10 +56,10 @@
     entity_id: sensor.brightness_pantry
     above: 101
   condition:
-    - condition: time
-      after: '01:30:00'
-    - condition: time  
-      before: '05:50:00'
+    condition: or
+    conditions:
+      - condition: time  
+        before: '06:50:00'
   action:
     - delay:
         minutes: 5

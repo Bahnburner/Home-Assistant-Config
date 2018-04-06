@@ -2,10 +2,6 @@
     name: Garage Hot Start
     initial: off
     icon: mdi:car
-  disable_away_mode:
-    name: Disable Away Mode
-    initial: off
-    icon: mdi:run
   disable_alarm:
     name: Disable Alarm
     initial: off

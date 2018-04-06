@@ -14,13 +14,13 @@
     - temperature
     - temperature_max
     - temperature_min
-#- platform: google_travel_time
-#  name: Drive_time_to_work
-#  api_key: !secret google_travel
-#  origin: place_id:ChIJG1SUhnKff4gRz9_GI6GdfUY
-#  destination: place_id:ChIJkRB9LrKFf4gRgqu8ivoA0x8
-#  options:
-#    arrival_time: '09:15:00'
+- platform: google_travel_time
+  name: Drive_time_to_work
+  api_key: !secret google_travel
+  origin: place_id:ChIJG1SUhnKff4gRz9_GI6GdfUY
+  destination: place_id:ChIJkRB9LrKFf4gRgqu8ivoA0x8
+  options:
+    arrival_time: '09:15:00'
 - platform: template
   sensors:
     cpu:
@@ -51,11 +51,11 @@
     time:
       value_template: '{{(now().strftime("%H") | int) + (now().strftime("%M")|int / 60) | round(2)}}'
     protect_down:
-      value_template: '{% if  states.sensor.downstairs_nest_protect_bedroom_battery_health.state == "Ok" and states.sensor.downstairs_nest_protect_bedroom_co_status.state == "Ok" and states.sensor.downstairs_nest_protect_bedroom_smoke_status.state == "Ok" %}Online{% elif states.sensor.kithen_nest_protect_bedroom_co_status.state == "Emergency" or states.sensor.downstairs_nest_protect_bedroom_smoke_status.state == "Emergency" %}Emergency {% elif states.sensor.downstairs_nest_protect_bedroom_battery_health.state == "Replace" %}Low Battery {% else %}Error{% endif %}'    
+      value_template: '{% if  states.sensor.downstairs_nest_protect_battery_health.state == "Ok" and states.sensor.downstairs_nest_protect_co_status.state == "Ok" and states.sensor.downstairs_nest_protect_smoke_status.state == "Ok" %}Online{% elif states.sensor.kithen_nest_protect_co_status.state == "Emergency" or states.sensor.downstairs_nest_protect_smoke_status.state == "Emergency" %}Emergency {% elif states.sensor.downstairs_nest_protect_battery_health.state == "Replace" %}Low Battery {% else %}Error{% endif %}'    
     protect_kitchen:
-      value_template: '{% if  states.sensor.downstairs_nest_protect_kitchen_battery_health.state == "Ok" and states.sensor.downstairs_nest_protect_kitchen_co_status.state == "Ok" and states.sensor.downstairs_nest_protect_kitchen_smoke_status.state == "Ok" %}Online{% elif states.sensor.downstairs_nest_protect_kitchen_co_status.state == "Emergency" or states.sensor.downstairs_nest_protect_kitchen_smoke_status.state == "Emergency" %}Emergency {% elif states.sensor.downstairs_nest_protect_kitchen_battery_health.state == "Replace" %}Low Battery {% else %}Error{% endif %}'
+      value_template: '{% if  states.sensor.kitchen_nest_protect_battery_health.state == "Ok" and states.sensor.kitchen_nest_protect_co_status.state == "Ok" and states.sensor.kitchen_nest_protect_smoke_status.state == "Ok" %}Online{% elif states.sensor.kithen_nest_protect_co_status.state == "Emergency" or states.sensor.kitchen_nest_protect_smoke_status.state == "Emergency" %}Emergency {% elif states.sensor.kitchen_nest_protect_battery_health.state == "Replace" %}Low Battery {% else %}Error{% endif %}'
     protect_up:
-      value_template: '{% if  states.sensor.upstairs_nest_protect_hallway_battery_health.state == "Ok" and states.sensor.upstairs_nest_protect_hallway_co_status.state == "Ok" and states.sensor.upstairs_nest_protect_hallway_smoke_status.state == "Ok" %}Online{% elif states.sensor.kithen_nest_protect_hallway_co_status.state == "Emergency" or states.sensor.upstairs_nest_protect_hallway_smoke_status.state == "Emergency" %}Emergency {% elif states.sensor.upstairs_nest_protect_hallway_battery_health.state == "Replace" %}Low Battery {% else %}Error{% endif %}'      
+      value_template: '{% if  states.sensor.upstairs_nest_protect_battery_health.state == "Ok" and states.sensor.upstairs_nest_protect_co_status.state == "Ok" and states.sensor.upstairs_nest_protect_smoke_status.state == "Ok" %}Online{% elif states.sensor.kithen_nest_protect_co_status.state == "Emergency" or states.sensor.upstairs_nest_protect_smoke_status.state == "Emergency" %}Emergency {% elif states.sensor.upstairs_nest_protect_battery_health.state == "Replace" %}Low Battery {% else %}Error{% endif %}'      
     front_door:
       friendly_name: 'Front Door'
       value_template: '{% if is_state("binary_sensor.front_door", "off") %}Closed{% else %}Open{% endif %}'
@@ -134,15 +134,12 @@
     rasplex:
       value_template: '{% if is_state("device_tracker.rasplex", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'RasPlex'
-    nesthello:
-      value_template: '{% if is_state("device_tracker.nest_hello", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Nest Hello'
+    ring:
+      value_template: '{% if is_state("device_tracker.ring", "home") %}Online{% else %}Offline{% endif %}'
+      friendly_name: 'Ring Doorbell'
     lightifybridge:
       value_template: '{% if is_state("device_tracker.lightify_bridge", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Lightify Bridge'
-    away_toggle:
-      value_template: '{% if is_state("input_boolean.disable_away_mode", "on") %}home{% else %}not_home{% endif %}'
-      friendly_name: 'Away Toggle'      
 - platform: random
   name: whitenoise
   minimum: 1

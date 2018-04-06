@@ -5,9 +5,6 @@
     entity_id: sun.sun
     value_template: '{{ state.attributes.elevation }}'
     above: 8
-  condition: 
-    condition: template
-    value_template: '{{ states.binary_sensor.rain.state == "off" }}'
   action:
     - service: automation.turn_off
       entity_id: automation.exterior_front__dim
@@ -17,4 +14,4 @@
         - light.front_floods
         - light.rear_floods
       data:
-        transition: 180
+        transition: 60

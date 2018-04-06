@@ -1,19 +1,4 @@
-front_door_driveway_motion:
-  sequence:
-    - delay:
-        minutes: 5
-    - condition: numeric_state
-      entity_id: sun.sun
-      value_template: '{{ state.attributes.elevation }}'
-      below: -5
-    - service: light.turn_on
-      entity_id: 
-        - light.front_floods
-      data:
-        brightness: 100
-        transition: 30
-        
-front_door_entranceway_motion:
+front_door_motion:
   sequence:
     - delay:
         minutes: 5
@@ -24,6 +9,7 @@ front_door_entranceway_motion:
     - service: light.turn_on
       entity_id: 
         - light.front_door
+        - light.front_floods
       data:
         brightness: 100
         transition: 30
