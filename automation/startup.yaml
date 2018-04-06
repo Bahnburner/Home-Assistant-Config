@@ -5,6 +5,11 @@
     - platform: homeassistant
       event: start
   action:
+    - delay:
+        seconds: 5
+    - condition: state
+      entity_id: group.tristal
+      state: 'home'
     - service: media_player.volume_set
       entity_id: media_player.livingroom_assistant
       data: 
