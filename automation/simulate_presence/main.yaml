@@ -18,24 +18,25 @@
   initial_state: 'off'
   trigger:
     platform: time
-    at: '19:00:00'
+    at: '18:45:00'
   action:
-    service: light.turn_on
-    entity_id:
-      - light.overhead_light
-      - light.recessed_lights
+    - delay: '00:{{ (range(0, 30)|random|int) }}:00'
+    - service: light.turn_on
+      entity_id:
+        - light.overhead_light
+        - light.recessed_lights
     
 - alias: Simulate Presence 3
   hide_entity: True
   initial_state: 'off'
   trigger:
     platform: time
-    at: '19:45:00'
+    at: '19:30:00'
   action:
+    - delay: '00:{{ (range(0, 15)|random|int) }}:00'
     - service: light.turn_on
       entity_id: light.chandelier
-    - delay:
-        seconds: 5
+    - delay: '00:{{ (range(0, 3)|random|int) }}:{{ (range(1,59)|random|int) }}'
     - service: light.turn_off
       entity_id: light.overhead_light
       
@@ -44,8 +45,9 @@
   initial_state: 'off'
   trigger:
     platform: time
-    at: '20:30:00'
+    at: '20:15:00'
   action:
+    - delay: '00:{{ (range(0, 30)|random|int) }}:00'
     - service: light.turn_off
       entity_id: 
         - light.chandelier
@@ -65,14 +67,15 @@
   initial_state: 'off'
   trigger:
     platform: time
-    at: '22:30:00'
+    at: '22:15:00'
   action:
-    service: light.turn_on
-    entity_id: light.master_bedroom
-    data:
-      brightness: 150
-      color_temp: 500
-      transition: 60
+    - delay: '00:{{ (range(0, 30)|random|int) }}:00'
+    - service: light.turn_on
+      entity_id: light.master_bedroom
+      data:
+        brightness: 150
+        color_temp: 500
+        transition: 60
 
 - alias: Simulate Presence 6
   hide_entity: True
@@ -81,18 +84,22 @@
     platform: time
     at: '23:45:00'
   action:
+    - delay: '00:{{ (range(0, 10)|random|int) }}:00'
+    - service: remote.turn_off
+      entity_id: remote.living_room
+    - delay: '00:{{ (range(0, 4)|random|int) }}:{{ (range(1,59)|random|int) }}'
     - service: light.turn_off
       entity_id: light.living_room
-    - service: remote.turn_off
-      entity_id: remote.living_room 
+
 
 - alias: Simulate Presence 7
   hide_entity: True
   initial_state: 'off'
   trigger:
     platform: time
-    at: '00:15:00'
+    at: '00:05:00'
   action:
+    - delay: '00:{{ (range(0, 15)|random|int) }}:00'
     - service: light.turn_off
       entity_id: light.master_bedroom
 

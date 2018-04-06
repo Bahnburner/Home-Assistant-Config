@@ -1,24 +1,24 @@
 - platform: cast
-- platform: cast
-  host: 10.0.0.150
-- platform: cast
-  host: 10.0.0.155
-- platform: cast
-  host: 10.0.0.156
-- platform: cast
-  host: 10.0.0.157
-- platform: cast
-  host: 10.0.0.158
-- platform: cast
-  host: 10.0.0.159
-- platform: cast
-  host: 10.0.0.160
-- platform: cast
-  host: 10.0.0.161
-- platform: cast
-  host: 10.0.0.162
-- platform: cast
-  host: 10.0.0.163
+#- platform: cast
+#  host: 10.0.0.150
+#- platform: cast
+#  host: 10.0.0.155
+#- platform: cast
+#  host: 10.0.0.156
+#- platform: cast
+#  host: 10.0.0.157
+#- platform: cast
+#  host: 10.0.0.158
+#- platform: cast
+#  host: 10.0.0.159
+#- platform: cast
+#  host: 10.0.0.160
+#- platform: cast
+#  host: 10.0.0.161
+#- platform: cast
+#  host: 10.0.0.162
+#- platform: cast
+#  host: 10.0.0.163
 - platform: plex
   scan_interval: 5
 - platform: directv
@@ -30,7 +30,7 @@
   host: 10.0.0.151
   port: 8080
   name: Livingroom DirecTV
-  device: 00367694C1C4
+  device: 98F7D7E5CA6E
 - platform: vizio
   host: 10.0.0.150
   access_token: !secret vizio_access_token

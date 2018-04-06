@@ -36,12 +36,28 @@
   scan_interval: 30
   switches:
     front_door:
-      command_on: "python3 /Users/Theatre/.homeassistant/kevo/lock-front.py"
-      command_off: "python3 /Users/Theatre/.homeassistant/kevo/unlock-front.py"
-      command_state: "python3 /Users/Theatre/.homeassistant/kevo/status-front.py"
-      value_template: '{{ value == "Locked" }}'
+      command_on: "python3 /home/hass/.homeassistant/kevo/lock-front.py"
+      command_off: "python3 /home/hass/.homeassistant/kevo/unlock-front.py"
+      command_state: "python3 /home/hass/.homeassistant/kevo/status-front.py"
+#      value_template: '{{ value == "Locked" }}'
+      value_template: >
+        {% if value == "Locked" %}
+          true
+        {% elif value == "Unlocked" %}
+          false
+        {% else %}
+          {{states.switch.front_door.state}}
+        {% endif %}
     back_door:
-      command_on: "python3 /Users/Theatre/.homeassistant/kevo/lock-rear.py"
-      command_off: "python3 /Users/Theatre/.homeassistant/kevo/unlock-rear.py"
-      command_state: "python3 /Users/Theatre/.homeassistant/kevo/status-rear.py"
-      value_template: '{{ value == "Locked" }}'
+      command_on: "python3 /home/hass/.homeassistant/kevo/lock-rear.py"
+      command_off: "python3 /home/hass/.homeassistant/kevo/unlock-rear.py"
+      command_state: "python3 /home/hass/.homeassistant/kevo/status-rear.py"
+#      value_template: '{{ value == "Locked" }}'
+      value_template: >
+        {% if value == "Locked" %}
+          true
+        {% elif value == "Unlocked" %}
+          false
+        {% else %}
+          {{states.switch.back_door.state}}
+        {% endif %}

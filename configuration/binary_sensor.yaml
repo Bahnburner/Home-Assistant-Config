@@ -32,3 +32,4 @@
   sensors:
     rain:
       value_template: '{{ states.sensor.dark_sky_icon.state == "rain"}}'
+

@@ -1,0 +1,10 @@
+welcome_home:
+  sequence:
+    - wait_template: "{{ states.sensor.garage_door.state == 'Open' }}"
+      timeout: 00:05:00
+    - delay:
+        seconds: 3
+    - service: tts.google_say
+      entity_id: media_player.kitchen_assistant
+      data:
+        message: "Welcome Home!"

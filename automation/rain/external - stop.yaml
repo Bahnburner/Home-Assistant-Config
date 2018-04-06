@@ -11,9 +11,6 @@
       entity_id: sun.sun
       value_template: '{{ state.attributes.elevation }}'
       above: 8
-    - condition: state
-      entity_id: group.family
-      state: 'home'
   action:
     - service: light.turn_off
       entity_id: light.front_door

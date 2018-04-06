@@ -45,7 +45,15 @@ goodnight:
         - light.stairway
       data:
         transition: 30
-    - service: script.whitenoise
+    - service_template: >
+        {% if states.media_player.bedroom_speaker.state == 'playing' %}
+          {% if states.media_player.bedroom_speaker.attributes.media_content_id.startswith('http://10.0.0.101/storage/whitenoise') %}
+          {% else %}
+            script.whitenoise
+          {% endif %}
+        {% else %}
+          script.whitenoise
+        {% endif %}
     - service: automation.turn_on
       entity_id: automation.exterior_front__dim
     - service: light.turn_on
@@ -57,7 +65,7 @@ goodnight:
         brightness: 100
         transition: 15
     - service_template: >
-        {% if states.light.pantry.state == 'on' and states.sensor.time.state|float >= 6.00 %}
+        {% if states.light.pantry.state == 'on' and states.sensor.time.state|float <= 1.50 %}
           light.turn_on
         {% else %}
           light.turn_off
@@ -91,6 +99,8 @@ goodnight_timer_off:
       value_template: '{{ states.light.living_room.attributes.brightness <= 200 }}'
     - service: light.turn_off
       entity_id: light.communal
+    - service: light.turn_off
+      entity_id: light.pantry
     - service: input_boolean.turn_off
       entity_id: input_boolean.goodnight_initiated
 

@@ -4,19 +4,28 @@
     platform: time
     at: '07:00:00'
   condition:
-    condition: and
-    conditions:
-    - condition: time
-      weekday:
-        - sat
-        - sun
+    condition: time
+    weekday:
+      - sat
+      - sun
+  action:
+    - service: frontend.set_theme
+      data:
+        name: 'default'
+    - condition: state
+      entity_id: group.family
+      state: 'home'
+    - service: light.turn_on
+      entity_id: light.pantry
+      data:
+        brightness: 100
+        transition: 60
     - condition: state
       entity_id: group.tristal
       state: 'home'
     - condition: state
       entity_id: light.master_bedroom
       state: 'off'
-  action:
     - service: light.turn_on
       entity_id: light.master_bedroom
       data:

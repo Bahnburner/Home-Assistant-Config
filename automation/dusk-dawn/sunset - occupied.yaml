@@ -11,15 +11,48 @@
     state: 'home'
   action:
     - service: light.turn_on
-      entity_id: 
-        - light.living_room
-        - light.master_bedroom
+      entity_id: light.living_room
       data:
-        color_temp: 366
         brightness: 254
         transition: 600
+      data_template:
+        color_temp: >
+          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+            500
+          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+            200
+          {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+            500
+          {% elif states.sun.sun.attributes.elevation < 8 %}
+            366
+          {% elif (states.sensor.time.state | round(2)) > 9.50 %}
+            300
+          {% else %}
+          {% endif %}        
     - service: light.turn_on
       entity_id: light.pantry
       data:
         brightness: 254
         transition: 600
+    - condition: state
+      entity_id: group.tristal
+      state: 'home'
+    - service:  light.turn_on
+      entity_id: light.master_bedroom
+      data:
+        brightness: 254
+        transition: 600
+      data_template:
+        color_temp: >
+          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+            500
+          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+            200
+          {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+            500
+          {% elif states.sun.sun.attributes.elevation < 8 %}
+            366
+          {% elif (states.sensor.time.state | round(2)) > 9.50 %}
+            300
+          {% else %}
+          {% endif %}

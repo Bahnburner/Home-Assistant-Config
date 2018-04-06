@@ -14,6 +14,7 @@
     entity_id: group.family
     state: 'not_home'
   action: 
+    - service: script.welcome_home
     - service: input_boolean.turn_on
       entity_id: input_boolean.garage_hot_start
     - service: automation.trigger
