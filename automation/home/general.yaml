@@ -7,7 +7,7 @@
     to: 'home'
   action:
     - service: climate.set_away_mode
-      entity_id: climate.downstairs
+      entity_id: climate.downstairs_hallway
       data:
         away_mode: false
     - service: light.turn_on
