@@ -125,7 +125,7 @@ living_room:
     - light.living_room
     - light.bias_light
     - light.fan
-    - climate.downstairs
+    - climate.downstairs_hallway
     - sensor.protect_down
 master_bedroom:
   - light.tristans_nightstand
@@ -133,7 +133,7 @@ master_bedroom:
   - light.bedroom_floor_lamp
 upstairs:
   - light.desk_lamp
-  - climate.upstairs
+  - climate.upstairs_hallway
   - sensor.protect_up
 garage:
   - cover.garage_door_opener
