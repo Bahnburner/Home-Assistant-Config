@@ -1,10 +1,10 @@
-climate.downstairs:
+climate.downstairs_hallway:
   friendly_name: "Thermostat"
   entity_picture: /local/resources/images/devices/nest.png
   min_temp: 55
   max_temp: 80
   unit_of_measurement: °F
-climate.upstairs:
+climate.upstairs_hallway:
   friendly_name: "Thermostat"
   entity_picture: /local/resources/images/devices/nest.png
   min_temp: 55
