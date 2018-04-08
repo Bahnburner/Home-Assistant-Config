@@ -16,7 +16,7 @@
     state: 'home'
   action:
     service: climate.set_operation_mode
-    entity_id: climate.downstairs
+    entity_id: climate.downstairs_hallway
     data:
       operation_mode: 'eco'
  
@@ -36,6 +36,6 @@
     state: 'home'
   action:
     service: climate.set_operation_mode
-    entity_id: climate.downstairs
+    entity_id: climate.downstairs_hallway
     data:
       operation_mode: 'auto'
