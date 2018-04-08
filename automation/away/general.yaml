@@ -6,7 +6,7 @@
     from: 'home'
     to: 'not_home'
   action:
-    - entity_id: climate.downstairs
+    - entity_id: climate.downstairs_hallway
       service: climate.set_away_mode
       data:
         away_mode: true
