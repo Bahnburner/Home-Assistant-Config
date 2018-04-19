@@ -83,6 +83,7 @@ settings:
   icon: mdi:settings
   name: Settings
   entities:
+    - group.kevo_locks
     - updater.updater
     - group.override
     - group.system_monitor
@@ -91,6 +92,12 @@ settings:
     - camera.downstairs_front_door
     - camera.downstairs_yard
     - camera.upstairs_nursery
+kevo_locks:
+  name: Kevo Locks
+  control: hidden
+  entities: 
+    - lock.front_door
+    - lock.back_door
 tristans_phone:
   - device_tracker.tristans_phone_wifi
   - device_tracker.tristans_phone_bt
