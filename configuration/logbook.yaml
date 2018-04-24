@@ -1,0 +1,10 @@
+exclude:
+  entities:
+    - sensor.pws_weather_1d
+    - sensor.load_5m
+    - sensor.time_2
+    - sensor.cpu
+    - sensor.disk
+    - sensor.ram
+    - sensor.air_quality
+    - sensor.rasplex
