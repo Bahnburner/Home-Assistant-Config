@@ -1,21 +1,12 @@
 update_hass:
   sequence:
-    - service: media_player.volume_set
-      entity_id: 
-        - media_player.all_assistants
-      data: 
-        volume_level: 0.5
     - service: shell_command.update
-    - service: tts.google_say
-      entity_id:
-        - media_player.all_assistants
+    - service: notify.google_assistant
       data_template:
         message: "Home Assistant will restart in 5 minutes to install updates."
     - service: shell_command.reboot
     - delay: 
         minutes: 4
-    - service: tts.google_say
-      entity_id:
-        - media_player.all_assistants
+    - service: notify.google_assistant
       data_template:
         message: "Home Assistant will restart in 60 seconds to install updates. Your home will be offline for approximately 5 minutes."
