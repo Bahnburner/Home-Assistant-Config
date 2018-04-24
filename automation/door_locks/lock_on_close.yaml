@@ -10,14 +10,7 @@
     entity_id: input_boolean.front_door_open
     state: 'on'
   action:
-    - service: media_player.volume_set
-      entity_id: 
-        - media_player.all_assistants
-      data: 
-        volume_level: 0.5
-    - service: tts.google_say
-      entity_id:
-        - media_player.all_assistants
+    - service: notify.google_assistant
       data:
         message: 'Locking the front door.'
     - service: switch.turn_on
@@ -35,14 +28,7 @@
     entity_id: input_boolean.back_door_open
     state: 'on'
   action:
-    - service: media_player.volume_set
-      entity_id: 
-        - media_player.all_assistants
-      data: 
-        volume_level: 0.5
-    - service: tts.google_say
-      entity_id:
-        - media_player.all_assistants
+    - service: notify.google_assistant
       data:
         message: 'Locking the back door.'
     - service: switch.turn_on
