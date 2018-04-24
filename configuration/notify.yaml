@@ -10,3 +10,6 @@
   platform: html5
   gcm_api_key: !secret gcm_sender_key
   gcm_sender_id: !secret gcm_sender_id
+- name: Google Assistant
+  platform: rest
+  resource: http://10.0.0.81:5000/broadcast_message
