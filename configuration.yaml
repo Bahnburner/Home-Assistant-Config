@@ -7,43 +7,25 @@ homeassistant:
   time_zone: America/Chicago
   customize: !include_dir_merge_named customize
 
-logger:
-  default: info
-  logs:
-    homeassistant.components.media_player: error
+
 config:
 discovery:
-frontend: 
-  javascript_version: es5
-  themes: !include ./themes/themes.yaml
-map:
+frontend: !include ./configuration/frontend.yaml
 history: !include ./configuration/history.yaml
-  
-logbook:
-  exclude:
-    entities:
-      - sensor.pws_weather_1d
-      - sensor.load_5m
-      - sensor.time_2
-      - sensor.cpu
-      - sensor.disk
-      - sensor.ram
-      - sensor.air_quality
-      - sensor.rasplex
-recorder:
-#  db_url: postgres://@/hass
-  purge_interval: 1
-  purge_keep_days: 7
+logbook: !include ./configuration/logbook.yaml
+logger: !include ./configuration/logger.yaml
+map:
+recorder: !include ./configuration/recorder.yaml
 sun:
 updater:
 
 automation: !include_dir_merge_list automation
 binary_sensor: !include ./configuration/binary_sensor.yaml
-google: !include ./configuration/calendar.yaml
 climate: !include ./configuration/climate.yaml
 cover: !include ./configuration/cover.yaml
 device_tracker: !include ./configuration/device_tracker.yaml
 hue: !include ./configuration/hue.yaml
+google: !include ./configuration/calendar.yaml
 google_assistant: !include ./configuration/google_assistant.yaml
 group: !include ./configuration/group.yaml
 http: !include ./configuration/http.yaml
