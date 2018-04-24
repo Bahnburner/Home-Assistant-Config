@@ -33,7 +33,6 @@ ifttt: !include ./configuration/ifttt.yaml
 input_boolean: !include ./configuration/input_boolean.yaml
 input_number: !include ./configuration/input_number.yaml
 input_select: !include ./configuration/input_select.yaml
-#input_text: !include ./configuration/input_text.yaml
 light: !include ./configuration/light.yaml
 lock: !include ./configuration/lock.yaml
 media_player: !include ./configuration/media_player.yaml
