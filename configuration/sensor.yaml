@@ -170,8 +170,9 @@
     - type: processor_use
     - type: load_5m
 - platform: mqtt
-  state_topic: "smartthings/Front Door/battery"
-  name: "Doorbell Battery"
+  state_topic: "plex"
+  name: "Rasplex Status"
+  value_template: '{{ value_json.body }}'
 - platform: dnsip
   scan_interval: 300
 - platform: time_date
