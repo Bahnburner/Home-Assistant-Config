@@ -22,6 +22,11 @@
     - delay: 
         seconds: 2
     - service: media_player.volume_set
-      entity_id: media_player.livingroom_assistant
+      entity_id: 
+        - media_player.livingroom_assistant
+        - media_player.dining_room_speaker
+        - media_player.kitchen_assistant
+        - media_player.bedroom_assistant
+        - media_player.bathroom_assistant
       data: 
         volume_level: 0.6
