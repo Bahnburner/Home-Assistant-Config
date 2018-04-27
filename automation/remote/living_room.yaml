@@ -111,10 +111,10 @@
       entity_id: sensor.current_activity
       from: 'Watch Plex'
     - platform: state
-      entity_id: media_player.rasplex
+      entity_id: sensor.rasplex_status
       to: 'paused'    
     - platform: state
-      entity_id: media_player.rasplex
+      entity_id: sensor.rasplex_status
       to: 'stopped'
       for: 
         seconds: 2
