@@ -58,8 +58,9 @@
       entity_id: sun.sun
       value_template: '{{ state.attributes.elevation }}'
       below: 12
-    - condition: template
-      value_template: '{{ states.light.floor_lamp_left.attributes.color_temp != 500 and states.light.floor_lamp_right.attributes.color_temp != 500 and states.light.table_lamp.state != "off" }}'
+    - condition: state
+      entity_id: input_boolean.movie_mode
+      state: 'off'
   action:
     - service: input_number.set_value
       entity_id: input_number.harmony_dim
@@ -143,8 +144,9 @@
       entity_id: sun.sun
       value_template: '{{ state.attributes.elevation }}'
       below: 12
-    - condition: template
-      value_template: '{{ states.light.floor_lamp_left.attributes.color_temp != 500 and states.light.floor_lamp_right.attributes.color_temp != 500 and states.light.table_lamp.state != "off" }}'
+    - condition: state
+      entity_id: input_boolean.movie_mode
+      state: 'off'
   action: 
     service: light.turn_on
     entity_id: light.living_room
