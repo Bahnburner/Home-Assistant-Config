@@ -1,5 +1,7 @@
 movie_mode_on:
   sequence:
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.movie_mode
     - service: input_number.select_value
       entity_id: input_number.movie_mode
       data_template:
@@ -43,6 +45,8 @@ movie_mode_on:
 
 movie_mode_off:
   sequence:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.movie_mode
     - service: light.turn_on
       data:
         transition: 15
