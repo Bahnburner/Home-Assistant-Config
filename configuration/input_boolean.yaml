@@ -23,3 +23,5 @@
     initial: off
   disable_all_automations:
     initial: off
+  movie_mode:
+    initial: off
