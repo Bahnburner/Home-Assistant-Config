@@ -117,8 +117,6 @@
     - platform: state
       entity_id: sensor.rasplex_status
       to: 'stopped'
-      for: 
-        seconds: 2
     - platform: state
       entity_id: sensor.current_activity
       from: 'Watch Netflix'
@@ -151,6 +149,12 @@
     service: light.turn_on
     entity_id: light.living_room
     data_template:
+      transition: 
+        {% if states.sensor.rasplex_status == 'stopped' %}
+          5
+        {% else %}
+          1
+        {% endif %}
       brightness:
         '{{states.input_number.harmony_dim.state | int }}'
       color_temp: >
