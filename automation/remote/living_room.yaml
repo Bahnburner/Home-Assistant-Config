@@ -150,7 +150,7 @@
     entity_id: light.living_room
     data_template:
       transition: > 
-        {% if states.sensor.rasplex_status == 'stopped' %}
+        {% if states.sensor.rasplex_status.state == 'stopped' %}
           5
         {% else %}
           1
