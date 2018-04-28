@@ -149,7 +149,7 @@
     service: light.turn_on
     entity_id: light.living_room
     data_template:
-      transition: 
+      transition: > 
         {% if states.sensor.rasplex_status == 'stopped' %}
           5
         {% else %}
