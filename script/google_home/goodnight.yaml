@@ -6,7 +6,7 @@ goodnight:
     - service: input_boolean.turn_on
       entity_id: input_boolean.goodnight_initiated
     - service: climate.set_temperature
-      entity_id: climate.downstairs_hallways
+      entity_id: climate.downstairs_hallway
       data:
         target_temp_high: 72
         target_temp_low: 66
