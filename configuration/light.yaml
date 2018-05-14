@@ -1,5 +1,5 @@
 - platform: osramlightify
-  host: 10.0.0.31
+  host: 10.0.0.214
   allow_lightify_groups: true
 - platform: mqtt
   name: 'Overhead Light'
