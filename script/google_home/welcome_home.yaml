@@ -4,6 +4,8 @@ welcome_home:
       timeout: 00:05:00
     - delay:
         seconds: 3
-    - service: notify.google_assistant
+    - service: tts.google_say
+      entity_id: media_player.all_assistants
+#    - service: notify.google_assistant
       data:
         message: "Welcome Home!"
