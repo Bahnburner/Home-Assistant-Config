@@ -10,7 +10,9 @@
       entity_id: group.family
       state: 'home'
   action:
-    - service: notify.google_assistant
+    - service: tts.google_say
+      entity_id: media_player.all_assistants
+#    - service: notify.google_assistant
       data_template: 
         message: >
           Heads up. The National Weather Service has issued a 
