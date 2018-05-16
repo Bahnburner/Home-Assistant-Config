@@ -15,7 +15,9 @@
       entity_id: media_player.all_assistants
       data: 
         volume_level: 0.5
-    - service: notify.google_assistant
+    - service: tts.google_say
+      entity_id: media_player.all_assistants
+#    - service: notify.google_assistant
       data: 
         message: 'Heads up, the garage is currently open.'
  
