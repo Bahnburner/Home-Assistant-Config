@@ -19,7 +19,7 @@
           {% if states.sensor.pws_alerts.attributes.Description_TOR == "Tornado Warning" %}
             Tornado Warning
           {% elif states.sensor.pws_alerts.attributes.Description_WRN == "Severe Thunderstorm Warning" %}
-            {{ states.sensor.pws_alerts.attributes.Description_WRN }}
+            Severe Thunderstorm Warning
           {% endif %}
             for this area.
     - service: media_player.volume_set
