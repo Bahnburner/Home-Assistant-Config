@@ -18,7 +18,7 @@
           Heads up. The National Weather Service has issued a 
           {% if states.sensor.pws_alerts.attributes.Description_TOR == "Tornado Warning" %}
             Tornado Warning
-          {% elif states.sensor.pws_alerts.attributes.Description_WRN == "Severe Tunderstorm Warning" %}
+          {% elif states.sensor.pws_alerts.attributes.Description_WRN == "Severe Thunderstorm Warning" %}
             {{ states.sensor.pws_alerts.attributes.Description_WRN }}
           {% endif %}
             for this area.
