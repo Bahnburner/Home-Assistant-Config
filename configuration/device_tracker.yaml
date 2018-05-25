@@ -1,6 +1,6 @@
 - platform: bluetooth_tracker
   track_new_devices: false
-  consider_home: 120
+  consider_home: 180
 #- platform: bluetooth_le_tracker
 - platform: asuswrt
   host: 10.0.0.1
