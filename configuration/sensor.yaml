@@ -173,8 +173,8 @@
   state_topic: "plex"
   name: "Rasplex Status"
   value_template: '{{ value_json.body }}'
-- platform: dnsip
-  scan_interval: 300
+#- platform: dnsip
+#  scan_interval: 300
 - platform: time_date
   display_options:
     - 'time'
