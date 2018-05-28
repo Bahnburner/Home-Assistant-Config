@@ -7,8 +7,38 @@
 #    17: Back Door
 #    18: Garage Door
 #    4: Front Door
+ 
 - platform: template
   sensors:
     rain:
       value_template: '{{ states.sensor.dark_sky_icon.state == "rain"}}'
-
+- platform: mqtt
+  name: Bedroom Windows
+  state_topic: "gpio/input/Bedroom Windows"
+  payload_on: "OPEN"
+  payload_off: "CLOSED"
+- platform: mqtt
+  name: Front Windows
+  state_topic: "gpio/input/Front Windows"
+  payload_on: "OPEN"
+  payload_off: "CLOSED"
+- platform: mqtt
+  name: Back Windows
+  state_topic: "gpio/input/Back Windows"
+  payload_on: "OPEN"
+  payload_off: "CLOSED"
+- platform: mqtt
+  name: Front Door
+  state_topic: "gpio/input/Front Door"
+  payload_on: "OPEN"
+  payload_off: "CLOSED"
+- platform: mqtt
+  name: Back Door
+  state_topic: "gpio/input/Back Door"
+  payload_on: "OPEN"
+  payload_off: "CLOSED"
+- platform: mqtt
+  name: Garage Door
+  state_topic: "gpio/input/Garage Door"
+  payload_on: "OPEN"
+  payload_off: "CLOSED"
