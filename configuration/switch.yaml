@@ -36,9 +36,9 @@
   scan_interval: 30
   switches:
     front_door:
-      command_on: "py kevo/lock-front.py"
-      command_off: "py kevo/unlock-front.py"
-      command_state: "py kevo/status-front.py"
+      command_on: "py C:/Users/bahnb/AppData/Roaming/.homeassistant/lock-front.py"
+      command_off: "py C:/Users/bahnb/AppData/Roaming/.homeassistant/unlock-front.py"
+      command_state: "py C:/Users/bahnb/AppData/Roaming/.homeassistant/status-front.py"
 #      value_template: '{{ value == "Locked" }}'
       value_template: >
         {% if value == "Locked" %}
@@ -49,9 +49,9 @@
           {{states.switch.front_door.state}}
         {% endif %}
     back_door:
-      command_on: "py kevo/lock-rear.py"
-      command_off: "py kevo/unlock-rear.py"
-      command_state: "py kevo/status-rear.py"
+      command_on: "py C:/Users/bahnb/AppData/Roaming/.homeassistant/kevo/lock-rear.py"
+      command_off: "py C:/Users/bahnb/AppData/Roaming/.homeassistant/unlock-rear.py"
+      command_state: "py C:/Users/bahnb/AppData/Roaming/.homeassistant/status-rear.py"
 #      value_template: '{{ value == "Locked" }}'
       value_template: >
         {% if value == "Locked" %}
