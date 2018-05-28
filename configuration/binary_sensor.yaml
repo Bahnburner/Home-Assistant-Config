@@ -1,13 +1,3 @@
-#- platform: rpi_gpio
-#  device_class: opening
-#  ports:
-#    22: Bedroom Windows
-#    6: Front Windows
-#    27: Back Windows
-#    17: Back Door
-#    18: Garage Door
-#    4: Front Door
- 
 - platform: template
   sensors:
     rain:
