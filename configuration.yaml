@@ -11,8 +11,8 @@ homeassistant:
 config:
 discovery:
   ignore:
-    philips_hue
-    directv  
+    - philips_hue
+    - directv  
 frontend: !include ./configuration/frontend.yaml
 history: !include ./configuration/history.yaml
 logbook: !include ./configuration/logbook.yaml
