@@ -26,8 +26,9 @@ unpause:
 
 pause_directv:
   sequence:
-    - service: media_player.media_pause
-      entity_id: media_player.livingroom_directv
+    - service: remote.send_command
+      entity_id: remote.living_room
+      data: {"device": "35163109", "command": "pause"}
 
 pause_plex:        
   sequence:
@@ -42,8 +43,9 @@ pause_other:
         
 unpause_directv:
   sequence:
-    - service: media_player.media_play
-      entity_id: media_player.livingroom_directv
+    - service: remote.send_command
+      entity_id: remote.living_room
+      data: {"device": "35163109", "command": "play"}
 
 unpause_other:          
   sequence:
