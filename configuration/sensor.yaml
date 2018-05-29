@@ -21,8 +21,8 @@
 #  destination: place_id:ChIJkRB9LrKFf4gRgqu8ivoA0x8
 #  options:
 #    arrival_time: '09:15:00'
-#- platform: template
-#  sensors:
+- platform: template
+  sensors:
 #    cpu:
 #      friendly_name: 'CPU Utilization'
 #      value_template: '{{ states.sensor.processor_use.state | float(1) }}'
