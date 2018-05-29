@@ -175,11 +175,11 @@
   value_template: '{{ value_json.body }}'
 - platform: mqtt
   state_topic: "hass/Tristan's Phone (BT)
-  name: "Tristan\'s Phone (BT)"
+  name: "Tristans Phone (BT)"
   value_template: '{{ value }}'
 - platform: mqtt
   state_topic: "hass/Crystal's Phone (BT)
-  name: "Crystal\'s Phone (BT)"
+  name: "Crystals Phone (BT)"
   value_template: '{{ value }}'
 #- platform: dnsip
 #  scan_interval: 300
