@@ -47,6 +47,6 @@ binary_sensor.bedroom_windows:
 binary_sensor.wan_up:
   hidden: true
 binary_sensor.tristans_phone_bt:
-  device_class: occupancy
+  device_class: presence
 binary_sensor.crystals_phone_bt:
-  device_class: occupancy
+  device_class: presence
