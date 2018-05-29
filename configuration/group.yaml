@@ -93,10 +93,10 @@ settings:
     - camera.upstairs_nursery
 tristans_phone:
   - device_tracker.tristans_phone_wifi
-  - sensor.tristans_phone_bt
+  - binary_sensor.tristans_phone_bt
 crystals_phone:
   - device_tracker.crystals_phone_wifi
-  - sensor.crystals_phone_bt
+  - binary_sensor.crystals_phone_bt
 family:
   - sensor.away_toggle
   - group.tristans_phone
