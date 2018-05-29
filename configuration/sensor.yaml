@@ -21,20 +21,20 @@
 #  destination: place_id:ChIJkRB9LrKFf4gRgqu8ivoA0x8
 #  options:
 #    arrival_time: '09:15:00'
-- platform: template
-  sensors:
-    cpu:
-      friendly_name: 'CPU Utilization'
-      value_template: '{{ states.sensor.processor_use.state | float(1) }}'
-      unit_of_measurement: '%'
-    ram:
-      friendly_name: 'RAM Utilization'
-      value_template: '{{ states.sensor.memory_use_percent.state | float(1) }}'
-      unit_of_measurement: '%'
-    disk:
-      friendly_name: 'Disk Utilization'
-      value_template: '{{states.sensor.disk_use_percent_.state | float(1) }}'
-      unit_of_measurement: '%'
+#- platform: template
+#  sensors:
+#    cpu:
+#      friendly_name: 'CPU Utilization'
+#      value_template: '{{ states.sensor.processor_use.state | float(1) }}'
+#      unit_of_measurement: '%'
+#    ram:
+#      friendly_name: 'RAM Utilization'
+#      value_template: '{{ states.sensor.memory_use_percent.state | float(1) }}'
+#      unit_of_measurement: '%'
+#    disk:
+#      friendly_name: 'Disk Utilization'
+#      value_template: '{{states.sensor.disk_use_percent_.state | float(1) }}'
+#      unit_of_measurement: '%'
     current_activity:
       friendly_name: 'Current Activity'
       value_template: '{{ states.remote.living_room.attributes.current_activity }}'
