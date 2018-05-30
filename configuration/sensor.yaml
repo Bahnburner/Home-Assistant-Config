@@ -12,8 +12,8 @@
     - precip_intensity
     - precip_probability
     - temperature
-    - temperature_max
-    - temperature_min
+    - temperature_high
+    - temperature_low
 #- platform: google_travel_time
 #  name: Drive_time_to_work
 #  api_key: !secret google_travel
