@@ -32,11 +32,11 @@
   state_topic: "gpio/input/Garage Door"
   payload_on: "OPEN"
   payload_off: "CLOSED"
-- platform: mqtt
-  state_topic: "hass/Tristan's Phone (BT)"
-  name: "Tristans Phone BT"
-  value_template: '{{ value == "home"}}'
-- platform: mqtt
-  state_topic: "hass/Crystal's Phone (BT)"
-  name: "Crystals Phone BT"
-  value_template: '{{ value == "home"}}'
+#- platform: mqtt
+#  state_topic: "hass/Tristan's Phone (BT)"
+#  name: "Tristans Phone BT"
+#  value_template: '{{ value == "home"}}'
+#- platform: mqtt
+#  state_topic: "hass/Crystal's Phone (BT)"
+#  name: "Crystals Phone BT"
+#  value_template: '{{ value == "home"}}'
