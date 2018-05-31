@@ -17,7 +17,7 @@
         - fri
     - condition: time
       after: '15:00:00'
-    - condition: temlate
+    - condition: template
       value_template: '{{ states.climate.downstairs_hallway.attributes.away_mode == "on" }}'
   action:
     - service: climate.set_away_mode
@@ -50,7 +50,7 @@
     from: 'Away'
     to: 'Heading Home'
   condition:
-    condition: temlate
+    condition: template
     value_template: '{{ states.climate.downstairs_hallway.attributes.away_mode == "on" }}'
   action:
     - service: climate.set_away_mode
