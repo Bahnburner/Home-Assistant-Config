@@ -6,10 +6,13 @@
     value_template: '{{ state.attributes.elevation }}'
     above: -5
   condition: 
-    condition: numeric_state
-    entity_id: sun.sun
-    value_template: '{{ state.attributes.elevation }}'
-    below: 0
+    - condition: state
+      entity_id: group.exterior
+      state: 'on'
+    - condition: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation }}'
+      below: 0
   action:
     service: light.turn_on
     entity_id: 
