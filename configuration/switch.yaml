@@ -23,41 +23,32 @@
   payload_on: "on"
   payload_off: "off"
   retain: true
-#- platform: mqtt
-#  name: "Anova Circulator"
-#  state_topic: "hass/anova/status"
-#  value_template: "{{value == 'running' }}"
-#  command_topic: "hass/anova"
-#  payload_on: "start"
-#  payload_off: "stop"
-#  qos: 0
-#  retain: true
-- platform: command_line
-  scan_interval: 30
-  switches:
-    front_door:
-      command_on: "py C:/Users/bahnb/AppData/Roaming/.homeassistant/kevo/lock-front.py"
-      command_off: "py C:/Users/bahnb/AppData/Roaming/.homeassistant/kevo/unlock-front.py"
-      command_state: "py C:/Users/bahnb/AppData/Roaming/.homeassistant/kevo/status-front.py"
-#      value_template: '{{ value == "Locked" }}'
-      value_template: >
-        {% if value == "Locked" %}
-          true
-        {% elif value == "Unlocked" %}
-          false
-        {% else %}
-          {{states.switch.front_door.state}}
-        {% endif %}
-    back_door:
-      command_on: "py C:/Users/bahnb/AppData/Roaming/.homeassistant/kevo/lock-rear.py"
-      command_off: "py C:/Users/bahnb/AppData/Roaming/.homeassistant/kevo/unlock-rear.py"
-      command_state: "py C:/Users/bahnb/AppData/Roaming/.homeassistant/kevo/status-rear.py"
-#      value_template: '{{ value == "Locked" }}'
-      value_template: >
-        {% if value == "Locked" %}
-          true
-        {% elif value == "Unlocked" %}
-          false
-        {% else %}
-          {{states.switch.back_door.state}}
-        {% endif %}
+#- platform: command_line
+#  scan_interval: 30
+#  switches:
+#    front_door:
+#      command_on: "py C:/Users/bahnb/AppData/Roaming/.homeassistant/kevo/lock-front.py"
+#      command_off: "py C:/Users/bahnb/AppData/Roaming/.homeassistant/kevo/unlock-front.py"
+#      command_state: "py C:/Users/bahnb/AppData/Roaming/.homeassistant/kevo/status-front.py"
+##      value_template: '{{ value == "Locked" }}'
+#      value_template: >
+#        {% if value == "Locked" %}
+#          true
+#        {% elif value == "Unlocked" %}
+#          false
+#        {% else %}
+#          {{states.switch.front_door.state}}
+#        {% endif %}
+#    back_door:
+#      command_on: "py C:/Users/bahnb/AppData/Roaming/.homeassistant/kevo/lock-rear.py"
+#      command_off: "py C:/Users/bahnb/AppData/Roaming/.homeassistant/kevo/unlock-rear.py"
+#      command_state: "py C:/Users/bahnb/AppData/Roaming/.homeassistant/kevo/status-rear.py"
+##      value_template: '{{ value == "Locked" }}'
+#      value_template: >
+#        {% if value == "Locked" %}
+#          true
+#        {% elif value == "Unlocked" %}
+#          false
+#        {% else %}
+#          {{states.switch.back_door.state}}
+#        {% endif %}
