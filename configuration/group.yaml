@@ -161,11 +161,9 @@ chromecasts:
   - media_player.livingroom_tv
   - media_player.guestroom_tv
 weather:
-  - sensor.dark_sky_temperature
-  - sensor.dark_sky_daytime_high_temperature
-  - sensor.dark_sky_overnight_low_temperature
-  - sensor.dark_sky_summary
-  - sensor.dark_sky_precip_probability
+  - sensor.current_temp
+  - sensor.high_temp
+  - sensor.low_temp
 override:
   control: hidden
   entities:
