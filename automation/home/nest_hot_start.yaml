@@ -17,11 +17,27 @@
         - fri
     - condition: time
       after: '15:00:00'
+    - condition: temlate
+      value_template: '{{ states.climate.downstairs_hallway.attributes.away_mode == "on" }}'
   action:
     - service: climate.set_away_mode
       entity_id: climate.downstairs_hallway
       data:
         away_mode: false
+    - service: notify.chrome_notifications
+      data:
+        data:
+          title: "Preparing for your arrival"
+          url: "https://smrtho.us"
+          message: "Climate Control has been enabled."
+      data_template:
+        data: 
+          target: >
+            {% if trigger.entity_id == "device_tracker.google_maps_110746778193138728717" %}
+              - Tristans Phone
+            {% elif trigger.entity_id == "device_tracker.google_maps_102616309312724957780" %}
+              - Crystals Phone
+            {% endif %}
 
 
 - alias: Home Mode - Nest Hot Start - Leaving Work
@@ -33,8 +49,25 @@
       - device_tracker.google_maps_102616309312724957780
     from: 'Away'
     to: 'Heading Home'
+  condition:
+    condition: temlate
+    value_template: '{{ states.climate.downstairs_hallway.attributes.away_mode == "on" }}'
   action:
     - service: climate.set_away_mode
       entity_id: climate.downstairs_hallway
       data:
         away_mode: false
+    - service: notify.chrome_notifications
+      data:
+        data:
+          title: "Preparing for your arrival"
+          url: "https://smrtho.us"
+          message: "Climate Control has been enabled."
+      data_template:
+        data: 
+          target: >
+            {% if trigger.entity_id == "device_tracker.google_maps_110746778193138728717" %}
+              - Tristans Phone
+            {% elif trigger.entity_id == "device_tracker.google_maps_102616309312724957780" %}
+              - Crystals Phone
+            {% endif %}
