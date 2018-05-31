@@ -1,31 +1,31 @@
 - platform: cast
-#- platform: cast
-#  host: 10.0.0.150
-#- platform: cast
-#  host: 10.0.0.155
-#- platform: cast
-#  host: 10.0.0.156
-#- platform: cast
-#  host: 10.0.0.157
-#- platform: cast
-#  host: 10.0.0.158
-#- platform: cast
-#  host: 10.0.0.159
-#- platform: cast
-#  host: 10.0.0.160
-#- platform: cast
-#  host: 10.0.0.161
-#- platform: cast
-#  host: 10.0.0.162
-#- platform: cast
-#  host: 10.0.0.163
+- platform: cast
+  host: 10.0.0.150
+- platform: cast
+  host: 10.0.0.155
+- platform: cast
+  host: 10.0.0.156
+- platform: cast
+  host: 10.0.0.157
+- platform: cast
+  host: 10.0.0.158
+- platform: cast
+  host: 10.0.0.159
+- platform: cast
+  host: 10.0.0.160
+- platform: cast
+  host: 10.0.0.161
+- platform: cast
+  host: 10.0.0.162
+- platform: cast
+  host: 10.0.0.163
 - platform: plex
   scan_interval: 5
 - platform: directv
   host: 10.0.0.151
   port: 8080
   name: Mancave DirecTV
-  device: 347A60F399D9
+  device: 88F7C7A17C19
 - platform: directv
   host: 10.0.0.151
   port: 8080
