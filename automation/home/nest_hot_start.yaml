@@ -40,7 +40,7 @@
             {% endif %}
 
 
-- alias: Home Mode - Nest Hot Start - Leaving Work
+- alias: Home Mode - Nest Hot Start - Arriving Home 
   hide_entity: true
   trigger:
     platform: state
