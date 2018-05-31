@@ -3,7 +3,7 @@ go_tigers_go:
     - service: media_player.play_media
       entity_id: media_player.party_mode
       data:
-        media_content_id: "https://smrtho.us/local/audio/GoTigersGo.mp3"
+        media_content_id: "http://smrtho.us/storage/GoTigersGo.mp3"
         media_content_type: "audio/mp3"        
     - service: script.turn_off
       data:
