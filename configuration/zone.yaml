@@ -1,13 +1,13 @@
 - name: TTC
   latitude: 35.118770
   longitude: -90.032434
-  radius: 1000
+  radius: 250
   icon: mdi:school
 
 - name: Sedgwick
   latitude: 35.077497
   longitude: -89.899652
-  radius: 1000
+  radius: 250
   icon: mdi:city
 
 - name: Heading Home
