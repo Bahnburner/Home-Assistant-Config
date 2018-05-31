@@ -83,10 +83,10 @@ settings:
     - camera.upstairs_nursery
 tristans_phone:
   - device_tracker.tristans_phone_wifi
-#  - binary_sensor.tristans_phone_bt
+  - device_tracker.google_maps_110746778193138728717
 crystals_phone:
   - device_tracker.crystals_phone_wifi
-#  - binary_sensor.crystals_phone_bt
+  - device_tracker.google_maps_102616309312724957780
 family:
   - sensor.away_toggle
   - group.tristans_phone
