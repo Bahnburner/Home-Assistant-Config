@@ -18,13 +18,13 @@ whitenoise:
       data_template:
         media_content_id: >
           {% if states.sensor.whitenoise.state == '1' %}
-            http://10.0.0.101/storage/whitenoise1.mp3
+            /local/resources/audio/whitenoise1.mp3
           {% elif states.sensor.whitenoise.state == '2' %}
-            http://10.0.0.101/storage/whitenoise2.mp3
+            /local/resources/audio/whitenoise2.mp3
           {% elif states.sensor.whitenoise.state == '3' %}
-            http://10.0.0.101/storage/whitenoise3.mp3
+            /local/resources/audio/whitenoise3.mp3
           {% else %}
-            http://10.0.0.101/storage/whitenoise1.mp3
+            /local/resources/audio/whitenoise1.mp3
           {% endif %}
     - service: media_player.volume_set
       entity_id: media_player.bedroom_speaker
