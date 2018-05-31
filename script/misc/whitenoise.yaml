@@ -18,13 +18,13 @@ whitenoise:
       data_template:
         media_content_id: >
           {% if states.sensor.whitenoise.state == '1' %}
-            /local/resources/audio/whitenoise1.mp3
+            http://smrtho.us/storage/whitenoise1.mp3
           {% elif states.sensor.whitenoise.state == '2' %}
-            /local/resources/audio/whitenoise2.mp3
+            http://smrtho.us/storage/whitenoise2.mp3
           {% elif states.sensor.whitenoise.state == '3' %}
-            /local/resources/audio/whitenoise3.mp3
+            http://smrtho.us/storage/whitenoise3.mp3
           {% else %}
-            /local/resources/audio/whitenoise1.mp3
+            http://smrtho.us/storage/whitenoise1.mp3
           {% endif %}
     - service: media_player.volume_set
       entity_id: media_player.bedroom_speaker
