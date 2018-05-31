@@ -29,7 +29,7 @@
       unit_of_measurement: '°F'
     high_temp:
       friendly_name: 'High'
-      value_template: '{{ statessensor.dark_sky_daytime_high_temperature.state | round(0) }}'
+      value_template: '{{ states.sensor.dark_sky_daytime_high_temperature.state | round(0) }}'
       unit_of_measurement: '°F'
     low_temp:
       friendly_name: 'Low'
