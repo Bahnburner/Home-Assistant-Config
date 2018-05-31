@@ -7,7 +7,7 @@
     - platform: state
       entity_id: device_tracker.google_maps_102616309312724957780
       from: 'TTC'
-  sequence:
+  condition:
     - condition: time
       weekday:
         - mon
@@ -32,7 +32,7 @@
       - device_tracker.google_maps_102616309312724957780
     from: 'Away'
     to: 'Heading Home'
-  sequence:
+  condition:
     - service: climate.set_away_mode
       entity_id: climate.downstairs_hallway
       data:
