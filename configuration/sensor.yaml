@@ -23,18 +23,18 @@
 #    arrival_time: '09:15:00'
 - platform: template
   sensors:
-     current_temp:
-       friendly_name: 'Current'
-       value_template: '{{ states.sensor.dark_sky_temperature.state | round(0) }}'
-       unit_of_measurement: '°F'
-     high_temp:
-       friendly_name: 'High'
-       value_template: '{{ statessensor.dark_sky_daytime_high_temperature.state | round(0) }}'
-       unit_of_measurement: '°F'
-     high_temp:
-       friendly_name: 'Low'
-       value_template: '{{ states.sensor.dark_sky_overnight_low_temperature.state | round(0) }}'
-       unit_of_measurement: '°F'
+    current_temp:
+      friendly_name: 'Current'
+      value_template: '{{ states.sensor.dark_sky_temperature.state | round(0) }}'
+      unit_of_measurement: '°F'
+    high_temp:
+      friendly_name: 'High'
+      value_template: '{{ statessensor.dark_sky_daytime_high_temperature.state | round(0) }}'
+      unit_of_measurement: '°F'
+    high_temp:
+      friendly_name: 'Low'
+      value_template: '{{ states.sensor.dark_sky_overnight_low_temperature.state | round(0) }}'
+      unit_of_measurement: '°F'
     current_activity:
       friendly_name: 'Current Activity'
       value_template: '{{ states.remote.living_room.attributes.current_activity }}'
