@@ -5,10 +5,5 @@ trusted_networks:
    - 10.0.0.0/24
 ip_ban_enabled: True
 login_attempts_threshold: 3
-<<<<<<< HEAD
-#ssl_certificate: C:/Users/bahnb/letsencrypt/live/smrtho.us/fullchain.pem
-#ssl_key: C:/Users/bahnb/letsencrypt/live/smrtho.us/privkey.pem
-=======
 ssl_certificate: /certbot/smrtho.us/fullchain.pem
 ssl_key: /certbot/smrtho.us/privkey.pem
->>>>>>> 4179d764f2939405a3f8c0936a097b25436dead8
