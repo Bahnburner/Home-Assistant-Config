@@ -1,0 +1,28 @@
+- alias: Home Mode - Nest Hot Start
+  hide_entity: true
+  trigger:
+    - platform: state
+      entity_id: device_tracker.google_maps_110746778193138728717
+      from: 'Sedgwick'
+    - platform: state
+      entity_id: device_tracker.google_maps_102616309312724957780
+      from: 'TTC'
+    - platform: state
+      entity_id:
+        - device_tracker.google_maps_110746778193138728717
+        - device_tracker.google_maps_102616309312724957780
+      to: 'Heading Home'
+  sequence:
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+    - condition: time
+      after: '15:00:00'
+    - service: climate.set_away_mode
+      entity_id: climate.downstairs_hallway
+      data:
+        away_mode: false
