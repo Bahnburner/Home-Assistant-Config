@@ -31,7 +31,7 @@
   port: 8080
   name: Livingroom DirecTV
   device: 347A60F399D9
-#- platform: vizio
-#  host: 10.0.0.150
-#  access_token: !secret vizio_access_token
+- platform: vizio
+  host: 10.0.0.150
+  access_token: !secret vizio_access_token
 
