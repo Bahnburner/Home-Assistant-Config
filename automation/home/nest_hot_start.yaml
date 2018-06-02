@@ -16,9 +16,9 @@
         - thu
         - fri
     - condition: time
-      after: '15:00:00'
+      after: '13:00:00'
     - condition: template
-      value_template: '{{ states.climate.downstairs_hallway.attributes.away_mode == "true" }}'
+      value_template: '{{ states.climate.downstairs_hallway.attributes.away_mode == "on" }}'
   action:
     - service: climate.set_away_mode
       entity_id: climate.downstairs_hallway
@@ -51,7 +51,7 @@
     to: 'Heading Home'
   condition:
     condition: template
-    value_template: '{{ states.climate.downstairs_hallway.attributes.away_mode == "true" }}'
+    value_template: '{{ states.climate.downstairs_hallway.attributes.away_mode == "on" }}'
   action:
     - service: climate.set_away_mode
       entity_id: climate.downstairs_hallway
