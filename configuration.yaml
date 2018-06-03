@@ -10,6 +10,7 @@ homeassistant:
 
 config:
 discovery:
+  ignore: harmony
 frontend: !include ./configuration/frontend.yaml
 history: !include ./configuration/history.yaml
 logbook: !include ./configuration/logbook.yaml
