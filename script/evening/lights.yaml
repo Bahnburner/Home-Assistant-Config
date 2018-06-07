@@ -1,7 +1,7 @@
 evening_lights_livingroom:
   sequence:
     - condition: template
-      value_template: '{{ states.input_boolean.movie_mode.state = "off" }}'
+      value_template: '{{ states.input_boolean.movie_mode.state == "off" }}'
     - service: light.turn_on
       entity_id: light.living_room
       data: 
