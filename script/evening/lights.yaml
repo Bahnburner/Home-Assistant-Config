@@ -10,6 +10,8 @@ evening_lights_livingroom:
     - condition: state
       entity_id: light.bias_light
       state: 'on'
+    - delay: 
+        seconds: 2
     - service: light.turn_on
       entity_id: light.bias_light
       data: 
