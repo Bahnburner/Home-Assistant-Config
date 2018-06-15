@@ -14,13 +14,6 @@
     - temperature
     - temperature_high
     - temperature_low
-#- platform: google_travel_time
-#  name: Drive_time_to_work
-#  api_key: !secret google_travel
-#  origin: place_id:ChIJG1SUhnKff4gRz9_GI6GdfUY
-#  destination: place_id:ChIJkRB9LrKFf4gRgqu8ivoA0x8
-#  options:
-#    arrival_time: '09:15:00'
 - platform: template
   sensors:
     current_temp:
@@ -86,9 +79,6 @@
     harmonyhub:
       value_template: '{% if is_state("device_tracker.harmonyhub", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Harmony Hub'
-    kevobridge:
-      value_template: '{% if is_state("device_tracker.kevobridge", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Kevo Bridge'
     smartthingshub:
       value_template: '{% if is_state("device_tracker.smartthingshub", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'SmartThings Hub'
