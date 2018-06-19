@@ -8,6 +8,7 @@
   api_key: !secret darksky
   monitored_conditions:
     - icon
+    - daily_summary
     - summary
     - precip_probability
     - temperature
