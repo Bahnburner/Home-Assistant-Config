@@ -103,10 +103,9 @@ tristal:
 christmas:
   switch.christmas_lights
 door_locks:
-  control: hidden
   entities: 
-    - switch.front_door
-    - switch.back_door
+    - lock.front_door
+    - lock.back_door
 living_room:
   control: hidden
   entities:
