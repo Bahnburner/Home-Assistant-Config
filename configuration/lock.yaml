@@ -9,7 +9,7 @@
   - platform: mqtt
     name: Back door
     state_topic: "home-assistant/back door/"
-    command_topic: "home-assistant/back tdoor/"
+    command_topic: "home-assistant/back door/"
     payload_lock: "locked"
     payload_unlock: "unlocked"
     qos: 1
