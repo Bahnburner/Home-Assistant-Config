@@ -17,5 +17,5 @@
     - service: media_player.play_media
       entity_id: media_player.livingroom_assistant
       data:
-        media_content_id: "https://smrtho.us/local/resources/audio/startup.mp3"
+        media_content_id: "http://smrtho.us/storage/startup.mp3"
         media_content_type: "audio/mp3"

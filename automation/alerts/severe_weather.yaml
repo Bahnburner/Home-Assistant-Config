@@ -1,30 +1,30 @@
-- alias: Severe Weather
-  hide_entity: True
-  trigger:
-    - platform: template
-      value_template: "{{ states.sensor.pws_alerts.attributes.Description_WRN == 'Severe Thunderstorm Warning' }}"
-    - platform: template
-      value_template: "{{ states.sensor.pws_alerts.attributes.Description_TOR == 'Tornado Warning' }}"
-  condition:
-    - condition: state
-      entity_id: group.family
-      state: 'home'
-  action:
-    - service: tts.google_say
-      entity_id: media_player.all_assistants
-#    - service: notify.google_assistant
-      data_template: 
-        message: >
-          Heads up. The National Weather Service has issued a 
-          {% if states.sensor.pws_alerts.attributes.Description_TOR == "Tornado Warning" %}
-            Tornado Warning
-          {% elif states.sensor.pws_alerts.attributes.Description_WRN == "Severe Thunderstorm Warning" %}
-            Severe Thunderstorm Warning
-          {% endif %}
-            for this area.
-    - service: media_player.volume_set
-      entity_id: 
-        - media_player.all_assistants
-      data: 
-        volume_level: 0.5
+#- alias: Severe Weather
+#  hide_entity: True
+#  trigger:
+#    - platform: template
+#      value_template: "{{ states.sensor.pws_alerts.attributes.Description_WRN == 'Severe Thunderstorm Warning' }}"
+#    - platform: template
+#      value_template: "{{ states.sensor.pws_alerts.attributes.Description_TOR == 'Tornado Warning' }}"
+#  condition:
+#    - condition: state
+#      entity_id: group.family
+#      state: 'home'
+#  action:
+#    - service: tts.google_say
+#      entity_id: media_player.all_assistants
+##    - service: notify.google_assistant
+#      data_template: 
+#        message: >
+#          Heads up. The National Weather Service has issued a 
+#          {% if states.sensor.pws_alerts.attributes.Description_TOR == "Tornado Warning" %}
+#            Tornado Warning
+#          {% elif states.sensor.pws_alerts.attributes.Description_WRN == "Severe Thunderstorm Warning" %}
+#            Severe Thunderstorm Warning
+#          {% endif %}
+#            for this area.
+#    - service: media_player.volume_set
+#      entity_id: 
+#        - media_player.all_assistants
+#      data: 
+#        volume_level: 0.5
  

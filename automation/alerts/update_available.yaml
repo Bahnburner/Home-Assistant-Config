@@ -5,8 +5,9 @@
   action:
     service: notify.chrome_notifications
     data:
+      message: "Home Assistant update available."
       data:
         target: Tristans Phone 
         title: "Home Assistant Alert"
         url: "https://home-assistant.io/blog/"
-        message: "Home Assistant update available."
+

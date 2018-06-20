@@ -1,0 +1,62 @@
+- alias: Home Mode - Nest Hot Start - Leaving Work
+  hide_entity: true
+  trigger:
+    - platform: state
+      entity_id: device_tracker.google_maps_110746778193138728717
+      from: 'Sedgwick'
+    - platform: state
+      entity_id: device_tracker.google_maps_102616309312724957780
+      from: 'TTC'
+  condition:
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+    - condition: time
+      after: '13:00:00'
+    - condition: template
+      value_template: '{{ states.climate.downstairs_hallway.attributes.away_mode == "on" }}'
+  action:
+    - service: climate.set_away_mode
+      entity_id: climate.downstairs_hallway
+      data:
+        away_mode: false
+    - service: notify.chrome_notifications
+      data:
+        message: "Climate Control has been enabled."
+        data:
+          target:
+            - Tristans Phone
+            - Crystals Phone
+          title: "Preparing for your arrival"
+          url: "https://smrtho.us"
+
+- alias: Home Mode - Nest Hot Start - Arriving Home 
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id:
+      - device_tracker.google_maps_110746778193138728717
+      - device_tracker.google_maps_102616309312724957780
+    from: 'not_home'
+    to: 'Heading Home'
+  condition:
+    condition: template
+    value_template: '{{ states.climate.downstairs_hallway.attributes.away_mode == "on" }}'
+  action:
+    - service: climate.set_away_mode
+      entity_id: climate.downstairs_hallway
+      data:
+        away_mode: false
+    - service: notify.chrome_notifications
+      data:
+        message: "Climate Control has been enabled."
+        data:
+          target:
+            - Tristans Phone
+            - Crystals Phone
+          title: "Preparing for your arrival"
+          url: "https://smrtho.us"

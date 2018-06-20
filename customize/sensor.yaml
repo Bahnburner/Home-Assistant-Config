@@ -20,9 +20,9 @@ sensor.dark_sky_precip_probability:
 sensor.dark_sky_precip_intensity:
   friendly_name: 'Rain Gauge'
   hidden: true
-sensor.dark_sky_daily_high_temperature:
+sensor.dark_sky_daytime_high_temperature:
   friendly_name: 'High'
-sensor.dark_sky_daily_low_temperature:
+sensor.dark_sky_overnight_low_temperature:
   friendly_name: 'Low'
 sensor.dark_sky_precip:
   friendly_name: 'Precipitation Type'

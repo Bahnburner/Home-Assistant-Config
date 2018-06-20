@@ -1,4 +1,4 @@
-broker: 10.0.0.212
+broker: 10.0.0.110
 birth_message:
   topic: 'hass/status'
   payload: 'online'

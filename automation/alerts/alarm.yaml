@@ -24,6 +24,7 @@
     service: notify.chrome_notifications
     data:
       data:
+        tag: 'alarm-notification'
         target:
           - Tristans Phone
           - Tristans Work Laptop

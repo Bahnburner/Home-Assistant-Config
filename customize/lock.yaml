@@ -1,8 +1,8 @@
 lock.front_door:
   icon: mdi:key-variant
   friendly_name: 'Front Door'
-  entity_picture: /local/resources/images/devices/kevo.png  
+  entity_picture: /local/resources/images/devices/smartthings.png  
 lock.back_door:
   icon: mdi:key-variant
   friendly_name: 'Back Door'
-  entity_picture: /local/resources/images/devices/kevo.png
+  entity_picture: /local/resources/images/devices/smartthings.png

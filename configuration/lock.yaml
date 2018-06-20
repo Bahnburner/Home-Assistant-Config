@@ -1,3 +1,16 @@
-#platform: kevo
-#email: !secret kevo_email
-#password: !secret kevo_pass
+  - platform: mqtt
+    name: Front door
+    state_topic: "smartthings/Front Door/lock"
+    command_topic: "smartthings/Front Door/lock"
+    payload_lock: "locked"
+    payload_unlock: "unlocked"
+    qos: 1
+    retain: true
+  - platform: mqtt
+    name: Back door
+    state_topic: "smartthings/Back Door/lock"
+    command_topic: "smartthings/Back Door/lock"
+    payload_lock: "locked"
+    payload_unlock: "unlocked"
+    qos: 1
+    retain: true

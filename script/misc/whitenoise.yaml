@@ -4,29 +4,29 @@ whitenoise:
       entity_id: group.tristal
       state: 'home'
     - service: media_player.turn_on
-      entity_id: media_player.bedroom_speaker
+      entity_id: media_player.master_suite
     - delay:
         seconds: 2
     - service: media_player.volume_set
-      entity_id: media_player.bedroom_speaker
+      entity_id: media_player.master_suite
       data: 
-        volume_level: 0.10
+        volume_level: 0.19
     - service: media_player.play_media
-      entity_id: media_player.bedroom_speaker
+      entity_id: media_player.master_suite
       data:
         media_content_type: "audio/mp3" 
       data_template:
         media_content_id: >
           {% if states.sensor.whitenoise.state == '1' %}
-            http://10.0.0.101/storage/whitenoise1.mp3
+            http://smrtho.us/storage/whitenoise1.mp3
           {% elif states.sensor.whitenoise.state == '2' %}
-            http://10.0.0.101/storage/whitenoise2.mp3
+            http://smrtho.us/storage/whitenoise2.mp3
           {% elif states.sensor.whitenoise.state == '3' %}
-            http://10.0.0.101/storage/whitenoise3.mp3
+            http://smrtho.us/storage/whitenoise3.mp3
           {% else %}
-            http://10.0.0.101/storage/whitenoise1.mp3
+            http://smrtho.us/storage/whitenoise1.mp3
           {% endif %}
     - service: media_player.volume_set
-      entity_id: media_player.bedroom_speaker
+      entity_id: media_player.master_suite
       data: 
-        volume_level: 0.10
+        volume_level: 0.19

@@ -1,7 +1,7 @@
 evening_lights_livingroom:
   sequence:
     - condition: template
-      value_template: '{{ states.light.floor_lamp_left.attributes.color_temp != 500 and states.light.floor_lamp_right.attributes.color_temp != 500 and states.light.table_lamp.state != "off" }}'
+      value_template: '{{ states.input_boolean.movie_mode.state == "off" }}'
     - service: light.turn_on
       entity_id: light.living_room
       data: 
@@ -10,6 +10,8 @@ evening_lights_livingroom:
     - condition: state
       entity_id: light.bias_light
       state: 'on'
+    - delay: 
+        seconds: 2
     - service: light.turn_on
       entity_id: light.bias_light
       data: 

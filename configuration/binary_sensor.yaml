@@ -1,35 +1,42 @@
-- platform: rpi_gpio
-  device_class: opening
-  ports:
-    22: Bedroom Windows
-    6: Front Windows
-    27: Back Windows
-    17: Back Door
-    18: Garage Door
-    4: Front Door
-- platform: mqtt
-  name: "Ring Doorbell"
-  state_topic: "smartthings/Front Door/button"
-  qos: 0
-  payload_on: "pushed"
-  payload_off: "default"
-  device_class: occupancy
-- platform: mqtt
-  name: "Front Door Motion"
-  state_topic: "smartthings/Front Door/motion"
-  qos: 0
-  payload_on: "active"
-  payload_off: "inactive"
-  device_class: motion
-- platform: command_line
-  command: 'ping -c 1 8.8.8.8 | grep "1 received" | wc -l'
-  name: 'wan_up'
-  device_class: connectivity
-  payload_on: 1
-  payload_off: 0
-  scan_interval: 60
 - platform: template
   sensors:
     rain:
       value_template: '{{ states.sensor.dark_sky_icon.state == "rain"}}'
-
+- platform: mqtt
+  name: Bedroom Windows
+  state_topic: "gpio/input/Bedroom Windows"
+  payload_on: "OPEN"
+  payload_off: "CLOSED"
+- platform: mqtt
+  name: Front Windows
+  state_topic: "gpio/input/Front Windows"
+  payload_on: "OPEN"
+  payload_off: "CLOSED"
+- platform: mqtt
+  name: Back Windows
+  state_topic: "gpio/input/Back Windows"
+  payload_on: "OPEN"
+  payload_off: "CLOSED"
+- platform: mqtt
+  name: Front Door
+  state_topic: "gpio/input/Front Door"
+  payload_on: "OPEN"
+  payload_off: "CLOSED"
+- platform: mqtt
+  name: Back Door
+  state_topic: "gpio/input/Back Door"
+  payload_on: "OPEN"
+  payload_off: "CLOSED"
+- platform: mqtt
+  name: Garage Door
+  state_topic: "gpio/input/Garage Door"
+  payload_on: "OPEN"
+  payload_off: "CLOSED"
+#- platform: mqtt
+#  state_topic: "hass/Tristan's Phone (BT)"
+#  name: "Tristans Phone BT"
+#  value_template: '{{ value == "home"}}'
+#- platform: mqtt
+#  state_topic: "hass/Crystal's Phone (BT)"
+#  name: "Crystals Phone BT"
+#  value_template: '{{ value == "home"}}'

@@ -1,43 +1,23 @@
 lock_doors:
   sequence:
-    - service: script.turn_on
-      data_template:
-        entity_id: >
-          {% if is_state("switch.front_door", "off") and is_state("switch.back_door", "off") %}
-            script.lock_both_doors
-          {% elif is_state("switch.front_door", "off") and is_state("switch.back_door", "on") %}
-            script.lock_front_door
-          {% elif is_state("switch.front_door", "on") and is_state("switch.back_door", "off") %}
-            script.lock_back_door
-          {% endif %}
-    - delay:
-        seconds: 40
-    - service: script.turn_on
-      data_template:
-        entity_id: >
-          {% if is_state("switch.front_door", "off") and is_state("switch.back_door", "off") %}
-            script.lock_both_doors
-          {% elif is_state("switch.front_door", "off") and is_state("switch.back_door", "on") %}
-            script.lock_front_door
-          {% elif is_state("switch.front_door", "on") and is_state("switch.back_door", "off") %}
-            script.lock_back_door
-          {% endif %}              
+    - service: lock.lock
+      entity_id: lock.front_door
+    - service: lock.lock
+      entity_id: lock.back_door             
 
 lock_both_doors:
   sequence:
-    - service: switch.turn_on
-      entity_id: switch.front_door
-    - delay:
-        seconds: 15
-    - service: switch.turn_on
-      entity_id: switch.back_door
+    - service: lock.lock
+      entity_id: lock.front_door
+    - service: lock.lock
+      entity_id: lock.back_door
 
 lock_front_door:
   sequence:
-    - service: switch.turn_on
-      entity_id: switch.front_door
+    - service: lock.lock
+      entity_id: lock.front_door
 
 lock_back_door:
   sequence:
-    - service: switch.turn_on
-      entity_id: switch.back_door
+    - service: lock.lock
+      entity_id: lock.back_door
