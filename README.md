@@ -13,7 +13,7 @@
 <li>Google Home/Assistant</li>
 <li>Google Chromecasts, Google Cast displays and Google Cast speakers</li>
 <li>Logitech Harmony Ultimate</li>
-<li>Kwikset Kevo deadbolts <i>using unofficial API and <a href="http://github.com/gaggle331">@Gaggle331's</a> custom component</i></li>
+<li>Kwikset 916 Z-wave touchscreen deadbolts</li>
 <li>Chamberlain MyQ Garage door opener</li>
 <li>Darksky weather forecasting</li>
 <li>Smartthings Hub <i>via MQTT</i></li>
