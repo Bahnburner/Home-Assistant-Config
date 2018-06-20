@@ -1,37 +1,34 @@
 unlock_doors:
   sequence:
-    - service: switch.turn_off
-      entity_id: switch.front_door
-    - delay:
-        seconds: 15
-    - service: switch.turn_off
-      entity_id: switch.back_door
+    - service: lock.unlock
+      entity_id: lock.front_door
+    - service: lock.unlock
+      entity_id: lock.back_door
 
 unlock_doors_remotely:
   sequence:
     - condition: state
       entity_id: group.family
       state: 'home'
-    - service: switch.turn_off
-      entity_id: switch.front_door
-    - delay:
-        seconds: 15
-    - service: switch.turn_off
-      entity_id: switch.back_door
+    - service: lock.unlock
+      entity_id: lock.front_door
+    - service: lock.unlock
+      entity_id: lock.back_door
 
 unlock_front_door_remotely:
   sequence: 
     - condition: state
       entity_id: group.family
       state: 'home'
-    - service: switch.turn_off
-      entity_id: switch.front_door
+    - service: lock.unlock
+      entity_id: lock.front_door
 
 unlock_back_door_remotely:
   sequence: 
     - condition: state
       entity_id: group.family
       state: 'home'
-    - service: switch.turn_off
-      entity_id: switch.back_door
+    - service: lock.unlock
+      entity_id: lock.back_door
+
 
