@@ -28,10 +28,8 @@ front_door_open:
         message: "Heads up, I cant lock the front door because its currently open. Please close the front door."
     - service: input_boolean.turn_on
       entity_id: input_boolean.front_door_open
-    - condition: template
-      value_template: '{{ states.switch.back_door.state == "off" }}'
-    - service: switch.turn_on
-      entity_id: switch.back_door
+    - service: lock.lock
+      entity_id: lock.back_door
 
       
 back_door_open:
@@ -50,8 +48,8 @@ back_door_open:
       entity_id: input_boolean.back_door_open
     - condition: template
       value_template: '{{ states.switch.front_door.state == "off" }}'
-    - service: switch.turn_on
-      entity_id: switch.front_door
+    - service: lock.lock
+      entity_id: lock.front_door
 
 both_doors_open:
   sequence:
