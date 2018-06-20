@@ -1,15 +1,15 @@
   - platform: mqtt
     name: Front door
-    state_topic: "home-assistant/front door/"
-    command_topic: "home-assistant/front door/"
+    state_topic: "smartthings/Front Door/lock"
+    command_topic: "smartthings/Front Door/lock"
     payload_lock: "locked"
     payload_unlock: "unlocked"
     qos: 1
     retain: true
   - platform: mqtt
     name: Back door
-    state_topic: "home-assistant/back door/"
-    command_topic: "home-assistant/back door/"
+    state_topic: "smartthings/Back Door/lock"
+    command_topic: "smartthings/Back Door/lock"
     payload_lock: "locked"
     payload_unlock: "unlocked"
     qos: 1
