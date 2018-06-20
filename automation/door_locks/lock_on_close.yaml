@@ -13,8 +13,8 @@
     - service: notify.google_assistant
       data:
         message: 'Locking the front door.'
-    - service: switch.turn_on
-      entity_id: switch.front_door
+    - service: lock.lock
+      entity_id: lock.front_door
 
 - alias: lock on close - back door
   hide_entity: true
@@ -31,8 +31,8 @@
     - service: notify.google_assistant
       data:
         message: 'Locking the back door.'
-    - service: switch.turn_on
-      entity_id: switch.back_door
+    - service: lock.lock
+      entity_id: lock.back_door
 
 - alias: input_boolean off
   hide_entity: True
