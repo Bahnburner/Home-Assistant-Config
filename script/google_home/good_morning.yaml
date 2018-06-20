@@ -25,7 +25,7 @@ good_morning:
 
           {% if states.sensor.dark_sky_daytime_high_temperature.state | int <= 45%}Don't forget your coat.{%endif%}
 
-          {% if states.sensor.dark_sky_precip_probability.state | float >= 0.50} Don't forget your umbrella.{% endif %}
+          {% if states.sensor.dark_sky_precip_probability.state | float >= 0.50 %} Don't forget your umbrella.{% endif %}
 
           {% if states.calendar.tristans_calendar.attributes.message != '' %}
             {% set event_date = states.calendar.tristans_calendar.attributes.start_time.split(" ")[0] %}
