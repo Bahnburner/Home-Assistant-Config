@@ -4,13 +4,5 @@ switch.vacation_mode:
 switch.routines:
   friendly_name: 'Disable All Automations'
   icon: mdi:power
-switch.front_door:
-  icon: mdi:key-variant
-  friendly_name: 'Front Door'
-  entity_picture: /local/resources/images/devices/kevo.png  
-switch.back_door:
-  icon: mdi:key-variant
-  friendly_name: 'Back Door'
-  entity_picture: /local/resources/images/devices/kevo.png
 switch.christmas_lights:
   entity_picture: /local/resources/images/devices/tree.png
