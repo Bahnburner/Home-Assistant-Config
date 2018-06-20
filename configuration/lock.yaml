@@ -1,4 +1,3 @@
-lock:
   - platform: mqtt
     name: Front door
     state_topic: "home-assistant/front door/"
