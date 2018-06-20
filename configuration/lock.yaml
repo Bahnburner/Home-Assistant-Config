@@ -3,15 +3,15 @@ lock:
     name: Front door
     state_topic: "home-assistant/front door/"
     command_topic: "home-assistant/front door/"
-    payload_lock: "LOCKED"
-    payload_unlock: "UNLOCKED"
+    payload_lock: "locked"
+    payload_unlock: "unlocked"
     qos: 1
     retain: true
   - platform: mqtt
     name: Back door
     state_topic: "home-assistant/back door/"
     command_topic: "home-assistant/back tdoor/"
-    payload_lock: "LOCKED"
-    payload_unlock: "UNLOCKED"
+    payload_lock: "locked"
+    payload_unlock: "unlocked"
     qos: 1
     retain: true
