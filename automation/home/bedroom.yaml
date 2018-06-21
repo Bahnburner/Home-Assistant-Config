@@ -11,7 +11,7 @@
     value_template: '{{ state.attributes.elevation }}'
     below: 8
   action:
-    - service: lock.lock
+    - service: lock.unlock
       entity_id: lock.back_door
     - service: light.turn_on
       entity_id: light.master_bedroom
