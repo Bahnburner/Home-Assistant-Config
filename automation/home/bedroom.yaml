@@ -5,11 +5,6 @@
     entity_id: group.tristal
     from: 'not_home'
     to: 'home'
-  condition:
-    condition: numeric_state
-    entity_id: sun.sun
-    value_template: '{{ state.attributes.elevation }}'
-    below: 8
   action:
     - service: lock.unlock
       entity_id: lock.back_door
