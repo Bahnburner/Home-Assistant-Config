@@ -48,13 +48,7 @@ views:
           - light.rear_floods
         filter:
          state: 'home'
-        title: "Exterior"
-      - type: entities
-        entities:
-          - light.living_room
-          - light.master_bedroom
-          - light.chandelier
-          - light.recessed_lights          
+        title: "Exterior"        
       - type: weather-forecast
         entity: weather.yweather
         title: 'Weather'
