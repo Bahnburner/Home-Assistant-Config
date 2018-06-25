@@ -12,5 +12,5 @@ views:
         entity: weather.yweather
       - type: glance
         entities:
-          group.family
+          - group.family
         title: "Family"
