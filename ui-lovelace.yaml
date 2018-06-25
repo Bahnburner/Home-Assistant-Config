@@ -5,8 +5,8 @@ views:
       - type: picture-glance
         image: https://smrtho.us/local/resources/images/lovelace/family.jpg
         entities:
-          - group.tristans_phone
-          - group.crystals_phone
+          - device_tracker.tristans_phone_wifi
+          - device_tracker.crystals_phone_wifi
         filter:
          state: 'home'
         title: "Family"
