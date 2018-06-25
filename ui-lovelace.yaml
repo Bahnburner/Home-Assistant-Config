@@ -15,5 +15,6 @@ views:
         entities:
           - device_tracker.tristans_phone_wifi
           - device_tracker.crystals_phone_wifi
-          - device_tracker.macmini
+        filter:
+         state: 'home'
         title: "Family"
