@@ -40,6 +40,21 @@ views:
           - light.master_bedroom
           - light.chandelier
           - light.recessed_lights
+      - type: picture-glance
+        image: https://smrtho.us/local/resources/images/lovelace/home-exterior.jpg
+        entities:
+          - light.front_door
+          - light.front_floods
+          - light.rear_floods
+        filter:
+         state: 'home'
+        title: "Exterior"
+      - type: entities
+        entities:
+          - light.living_room
+          - light.master_bedroom
+          - light.chandelier
+          - light.recessed_lights          
       - type: weather-forecast
         entity: weather.yweather
         title: 'Weather'
