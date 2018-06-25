@@ -9,7 +9,7 @@ views:
           - light.chandelier
           - light.recessed_lights
       - type: weather-forecast
-        platform: yweather
+        entity: weather.yweather
       - type: entity-filter
         filter:
           - entity_id: group.tristans_phone
