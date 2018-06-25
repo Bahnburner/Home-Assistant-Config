@@ -34,12 +34,6 @@ views:
         filter:
          state: 'home'
         title: "Master Bedroom"
-      - type: entities
-        entities:
-          - light.living_room
-          - light.master_bedroom
-          - light.chandelier
-          - light.recessed_lights
       - type: picture-glance
         image: https://smrtho.us/local/resources/images/lovelace/house_exterior.jpg
         entities:
