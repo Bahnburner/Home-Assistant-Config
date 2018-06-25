@@ -22,11 +22,19 @@ views:
           - light.floor_lamp_right
           - light.table_lamp
           - light.fan
-          - remote.living_room
-          - climate.downstairs_hallway
         filter:
          state: 'home'
-        title: "Family"
+        title: "Living Room"
+      - type: picture-glance
+        image: https://smrtho.us/local/resources/images/lovelace/livingroom.jpg
+        entities:
+          - light.tristans_nightstand
+          - light.crystals_nightstand
+          - light.bedroom_floor_lamp
+          - media_player.livingroom_tv
+        filter:
+         state: 'home'
+        title: "Living Room"
       - type: entities
         entities:
           - light.living_room
