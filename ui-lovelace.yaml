@@ -41,7 +41,7 @@ views:
           - light.chandelier
           - light.recessed_lights
       - type: picture-glance
-        image: https://smrtho.us/local/resources/images/lovelace/home-exterior.jpg
+        image: https://smrtho.us/local/resources/images/lovelace/house_exterior.jpg
         entities:
           - light.front_door
           - light.front_floods
