@@ -53,9 +53,11 @@ group.windows:
 group.tristans_phone:
   friendly_name: 'Tristan'
   entity_picture: https://graph.facebook.com/293900462/picture?type=large
+  icon: mdi:human-male
 group.crystals_phone:
   friendly_name: 'Crystal'
   entity_picture: https://graph.facebook.com/38904979/picture?type=large
+  icon: mdi:human-female  
 group.devices:
   friendly_name: 'Critical Devices'
 group.cast_devices:
