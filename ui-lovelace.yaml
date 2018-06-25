@@ -15,6 +15,16 @@ views:
           - lock.front_door
           - lock.back_door
         title: "Locks"
+      - type: picture-glance
+        image: https://smrtho.us/local/resources/images/lovelace/livingroom.jpg
+        entities:
+          - light.living_room
+          - light.fan
+          - remote.living_room
+          - climate.downstairs_hallway
+        filter:
+         state: 'home'
+        title: "Family"
       - type: entities
         entities:
           - light.living_room
