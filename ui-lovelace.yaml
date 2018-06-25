@@ -9,4 +9,4 @@ views:
           - light.chandelier
           - light.recessed_lights
       - type: weather-forecast
-        entity: weather.dark_sky
+        entity: weather.yweather
