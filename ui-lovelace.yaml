@@ -10,11 +10,6 @@ views:
         filter:
          state: 'home'
         title: "Family"
-      - type: entities
-        entities:
-          - lock.front_door
-          - lock.back_door
-        title: "Locks"
       - type: picture-glance
         image: https://smrtho.us/local/resources/images/lovelace/livingroom.jpg
         entities:
