@@ -10,10 +10,7 @@ views:
           - light.recessed_lights
       - type: weather-forecast
         entity: weather.yweather
-      - type: entity-filter
-        filter:
-          - entity_id: group.tristans_phone
-          - entity_id: group.crystals_phone
-        card: glance
-        card_config:
-          title: People at home
+      - type: glance
+        entities:
+          group.family
+        title: "Family"
