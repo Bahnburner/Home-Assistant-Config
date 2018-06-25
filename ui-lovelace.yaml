@@ -9,6 +9,7 @@ views:
           - light.chandelier
           - light.recessed_lights
       - type: weather-forecast
+        platform: yweather
       - type: entity-filter
         filter:
           - domain: device_tracker
