@@ -12,7 +12,7 @@ views:
         entity: weather.yweather
       - type: entity-filter
         filter:
-          - entities:
+          - entity_id:
             - group.tristans_phone
             - group.crystals_phone
         card: glance
