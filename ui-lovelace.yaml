@@ -26,7 +26,7 @@ views:
          state: 'home'
         title: "Living Room"
       - type: picture-glance
-        image: https://smrtho.us/local/resources/images/lovelace/livingroom.jpg
+        image: https://smrtho.us/local/resources/images/lovelace/bedroom.jpg
         entities:
           - light.tristans_nightstand
           - light.crystals_nightstand
@@ -34,7 +34,7 @@ views:
           - media_player.livingroom_tv
         filter:
          state: 'home'
-        title: "Living Room"
+        title: "Master Bedroom"
       - type: entities
         entities:
           - light.living_room
