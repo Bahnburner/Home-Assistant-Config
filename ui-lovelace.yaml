@@ -13,8 +13,8 @@ views:
       - type: entity-filter
         filter:
           - entity_id:
-            - group.tristans_phone
-            - group.crystals_phone
+            - device_tracker.tristans_phone_wifi
+            - device_tracker.crystals_phone_wifi
         card: glance
         card_config:
           title: Family
