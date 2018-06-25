@@ -1,5 +1,6 @@
 light.living_room:
   entity_picture: /local/resources/images/devices/hue.png
+  icon: mdi:floor-lamp
 light.floor_lamp_left:
   hidden: false
   entity_picture: /local/resources/images/devices/hue.png
@@ -49,6 +50,7 @@ light.chandelier:
   entity_picture: /local/resources/images/devices/smartthings.png
 light.fan:
   entity_picture: /local/resources/images/devices/smartthings.png
+  icon: mdi:fan
 light.front_floods:
   friendly_name: "Front Flood Lights"
   entity_picture: /local/resources/images/devices/lightify.png
