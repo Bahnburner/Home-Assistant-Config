@@ -10,7 +10,8 @@ views:
           - light.recessed_lights
       - type: weather-forecast
         entity: weather.yweather
-      - type: glance
+      - type: picture-glance
+        image: https://smrtho.us/local/resources/images/lovelace/family.jpg
         entities:
           - group.tristans_phone
           - group.crystals_phone
