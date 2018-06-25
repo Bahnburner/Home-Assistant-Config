@@ -6,7 +6,7 @@ evening_lights_livingroom:
       entity_id: light.living_room
       data: 
         color_temp: 366
-        transition: 300
+        transition: 1800
     - condition: state
       entity_id: light.bias_light
       state: 'on'
