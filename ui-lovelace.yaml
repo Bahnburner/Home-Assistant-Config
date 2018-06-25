@@ -31,7 +31,6 @@ views:
           - light.tristans_nightstand
           - light.crystals_nightstand
           - light.bedroom_floor_lamp
-          - media_player.livingroom_tv
         filter:
          state: 'home'
         title: "Master Bedroom"
