@@ -1,8 +1,10 @@
 lock.front_door:
   icon: mdi:key-variant
   friendly_name: 'Front Door'
-  entity_picture: /local/resources/images/devices/smartthings.png  
+  entity_picture: /local/resources/images/devices/smartthings.png
+  icon: mdi:lock
 lock.back_door:
   icon: mdi:key-variant
   friendly_name: 'Back Door'
   entity_picture: /local/resources/images/devices/smartthings.png
+  icon: mdi:lock
