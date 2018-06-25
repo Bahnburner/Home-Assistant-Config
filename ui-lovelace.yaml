@@ -8,3 +8,5 @@ views:
           - light.master_bedroom
           - light.chandelier
           - light.recessed_lights
+      - type: weather-forecast
+        entity: weather.darksky
