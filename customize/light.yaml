@@ -16,11 +16,14 @@ light.table_lamp:
 light.tristans_nightstand:
   friendly_name: "Tristan's Nightstand"
   entity_picture: /local/resources/images/devices/hue.png
+  icon: mdi:lamp
 light.crystals_nightstand:
   friendly_name: "Crystal's Nightstand"
   entity_picture: /local/resources/images/devices/hue.png
+  icon: mdi:lamp
 light.bedroom_floor_lamp:
   entity_picture: /local/resources/images/devices/hue.png
+  icon: mdi:floor-lamp
 light.pantry:
   entity_picture: /local/resources/images/devices/hue.png
 light.front_door:
