@@ -12,8 +12,7 @@ views:
         platform: yweather
       - type: entity-filter
         filter:
-          - domain: device_tracker
-            state: 'home'
+          - entity_id: group.tristans_phone
         card: glance
         card_config:
           title: People at home
