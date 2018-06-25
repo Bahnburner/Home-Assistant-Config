@@ -12,5 +12,6 @@ views:
         entity: weather.yweather
       - type: glance
         entities:
-          - group.family
+          - group.tristans_phone
+          - group.crystals_phone
         title: "Family"
