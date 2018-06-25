@@ -18,7 +18,9 @@ views:
       - type: picture-glance
         image: https://smrtho.us/local/resources/images/lovelace/livingroom.jpg
         entities:
-          - light.living_room
+          - light.floor_lamp_left
+          - light.floor_lamp_right
+          - light.table_lamp
           - light.fan
           - remote.living_room
           - climate.downstairs_hallway
