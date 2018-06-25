@@ -66,6 +66,7 @@ light.kitchen_hallway:
   hidden: true
 light.master_bedroom:
   hidden: true
+  entity_picture: /local/resources/images/devices/hue.png
 light.stairway:
   hidden: true
 light.stairway_2:
