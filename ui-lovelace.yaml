@@ -1,0 +1,10 @@
+views:
+  - name: Home
+    theme: dark-theme
+    cards:
+      - type: entities
+        entities:
+          - light.living_room
+          - light.master_bedroom
+          - light.chandelier
+          - light.recessed_lights
