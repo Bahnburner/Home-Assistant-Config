@@ -4,11 +4,14 @@ light.living_room:
 light.floor_lamp_left:
   hidden: false
   entity_picture: /local/resources/images/devices/hue.png
+  icon: mdi:floor-lamp
 light.floor_lamp_right:
   hidden: false
+  icon: mdi:floor-lamp
   entity_picture: /local/resources/images/devices/hue.png
 light.table_lamp:
   hidden: false
+  icon: mdi:lamp
   entity_picture: /local/resources/images/devices/hue.png
 light.tristans_nightstand:
   friendly_name: "Tristan's Nightstand"
