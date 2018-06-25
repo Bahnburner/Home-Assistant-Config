@@ -10,3 +10,11 @@ views:
           - light.recessed_lights
       - type: weather-forecast
         entity: weather.yweather
+      - type: entity-filter
+        filter:
+          - entities:
+            - group.tristans_phone
+            - group.crystals_phone
+        card: glance
+        card_config:
+          title: Family
