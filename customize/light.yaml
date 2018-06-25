@@ -28,6 +28,7 @@ light.pantry:
   entity_picture: /local/resources/images/devices/hue.png
 light.front_door:
   entity_picture: /local/resources/images/devices/hue.png
+  icon: mdi:ceiling-light
 light.cabinet_lights:
   entity_picture: /local/resources/images/devices/hue.png
 light.desk_lamp:
@@ -60,9 +61,11 @@ light.fan:
 light.front_floods:
   friendly_name: "Front Flood Lights"
   entity_picture: /local/resources/images/devices/lightify.png
+  icon: mdi:spotlight-beam
 light.rear_floods:
   friendly_name: "Rear Flood Lights"
   entity_picture: /local/resources/images/devices/lightify.png
+  icon: mdi:spotlight-beam
 light.bias_light:
   friendly_name: "Bias Light"
   entity_picture: /local/resources/images/devices/lightify.png
