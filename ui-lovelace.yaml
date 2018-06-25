@@ -9,12 +9,10 @@ views:
           - light.chandelier
           - light.recessed_lights
       - type: weather-forecast
-        entity: weather.yweather
       - type: entity-filter
         filter:
-          - entity_id:
-            device_tracker.tristans_phone_wifi
-            device_tracker.crystals_phone_wifi
+          - domain: device_tracker
+            state: 'home'
         card: glance
         card_config:
-          title: Family
+          title: People at home
