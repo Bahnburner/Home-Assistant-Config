@@ -41,3 +41,7 @@ views:
           - sensor.front_windows
           - sensor.back_windows
           - sensor.bedroom_windows
+      - type: entities
+        title: Garage
+        entities:
+          - cover.garage_door_opener
