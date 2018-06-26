@@ -39,6 +39,9 @@ views:
           - sensor.front_windows
           - sensor.back_windows
           - sensor.bedroom_windows
+          - sensor.nest_protect_down
+          - sensor.nest_protect_up
+          - sensor.nest_protect_kitchen
       - type: entities
         title: "Garage"
         entities:
