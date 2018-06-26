@@ -14,7 +14,7 @@ views:
         image: https://smrtho.us/local/resources/images/lovelace/livingroom.jpg
         entity: light.living_room
         title: "Living Room"
-      - type: picture-glance
+      - type: entity-picture
         image: https://smrtho.us/local/resources/images/lovelace/master_bedroom.jpg
         entity: light.master_bedroom
         title: "Master Bedroom"
