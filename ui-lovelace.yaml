@@ -31,7 +31,6 @@ views:
         title: "Exterior"        
       - type: weather-forecast
         entity: weather.yweather
-        title: 'Weather'
       - type: entities
         title: Alarm Zones
         entities:
@@ -42,6 +41,10 @@ views:
           - sensor.back_windows
           - sensor.bedroom_windows
       - type: entities
-        title: Garage
+        title: "Garage"
         entities:
           - cover.garage_door_opener
+      - type: entity-picture
+        image: https://smrtho.us/local/resources/images/lovelace/office.jpg
+        entity: light.desk_lamp
+        title: "Office"
