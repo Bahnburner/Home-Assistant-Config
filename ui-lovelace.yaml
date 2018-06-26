@@ -50,7 +50,7 @@ views:
   - name: Media
     cards:
       - type: entity-picture
-        image: https://smrtho.us/local/resources/images/lovelace/livingroom.jpg
+        image: https://smrtho.us/local/resources/images/lovelace/movie_mode.jpg
         entity: input_boolean.movie_mode
         title: "Movie Mode"
       - type: media-control
