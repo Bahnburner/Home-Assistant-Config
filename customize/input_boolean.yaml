@@ -14,5 +14,5 @@ input_boolean.disable_all_automations:
   friendly_name: 'Disable All Automations'
   icon: mdi:power
 input_boolean.movie_mode:
-  friendly_name: 'Movie Mode"
+  friendly_name: 'Movie Mode'
   icon: mdi:theater
