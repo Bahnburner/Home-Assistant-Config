@@ -1,6 +1,5 @@
 views:
   - name: Home
-    theme: dark-mode
     cards:
       - type: picture-glance
         image: https://smrtho.us/local/resources/images/lovelace/family.jpg
@@ -48,9 +47,7 @@ views:
         image: https://smrtho.us/local/resources/images/lovelace/office.jpg
         entity: light.desk_lamp
         title: "Office"
-views:
   - name: Media
-    theme: dark-mode
     cards:        
       - type: media-control
         entity: media_player.livingroom_tv
