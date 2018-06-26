@@ -48,3 +48,5 @@ views:
         image: https://smrtho.us/local/resources/images/lovelace/office.jpg
         entity: light.desk_lamp
         title: "Office"
+      - type: media-control
+        entity: media_player.livingroom_directv
