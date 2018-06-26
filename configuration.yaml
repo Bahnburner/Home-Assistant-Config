@@ -22,7 +22,7 @@ updater:
 
 automation: !include_dir_merge_list automation
 binary_sensor: !include ./configuration/binary_sensor.yaml
-cast: !include ./configuration/cast.yaml
+#cast: !include ./configuration/cast.yaml
 climate: !include ./configuration/climate.yaml
 cover: !include ./configuration/cover.yaml
 device_tracker: !include ./configuration/device_tracker.yaml
