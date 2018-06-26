@@ -32,4 +32,12 @@ views:
       - type: weather-forecast
         entity: weather.yweather
         title: 'Weather'
-
+      - type: entities
+        title: Alarm Zones
+        entities:
+          - binary_sensor.front_door
+          - binary_sensor.back_door
+          - binary_sensor.garage_door
+          - binary_sensor.front_windows
+          - binary_sensor.back_windows
+          - binary_sensor.bedroom_windows
