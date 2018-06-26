@@ -10,24 +10,13 @@ views:
         filter:
          state: 'home'
         title: "Family"
-      - type: picture-glance
+      - type: entity-picture
         image: https://smrtho.us/local/resources/images/lovelace/livingroom.jpg
-        entities:
-          - light.floor_lamp_left
-          - light.floor_lamp_right
-          - light.table_lamp
-          - light.fan
-        filter:
-         state: 'home'
+        entity: light.living_room
         title: "Living Room"
       - type: picture-glance
         image: https://smrtho.us/local/resources/images/lovelace/master_bedroom.jpg
-        entities:
-          - light.tristans_nightstand
-          - light.crystals_nightstand
-          - light.bedroom_floor_lamp
-        filter:
-         state: 'home'
+        entity: light.master_bedroom
         title: "Master Bedroom"
       - type: picture-glance
         image: https://smrtho.us/local/resources/images/lovelace/house_exterior.jpg
