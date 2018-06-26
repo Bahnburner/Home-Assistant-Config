@@ -43,6 +43,11 @@ views:
         title: "Garage"
         entities:
           - cover.garage_door_opener
+      - type: entities
+        title: "Room Lights"
+        entities:
+          - light.foyer
+          - light.dining_room
       - type: entity-picture
         image: https://smrtho.us/local/resources/images/lovelace/office.jpg
         entity: light.desk_lamp
