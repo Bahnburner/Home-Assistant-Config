@@ -38,11 +38,11 @@
         brightness: 254
     - service: media_player.media_stop
       entity_id: 
-        - media_player.bedroom_speaker
+        - media_player.master_suite
     - service: media_player.volume_set
-      entity_id: media_player.bedroom_speaker
+      entity_id: media_player.master_suite
       data: 
-        volume_level: 0.50
+        volume_level: 0.40
     - service: media_player.turn_off
       entity_id: 
-        - media_player.bedroom_speaker
+        - media_player.master_suite
