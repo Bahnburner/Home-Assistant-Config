@@ -1,8 +1,10 @@
 - alias: Evening - Lights
   hide_entity: True
   trigger:
-    platform: time
-    at: '18:00:00'
+    platform: numeric_state
+    entity_id: sun.sun
+    value_template: '{{ state.attributes.elevation }}'
+    above: 8
   condition:
     - condition: state
       entity_id: group.family
