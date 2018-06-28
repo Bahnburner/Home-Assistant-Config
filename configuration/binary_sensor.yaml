@@ -32,11 +32,18 @@
   state_topic: "gpio/input/Garage Door"
   payload_on: "OPEN"
   payload_off: "CLOSED"
-#- platform: mqtt
-#  state_topic: "hass/Tristan's Phone (BT)"
-#  name: "Tristans Phone BT"
-#  value_template: '{{ value == "home"}}'
-#- platform: mqtt
-#  state_topic: "hass/Crystal's Phone (BT)"
-#  name: "Crystals Phone BT"
-#  value_template: '{{ value == "home"}}'
+- platform: template
+  sensors:
+    virtual_dark:
+      friendly_name: "Virtually Dark"
+      delay_on:
+        seconds: 60
+      delay_off:
+        seconds: 60
+      value_template: >
+        {% if ( (states.sun.sun.attributes.elevation | int < 10) and (states.sensor.dark_sky_cloud_coverage.state | int > 30)) %}true
+        {% elif ( (states.sun.sun.attributes.elevation | int < 15) and (states.sensor.dark_sky_cloud_coverage.state | int > 45)) %}true
+        {% elif ( (states.sun.sun.attributes.elevation | int < 20) and (states.sensor.dark_sky_cloud_coverage.state | int > 70)) %}true
+        {% elif (states.sensor.dark_sky_cloud_coverage.state | int > 90) %}true
+        {% else %}false
+          {% endif %}
