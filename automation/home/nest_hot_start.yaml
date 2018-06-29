@@ -16,7 +16,7 @@
         - thu
         - fri
     - condition: time
-      after: '13:00:00'
+      after: '15:00:00'
     - condition: template
       value_template: '{{ states.climate.downstairs_hallway.attributes.away_mode == "on" }}'
   action:
