@@ -24,15 +24,6 @@
       entity_id: climate.downstairs_hallway
       data:
         away_mode: false
-    - service: notify.chrome_notifications
-      data:
-        message: "Climate Control has been enabled."
-        data:
-          target:
-            - Tristans Phone
-            - Crystals Phone
-          title: "Preparing for your arrival"
-          url: "https://smrtho.us"
 
 - alias: Home Mode - Nest Hot Start - Arriving Home 
   hide_entity: true
@@ -51,16 +42,6 @@
       entity_id: climate.downstairs_hallway
       data:
         away_mode: false
-    - service: notify.chrome_notifications
-      data:
-        message: "Climate Control has been enabled."
-        data:
-          target:
-            - Tristans Phone
-            - Crystals Phone
-          title: "Preparing for your arrival"
-          url: "https://smrtho.us"
-
 
 - alias: Home Mode - Nest Hot Start - Leaving Home 
   hide_entity: true
