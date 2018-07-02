@@ -71,6 +71,8 @@
       - device_tracker.google_maps_102616309312724957780
     from: 'Heading Home'
     to: 'not_home'
+    for: 
+      minutes: 3
   condition:
     condition: template
     value_template: '{{ states.climate.downstairs_hallway.attributes.away_mode == "off" }}'
