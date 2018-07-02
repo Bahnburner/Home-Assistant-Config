@@ -203,7 +203,6 @@ windows:
   - sensor.bedroom_windows
 devices:
   - sensor.huebridge
-  - sensor.kevobridge
   - sensor.lightifybridge
   - sensor.harmonyhub
   - sensor.smartthingshub
@@ -223,12 +222,6 @@ cast_devices:
   - sensor.viziocrave360
   - sensor.vizio_m70e3
   - sensor.lg_sj9
-system_monitor:
-  - sensor.cpu_temperature
-  - sensor.cpu
-  - sensor.load_5m
-  - sensor.disk
-  - sensor.ram
 media_player_livingroom_tv:
   - media_player.livingroom_tv
 media_player_livingroom_speaker:
