@@ -13,5 +13,5 @@
 - name: Heading Home
   latitude: 35.160015
   longitude: -89.717080
-  radius: 4500
+  radius: 4000
 #    passive: true
