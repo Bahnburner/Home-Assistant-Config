@@ -60,3 +60,22 @@
             - Crystals Phone
           title: "Preparing for your arrival"
           url: "https://smrtho.us"
+
+
+- alias: Home Mode - Nest Hot Start - Leaving Home 
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id:
+      - device_tracker.google_maps_110746778193138728717
+      - device_tracker.google_maps_102616309312724957780
+    from: 'Heading Home'
+    to: 'not_home'
+  condition:
+    condition: template
+    value_template: '{{ states.climate.downstairs_hallway.attributes.away_mode == "off" }}'
+  action:
+    - service: climate.set_away_mode
+      entity_id: climate.downstairs_hallway
+      data:
+        away_mode: true
