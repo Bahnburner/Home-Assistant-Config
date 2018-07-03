@@ -1,2 +1,1 @@
-javascript_version: es5
 themes: !include ../themes/themes.yaml
