@@ -16,7 +16,7 @@ goodnight:
     - service: light.turn_off
       entity_id: light.bias_light
     - service: remote.turn_off
-      entity_id: remote.living_room  
+      entity_id: remote.livingroom  
     - service: script.turn_off
       entity_id: script.goodnight_timer_off
     - service: automation.turn_off
