@@ -13,7 +13,7 @@ goodbye:
     - service: light.turn_off
       entity_id: light.bias_light
     - service: remote.turn_off
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
     - service: script.door_status_check
     - service: media_player.turn_off
       entity_id: 
