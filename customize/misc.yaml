@@ -4,5 +4,5 @@ cover.garage_door_opener:
   entity_picture: /local/resources/images/devices/myq.png
 cover.myq:
   hidden: true
-remote.living_room:
+remote.livingroom:
   hidden: true
