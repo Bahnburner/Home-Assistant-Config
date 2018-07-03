@@ -9,6 +9,6 @@ home:
     - service: automation.trigger
       entity_id: automation.home_mode__bedroom
     - service: remote.turn_on
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         activity: 19594181
