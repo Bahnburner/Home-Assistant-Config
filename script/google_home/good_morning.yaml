@@ -97,7 +97,7 @@ good_morning:
       entity_id: lock.back_door
     - service: script.fan_on
     - service: remote.turn_on
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         activity: 19594181
     - condition: and
@@ -114,7 +114,7 @@ good_morning:
     - delay:
         seconds: 25
     - service: remote.send_command
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         device: 35163109
         command: ['1', '3', 'NumberEnter']
