@@ -1,20 +1,20 @@
 fox:
   sequence:
     - service: remote.send_command
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         device: 35163109
         command: ['1', '3', 'NumberEnter']
     - condition: template
       value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         activity: 19594181
     - delay:
         seconds: 15
     - service: remote.send_command
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         device: 35163109
         command: ['1', '3', 'NumberEnter']
@@ -22,20 +22,20 @@ fox:
 comedycentral:
   sequence:
     - service: remote.send_command
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         device: 35163109
         command: ['2', '4', '9', 'NumberEnter'] 
     - condition: template
       value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         activity: 19594181
     - delay:
         seconds: 15
     - service: remote.send_command
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         device: 35163109
         command: ['2', '4', '9', 'NumberEnter'] 
@@ -43,20 +43,20 @@ comedycentral:
 cartoonnetwork:
   sequence:
     - service: remote.send_command
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         device: 35163109
         command: ['2', '9', '6', 'NumberEnter']  
     - condition: template
       value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         activity: 19594181
     - delay:
         seconds: 15
     - service: remote.send_command
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         device: 35163109
         command: ['2', '9', '6', 'NumberEnter'] 
@@ -64,20 +64,20 @@ cartoonnetwork:
 fxx:
   sequence:   
     - service: remote.send_command
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         device: 35163109
         command: ['2', '5', '9', 'NumberEnter']  
     - condition: template
       value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         activity: 19594181
     - delay:
         seconds: 15
     - service: remote.send_command
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         device: 35163109
         command: ['2', '5', '9', 'NumberEnter']   
@@ -85,20 +85,20 @@ fxx:
 nbc:
   sequence:
     - service: remote.send_command
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         device: 35163109
         command: ['5', 'NumberEnter']   
     - condition: template
       value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         activity: 19594181
     - delay:
         seconds: 15
     - service: remote.send_command
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         device: 35163109
         command: ['5', 'NumberEnter'] 
@@ -106,20 +106,20 @@ nbc:
 espn:
   sequence:
     - service: remote.send_command
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         device: 35163109
         command: ['2', '0', '6', 'NumberEnter'] 
     - condition: template
       value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         activity: 19594181
     - delay:
         seconds: 15
     - service: remote.send_command
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         device: 35163109
         command: ['2', '0', '6', 'NumberEnter'] 
@@ -127,20 +127,20 @@ espn:
 fx:
   sequence:
     - service: remote.send_command
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         device: 35163109
         command: ['2', '4', '8', 'NumberEnter'] 
     - condition: template
       value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         activity: 19594181
     - delay:
         seconds: 15
     - service: remote.send_command
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         device: 35163109
         command: ['2', '4', '8', 'NumberEnter'] 
@@ -148,20 +148,20 @@ fx:
 cbs:
   sequence:
     - service: remote.send_command
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         device: 35163109
         command: ['3', 'NumberEnter'] 
     - condition: template
       value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         activity: 19594181
     - delay:
         seconds: 15
     - service: remote.send_command
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         device: 35163109
         command: ['3', 'NumberEnter'] 
@@ -169,20 +169,20 @@ cbs:
 abc:
   sequence:
     - service: remote.send_command
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         device: 35163109
         command: ['2', '4', 'NumberEnter'] 
     - condition: template
       value_template: '{{ states.sensor.current_activity.state != "Watch DirecTV"}}'
     - service: remote.turn_on
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         activity: 19594181
     - delay:
         seconds: 15
     - service: remote.send_command
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         device: 35163109
         command: ['2', '4', 'NumberEnter']
