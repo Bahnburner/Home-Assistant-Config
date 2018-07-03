@@ -26,7 +26,7 @@
         - media_player.party_mode
     - service: script.fan_off
     - service: remote.turn_off
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
     - service: light.turn_off
       entity_id:
         - light.pantry
