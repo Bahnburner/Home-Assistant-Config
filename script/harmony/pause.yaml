@@ -48,5 +48,5 @@ unpause_directv:
 unpause_other:          
   sequence:
     - service: remote.send_command
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data: {"device": "47158865", "command": "OK"}
