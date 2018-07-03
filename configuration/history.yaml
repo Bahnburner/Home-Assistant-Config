@@ -84,8 +84,6 @@ exclude:
       - light.living_room
       - light.master_bedroom
       - light.saved_brightness
-      - remote.living_room
-      - remote.livingroom
       - script.abc
       - script.away_mode__day
       - script.away_mode__night
