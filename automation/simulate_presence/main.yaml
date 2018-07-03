@@ -59,7 +59,7 @@
       data:
         brightness: 100
     - service: remote.turn_on
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data: {"activity": "Watch DirecTV"}
 
 - alias: Simulate Presence 5
@@ -86,7 +86,7 @@
   action:
     - delay: '00:{{ (range(0, 10)|random|int) }}:00'
     - service: remote.turn_off
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
     - delay: '00:{{ (range(0, 4)|random|int) }}:{{ (range(1,59)|random|int) }}'
     - service: light.turn_off
       entity_id: light.living_room
