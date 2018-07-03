@@ -27,7 +27,7 @@ revert:
     - service: light.turn_off
       entity_id: light.dining_room      
     - service_template: >
-        {% if states.remote.living_room.state == 'on'%}
+        {% if states.remote.livingroom.state == 'on'%}
           light.turn_on
         {% else %} 
           light.turn_off
