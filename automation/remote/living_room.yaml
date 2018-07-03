@@ -6,7 +6,7 @@
     from: 'Select Input'
   action:
     - service: remote.turn_on
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data_template:
         activity: >
           {% if is_state("input_select.harmony", "Watch DirecTV") %}
@@ -32,7 +32,7 @@
     to: 'Power Off'
   action:
     - service: remote.turn_off
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
     - service: input_select.select_option
       entity_id: input_select.harmony
       data_template:
@@ -192,6 +192,6 @@
       to: 'playing'
   action: 
     - service: remote.turn_on
-      entity_id: remote.living_room
+      entity_id: remote.livingroom
       data:
         activity: 28122446
