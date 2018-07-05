@@ -145,6 +145,9 @@
     - condition: state
       entity_id: input_boolean.movie_mode
       state: 'off'
+    - condition: state
+      entity_id: input_boolean.goodnight_initiated
+      state: 'off'
   action: 
     service: light.turn_on
     entity_id: light.living_room
