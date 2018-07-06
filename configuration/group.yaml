@@ -146,6 +146,11 @@ kitchen_lights:
     - light.recessed_lights
     - light.pantry
     - light.cabinet_lights
+kitchen_lighting:
+  entities:
+    - light.overhead_light
+    - light.chandelier
+    - light.recessed_lights
 dining_room:
   - light.dining_room
 foyer:
