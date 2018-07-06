@@ -11,7 +11,6 @@ views:
          state: 'home'
         title: "Family"    
       - type: entities
-        title: "Locks"
         entities: 
           - lock.front_door
           - lock.back_door
