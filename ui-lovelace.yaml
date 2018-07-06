@@ -50,8 +50,7 @@ views:
       - type: entities
         entities: 
           - light.front_door
-          - light.front_floods
-          - light.rear_floods
+          - light.flood_lights
       - type: entities
         entities:
           - cover.garage_door_opener 
