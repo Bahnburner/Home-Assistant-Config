@@ -1,5 +1,6 @@
 views:
   - icon: mdi:home
+    Title: "Home"
     cards:
       - type: picture-glance
         image: https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
@@ -76,8 +77,8 @@ views:
         image: https://smrtho.us/local/resources/images/lovelace/office_edited.jpg
         entity: light.desk_lamp
         title: "Office"
-  - name: Media
-    icon: mdi:cast
+  - icon: mdi:cast
+    title: "Media"
     cards:
       - type: entity-picture
         image: https://smrtho.us/local/resources/images/lovelace/movie_mode_edited.jpg
