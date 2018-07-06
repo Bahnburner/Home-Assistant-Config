@@ -15,6 +15,15 @@ views:
         entities: 
           - lock.front_door
           - lock.back_door
+      - type: entity-picture
+        image: https://smrtho.us/local/resources/images/lovelace/master_bedroom_edited.jpg
+        entity: light.master_bedroom
+        title: "Master Bedroom"
+      - type: entities
+        entities: 
+          - light.bedroom_floor_lamp
+          - light.crystals_nightstand
+          - light.tristans_nightstand
       - type: entities
         title: "Garage"
         entities:
@@ -39,15 +48,6 @@ views:
           - light.fan
           - climate.downstairs_hallway
           - light.bias_light
-      - type: entity-picture
-        image: https://smrtho.us/local/resources/images/lovelace/master_bedroom_edited.jpg
-        entity: light.master_bedroom
-        title: "Master Bedroom"
-      - type: entities
-        entities: 
-          - light.bedroom_floor_lamp
-          - light.crystals_nightstand
-          - light.tristans_nightstand
       - type: entity-picture
         image: https://smrtho.us/local/resources/images/lovelace/kitchen_edited.jpg
         entity: group.kitchen_lighting
