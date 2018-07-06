@@ -24,7 +24,7 @@ group.foyer:
 group.garage:
   friendly_name: 'Garage'
 group.exterior:
-  friendly_name: 'Exterior'
+  friendly_name: 'Exterior Lights'
 group.family:
   friendly_name: 'Family'
   order: 1
