@@ -51,14 +51,12 @@ views:
       - type: entity-picture
         image: https://smrtho.us/local/resources/images/lovelace/kitchen_edited.jpg
         entity: group.kitchen_lighting
-      - type: picture-glance
-        image: https://smrtho.us/local/resources/images/lovelace/kitchen_edited.jpg
+      - type: entities
         entities:
           - light.overhead_light
           - light.recessed_lights
           - light.chandelier
           - light.pantry
-        title: "Kitchen"
       - type: entities
         title: Alarm Zones
         entities:
