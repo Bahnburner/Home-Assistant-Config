@@ -24,11 +24,12 @@ views:
       - type: picture-glance
         image: https://smrtho.us/local/resources/images/lovelace/kitchen_edited.jpg
         entities:
-          - input_select.overhead_light
-          - lock.recessed_lights
-          - light.chandelier
+          - sensor.current_activity
+          - input_select.harmony
+          - light.fan
+          - climate.downstairs_hallway
           - light.pantry
-        title: "Kitchen"
+        title: "Living Room"
       - type: entity-picture
         image: https://smrtho.us/local/resources/images/lovelace/master_bedroom_edited.jpg
         entity: light.master_bedroom
