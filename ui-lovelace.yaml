@@ -49,6 +49,9 @@ views:
         title: "Exterior Lights"
       - type: entities
         entities:
+          - light.foyer
+      - type: entities
+        entities:
           - cover.garage_door_opener         
       - type: entities
         entities: 
@@ -57,9 +60,7 @@ views:
       - type: entities
         entities:
           - light.dining_room
-      - type: entities
-        entities:
-          - light.foyer
+
       - type: weather-forecast
         entity: weather.yweather
       - type: entities
