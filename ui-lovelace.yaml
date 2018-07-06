@@ -48,12 +48,12 @@ views:
         entity: group.exterior
         title: "Exterior Lights"
       - type: entities
+        entities:
+          - cover.garage_door_opener         
+      - type: entities
         entities: 
           - light.front_door
           - light.flood_lights
-      - type: entities
-        entities:
-          - cover.garage_door_opener 
       - type: entities
         entities:
           - light.dining_room
