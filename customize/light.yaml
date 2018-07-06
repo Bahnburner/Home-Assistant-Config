@@ -62,6 +62,10 @@ light.chandelier:
 light.fan:
   entity_picture: /local/resources/images/devices/smartthings.png
   icon: mdi:fan
+light.flood_lights:
+  friendly_name: "Front Flood Lights"
+  entity_picture: /local/resources/images/devices/lightify.png
+  icon: mdi:spotlight-beam
 light.front_floods:
   friendly_name: "Front Flood Lights"
   entity_picture: /local/resources/images/devices/lightify.png
