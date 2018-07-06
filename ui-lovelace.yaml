@@ -14,6 +14,10 @@ views:
         entities: 
           - lock.front_door
           - lock.back_door
+      - type: entities
+        title: "Garage"
+        entities:
+          - cover.garage_door_opener 
       - type: weather-forecast
         entity: weather.yweather         
       - type: entity-picture
@@ -63,10 +67,6 @@ views:
           - sensor.protect_down
           - sensor.protect_up
           - sensor.protect_kitchen
-      - type: entities
-        title: "Garage"
-        entities:
-          - cover.garage_door_opener
       - type: entities
         title: "Room Lights"
         entities:
