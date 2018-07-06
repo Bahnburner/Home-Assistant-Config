@@ -2,7 +2,7 @@ views:
   - name: Home
     cards:
       - type: picture-glance
-        image: https://smrtho.us/local/resources/images/lovelace/family.jpg
+        image: https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
         entities:
           - device_tracker.tristans_phone_wifi
           - device_tracker.crystals_phone_wifi
@@ -10,15 +10,15 @@ views:
          state: 'home'
         title: "Family"
       - type: entity-picture
-        image: https://smrtho.us/local/resources/images/lovelace/livingroom.jpg
+        image: https://smrtho.us/local/resources/images/lovelace/livingroom_edited.jpg
         entity: light.living_room
         title: "Living Room"
       - type: entity-picture
-        image: https://smrtho.us/local/resources/images/lovelace/master_bedroom.jpg
+        image: https://smrtho.us/local/resources/images/lovelace/master_bedroom_edited.jpg
         entity: light.master_bedroom
         title: "Master Bedroom"
       - type: picture-glance
-        image: https://smrtho.us/local/resources/images/lovelace/house_exterior.jpg
+        image: https://smrtho.us/local/resources/images/lovelace/house_exterior_edited.jpg
         entities:
           - lock.front_door
           - lock.back_door
@@ -52,13 +52,13 @@ views:
           - light.foyer
           - light.dining_room
       - type: entity-picture
-        image: https://smrtho.us/local/resources/images/lovelace/office.jpg
+        image: https://smrtho.us/local/resources/images/lovelace/office_edited.jpg
         entity: light.desk_lamp
         title: "Office"
   - name: Media
     cards:
       - type: entity-picture
-        image: https://smrtho.us/local/resources/images/lovelace/movie_mode.jpg
+        image: https://smrtho.us/local/resources/images/lovelace/movie_mode_edited.jpg
         entity: input_boolean.movie_mode
         title: "Movie Mode"
       - type: media-control
