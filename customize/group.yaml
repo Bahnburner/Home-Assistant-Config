@@ -17,7 +17,7 @@ group.kitchen:
 group.kitchen_lights:
   friendly_name: 'Kitchen'
 group.kitchen_lighting:
-  friendly_name: 'Kitchen Lights'
+  friendly_name: 'Kitchen'
 group.dining_room:
   friendly_name: 'Dining Room'
   order: 6
