@@ -28,7 +28,7 @@ views:
           - input_select.harmony
           - light.fan
           - climate.downstairs_hallway
-          - light.pantry
+          - light.bias_light
         title: "Living Room"
       - type: entity-picture
         image: https://smrtho.us/local/resources/images/lovelace/master_bedroom_edited.jpg
