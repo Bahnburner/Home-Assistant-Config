@@ -2,6 +2,7 @@ views:
   - name: Home
     cards:
       - type: entities
+        title: "Locks"
         entities: 
           - lock.front_door
           - lock.back_door
