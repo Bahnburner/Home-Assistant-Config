@@ -44,10 +44,6 @@ views:
           - light.recessed_lights
           - light.chandelier
           - light.pantry
-      - type: entities
-        title: "Garage"
-        entities:
-          - cover.garage_door_opener 
       - type: entity-picture
         image: https://smrtho.us/local/resources/images/lovelace/house_exterior_edited.jpg
         entity: group.exterior
@@ -57,6 +53,10 @@ views:
           - light.front_door
           - light.front_floods
           - light.rear_floods
+      - type: entities
+        title: "Garage"
+        entities:
+          - cover.garage_door_opener 
       - type: entities
         title: Alarm Zones
         entities:
