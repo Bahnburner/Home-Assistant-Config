@@ -43,8 +43,6 @@ views:
           - light.recessed_lights
           - light.chandelier
           - light.pantry
-      - type: weather-forecast
-        entity: weather.yweather
       - type: entity-picture
         image: https://smrtho.us/local/resources/images/lovelace/house_exterior_edited.jpg
         entity: group.exterior
@@ -63,6 +61,8 @@ views:
       - type: entities
         entities:
           - light.dining_room
+      - type: weather-forecast
+        entity: weather.yweather
       - type: entities
         title: Alarm Zones
         entities:
