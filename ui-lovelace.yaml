@@ -9,6 +9,14 @@ views:
         filter:
          state: 'home'
         title: "Family"
+      - type: picture-glance
+        image: https://smrtho.us/local/resources/images/lovelace/house_exterior_edited.jpg
+        entities:
+          - lock.front_door
+          - lock.back_door
+          - light.front_door
+          - light.front_floods
+          - light.rear_floods        
       - type: entity-picture
         image: https://smrtho.us/local/resources/images/lovelace/livingroom_edited.jpg
         entity: light.living_room
@@ -20,14 +28,11 @@ views:
       - type: picture-glance
         image: https://smrtho.us/local/resources/images/lovelace/house_exterior_edited.jpg
         entities:
-          - lock.front_door
-          - lock.back_door
-          - light.front_door
-          - light.front_floods
-          - light.rear_floods
-        filter:
-         state: 'home'
-        title: "Exterior"        
+          - light.overhead_light
+          - lock.recessed_lights
+          - light.chandelier
+          - light.pantry
+        title: "Kitchen"
       - type: weather-forecast
         entity: weather.yweather
       - type: entities
