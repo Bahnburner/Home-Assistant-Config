@@ -1,6 +1,5 @@
 views:
-  - name: Home
-    icon: mdi:home
+  - icon: mdi:home
     cards:
       - type: picture-glance
         image: https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
