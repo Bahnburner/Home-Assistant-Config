@@ -53,7 +53,6 @@ views:
           - light.front_floods
           - light.rear_floods
       - type: entities
-        title: "Garage"
         entities:
           - cover.garage_door_opener 
       - type: entities
