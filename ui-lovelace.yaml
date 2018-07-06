@@ -21,7 +21,7 @@ views:
         image: https://smrtho.us/local/resources/images/lovelace/livingroom_edited.jpg
         entity: light.living_room
         title: "Living Room Lights"
-      - type: picture-glance
+      - type: entities
         image: https://smrtho.us/local/resources/images/lovelace/kitchen_edited.jpg
         entities:
           - sensor.current_activity
