@@ -1,11 +1,6 @@
 views:
   - name: Home
     cards:
-      - type: entities
-        title: "Locks"
-        entities: 
-          - lock.front_door
-          - lock.back_door
       - type: picture-glance
         image: https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
         entities:
@@ -13,7 +8,14 @@ views:
           - device_tracker.crystals_phone_wifi
         filter:
          state: 'home'
-        title: "Family"
+        title: "Family"    
+      - type: entities
+        title: "Locks"
+        entities: 
+          - lock.front_door
+          - lock.back_door
+      - type: weather-forecast
+        entity: weather.yweather         
       - type: entity-picture
         image: https://smrtho.us/local/resources/images/lovelace/house_exterior_edited.jpg
         entity: group.exterior
@@ -34,7 +36,6 @@ views:
           - light.fan
           - climate.downstairs_hallway
           - light.bias_light
-        title: "Living Room"
       - type: entity-picture
         image: https://smrtho.us/local/resources/images/lovelace/master_bedroom_edited.jpg
         entity: light.master_bedroom
@@ -50,8 +51,6 @@ views:
           - light.chandelier
           - light.pantry
         title: "Kitchen"
-      - type: weather-forecast
-        entity: weather.yweather
       - type: entities
         title: Alarm Zones
         entities:
