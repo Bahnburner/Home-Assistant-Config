@@ -126,8 +126,8 @@ views:
           - 'playing'
         card: 
           type: media-control
-          entities:
-            - media_player.rasplex
+          entity: media_player.rasplex
+          
   - icon: mdi:cast
     name: Media
     id: media
