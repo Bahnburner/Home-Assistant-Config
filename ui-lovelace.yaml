@@ -57,6 +57,7 @@ views:
               - light.recessed_lights
               - light.chandelier
               - light.pantry
+              - light.cabinet_lights
               - sensor.protect_kitchen
       - type: vertical-stack
         cards:
