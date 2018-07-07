@@ -1,3 +1,4 @@
 - platform: darksky
   api_key: !secret darksky
 - platform: yweather
+  woeid: 23509845
