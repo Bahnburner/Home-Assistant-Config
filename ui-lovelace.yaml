@@ -171,3 +171,28 @@ views:
           - switch.vacation_mode
           - group.simulate_presence
           - input_boolean.disable_all_automations
+      - type: entities
+        name: Critical Devices
+        entities: 
+          - sensor.huebridge
+          - sensor.lightifybridge
+          - sensor.harmonyhub
+          - sensor.smartthingshub
+          - sensor.myq
+          - sensor.macmini
+          - sensor.rasplex
+          - sensor.directv_genie
+          - sensor.nesthello
+      - type: entities
+        name: Cast Devices
+        entities: 
+          - sensor.google_home_livingroom
+          - sensor.google_home_mini_kitchen
+          - sensor.google_home_mini_bedroom
+          - sensor.google_home_mini_bathroom
+          - sensor.chromecast_man_cave
+          - sensor.chromecast_audio_dining_room
+          - sensor.chromecast_audio_garage
+          - sensor.viziocrave360
+          - sensor.vizio_m70e3
+          - sensor.lg_sj9
