@@ -124,6 +124,7 @@ views:
           - media_player.house_party_protocol
         state_filter:
           - 'playing'
+        show_empty: false
           
   - icon: mdi:cast
     name: Media
