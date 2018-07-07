@@ -102,7 +102,7 @@ views:
           - sensor.protect_up
           - sensor.protect_kitchen
   - icon: mdi:cast
-    name: Media
+    id: Media
     cards:
       - type: picture-entity
         image: https://smrtho.us/local/resources/images/lovelace/movie_mode_edited.jpg
