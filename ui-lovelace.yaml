@@ -112,4 +112,11 @@ views:
         entity: media_player.livingroom_tv
       - type: media-control
         entity: media_player.livingroom_directv
-        
+      - type: media_control
+        entity: media_player.rasplex
+      - type: media_control
+        entity: media_player.livingroom_speaker
+      - type: media_control
+        entity: media_player.dining_room_speaker
+      - type: media_control
+        entity: media_player.master_suite
