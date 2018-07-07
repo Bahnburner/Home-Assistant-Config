@@ -4,7 +4,7 @@ views:
     name: Home
     id: home
     cards:
-      - type: entity
+      - type: entities
         entity: media_player.rasplex
       - type: vertical-stack
         cards:
