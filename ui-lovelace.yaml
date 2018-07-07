@@ -21,18 +21,6 @@ views:
       - type: vertical-stack
         cards:
           - type: picture-entity
-            image: https://smrtho.us/local/resources/images/lovelace/master_bedroom_edited.jpg
-            entity: light.master_bedroom
-            name: "Master Bedroom Lights"
-            tap_action: toggle
-          - type: entities
-            entities: 
-              - light.bedroom_floor_lamp
-              - light.crystals_nightstand
-              - light.tristans_nightstand
-      - type: vertical-stack
-        cards:
-          - type: picture-entity
             image: https://smrtho.us/local/resources/images/lovelace/livingroom_edited.jpg
             entity: light.living_room
             name: "Livingroom Lights"
@@ -45,6 +33,18 @@ views:
               - climate.downstairs_hallway
               - light.bias_light
               - sensor.protect_down
+      - type: vertical-stack
+        cards:
+          - type: picture-entity
+            image: https://smrtho.us/local/resources/images/lovelace/master_bedroom_edited.jpg
+            entity: light.master_bedroom
+            name: "Master Bedroom Lights"
+            tap_action: toggle
+          - type: entities
+            entities: 
+              - light.bedroom_floor_lamp
+              - light.crystals_nightstand
+              - light.tristans_nightstand     
       - type: vertical-stack
         cards:        
           - type: picture-entity
