@@ -106,15 +106,39 @@ views:
         image: https://smrtho.us/local/resources/images/lovelace/movie_mode.jpg
         entity: input_boolean.movie_mode
         title: "Movie Mode"
-      - type: media-control
-        entity: media_player.livingroom_tv
-      - type: media-control
-        entity: media_player.livingroom_directv
-      - type: media-control
-        entity: media_player.rasplex
-      - type: media-control
-        entity: media_player.livingroom_speaker
-      - type: media-control
+      - type: media-control 
+        entity: media_player.all_assistants
+      - type: media-control 
+        entity: media_player.all_speakers
+      - type: media-control 
+        entity: media_player.bathroom_assistant
+      - type: media-control 
+        entity: media_player.bedroom_assistant
+      - type: media-control 
+        entity: media_player.bedroom_speaker
+      - type: media-control 
         entity: media_player.dining_room_speaker
+      - type: media-control 
+        entity: media_player.garage_speaker
+      - type: media-control 
+        entity: media_player.house_party_protocol
+      - type: media-control 
+        entity: media_player.kitchen_assistant
       - type: media-control
+        entity: media_player.livingroom_assistant
+      - type: media-control 
+        entity: media_player.livingroom_directv
+      - type: media-control 
+        entity: media_player.livingroom_speaker
+      - type: media-control 
+        entity: media_player.livingroom_tv
+      - type: media-control 
+        entity: media_player.mancave_directv
+      - type: media-control 
+        entity: media_player.mancave_tv
+      - type: media-control 
         entity: media_player.master_suite
+      - type: media-control 
+        entity: media_player.party_mode
+      - type: media-control 
+        entity: media_player.rasplex
