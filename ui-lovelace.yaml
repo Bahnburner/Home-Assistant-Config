@@ -120,6 +120,7 @@ views:
  #       card:
  #         type: media-control
  #         entity: media_player.livingroom_directv
+ 
       - type: entity-filter
         entities:
           - media_player.rasplex
@@ -128,8 +129,7 @@ views:
         show_empty: false
         card:
           type: media-control
-          entities: 
-            - media_player.rasplex
+          entity: media_player.rasplex
       
       - type: entity-filter
         entities:
