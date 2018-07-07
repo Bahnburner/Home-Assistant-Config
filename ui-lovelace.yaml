@@ -95,11 +95,17 @@ views:
         title: Alarm Zones
         entities:
           - sensor.front_door
+            name: Front
           - sensor.back_door
+            name: Back
           - sensor.garage_door
+            name: Garage
           - sensor.front_windows
+            name: Front
           - sensor.back_windows
+            name: Back
           - sensor.bedroom_windows
+            name: Bedroom
 
       - type: entity-filter
         entities:
