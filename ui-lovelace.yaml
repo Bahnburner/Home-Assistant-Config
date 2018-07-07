@@ -24,7 +24,7 @@ views:
               entity: lock.back_door
             - type: picture-entity
               name: " "
-              image: https://smrtho.us/local/resources/images/lovelace/garage_edited.jpg
+              image: https://smrtho.us/local/resources/images/lovelace/garage.jpg
               entity: cover.garage_door_opener
         - type: entities
           entities:
