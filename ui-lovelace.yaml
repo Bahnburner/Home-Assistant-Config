@@ -126,8 +126,8 @@ views:
         state_filter:
           - 'playing'
         show_empty: false
- #       card:
- #         type: media-control
+        card:
+          type: media-control
  #         entity: media_player.rasplex
       
       - type: entity-filter
