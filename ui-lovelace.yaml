@@ -128,7 +128,8 @@ views:
         show_empty: false
         card:
           type: media-control
- #         entity: media_player.rasplex
+          entities: 
+            - media_player.rasplex
       
       - type: entity-filter
         entities:
