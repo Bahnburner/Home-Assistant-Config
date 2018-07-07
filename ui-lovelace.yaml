@@ -98,7 +98,7 @@ views:
             name: Front
           - entity: sensor.back_door
             name: Back
-          - entity:sensor.garage_door
+          - entity: sensor.garage_door
             name: Garage
           - entity: sensor.front_windows
             name: Front
