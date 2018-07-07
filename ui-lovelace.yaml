@@ -93,10 +93,10 @@ views:
         entity: weather.yweather
       - type: glance
         title: Alarm Zones
+        tap_action: toggle
         entities:
           - entity: lock.front_door
             name: Front
-            tap_action: toggle
           - entity: sensor.front_door
             name: Front
           - entity: sensor.front_windows
