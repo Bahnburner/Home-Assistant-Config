@@ -37,7 +37,7 @@ views:
           - type: picture-entity
             image: https://smrtho.us/local/resources/images/lovelace/master_bedroom_edited.jpg
             entity: light.master_bedroom
-            title: "Master Bedroom"
+            title: "Master Bedroom Lights"
             tap_action: toggle
           - type: entities
             entities: 
@@ -49,7 +49,7 @@ views:
           - type: picture-entity
             image: https://smrtho.us/local/resources/images/lovelace/livingroom_edited.jpg
             entity: light.living_room
-            title: "Livingroom"
+            title: "Livingroom Lights"
             tap_action: toggle
           - type: entities
             entities:
@@ -63,7 +63,6 @@ views:
           - type: picture-entity
             image: https://smrtho.us/local/resources/images/lovelace/kitchen_edited.jpg
             entity: group.kitchen_lighting
-            tap_action: toggle
           - type: entities
             entities:
               - light.overhead_light
