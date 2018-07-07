@@ -103,6 +103,15 @@ views:
 
       - type: entity-filter
         entities:
+          - media_player.rasplex
+        state_filter:
+          - 'playing'
+        card: 
+          type: media-control
+          entity: media_player.rasplex
+
+      - type: entity-filter
+        entities:
           - media_player.livingroom_assistant
           - media_player.kitchen_assistant
           - media_player.bedroom_assistant
@@ -124,9 +133,6 @@ views:
           - media_player.house_party_protocol
         state_filter:
           - 'playing'
-        card: 
-          type: media-control
-          entity: media_player.rasplex
           
   - icon: mdi:cast
     name: Media
