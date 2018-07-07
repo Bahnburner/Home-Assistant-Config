@@ -1,6 +1,7 @@
 views:
   - icon: mdi:home
     name: Home
+    id: home
     cards:
       - type: vertical-stack
         cards:
@@ -102,7 +103,8 @@ views:
           - sensor.protect_up
           - sensor.protect_kitchen
   - icon: mdi:cast
-    id: Media
+    name: Media
+    id: media
     cards:
       - type: picture-entity
         image: https://smrtho.us/local/resources/images/lovelace/movie_mode_edited.jpg
