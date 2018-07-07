@@ -53,15 +53,15 @@
     front_door:
       friendly_name: 'Front Door'
       value_template: '{% if is_state("binary_sensor.front_door", "off") %}Closed{% else %}Open{% endif %}'
-      icon_template: '{% if is_state("binary_sensor.front_door", "off") %}mdi:crop-portrait{% else %}mdi:logout{% endif %}'
+      icon_template: '{% if is_state("binary_sensor.front_door", "off") %}mdi:door{% else %}mdi:door-open{% endif %}'
     back_door:
       friendly_name: 'Back Door'
       value_template: '{% if is_state("binary_sensor.back_door", "off") %}Closed{% else %}Open{% endif %}'
-      icon_template: '{% if is_state("binary_sensor.back_door", "off") %}mdi:crop-portrait{% else %}mdi:logout{% endif %}'
+      icon_template: '{% if is_state("binary_sensor.back_door", "off") %}mdi:door{% else %}mdi:door-open{% endif %}'
     garage_door:
       friendly_name: 'Garage Door'
       value_template: '{% if is_state("binary_sensor.garage_door", "off") %}Closed{% else %}Open{% endif %}'
-      icon_template: '{% if is_state("binary_sensor.garage_door", "off") %}mdi:crop-portrait{% else %}mdi:logout{% endif %}'
+      icon_template: '{% if is_state("binary_sensor.garage_door", "off") %}mdi:door{% else %}mdi:door-open{% endif %}'
     front_windows:
       friendly_name: 'Front Windows'
       value_template: '{% if is_state("binary_sensor.front_windows", "off") %}Closed{% else %}Open{% endif %}'
