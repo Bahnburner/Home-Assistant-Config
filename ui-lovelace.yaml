@@ -105,7 +105,7 @@ views:
       - type: picture-entity
         image: https://smrtho.us/local/resources/images/lovelace/movie_mode.jpg
         entity: input_boolean.movie_mode
-        title: "Movie Mode"
+        name: "Movie Mode"
       - type: media-control 
         entity: media_player.all_assistants
       - type: media-control 
@@ -142,3 +142,11 @@ views:
         entity: media_player.party_mode
       - type: media-control 
         entity: media_player.rasplex
+  - icon: mdi:video
+    name: camera
+    id: camera
+    cards:
+      - type: picture-entity
+        name: Front Door
+        entity: camera.downstairs_front_door
+        camera_image: camera.downstairs_front_door
