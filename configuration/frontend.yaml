@@ -1,3 +1,2 @@
 themes: !include ../themes/themes.yaml
-extra_html_url:
-    - /local/lovelace.html
+
