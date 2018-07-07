@@ -185,14 +185,17 @@ views:
         name: Front Door
         entity: camera.downstairs_front_door
         camera_image: camera.downstairs_front_door
+        show_info: false
       - type: picture-entity
         name: Backyard
         entity: camera.downstairs_yard
         camera_image: camera.downstairs_yard
+        show_info: false
       - type: picture-entity
         name: Nursery
         entity: camera.upstairs_nursery
         camera_image: camera.upstairs_nursery
+        show_info: false
   - icon: mdi:settings
     name: Settings
     id: settings
