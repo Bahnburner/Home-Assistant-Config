@@ -100,37 +100,7 @@ views:
           - sensor.front_windows
           - sensor.back_windows
           - sensor.bedroom_windows
-     
-      - type: entity-filter
-        entities:
-          - media_player.livingroom_tv
-        state_filter:
-          - 'playing'
-        show_empty: false
-#        card:
-#          type: media-control
-#          entity: media_player.livingroom_tv
-          
-      - type: entity-filter
-        entities:
-          - media_player.livingroom_directv
-        state_filter:
-          - 'playing'
-        show_empty: false
- #       card:
- #         type: media-control
- #         entity: media_player.livingroom_directv
- 
-      - type: entity-filter
-        entities:
-          - sensor.rasplex_ status
-        state_filter:
-          - 'playing'
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.rasplex
-      
+
       - type: entity-filter
         entities:
           - media_player.livingroom_assistant
@@ -154,6 +124,10 @@ views:
           - media_player.house_party_protocol
         state_filter:
           - 'playing'
+        card: 
+          type: media-control
+          entities:
+            - media_player.rasplex
   - icon: mdi:cast
     name: Media
     id: media
