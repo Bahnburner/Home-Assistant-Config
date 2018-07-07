@@ -44,6 +44,7 @@ views:
               - light.fan
               - climate.downstairs_hallway
               - light.bias_light
+              - sensor.protect_down
       - type: vertical-stack
         cards:        
           - type: picture-entity
@@ -55,6 +56,7 @@ views:
               - light.recessed_lights
               - light.chandelier
               - light.pantry
+              - sensor.protect_kitchen
       - type: vertical-stack
         cards:
           - type: picture-entity
@@ -67,6 +69,15 @@ views:
               - light.front_door
               - light.front_floods
               - light.rear_floods
+      - type: vertical-stack
+        cards:        
+          - type: picture-entity
+            image: https://smrtho.us/local/resources/images/lovelace/office_edited.jpg
+            entity: light.desk_lamp
+          - type: entities
+            entities:
+              - climate.upstairs_hallway
+              - sensor.protect_up
       - type: entities
         entities:
           - light.foyer     
@@ -84,9 +95,6 @@ views:
           - sensor.front_windows
           - sensor.back_windows
           - sensor.bedroom_windows
-          - sensor.protect_down
-          - sensor.protect_up
-          - sensor.protect_kitchen
   - icon: mdi:cast
     name: Media
     id: media
