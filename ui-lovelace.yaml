@@ -13,8 +13,8 @@ views:
           filter:
            state: 'home'
           title: "Family"  
-        - type: entities:
-          entities: 
+        - type: entities
+          entities:
             - lock.front_door
             - lock.back_door
             - cover.garage_door_opener
