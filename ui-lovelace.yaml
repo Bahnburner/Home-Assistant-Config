@@ -90,7 +90,7 @@ views:
       - type: weather-forecast
         name: Weather
         entity: weather.yweather
-      - type: entities
+      - type: glance
         title: Alarm Zones
         entities:
           - sensor.front_door
