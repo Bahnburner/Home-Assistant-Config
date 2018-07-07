@@ -107,9 +107,10 @@ views:
         state_filter:
           - 'playing'
         show_empty: false
-        card:
-          type: media-control
-          entity: media_player.livingroom_tv
+#        card:
+#          type: media-control
+#          entity: media_player.livingroom_tv
+          
       - type: entity-filter
         entities:
           - media_player.livingroom_directv
