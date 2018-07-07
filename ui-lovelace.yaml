@@ -15,10 +15,11 @@ views:
         - type: horizontal-stack
           cards:
             - type: picture-entity
-              title: ""
+              name: ""
               image: https://smrtho.us/local/resources/images/lovelace/front_door_edited.jpg
               entity: lock.front_door
             - type: picture-entity
+              name: ""
               image: https://smrtho.us/local/resources/images/devices/smartthings.png
               entity: lock.back_door
             - type: picture-entity
