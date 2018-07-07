@@ -88,6 +88,7 @@ views:
         entities:
           - light.dining_room
       - type: weather-forecast
+        name: Weather
         entity: weather.yweather
       - type: entities
         title: Alarm Zones
