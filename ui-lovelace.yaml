@@ -150,3 +150,11 @@ views:
         name: Front Door
         entity: camera.downstairs_front_door
         camera_image: camera.downstairs_front_door
+      - type: picture-entity
+        name: Backyard
+        entity: camera.downstairs_yard
+        camera_image: camera.downstairs_yard
+      - type: picture-entity
+        name: Nursery
+        entity: camera.upstairs_nursery
+        camera_image: camera.upstairs_nursery
