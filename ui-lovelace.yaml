@@ -30,9 +30,6 @@ views:
               image: https://smrtho.us/local/resources/images/lovelace/garage.jpg
               entity: cover.garage_door_opener
               tap_action: toggle
-        - type: entities
-          entities:
-            - cover.garage_door_opener    
       - type: vertical-stack
         cards:
           - type: picture-entity
