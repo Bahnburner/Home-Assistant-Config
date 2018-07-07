@@ -72,6 +72,7 @@ views:
       - type: vertical-stack
         cards:        
           - type: picture-entity
+            title: "Office"
             image: https://smrtho.us/local/resources/images/lovelace/office_edited.jpg
             entity: light.desk_lamp
           - type: entities
