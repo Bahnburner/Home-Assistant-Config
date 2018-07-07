@@ -123,8 +123,6 @@ views:
           - media_player.house_party_protocol
         state_filter:
           - 'playing'
-  card:
-    title: Eating power
   - icon: mdi:cast
     name: Media
     id: media
