@@ -4,9 +4,6 @@ views:
     name: Home
     id: home
     cards:
-      - type: entities
-        entities:
-          - media_player.rasplex
       - type: vertical-stack
         cards:
         - type: picture-glance
@@ -103,6 +100,31 @@ views:
           - sensor.front_windows
           - sensor.back_windows
           - sensor.bedroom_windows
+      - type: entity-filter
+        entities:
+          - media_player.livingroom_assistant
+          - media_player.kitchen_assistant
+          - media_player.bedroom_assistant
+          - media_player.livingroom_tv
+          - media_player.livingroom_speaker
+          - media_player.party_mode
+          - media_player.all_speakers
+          - media_player.dining_room_speaker
+          - media_player.bedroom_speaker
+          - media_player.livingroom_directv
+          - media_player.mancave_tv
+          - media_player.mancave_directv
+          - media_player.guestroom_tv
+          - media_player.rasplex
+          - media_player.all_assistants
+          - media_player.garage_speaker
+          - media_player.bathroom_assistant
+          - media_player.master_suite
+          - media_player.house_party_protocol
+        state_filter:
+          - 'playing'
+  card:
+    title: Eating power
   - icon: mdi:cast
     name: Media
     id: media
