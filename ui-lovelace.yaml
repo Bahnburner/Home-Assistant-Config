@@ -11,7 +11,18 @@ views:
             - device_tracker.crystals_phone_wifi
           filter:
            state: 'home'
-          title: "Family"    
+          title: "Family"  
+        - type: horizontal-stack
+          cards:
+            - type: picture-entity
+              image: https://smrtho.us/local/resources/images/devices/smartthings.png
+              entity: lock.front_door
+            - type: picture-entity
+              image: https://smrtho.us/local/resources/images/devices/smartthings.png
+              entity: lock.back_door
+            - type: picture-entity
+              image: https://smrtho.us/local/resources/images/lovelace/garage_edited.jpg
+              entity: cover.garage_door_opener
         - type: entities
           entities: 
             - lock.front_door
