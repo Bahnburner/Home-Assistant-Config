@@ -159,10 +159,6 @@
 - platform: time_date
   display_options:
     - 'time'
-- platform: glances
-  host: 10.0.0.109
-  resources:
-    - 'disk_use_percent'
-    - 'memory_use_percent'
-    - 'processor_load'
-    - 'cpu_temp'
+- platform: rest
+  resource: http://10.0.0.109:61208/api/2/quicklook/cpu
+  name: "CPU Usage"
