@@ -232,12 +232,12 @@ views:
           - type: horizontal-stack
             cards:
               - type: custom:gauge-card
-                title: Plex Disk Usage
+                title: 'Plex (Z:)'
                 entity: sensor.plex
                 min: 0
                 max: 100
               - type: custom:gauge-card
-                title: Storage Disk Usage
+                title: 'Storage (Y:)'
                 entity: sensor.storage
                 min: 0
                 max: 100
