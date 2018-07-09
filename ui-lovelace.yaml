@@ -1,3 +1,7 @@
+resources:
+  - url: /local/cards/gauge-card.js?v=1
+    type: js
+
 title: Hidden Ridge
 views:
   - icon: mdi:home
@@ -225,6 +229,23 @@ views:
             entities:
               - sensor.cpu_usage
               - sensor.memory_usage
+          - type: horizontal-stack
+            cards:
+              - type: custom:gauge-card
+                title: OS Disk Usage
+                entity: sensor.os
+                min: 0
+                max: 100
+              - type: custom:gauge-card
+                title: Plex Disk Usage
+                entity: sensor.plex
+                min: 0
+                max: 100
+              - type: custom:gauge-card
+                title: Storage Disk Usage
+                entity: sensor.storage
+                min: 0
+                max: 100
       - type: entities
         title: Critical Devices
         entities: 
