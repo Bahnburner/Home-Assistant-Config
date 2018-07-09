@@ -26,4 +26,4 @@
   movie_mode:
     initial: off
   harmony_lighting_control:
-    initial: off
+    initial: on
