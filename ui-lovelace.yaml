@@ -93,10 +93,12 @@ views:
               - sensor.protect_up
       - type: entities
         entities:
-          - light.foyer     
+          - entity: light.foyer     
+            name: Foyer Light
       - type: entities
         entities:
-          - light.dining_room
+          - entity: light.dining_room
+            name: Dining Room Lights
       - type: weather-forecast
         name: Weather
         entity: weather.yweather
