@@ -241,7 +241,7 @@ views:
                 max: 100
               - type: custom:gauge-card
                 title: 'Storage (Y:)'
-                entity: sensor.Storage
+                entity: sensor.storage
                 min: 0
                 max: 100
           - type: horizontal-stack
