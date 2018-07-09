@@ -7,10 +7,10 @@ views:
       - type: vertical-stack
         cards:
         - type: picture-entity
-          image: https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
+#          image: https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
           state_image:
-            "away": https://smrtho.us/local/resources/images/lovelace/family_away_edited.jpg
-            "home": https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
+            "Away": https://smrtho.us/local/resources/images/lovelace/family_away_edited.jpg
+            "Home": https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
           entity: group.family
           title: "Family" 
         - type: entities
