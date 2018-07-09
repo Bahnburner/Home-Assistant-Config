@@ -199,8 +199,8 @@ views:
     cards:
       - type: entities
         name: Administration
-        entities: 
-          - updater.updater
+        entities:
+
           - input_boolean.disable_away_mode
           - input_boolean.disable_alarm
           - switch.vacation_mode
