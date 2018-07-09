@@ -172,15 +172,15 @@
 - platform: rest
   resource: http://10.0.0.109:61208/api/2/fs
   name: OS
-  value_template: '{{ value_json[0].percent| multiply(0.000000001)| round(1) }}'
-  unit_of_measurement: GB
+  value_template: '{{ value_json[0].percent| round(1) }}'
+  unit_of_measurement: %
 - platform: rest
   resource: http://10.0.0.109:61208/api/2/fs
   name: Plex
-  value_template: '{{ value_json[1].percent| multiply(0.000000001)| round(1) }}'
-  unit_of_measurement: GB
+  value_template: '{{ value_json[1].percent| round(1) }}'
+  unit_of_measurement: %
 - platform: rest
   resource: http://10.0.0.109:61208/api/2/fs
   name: Storage
-  value_template: '{{ value_json[2].percent| multiply(0.000000001)| round(1) }}'
-  unit_of_measurement: GB
+  value_template: '{{ value_json[2].percent| round(1) }}'
+  unit_of_measurement: %
