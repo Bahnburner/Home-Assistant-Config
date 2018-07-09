@@ -25,3 +25,5 @@
     initial: off
   movie_mode:
     initial: off
+  plex_lighting_control:
+    initial: off
