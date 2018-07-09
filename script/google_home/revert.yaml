@@ -108,12 +108,14 @@ revert:
       entity_id: light.pantry
       data_template: 
         brightness: >
-          {% if (states.sensor.time.state | round(2)) <= 06.83 %}
-            100
+          {% if (states.sensor.time.state | rount(2)) >= 01.50 %}
+            00
+          {% elif (states.sensor.time.state | round(2)) <= 06.83 %}
+            50
           {% elif (states.sensor.time.state | round(2)) <= 22.00 %}
             254
           {% elif (states.sensor.time.state | round(2)) >= 22.00 %}
-            100
+            50
           {% else %}
           {% endif %}
   #Fix exterior lights
