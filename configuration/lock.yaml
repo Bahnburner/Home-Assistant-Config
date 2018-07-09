@@ -12,4 +12,3 @@
     payload_lock: "locked"
     payload_unlock: "unlocked"
     qos: 1
-    retain: true
