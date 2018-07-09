@@ -198,16 +198,15 @@ views:
     id: settings
     cards:
       - type: entities
-        name: Administration
+        title: Administration
         entities:
-
           - input_boolean.disable_away_mode
           - input_boolean.disable_alarm
           - switch.vacation_mode
           - group.simulate_presence
           - input_boolean.disable_all_automations
       - type: entities
-        name: Critical Devices
+        title: Critical Devices
         entities: 
           - sensor.huebridge
           - sensor.lightifybridge
@@ -219,7 +218,7 @@ views:
           - sensor.directv_genie
           - sensor.nesthello
       - type: entities
-        name: Cast Devices
+        title: Cast Devices
         entities: 
           - sensor.google_home_livingroom
           - sensor.google_home_mini_kitchen
