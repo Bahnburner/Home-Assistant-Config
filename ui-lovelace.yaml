@@ -213,6 +213,7 @@ views:
         cards:
           - type: entities
             title: Administration
+            show_header_toggle: false
             entities:
               - input_boolean.disable_away_mode
               - input_boolean.disable_alarm
