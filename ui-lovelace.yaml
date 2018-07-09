@@ -15,9 +15,9 @@ views:
            state: 'home'
           title: "Family"
           state_image:
-            entity: group.tristal
             "not_home": https://smrtho.us/local/resources/images/lovelace/family_away_edited.jpg
             "home": https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
+          entity: group.tristal
         - type: entities
           entities:
             - lock.front_door
