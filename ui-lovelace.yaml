@@ -241,9 +241,28 @@ views:
                 max: 100
               - type: custom:gauge-card
                 title: 'Storage (Y:)'
-                entity: sensor.storage
+                entity: sensor.Storage
                 min: 0
                 max: 100
+      - type: vertical-stack
+        cards:
+          - type: history-graph
+            title: 'CPU Usage'
+            entities:
+              - sensor.cpu_usage
+              - sensor.memory_usage
+          - type: horizontal-stack
+            cards:
+              - type: custom:gauge-card
+                title: 'Titan OS'
+                entity: sensor.titan
+                min: 0
+                max: 100
+              - type: custom:gauge-card
+                title: 'Retina OS'
+                entity: sensor.storage
+                min: 0
+                max: 100                
       - type: entities
         title: Critical Devices
         entities: 
