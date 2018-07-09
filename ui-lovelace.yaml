@@ -197,6 +197,14 @@ views:
         name: Nursery
         entity: camera.upstairs_nursery
         camera_image: camera.upstairs_nursery
+      - type: map
+        aspect_ratio: 100%
+        entities:
+          - entity: device_tracker.google_maps_102616309312724957780
+          - entity: device_tracker.google_maps_110746778193138728717
+          - zone.home
+          - zone.sedgwick
+          - zone.ttc
   - icon: mdi:settings
     name: Settings
     id: settings
