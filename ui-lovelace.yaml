@@ -253,7 +253,7 @@ views:
                 max: 100
               - type: custom:gauge-card
                 title: 'Retina OS'
-                entity: sensor.storage
+                entity: sensor.retina
                 min: 0
                 max: 100                
       - type: entities
