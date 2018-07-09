@@ -11,7 +11,7 @@
     service: light.turn_on
     entity_id: light.pantry
     data:
-      brightness: 100
+      brightness: 50
       transition: 30
       
 - alias: Overnight - Pantry Off
@@ -51,7 +51,7 @@
     - service: light.turn_on
       entity_id: light.pantry
       data:
-        brightness: 100
+        brightness: 50
         transition: 30
 
 - alias: Overnight - Pantry ReOff
