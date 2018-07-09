@@ -31,8 +31,8 @@ views:
               - sensor.current_activity
               - input_select.harmony
               - light.fan
-              - climate.downstairs_hallway
               - light.bias_light
+              - climate.downstairs_hallway
               - sensor.protect_down
       - type: vertical-stack
         cards:
