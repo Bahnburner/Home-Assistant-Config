@@ -6,13 +6,24 @@ views:
     cards:
       - type: vertical-stack
         cards:
-        - type: picture-entity
-#          image: https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
+        - type: picture-glance
+          image: https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
+          entities:
+            - device_tracker.tristans_phone_wifi
+            - device_tracker.crystals_phone_wifi
+          filter:
+           state: 'home'
+          title: "Family"  
           state_image:
             "not_home": https://smrtho.us/local/resources/images/lovelace/family_away_edited.jpg
             "home": https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
-          entity: group.family
-          title: "Family" 
+#        - type: picture-entity
+#          image: https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
+#          state_image:
+#            "not_home": https://smrtho.us/local/resources/images/lovelace/family_away_edited.jpg
+#            "home": https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
+#          entity: group.family
+#          title: "Family" 
         - type: entities
           entities:
             - device_tracker.tristans_phone_wifi
