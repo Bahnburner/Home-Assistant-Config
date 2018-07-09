@@ -171,7 +171,7 @@
   unit_of_measurement: '%'
 - platform: rest
   resource: http://10.0.0.109:61208/api/2/fs
-  name: OS
+  name: Titan
   value_template: '{{ value_json[0].percent| round(1) }}'
   unit_of_measurement: '%'
 - platform: rest
