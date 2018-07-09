@@ -162,3 +162,5 @@
 - platform: rest
   resource: http://10.0.0.109:61208/api/2/quicklook/cpu
   name: "CPU Usage"
+  value_template: {{ value_json.cpu }}
+  unit_of_measurement: "%"
