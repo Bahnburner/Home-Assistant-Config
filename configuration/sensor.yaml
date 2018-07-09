@@ -176,11 +176,11 @@
   unit_of_measurement: '%'
 - platform: rest
   resource: http://10.0.0.109:61208/api/2/fs
-  name: Plex
+  name: Storage
   value_template: '{{ value_json[1].percent| round(1) }}'
   unit_of_measurement: '%'
 - platform: rest
   resource: http://10.0.0.109:61208/api/2/fs
-  name: Storage
+  name: Plex
   value_template: '{{ value_json[2].percent| round(1) }}'
   unit_of_measurement: '%'
