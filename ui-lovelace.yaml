@@ -15,8 +15,10 @@ views:
           title: "Family" 
         - type: glance
           entities:
-            - device_tracker.tristans_phone_wifi
-            - device_tracker.crystals_phone_wifi
+            - entity: device_tracker.tristans_phone_wifi
+              name: Tristan
+            - entity: device_tracker.crystals_phone_wifi
+              name: Crystal
         - type: entities
           entities:
             - lock.front_door
