@@ -77,7 +77,8 @@ views:
             tap_action: toggle
           - type: entities
             entities: 
-              - light.front_door
+              - entity: light.front_door
+                name: Entryway Light
               - light.front_floods
               - light.rear_floods
       - type: vertical-stack
