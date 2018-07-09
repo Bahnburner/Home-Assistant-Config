@@ -209,18 +209,20 @@ views:
     name: Settings
     id: settings
     cards:
-      - type: entities
-        title: Administration
-        entities:
-          - input_boolean.disable_away_mode
-          - input_boolean.disable_alarm
-          - switch.vacation_mode
-          - group.simulate_presence
-          - input_boolean.disable_all_automations
-      - type: history-graph
-        title: 'CPU Usage'
-        entities:
-          - sensor.cpu_usage
+      - type: vertical-stack
+        cards:
+          - type: entities
+            title: Administration
+            entities:
+              - input_boolean.disable_away_mode
+              - input_boolean.disable_alarm
+              - switch.vacation_mode
+              - group.simulate_presence
+              - input_boolean.disable_all_automations
+          - type: history-graph
+            title: 'CPU Usage'
+            entities:
+              - sensor.cpu_usage
       - type: entities
         title: Critical Devices
         entities: 
