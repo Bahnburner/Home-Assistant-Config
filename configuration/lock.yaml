@@ -5,7 +5,6 @@
     payload_lock: "locked"
     payload_unlock: "unlocked"
     qos: 1
-    retain: true
   - platform: mqtt
     name: Back door
     state_topic: "smartthings/Back Door/lock"
