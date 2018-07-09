@@ -232,11 +232,6 @@ views:
           - type: horizontal-stack
             cards:
               - type: custom:gauge-card
-                title: OS Disk Usage
-                entity: sensor.os
-                min: 0
-                max: 100
-              - type: custom:gauge-card
                 title: Plex Disk Usage
                 entity: sensor.plex
                 min: 0
