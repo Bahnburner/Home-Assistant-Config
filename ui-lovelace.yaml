@@ -7,13 +7,17 @@ views:
       - type: vertical-stack
         cards:
         - type: picture-glance
-          image: https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
+#          image: https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
           entities:
             - device_tracker.tristans_phone_wifi
             - device_tracker.crystals_phone_wifi
           filter:
            state: 'home'
-          title: "Family"  
+          title: "Family"
+          state_image:
+            entity: group.tristal
+            "not_home": https://smrtho.us/local/resources/images/lovelace/family_away_edited.jpg
+            "home": https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
         - type: entities
           entities:
             - lock.front_door
