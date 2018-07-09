@@ -50,7 +50,10 @@
     - platform: state
       entity_id: sensor.current_activity
       to: 'Watch Netflix'
-  condition: 
+  condition:
+    - condition: state
+      entity_id: input_boolean.harmony_lighting_control
+      state: 'on'
     - condition: state
       entity_id: light.living_room
       state: 'on'
