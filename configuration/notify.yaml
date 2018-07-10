@@ -12,4 +12,4 @@
   gcm_sender_id: !secret gcm_sender_id
 - name: Google Assistant
   platform: rest
-  resource: http://10.0.0.81:5000/broadcast_message
+  resource: http://10.0.0.110:5000/broadcast_message
