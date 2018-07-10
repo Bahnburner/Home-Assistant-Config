@@ -1,12 +1,11 @@
 update_hass:
   sequence:
-    - service: shell_command.update
     - service: notify.google_assistant
       data_template:
         message: "Home Assistant will restart in 5 minutes to install updates."
-    - service: shell_command.reboot
     - delay: 
         minutes: 4
     - service: notify.google_assistant
       data_template:
         message: "Home Assistant will restart in 60 seconds to install updates. Your home will be offline for approximately 5 minutes."
+    - service: shell_command.update
