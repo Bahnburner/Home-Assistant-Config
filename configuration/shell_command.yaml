@@ -1,5 +1,4 @@
-reboot_router: ssh root@10.0.0.1 'reboot'
-update: sh /home/hass/.homeassistant/upgrade.sh
-git_pull: sh /home/hass/.homeassistant/git_pull.sh
-reboot_nice: sudo shutdown -r +5 Home Assistant will be restarting in 5 minutes to install updates. 
-reboot_now: sudo shutdown -r now
+update: ssh titan@10.0.0.110 sh /home/hass/.homeassistant/upgrade.sh
+git_pull: ssh titan@10.0.0.110 sh /home/hass/.homeassistant/git_pull.sh
+reboot_nice: ssh titan@10.0.0.110 docker restart hass 
+reboot_now: ssh titan@10.0.0.110 docker restart hass
