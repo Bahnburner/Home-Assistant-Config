@@ -134,18 +134,6 @@
     away_toggle:
       value_template: '{% if is_state("input_boolean.disable_away_mode", "on") %}home{% else %}not_home{% endif %}'
       friendly_name: 'Away Toggle'     
-#    cpu:
-#      friendly_name: 'CPU Utilization'
-#      value_template: '{{ states.sensor.processor_use.state | float(1) }}'
-#      unit_of_measurement: '%'
-#    ram:
-#      friendly_name: 'RAM Utilization'
-#      value_template: '{{ states.sensor.memory_use_percent.state | float(1) }}'
-#      unit_of_measurement: '%'
-#    disk:
-#      friendly_name: 'Disk Utilization'
-#      value_template: '{{states.sensor.disk_use_percent_.state | float(1) }}'
-#      unit_of_measurement: '%'
 - platform: random
   name: whitenoise
   minimum: 1
