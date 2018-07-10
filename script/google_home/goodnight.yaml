@@ -47,7 +47,7 @@ goodnight:
         transition: 30
     - service_template: >
         {% if states.media_player.bedroom_speaker.state == 'playing' %}
-          {% if states.media_player.bedroom_speaker.attributes.media_content_id.startswith('http://10.0.0.101/storage/whitenoise') %}
+          {% if states.media_player.bedroom_speaker.attributes.media_content_id.startswith('http://10.0.0.101/storage/whitenoise') or states.media_player.master_suite.attributes.media_content_id.startswith('http://10.0.0.101/storage/whitenoise') %}
           {% else %}
             script.whitenoise
           {% endif %}
