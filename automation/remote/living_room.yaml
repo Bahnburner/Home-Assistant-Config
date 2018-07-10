@@ -201,3 +201,99 @@
       entity_id: remote.livingroom
       data:
         activity: 28122446
+
+- alias: Movie Mode - Start
+  hide_entity: true
+  trigger: 
+    platform: state
+    entity_id: input_boolean.movie_mode
+    from: "off"
+    to: "on"
+  action: 
+    - service: input_number.select_value
+      entity_id: input_number.movie_mode
+      data_template:
+        value: '{{states.light.living_room.attributes.brightness | int}}'
+    - service: light.turn_off
+      entity_id:
+        - light.table_lamp
+        - light.cabinet_lights
+        - light.recessed_lights
+        - light.overhead_light
+        - light.chandelier
+        - light.pantry
+      data:
+        transition: 15
+    - service: light.turn_on
+      entity_id:
+        - light.floor_lamp_left
+        - light.floor_lamp_right
+      data:
+        brightness: 60
+        color_temp: 500
+        transition: 15
+    - service: light.turn_on
+      entity_id: light.bias_light
+      data:
+        color_temp: 500
+        transition: 15
+        brightness: 175
+        
+- alias: Movie Mode - Stop
+  hide_entity: true
+  trigger: 
+    platform: state
+    entity_id: input_boolean.movie_mode
+    from: "on"
+    to: "off"
+  action:
+    - service: light.turn_on
+      data:
+        transition: 15
+      data_template:
+        entity_id: >
+          {% if states.input_number.movie_mode.state | int == (states.light.floor_lamp_left.attributes.brightness | int + states.light.floor_lamp_right.attributes.brightness | int) /2%}
+            light.table_lamp
+          {% else %}
+            light.living_room
+          {% endif %}
+        brightness:
+          '{{ states.input_number.movie_mode.state | int }}'
+        color_temp: >
+          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+            500
+          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+            200
+          {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+            500
+          {% elif states.sun.sun.attributes.elevation < 8 %}
+            366
+          {% elif (states.sensor.time.state | round(2)) > 9.50 %}
+            300
+          {% else %}
+          {% endif %}
+    - service: light.turn_on
+      entity_id: 
+        - light.pantry
+        - light.cabinet_lights
+      data:
+        transition: 15
+    - service: light.turn_on
+      entity_id: light.bias_light
+      data:
+        transition: 15
+        brightness: 175
+      data_template:
+        color_temp: >
+          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+            500
+          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+            200
+          {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+            500
+          {% elif states.sun.sun.attributes.elevation < 8 %}
+            300
+          {% elif (states.sensor.time.state | round(2)) > 9.50 %}
+            250
+          {% else %}
+          {% endif %}
