@@ -55,8 +55,10 @@
     for: 
       minutes: 3
   condition:
-    condition: template
-    value_template: '{{ states.climate.downstairs_hallway.attributes.away_mode == "off" }}'
+    - condition: template
+      value_template: '{{ states.group.family.state == 'not_home' and states.device_tracker.google_maps_102616309312724957780 != 'Heading Home' and states.device_tracker.google_maps_110746778193138728717 != 'Heading Home' }}'
+    - condition: template
+      value_template: '{{ states.climate.downstairs_hallway.attributes.away_mode == "off" }}'
   action:
     - service: climate.set_away_mode
       entity_id: climate.downstairs_hallway
