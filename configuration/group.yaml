@@ -263,6 +263,7 @@ media_player_master_suite:
   - media_player.master_suite
 disable_all_automations:
   - automation.activate_siren
+  - automation.alarm_triggered
   - automation.away_mode__bedroom
   - automation.away_mode__general
   - automation.away_mode__puppies
@@ -270,14 +271,18 @@ disable_all_automations:
   - automation.bias_light__fade
   - automation.bias_light__off
   - automation.bias_light__on
+  - automation.brighten_entryway_on_unlock
+  - automation.christmas_light_panel_visiblity
+  - automation.christmas_lights_off
+  - automation.christmas_lights_on
   - automation.close_garage_event
-  - automation.doorbell_battery_low
   - automation.evening__lights
   - automation.exterior__brighten
   - automation.exterior_front__dawn
   - automation.exterior_front__dim
+  - automation.exterior_front__driveway_motion
   - automation.exterior_front__dusk
-  - automation.exterior_front__motion
+  - automation.exterior_front__entranceway_motion
   - automation.foyer_lights__doorbell_pushed
   - automation.garage_notify
   - automation.garage_door_open__away
@@ -289,28 +294,29 @@ disable_all_automations:
   - automation.harmony_light_control__end
   - automation.harmony_light_control__start
   - automation.harmony_off
-  - automation.hide_media_player_group
   - automation.hide_media_player_directv
+  - automation.hide_media_player_group
   - automation.hide_media_player_smartcast
   - automation.home_mode__bedroom
   - automation.home_mode__garage_hot_start
   - automation.home_mode__general
   - automation.home_mode__livingroom
+  - automation.home_mode__nest_hot_start__arriving_home
+  - automation.home_mode__nest_hot_start__leaving_home
+  - automation.home_mode__nest_hot_start__leaving_work
+  - automation.home_mode_delay
   - automation.ip_address_changed
   - automation.kitchen_uplighting__off
   - automation.kitchen_uplighting__weekdays
   - automation.kitchen_uplighting__weekends
   - automation.media_player_initialize
-  - automation.morning__pantry
-  - automation.morning__pantry__dim
   - automation.morning__stage_1
   - automation.morning__stage_2
-  - automation.morning__stage_3
   - automation.morning__stage_4
-  - automation.morning__theme
   - automation.morning__weekend__stage_1
   - automation.morning__weekend__stage_2
-  - automation.morning__weekend__stage_3
+  - automation.movie_mode__start
+  - automation.movie_mode__stop
   - automation.nest_protect_emergency
   - automation.nest_protect_normal
   - automation.overnight__pantry_dim
@@ -323,7 +329,6 @@ disable_all_automations:
   - automation.rain__unoccupied__stop
   - automation.restart_system_event
   - automation.set_saved_brightness
-  - automation.severe_weather
   - automation.show_media_player_group
   - automation.show_media_player_group__directv
   - automation.startup
@@ -337,8 +342,7 @@ disable_all_automations:
   - automation.wan_down__on
   - automation.windows_closed
   - automation.windows_open
-  - automation.home_away_assist__off
-  - automation.home_away_assist__off_2
+  - automation.disable_all_automations
   - automation.input_boolean_off
   - automation.lock_on_close__back_door
   - automation.lock_on_close__front_door
