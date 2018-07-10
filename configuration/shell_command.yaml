@@ -1,4 +1,4 @@
-update: ssh titan@10.0.0.110 sh /home/hass/.homeassistant/upgrade.sh
-git_pull: ssh titan@10.0.0.110 sh /home/hass/.homeassistant/git_pull.sh
+update: ssh titan@10.0.0.110 sh /home/titan/.homeassistant/update.sh
+git_pull: ssh titan@10.0.0.110 sh /home/titan/.homeassistant/git_pull.sh
 reboot_nice: ssh titan@10.0.0.110 docker restart hass 
 reboot_now: ssh titan@10.0.0.110 docker restart hass
