@@ -37,12 +37,6 @@ revert:
           script.master_bedroom_off
         {% endif %}
         
-################
-# Stopping point
-################
-
-
-        
   #Fix the pantry light
     - service: light.turn_on
       entity_id: light.pantry
@@ -61,46 +55,16 @@ revert:
   #Fix exterior lights
     - service_template: > 
         {% if states.sun.sun.attributes.elevation < 8 %}
-          light.turn_on
+          script.exterior_lights_on
         {% else %}
-          light.turn_off
-        {% endif %}
-      entity_id: 
-        - light.flood_lights
-      data_template:
-        brightness: >
-          {% if (states.sensor.time.state | round(2)) <= 06.83 %}
-            100
-          {% else %}
-            254
-          {% endif %}
+          script.exterior_lights.off
+        {% endif %}      
+        
   #Fix the cabinet lights
-    - service: light.turn_on
-      entity_id: light.cabinet_lights
-      data: 
-        brightness: 254
-      data_template:
-        color_temp: >
-          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
-            450
-          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
-            200
-          {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
-            450
-          {% elif states.sun.sun.attributes.elevation < 8 %}
-            366
-          {% elif (states.sensor.time.state | round(2)) > 9.50 %}
-            300
-          {% else %}
-          {% endif %}
-    - condition: time
-      weekday:
-        - sat
-        - sun
-    - service: light.turn_on
-      entity_id: light.cabinet_lights
-      data:
-        xy_color: [0.1605,0.3299]
-      data_template:
-        brightness: >
-          {{ states.light.living_room.attributes.brightness }}
+    - service_template: >
+        {% if now().weekday() == 5 or now().weekday() == 6%}
+          script.cabinet_lights_weekend
+        {% else %}
+          script.cabinet_lights_weekday
+        {% endif %}
+
