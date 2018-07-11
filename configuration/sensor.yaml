@@ -6,6 +6,8 @@
 #    - precip_1d
 - platform: darksky
   api_key: !secret darksky
+  latitude: !secret latitude
+  longitude: !secret longitude
   monitored_conditions:
     - icon
     - daily_summary
