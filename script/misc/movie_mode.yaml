@@ -1,3 +1,7 @@
+##########################################################################################################################
+#DISABLED DUE TO MIGRATION TO MOVIE MODE AUTOMATION TRIGGERED BY EITHER INPUT BOOLEAN CHANGE OR IFTTT/GOOGLE HOME WEBHOOK#
+##########################################################################################################################
+
 #movie_mode_on:
 #  sequence:
 #    - service: input_boolean.turn_on
