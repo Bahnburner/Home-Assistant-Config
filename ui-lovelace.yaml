@@ -1,7 +1,7 @@
 resources:
   - url: /local/resources/cards/gauge-card.js?v=1
     type: js
-  - url: /local/bignumber-card.js?v=1
+  - url: /local/resources/cards/bignumber-card.js?v=1
     type: js
 
 title: Hidden Ridge
