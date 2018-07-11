@@ -285,7 +285,7 @@ views:
                 min: 0
                 max: 100
                 severity:
-                  blue: 0
+                  green: 0
                   amber: 70
                   red: 90
               - type: custom:gauge-card
@@ -294,7 +294,7 @@ views:
                 min: 0
                 max: 100
                 severity:
-                  blue: 0
+                  green: 0
                   amber: 70
                   red: 90
           - type: horizontal-stack
@@ -305,7 +305,7 @@ views:
                 min: 0
                 max: 100
                 severity:
-                  blue: 0
+                  green: 0
                   amber: 70
                   red: 90
               - type: custom:gauge-card
@@ -314,7 +314,7 @@ views:
                 min: 0
                 max: 100 
                 severity:
-                  blue: 0
+
                   amber: 70
                   red: 90          
       - type: entities
