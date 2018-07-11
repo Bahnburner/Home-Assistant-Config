@@ -29,44 +29,20 @@ revert:
         {% else %}
           script.livingroom_on
         {% endif %}
-        
-##############        
-#STOPING POINT        
-##############
-
   #If the bedroom lights are on, set them to the appropriate color temperature. 
     - service_template: >
         {% if states.light.master_bedroom.state == 'on' %}
-          light.turn_on
+          script.master_bedroom_on
         {% else %}
-          light.turn_off
+          script.master_bedroom_off
         {% endif %}
-      entity_id: 
-        - light.master_bedroom
-      data_template:
-        color_temp: >
-          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
-            500
-          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
-            200
-          {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
-            500
-          {% elif states.sun.sun.attributes.elevation < 8 %}
-            366
-          {% elif (states.sensor.time.state | round(2)) > 9.50 %}
-            300
-          {% else %}
-          {% endif %}
-        brightness: >
-          {% if states.media_player.bedroom_speaker.state == 'playing' or states.media_player.master_suite.state == 'playing' %}
-            {% if states.media_player.bedroom_speaker.attributes.media_content_id.startswith('http://10.0.0.101/storage/whitenoise') or states.media_player.master_suite.attributes.media_content_id.startswith('http://10.0.0.101/storage/whitenoise') %}
-            {% else %}
-            {% endif %}
-          {% else %}
-            {% if states.sensor.time.state | int > 6 and states.sensor.time.state |int < 20 %}
-              brightness: 254
-            {% endif %}
-          {% endif %}
+        
+################
+# Stopping point
+################
+
+
+        
   #Fix the pantry light
     - service: light.turn_on
       entity_id: light.pantry
