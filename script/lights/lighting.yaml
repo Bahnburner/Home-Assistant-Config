@@ -75,6 +75,7 @@ livingroom_on:
 
 master_bedroom_on:
   sequence: 
+    service: light.turn_on
     entity_id: light.master_bedroom
     data_template:
       color_temp: >
@@ -128,10 +129,37 @@ exterior_lights_on:
 
 exterior_lights_off:
   sequence: 
-    service: lights.turn_off
+    service: light.turn_off
     entity_id:
       - light.front_door
       - light.flood_lights
       
-
+cabinet_lights_weekday:
+  sequence:
+    service: light.turn_on
+    entity_id: light.cabinet_lights
+    data:
+      brightness: 254
+    data_template:
+      color_temp: >
+        {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+          450
+        {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+          200
+        {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+          450
+        {% elif states.sun.sun.attributes.elevation < 8 %}
+          366
+        {% elif (states.sensor.time.state | round(2)) > 9.50 %}
+          300
+        {% else %}
+        {% endif %}
   
+cabinet_lights_weekend:
+  sequence:
+    service: light.turn_on
+    entity_id: light.cabinet_lights
+    data:
+      brightness: 254
+      xy_color: [0.1605,0.3299]
+        
