@@ -72,3 +72,43 @@ livingroom_on:
           300
         {% else %}
         {% endif %}
+
+master_bedroom_on:
+  sequence: 
+    entity_id: light.master_bedroom
+    data_template:
+      color_temp: >
+        {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+          500
+        {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+          200
+        {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+          500
+        {% elif states.sun.sun.attributes.elevation < 8 %}
+          366
+        {% elif (states.sensor.time.state | round(2)) > 9.50 %}
+          300
+        {% else %}
+        {% endif %}
+      brightness: >
+        {% if states.media_player.bedroom_speaker.state == 'playing' or states.media_player.master_suite.state == 'playing' %}
+          {% if states.media_player.bedroom_speaker.attributes.media_content_id.startswith('http://10.0.0.101/storage/whitenoise') or states.media_player.master_suite.attributes.media_content_id.startswith('http://10.0.0.101/storage/whitenoise') %}
+            50
+          {% else %}
+            {% if states.sensor.time.state >= 22.25 %}
+              150
+            {% else %}
+              254
+            {% endif %}
+          {% endif %}
+        {% else %}
+          {% if states.sensor.time.state | int > 6 and states.sensor.time.state |int < 20 %}
+            254
+          {% endif %}
+        {% endif %}
+        
+master_bedroom_off:
+  sequence:
+    service: light.turn_off
+    entity_id: light.master_bedroom
+    
