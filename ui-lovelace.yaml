@@ -110,7 +110,7 @@ views:
             title: UV Index
             entity: sensor.dark_sky_uv_index
             scale: 30px
-            from: bottom
+            from: left
             min: 0
             max: 11
             severity:
