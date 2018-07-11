@@ -101,9 +101,29 @@ views:
         entities:
           - entity: light.dining_room
             name: Dining Room Lights
-      - type: weather-forecast
-        name: Weather
-        entity: weather.yweather
+      - type: vertical-stack
+        cards:
+          - type: weather-forecast
+            name: Weather
+            entity: weather.yweather
+          - type: custom:bignumber-card
+            title: UV Index
+            entity: sensor.dark_sky_uv_index
+            scale: 30px
+            from: bottom
+            min: 0
+            max: 11
+            severity:
+              - value: 2
+                style: 'var(--label-badge-green)'
+              - value: 5
+                style: 'var(--label-badge-yellow)'
+              - value: 7
+                style: 'var(--label-badge-orange)'
+              - value: 10
+                style: 'var(--label-badge-red)'
+              - value: 11
+                style: 'var(--label-badge-purple)'
       - type: glance
         title: Alarm Zones
         tap_action: toggle
