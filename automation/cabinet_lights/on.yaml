@@ -1,0 +1,23 @@
+- alias: Kitchen Uplighting - Weekdays
+  hide_entity: true
+  trigger:
+    - platform: state
+      entity_id: sensor.brightness_lr
+    - platform: state
+      entity_id: light.living_room
+      from: 'off'
+      to: 'on'
+    - platform: state
+      entity_id: group.family
+      to: 'home'
+  condition:
+    condition: state
+    entity_id: group.family
+    state: 'home'
+  action: 
+    service_template: >
+      {% if now().weekday() == 5 or now().weekday() == 6%}
+        script.cabinet_lights_weekend
+      {% else %}
+        script.cabinet_lights_weekday
+      {% endif %}
