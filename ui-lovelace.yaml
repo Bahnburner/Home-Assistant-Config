@@ -314,7 +314,8 @@ views:
                 min: 0
                 max: 100 
                 severity:
-
+                  blue: 0
+                  green: 50
                   amber: 70
                   red: 90          
       - type: entities
