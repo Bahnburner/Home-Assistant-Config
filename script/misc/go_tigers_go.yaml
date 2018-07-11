@@ -20,19 +20,4 @@ timer_off:
   sequence:
     - delay:
         seconds: 60
-    - service: light.turn_on
-      entity_id: light.living_room
-      data_template:
-        color_temp: >
-          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
-            500
-          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
-            200
-          {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
-            500
-          {% elif states.sun.sun.attributes.elevation < 8 %}
-            366
-          {% elif (states.sensor.time.state | round(2)) > 9.50 %}
-            300
-          {% else %}
-          {% endif %}
+    - service: script.livingroom_on
