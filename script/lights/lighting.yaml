@@ -40,7 +40,7 @@ bias_light_off:
       
 diningroom_on:
   sequence: 
-    serivce: light.turn_on
+    service: light.turn_on
     entity_id: light.dining_room
     data:
       brightness: 254
