@@ -111,7 +111,7 @@ views:
               - type: custom:bignumber-card
                 title: UV Index
                 entity: sensor.uv_index
-                scale: 20px
+                scale: 25px
                 from: left
                 min: 0
                 max: 11
@@ -129,7 +129,7 @@ views:
               - type: custom:bignumber-card
                 title: Air Quality
                 entity: sensor.air_quality
-                scale: 20px
+                scale: 25px
                 from: left
                 min: 0
                 max: 500
