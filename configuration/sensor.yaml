@@ -17,6 +17,7 @@
     - temperature_high
     - temperature_low
     - cloud_cover
+    - uv_index
 - platform: template
   sensors:
     current_temp:
