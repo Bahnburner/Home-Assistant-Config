@@ -20,6 +20,9 @@
     - uv_index
 - platform: template
   sensors:
+    uv_index:
+      friendly_name: 'UV Index'
+      value_template: '{{states.sensor.dark_sky_uv_index.state | int }}'
     current_temp:
       friendly_name: 'Current'
       value_template: '{{ states.sensor.dark_sky_temperature.state | round(0) }}'
