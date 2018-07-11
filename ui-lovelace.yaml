@@ -111,7 +111,7 @@ views:
               - type: custom:bignumber-card
                 title: UV Index
                 entity: sensor.uv_index
-                scale: 25px
+                scale: 30px
                 from: left
                 min: 0
                 max: 11
@@ -129,7 +129,7 @@ views:
               - type: custom:bignumber-card
                 title: Air Quality
                 entity: sensor.air_quality
-                scale: 25px
+                scale: 30px
                 from: left
                 min: 0
                 max: 500
@@ -284,11 +284,19 @@ views:
                 entity: sensor.plex
                 min: 0
                 max: 100
+                severity:
+                  green: 0
+                  amber: 70
+                  red: 90
               - type: custom:gauge-card
                 title: 'Storage (Y:)'
                 entity: sensor.storage
                 min: 0
                 max: 100
+                severity:
+                  green: 0
+                  amber: 70
+                  red: 90
           - type: horizontal-stack
             cards:
               - type: custom:gauge-card
@@ -296,11 +304,19 @@ views:
                 entity: sensor.titan
                 min: 0
                 max: 100
+                severity:
+                  green: 0
+                  amber: 70
+                  red: 90
               - type: custom:gauge-card
                 title: 'Retina OS'
                 entity: sensor.retina
                 min: 0
-                max: 100                
+                max: 100 
+                severity:
+                  green: 0
+                  amber: 70
+                  red: 90               
       - type: entities
         title: Critical Devices
         entities: 
