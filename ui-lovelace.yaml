@@ -106,24 +106,47 @@ views:
           - type: weather-forecast
             name: Weather
             entity: weather.yweather
-          - type: custom:bignumber-card
-            title: UV Index
-            entity: sensor.dark_sky_uv_index
-            scale: 30px
-            from: left
-            min: 0
-            max: 11
-            severity:
-              - value: 2
-                style: 'var(--label-badge-green)'
-              - value: 5
-                style: 'var(--label-badge-yellow)'
-              - value: 7
-                style: 'var(--label-badge-orange)'
-              - value: 10
-                style: 'var(--label-badge-red)'
-              - value: 11
-                style: 'var(--label-badge-purple)'
+          - type: horizontal-stack
+            cards:
+              - type: custom:bignumber-card
+                title: UV Index
+                entity: sensor.uv_index
+                scale: 30px
+                from: left
+                min: 0
+                max: 11
+                severity:
+                  - value: 2
+                    style: 'var(--label-badge-green)'
+                  - value: 5
+                    style: 'var(--label-badge-yellow)'
+                  - value: 7
+                    style: 'var(--label-badge-orange)'
+                  - value: 10
+                    style: 'var(--label-badge-red)'
+                  - value: 11
+                    style: 'var(--label-badge-purple)'
+              - type: custom:bignumber-card
+                title: Air Quality
+                entity: sensor.air_quality
+                scale: 30px
+                from: left
+                min: 0
+                max: 500
+                severity:
+                  - value: 50
+                    style: 'var(--label-badge-green)'
+                  - value: 100
+                    style: 'var(--label-badge-yellow)'
+                  - value: 150
+                    style: 'var(--label-badge-orange)'
+                  - value: 200
+                    style: 'var(--label-badge-red)'
+                  - value: 300
+                    style: 'var(--label-badge-purple)'
+                  - value: 500
+                    style: 'var(--label-badge-brown)'
+
       - type: glance
         title: Alarm Zones
         tap_action: toggle
