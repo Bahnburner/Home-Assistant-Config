@@ -1,0 +1,74 @@
+foyer_on:
+  sequence:
+    service: light.turn_on
+    entity_id: light.foyer
+    data:
+      brightness: 254
+      color_temp: 300  
+      
+bias_light_on: 
+  sequence: 
+    service: light.turn_on
+    entity_id: light.bias_light
+    data:
+      transition: 5
+      brightness: 175
+    data_template:
+      color_temp: >
+        {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+          500
+        {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+          200
+        {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+          500
+        {% elif states.sun.sun.attributes.elevation < 8 %}
+          300
+        {% elif (states.sensor.time.state | round(2)) > 9.50 %}
+          250
+        {% else %}
+        {% endif %}
+        
+bias_light_off: 
+  sequence: 
+    - service: light.turn_on
+      entity_id: light.bias_light
+      data:
+        brightness: 1
+        transition: 10
+    - service: light.turn_off
+      entity_id: light.bias_light
+      
+diningroom_on:
+  sequence: 
+    serivce: light.turn_on
+    entity_id: light.dining_room
+    data:
+      brightness: 254
+      color_temp: 300
+      
+diningroom_off:
+  sequence:
+    service: light.turn_off
+    entity_id: light.dining_room
+    
+livingroom_on:
+  sequence:
+    service: light.turn_on
+    entity_id: 
+      - light.living_room
+    data: 
+      brightness: 254
+    data_template:
+      color_temp: >
+        {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+          500
+        {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+          200
+        {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+          500
+        {% elif states.sun.sun.attributes.elevation < 8 %}
+          366
+        {% elif (states.sensor.time.state | round(2)) > 9.50 %}
+          300
+        {% else %}
+        {% endif %}
