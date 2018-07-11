@@ -306,8 +306,8 @@ views:
                 max: 100
                 severity:
                   green: 0
-                  amber: 70
-                  red: 90
+                  amber: 40
+                  red: 60
               - type: custom:gauge-card
                 title: 'Retina OS'
                 entity: sensor.retina
@@ -315,8 +315,8 @@ views:
                 max: 100 
                 severity:
                   green: 0
-                  amber: 70
-                  red: 90               
+                  amber: 40
+                  red: 60             
       - type: entities
         title: Critical Devices
         entities: 
