@@ -1,41 +1,41 @@
-- alias: Windows Open
-  hide_entity: True
-  trigger:
-    platform: state
-    entity_id: 
-      - sensor.front_windows
-      - sensor.back_windows
-      - sensor.bedroom_windows
-    from: 'closed'
-    to: 'open'
-    for:
-      minutes: 5
-  condition: 
-    condition: state
-    entity_id: group.family
-    state: 'home'
-  action:
-    service: climate.set_operation_mode
-    entity_id: climate.downstairs_hallway
-    data:
-      operation_mode: 'eco'
+#- alias: Windows Open
+#  hide_entity: True
+#  trigger:
+#    platform: state
+#    entity_id: 
+#      - sensor.front_windows
+#      - sensor.back_windows
+#      - sensor.bedroom_windows
+#    from: 'closed'
+#    to: 'open'
+#    for:
+#      minutes: 5
+#  condition: 
+#    condition: state
+#    entity_id: group.family
+#    state: 'home'
+#  action:
+#    service: climate.set_operation_mode
+#    entity_id: climate.downstairs_hallway
+#    data:
+#      operation_mode: 'eco'
  
-- alias: Windows Closed
-  hide_entity: True
-  trigger:
-    platform: state
-    entity_id: 
-      - sensor.front_windows
-      - sensor.back_windows
-      - sensor.bedroom_windows
-    from: 'open'
-    to: 'closed'
-  condition: 
-    condition: state
-    entity_id: group.family
-    state: 'home'
-  action:
-    service: climate.set_operation_mode
-    entity_id: climate.downstairs_hallway
-    data:
-      operation_mode: 'auto'
+#- alias: Windows Closed
+#  hide_entity: True
+#  trigger:
+#    platform: state
+#    entity_id: 
+#      - sensor.front_windows
+#      - sensor.back_windows
+#      - sensor.bedroom_windows
+#    from: 'open'
+#    to: 'closed'
+#  condition: 
+#    condition: state
+#    entity_id: group.family
+#    state: 'home'
+#  action:
+#    service: climate.set_operation_mode
+#    entity_id: climate.downstairs_hallway
+#    data:
+#      operation_mode: 'auto'
