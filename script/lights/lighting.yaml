@@ -112,3 +112,26 @@ master_bedroom_off:
     service: light.turn_off
     entity_id: light.master_bedroom
     
+exterior_lights_on:
+  sequence:
+    service: light.turn_on
+    entity_id: 
+      - light.front_door
+      - light.flood_lights
+    data_template:
+      brightness: >
+          {% if (states.sensor.time.state | round(2)) <= 06.83 %}
+            100
+          {% else %}
+            254
+          {% endif %}
+
+exterior_lights_off:
+  sequence: 
+    service: lights.turn_off
+    entity_id:
+      - light.front_door
+      - light.flood_lights
+      
+
+  
