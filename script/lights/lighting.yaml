@@ -139,8 +139,7 @@ cabinet_lights_weekday:
     service: light.turn_on
     entity_id: light.cabinet_lights
     data_template:
-      brightness: >	
-        {{ states.light.living_room.attributes.brightness }}
+      brightness: '{{ states.light.living_room.attributes.brightness }}'
       color_temp: >
         {% if (states.sensor.time.state | round(2)) <= 05.00 %}
           450
