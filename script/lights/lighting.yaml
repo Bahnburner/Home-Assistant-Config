@@ -172,4 +172,4 @@ cabinet_lights_weekend:
 deadend:
   sequence:
     delay:
-      seconds: 0.1
+      seconds: 0
