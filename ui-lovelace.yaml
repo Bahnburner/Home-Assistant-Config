@@ -6,7 +6,11 @@ resources:
 
 title: Hidden Ridge
 views:
-  - icon: mdi:home
+#############
+# MAIN VIEW #
+#############
+
+- icon: mdi:home
     name: Home
     id: home
     cards:
@@ -101,52 +105,9 @@ views:
         entities:
           - entity: light.dining_room
             name: Dining Room Lights
-      - type: vertical-stack
-        cards:
-          - type: weather-forecast
-            name: Weather
-            entity: weather.yweather
-#          - type: horizontal-stack
-#            cards:
-#              - type: custom:bignumber-card
-#                title: UV Index
-#                entity: sensor.uv_index
-#                scale: 30px
-#                from: left
-#                min: 0
-#                max: 11
-#                severity:
-#                  - value: 2
-#                    style: 'var(--label-badge-green)'
-#                  - value: 5
-#                    style: 'var(--label-badge-yellow)'
-#                  - value: 7
-#                    style: 'var(--label-badge-orange)'
-#                  - value: 10
-#                    style: 'var(--label-badge-red)'
-#                  - value: 11
-#                    style: 'var(--label-badge-purple)'
-#              - type: custom:bignumber-card
-#                title: Air Quality
-#                entity: sensor.air_quality
-#                scale: 30px
-#                from: left
-#                min: 0
-#                max: 500
-#                severity:
-#                  - value: 50
-#                    style: 'var(--label-badge-green)'
-#                  - value: 100
-#                    style: 'var(--label-badge-yellow)'
-#                  - value: 150
-#                    style: 'var(--label-badge-orange)'
-#                  - value: 200
-#                    style: 'var(--label-badge-red)'
-#                  - value: 300
-#                    style: 'var(--label-badge-purple)'
-#                  - value: 500
-#                    style: 'var(--label-badge-brown)'
-
+      - type: weather-forecast
+          name: Weather
+          entity: weather.yweather
       - type: glance
         title: Alarm Zones
         tap_action: toggle
@@ -163,7 +124,6 @@ views:
             name: Back
           - entity: sensor.bedroom_windows
             name: Bedroom
-
       - type: entity-filter
         entities:
           - media_player.livingroom_assistant
@@ -188,7 +148,58 @@ views:
         state_filter:
           - 'playing'
         show_empty: false
+
+##########
+# LIGHTS #
+##########
+
+  - icon: mdi:lightbulb
+    name: Lights
+    id: lights
+    cards:
+      - type: entities
+        title: Master Bedroom
+        entities:
+          - light.tristans_nightstand
+          - light.crystals_nightstand
+          - light.bedroom_floor_lamp
+      - type: entities
+        title: Living Room
+        entities:
+          - light.floor_lamp_left
+          - light.floor_lamp_right
+          - light.table_lamp
+      - type: entities
+        title: Kitchen
+        entities:
+          - light.overhead_light
+          - light.chandelier
+          - light.recessed_lights
+          - light.pantry
+      - type: entities
+        title: Exterior
+        entities:
+          - light.front_door
+          - light.front_flood_lights
+          - light.rear_flood_lights
+      - type: entities
+        title: Foyer
+        entities:
+          - light.foyer
+      - type: entities
+        title: Dining Room
+        entities:
+          - light.dining_room
+      - type: entities
+        title: Accent Lights
+        entities:
+          - light.cabinet_lights
+          - light.bias_light
           
+#################
+# MEDIA PLAYERS #
+#################
+
   - icon: mdi:cast
     name: Media
     id: media
@@ -233,6 +244,11 @@ views:
         entity: media_player.party_mode
       - type: media-control 
         entity: media_player.rasplex
+
+###########
+# CAMERAS #
+###########
+
   - icon: mdi:video
     name: Camera
     id: camera
@@ -257,6 +273,11 @@ views:
           - zone.home
           - zone.sedgwick
           - zone.ttc
+
+#########
+# ADMIN #
+#########
+
   - icon: mdi:settings
     name: Settings
     id: settings
