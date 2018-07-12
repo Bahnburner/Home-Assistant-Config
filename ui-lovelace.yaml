@@ -280,8 +280,6 @@ views:
 #########
 
   - icon: mdi:settings
-
-    background: center / cover no-repeat url("/local/resources/images/lovelace/background.jpg") fixed
     name: Settings
     id: settings
     cards:
