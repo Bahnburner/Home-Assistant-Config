@@ -302,6 +302,16 @@ views:
           - type: horizontal-stack
             cards:
               - type: custom:gauge-card
+                title: 'CPU'
+                entity: sensor.cpu_usage
+                min: 0
+                max: 100
+              - type: custom:gauge-card
+                title: 'Memory'
+                entity: sensor.memory_usage
+                min: 0
+                max: 100                
+              - type: custom:gauge-card
                 title: 'Plex (Z:)'
                 entity: sensor.plex
                 min: 0
@@ -319,22 +329,22 @@ views:
 #                  green: 0
 #                  amber: 70
 #                  red: 90
-          - type: horizontal-stack
-            cards:
-              - type: custom:gauge-card
-                title: 'Titan OS'
-                entity: sensor.titan
-                min: 0
-                max: 100
+#          - type: horizontal-stack
+#            cards:
+#              - type: custom:gauge-card
+#                title: 'Titan OS'
+#                entity: sensor.titan
+#                min: 0
+#                max: 100
 #                severity:
 #                  green: 0
 #                  amber: 70
 #                  red: 90
-              - type: custom:gauge-card
-                title: 'Retina OS'
-                entity: sensor.retina
-                min: 0
-                max: 100 
+#              - type: custom:gauge-card
+#                title: 'Retina OS'
+#                entity: sensor.retina
+#                min: 0
+#                max: 100 
 #                severity:
 #                  green: 0
 #                  amber: 70
