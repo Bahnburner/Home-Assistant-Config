@@ -159,17 +159,17 @@ views:
     id: lights
     cards:
       - type: entities
-        title: Master Bedroom
-        entities:
-          - light.tristans_nightstand
-          - light.crystals_nightstand
-          - light.bedroom_floor_lamp
-      - type: entities
         title: Living Room
         entities:
           - light.floor_lamp_left
           - light.floor_lamp_right
           - light.table_lamp
+      - type: entities
+        title: Master Bedroom
+        entities:
+          - light.tristans_nightstand
+          - light.crystals_nightstand
+          - light.bedroom_floor_lamp
       - type: entities
         title: Kitchen
         entities:
