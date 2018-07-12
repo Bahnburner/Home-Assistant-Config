@@ -57,7 +57,7 @@ revert:
         {% if states.sun.sun.attributes.elevation < 8 %}
           script.exterior_lights_on
         {% else %}
-          script.exterior_lights.off
+          script.exterior_lights_off
         {% endif %}      
         
   #Fix the cabinet lights
