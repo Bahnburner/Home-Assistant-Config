@@ -38,6 +38,7 @@ views:
             tap_action: toggle
           - type: entities
             entities:
+              - input_number.livingroom_lights
               - sensor.current_activity
               - input_select.harmony
               - light.fan
