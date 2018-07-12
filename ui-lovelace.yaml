@@ -403,9 +403,9 @@ views:
           - type: entities
             entities:
               - lock.front_door
-          - type: glance
+          - type: entities
             entities:
               - lock.back_door
-          - type: glance
+          - type: entities
             entities:
               - cover.garage_door_opener
