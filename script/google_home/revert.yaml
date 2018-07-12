@@ -20,6 +20,8 @@ revert:
     - service_template: >
         {% if states.light.dining_room.state == 'on'%}
           script.diningroom_on
+        {% else %}
+          script.deadend
         {% endif %} 
     - service: light.turn_off
       entity_id: light.dining_room
@@ -52,6 +54,7 @@ revert:
           {% elif (states.sensor.time.state | round(2)) >= 22.00 %}
             50
           {% else %}
+            254
           {% endif %}
   #Fix exterior lights
     - service_template: > 
