@@ -9,11 +9,13 @@
 <li>Osram Lightify bulbs and lightstrips</li>
 <li>Nest Thermostats</li>
 <li>Nest Smoke Alarms</li>
+<li>Nest Cams</li>
 <li>Presence detection <i>via Asus-WRT and Google Maps location sharing</i></li>
 <li>Google Home</li>
 <li>Google Chromecasts, Google Cast displays and Google Cast speakers</li>
 <li>DirecTV Genie</li>
 <li>Vizio Smartcast</li>
+<li>Plex Media Server</li>
 <li>Logitech Harmony Ultimate</li>
 <li>Kwikset Z-wave deadbolts</li>
 <li>Chamberlain MyQ Garage door opener</li>
