@@ -181,8 +181,8 @@ views:
         title: Exterior
         entities:
           - light.front_door
-          - light.front_flood_lights
-          - light.rear_flood_lights
+          - light.front_floods
+          - light.rear_floods
       - type: entities
         title: Foyer
         entities:
