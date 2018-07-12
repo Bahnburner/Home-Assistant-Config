@@ -163,3 +163,7 @@ cabinet_lights_weekend:
     data_template:
       brightness: '{{ states.light.living_room.attributes.brightness }}'
         
+deadend:
+  sequence:
+    delay:
+      seconds: 0.1
