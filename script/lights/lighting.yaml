@@ -103,8 +103,10 @@ master_bedroom_on:
             {% endif %}
           {% endif %}
         {% else %}
-          {% if states.sensor.time.state | int > 6 and states.sensor.time.state |int < 20 %}
+          {% if states.sensor.time.state | int > 6 and states.sensor.time.state |int < 22 %}
             254
+          {% else %}
+            150
           {% endif %}
         {% endif %}
         
