@@ -376,3 +376,30 @@ views:
           - sensor.viziocrave360
           - sensor.vizio_m70e3
           - sensor.lg_sj9
+
+#########
+# KIOSK #
+#########
+
+  - icon: mdi:home
+    name: Home
+    id: home
+    cards:
+      - type: vertical-stack
+        cards:
+        - type: picture-glance
+          entities:
+            - device_tracker.tristans_phone_wifi
+            - device_tracker.crystals_phone_wifi
+          filter:
+           state: 'home'
+          title: "Family"
+          state_image:
+            "not_home": https://smrtho.us/local/resources/images/lovelace/family_away_edited.jpg
+            "home": https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
+          entity: group.tristal
+        - type: glance
+          entities:
+            - lock.front_door
+            - lock.back_door
+            - cover.garage_door_opener
