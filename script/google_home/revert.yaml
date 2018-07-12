@@ -5,6 +5,7 @@ revert:
         {% if states.light.foyer.state == 'on' %}
           script.foyer_on
         {% else %} 
+          script.deadend
         {% endif %}
     - service: light.turn_off
       entity_id: light.foyer
