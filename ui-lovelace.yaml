@@ -398,8 +398,14 @@ views:
             "not_home": https://smrtho.us/local/resources/images/lovelace/family_away_edited.jpg
             "home": https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
           entity: group.tristal
-        - type: glance
-          entities:
-            - lock.front_door
-            - lock.back_door
-            - cover.garage_door_opener
+        - type: horizontal-stack
+          cards:
+          - type: glance
+            entities:
+              - lock.front_door
+          - type: glance
+            entities:
+              - lock.back_door
+          - type: glance
+            entities:
+              - cover.garage_door_opener
