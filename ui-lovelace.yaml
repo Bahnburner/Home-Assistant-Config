@@ -280,7 +280,7 @@ views:
 #########
 
   - icon: mdi:settings
-    theme: dark_theme
+
     background: center / cover no-repeat url("/local/resources/images/lovelace/background.jpg") fixed
     name: Settings
     id: settings
