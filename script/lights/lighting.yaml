@@ -26,6 +26,7 @@ bias_light_on:
         {% elif (states.sensor.time.state | round(2)) > 9.50 %}
           250
         {% else %}
+          300
         {% endif %}
         
 bias_light_off: 
@@ -71,6 +72,7 @@ livingroom_on:
         {% elif (states.sensor.time.state | round(2)) > 9.50 %}
           300
         {% else %}
+          366
         {% endif %}
 
 master_bedroom_on:
@@ -90,6 +92,7 @@ master_bedroom_on:
         {% elif (states.sensor.time.state | round(2)) > 9.50 %}
           300
         {% else %}
+          366
         {% endif %}
       brightness: >
         {% if states.media_player.bedroom_speaker.state == 'playing' or states.media_player.master_suite.state == 'playing' %}
@@ -154,6 +157,7 @@ cabinet_lights_weekday:
         {% elif (states.sensor.time.state | round(2)) > 9.50 %}
           300
         {% else %}
+          366
         {% endif %}
   
 cabinet_lights_weekend:
