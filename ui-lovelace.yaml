@@ -381,9 +381,9 @@ views:
 # KIOSK #
 #########
 
-  - icon: mdi:home
-    name: Home
-    id: home
+  - icon: mdi:tablet
+    name: Kiosk
+    id: kiosk
     cards:
       - type: vertical-stack
         cards:
