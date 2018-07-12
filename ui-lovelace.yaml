@@ -295,10 +295,13 @@ views:
       - type: vertical-stack
         cards:
           - type: history-graph
-            title: 'CPU Usage'
+            title: 'Titan'
             entities:
               - sensor.cpu_usage
               - sensor.memory_usage
+              - sensor.plex
+              - sensor.storage
+              - sensor.titan
           - type: horizontal-stack
             cards:
               - type: custom:gauge-card
