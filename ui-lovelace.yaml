@@ -6,11 +6,12 @@ resources:
 
 title: Hidden Ridge
 views:
+
 #############
 # MAIN VIEW #
 #############
 
-- icon: mdi:home
+  - icon: mdi:home
     name: Home
     id: home
     cards:
