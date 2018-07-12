@@ -10,3 +10,9 @@ movie_mode:
   min: 0
   max: 254
   step: 1
+livingroom_lights:
+  name: Brightness
+  min: 0
+  max: 254
+  step: 1
+  mode: slider
