@@ -400,7 +400,7 @@ views:
           entity: group.tristal
         - type: horizontal-stack
           cards:
-          - type: glance
+          - type: entities
             entities:
               - lock.front_door
           - type: glance
