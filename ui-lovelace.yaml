@@ -381,58 +381,58 @@ views:
 # KIOSK #
 #########
 
-  - icon: mdi:tablet
-    name: Kiosk
-    id: kiosk
-    cards:
-      - type: vertical-stack
-        cards: 
-          - type: picture-glance
-            entities:
-              - device_tracker.tristans_phone_wifi
-              - device_tracker.crystals_phone_wifi
-            filter:
-             state: 'home'
-            title: "Family"
-            state_image:
-              "not_home": https://smrtho.us/local/resources/images/lovelace/family_away_edited.jpg
-              "home": https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
-            entity: group.tristal 
-          - type: entities
-            entities:
-              - lock.front_door
-              - lock.back_door
-              - cover.garage_door_opener
-      - type: vertical-stack
-        cards: 
-          - type: picture-entity
-            image: https://smrtho.us/local/resources/images/lovelace/livingroom_edited.jpg
-            entity: group.living_room_lights
-            name: "Living Room Lights"    
-          - type: entities
-            entities:
-              - light.fan
-              - light.bias_light
-              - climate.downstairs_hallway
-      - type: vertical-stack
-        cards:
-          - type: picture-entity
-            image: https://smrtho.us/local/resources/images/lovelace/master_bedroom_edited.jpg
-            entity: group.master_bedroom
-            name: "Master Bedroom Lights"
-          - type: entities
-            entities:
-              - light.tristans_nightstand
-              - light.crystals_nightstand
-              - light.bedroom_floor_lamp
-      - type: vertical-stack
-        cards: 
-          - type: picture-entity
-            image: https://smrtho.us/local/resources/images/lovelace/kitchen_edited.jpg
-            entity: group.kitchen_lighting
-            name: "Kitchen Lights"     
-          - type: entities
-            entities: 
-              - light.overhead_light
-              - light.recessed_lights
-              - light.chandelier
+#  - icon: mdi:tablet
+#    name: Kiosk
+#    id: kiosk
+#    cards:
+#      - type: vertical-stack
+#        cards: 
+#          - type: picture-glance
+#            entities:
+#              - device_tracker.tristans_phone_wifi
+#              - device_tracker.crystals_phone_wifi
+#            filter:
+#             state: 'home'
+#            title: "Family"
+#            state_image:
+#              "not_home": https://smrtho.us/local/resources/images/lovelace/family_away_edited.jpg
+#              "home": https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
+#            entity: group.tristal 
+#          - type: entities
+#            entities:
+#              - lock.front_door
+#              - lock.back_door
+#              - cover.garage_door_opener
+#      - type: vertical-stack
+#        cards: 
+#          - type: picture-entity
+#            image: https://smrtho.us/local/resources/images/lovelace/livingroom_edited.jpg
+#            entity: group.living_room_lights
+#            name: "Living Room Lights"    
+#          - type: entities
+#            entities:
+#              - light.fan
+#              - light.bias_light
+#              - climate.downstairs_hallway
+#      - type: vertical-stack
+#        cards:
+#          - type: picture-entity
+#            image: https://smrtho.us/local/resources/images/lovelace/master_bedroom_edited.jpg
+#            entity: group.master_bedroom
+#            name: "Master Bedroom Lights"
+#          - type: entities
+#            entities:
+#              - light.tristans_nightstand
+#              - light.crystals_nightstand
+#              - light.bedroom_floor_lamp
+#      - type: vertical-stack
+#        cards: 
+#          - type: picture-entity
+#            image: https://smrtho.us/local/resources/images/lovelace/kitchen_edited.jpg
+#            entity: group.kitchen_lighting
+#            name: "Kitchen Lights"     
+#          - type: entities
+#            entities: 
+#              - light.overhead_light
+#              - light.recessed_lights
+#              - light.chandelier
