@@ -385,26 +385,35 @@ views:
     name: Kiosk
     id: kiosk
     cards:
-      - type: picture-glance
-        entities:
-          - device_tracker.tristans_phone_wifi
-          - device_tracker.crystals_phone_wifi
-        filter:
-         state: 'home'
-        title: "Family"
-        state_image:
-          "not_home": https://smrtho.us/local/resources/images/lovelace/family_away_edited.jpg
-          "home": https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
-        entity: group.tristal 
-      - type: entities
-        entities:
-          - lock.front_door
-          - lock.back_door
-          - cover.garage_door_opener 
-      - type: picture-entity
-        image: https://smrtho.us/local/resources/images/lovelace/livingroom_edited.jpg
-        entity: group.living_room_lights
-        name: "Living Room Lights"    
+      - type: vertical-stack
+        cards: 
+          - type: picture-glance
+            entities:
+              - device_tracker.tristans_phone_wifi
+              - device_tracker.crystals_phone_wifi
+            filter:
+             state: 'home'
+            title: "Family"
+            state_image:
+              "not_home": https://smrtho.us/local/resources/images/lovelace/family_away_edited.jpg
+              "home": https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
+            entity: group.tristal 
+          - type: entities
+            entities:
+              - lock.front_door
+              - lock.back_door
+              - cover.garage_door_opener
+      - type: vertical-stack
+        cards: 
+          - type: picture-entity
+            image: https://smrtho.us/local/resources/images/lovelace/livingroom_edited.jpg
+            entity: group.living_room_lights
+            name: "Living Room Lights"    
+          - type: entities
+            entities:
+              - light.fan
+              - light.bias_light
+              - climate.downstairs_hallway
       - type: picture-entity
         image: https://smrtho.us/local/resources/images/lovelace/kitchen_edited.jpg
         entity: group.kitchen_lighting
