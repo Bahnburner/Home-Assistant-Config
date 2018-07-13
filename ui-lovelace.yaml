@@ -285,15 +285,18 @@ views:
     name: Settings
     id: settings
     cards:
-      - type: entities
-        title: Administration
-        show_header_toggle: false
-        entities:
-          - input_boolean.disable_away_mode
-          - input_boolean.disable_alarm
-          - switch.vacation_mode
-          - group.simulate_presence
-          - input_boolean.disable_all_automations
+      - type: vertical-stack
+          - type: entities
+            title: Administration
+            show_header_toggle: false
+            entities:
+              - input_boolean.disable_away_mode
+              - input_boolean.disable_alarm
+              - switch.vacation_mode
+              - group.simulate_presence
+              - input_boolean.disable_all_automations
+          - type: picture
+            image: https://radblast.wunderground.com/cgi-bin/radar/WUNIDS_map?station=NQA&brand=wui&num=6&delay=15&type=N0R&frame=0&scale=1.000&noclutter=1&showstorms=0&mapx=400&mapy=240&centerx=400&centery=240&transx=0&transy=0&showlabels=1&severe=0&rainsnow=0&lightning=0&smooth=0&rand=25525021&lat=0&lon=0&label=you
       - type: vertical-stack
         cards:
           - type: history-graph
