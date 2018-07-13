@@ -286,6 +286,7 @@ views:
     id: settings
     cards:
       - type: vertical-stack
+        cards: 
           - type: entities
             title: Administration
             show_header_toggle: false
