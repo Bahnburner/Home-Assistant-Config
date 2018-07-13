@@ -396,6 +396,11 @@ views:
           "not_home": https://smrtho.us/local/resources/images/lovelace/family_away_edited.jpg
           "home": https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
         entity: group.tristal 
+        - type: entities
+          entities:
+            - lock.front_door
+            - lock.back_door
+            - cover.garage_door_opener 
       - type: picture-entity
         image: https://smrtho.us/local/resources/images/lovelace/livingroom_edited.jpg
         entity: group.living_room_lights
