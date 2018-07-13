@@ -414,14 +414,21 @@ views:
               - light.fan
               - light.bias_light
               - climate.downstairs_hallway
+      - type: vertical-stack
+        cards:
+          - type: picture-entity
+            image: https://smrtho.us/local/resources/images/lovelace/master_bedroom_edited.jpg
+            entity: group.master_bedroom
+            name: "Master Bedroom Lights"
+          - type: entities
+            entities:
+              - light.tristans_nightstand
+              - light.crystals_nightstand
+              - light.bedroom_floor_lamp
       - type: picture-entity
         image: https://smrtho.us/local/resources/images/lovelace/kitchen_edited.jpg
         entity: group.kitchen_lighting
         name: "Kitchen Lights"     
-      - type: picture-entity
-        image: https://smrtho.us/local/resources/images/lovelace/master_bedroom_edited.jpg
-        entity: group.master_bedroom
-        name: "Master Bedroom Lights" 
       - type: picture-entity
         image: https://smrtho.us/local/resources/images/lovelace/house_exterior_edited.jpg
         entity: group.exterior
