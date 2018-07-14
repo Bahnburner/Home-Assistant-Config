@@ -204,8 +204,8 @@ views:
           - 'playing'
         show_empty: false
         card: 
-        - type: media-control
-          entity: media_player.bedroom_speaker 
+          type: media-control
+          entity: media_player.bedroom_speaker
       - type: entity-filter
         entities:
           - media_player.livingroom_directv
