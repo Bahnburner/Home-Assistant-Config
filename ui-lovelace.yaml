@@ -124,7 +124,8 @@ views:
           - entity: sensor.back_windows
             name: Back
           - entity: sensor.bedroom_windows
-            name: Bedroom      - type: entity-filter
+            name: Bedroom
+      - type: entity-filter
         entities:
           - media_player.livingroom_assistant
         state_filter:
