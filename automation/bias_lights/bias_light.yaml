@@ -33,9 +33,25 @@
           {% endif %}
       data:
         brightness: 1
-    - delay:
-        seconds: 0.5
-    - service: script.bias_light_on
+    - service: light.turn_on
+      entity_id: light.bias_light
+      data:
+        transition: 5
+        brightness: 175
+      data_template:
+        color_temp: >
+          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+            500
+          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+            200
+          {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+            500
+          {% elif states.sun.sun.attributes.elevation < 8 %}
+            300
+          {% elif (states.sensor.time.state | round(2)) > 9.50 %}
+            250
+          {% else %}
+          {% endif %}
         
 - alias: Bias Light - Off
   hide_entity: true
@@ -54,7 +70,13 @@
       entity_id: light.bias_light
       state: 'on'
   action: 
-    - service: script.bias_light_off
+    - service: light.turn_on
+      entity_id: light.bias_light
+      data:
+        brightness: 1
+        transition: 10
+    - service: light.turn_off
+      entity_id: light.bias_light
 
 - alias: Bias Light - Fade
   hide_entity: True
@@ -68,4 +90,9 @@
     - condition: template
       value_template: '{{ states.light.bias_light.attributes.color_temp == 200 }}'
   action:
-    - service: script.bias_light_on
+    - service: light.turn_on  
+      entity_id: light.bias_light
+      data:
+        color_temp: 250
+        brightness: 175
+        transition: 1800
