@@ -123,7 +123,8 @@ exterior_lights_on:
     service: light.turn_on
     entity_id: 
       - light.front_door
-      - light.flood_lights
+      - light.front_floods
+      - light.rear_floods
     data_template:
       brightness: >
           {% if (states.sensor.time.state | round(2)) <= 06.83 %}
@@ -137,7 +138,8 @@ exterior_lights_off:
     service: light.turn_off
     entity_id:
       - light.front_door
-      - light.flood_lights
+      - light.front_floods
+      - light.rear_floods
       
 cabinet_lights_weekday:
   sequence:
