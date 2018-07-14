@@ -139,7 +139,6 @@ views:
           - media_player.livingroom_directv
           - media_player.mancave_tv
           - media_player.mancave_directv
-          - media_player.guestroom_tv
           - media_player.rasplex
           - media_player.all_assistants
           - media_player.garage_speaker
@@ -149,15 +148,41 @@ views:
         state_filter:
           - 'playing'
         show_empty: false
-
-      - type: entity-filter
-        entities:
-          - media_player.rasplex
-        state_filter:
-          - 'playing'
         card: 
-          type: media-control
-          entity: media_player.rasplex
+          - type: media-control
+            entity: media_player.livingroom_assistant 
+          - type: media-control
+            entity: media_player.kitchen_assistant
+          - type: media-control
+            entity: media_player.bedroom_assistant
+          - type: media-control
+            entity: media_player.livingroom_tv
+          - type: media-control
+            entity: media_player.livingroom_speaker
+          - type: media-control
+            entity: media_player.party_mode 
+          - type: media-control
+            entity: media_player.all_speakers 
+          - type: media-control
+            entity: media_player.dining_room_speaker
+          - type: media-control
+            entity: media_player.bedroom_speaker
+          - type: media-control
+            entity: media_player.livingroom_directv 
+          - type: media-control
+            entity: media_player.mancave_tv 
+          - type: media-control
+            entity: media_player.mancave_directv
+          - type: media-control
+            entity: media_player.all_assistants
+          - type: media-control
+            entity: media_player.rasplex 
+          - type: media-control
+            entity: media_player.bathroom_assistant
+          - type: media-control
+            entity: media_player.master_suite
+          - type: media-control
+            entity: media_player.house_party_protocol
 
 ##########
 # LIGHTS #
