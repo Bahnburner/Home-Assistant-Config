@@ -33,6 +33,8 @@
           {% endif %}
       data:
         brightness: 1
+    - delay:
+        seconds: 0.5
     - service: script.bias_light_on
         
 - alias: Bias Light - Off
