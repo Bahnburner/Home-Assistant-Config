@@ -125,7 +125,84 @@ views:
             name: Back
           - entity: sensor.bedroom_windows
             name: Bedroom
-            
+      - type: entity-filter
+        entities:
+          - media_player.vizio_smartcast
+        state_filter:
+          - 'playing'
+        show_empty: false
+      - type: entity-filter
+        entities:
+          - media_player.all_assistants
+        state_filter:
+          - 'playing'
+        show_empty: false
+        card: 
+          type: media-control
+          entity: media_player.all_assistants
+      - type: entity-filter
+        entities:
+          - media_player.all_speakers
+        state_filter:
+          - 'playing'
+        show_empty: false
+        card: 
+          type: media-control
+          entity: media_player.all_speakers
+      - type: entity-filter
+        entities:
+          - media_player.bathroom_assistant
+        state_filter:
+          - 'playing'
+        show_empty: false
+        card: 
+          type: media-control
+          entity: media_player.bathroom_assistant
+      - type: entity-filter
+        entities:
+          - media_player.bedroom_assistant
+        state_filter:
+          - 'playing'
+        show_empty: false
+        card: 
+          type: media-control
+          entity: media_player.bedroom_assistant
+      - type: entity-filter
+        entities:
+          - media_player.bedroom_speaker
+        state_filter:
+          - 'playing'
+        show_empty: false
+        card: 
+          type: media-control
+          entity: media_player.bedroom_speaker
+      - type: entity-filter
+        entities:
+          - media_player.dining_room_speaker
+        state_filter:
+          - 'playing'
+        show_empty: false
+        card: 
+          type: media-control
+          entity: media_player.dining_room_speaker
+      - type: entity-filter
+        entities:
+          - media_player.garage_speaker
+        state_filter:
+          - 'playing'
+        show_empty: false
+        card: 
+          type: media-control
+          entity: media_player.garage_speaker
+      - type: entity-filter
+        entities:
+          - media_player.house_party_protocol
+        state_filter:
+          - 'playing'
+        show_empty: false
+        card: 
+          type: media-control
+          entity: media_player.house_party_protocol
       - type: entity-filter
         entities:
           - media_player.livingroom_assistant
@@ -162,8 +239,42 @@ views:
         card: 
           type: media-control
           entity: media_player.livingroom_tv
-            
-            
+      - type: entity-filter
+        entities:
+          - media_player.mancave_directv
+        state_filter:
+          - 'playing'
+        show_empty: false
+        card: 
+          type: media-control
+          entity: media_player.mancave_directv
+      - type: entity-filter
+        entities:
+          - media_player.mancave_tv
+        state_filter:
+          - 'playing'
+        show_empty: false
+        card: 
+          type: media-control
+          entity: media_player.mancave_tv
+      - type: entity-filter
+        entities:
+          - media_player.master_suite
+        state_filter:
+          - 'playing'
+        show_empty: false
+        card: 
+          type: media-control
+          entity: media_player.master_suite
+      - type: entity-filter
+        entities:
+          - media_player.party_mode
+        state_filter:
+          - 'playing'
+        show_empty: false
+        card: 
+          type: media-control
+          entity: media_player.party_mode
       - type: entity-filter
         entities:
           - media_player.rasplex
@@ -173,7 +284,7 @@ views:
         card: 
           type: media-control
           entity: media_player.rasplex 
-          
+
           
 ##########
 # LIGHTS #
