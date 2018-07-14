@@ -126,19 +126,42 @@ views:
           - entity: sensor.bedroom_windows
             name: Bedroom
             
-            
-            
       - type: entity-filter
         entities:
-          - media_player.bedroom_speaker
-
+          - media_player.livingroom_assistant
         state_filter:
           - 'playing'
         show_empty: false
         card: 
           type: media-control
-          entity: media_player.bedroom_speaker
-
+          entity: media_player.livingroom_assistant
+      - type: entity-filter
+        entities:
+          - media_player.livingroom_directv
+        state_filter:
+          - 'playing'
+        show_empty: false
+        card: 
+          type: media-control
+          entity: media_player.livingroom_directv
+      - type: entity-filter
+        entities:
+          - media_player.livingroom_speaker
+        state_filter:
+          - 'playing'
+        show_empty: false
+        card: 
+          type: media-control
+          entity: media_player.livingroom_speaker
+      - type: entity-filter
+        entities:
+          - media_player.livingroom_tv
+        state_filter:
+          - 'playing'
+        show_empty: false
+        card: 
+          type: media-control
+          entity: media_player.livingroom_tv
             
             
       - type: entity-filter
