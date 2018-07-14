@@ -125,12 +125,11 @@ views:
             name: Back
           - entity: sensor.bedroom_windows
             name: Bedroom
-      - type: entity-filter
-        entities:
-          - media_player.vizio_smartcast
-        state_filter:
-          - 'on'
-        show_empty: false
+            
+##################################
+# Filter cards for Media Players #
+##################################
+            
       - type: entity-filter
         entities:
           - media_player.all_assistants
