@@ -149,9 +149,15 @@ views:
         state_filter:
           - 'playing'
         show_empty: false
-        cards:
-          - type: media-control
-            entity: media_player.rasplex
+
+      - type: entity-filter
+        entities:
+          - media_player.rasplex
+        state_filter:
+          - 'playing'
+        card: 
+          type: media-control
+          entity: media_player.rasplex
 
 ##########
 # LIGHTS #
