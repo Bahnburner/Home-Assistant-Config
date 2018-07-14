@@ -129,7 +129,7 @@ views:
         entities:
           - media_player.vizio_smartcast
         state_filter:
-          - 'playing'
+          - 'on'
         show_empty: false
       - type: entity-filter
         entities:
