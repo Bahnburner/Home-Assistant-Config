@@ -128,166 +128,61 @@ views:
       - type: entity-filter
         entities:
           - media_player.livingroom_assistant
-        state_filter:
-          - 'playing'
-        show_empty: false
-        card: 
-        - type: media-control
-          entity: media_player.livingroom_assistant
-      - type: entity-filter
-        entities:
           - media_player.kitchen_assistant
-        state_filter:
-          - 'playing'
-        show_empty: false
-        card: 
-        - type: media-control
-          entity: media_player.kitchen_assistant 
-      - type: entity-filter
-        entities:
           - media_player.bedroom_assistant
-        state_filter:
-          - 'playing'
-        show_empty: false
-        card: 
-        - type: media-control
-          entity: media_player.bedroom_assistant 
-      - type: entity-filter
-        entities:
           - media_player.livingroom_tv
-        state_filter:
-          - 'playing'
-        show_empty: false
-        card: 
-        - type: media-control
-          entity: media_player.livingroom_tv 
-      - type: entity-filter
-        entities:
           - media_player.livingroom_speaker
-        state_filter:
-          - 'playing'
-        show_empty: false
-        card: 
-        - type: media-control
-          entity: media_player.livingroom_speaker 
-      - type: entity-filter
-        entities:
           - media_player.party_mode
-        state_filter:
-          - 'playing'
-        show_empty: false
-        card: 
-        - type: media-control
-          entity: media_player.party_mode 
-      - type: entity-filter
-        entities:
           - media_player.all_speakers
-        state_filter:
-          - 'playing'
-        show_empty: false
-        card: 
-        - type: media-control
-          entity: media_player.all_speakers 
-      - type: entity-filter
-        entities:
           - media_player.dining_room_speaker
-        state_filter:
-          - 'playing'
-        show_empty: false
-        card: 
-        - type: media-control
-          entity: media_player.dining_room_speaker 
-      - type: entity-filter
-        entities:
           - media_player.bedroom_speaker
-        state_filter:
-          - 'playing'
-        show_empty: false
-        card: 
-        - type: media-control
-          entity: media_player.bedroom_speaker 
-      - type: entity-filter
-        entities:
           - media_player.livingroom_directv
-        state_filter:
-          - 'playing'
-        show_empty: false
-        card: 
-          type: media-control
-          entity: media_player.livingroom_directv 
-      - type: entity-filter
-        entities:
           - media_player.mancave_tv
-        state_filter:
-          - 'playing'
-        show_empty: false
-        card: 
-          type: media-control
-          entity: media_player.mancave_tv 
-      - type: entity-filter
-        entities:
           - media_player.mancave_directv
-        state_filter:
-          - 'playing'
-        show_empty: false
-        card: 
-          type: media-control
-          entity: media_player.mancave_directv 
-      - type: entity-filter
-        entities:
           - media_player.rasplex
-        state_filter:
-          - 'playing'
-        show_empty: false
-        card: 
-          type: media-control
-          entity: media_player.rasplex 
-      - type: entity-filter
-        entities:
           - media_player.all_assistants
-        state_filter:
-          - 'playing'
-        show_empty: false
-        card: 
-          - type: media-control
-            entity: media_player.all_assistants 
-      - type: entity-filter
-        entities:
           - media_player.garage_speaker
-        state_filter:
-          - 'playing'
-        show_empty: false
-        card: 
-          - type: media-control
-            entity: media_player.garage_speaker
-      - type: entity-filter
-        entities:
           - media_player.bathroom_assistant
-        state_filter:
-          - 'playing'
-        show_empty: false
-        card: 
-          - type: media-control
-            entity: media_player.bathroom_assistant 
-      - type: entity-filter
-        entities:
           - media_player.master_suite
-        state_filter:
-          - 'playing'
-        show_empty: false
-        card: 
-          - type: media-control
-            entity: media_player.master_suite 
-      - type: entity-filter
-        entities:
           - media_player.house_party_protocol
         state_filter:
           - 'playing'
         show_empty: false
         card: 
-          - type: media-control
-            entity: media_player.house_party_protocol
-
+        - type: media-control
+          entity: media_player.livingroom_assistant 
+        - type: media-control
+          entity: media_player.kitchen_assistant
+        - type: media-control
+          entity: media_player.bedroom_assistant
+        - type: media-control
+          entity: media_player.livingroom_tv
+        - type: media-control
+          entity: media_player.livingroom_speaker
+        - type: media-control
+          entity: media_player.party_mode 
+        - type: media-control
+          entity: media_player.all_speakers 
+        - type: media-control
+          entity: media_player.dining_room_speaker
+        - type: media-control
+          entity: media_player.bedroom_speaker
+        - type: media-control
+          entity: media_player.livingroom_directv 
+        - type: media-control
+          entity: media_player.mancave_tv 
+        - type: media-control
+          entity: media_player.mancave_directv
+        - type: media-control
+          entity: media_player.all_assistants
+        - type: media-control
+          entity: media_player.rasplex 
+        - type: media-control
+          entity: media_player.bathroom_assistant
+        - type: media-control
+          entity: media_player.master_suite
+        - type: media-control
+          entity: media_player.house_party_protocol
 
 ##########
 # LIGHTS #
