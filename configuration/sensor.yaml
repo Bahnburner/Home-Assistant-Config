@@ -188,6 +188,4 @@
   name: Retina
   scan_interval:
     minutes: 1
-  command: 'ssh retina@10.0.0.100 df -h / | grep -o .[0-9][0-9]"%"'
-  value_template: '{{value | replace(" ","") | replace("%","") | round(1)}}'
-  unit_of_measurement: "%"
+
