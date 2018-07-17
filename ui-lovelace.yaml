@@ -22,6 +22,7 @@ views:
           entities:
             - group.tristans_phone
             - group.crystals_phone
+            - light.fan
 #          filter:
 #           state: "Home"
           title: "Family"
