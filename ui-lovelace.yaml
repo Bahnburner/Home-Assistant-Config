@@ -21,10 +21,10 @@ views:
         cards:
         - type: picture-glance
           entities:
-            - entity: device_tracker.tristans_phone_wifi
+            - entity: binary_sensor.tristan
               icon: mdi:human-male
               name: "Tristan"
-            - entity: device_tracker.crystals_phone_wifi
+            - entity: binary_sensor.crystal
               icon: mdi:human-female
               name: "Crystal"
 #          filter:
