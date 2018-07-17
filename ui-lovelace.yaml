@@ -44,9 +44,9 @@ views:
             tap_action: toggle
           - type: entities
             entities:
-              - light.living_room
               - sensor.current_activity
               - input_select.harmony
+              - light.living_room
               - light.fan
               - climate.downstairs_hallway
               - sensor.protect_down
