@@ -20,8 +20,8 @@ views:
         cards:
         - type: picture-glance
           entities:
-            - device_tracker.tristans_phone_wifi
-            - device_tracker.crystals_phone_wifi
+            - group.tristans_phone
+            - group.crystals_phone
           filter:
            state: 'home'
           title: "Family"
