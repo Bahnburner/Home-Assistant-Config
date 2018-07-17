@@ -16,6 +16,12 @@ views:
     id: home
     cards:
 ####   FAMILY STACK
+      - type: picture-glance
+        entities: 
+          - group.tristans_phone
+          - group.crystals_phone
+          - light.fan'
+        image: https://smrtho.us/local/resources/images/lovelace/house_exterior_edited.jpg
       - type: vertical-stack
         cards:
         - type: picture-glance
