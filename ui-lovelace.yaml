@@ -25,11 +25,12 @@ views:
             - light.fan
 #          filter:
 #           state: "Home"
+          image: https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
           title: "Family"
-          state_image:
-            "not_home": https://smrtho.us/local/resources/images/lovelace/family_away_edited.jpg
-            "home": https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
-          entity: group.tristal
+#          state_image:
+#            "not_home": https://smrtho.us/local/resources/images/lovelace/family_away_edited.jpg
+#            "home": https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
+#          entity: group.tristal
         - type: entities
           entities:
             - lock.front_door
