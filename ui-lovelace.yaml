@@ -23,8 +23,10 @@ views:
           entities:
             - entity: binary_sensor.tristan
               icon: mdi:human-male
+              name: "Tristan"
             - entity: binary_sensor.crystal
               icon: mdi:human-female
+              name: "Crystal"
 #          filter:
 #           state: "Home"
           image: https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
