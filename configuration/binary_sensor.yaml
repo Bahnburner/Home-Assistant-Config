@@ -2,6 +2,10 @@
   sensors:
     rain:
       value_template: '{{ states.sensor.dark_sky_icon.state == "rain"}}'
+    tristan:
+      value_template: '{{ states.device_tracker.tristans_phone_wifi.state == "home" }}'   
+    crystal:
+      value_template: '{{ states.device_tracker.crystals_phone_wifi.state == "home" }}'
 - platform: mqtt
   name: Bedroom Windows
   state_topic: "gpio/input/Bedroom Windows"
