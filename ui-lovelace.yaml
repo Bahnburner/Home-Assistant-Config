@@ -21,8 +21,8 @@ views:
         cards:
         - type: picture-glance
           entities:
-            - group.tristans_phone
-            - group.crystals_phone
+            - binary_sensor.tristan
+            - binary_sensor.crystal
 #          filter:
 #           state: "Home"
           image: https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
