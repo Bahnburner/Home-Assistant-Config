@@ -50,3 +50,7 @@ binary_sensor.tristans_phone_bt:
   device_class: presence
 binary_sensor.crystals_phone_bt:
   device_class: presence
+binary_sensor.tristan:
+  icon: mdi:human-male
+binary_sensor.crystal:
+  icon: mdi:human-female
