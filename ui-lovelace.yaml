@@ -21,8 +21,10 @@ views:
         cards:
         - type: picture-glance
           entities:
-            - binary_sensor.tristan
-            - binary_sensor.crystal
+            - entity: binary_sensor.tristan
+              icon: mdi:human-male
+            - entity: binary_sensor.crystal
+              icon: mdi:human-female
 #          filter:
 #           state: "Home"
           image: https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
