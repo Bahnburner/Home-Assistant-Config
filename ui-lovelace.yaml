@@ -22,8 +22,8 @@ views:
           entities:
             - group.tristans_phone
             - group.crystals_phone
-          filter:
-           state: "Home"
+#          filter:
+#           state: "Home"
           title: "Family"
           state_image:
             "not_home": https://smrtho.us/local/resources/images/lovelace/family_away_edited.jpg
