@@ -15,10 +15,10 @@ views:
     name: Home
     id: home
     cards:
+####   FAMILY STACK
       - type: vertical-stack
         cards:
         - type: picture-glance
-#          image: https://smrtho.us/local/resources/images/lovelace/family_edited.jpg
           entities:
             - device_tracker.tristans_phone_wifi
             - device_tracker.crystals_phone_wifi
@@ -34,6 +34,7 @@ views:
             - lock.front_door
             - lock.back_door
             - cover.garage_door_opener
+#### LIVINGROOM STACK
       - type: vertical-stack
         cards:
           - type: picture-entity
@@ -43,12 +44,13 @@ views:
             tap_action: toggle
           - type: entities
             entities:
+              - light.living_room
               - sensor.current_activity
               - input_select.harmony
               - light.fan
-              - light.bias_light
               - climate.downstairs_hallway
               - sensor.protect_down
+#### BEDROOM STACK
       - type: vertical-stack
         cards:
           - type: picture-entity
@@ -61,6 +63,7 @@ views:
               - light.bedroom_floor_lamp
               - light.crystals_nightstand
               - light.tristans_nightstand     
+#### KITCHEN STACK
       - type: vertical-stack
         cards:        
           - type: picture-entity
@@ -75,6 +78,7 @@ views:
               - light.pantry
               - light.cabinet_lights
               - sensor.protect_kitchen
+#### EXTERIOR STACK
       - type: vertical-stack
         cards:
           - type: picture-entity
@@ -88,6 +92,7 @@ views:
                 name: Entryway Light
               - light.front_floods
               - light.rear_floods
+#### OFFICE STACK
       - type: vertical-stack
         cards:        
           - type: picture-entity
