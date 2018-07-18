@@ -27,14 +27,12 @@ views:
             - entity: binary_sensor.crystal
               icon: mdi:human-female
               name: "Crystal"
-#          filter:
-#           state: "Home"
           image: /local/resources/images/lovelace/family_edited.jpg
           title: "Family"
-#          state_image:
-#            "not_home": /local/resources/images/lovelace/family_away_edited.jpg
-#            "home": /local/resources/images/lovelace/family_edited.jpg
-#          entity: group.tristal
+          state_image:
+            "not_home": /local/resources/images/lovelace/family_away_edited.jpg
+            "home": /local/resources/images/lovelace/family_edited.jpg
+          entity: group.tristal
         - type: entities
           entities:
             - lock.front_door
