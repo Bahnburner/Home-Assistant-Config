@@ -128,10 +128,10 @@ views:
             name: Back
           - entity: sensor.garage_door
             name: Garage
-          - entity: sensor.front_windows
-            name: Front
-          - entity: sensor.back_windows
-            name: Back
+          - entity: sensor.downstairs_windows
+            name: Downstairs
+#          - entity: sensor.back_windows
+#            name: Back
           - entity: sensor.bedroom_windows
             name: Bedroom
             
