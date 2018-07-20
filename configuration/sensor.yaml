@@ -37,7 +37,12 @@
       unit_of_measurement: '°F'
     current_activity:
       friendly_name: 'Current Activity'
-      value_template: '{{ states.remote.livingroom.attributes.current_activity }}'
+      value_template: >
+        {% if states.remote.livingroom.attributes.current_activity == null%}
+          'Unknown'
+        {% else %}
+          {{states.remote.livingroom.attributes.current_activity}}
+        {% endif %}
     brightness_pantry:
       value_template: '{{ states.light.pantry.attributes.brightness }}'
     brightness_lr:
