@@ -439,7 +439,7 @@ views:
               - group.simulate_presence
               - input_boolean.disable_all_automations
           - type: iframe
-            url: https://embed.windy.com/embed2.html
+            url: https://embed.windy.com/embed2.html?lat=35.127&lon=-89.843&zoom=5&level=surface&overlay=radar&menu=&message=true&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=35.127&detailLon=-89.843&metricWind=mph&metricTemp=%C2%B0F&radarRange=-1
             aspect_ratio: 100%
 #          - type: picture
 #            image: https://radblast.wunderground.com/cgi-bin/radar/WUNIDS_map?station=NQA&brand=wui&num=6&delay=15&type=N0R&frame=0&scale=1.000&noclutter=1&showstorms=0&mapx=400&mapy=240&centerx=400&centery=240&transx=0&transy=0&showlabels=1&severe=0&rainsnow=0&lightning=0&smooth=0&rand=25525021&lat=0&lon=0&label=you
