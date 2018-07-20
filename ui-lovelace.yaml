@@ -51,8 +51,7 @@ views:
               - sensor.current_activity
               - input_select.harmony
               - light.living_room
-              - entity: light.fan
-                secondary_info: brightness
+              - light.fan
               - climate.downstairs_hallway
               - sensor.protect_down
 #### BEDROOM STACK
