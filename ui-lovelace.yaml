@@ -52,7 +52,7 @@ views:
               - input_select.harmony
               - light.living_room
               - entity: light.fan
-                secondary_info: brightness_pct
+                secondary_info: brightness
               - climate.downstairs_hallway
               - sensor.protect_down
 #### BEDROOM STACK
