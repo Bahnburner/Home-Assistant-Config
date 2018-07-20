@@ -80,6 +80,10 @@
       friendly_name: 'Bedroom Windows'
       value_template: '{% if is_state("binary_sensor.bedroom_windows", "off") %}Closed{% else %}Open{% endif %}'
       icon_template: '{% if is_state("binary_sensor.bedroom_windows", "off") %}mdi:window-closed{% else %}mdi:window-open{% endif %}'
+    downstairs_windows:
+      friendly_name: 'Back Windows'
+      value_template: '{% if states.binary_sensor.back_windows.state == "off" and states.binary_sensor.front_windows.state == "off" %}Closed{% else %}Open{% endif %}'
+      icon_template: '{% if states.binary_sensor.back_windows.state == "off" and states.binary_sensor.front_windows.state == "off" %}}mdi:window-closed{% else %}mdi:window-open{% endif %}'
     huebridge:
       value_template: '{% if is_state("device_tracker.huebridge", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Hue Bridge'
