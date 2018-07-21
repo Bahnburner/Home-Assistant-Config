@@ -353,6 +353,7 @@ views:
         image: /local/resources/images/lovelace/movie_mode.jpg
         entity: input_boolean.movie_mode
         name: "Movie Mode"
+        tap_action: toggle
       - type: media-control 
         entity: media_player.all_assistants
       - type: media-control 
