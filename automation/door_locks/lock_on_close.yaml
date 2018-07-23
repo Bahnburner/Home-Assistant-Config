@@ -10,7 +10,9 @@
     entity_id: input_boolean.front_door_open
     state: 'on'
   action:
-    - service: notify.google_assistant
+    - service: tts.google_say
+      entity_id:
+        - media_player.all_assistants
       data:
         message: 'Locking the front door.'
     - service: lock.lock
@@ -28,7 +30,9 @@
     entity_id: input_boolean.back_door_open
     state: 'on'
   action:
-    - service: notify.google_assistant
+    - service: tts.google_say
+      entity_id:
+        - media_player.all_assistants
       data:
         message: 'Locking the back door.'
     - service: lock.lock
