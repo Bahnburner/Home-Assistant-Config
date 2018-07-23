@@ -44,8 +44,10 @@ bedtime_lights_livingroom:
       
 bedtime_lights_table:
   sequence:
-    - service.turn_on
-      entity_id: light.table_lamp
+    - service: light.turn_on
+      entity_id: 
+        - light.floor_lamp_left
+        - light.floor_lamp_right
       data:
         color_temp: 500
         transition: 1800
