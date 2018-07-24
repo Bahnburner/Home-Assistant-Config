@@ -103,6 +103,7 @@ views:
             name: "Office Lights"
             image: /local/resources/images/lovelace/office_edited.jpg
             entity: light.desk_lamp
+            tap_action: toggle
           - type: entities
             entities:
               - climate.upstairs_hallway
