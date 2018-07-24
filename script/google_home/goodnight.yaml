@@ -64,6 +64,8 @@ goodnight:
       data:
         brightness: 100
         transition: 15
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.harmony_lighting_control
     - service_template: >
         {% if states.light.pantry.state == 'on' and states.sensor.time.state|float <= 1.50 %}
           light.turn_on
