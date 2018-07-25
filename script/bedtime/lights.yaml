@@ -35,12 +35,17 @@ bedtime_lights_livingroom:
       data: 
         color_temp: 500
         transition: 1800
-    - service_template: >
-        {% if light.table_lamp == 'on' %}
-          script.bedtime_lights_table
-        {% else %}
-          script.deadend
-        {% endif %}
+    - service: light.turn_on
+      entity_id: light.table_lamp
+      data:
+        color_temp: 500
+        transition: 1800
+#    - service_template: >
+#        {% if light.table_lamp == 'on' %}
+#          script.bedtime_lights_table
+#        {% else %}
+#          script.deadend
+#        {% endif %}
       
 bedtime_lights_table:
   sequence:
