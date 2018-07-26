@@ -52,7 +52,8 @@ views:
               - input_select.harmony
               - light.living_room
               - light.fan
-              - climate.downstairs_hallway
+              - entity: climate.downstairs_hallway
+                secondary_info: current_temperature
               - sensor.protect_down
 #### BEDROOM STACK
       - type: vertical-stack
