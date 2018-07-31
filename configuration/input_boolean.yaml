@@ -27,3 +27,6 @@
     initial: off
   harmony_lighting_control:
     initial: on
+  simulate_presence:
+    initial: off
+    icon: mdi: account-multiple
