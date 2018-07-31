@@ -16,3 +16,6 @@ input_boolean.disable_all_automations:
 input_boolean.movie_mode:
   friendly_name: 'Movie Mode'
   icon: mdi:theater
+input_boolean.simulate_presence:
+  friendly_name: 'Simulate Presence'
+  icon: mdi:account-multiple
