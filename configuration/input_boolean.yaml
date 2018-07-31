@@ -29,4 +29,4 @@
     initial: on
   simulate_presence:
     initial: off
-    icon: mdi: account-multiple
+    icon: mdi:account-multiple
