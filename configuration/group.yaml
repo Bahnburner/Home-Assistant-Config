@@ -175,7 +175,7 @@ override:
     - input_boolean.disable_away_mode
     - input_boolean.disable_alarm
     - switch.vacation_mode
-    - group.simulate_presence
+    - input_boolean.simulate_presence
     - input_boolean.disable_all_automations
 vacation_mode:
   - automation.away_mode__puppies
