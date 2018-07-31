@@ -1,3 +1,17 @@
+- alias: Simulate Presence Trigger
+  hide_entity: true
+  trigger:
+    platform: state
+    entity: input_boolean.simulate_presence
+  action:
+    service_template: >
+      {% if input_boolean.simulate_presence == 'on' %}
+        homeassistant.turn_on
+      {% else %}
+        homeassistant.turn_off
+      {% endif %}
+    entity_id: group.simulate_presence
+
 - alias: Simulate Presence 1
   hide_entity: True
   initial_state: 'off'
