@@ -2,7 +2,7 @@
   hide_entity: true
   trigger:
     platform: state
-    entity: input_boolean.simulate_presence
+    entity_id: input_boolean.simulate_presence
   action:
     service_template: >
       {% if input_boolean.simulate_presence == 'on' %}
