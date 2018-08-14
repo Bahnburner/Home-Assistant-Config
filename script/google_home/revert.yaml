@@ -62,8 +62,13 @@ revert:
           script.exterior_lights_on
         {% else %}
           script.exterior_lights_off
-        {% endif %}      
-        
+        {% endif %}
+    - service_template: >
+        {% if (states.sensor.time.state | round(2)) < 12.00 and states.sun.sun.attributes.elevation < 8 %}
+          script.patio_lights
+        {% else %}
+          script.deadend
+        {% endif %}
   #Fix the cabinet lights
     - service_template: >
         {% if now().weekday() == 5 or now().weekday() == 6%}
