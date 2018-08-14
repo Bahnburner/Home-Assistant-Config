@@ -77,6 +77,9 @@ light.rear_floods:
 light.bias_light:
   friendly_name: "Bias Light"
   entity_picture: /local/resources/images/devices/lightify.png
+light.patio_lights:
+  entity_picture: /local/resources/images/devices/smartthings.png
+  icon: mdi:ceiling-light
 light.exterior_front:
   hidden: true
 light.kitchen:
