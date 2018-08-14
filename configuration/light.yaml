@@ -35,3 +35,10 @@
   payload_on: "on"
   payload_off: "off"
   retain: true
+- platform: mqtt
+  name: 'Patio Lights'
+  state_topic: "smartthings/Patio Lights/switch"
+  command_topic: "smartthings/Patio Lights/switch"
+  payload_on: "on"
+  payload_off: "off"
+  retain: true
