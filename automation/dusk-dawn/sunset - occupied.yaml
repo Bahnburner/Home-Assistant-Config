@@ -35,7 +35,7 @@
         brightness: 254
         transition: 600
     - service: light.turn_on
-      entity_id: light.pantry_lights
+      entity_id: light.patio_lights
     - condition: state
       entity_id: group.tristal
       state: 'home'
