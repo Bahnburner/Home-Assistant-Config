@@ -352,7 +352,7 @@ views:
     id: media
     cards:
       - type: picture-entity
-        image: /local/resources/images/lovelace/movie_mode.jpg
+        image: /local/resources/images/lovelace/movie_mode(1).jpg
         entity: input_boolean.movie_mode
         name: "Movie Mode"
         tap_action: toggle
