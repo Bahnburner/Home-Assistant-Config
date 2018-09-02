@@ -107,6 +107,7 @@ views:
             tap_action: toggle
           - type: entities
             entities:
+              - light.desk_lamp
               - climate.upstairs_hallway
               - sensor.protect_up
       - type: entities
