@@ -117,6 +117,7 @@ views:
           - type: entities
             entities:
               - entity: light.desk_lamp
+                name: Lights
                 type: custom:slider-entity-row
                 hide_toggle: true
               - climate.upstairs_hallway
