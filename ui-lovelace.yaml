@@ -111,7 +111,9 @@ views:
             tap_action: toggle
           - type: entities
             entities:
-              - light.desk_lamp
+              - entity: light.desk_lamp
+                type: custom:slider-entity-row
+                hide_toggle: true
               - climate.upstairs_hallway
               - sensor.protect_up
       - type: entities
