@@ -53,6 +53,7 @@ views:
               - sensor.current_activity
               - input_select.harmony
               - entity: light.living_room
+                name: Lights
                 type: custom:slider-entity-row
                 hide_toggle: true
               - light.fan
@@ -68,6 +69,10 @@ views:
             tap_action: toggle
           - type: entities
             entities: 
+              - entity: light.master_bedroom
+                name: Lights
+                type: custom:slider-entity_row
+                hide_toggle: true
               - light.bedroom_floor_lamp
               - light.crystals_nightstand
               - light.tristans_nightstand     
