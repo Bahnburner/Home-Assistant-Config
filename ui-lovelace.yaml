@@ -3,6 +3,8 @@ resources:
     type: js
   - url: /local/resources/cards/bignumber-card.js?v=1
     type: js
+  - url: /local/resources/cards/slider-entity-card.js?v=1
+    type: js
 
 title: Hidden Ridge
 views:
@@ -50,7 +52,9 @@ views:
             entities:
               - sensor.current_activity
               - input_select.harmony
-              - light.living_room
+              - entity: light.living_room
+                type: custom:slider-entity-row
+                hide_toggle: true
               - light.fan
               - climate.downstairs_hallway
               - sensor.protect_down
