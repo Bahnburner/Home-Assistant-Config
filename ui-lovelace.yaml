@@ -71,7 +71,7 @@ views:
             entities: 
               - entity: light.master_bedroom
                 name: Lights
-                type: custom:slider-entity_row
+                type: custom:slider-entity-row
                 hide_toggle: true
               - light.bedroom_floor_lamp
               - light.crystals_nightstand
