@@ -46,7 +46,7 @@ views:
           - type: picture-entity
             image: /local/resources/images/lovelace/livingroom_edited.jpg
             entity: light.living_room
-            name: "Livingroom Lights"
+            name: "Livingroom"
             tap_action: toggle
           - type: entities
             entities:
@@ -65,7 +65,7 @@ views:
           - type: picture-entity
             image: /local/resources/images/lovelace/master_bedroom_edited.jpg
             entity: light.master_bedroom
-            name: "Master Bedroom Lights"
+            name: "Master Bedroom"
             tap_action: toggle
           - type: entities
             entities: 
@@ -82,7 +82,7 @@ views:
           - type: picture-entity
             image: /local/resources/images/lovelace/kitchen_edited.jpg
             entity: group.kitchen_lighting
-            name: "Kitchen Lights"
+            name: "Kitchen"
           - type: entities
             entities:
               - light.overhead_light
@@ -97,7 +97,7 @@ views:
           - type: picture-entity
             image: /local/resources/images/lovelace/house_exterior_edited.jpg
             entity: group.exterior
-            name: "Exterior Lights"
+            name: "Exterior"
             tap_action: toggle
           - type: entities
             entities: 
@@ -110,7 +110,7 @@ views:
       - type: vertical-stack
         cards:        
           - type: picture-entity
-            name: "Office Lights"
+            name: "Office"
             image: /local/resources/images/lovelace/office_edited.jpg
             entity: light.desk_lamp
             tap_action: toggle
