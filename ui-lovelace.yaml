@@ -136,35 +136,31 @@ views:
       - type: weather-forecast
         name: Weather
         entity: weather.yweather
-      - type: vertical-stack
-        cards: 
-          - type: glance
-            title: Alarm Zones
-            tap_action: toggle
-            entities:
-              - entity: sensor.front_door
-                name: Front
-              - entity: sensor.back_door
-                name: Back
-              - entity: sensor.garage_door
-                name: Garage
-              - entity: sensor.downstairs_windows
-                name: Downstairs
-#          - entity: sensor.back_windows
-#            name: Back
-              - entity: sensor.bedroom_windows
-                name: Bedroom
-          - type: horizontal-stack
-            cards:
-              - type: glance
-                entities:
-                  - entity: sensor.hvac_leak_sensor
-                    name: HVAC
-              - type: glance
-                entities: 
-                  - entity: sensor.water_heater_leak_sensor
-                    name: Water Heater
-                
+      - type: glance
+        title: Alarm Zones
+        tap_action: toggle
+        entities:
+          - entity: sensor.front_door
+            name: Front
+          - entity: sensor.front_windows
+            name: Front
+          - entity: sensor.bedroom_windows
+            name: Bedroom
+          - entity: sensor.back_door
+            name: Back
+          - entity: sensor.back_windows
+            name: Back
+          - entity: sensor.garage_door
+            name: Garage
+          - entity: sensor.hvac_leak_sensor
+            name: HVAC
+          - entity: sensor.big_attic_temp
+            name: N Attic
+          - entity: sensor.small_attic_temp
+            name: S Attic
+          - entity: sensor.water_heater_leak_sensor
+            name: Water Heater
+
 ##################################
 # Filter cards for Media Players #
 ##################################
