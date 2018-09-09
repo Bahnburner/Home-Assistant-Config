@@ -1,0 +1,43 @@
+- alias: Alarm triggered
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id:
+        - binary_sensor.hvac_leak_sensor
+        - binary_sensor.water_heater_leak_sensor
+      from: 'off'
+      to: 'on'
+  action:
+    - service: notify.chrome_notifications
+      data:
+        data:
+          tag: 'alarm-notification'
+          target:
+            - Tristans Phone
+            - Tristans Work Laptop
+            - Crystals Phone
+            - Tristans Laptop  
+          title: "Home Assistant Alert"
+          url: "https://smrtho.us"  
+      data_template:
+        message: >
+          {% if  states.binary_sensor.hvac_leak_sensor.state == 'on' %}
+            The HVAC unit is leaking.
+          {% elif states.binary_sensor.water_heater_leak_sensor.state == 'on' %}
+            The water heater is leaking.
+          {% else %}
+            Error.
+          {% endif %}
+    - service: notify.facebook
+      data_template:
+        message: >
+          {% if  states.binary_sensor.hvac_leak_sensor.state == 'on' %}
+            The HVAC unit is leaking.
+          {% elif states.binary_sensor.water_heater_leak_sensor.state == 'on' %}
+          The water heater is leaking.
+          {% else %}
+            Error.
+          {% endif %}
+        target:
+          - '+19019219988'
+          - '+19016524510'
