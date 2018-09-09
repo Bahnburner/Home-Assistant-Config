@@ -56,7 +56,10 @@ views:
                 name: Lights
                 type: custom:slider-entity-row
                 hide_toggle: true
-              - light.fan
+              - entity: light.fan
+                name: Fan
+                type: custom:slider-entity-row
+                hide_toggle: true
               - climate.downstairs_hallway
               - sensor.protect_down
 #### BEDROOM STACK
