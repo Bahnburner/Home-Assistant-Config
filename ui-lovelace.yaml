@@ -146,17 +146,17 @@ views:
             name: Front
           - entity: sensor.bedroom_windows
             name: Bedroom
-          - entity: sensor.back_door
-            name: Back
           - entity: sensor.back_windows
             name: Back
-          - entity: sensor.garage_door
-            name: Garage
+          - entity: sensor.back_door
+            name: Back
           - entity: sensor.hvac_leak_sensor
             name: HVAC
           - entity: sensor.big_attic_temp
             name: N Attic
             icon: mdi:thermometer
+          - entity: sensor.garage_door
+            name: Garage
           - entity: sensor.small_attic_temp
             name: S Attic
             icon: mdi:thermometer
