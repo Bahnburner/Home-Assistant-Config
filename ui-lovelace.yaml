@@ -136,7 +136,7 @@ views:
       - type: weather-forecast
         name: Weather
         entity: weather.yweather
-      - type: vertical_stack
+      - type: vertical-stack
         cards: 
           - type: glance
             title: Alarm Zones
