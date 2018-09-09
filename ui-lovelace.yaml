@@ -156,8 +156,10 @@ views:
             name: HVAC
           - entity: sensor.big_attic_temp
             name: N Attic
+            icon: mdi:thermometer
           - entity: sensor.small_attic_temp
             name: S Attic
+            icon: mdi:thermometer
           - entity: sensor.water_heater_leak_sensor
             name: Water Heater
 
