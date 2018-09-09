@@ -34,12 +34,12 @@
   payload_off: "CLOSED"
 - platform: mqtt
   name: "Water Heater Leak Sensor"
-  state_topic: "smartthings/Water Heater Leak Sensor/water
+  state_topic: "smartthings/Water Heater Leak Sensor/water"
   payload_on: "wet"
   payload_off: "dry"
 - platform: mqtt
   name: "HVAC Leak Sensor"
-  state_topic: "smartthings/HVAC Leak Sensor/water
+  state_topic: "smartthings/HVAC Leak Sensor/water"
   payload_on: "wet"
   payload_off: "dry"
 - platform: template
