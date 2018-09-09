@@ -166,9 +166,12 @@
 - platform: mqtt
   state_topic: smartthings/Water Heater Leak Sensor/temperature
   name: "Small Attic Temp"
+  unit_of_measurement: '°F'
+
 - platform: mqtt
   state_topic: smartthings/HVAC Leak Sensor/temperature
   name: "Big Attic Temp"
+  unit_of_measurement: '°F'
 - platform: dnsip
   scan_interval: 300
 - platform: time_date
