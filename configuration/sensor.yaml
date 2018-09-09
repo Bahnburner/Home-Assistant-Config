@@ -158,7 +158,7 @@
   name: "Rasplex Status"
   value_template: '{{ value_json.body }}'
 - platform: mqtt
-  state_topic: smartthings/Water Heather Leak Sensor/temperature
+  state_topic: smartthings/Water Heater Leak Sensor/temperature
   name: "Small Attic Temp"
 - platform: mqtt
   state_topic: smartthings/HVAC Leak Sensor/temperature
