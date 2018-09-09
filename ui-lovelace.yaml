@@ -161,7 +161,7 @@ views:
             name: S Attic
             icon: mdi:thermometer
           - entity: sensor.water_heater_leak_sensor
-            name: Water Heater
+            name: WH
 
 ##################################
 # Filter cards for Media Players #
