@@ -156,12 +156,14 @@ views:
                 name: Bedroom
           - type: horizontal-stack
             cards:
-              - type: entities
-                title: 'HVAC'
-                entity: sensor.hvac_leak_sensor
-              - type: entities
-                title: 'Water Heater'
-                entity: sensor.water_heater_leak_sensor
+              - type: glance
+                entities:
+                  - entity: sensor.hvac_leak_sensor
+                    name: HVAC
+              - type: glance
+                entities: 
+                  - entity: sensor.water_heater_leak_sensor
+                    name: Water Heater
                 
 ##################################
 # Filter cards for Media Players #
