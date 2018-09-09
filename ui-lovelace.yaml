@@ -154,7 +154,7 @@ views:
 #            name: Back
               - entity: sensor.bedroom_windows
                 name: Bedroom
-         - type: horizontal-stack
+          - type: horizontal-stack
             cards:
               - type: entities
                 title: 'HVAC'
