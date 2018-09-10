@@ -30,3 +30,13 @@
         - media_player.bathroom_assistant
       data: 
         volume_level: 0.6
+    - condition: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation }}'
+      below: 8
+    - condition: numeric_state
+      entity_id: sensor.time
+      above: 12
+    - service: light.turn_on
+      entity_id: light.patio_lights
+      
