@@ -89,7 +89,9 @@ views:
           - type: entities
             entities:
               - light.overhead_light
-              - light.recessed_lights
+              - entity: light.recessed_lights
+                type: custom:slider-entity-row
+                hide_toggle: true
               - light.chandelier
               - light.pantry
               - light.cabinet_lights
