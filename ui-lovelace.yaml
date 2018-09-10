@@ -89,7 +89,7 @@ views:
           - type: entities
             entities:
               - light.overhead_light
-              - entity: light.recessed_lights
+              - light.recessed_lights
               - light.chandelier
               - light.pantry
               - light.cabinet_lights
