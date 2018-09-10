@@ -55,8 +55,7 @@ views:
               - entity: light.living_room
                 name: Lights
                 type: custom:slider-entity-row
-                hide_toggle: true
-                hide_when_off: true
+                break_slider: true
               - entity: light.fan
                 name: Fan
                 type: custom:slider-entity-row
