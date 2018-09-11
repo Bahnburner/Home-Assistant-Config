@@ -43,7 +43,8 @@
   trigger: 
     - platform: state
       entity_id: input_boolean.harmony_lighting_control
-      state: 'on'
+      from: 'off'
+      to: 'on'
 #    - platform: state
 #      entity_id: sensor.current_activity
 #      to: 'Watch Plex'
