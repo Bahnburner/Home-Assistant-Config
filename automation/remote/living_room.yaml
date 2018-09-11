@@ -41,6 +41,9 @@
 - alias: Harmony Light Control - Start
   hide_entity: true
   trigger: 
+    - platform: state
+      entity_id: input_boolean.harmony_lighting_control
+      state: 'on'
 #    - platform: state
 #      entity_id: sensor.current_activity
 #      to: 'Watch Plex'
@@ -176,6 +179,21 @@
             300
           {% else %}
           {% endif %}
+
+- alias: Harmony Lighting Control Off
+  hide_entity: true
+  trigger: 
+    - platform: state
+      entity_id: input_boolean.harmony_lighting_control
+      from: 'on'
+      to: 'off'
+  action: 
+    service: lights.turn_on
+    entity_id: lights.living_room
+    data_template:
+      brightness: 
+        '{{ states.input_number.harmony_dim.state | int }}'
+    
 
 - alias: Set Saved Brightness
   hide_entity: True
