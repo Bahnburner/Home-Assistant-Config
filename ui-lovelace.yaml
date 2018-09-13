@@ -5,6 +5,8 @@ resources:
     type: js
   - url: /local/resources/cards/slider-entity-row.js?v=1
     type: js
+  - url: /local/resources/cards/mini-media-player.js?v=1
+    type: js
 
 title: Hidden Ridge
 views:
@@ -246,7 +248,7 @@ views:
           - 'playing'
         show_empty: false
         card: 
-          type: media-control
+          type: mini-media-player
           entity: media_player.livingroom_assistant
       - type: entity-filter
         entities:
