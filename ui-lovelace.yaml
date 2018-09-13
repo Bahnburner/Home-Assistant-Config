@@ -248,7 +248,7 @@ views:
           - 'playing'
         show_empty: false
         card: 
-          type: mini-media-player
+          type: media-control
           entity: media_player.livingroom_assistant
       - type: entity-filter
         entities:
@@ -402,7 +402,7 @@ views:
         entity: media_player.house_party_protocol
       - type: media-control 
         entity: media_player.kitchen_assistant
-      - type: media-control
+      - type: mini-media-player
         entity: media_player.livingroom_assistant
       - type: media-control 
         entity: media_player.livingroom_directv
