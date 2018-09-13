@@ -402,7 +402,7 @@ views:
         entity: media_player.house_party_protocol
       - type: media-control 
         entity: media_player.kitchen_assistant
-      - type: media_control
+      - type: media-control
         entity: media_player.livingroom_assistant
       - type: media-control 
         entity: media_player.livingroom_directv
