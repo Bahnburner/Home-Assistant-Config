@@ -88,6 +88,7 @@ views:
             image: /local/resources/images/lovelace/kitchen_edited.jpg
             entity: group.kitchen_lighting
             name: "Kitchen"
+            tap_action: toggle
           - type: entities
             entities:
               - light.overhead_light
