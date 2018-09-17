@@ -11,3 +11,14 @@ volume_down:
       entity_id: media_player.vizio_smartcast
     - service: media_player.volume_down
       entity_id: media_player.vizio_smartcast
+
+
+cover_volume_up:
+  sequence:
+    - service: media_player.volume_up
+      entity_id: media_player.vizio_smartcast
+
+cover_volume_down:
+  sequence:
+    - service: media_player.volume_down
+      entity_id: media_player.vizio_smartcast
