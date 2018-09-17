@@ -6,3 +6,5 @@ cover.myq:
   hidden: true
 remote.livingroom:
   hidden: true
+cover.volume:
+  entity_picture: /local/resources/images/devices/lg.png
