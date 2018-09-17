@@ -12,4 +12,4 @@
       close_cover:
         service: script.cover_volume_down
       stop_cover:
-        service: script.cover_mute
+        service: script.mute
