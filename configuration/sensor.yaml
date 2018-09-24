@@ -179,27 +179,27 @@
   display_options:
     - 'time'
 - platform: rest
-  resource: http://10.0.0.109:61208/api/2/quicklook/cpu
+  resource: http://10.0.0.109:61208/api/3/quicklook/cpu
   name: "CPU Usage"
   value_template: '{{ value_json.cpu }}'
   unit_of_measurement: '%'
 - platform: rest
-  resource: http://10.0.0.109:61208/api/2/mem/percent
+  resource: http://10.0.0.109:61208/api/3/mem/percent
   name: "Memory Usage"
   value_template: '{{ value_json.percent }}'
   unit_of_measurement: '%'
 - platform: rest
-  resource: http://10.0.0.109:61208/api/2/fs
+  resource: http://10.0.0.109:61208/api/3/fs
   name: Titan
   value_template: '{{ value_json[0].percent| round(1) }}'
   unit_of_measurement: '%'
 - platform: rest
-  resource: http://10.0.0.109:61208/api/2/fs
+  resource: http://10.0.0.109:61208/api/3/fs
   name: Storage
   value_template: '{{ value_json[1].percent| round(1) }}'
   unit_of_measurement: '%'
 - platform: rest
-  resource: http://10.0.0.109:61208/api/2/fs
+  resource: http://10.0.0.109:61208/api/3/fs
   name: Plex
   value_template: '{{ value_json[2].percent| round(1) }}'
   unit_of_measurement: '%'
