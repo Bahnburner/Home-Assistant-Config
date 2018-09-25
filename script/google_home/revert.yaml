@@ -64,7 +64,7 @@ revert:
           script.exterior_lights_off
         {% endif %}
     - service_template: >
-        {% if (states.sensor.time.state | round(2)) < 12.00 and states.sun.sun.attributes.elevation < 8 %}
+        {% if (states.sensor.time.state | round(2)) > 12.00 and states.sun.sun.attributes.elevation < 8 %}
           script.patio_lights
         {% else %}
           script.deadend
