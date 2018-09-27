@@ -6,11 +6,22 @@
     value_template: '{{ state.attributes.elevation }}'
     below: 8
   action:
-    service: light.turn_on
-    entity_id:  
-      - light.front_door
-      - light.front_floods
-      - light.rear_floods
-    data:
-      brightness: 255
-      transition: 300      
+    - service: light.turn_on
+      entity_id:
+        - light.front_floods
+        - light.rear_floods
+      data:
+        brightness: 255
+    - service: light.turn_on
+      entity_id:  
+        - light.front_door      
+      data:
+        brightness: 255
+        transition: 300
+    - delay:
+        seconds: 300
+    - service: light.turn_on
+      entity_id:  
+        - light.front_door      
+      data:
+        brightness: 255
