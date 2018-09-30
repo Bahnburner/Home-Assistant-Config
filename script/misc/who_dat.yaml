@@ -1,19 +1,24 @@
 who_dat:
   sequence:
-    - service: media_player.volume_mute
-      entity_id: media_player.vizio_smartcast
-      data: 
-        is_volume_muted: true
+#    - service: media_player.volume_mute
+#      entity_id: media_player.vizio_smartcast
+#      data: 
+#        is_volume_muted: true
     - service: media_player.play_media
-      entity_id: media_player.party_mode
+      entity_id: media_player.livingroom_speaker
       data:
         media_content_id: "http://smrtho.us/storage/Halftime.mp3"
         media_content_type: "audio/mp3"  
     - delay: 
-        seconds: 60
-    - service: media_player.media_stop
-      entity_id: media_player.party_mode
-    - service: media_player.volume_mute
-      entity_id: media_player.vizio_smartcast
-      data: 
-        is_volume_muted: true
+        seconds: 63
+#    - service: media_player.media_stop
+#      entity_id: media_player.livingroom_speaker
+    - service: remote.send_command
+      entity_id: remote.livingroom
+      data:
+        device: 52384627
+        command: 'InputOptical'      
+#    - service: media_player.volume_mute
+#      entity_id: media_player.vizio_smartcast
+#      data: 
+#        is_volume_muted: true
