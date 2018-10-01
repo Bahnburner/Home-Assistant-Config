@@ -183,11 +183,13 @@
   name: "CPU Usage"
   value_template: '{{ value_json.cpu }}'
   unit_of_measurement: '%'
+  scan_interval: 3
 - platform: rest
   resource: http://10.0.0.109:61209/api/3/mem/percent
   name: "Memory Usage"
   value_template: '{{ value_json.percent }}'
   unit_of_measurement: '%'
+  scan_interval: 3
 - platform: rest
   resource: http://10.0.0.109:61209/api/3/fs
   name: Titan
