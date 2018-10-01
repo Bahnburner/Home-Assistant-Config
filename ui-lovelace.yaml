@@ -491,18 +491,19 @@ views:
                 entity: sensor.cpu_usage
                 min: 0
                 max: 100
-                scale: '40px'
+                scale: '45px'
               - type: custom:gauge-card
                 title: 'Memory'
                 entity: sensor.memory_usage
                 min: 0
                 max: 100
-                scale: '40px'
+                scale: '45px'
           - type: horizontal-stack
             cards:
               - type: custom:gauge-card
                 title: 'Plex (Z:)'
                 entity: sensor.plex
+                scale: '45px'
                 min: 0
                 max: 100
 #                severity:
@@ -512,6 +513,7 @@ views:
               - type: custom:gauge-card
                 title: 'Storage (Y:)'
                 entity: sensor.storage
+                scale: '45px'
                 min: 0
                 max: 100
 #                severity:
