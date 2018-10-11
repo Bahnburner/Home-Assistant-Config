@@ -28,6 +28,12 @@ good_morning:
           {% endif %}
     - service: lock.unlock
       entity_id: lock.back_door
+    - service_template: >
+        {% if (states.sensor.time.state | round(2)) > 12.00 and states.sun.sun.attributes.elevation < 8 %}
+          script.patio_lights
+        {% else %}
+          script.deadend
+        {% endif %}
     - service: script.fan_on
     - service: remote.turn_on
       entity_id: remote.livingroom
