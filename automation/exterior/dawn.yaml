@@ -14,7 +14,10 @@
     - service: light.turn_off
       entity_id: 
         - light.front_door
-        - light.front_floods
-        - light.rear_floods
       data:
         transition: 180
+    - service: light.turn_off
+      entity_id: 
+        - light.front_floods
+        - light.rear_floods
+        - light.patio_lights
