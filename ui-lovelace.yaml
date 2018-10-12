@@ -485,6 +485,14 @@ views:
               - sensor.cpu_usage
               - sensor.memory_usage
           - type: horizontal-stack
+            cards: 
+              - type: sensor
+                entity: sensor.rtac88u_kbytesec_received
+                name: Downstream Bandwidth
+              - type: sensor
+                entity: sensor.rtac88u_kbytesec_sent
+                name: Upstream Bandwidth
+          - type: horizontal-stack
             cards:
               - type: custom:gauge-card
                 title: 'CPU'
