@@ -87,7 +87,6 @@
   trigger:
     - platform: state
       entity_id: cover.garage_door_opener
-      from: 'closed'
       to: 'open'
   condition:
     condition: state
