@@ -47,5 +47,6 @@ sensor: !include ./configuration/sensor.yaml
 shell_command: !include ./configuration/shell_command.yaml
 switch: !include ./configuration/switch.yaml
 tts: !include ./configuration/tts.yaml
+upnp: !include ./configuration/upnp.yaml
 weather: !include ./configuration/weather.yaml  
 zone: !include ./configuration/zone.yaml
