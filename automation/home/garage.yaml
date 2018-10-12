@@ -3,8 +3,12 @@
   trigger:
     - platform: state
       entity_id: cover.garage_door_opener
-      from: 'closed'
-      to: 'open'
+      from: 
+        - 'closed'
+        - 'closing'
+      to: 
+        - 'open'
+        - 'opening'
     - platform: state
       entity_id: sensor.front_door
       from: 'closed'
