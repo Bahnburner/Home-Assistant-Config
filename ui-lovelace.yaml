@@ -486,11 +486,11 @@ views:
             cards: 
               - type: sensor
                 entity: sensor.rtac88u_kbytesec_received
-                name: Downstream
+                name: ↓ Bandwidth
                 hours_to_show: 6
               - type: sensor
                 entity: sensor.rtac88u_kbytesec_sent
-                name: Upstream
+                name: ↑ Bandwidth
                 hours_to_show: 6
           - type: horizontal-stack
             cards:
