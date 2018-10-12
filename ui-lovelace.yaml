@@ -482,25 +482,19 @@ views:
             entities:
               - sensor.cpu_usage
               - sensor.memory_usage
-          - type: horizontal-stack
-            cards: 
-              - type: sensor
-                entity: sensor.rtac88u_kbytesec_received
-                name: ↓ Bandwidth
-                hours_to_show: 6
-              - type: sensor
-                entity: sensor.rtac88u_kbytesec_sent
-                name: ↑ Bandwidth
-                hours_to_show: 6
+              - entity: sensor.rtac88u_kbytesec_received
+                name: 'Downstream'
+              - entity: sensor.rtac88u_kbytesec_sent
+                name: 'Upstream'
           - type: horizontal-stack
             cards:
-              - type: custom:gauge-card
+              - type: gauge
                 title: 'CPU'
                 entity: sensor.cpu_usage
                 min: 0
                 max: 100
                 scale: '40px'
-              - type: custom:gauge-card
+              - type: gauge
                 title: 'Memory'
                 entity: sensor.memory_usage
                 min: 0
