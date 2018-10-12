@@ -28,7 +28,7 @@ cover: !include ./configuration/cover.yaml
 device_tracker: !include ./configuration/device_tracker.yaml
 hue: !include ./configuration/hue.yaml
 google: !include ./configuration/calendar.yaml
-google_assistant: !include ./configuration/google_assistant.yaml
+#google_assistant: !include ./configuration/google_assistant.yaml
 group: !include ./configuration/group.yaml
 http: !include ./configuration/http.yaml
 ifttt: !include ./configuration/ifttt.yaml
