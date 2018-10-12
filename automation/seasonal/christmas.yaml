@@ -25,15 +25,15 @@
       entity_id: switch.christmas_lights
 
 
-- id: christmas_light_panel_visiblity
-  alias: 'Christmas Light Panel Visiblity'
-  hide_entity: true
-  trigger:
-    - platform: homeassistant
-      event: start
-  action:
-    - service: group.set_visibility
-      entity_id: group.christmas
-      data_template:
-        visible: >
-          {% if now().month >= 11 %}true{%else%}false{%endif%}
+#- id: christmas_light_panel_visiblity
+#  alias: 'Christmas Light Panel Visiblity'
+#  hide_entity: true
+#  trigger:
+#    - platform: homeassistant
+#      event: start
+#  action:
+#    - service: group.set_visibility
+#      entity_id: group.christmas
+#      data_template:
+#        visible: >
+#          {% if now().month >= 11 %}true{%else%}false{%endif%}
