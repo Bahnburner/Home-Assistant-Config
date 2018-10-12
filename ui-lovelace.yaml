@@ -488,10 +488,10 @@ views:
             cards: 
               - type: sensor
                 entity: sensor.rtac88u_kbytesec_received
-                name: Downstream Bandwidth
+                name: Downstream
               - type: sensor
                 entity: sensor.rtac88u_kbytesec_sent
-                name: Upstream Bandwidth
+                name: Upstream
           - type: horizontal-stack
             cards:
               - type: custom:gauge-card
@@ -514,40 +514,12 @@ views:
                 scale: '40px'
                 min: 0
                 max: 100
-#                severity:
-#                  green: 0
-#                  amber: 70
-#                  red: 90
               - type: custom:gauge-card
                 title: 'Storage (Y:)'
                 entity: sensor.storage
                 scale: '40px'
                 min: 0
                 max: 100
-#                severity:
-#                  green: 0
-#                  amber: 70
-#                  red: 90
-#          - type: horizontal-stack
-#            cards:
-#              - type: custom:gauge-card
-#                title: 'Titan OS'
-#                entity: sensor.titan
-#                min: 0
-#                max: 100
-#                severity:
-#                  green: 0
-#                  amber: 70
-#                  red: 90
-#              - type: custom:gauge-card
-#                title: 'Retina OS'
-#                entity: sensor.retina
-#                min: 0
-#                max: 100 
-#                severity:
-#                  green: 0
-#                  amber: 70
-#                  red: 90          
       - type: entities
         title: Critical Devices
         entities: 
@@ -573,63 +545,3 @@ views:
           - sensor.viziocrave360
           - sensor.vizio_m70e3
           - sensor.lg_sj9
-
-#########
-# KIOSK #
-#########
-
-#  - icon: mdi:tablet
-#    name: Kiosk
-#    id: kiosk
-#    cards:
-#      - type: vertical-stack
-#        cards: 
-#          - type: picture-glance
-#            entities:
-#              - device_tracker.tristans_phone_wifi
-#              - device_tracker.crystals_phone_wifi
-#            filter:
-#             state: 'home'
-#            title: "Family"
-#            state_image:
-#              "not_home": /local/resources/images/lovelace/family_away_edited.jpg
-#              "home": /local/resources/images/lovelace/family_edited.jpg
-#            entity: group.tristal 
-#          - type: entities
-#            entities:
-#              - lock.front_door
-#              - lock.back_door
-#              - cover.garage_door_opener
-#      - type: vertical-stack
-#        cards: 
-#          - type: picture-entity
-#            image: /local/resources/images/lovelace/livingroom_edited.jpg
-#            entity: group.living_room_lights
-#            name: "Living Room Lights"    
-#          - type: entities
-#            entities:
-#              - light.fan
-#              - light.bias_light
-#              - climate.downstairs_hallway
-#      - type: vertical-stack
-#        cards:
-#          - type: picture-entity
-#            image: /local/resources/images/lovelace/master_bedroom_edited.jpg
-#            entity: group.master_bedroom
-#            name: "Master Bedroom Lights"
-#          - type: entities
-#            entities:
-#              - light.tristans_nightstand
-#              - light.crystals_nightstand
-#              - light.bedroom_floor_lamp
-#      - type: vertical-stack
-#        cards: 
-#          - type: picture-entity
-#            image: /local/resources/images/lovelace/kitchen_edited.jpg
-#            entity: group.kitchen_lighting
-#            name: "Kitchen Lights"     
-#          - type: entities
-#            entities: 
-#              - light.overhead_light
-#              - light.recessed_lights
-#              - light.chandelier
