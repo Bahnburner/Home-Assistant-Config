@@ -1,0 +1,10 @@
+- alias: 'IFTTT event trigger'
+  hide_entity: true
+  trigger:
+    event: ifttt_webhook_received
+    event_data:
+      action: call_service
+  action:
+    service_template: '{{ trigger.event.data.service }}'
+    data_template:
+      entity_id: '{{ trigger.event.data.entity_id }}'
