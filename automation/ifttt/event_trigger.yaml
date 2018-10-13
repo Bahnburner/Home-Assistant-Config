@@ -1,6 +1,7 @@
 - alias: 'IFTTT event trigger'
   hide_entity: true
   trigger:
+    platform: event
     event: ifttt_webhook_received
     event_data:
       action: call_service
