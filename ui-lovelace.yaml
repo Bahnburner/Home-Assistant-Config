@@ -139,7 +139,7 @@ views:
             name: Dining Room Lights
       - type: weather-forecast
         name: Weather
-        entity: weather.yweather
+        entity: weather.forecast
       - type: glance
         title: Alarm Zones
         tap_action: toggle
