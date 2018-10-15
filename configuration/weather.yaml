@@ -1,5 +1,5 @@
 - platform: darksky
   api_key: !secret darksky
 - platform: yweather
-  name: forecast
+  name: 'Forecast'
   woeid: !secret woeid
