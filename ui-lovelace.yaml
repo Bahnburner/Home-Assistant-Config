@@ -139,8 +139,6 @@ views:
             name: Dining Room Lights
       - type: weather-forecast
         entity: weather.forecast
-      - type: weather-forecast
-        entity: weather.dark_sky
       - type: glance
         title: Alarm Zones
         tap_action: toggle
