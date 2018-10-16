@@ -56,6 +56,16 @@ views:
               - input_select.harmony
               - cover.volume
               - entity: light.living_room
+                type: custom:slider-entity-row
+                head: light.living_room
+                items:
+                 - entity: light.floor_lamp_left
+                   type: custom:slider-entity-row
+                 - entity: light.floor_lamp_right
+                   type: custom:slider-entity-row
+                 - entity: light.table_lamp
+                   type: custom:slider-entity-row
+              - entity: light.living_room
                 name: Lights
                 type: custom:slider-entity-row
                 hide_toggle: true
