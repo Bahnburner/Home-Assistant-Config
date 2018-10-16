@@ -56,8 +56,10 @@ views:
               - input_select.harmony
               - cover.volume
               - entity: light.living_room
-                type: custom:slider-entity-row
-                head: light.living_room
+                type: custom:fold-entity-row
+                head: 
+                  entity: light.living_room
+                  type: custom:slider-entity-row
                 items:
                  - entity: light.floor_lamp_left
                    type: custom:slider-entity-row
