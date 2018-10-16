@@ -63,17 +63,14 @@ views:
                   type: custom:slider-entity-row
                   hide_toggle: true
                   name: Lights
-                items:
-                  - entity: light.floor_lamp_left
-                    type: custom:slider-entity-row
-                    hide_toggle: true
-                  - light.floor_lamp_right
-                    type: custom:slider-entity-row
-                    hide_toggle: true
-                  - light.table_lamp
-              - entity: light.living_room
-                    type: custom:slider-entity-row
-                    hide_toggle: true
+                  items:
+                    - entity: light.floor_lamp_left
+                      type: custom:slider-entity-row
+                      hide_toggle: true
+                    - light.floor_lamp_right
+                      type: custom:slider-entity-row
+                      hide_toggle: true
+                    - light.table_lamp
               - entity: light.fan
                 name: Fan
                 type: custom:slider-entity-row
