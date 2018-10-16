@@ -61,15 +61,19 @@ views:
                 head:
                   entity: light.living_room
                   type: custom:slider-entity-row
+                  hide_toggle: true
+                  name: Lights
                 items:
                   - entity: light.floor_lamp_left
                     type: custom:slider-entity-row
+                    hide_toggle: true
                   - light.floor_lamp_right
+                    type: custom:slider-entity-row
+                    hide_toggle: true
                   - light.table_lamp
               - entity: light.living_room
-                name: Lights
-                type: custom:slider-entity-row
-                hide_toggle: true
+                    type: custom:slider-entity-row
+                    hide_toggle: true
               - entity: light.fan
                 name: Fan
                 type: custom:slider-entity-row
@@ -86,13 +90,25 @@ views:
             tap_action: toggle
           - type: entities
             entities: 
-              - entity: light.master_bedroom
-                name: Lights
-                type: custom:slider-entity-row
-                hide_toggle: true
-              - light.bedroom_floor_lamp
-              - light.crystals_nightstand
-              - light.tristans_nightstand     
+              - type: custom:fold-entity-row
+                head:
+                  entity: light.master_bedroom
+                  type: custom:slider-entity-row
+                  hide_toggle: true
+                  name: Lights
+                items:
+                  - entity: light.tristans_nightstand
+                    name: Lights
+                    type: custom:slider-entity-row
+                    hide_toggle: true
+                  - entity: light.crystals_nightstand
+                    name: Lights
+                    type: custom:slider-entity-row
+                    hide_toggle: true
+                  - entity: bedroom_floor_lamp
+                    name: Lights
+                    type: custom:slider-entity-row
+                    hide_toggle: true
 #### KITCHEN STACK
       - type: vertical-stack
         cards:        
