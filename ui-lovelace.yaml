@@ -63,16 +63,16 @@ views:
                   type: custom:slider-entity-row
                   hide_toggle: true
                   name: Lights
-                  items:
-                    - entity: light.floor_lamp_left
-                      type: custom:slider-entity-row
-                      hide_toggle: true
-                    - entity: light.floor_lamp_right
-                      type: custom:slider-entity-row
-                      hide_toggle: true
-                    - entity: light.table_lamp
-                      type: custom:slider-entity-row
-                      hide_toggle: true
+                items:
+                  - entity: light.floor_lamp_left
+                    type: custom:slider-entity-row
+                    hide_toggle: true
+                  - entity: light.floor_lamp_right
+                    type: custom:slider-entity-row
+                    hide_toggle: true
+                  - entity: light.table_lamp
+                    type: custom:slider-entity-row
+                    hide_toggle: true
               - entity: light.fan
                 name: Fan
                 type: custom:slider-entity-row
@@ -101,11 +101,9 @@ views:
                     type: custom:slider-entity-row
                     hide_toggle: true
                   - entity: light.crystals_nightstand
-                    name: Lights
                     type: custom:slider-entity-row
                     hide_toggle: true
-                  - entity: bedroom_floor_lamp
-                    name: Lights
+                  - entity: light.bedroom_floor_lamp
                     type: custom:slider-entity-row
                     hide_toggle: true
 #### KITCHEN STACK
