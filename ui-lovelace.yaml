@@ -97,13 +97,13 @@ views:
                   name: Lights
                 items:
                   - entity: light.tristans_nightstand
-                    name: Lights
                     type: custom:slider-entity-row
                     hide_toggle: true
                   - entity: light.crystals_nightstand
                     type: custom:slider-entity-row
                     hide_toggle: true
                   - entity: light.bedroom_floor_lamp
+                    name: Floor Lamp
                     type: custom:slider-entity-row
                     hide_toggle: true
 #### KITCHEN STACK
