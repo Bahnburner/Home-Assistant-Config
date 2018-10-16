@@ -67,7 +67,7 @@ views:
                     - entity: light.floor_lamp_left
                       type: custom:slider-entity-row
                       hide_toggle: true
-                    - entity:light.floor_lamp_right
+                    - entity: light.floor_lamp_right
                       type: custom:slider-entity-row
                       hide_toggle: true
                     - entity: light.table_lamp
