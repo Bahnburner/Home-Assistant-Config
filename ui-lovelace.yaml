@@ -57,28 +57,25 @@ views:
               - sensor.current_activity
               - input_select.harmony
               - cover.volume
-              - entity: light.living_room
-                type: custom:fold-entity-row
-                head: 
-                  entity: light.living_room
-                  type: custom:slider-entity-row
-                items:
-                 - entity: light.floor_lamp_left
-                   type: custom:slider-entity-row
-                 - entity: light.floor_lamp_right
-                   type: custom:slider-entity-row
-                 - entity: light.table_lamp
-                   type: custom:slider-entity-row
-              - entity: light.living_room
-                name: Lights
+          - type: custom:fold-entity-row
+            head:
+              entity: light.living_room
+              type: custom:slider-entity-row
+            items:
+              - entity: light.floor_lamp_left
                 type: custom:slider-entity-row
-                hide_toggle: true
-              - entity: light.fan
-                name: Fan
-                type: custom:slider-entity-row
-                hide_toggle: true
-              - climate.downstairs_hallway
-              - sensor.protect_down
+              - light.floor_lamp_right
+              - light.table_lamp
+          - entity: light.living_room
+            name: Lights
+            type: custom:slider-entity-row
+            hide_toggle: true
+          - entity: light.fan
+            name: Fan
+            type: custom:slider-entity-row
+            hide_toggle: true
+          - climate.downstairs_hallway
+          - sensor.protect_down
 #### BEDROOM STACK
       - type: vertical-stack
         cards:
