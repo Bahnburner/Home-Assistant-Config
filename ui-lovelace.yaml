@@ -7,8 +7,6 @@ resources:
     type: js
   - url: /local/resources/cards/mini-media-player.js?v=1
     type: js
-  - url: /local/resources/cards/fold-entity-row.js?v=1
-    type: js
 
 title: Hidden Ridge
 views:
@@ -57,22 +55,10 @@ views:
               - sensor.current_activity
               - input_select.harmony
               - cover.volume
-              - type: custom:fold-entity-row
-                head:
-                  entity: light.living_room
-                  type: custom:slider-entity-row
-                  hide_toggle: true
-                  name: Lights
-                items:
-                  - entity: light.floor_lamp_left
-                    type: custom:slider-entity-row
-                    hide_toggle: true
-                  - entity: light.floor_lamp_right
-                    type: custom:slider-entity-row
-                    hide_toggle: true
-                  - entity: light.table_lamp
-                    type: custom:slider-entity-row
-                    hide_toggle: true
+              - entity: light.living_room
+                name: Lights
+                type: custom:slider-entity-row
+                hide_toggle: true
               - entity: light.fan
                 name: Fan
                 type: custom:slider-entity-row
@@ -89,23 +75,13 @@ views:
             tap_action: toggle
           - type: entities
             entities: 
-              - type: custom:fold-entity-row
-                head:
-                  entity: light.master_bedroom
-                  type: custom:slider-entity-row
-                  hide_toggle: true
-                  name: Lights
-                items:
-                  - entity: light.tristans_nightstand
-                    type: custom:slider-entity-row
-                    hide_toggle: true
-                  - entity: light.crystals_nightstand
-                    type: custom:slider-entity-row
-                    hide_toggle: true
-                  - entity: light.bedroom_floor_lamp
-                    name: Floor Lamp
-                    type: custom:slider-entity-row
-                    hide_toggle: true
+              - entity: light.master_bedroom
+                name: Lights
+                type: custom:slider-entity-row
+                hide_toggle: true
+              - light.bedroom_floor_lamp
+              - light.crystals_nightstand
+              - light.tristans_nightstand     
 #### KITCHEN STACK
       - type: vertical-stack
         cards:        
