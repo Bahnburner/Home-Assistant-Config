@@ -18,6 +18,11 @@
       state: 'home'
   action:
     - service: light.turn_on
+      entity_id: light.living_room
+      data:
+        color_temp: 200
+        brightness: 254     
+    - service: light.turn_on
       entity_id: light.pantry
       data:
         brightness: 255
@@ -30,12 +35,7 @@
       data:
         color_temp: 200
         brightness: 254
-        transition: 1800
-    - service: light.turn_on
-      entity_id: light.living_room
-      data:
-        color_temp: 200
-        brightness: 254        
+        transition: 1800     
     - service: script.fan_on   
     - service: lock.unlock
       entity_id: lock.back_door
