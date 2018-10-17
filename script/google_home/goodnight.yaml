@@ -47,8 +47,12 @@ goodnight:
       data:
         transition: 30
     - service_template: >
-          {% if states.media_player.master_suite.attributes.media_content_id.startswith('http://smrtho.us/storage/whitenoise') and states.media_player.master_suite.state == 'playing' %}
-            script.deadend
+          {% if states.media_player.master_suite.state == 'playing' %}
+            {% if states.media_player.master_suite.attributes.media_content_id.startswith('http://smrtho.us/storage/whitenoise') %}
+              script.deadend
+            {% else %}
+              script.whitenoise
+            {% endif %}
           {% else %}
             script.whitenoise
           {% endif %}
