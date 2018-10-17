@@ -31,14 +31,14 @@
         color_temp: 200
         brightness: 254
         transition: 1800
-    - service: lock.unlock
-      entity_id: lock.back_door
-    - service: script.fan_on    
     - service: light.turn_on
       entity_id: light.living_room
       data:
         color_temp: 200
-        brightness: 254
+        brightness: 254        
+    - service: script.fan_on   
+    - service: lock.unlock
+      entity_id: lock.back_door
     - service: media_player.media_stop
       entity_id: 
         - media_player.master_suite
