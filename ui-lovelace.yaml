@@ -459,6 +459,30 @@ views:
     name: Settings
     id: settings
     cards:
+      - type: entity-filter
+        entities:
+          - entity: sensor.front_door_lock_battery
+            name: Front Door
+            icon: mdi:shield-key
+          - entity: sensor.back_door_lock_battery
+            name: Back Door
+            icon: mdi:shield-key
+          - entity: sensor.hvac_water_sensor_battery
+            name: HVAC
+            icon: mdi:water
+          - entity: sensor.wh_water_sensor_battery
+            name: Water Heater
+            icon: mdi:water
+        state_filter:
+          - "40"
+          - "30"
+          - "20"
+          - "10"
+          - "0"
+        show_empty: false
+        card:
+          type: glance
+          title: Low batteries    
       - type: vertical-stack
         cards: 
           - type: entities
@@ -534,29 +558,5 @@ views:
           - sensor.viziocrave360
           - sensor.vizio_m70e3
           - sensor.lg_sj9
-      - type: entity-filter
-        entities:
-          - entity: sensor.front_door_lock_battery
-            name: Front Door
-            icon: mdi:door
-          - entity: sensor.back_door_lock_battery
-            name: Back Door
-            icon: mdi:door
-          - entity: sensor.hvac_water_sensor_battery
-            name: HVAC
-            icon: mdi:water
-          - entity: sensor.wh_water_sensor_battery
-            name: Water Heater
-            icon: mdi:water
-        state_filter:
-          - "40"
-          - "30"
-          - "20"
-          - "10"
-          - "0"
-        show_empty: false
-        card:
-          type: glance
-          title: Low batteries
        
  
