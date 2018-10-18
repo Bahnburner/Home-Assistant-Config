@@ -534,3 +534,20 @@ views:
           - sensor.viziocrave360
           - sensor.vizio_m70e3
           - sensor.lg_sj9
+      - type: entity-filter
+        entities:
+          - sensor.front_door_lock_battery
+          - sensor.back_door_lock_battery
+          - sensor.hvac_water_sensor_battery
+          - sensor.wh_water_sensor_battery
+        state_filter:
+          - "30"
+          - "20"
+          - "10"
+          - "0"
+        show_empty: false
+        card:
+          type: glance
+          title: Low batteries
+       
+ 
