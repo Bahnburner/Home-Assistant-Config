@@ -463,10 +463,10 @@ views:
         entities:
           - entity: sensor.front_door_lock_battery
             name: Front Door
-            icon: mdi:shield-key
+            icon: mdi:key-variant
           - entity: sensor.back_door_lock_battery
             name: Back Door
-            icon: mdi:shield-key
+            icon: mdi:key-variant
           - entity: sensor.hvac_water_sensor_battery
             name: HVAC
             icon: mdi:water
