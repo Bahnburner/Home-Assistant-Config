@@ -170,9 +170,25 @@
   name: "Small Attic Temp"
   unit_of_measurement: '°F'
 - platform: mqtt
+  state_topic: smartthings/Water Heater Leak Sensor/battery
+  name: "WH water sensor battery"
+  unit_of_measurement: '%'
+- platform: mqtt
   state_topic: smartthings/HVAC Leak Sensor/temperature
   name: "Big Attic Temp"
   unit_of_measurement: '°F'
+- platform: mqtt
+  state_topic: smartthings/Back Door/battery
+  name: "Back Door Lock Battery"
+  unit_of_measurement: '%'
+- platform: mqtt
+  state_topic: smartthings/Front Door/battery
+  name: "Front Door Lock Battery"
+  unit_of_measurement: '%'
+- platform: mqtt
+  state_topic: smartthings/HVAC Leak Sensor/battery
+  name: "HVAC water sensor battery"
+  unit_of_measurement: '%'
 - platform: dnsip
   scan_interval: 300
 - platform: time_date
