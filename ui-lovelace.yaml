@@ -537,13 +537,17 @@ views:
       - type: entity-filter
         entities:
           - entity: sensor.front_door_lock_battery
-            name: Front Door Lock
+            name: Front Door
+            icon: mdi:door
           - entity: sensor.back_door_lock_battery
-            name: Back Door Lock
+            name: Back Door
+            icon: mdi:door
           - entity: sensor.hvac_water_sensor_battery
-            name: HVAC sensor
+            name: HVAC
+            icon: mdi:water
           - entity: sensor.wh_water_sensor_battery
-            name: WH sensor
+            name: Water Heater
+            icon: mdi:water
         state_filter:
           - "40"
           - "30"
