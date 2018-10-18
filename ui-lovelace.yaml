@@ -541,6 +541,7 @@ views:
           - sensor.hvac_water_sensor_battery
           - sensor.wh_water_sensor_battery
         state_filter:
+          - "40"
           - "30"
           - "20"
           - "10"
