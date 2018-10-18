@@ -29,7 +29,7 @@ good_morning:
     - service: lock.unlock
       entity_id: lock.back_door
     - service_template: >
-        {% if (states.sensor.time.state | round(2)) > 12.00 and states.sun.sun.attributes.elevation < 8 %}
+        {% if states.sun.sun.attributes.elevation < 8 %}
           script.patio_lights
         {% else %}
           script.deadend
