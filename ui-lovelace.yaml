@@ -505,12 +505,12 @@ views:
               - sensor.memory_usage
           - type: horizontal-stack
             cards:
-              - type: sensor
+              - type: gauge
                 title: 'CPU'
                 entity: sensor.cpu_usage
-                unit: '%'
-                accuracy: 720
-                hours_to_show: 1
+                min: 0
+                max: 100
+                scale: '40px'
               - type: gauge
                 title: 'Memory'
                 entity: sensor.memory_usage
@@ -519,12 +519,12 @@ views:
                 scale: '40px'
           - type: horizontal-stack
             cards:
-              - type: gauge
+              - type: sensor
                 title: 'Plex (Z:)'
                 entity: sensor.plex
-                scale: '40px'
-                min: 0
-                max: 100
+ #               scale: '40px'
+ #               min: 0
+ #               max: 100
               - type: gauge
                 title: 'Storage (Y:)'
                 entity: sensor.storage
