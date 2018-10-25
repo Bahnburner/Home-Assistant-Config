@@ -7,6 +7,4 @@ ip_ban_enabled: True
 login_attempts_threshold: 3
 ssl_certificate: /certbot/live/smrtho.us/fullchain.pem
 ssl_key: /certbot/live/smrtho.us/privkey.pem
-cors_allowed_origins:
-  - https://smrtho.us
-  - http://smrtho.us
+ssl_profile: intermediate
