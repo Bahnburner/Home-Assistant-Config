@@ -505,12 +505,12 @@ views:
               - sensor.memory_usage
           - type: horizontal-stack
             cards:
-              - type: gauge
+              - type: sensor
                 title: 'CPU'
                 entity: sensor.cpu_usage
-                min: 0
-                max: 100
-                scale: '40px'
+                unit: '%'
+                accuracy: 100
+                hours_to_show: 12
               - type: gauge
                 title: 'Memory'
                 entity: sensor.memory_usage
