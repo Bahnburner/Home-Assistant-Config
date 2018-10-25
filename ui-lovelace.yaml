@@ -509,8 +509,8 @@ views:
                 title: 'CPU'
                 entity: sensor.cpu_usage
                 unit: '%'
-                accuracy: 100
-                hours_to_show: 12
+                accuracy: 720
+                hours_to_show: 1
               - type: gauge
                 title: 'Memory'
                 entity: sensor.memory_usage
