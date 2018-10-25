@@ -519,12 +519,12 @@ views:
                 scale: '40px'
           - type: horizontal-stack
             cards:
-              - type: sensor
+              - type: gauge
                 title: 'Plex (Z:)'
                 entity: sensor.plex
- #               scale: '40px'
- #               min: 0
- #               max: 100
+                scale: '40px'
+                min: 0
+                max: 100
               - type: gauge
                 title: 'Storage (Y:)'
                 entity: sensor.storage
