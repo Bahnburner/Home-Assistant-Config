@@ -578,7 +578,8 @@ views:
         title: Cast Devices
         entities: 
           - sensor.google_home_livingroom
-          - sensor.google_home_mini_kitchen
+          - sensor.google_home_hub_kitchen
+          - sensor.google_home_mini_mancave
           - sensor.google_home_mini_bedroom
           - sensor.google_home_mini_bathroom
           - sensor.chromecast_man_cave
