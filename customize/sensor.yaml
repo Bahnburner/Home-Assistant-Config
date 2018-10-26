@@ -111,12 +111,16 @@ sensor.myq:
   entity_picture: /local/resources/images/devices/myq.png
 sensor.google_home_livingroom:
   entity_picture: /local/resources/images/devices/google_home.png
-sensor.google_home_mini_kitchen:
+sensor.google_home_hub_kitchen:
   entity_picture: /local/resources/images/devices/google_home.png
 sensor.google_home_mini_bedroom:
   entity_picture: /local/resources/images/devices/google_home.png
 sensor.google_home_mini_bathroom:
   entity_picture: /local/resources/images/devices/google_home.png
+sensor.google_home_mini_mancave:
+  entity_picture: /local/resources/images/devices/google_home.png
+sensor.google_home_mini_nursery:
+  entity_picture: /local/resources/images/devices/google_home.png  
 sensor.viziocrave360:
   entity_picture: /local/resources/images/devices/smartcast.png
 sensor.vizio_m70e3:
