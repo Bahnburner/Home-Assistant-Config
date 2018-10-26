@@ -140,7 +140,7 @@ views:
       - type: weather-forecast
         entity: weather.forecast
       - type: glance
-        title: Alarm Zones
+        title: Alarm
         tap_action: toggle
         entities:
           - entity: sensor.front_door
