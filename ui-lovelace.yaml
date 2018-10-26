@@ -331,7 +331,7 @@ views:
         show_empty: false
         card: 
           type: media-control
-          entity: media_player.display
+          entity: media_player.kitchen_display
       - type: entity-filter
         entities:
           - media_player.mancave_assistant
