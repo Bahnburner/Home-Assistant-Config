@@ -323,6 +323,33 @@ views:
         card: 
           type: media-control
           entity: media_player.rasplex 
+      - type: entity-filter
+        entities:
+          - media_player.kitchen_display
+        state_filter:
+          - 'playing'
+        show_empty: false
+        card: 
+          type: media-control
+          entity: media_player.display
+      - type: entity-filter
+        entities:
+          - media_player.mancave_assistant
+        state_filter:
+          - 'playing'
+        show_empty: false
+        card: 
+          type: media-control
+          entity: media_player.mancave_assistant
+      - type: entity-filter
+        entities:
+          - media_player.nursery_assistant
+        state_filter:
+          - 'playing'
+        show_empty: false
+        card: 
+          type: media-control
+          entity: media_player.nursery_assistant          
 
           
 ##########
@@ -402,7 +429,7 @@ views:
       - type: media-control 
         entity: media_player.house_party_protocol
       - type: media-control 
-        entity: media_player.kitchen_assistant
+        entity: media_player.kitchen_display
       - type: media-control
         entity: media_player.livingroom_assistant
       - type: media-control 
@@ -411,13 +438,17 @@ views:
         entity: media_player.livingroom_speaker
       - type: media-control 
         entity: media_player.livingroom_tv
+      - type: media-control
+        entity: media_player.mancave_assistant
       - type: media-control 
         entity: media_player.mancave_directv
       - type: media-control 
         entity: media_player.mancave_tv
       - type: media-control 
         entity: media_player.master_suite
-      - type: media-control 
+      - type: media-control
+        entity: media_player.nursery_assistant
+      - type: media-control
         entity: media_player.party_mode
       - type: media-control 
         entity: media_player.rasplex
