@@ -34,7 +34,8 @@ media:
   name: Media Players
   entities:
     - media_player.livingroom_assistant
-    - media_player.kitchen_assistant
+    - media_player.kitchen_display
+    - media_player.mancave_assistant
     - media_player.bedroom_assistant
     - media_player.livingroom_tv
     - media_player.livingroom_speaker
