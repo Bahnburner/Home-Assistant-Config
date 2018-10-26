@@ -112,7 +112,10 @@
       friendly_name: 'Google Home (Livingroom)' 
     google_home_mini_kitchen:
       value_template: '{% if is_state("device_tracker.google_home_mini_kitchen", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Google Home Mini (Kitchen)'  
+      friendly_name: 'Google Home Mini (Mancave)' 
+    google_home_hub_kitchen:
+      value_template: '{% if is_state("device_tracker.google_home_hub_kitchen", "home") %}Online{% else %}Offline{% endif %}'
+      friendly_name: 'Google Home Hub (Kitchen)'  
     google_home_mini_bedroom:
       value_template: '{% if is_state("device_tracker.google_home_mini_bedroom", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Google Home Mini (Bedroom)'
