@@ -18,7 +18,8 @@ goodbye:
     - service: media_player.turn_off
       entity_id: 
         - media_player.dining_room_speaker
-        - media_player.kitchen_assistant
+        - media_player.kitchen_display
+        - media_player.mancave_assistant
         - media_player.livingroom_tv
         - media_player.livingroom_assistant
         - media_player.bedroom_speaker
