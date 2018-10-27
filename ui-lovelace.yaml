@@ -426,11 +426,13 @@ views:
       - id: 04f782533cab47e8bf59851a9770fe02  # Automatically created id
         type: entities
         title: Dining Room
+        show_header_toggle: false
         entities:
           - light.dining_room
       - id: a4b244ab58254791bb1cf40070f4fe3d  # Automatically created id
         type: entities
         title: Accent Lights
+        show_header_toggle: false
         entities:
           - light.cabinet_lights
           - light.bias_light
