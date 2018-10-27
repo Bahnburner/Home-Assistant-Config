@@ -67,6 +67,12 @@ views:
                 hide_toggle: true
               - climate.downstairs_hallway
               - sensor.protect_down
+          - type: horizontal-stack
+            cards: 
+              - type: thermostat
+                entity: climate.downstairs_hallway 
+              - type: thermostat
+                entity: climate.upstairs_hallway
 #### BEDROOM STACK
       - id: 45e3267b69794ed18d233904273c99ff  # Automatically created id
         type: vertical-stack
