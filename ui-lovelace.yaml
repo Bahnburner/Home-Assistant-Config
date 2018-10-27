@@ -68,7 +68,7 @@ views:
               - climate.downstairs_hallway
               - sensor.protect_down
           - type: thermostat
-            entity: climate.downstairs_hallway 
+            entity: climate.living_room 
           - type: thermostat
             entity: climate.upstairs_hallway
 #### BEDROOM STACK
