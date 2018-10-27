@@ -67,9 +67,6 @@ views:
                 hide_toggle: true
               - climate.downstairs_hallway
               - sensor.protect_down
-              - climate.living_room
-          - type: thermostat
-            entity: climate.living_room 
 #### BEDROOM STACK
       - id: 45e3267b69794ed18d233904273c99ff  # Automatically created id
         type: vertical-stack
