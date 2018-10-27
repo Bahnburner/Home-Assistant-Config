@@ -189,8 +189,8 @@
       from: 'on'
       to: 'off'
   action: 
-    service: lights.turn_on
-    entity_id: lights.living_room
+    service: light.turn_on
+    entity_id: light.living_room
     data_template:
       brightness: 
         '{{ states.input_number.harmony_dim.state | int }}'
