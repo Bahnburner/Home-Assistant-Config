@@ -1,4 +1,4 @@
   client_id: !secret nest_client
   client_secret: !secret nest_secret
   structure:
-    - Hidden Ridge
+    - 'Hidden Ridge'
