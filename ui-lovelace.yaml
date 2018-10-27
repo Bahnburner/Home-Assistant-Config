@@ -421,6 +421,7 @@ views:
       - id: cb03591a77cf4d6bb79a62bc31756f11  # Automatically created id
         type: entities
         title: Foyer
+        show_header_toggle: false
         entities:
           - light.foyer
       - id: 04f782533cab47e8bf59851a9770fe02  # Automatically created id
