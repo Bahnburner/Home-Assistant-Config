@@ -1,89 +1,7 @@
-sensor.cpu:
-  icon: mdi:speedometer
-sensor.disk:
-  icon: mdi:harddisk
-sensor.ram:
-  icon: mdi:memory
-sun.sun:
-  hidden: true
-sensor.dark_sky_icon:
-  hidden: true
-sensor.dark_sky_temperature:
-  friendly_name: 'Current'
-sensor.dark_sky_summary:
-  friendly_name: 'Forecast'
-  icon: mdi:eye
-  hidden: true
-sensor.dark_sky_precip_probability:
-  friendly_name: 'Chance of Precipitation'
-  hidden: true
-sensor.dark_sky_precip_intensity:
-  friendly_name: 'Rain Gauge'
-  hidden: true
-sensor.dark_sky_daytime_high_temperature:
-  friendly_name: 'High'
-sensor.dark_sky_overnight_low_temperature:
-  friendly_name: 'Low'
-sensor.dark_sky_precip:
-  friendly_name: 'Precipitation Type'
-sensor.dark_sky_precip_type:
-  hidden: true
-sensor.downstairs_temperature:
-  friendly_name: 'Downstairs Temperature'
-sensor.upstairs_temperature:
-  friendly_name: 'Upstairs Temperature'
-sensor.harmony_living_room:
-  hidden: true
 sensor.current_activity:
   hidden: false
   entity_picture: /local/resources/images/devices/harmony.png
   friendly_name: "Current Activity"
-sensor.brightness_pantry:
-  hidden: true
-sensor.brightness_lr:
-  hidden: true
-sensor.color_temp_lr:
-  hidden: true
-sensor.color_temp_br:
-  hidden: true
-sensor.color_temp_cl:
-  hidden: true
-sensor.downstairs_thermostat_hvac_state:
-  hidden: true
-sensor.downstairs_nest_protect_battery_health:
-  hidden: true
-sensor.downstairs_nest_protect_co_status:
-  hidden: true
-sensor.downstairs_nest_protect_smoke_status:
-  hidden: true
-sensor.downstairs_thermostat_humidity:
-  hidden: true
-sensor.downstairs_thermostat_operation_mode:
-  hidden: true
-sensor.downstairs_thermostat_target:
-  hidden: true
-sensor.downstairs_thermostat_temperature:
-  hidden: true
-sensor.upstairs_thermostat_hvac_state:
-  hidden: true
-sensor.upstairs_nest_protect_battery_health:
-  hidden: true
-sensor.upstairs_nest_protect_co_status:
-  hidden: true
-sensor.upstairs_nest_protect_smoke_status:
-  hidden: true
-sensor.upstairs_thermostat_humidity:
-  hidden: true
-sensor.upstairs_thermostat_operation_mode:
-  hidden: true
-sensor.upstairs_thermostat_target:
-  hidden: true
-sensor.upstairs_thermostat_temperature:
-  hidden: true
-sensor.time:
-  hidden: true
-sensor.drive_time_to_work:
-  hidden: true
 sensor.protect_down:
   friendly_name: "Protect"
   entity_picture: /local/resources/images/devices/nestprotect.png
@@ -93,10 +11,6 @@ sensor.protect_kitchen:
 sensor.protect_up:
   friendly_name: "Protect"
   entity_picture: /local/resources/images/devices/nestprotect.png
-sensor.whitenoise:
-  hidden: true
-sensor.pws_alerts:
-  hidden: true
 sensor.huebridge:
   entity_picture: /local/resources/images/devices/hue.png
 sensor.kevobridge:
@@ -143,8 +57,3 @@ sensor.nesthello:
   friendly_name: 'Nest Hello'
 sensor.lightifybridge:
   entity_picture: /local/resources/images/devices/lightify.png
-sensor.hass_update_available:
-  entity_picture: /local/resources/images/devices/hass.png
-  hidden: true
-sensor.away_toggle:
-  hidden: true
