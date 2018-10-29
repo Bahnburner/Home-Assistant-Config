@@ -15,15 +15,15 @@ bias_light_on:
       brightness: 175
     data_template:
       color_temp: >
-        {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+        {% if (states.sensor.decimal_time.state | round(2)) <= 05.00 %}
           500
-        {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+        {% elif (states.sensor.decimal_time.state | round(2)) <= 09.50 %}
           200
-        {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+        {% elif (states.sensor.decimal_time.state | round(2)) >= 22.25 %}
           500
         {% elif states.sun.sun.attributes.elevation < 8 %}
           300
-        {% elif (states.sensor.time.state | round(2)) > 9.50 %}
+        {% elif (states.sensor.decimal_time.state | round(2)) > 9.50 %}
           250
         {% else %}
           300
@@ -61,15 +61,15 @@ livingroom_on:
       brightness: 254
     data_template:
       color_temp: >
-        {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+        {% if (states.sensor.decimal_time.state | round(2)) <= 05.00 %}
           500
-        {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+        {% elif (states.sensor.decimal_time.state | round(2)) <= 09.50 %}
           200
-        {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+        {% elif (states.sensor.decimal_time.state | round(2)) >= 22.25 %}
           500
         {% elif states.sun.sun.attributes.elevation < 8 %}
           366
-        {% elif (states.sensor.time.state | round(2)) > 9.50 %}
+        {% elif (states.sensor.decimal_time.state | round(2)) > 9.50 %}
           300
         {% else %}
           366
@@ -81,15 +81,15 @@ master_bedroom_on:
     entity_id: light.master_bedroom
     data_template:
       color_temp: >
-        {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+        {% if (states.sensor.decimal_time.state | round(2)) <= 05.00 %}
           500
-        {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+        {% elif (states.sensor.decimal_time.state | round(2)) <= 09.50 %}
           200
-        {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+        {% elif (states.sensor.decimal_time.state | round(2)) >= 22.25 %}
           500
         {% elif states.sun.sun.attributes.elevation < 8 %}
           366
-        {% elif (states.sensor.time.state | round(2)) > 9.50 %}
+        {% elif (states.sensor.decimal_time.state | round(2)) > 9.50 %}
           300
         {% else %}
           366
@@ -99,14 +99,14 @@ master_bedroom_on:
           {% if states.media_player.bedroom_speaker.attributes.media_content_id.startswith('http://10.0.0.101/storage/whitenoise') or states.media_player.master_suite.attributes.media_content_id.startswith('http://10.0.0.101/storage/whitenoise') %}
             50
           {% else %}
-            {% if states.sensor.time.state >= 22.25 %}
+            {% if states.sensor.decimal_time.state >= 22.25 %}
               150
             {% else %}
               254
             {% endif %}
           {% endif %}
         {% else %}
-          {% if states.sensor.time.state | int > 6 and states.sensor.time.state |int < 22 %}
+          {% if states.sensor.decimal_time.state | int > 6 and states.sensor.decimal_time.state |int < 22 %}
             254
           {% else %}
             150
@@ -127,7 +127,7 @@ exterior_lights_on:
       - light.rear_floods
     data_template:
       brightness: >
-          {% if (states.sensor.time.state | round(2)) <= 06.83 %}
+          {% if (states.sensor.decimal_time.state | round(2)) <= 06.83 %}
             100
           {% else %}
             254
@@ -148,15 +148,15 @@ cabinet_lights_weekday:
     data_template:
       brightness: '{{ states.light.living_room.attributes.brightness }}'
       color_temp: >
-        {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+        {% if (states.sensor.decimal_time.state | round(2)) <= 05.00 %}
           450
-        {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+        {% elif (states.sensor.decimal_time.state | round(2)) <= 09.50 %}
           200
-        {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+        {% elif (states.sensor.decimal_time.state | round(2)) >= 22.25 %}
           450
         {% elif states.sun.sun.attributes.elevation < 8 %}
           366
-        {% elif (states.sensor.time.state | round(2)) > 9.50 %}
+        {% elif (states.sensor.decimal_time.state | round(2)) > 9.50 %}
           300
         {% else %}
           366
