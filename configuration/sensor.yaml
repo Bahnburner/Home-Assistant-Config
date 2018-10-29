@@ -34,7 +34,12 @@
         {% endif %}
     brightness_pantry:
       entity_id: light.pantry
-      value_template: '{{ states.light.pantry.attributes.brightness }}'
+      value_template: >
+        {% if states.light.pantry.state == 'off'%}
+          0
+        {% else %}
+          {{states.light.pantry.attributes.brightness}}
+        {% endif %}
     brightness_lr:
       entity_id: light.living_room
       value_template: '{{ states.light.living_room.attributes.brightness }}'
