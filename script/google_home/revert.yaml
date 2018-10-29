@@ -45,13 +45,13 @@ revert:
       entity_id: light.pantry
       data_template: 
         brightness: >
-          {% if (states.sensor.time.state | round(2)) <= 01.50 %}
+          {% if (states.sensor.decimal_time.state | round(2)) <= 01.50 %}
             00
-          {% elif (states.sensor.time.state | round(2)) <= 06.83 %}
+          {% elif (states.sensor.decimal_time.state | round(2)) <= 06.83 %}
             50
-          {% elif (states.sensor.time.state | round(2)) <= 22.00 %}
+          {% elif (states.sensor.decimal_time.state | round(2)) <= 22.00 %}
             254
-          {% elif (states.sensor.time.state | round(2)) >= 22.00 %}
+          {% elif (states.sensor.decimal_time.state | round(2)) >= 22.00 %}
             50
           {% else %}
             254
@@ -64,7 +64,7 @@ revert:
           script.exterior_lights_off
         {% endif %}
     - service_template: >
-        {% if (states.sensor.time.state | round(2)) > 12.00 and states.sun.sun.attributes.elevation < 8 %}
+        {% if (states.sensor.decimal_time.state | round(2)) > 12.00 and states.sun.sun.attributes.elevation < 8 %}
           script.patio_lights
         {% else %}
           script.deadend
