@@ -65,6 +65,31 @@ views:
               entity: media_player.livingroom_assistant
               icon: mdi:google-home
               group: true
+              artwork: cover
+          - type: entity-filter
+            entities:
+              - media_player.livingroom_directv
+            state_filter:
+              - playing
+            show_empty: false
+            card:
+              type: custom:mini-media-player
+              entity: media_player.livingroom_directv
+              icon: mdi:google-home
+              group: true
+              artwork: cover
+          - type: entity-filter
+            entities:
+              - media_player.livingroom_tv
+            state_filter:
+              - playing
+            show_empty: false
+            card:
+              type: custom:mini-media-player
+              entity: media_player.livingroom_tv
+              icon: mdi:google-home
+              group: true
+              artwork: cover              
           - type: entities
             entities:
               - sensor.current_activity
