@@ -68,7 +68,7 @@ goodnight:
     - service: input_boolean.turn_off
       entity_id: input_boolean.harmony_lighting_control
     - service_template: >
-        {% if states.light.pantry.state == 'on' and states.sensor.time.state|float <= 1.50 %}
+        {% if states.light.pantry.state == 'on' and states.sensor.decimal_time.state|float <= 1.50 %}
           script.pantry_lights
         {% else %}
           script.deadend
