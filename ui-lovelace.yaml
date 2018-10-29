@@ -54,6 +54,16 @@ views:
             entity: light.living_room
             name: Livingroom
             tap_action: toggle
+          - type: entity-filter
+            entities:
+              - media_player.bathroom_assistant
+            state_filter:
+              - playing
+            show_empty: false
+            card:
+              type: custom:mini-midia-player
+              entity: media_player.bathroom_assistant
+              icon: mdi:google-home
           - type: entities
             entities:
               - sensor.current_activity
