@@ -14,15 +14,15 @@ good_morning:
         brightness: 255
       data_template:
         color_temp: >
-          {% if (states.sensor.time.state | round(2)) <= 05.00 %}
+          {% if (states.sensor.decimal_time.state | round(2)) <= 05.00 %}
             500
-          {% elif (states.sensor.time.state | round(2)) <= 09.50 %}
+          {% elif (states.sensor.decimal_time.state | round(2)) <= 09.50 %}
             200
-          {% elif (states.sensor.time.state | round(2)) >= 22.25 %}
+          {% elif (states.sensor.decimal_time.state | round(2)) >= 22.25 %}
             500
           {% elif states.sun.sun.attributes.elevation < 8 %}
             366
-          {% elif (states.sensor.time.state | round(2)) > 9.50 %}
+          {% elif (states.sensor.decimal_time.state | round(2)) > 9.50 %}
             300
           {% else %}
           {% endif %}
