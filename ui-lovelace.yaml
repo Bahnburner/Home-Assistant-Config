@@ -64,7 +64,7 @@ views:
               icon: mdi:google-home
               group: true
               artwork: cover
-              artwork_boarder: true
+              artwork_border: true
           - type: entity-filter
             entities:
               - media_player.livingroom_directv
