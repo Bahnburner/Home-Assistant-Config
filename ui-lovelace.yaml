@@ -370,66 +370,66 @@ views:
 ##################################
 # Filter cards for Media Players #
 ##################################
-          - type: entity-filter
-            entities:
-              - media_player.all_assistants
-            state_filter:
-              - playing
-            show_empty: false
-            card:
-              type: custom:mini-media-player
-              entity: media_player.all_assistants
-              icon: mdi:google-home
-              group: true
-              artwork: cover
-          - type: entity-filter
-            entities:
-              - media_player.all_speakers
-            state_filter:
-              - playing
-            show_empty: false
-            card:
-              type: custom:mini-media-player
-              entity: media_player.all_speakers
-              icon: mdi:google-home
-              group: true
-              artwork: cover
-          - type: entity-filter
-            entities:
-              - media_player.garage_speaker
-            state_filter:
-              - playing
-            show_empty: false
-            card:
-              type: custom:mini-media-player
-              entity: media_player.garage_speaker
-              icon: mdi:google-home
-              group: true
-              artwork: cover
-          - type: entity-filter
-            entities:
-              - media_player.house_party_protocol
-            state_filter:
-              - playing
-            show_empty: false
-            card:
-              type: custom:mini-media-player
-              entity: media_player.house_party_protocol
-              icon: mdi:google-home
-              group: true
-              artwork: cover
-          - type: entity-filter
-            entities:
-              - media_player.nursery_assistant
-            state_filter:
-              - playing
-            show_empty: false
-            card:
-              type: custom:mini-media-player
-              entity: media_player.nursery_assistant
-              icon: mdi:google-home
-              group: true
-              artwork: cover
+      - type: entity-filter
+        entities:
+          - media_player.all_assistants
+        state_filter:
+          - playing
+        show_empty: false
+        card:
+          type: custom:mini-media-player
+          entity: media_player.all_assistants
+          icon: mdi:google-home
+          group: true
+          artwork: cover
+      - type: entity-filter
+        entities:
+          - media_player.all_speakers
+        state_filter:
+          - playing
+        show_empty: false
+        card:
+          type: custom:mini-media-player
+          entity: media_player.all_speakers
+          icon: mdi:google-home
+          group: true
+          artwork: cover
+      - type: entity-filter
+        entities:
+          - media_player.garage_speaker
+        state_filter:
+          - playing
+        show_empty: false
+        card:
+          type: custom:mini-media-player
+          entity: media_player.garage_speaker
+          icon: mdi:google-home
+          group: true
+          artwork: cover
+      - type: entity-filter
+        entities:
+          - media_player.house_party_protocol
+        state_filter:
+          - playing
+        show_empty: false
+        card:
+          type: custom:mini-media-player
+          entity: media_player.house_party_protocol
+          icon: mdi:google-home
+          group: true
+          artwork: cover
+      - type: entity-filter
+        entities:
+          - media_player.nursery_assistant
+        state_filter:
+          - playing
+        show_empty: false
+        card:
+          type: custom:mini-media-player
+          entity: media_player.nursery_assistant
+          icon: mdi:google-home
+          group: true
+          artwork: cover
 
 ##########
 # LIGHTS #
