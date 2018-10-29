@@ -335,13 +335,13 @@ views:
           - entity: light.foyer
             name: Foyer Light
       - type: conditional
-          conditions:
-            - entity: input_boolean.christmas_lights
-              state: "on"
-          card:
-            type: entities
-            entities:
-              - switch.christmas_lights
+        conditions:
+          - entity: input_boolean.christmas_lights
+            state: "on"
+        card:
+          type: entities
+          entities:
+            - switch.christmas_lights
       - id: 83b5c93f379e416faecf8f4910cbfb5d  # Automatically created id
         type: weather-forecast
         entity: weather.forecast     
