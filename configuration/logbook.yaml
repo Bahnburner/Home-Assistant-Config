@@ -2,7 +2,8 @@ exclude:
   entities:
     - sensor.pws_weather_1d
     - sensor.load_5m
-    - sensor.time_2
+    - sensor.time
+    - sensor.decimal_time
     - sensor.cpu
     - sensor.disk
     - sensor.ram
