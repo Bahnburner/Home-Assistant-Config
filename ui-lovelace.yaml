@@ -66,7 +66,6 @@ views:
               icon: mdi:google-home
               group: true
               artwork: cover
-              power: true
           - type: entity-filter
             entities:
               - media_player.livingroom_directv
@@ -151,6 +150,54 @@ views:
             entity: light.master_bedroom
             name: Master Bedroom
             tap_action: toggle
+          - type: entity-filter
+            entities:
+              - media_player.bathroom_assistant
+            state_filter:
+              - playing
+            show_empty: false
+            card:
+              type: custom:mini-media-player
+              entity: media_player.bathroom_assistant
+              icon: mdi:google-home
+              group: true
+              artwork: cover
+          - type: entity-filter
+            entities:
+              - media_player.bedroom_assistant
+            state_filter:
+              - playing
+            show_empty: false
+            card:
+              type: custom:mini-media-player
+              entity: media_player.bedroom_assistant
+              icon: mdi:google-home
+              group: true
+              artwork: cover
+          - type: entity-filter
+            entities:
+              - media_player.bedroom_speaker
+            state_filter:
+              - playing
+            show_empty: false
+            card:
+              type: custom:mini-media-player
+              entity: media_player.bedroom_speaker
+              icon: mdi:google-home
+              group: true
+              artwork: cover
+          - type: entity-filter
+            entities:
+              - media_player.master_suite
+            state_filter:
+              - playing
+            show_empty: false
+            card:
+              type: custom:mini-media-player
+              entity: media_player.master_suite
+              icon: mdi:google-home
+              group: true
+              artwork: cover
           - type: entities
             entities:
               - entity: light.master_bedroom
@@ -169,6 +216,42 @@ views:
             entity: group.kitchen_lighting
             name: Kitchen
             tap_action: toggle
+          - type: entity-filter
+            entities:
+              - media_player.dining_room_speaker
+            state_filter:
+              - playing
+            show_empty: false
+            card:
+              type: custom:mini-media-player
+              entity: media_player.dining_room_speaker
+              icon: mdi:google-home
+              group: true
+              artwork: cover
+          - type: entity-filter
+            entities:
+              - media_player.kitchen
+            state_filter:
+              - playing
+            show_empty: false
+            card:
+              type: custom:mini-media-player
+              entity: media_player.kitchen
+              icon: mdi:google-home
+              group: true
+              artwork: cover
+          - type: entity-filter
+            entities:
+              - media_player.kitchen_display
+            state_filter:
+              - playing
+            show_empty: false
+            card:
+              type: custom:mini-media-player
+              entity: media_player.kitchen_display
+              icon: mdi:google-home
+              group: true
+              artwork: cover
           - type: entities
             entities:
               - light.overhead_light
@@ -202,6 +285,43 @@ views:
             image: /local/resources/images/lovelace/office_edited.jpg
             entity: light.desk_lamp
             tap_action: toggle
+          - type: entity-filter
+            entities:
+              - media_player.mancave_assistant
+            state_filter:
+              - playing
+            show_empty: false
+            card:
+              type: custom:mini-media-player
+              entity: media_player.mancave_assistant
+              icon: mdi:google-home
+              group: true
+              artwork: cover
+          - type: entity-filter
+            entities:
+              - media_player.mancave_directv
+            state_filter:
+              - playing
+            show_empty: false
+            card:
+              type: custom:mini-media-player
+              entity: media_player.mancave_directv
+              icon: mdi:google-home
+              group: true
+              artwork: cover
+              
+          - type: entity-filter
+            entities:
+              - media_player.mancave_tv
+            state_filter:
+              - playing
+            show_empty: false
+            card:
+              type: custom:mini-media-player
+              entity: media_player.mancave_tv
+              icon: mdi:google-home
+              group: true
+              artwork: cover
           - type: entities
             entities:
               - entity: light.desk_lamp
@@ -274,46 +394,6 @@ views:
         card:
           type: media-control
           entity: media_player.all_speakers
-      - id: 0ced1614532942759f928a60a7338db0  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.bathroom_assistant
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.bathroom_assistant
-      - id: d2ab41468f124ff98fba6a7a372df981  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.bedroom_assistant
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.bedroom_assistant
-      - id: 708938e41edb40d48e10dbe51b2b2f1d  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.bedroom_speaker
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.bedroom_speaker
-      - id: 72c532cd33a94ef9ae6ae7ff232271e4  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.dining_room_speaker
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.dining_room_speaker
       - id: 3b04430911e84b63960b35201a11b0a6  # Automatically created id
         type: entity-filter
         entities:
@@ -334,46 +414,6 @@ views:
         card:
           type: media-control
           entity: media_player.house_party_protocol
-      - id: 364f60efeb754558b6825bab1f325ccf  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.livingroom_assistant
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.livingroom_assistant
-      - id: 148c29a62dde4e1ea3271ccac976c401  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.livingroom_directv
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.livingroom_directv
-      - id: c5ecce7ec8964706ba4cca0f211fb2c1  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.livingroom_speaker
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.livingroom_speaker
-      - id: 30f02e50669c48ba9ad7c2e0acfda114  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.livingroom_tv
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.livingroom_tv
       - id: 3cfd7b732a77401287534c1e6dbbf527  # Automatically created id
         type: entity-filter
         entities:
