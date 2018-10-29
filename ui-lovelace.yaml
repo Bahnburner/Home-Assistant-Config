@@ -269,11 +269,8 @@ views:
           - playing
         show_empty: false
         card:
-          type: custom:mini-media-player
+          type: media_control
           entity: media_player.livingroom_assistant
-          icon: mdi:google-home
-          show_progress: true
-          artwork: cover
       - id: 148c29a62dde4e1ea3271ccac976c401  # Automatically created id
         type: entity-filter
         entities:
