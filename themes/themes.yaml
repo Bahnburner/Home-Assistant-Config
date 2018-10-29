@@ -58,6 +58,7 @@
     divider-color: "rgba(255, 255, 255, 0.12)" # Divider colour
     paper-card-header-color: "#FFFFFF" # Card header text colour
     table-row-alternative-background-color: "#424242" # Attribute text background color
+    
 
     # Nav Menu #
     paper-listbox-background-color: "#424242" # Listbox background colour
@@ -75,3 +76,4 @@
     paper-slider-pin-color: "#03A9F4"
     paper-slider-active-color: "#03A9F4"
     paper-slider-secondary-color: "#B3E5FC"
+    sidebar-icon-color: "#FFFFFF"
