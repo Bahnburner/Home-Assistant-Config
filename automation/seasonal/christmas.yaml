@@ -37,7 +37,7 @@
     service_template: >
       {% if now().month == 12 %}
         input_boolean.turn_on
-      {% if now().month != 12 %}
+      {% elif now().month != 12 %}
         input_boolean.turn_on
       {% endif %}
     entity_id: input_boolean.christmas_lights
