@@ -75,7 +75,7 @@ views:
             card:
               type: custom:mini-media-player
               entity: media_player.livingroom_directv
-              icon: mdi:google-home
+              icon: mdi:television
               group: true
               artwork: cover
           - type: entity-filter
@@ -87,7 +87,7 @@ views:
             card:
               type: custom:mini-media-player
               entity: media_player.livingroom_speaker
-              icon: mdi:google-home
+              icon: mdi:cast-connected
               group: true
               artwork: cover
           - type: entity-filter
@@ -99,7 +99,7 @@ views:
             card:
               type: custom:mini-media-player
               entity: media_player.livingroom_tv
-              icon: mdi:google-home
+              icon: mdi:cast-connected
               group: true
               artwork: cover
           - type: entity-filter
@@ -111,7 +111,7 @@ views:
             card:
               type: custom:mini-media-player
               entity: media_player.party_mode
-              icon: mdi:google-home
+              icon: mdi:cast-connected
               group: true
               artwork: cover
           - type: entity-filter
@@ -123,7 +123,7 @@ views:
             card:
               type: custom:mini-media-player
               entity: media_player.rasplex
-              icon: mdi:google-home
+              icon: mdi:plex
               group: true
               artwork: cover
           - type: entities
@@ -183,7 +183,7 @@ views:
             card:
               type: custom:mini-media-player
               entity: media_player.bedroom_speaker
-              icon: mdi:google-home
+              icon: mdi:cast-connected
               group: true
               artwork: cover
           - type: entity-filter
@@ -195,7 +195,7 @@ views:
             card:
               type: custom:mini-media-player
               entity: media_player.master_suite
-              icon: mdi:google-home
+              icon: mdi:cast-connected
               group: true
               artwork: cover
           - type: entities
@@ -225,7 +225,7 @@ views:
             card:
               type: custom:mini-media-player
               entity: media_player.dining_room_speaker
-              icon: mdi:google-home
+              icon: mdi:cast-connected
               group: true
               artwork: cover
           - type: entity-filter
@@ -237,7 +237,7 @@ views:
             card:
               type: custom:mini-media-player
               entity: media_player.kitchen
-              icon: mdi:google-home
+              icon: mdi:cast-connected
               group: true
               artwork: cover
           - type: entity-filter
@@ -249,7 +249,7 @@ views:
             card:
               type: custom:mini-media-player
               entity: media_player.kitchen_display
-              icon: mdi:google-home
+              icon: mdi:youtube-tv
               group: true
               artwork: cover
           - type: entities
@@ -306,7 +306,7 @@ views:
             card:
               type: custom:mini-media-player
               entity: media_player.mancave_directv
-              icon: mdi:google-home
+              icon: mdi:television
               group: true
               artwork: cover
           - type: entity-filter
@@ -318,7 +318,7 @@ views:
             card:
               type: custom:mini-media-player
               entity: media_player.mancave_tv
-              icon: mdi:google-home
+              icon: mdi:cast-connected
               group: true
               artwork: cover
           - type: entities
@@ -391,7 +391,7 @@ views:
         card:
           type: custom:mini-media-player
           entity: media_player.all_speakers
-          icon: mdi:google-home
+          icon: mdi:cast-connected
           group: true
           artwork: cover
       - type: entity-filter
@@ -403,7 +403,7 @@ views:
         card:
           type: custom:mini-media-player
           entity: media_player.garage_speaker
-          icon: mdi:google-home
+          icon: mdi:cast-connected
           group: true
           artwork: cover
       - type: entity-filter
@@ -415,7 +415,7 @@ views:
         card:
           type: custom:mini-media-player
           entity: media_player.house_party_protocol
-          icon: mdi:google-home
+          icon: mdi:cast-connected
           group: true
           artwork: cover
       - type: entity-filter
