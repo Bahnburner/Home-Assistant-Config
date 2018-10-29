@@ -36,7 +36,6 @@
       entity_id: light.living_room
       value_template: '{{ states.light.living_room.attributes.brightness }}'
     time:
-      entity_id: sensor.time_2
       value_template: '{{(now().strftime("%H") | int) + (now().strftime("%M")|int / 60) | round(2)}}'
     protect_down:
       entity_id: sensor.downstairs_nest_protect_bedroom_battery_heath
