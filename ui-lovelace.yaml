@@ -337,7 +337,7 @@ views:
       - type: conditional
         conditions:
           - entity: input_boolean.christmas_lights
-            state: "off"
+            state: "on"
         card:
           type: entities
           entities:
