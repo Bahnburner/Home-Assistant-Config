@@ -4,6 +4,9 @@
 #    - alerts
 #    - weather_1d
 #    - precip_1d
+- platform: time_date
+  display_options:
+    - 'time'
 - platform: darksky
   api_key: !secret darksky
   latitude: !secret latitude
@@ -215,9 +218,6 @@
   unit_of_measurement: '%'
 - platform: dnsip
   scan_interval: 300
-- platform: time_date
-  display_options:
-    - 'time'
 - platform: rest
   resource: http://10.0.0.109:61209/api/3/quicklook/cpu
   name: "CPU Usage"
