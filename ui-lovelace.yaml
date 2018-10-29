@@ -309,7 +309,6 @@ views:
               icon: mdi:google-home
               group: true
               artwork: cover
-              
           - type: entity-filter
             entities:
               - media_player.mancave_tv
@@ -333,16 +332,10 @@ views:
       - id: 2721347eab4048cfa247027b0904b4eb  # Automatically created id
         type: entities
         entities:
-          - entity: light.foyer
-            name: Foyer Light
-      - id: fa2f895eaaad477aa2414a94fcbe0d25  # Automatically created id
-        type: entities
-        entities:
           - entity: light.dining_room
             name: Dining Room Lights
-      - id: 83b5c93f379e416faecf8f4910cbfb5d  # Automatically created id
-        type: weather-forecast
-        entity: weather.forecast
+          - entity: light.foyer
+            name: Foyer Light
       - id: a85d6987bce14c1abf0a2e4830f47f59  # Automatically created id
         type: glance
         title: Alarm
@@ -370,131 +363,73 @@ views:
             icon: mdi:thermometer
           - entity: sensor.water_heater_leak_sensor
             name: WH
+      - id: 83b5c93f379e416faecf8f4910cbfb5d  # Automatically created id
+        type: weather-forecast
+        entity: weather.forecast            
 
 ##################################
 # Filter cards for Media Players #
 ##################################
-      - id: 5ca79fc6e5ab408da9a5ef214fcf7d69  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.all_assistants
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.all_assistants
-      - id: 42a3e983648b45bdb359cdbe71a10ae5  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.all_speakers
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.all_speakers
-      - id: 3b04430911e84b63960b35201a11b0a6  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.garage_speaker
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.garage_speaker
-      - id: a3b13e76a371446ea3a56bb63411242e  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.house_party_protocol
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.house_party_protocol
-      - id: 3cfd7b732a77401287534c1e6dbbf527  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.mancave_directv
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.mancave_directv
-      - id: 7e0b557b0782445ca5ec9340260f298e  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.mancave_tv
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.mancave_tv
-      - id: 6f81a11ea76d488fa30f543347fc8e45  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.master_suite
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.master_suite
-      - id: 74cdb2485bbb4175805d059f546550de  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.party_mode
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.party_mode
-      - id: 115c102cabfd4d019e888557b7e82cce  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.rasplex
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.rasplex
-      - id: 73f0df7d6d3a47ae9af8aade017ba7e7  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.kitchen_display
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.kitchen_display
-      - id: f838243e58804f89abe3bd3adfc174b0  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.mancave_assistant
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.mancave_assistant
-      - id: 2e9663fcac934936b0e23610cb1d1f00  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.nursery_assistant
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.nursery_assistant
-
+          - type: entity-filter
+            entities:
+              - media_player.all_assistants
+            state_filter:
+              - playing
+            show_empty: false
+            card:
+              type: custom:mini-media-player
+              entity: media_player.all_assistants
+              icon: mdi:google-home
+              group: true
+              artwork: cover
+          - type: entity-filter
+            entities:
+              - media_player.all_speakers
+            state_filter:
+              - playing
+            show_empty: false
+            card:
+              type: custom:mini-media-player
+              entity: media_player.all_speakers
+              icon: mdi:google-home
+              group: true
+              artwork: cover
+          - type: entity-filter
+            entities:
+              - media_player.garage_speaker
+            state_filter:
+              - playing
+            show_empty: false
+            card:
+              type: custom:mini-media-player
+              entity: media_player.garage_speaker
+              icon: mdi:google-home
+              group: true
+              artwork: cover
+          - type: entity-filter
+            entities:
+              - media_player.house_party_protocol
+            state_filter:
+              - playing
+            show_empty: false
+            card:
+              type: custom:mini-media-player
+              entity: media_player.house_party_protocol
+              icon: mdi:google-home
+              group: true
+              artwork: cover
+          - type: entity-filter
+            entities:
+              - media_player.nursery_assistant
+            state_filter:
+              - playing
+            show_empty: false
+            card:
+              type: custom:mini-media-player
+              entity: media_player.nursery_assistant
+              icon: mdi:google-home
+              group: true
+              artwork: cover
 
 ##########
 # LIGHTS #
