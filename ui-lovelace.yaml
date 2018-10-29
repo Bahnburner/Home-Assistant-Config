@@ -61,7 +61,7 @@ views:
               - playing
             show_empty: false
             card:
-              type: custom:mini-midia-player
+              type: custom:mini-media-player
               entity: media_player.livingroom_assistant
               icon: mdi:google-home
           - type: entities
