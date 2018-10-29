@@ -20,23 +20,9 @@
     - uv_index
 - platform: template
   sensors:
-    uv_index:
-      friendly_name: 'UV Index'
-      value_template: '{{states.sensor.dark_sky_uv_index.state | int }}'
-    current_temp:
-      friendly_name: 'Current'
-      value_template: '{{ states.sensor.dark_sky_temperature.state | round(0) }}'
-      unit_of_measurement: '°F'
-    high_temp:
-      friendly_name: 'High'
-      value_template: '{{ states.sensor.dark_sky_daytime_high_temperature.state | round(0) }}'
-      unit_of_measurement: '°F'
-    low_temp:
-      friendly_name: 'Low'
-      value_template: '{{ states.sensor.dark_sky_overnight_low_temperature.state | round(0) }}'
-      unit_of_measurement: '°F'
     current_activity:
       friendly_name: 'Current Activity'
+      entity_id: remote.livingroom
       value_template: >
         {% if states.remote.livingroom.attributes.current_activity == null%}
           'Unknown'
@@ -44,122 +30,155 @@
           {{states.remote.livingroom.attributes.current_activity}}
         {% endif %}
     brightness_pantry:
+      entity_id: light.pantry
       value_template: '{{ states.light.pantry.attributes.brightness }}'
     brightness_lr:
+      entity_id: light.living_room
       value_template: '{{ states.light.living_room.attributes.brightness }}'
-    color_temp_lr:
-      value_template: '{{ states.light.living_room.attributes.xy_color }}'
-    color_temp_br:
-      value_template: '{{ states.light.master_bedroom.attributes.xy_color }}'
-    color_temp_cl:
-      value_template: '{{ states.light.cabinet_lights.attributes.xy_color }}'
     time:
+      entity_id: sensor.time_2
       value_template: '{{(now().strftime("%H") | int) + (now().strftime("%M")|int / 60) | round(2)}}'
     protect_down:
+      entity_id: sensor.downstairs_nest_protect_bedroom_battery_heath
       value_template: '{% if  states.sensor.downstairs_nest_protect_bedroom_battery_health.state == "Ok" and states.sensor.downstairs_nest_protect_bedroom_co_status.state == "Ok" and states.sensor.downstairs_nest_protect_bedroom_smoke_status.state == "Ok" %}Online{% elif states.sensor.kithen_nest_protect_bedroom_co_status.state == "Emergency" or states.sensor.downstairs_nest_protect_bedroom_smoke_status.state == "Emergency" %}Emergency {% elif states.sensor.downstairs_nest_protect_bedroom_battery_health.state == "Replace" %}Low Battery {% else %}Error{% endif %}'    
     protect_kitchen:
+      entity_id: sensor.downstairs_nest_protect_kitchen_battery_health
       value_template: '{% if  states.sensor.downstairs_nest_protect_kitchen_battery_health.state == "Ok" and states.sensor.downstairs_nest_protect_kitchen_co_status.state == "Ok" and states.sensor.downstairs_nest_protect_kitchen_smoke_status.state == "Ok" %}Online{% elif states.sensor.downstairs_nest_protect_kitchen_co_status.state == "Emergency" or states.sensor.downstairs_nest_protect_kitchen_smoke_status.state == "Emergency" %}Emergency {% elif states.sensor.downstairs_nest_protect_kitchen_battery_health.state == "Replace" %}Low Battery {% else %}Error{% endif %}'
     protect_up:
+      entity_id: sensor.upstairs_nest_protect_hallway_battery_health
       value_template: '{% if  states.sensor.upstairs_nest_protect_hallway_battery_health.state == "Ok" and states.sensor.upstairs_nest_protect_hallway_co_status.state == "Ok" and states.sensor.upstairs_nest_protect_hallway_smoke_status.state == "Ok" %}Online{% elif states.sensor.kithen_nest_protect_hallway_co_status.state == "Emergency" or states.sensor.upstairs_nest_protect_hallway_smoke_status.state == "Emergency" %}Emergency {% elif states.sensor.upstairs_nest_protect_hallway_battery_health.state == "Replace" %}Low Battery {% else %}Error{% endif %}'      
     front_door:
+      entity_id: binary_sensor.front_door
       friendly_name: 'Front Door'
       value_template: '{% if is_state("binary_sensor.front_door", "off") %}Closed{% else %}Open{% endif %}'
       icon_template: '{% if is_state("binary_sensor.front_door", "off") %}mdi:door{% else %}mdi:door-open{% endif %}'
     back_door:
+      entity_id: binary_sensor.back_door
       friendly_name: 'Back Door'
       value_template: '{% if is_state("binary_sensor.back_door", "off") %}Closed{% else %}Open{% endif %}'
       icon_template: '{% if is_state("binary_sensor.back_door", "off") %}mdi:door{% else %}mdi:door-open{% endif %}'
     garage_door:
+      entity_id: binary_sensor.garage_door
       friendly_name: 'Garage Door'
       value_template: '{% if is_state("binary_sensor.garage_door", "off") %}Closed{% else %}Open{% endif %}'
       icon_template: '{% if is_state("binary_sensor.garage_door", "off") %}mdi:door{% else %}mdi:door-open{% endif %}'
     front_windows:
+      entity_id: binary_sensor.front_windows
       friendly_name: 'Front Windows'
       value_template: '{% if is_state("binary_sensor.front_windows", "off") %}Closed{% else %}Open{% endif %}'
       icon_template: '{% if is_state("binary_sensor.front_windows", "off") %}mdi:window-closed{% else %}mdi:window-open{% endif %}'
     back_windows:
+      entity_id: binary_sensor.back_windows
       friendly_name: 'Back Windows'
       value_template: '{% if is_state("binary_sensor.back_windows", "off") %}Closed{% else %}Open{% endif %}'
       icon_template: '{% if is_state("binary_sensor.back_windows", "off") %}mdi:window-closed{% else %}mdi:window-open{% endif %}'
     bedroom_windows:
+      entity_id: binary_sensor.bedroom_windows
       friendly_name: 'Bedroom Windows'
       value_template: '{% if is_state("binary_sensor.bedroom_windows", "off") %}Closed{% else %}Open{% endif %}'
       icon_template: '{% if is_state("binary_sensor.bedroom_windows", "off") %}mdi:window-closed{% else %}mdi:window-open{% endif %}'
     downstairs_windows:
+      entity_id:
+        - binary_sensor.back_windows
+        - binary_sensor.front_windows
       friendly_name: 'Back Windows'
       value_template: '{% if states.binary_sensor.back_windows.state == "off" and states.binary_sensor.front_windows.state == "off" %}Closed{% else %}Open{% endif %}'
       icon_template: '{% if states.binary_sensor.back_windows.state == "off" and states.binary_sensor.front_windows.state == "off" %}mdi:window-closed{% else %}mdi:window-open{% endif %}'
     huebridge:
+      entity_id: device_tracker.huebridge
       value_template: '{% if is_state("device_tracker.huebridge", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Hue Bridge'
     harmonyhub:
+      entity_id: device_tracker.harmonyhub
       value_template: '{% if is_state("device_tracker.harmonyhub", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Harmony Hub'
     smartthingshub:
+      entity_id: device_tracker.smartthingshub
       value_template: '{% if is_state("device_tracker.smartthingshub", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'SmartThings Hub'
     myq:
+      entity_id: device_tracker.myq
       value_template: '{% if is_state("device_tracker.myq", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'MyQ Bridge'
     macmini:
+      entity_id: device_tracker.macmini
       value_template: '{% if is_state("device_tracker.macmini", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Mac Mini'
     directv_genie:
+      entity_id: device_tracker.directv_genie
       value_template: '{% if is_state("device_tracker.directv_genie", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'DirecTv Genie'
     google_home_livingroom:
+      entity_id: device_tracker.google_home_livingroom
       value_template: '{% if is_state("device_tracker.google_home_livingroom", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Google Home (Livingroom)' 
     google_home_mini_mancave:
+      entity_id: device_tracker.google_home_mini_mancave
       value_template: '{% if is_state("device_tracker.google_home_mini_mancave", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Google Home Mini (Mancave)' 
     google_home_mini_nursery:
+      entity_id: device_tracker.google_home_mini_nursery
       value_template: '{% if is_state("device_tracker.google_home_mini_nursery", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Google Home Mini (Nursery)'       
     google_home_hub_kitchen:
+      entity_id: device_tracker.google_home_hub_kitchen
       value_template: '{% if is_state("device_tracker.google_home_hub_kitchen", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Google Home Hub (Kitchen)'  
     google_home_mini_bedroom:
+      entity_id: device_tracker.google_home_mini_bedroom
       value_template: '{% if is_state("device_tracker.google_home_mini_bedroom", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Google Home Mini (Bedroom)'
     google_home_mini_bathroom:
+      entity_id: device_tracker.google_home_mini_bathroom
       value_template: '{% if is_state("device_tracker.google_home_mini_bathroom", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Google Home Mini (Bathroom)' 
     chromecast_man_cave:
+      entity_id: device_tracker.chromecast_man_cave
       value_template: '{% if is_state("device_tracker.chromecast_man_cave", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Chromecast (Man Cave)'
     chromecast_audio_dining_room:
+      entity_id: device_tracker.chromecast_audio_dining_room
       value_template: '{% if is_state("device_tracker.chromecast_audio_dining_room", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Chromecast Audio (Dining Room)'
     chromecast_audio_garage:
+      entity_id: device_tracker.chromecast_audio_garage
       value_template: '{% if is_state("device_tracker.chromecast_audio_garage", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Chromecast Audio (Garage)'  
     viziocrave360:
+      entity_id: device_tracker.viziocrave360
       value_template: '{% if is_state("device_tracker.viziocrave360", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Vizio Crave 360' 
     vizio_m70e3:
+      entity_id: device_tracker.vizio_m70e3
       value_template: '{% if is_state("device_tracker.vizio_m70e3", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Vizio M70'
     lg_sj9:
+      entity_id: device_tracker.lg_sj9
       value_template: '{% if is_state("device_tracker.lg_sj9", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'LG SJ9' 
     rasplex:
+      entity_id: device_tracker.rasplex
       value_template: '{% if is_state("device_tracker.rasplex", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'RasPlex'
     nesthello:
+      entity_id: device_tracker.nest_hello
       value_template: '{% if is_state("device_tracker.nest_hello", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Nest Hello'
     lightifybridge:
+      entity_id: device_tracker.lightify_bridge
       value_template: '{% if is_state("device_tracker.lightify_bridge", "home") %}Online{% else %}Offline{% endif %}'
       friendly_name: 'Lightify Bridge'
     away_toggle:
+      entity_id: input_boolean.disable_away_mode
       value_template: '{% if is_state("input_boolean.disable_away_mode", "on") %}home{% else %}not_home{% endif %}'
       friendly_name: 'Away Toggle'    
     hvac_leak_sensor:
+      entity_id: binary_sensor.hvac_leak_sensor
       value_template: '{% if is_state("binary_sensor.hvac_leak_sensor", "off") %}Dry{% elif is_state("binary_sensor.hvac_leak_sensor", "on") %}Wet{% endif %}'
       icon_template: '{% if is_state("binary_sensor.hvac_leak_sensor", "off") %}mdi:water-off{% elif is_state("binary_sensor.hvac_leak_sensor", "on") %}mdi:water{% endif %}'
       friendly_name: 'HVAC Leak Sensor'
     water_heater_leak_sensor:
+      entity_id: binary_sensor.water_heater_leak_sensor
       value_template: '{% if is_state("binary_sensor.water_heater_leak_sensor", "off") %}Dry{% elif is_state("binary_sensor.water_heater_leak_sensor", "on") %}Wet{% endif %}'
       icon_template: '{% if is_state("binary_sensor.water_heater_leak_sensor", "off") %}mdi:water-off{% elif is_state("binary_sensor.water_heater_leak_sensor", "on") %}mdi:water{% endif %}'
       friendly_name: 'Water Heater Leak Sensor' 
