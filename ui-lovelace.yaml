@@ -271,7 +271,6 @@ views:
         card:
           type: custom:mini-media-player
           entity: media_player.livingroom_assistant
-          title: Livingroom Assistant
           icon: mdi:google-home
           show_progress: true
           artwork: cover
