@@ -62,7 +62,7 @@ views:
               type: custom:mini-media-player
               entity: media_player.livingroom_directv
               icon: mdi:google-home
-              group: false
+              group: true
               artwork: cover
           - type: entities
             entities:
