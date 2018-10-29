@@ -7,7 +7,6 @@ exclude:
       - binary_sensor.downstairs_thermostat_is_locked
       - binary_sensor.downstairs_thermostat_is_using_emergency_heat
       - binary_sensor.rain
-      - binary_sensor.ring_doorbell
       - binary_sensor.upstairs_thermostat_has_leaf
       - binary_sensor.upstairs_thermostat_is_locked
       - binary_sensor.upstairs_thermostat_is_using_emergency_heat
@@ -134,9 +133,6 @@ exclude:
       - script.who_dat
       - sensor.brightness_lr
       - sensor.brightness_pantry
-      - sensor.color_temp_br
-      - sensor.color_temp_cl
-      - sensor.color_temp_lr
       - sensor.dark_sky_icon
       - sensor.dark_sky_precip_intensity
       - sensor.dark_sky_summary
