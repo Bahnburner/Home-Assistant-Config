@@ -54,9 +54,17 @@ views:
             entity: light.living_room
             name: Livingroom
             tap_action: toggle
-          - type: custom:mini-media-player
-            entity: media_player.livingroom_assistant
-            icon: mdi:google-home
+          - type: entity-filter
+            entities:
+              - media_player.livingroom_assistant
+            state_filter:
+              - playing
+            show_empty: false
+            card:
+              type: custom:mini-media-player
+              entity: media_player.livingroom_assistant
+              icon: mdi:google-home
+              group: true
           - type: entities
             entities:
               - sensor.current_activity
