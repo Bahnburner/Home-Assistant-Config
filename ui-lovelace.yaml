@@ -336,6 +336,9 @@ views:
             name: Dining Room Lights
           - entity: light.foyer
             name: Foyer Light
+      - id: 83b5c93f379e416faecf8f4910cbfb5d  # Automatically created id
+        type: weather-forecast
+        entity: weather.forecast     
       - id: a85d6987bce14c1abf0a2e4830f47f59  # Automatically created id
         type: glance
         title: Alarm
@@ -362,10 +365,7 @@ views:
             name: S Attic
             icon: mdi:thermometer
           - entity: sensor.water_heater_leak_sensor
-            name: WH
-      - id: 83b5c93f379e416faecf8f4910cbfb5d  # Automatically created id
-        type: weather-forecast
-        entity: weather.forecast            
+            name: WH       
 
 ##################################
 # Filter cards for Media Players #
