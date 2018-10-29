@@ -30,3 +30,5 @@
   simulate_presence:
     initial: off
     icon: mdi:account-multiple
+  christmas_lights:
+    initial: off
