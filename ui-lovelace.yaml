@@ -56,13 +56,13 @@ views:
             tap_action: toggle
           - type: entity-filter
             entities:
-              - media_player.bathroom_assistant
+              - media_player.livingroom_assistant
             state_filter:
               - playing
             show_empty: false
             card:
               type: custom:mini-midia-player
-              entity: media_player.bathroom_assistant
+              entity: media_player.livingroom_assistant
               icon: mdi:google-home
           - type: entities
             entities:
