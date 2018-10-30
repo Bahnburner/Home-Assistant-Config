@@ -308,10 +308,7 @@ views:
           - entity: light.foyer
             name: Foyer Light
           - entity: light.dining_room
-            name: Dining Room Lights
-      - id: 83b5c93f379e416faecf8f4910cbfb5d  # Automatically created id
-        type: weather-forecast
-        entity: weather.forecast            
+            name: Dining Room Lights      
       - type: conditional
         conditions:
           - entity: input_boolean.christmas_lights
@@ -319,7 +316,10 @@ views:
         card:
           type: entities
           entities:
-            - switch.christmas_lights            
+            - switch.christmas_lights
+      - id: 83b5c93f379e416faecf8f4910cbfb5d  # Automatically created id
+        type: weather-forecast
+        entity: weather.forecast               
       - id: a85d6987bce14c1abf0a2e4830f47f59  # Automatically created id
         type: glance
         title: Alarm
