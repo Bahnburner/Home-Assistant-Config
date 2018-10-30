@@ -55,9 +55,9 @@ views:
           - type: conditional
             conditions:
               - entity: sensor.current_activity
-                state: "Watch DirecTV"
+                state: 'Watch DirecTV'
             card:
-              type: custom:mini-media-player
+              type: entities
               entity: media_player.livingroom_directv
               icon: mdi:television
               group: true
