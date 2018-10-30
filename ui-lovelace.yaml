@@ -57,6 +57,10 @@ views:
           - type: custom:monster-card
             card:
               type: custom:mini-media-player
+            filter:
+              include:
+                - entity_id: media_player.livingroom_directv
+                  state: 'playing'
           - type: entities
             entities:
               - sensor.current_activity
