@@ -239,6 +239,39 @@ views:
               - light.pantry
               - light.cabinet_lights
               - sensor.protect_kitchen
+          - type: entities
+            entities:
+              - entity: light.foyer
+                name: Foyer Light 
+              - entity: light.dining_room
+                name: Dining Room Lights
+          - id: a85d6987bce14c1abf0a2e4830f47f59  # Automatically created id
+            type: glance
+            title: Alarm
+            tap_action: toggle
+            entities:
+              - entity: sensor.front_door
+                name: Front
+              - entity: sensor.front_windows
+                name: Front
+              - entity: sensor.bedroom_windows
+                name: Bedroom
+              - entity: sensor.back_windows
+                name: Back
+              - entity: sensor.back_door
+                name: Back
+              - entity: sensor.hvac_leak_sensor
+                name: HVAC
+              - entity: sensor.big_attic_temp
+                name: N Attic
+                icon: mdi:thermometer
+              - entity: sensor.garage_door
+                name: Garage
+              - entity: sensor.small_attic_temp
+                name: S Attic
+                icon: mdi:thermometer
+              - entity: sensor.water_heater_leak_sensor
+                name: WH              
 #### EXTERIOR STACK
       - id: 142667485a3a4707969f08e8adfa3b56  # Automatically created id
         type: vertical-stack
@@ -304,13 +337,7 @@ views:
                 type: custom:slider-entity-row
                 hide_toggle: true
               - climate.upstairs_hallway
-              - sensor.protect_up
-      - type: entities
-        entities:
-          - entity: light.foyer
-            name: Foyer Light 
-          - entity: light.dining_room
-            name: Dining Room Lights  
+              - sensor.protect_up            
       - type: conditional
         conditions:
           - entity: input_boolean.christmas_lights
@@ -319,33 +346,7 @@ views:
           type: entities
           entities:
             - switch.christmas_lights             
-      - id: a85d6987bce14c1abf0a2e4830f47f59  # Automatically created id
-        type: glance
-        title: Alarm
-        tap_action: toggle
-        entities:
-          - entity: sensor.front_door
-            name: Front
-          - entity: sensor.front_windows
-            name: Front
-          - entity: sensor.bedroom_windows
-            name: Bedroom
-          - entity: sensor.back_windows
-            name: Back
-          - entity: sensor.back_door
-            name: Back
-          - entity: sensor.hvac_leak_sensor
-            name: HVAC
-          - entity: sensor.big_attic_temp
-            name: N Attic
-            icon: mdi:thermometer
-          - entity: sensor.garage_door
-            name: Garage
-          - entity: sensor.small_attic_temp
-            name: S Attic
-            icon: mdi:thermometer
-          - entity: sensor.water_heater_leak_sensor
-            name: WH
+
 
 ##################################
 # Filter cards for Misc Media Players #
