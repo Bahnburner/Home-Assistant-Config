@@ -252,6 +252,9 @@ views:
               - light.front_floods
               - light.rear_floods
               - light.patio_lights
+      - id: 83b5c93f379e416faecf8f4910cbfb5d  # Automatically created id
+        type: weather-forecast
+        entity: weather.forecast
 #### OFFICE STACK
       - id: 1f7dc905f46b4942b71c62cd5ea1f7d3  # Automatically created id
         type: vertical-stack
@@ -317,9 +320,6 @@ views:
           type: entities
           entities:
             - switch.christmas_lights            
-      - id: 83b5c93f379e416faecf8f4910cbfb5d  # Automatically created id
-        type: weather-forecast
-        entity: weather.forecast
       - id: a85d6987bce14c1abf0a2e4830f47f59  # Automatically created id
         type: glance
         title: Alarm
