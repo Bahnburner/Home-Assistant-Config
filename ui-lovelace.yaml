@@ -57,9 +57,8 @@ views:
               - entity: media_player.livingroom_directv
                 state: 'playing'
             card:
-              type: entities
-              entities:
-                - media_player.livingroom_directv
+              type: media-control
+              entity: media_player.livingroom_directv
           - type: entities
             entities:
               - sensor.current_activity
