@@ -5,6 +5,8 @@ resources:
     type: js
   - url: /local/resources/cards/slider-entity-row.js?v=1
     type: js
+  - url: /local/resources/cards/monster-card.js?v=1
+    type: js    
   - url: /local/resources/cards/mini-media-player2.js?v=0.8.8
     type: module
 
