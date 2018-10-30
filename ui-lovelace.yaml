@@ -54,19 +54,6 @@ views:
             entity: light.living_room
             name: Livingroom
             tap_action: toggle
-          - type: custom:monster-card
-            card:
-              type: entities
-            filter:
-              include:
-                - entity_id: media_player.livingroom_directv
-                  state: 'playing'
-                - entity_id: media_player.livingroom_tv
-                  state: 'playing'
-                - entity_id: media_player.livingroom_speaker
-                  state: 'playing'
-                - entity_id: media_player.livingroom_assistant
-                  state: 'playing'
           - type: entities
             entities:
               - sensor.current_activity
