@@ -54,8 +54,8 @@ views:
             tap_action: toggle
           - type: conditional
             conditions:
-              - entity: sensor.current_activity
-                state: 'On'
+              - entity: media_player.livingroom_directv
+                state: 'playing'
             card:
               type: entities
               entity: media_player.livingroom_directv
