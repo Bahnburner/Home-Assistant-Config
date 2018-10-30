@@ -60,6 +60,7 @@ views:
                 icon: mdi:television
                 group: true
                 artwork: none
+                hide_power: true
                 hide_volume: true
             state_filter:
               - playing
@@ -256,6 +257,7 @@ views:
                 icon: mdi:television
                 group: true
                 artwork: none
+                hide_power: true
                 hide_volume: true
             state_filter:
               - playing
