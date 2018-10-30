@@ -63,7 +63,6 @@ views:
                 artwork: none
                 hide_power: true
                 hide_volume: true
-                scroll_info: true
             state_filter:
               - playing
             show_empty: false
