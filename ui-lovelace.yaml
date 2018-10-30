@@ -60,8 +60,11 @@ views:
             filter:
               include:
                 - entity_id: media_player.livingroom_directv
+                  state: 'playing'
                 - entity_id: media_player.livingroom_tv
+                  state: 'playing'
                 - entity_id: media_player.livingroom_speaker
+                  state: 'playing'
                 - entity_id: media_player.livingroom_assistant
                   state: 'playing'
           - type: entities
