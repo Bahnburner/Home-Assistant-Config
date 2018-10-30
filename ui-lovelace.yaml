@@ -52,18 +52,11 @@ views:
             entity: light.living_room
             name: Livingroom
             tap_action: toggle
-          - type: entity-filter
-            entities:
-              - media_player.mancave_assistant
-            state_filter:
-              - playing
-            show_empty: false
-            card:
-              type: custom:mini-media-player
-              entity: media_player.mancave_assistant
-              icon: mdi:television
-              group: true
-              artwork: cover
+          - type: custom:mini-media-player
+            entity: media_player.livingroom_directv
+            icon: mdi:television
+            group: true
+            artwork: cover
           - type: entities
             entities:
               - sensor.current_activity
