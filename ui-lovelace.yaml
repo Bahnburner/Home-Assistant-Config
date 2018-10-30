@@ -56,7 +56,7 @@ views:
             tap_action: toggle
           - type: custom:monster-card
             card:
-              type: custom:media-control
+              type: media-control
             filter:
               include:
                 - entity_id: media_player.livingroom_directv
