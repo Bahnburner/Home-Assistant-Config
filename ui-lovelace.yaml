@@ -5,8 +5,8 @@ resources:
     type: js
   - url: /local/resources/cards/slider-entity-row.js?v=1
     type: js
-  - url: /local/resources/cards/mini-media-player.js?v=1
-    type: js
+  - url: /local/resources/cards/mini-media-player.js?v=0.8.9
+    type: module
 
 title: Hidden Ridge
 views:
@@ -52,6 +52,18 @@ views:
             entity: light.living_room
             name: Livingroom
             tap_action: toggle
+          - type: entity-filter
+            entities:
+              - media_player.livingroom_directv
+            state_filter:
+              - playing
+            show_empty: false
+            card:
+              type: custom:mini-media-player
+              entity: media_player.livingroom_directv
+              icon: mdi:television
+              group: true
+              artwork: cover
           - type: entities
             entities:
               - sensor.current_activity
