@@ -57,7 +57,7 @@ views:
             entities:
               - type: custom:mini-media-player
                 entity: media_player.rasplex
-                icon: mdi:cast-connected
+                icon: mdi:plex
                 group: true
                 artwork: cover
             state_filter:
@@ -396,7 +396,7 @@ views:
         entities:
           - type: custom:mini-media-player
             entity: media_player.nursery_assistant
-            icon: mdi:cast-connected
+            icon: mdi:google-home
             group: true
             artwork: cover
         state_filter:
