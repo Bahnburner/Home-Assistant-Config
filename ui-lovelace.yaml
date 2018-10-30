@@ -56,6 +56,16 @@ views:
           - type: entity-filter
             entities:
               - type: custom:mini-media-player
+                entity: media_player.rasplex
+                icon: mdi:cast-connected
+                group: true
+                artwork: cover
+            state_filter:
+              - playing
+            show_empty: false
+          - type: entity-filter
+            entities:
+              - type: custom:mini-media-player
                 entity: media_player.livingroom_directv
                 icon: mdi:television
                 group: true
@@ -339,208 +349,59 @@ views:
             name: WH
 
 ##################################
-# Filter cards for Media Players #
+# Filter cards for Misc Media Players #
 ##################################
-      - id: 5ca79fc6e5ab408da9a5ef214fcf7d69  # Automatically created id
-        type: entity-filter
+
+      - type: entity-filter
         entities:
-          - media_player.all_assistants
+          - type: custom:mini-media-player
+            entity: media_player.all_assistants
+            icon: mdi:cast-connected
+            group: true
+            artwork: cover
+        state_filter:
+          - playing
+        show_empty: false 
+      - type: entity-filter
+        entities:
+          - type: custom:mini-media-player
+            entity: media_player.all_speakers
+            icon: mdi:cast-connected
+            group: true
+            artwork: cover
         state_filter:
           - playing
         show_empty: false
-        card:
-          type: media-control
-          entity: media_player.all_assistants
-      - id: 42a3e983648b45bdb359cdbe71a10ae5  # Automatically created id
-        type: entity-filter
+      - type: entity-filter
         entities:
-          - media_player.all_speakers
+          - type: custom:mini-media-player
+            entity: media_player.garage_speaker
+            icon: mdi:cast-connected
+            group: true
+            artwork: cover
         state_filter:
           - playing
         show_empty: false
-        card:
-          type: media-control
-          entity: media_player.all_speakers
-      - id: 0ced1614532942759f928a60a7338db0  # Automatically created id
-        type: entity-filter
+      - type: entity-filter
         entities:
-          - media_player.bathroom_assistant
+          - type: custom:mini-media-player
+            entity: media_player.house_party_protocol
+            icon: mdi:cast-connected
+            group: true
+            artwork: cover
         state_filter:
           - playing
         show_empty: false
-        card:
-          type: media-control
-          entity: media_player.bathroom_assistant
-      - id: d2ab41468f124ff98fba6a7a372df981  # Automatically created id
-        type: entity-filter
+      - type: entity-filter
         entities:
-          - media_player.bedroom_assistant
+          - type: custom:mini-media-player
+            entity: media_player.nursery_assistant
+            icon: mdi:cast-connected
+            group: true
+            artwork: cover
         state_filter:
           - playing
         show_empty: false
-        card:
-          type: media-control
-          entity: media_player.bedroom_assistant
-      - id: 708938e41edb40d48e10dbe51b2b2f1d  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.bedroom_speaker
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.bedroom_speaker
-      - id: 72c532cd33a94ef9ae6ae7ff232271e4  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.dining_room_speaker
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.dining_room_speaker
-      - id: 3b04430911e84b63960b35201a11b0a6  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.garage_speaker
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.garage_speaker
-      - id: a3b13e76a371446ea3a56bb63411242e  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.house_party_protocol
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.house_party_protocol
-      - id: 364f60efeb754558b6825bab1f325ccf  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.livingroom_assistant
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.livingroom_assistant
-      - id: 148c29a62dde4e1ea3271ccac976c401  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.livingroom_directv
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.livingroom_directv
-      - id: c5ecce7ec8964706ba4cca0f211fb2c1  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.livingroom_speaker
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.livingroom_speaker
-      - id: 30f02e50669c48ba9ad7c2e0acfda114  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.livingroom_tv
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.livingroom_tv
-      - id: 3cfd7b732a77401287534c1e6dbbf527  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.mancave_directv
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.mancave_directv
-      - id: 7e0b557b0782445ca5ec9340260f298e  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.mancave_tv
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.mancave_tv
-      - id: 6f81a11ea76d488fa30f543347fc8e45  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.master_suite
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.master_suite
-      - id: 74cdb2485bbb4175805d059f546550de  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.party_mode
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.party_mode
-      - id: 115c102cabfd4d019e888557b7e82cce  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.rasplex
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.rasplex
-      - id: 73f0df7d6d3a47ae9af8aade017ba7e7  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.kitchen_display
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.kitchen_display
-      - id: f838243e58804f89abe3bd3adfc174b0  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.mancave_assistant
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.mancave_assistant
-      - id: 2e9663fcac934936b0e23610cb1d1f00  # Automatically created id
-        type: entity-filter
-        entities:
-          - media_player.nursery_assistant
-        state_filter:
-          - playing
-        show_empty: false
-        card:
-          type: media-control
-          entity: media_player.nursery_assistant
 
 
 ##########
