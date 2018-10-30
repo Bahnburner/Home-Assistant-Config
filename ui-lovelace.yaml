@@ -185,6 +185,36 @@ views:
             entity: group.kitchen_lighting
             name: Kitchen
             tap_action: toggle
+          - type: entity-filter
+            entities:
+              - type: custom:mini-media-player
+                entity: media_player.dining_room_speaker
+                icon: mdi:google-home
+                group: true
+                artwork: cover
+            state_filter:
+              - playing
+            show_empty: false 
+          - type: entity-filter
+            entities:
+              - type: custom:mini-media-player
+                entity: media_player.kitchen_display
+                icon: mdi:google-home
+                group: true
+                artwork: cover
+            state_filter:
+              - playing
+            show_empty: false 
+          - type: entity-filter
+            entities:
+              - type: custom:mini-media-player
+                entity: media_player.kitchen
+                icon: mdi:google-home
+                group: true
+                artwork: cover
+            state_filter:
+              - playing
+            show_empty: false 
           - type: entities
             entities:
               - light.overhead_light
@@ -218,6 +248,36 @@ views:
             image: /local/resources/images/lovelace/office_edited.jpg
             entity: light.desk_lamp
             tap_action: toggle
+          - type: entity-filter
+            entities:
+              - type: custom:mini-media-player
+                entity: media_player.mancave_directv
+                icon: mdi:google-home
+                group: true
+                artwork: cover
+            state_filter:
+              - playing
+            show_empty: false
+          - type: entity-filter
+            entities:
+              - type: custom:mini-media-player
+                entity: media_player.mancave_tv
+                icon: mdi:google-home
+                group: true
+                artwork: cover
+            state_filter:
+              - playing
+            show_empty: false
+          - type: entity-filter
+            entities:
+              - type: custom:mini-media-player
+                entity: media_player.mancave_assistant
+                icon: mdi:google-home
+                group: true
+                artwork: cover
+            state_filter:
+              - playing
+            show_empty: false
           - type: entities
             entities:
               - entity: light.desk_lamp
