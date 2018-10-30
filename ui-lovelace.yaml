@@ -302,13 +302,14 @@ views:
                 hide_toggle: true
               - climate.upstairs_hallway
               - sensor.protect_up
-      - id: 2721347eab4048cfa247027b0904b4eb  # Automatically created id
-        type: entities
+      - type: entities
         entities:
           - entity: light.foyer
-            name: Foyer Light
+            name: Foyer Light 
+      - type: entities
+        entities:
           - entity: light.dining_room
-            name: Dining Room Lights      
+            name: Dining Room Lights  
       - type: conditional
         conditions:
           - entity: input_boolean.christmas_lights
