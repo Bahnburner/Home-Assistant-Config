@@ -52,11 +52,16 @@ views:
             entity: light.living_room
             name: Livingroom
             tap_action: toggle
-          - type: custom:mini-media-player
-            entity: media_player.livingroom_directv
-            icon: mdi:television
-            group: true
-            artwork: cover
+          - type: conditional
+            conditions:
+              - entity: sensor.current_activity
+                state: "Watch Directv"
+            card:
+              type: custom:mini-media-player
+              entity: media_player.livingroom_directv
+              icon: mdi:television
+              group: true
+              artwork: cover
           - type: entities
             entities:
               - sensor.current_activity
