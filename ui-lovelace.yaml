@@ -62,7 +62,47 @@ views:
                 artwork: cover
             state_filter:
               - playing
-            show_empty: false            
+            show_empty: false
+          - type: entity-filter
+            entities:
+              - type: custom:mini-media-player
+                entity: media_player.livingroom_tv
+                icon: mdi:google-home
+                group: true
+                artwork: cover
+            state_filter:
+              - playing
+            show_empty: false
+          - type: entity-filter
+            entities:
+              - type: custom:mini-media-player
+                entity: media_player.livingroom_speaker
+                icon: mdi:google-home
+                group: true
+                artwork: cover
+            state_filter:
+              - playing
+            show_empty: false
+          - type: entity-filter
+            entities:
+              - type: custom:mini-media-player
+                entity: media_player.livingroom_assistant
+                icon: mdi:google-home
+                group: true
+                artwork: cover
+            state_filter:
+              - playing
+            show_empty: false
+          - type: entity-filter
+            entities:
+              - type: custom:mini-media-player
+                entity: media_player.party_mode
+                icon: mdi:google-home
+                group: true
+                artwork: cover
+            state_filter:
+              - playing
+            show_empty: false
           - type: entities
             entities:
               - sensor.current_activity
@@ -87,6 +127,46 @@ views:
             entity: light.master_bedroom
             name: Master Bedroom
             tap_action: toggle
+          - type: entity-filter
+            entities:
+              - type: custom:mini-media-player
+                entity: media_player.bedroom_assistant
+                icon: mdi:google-home
+                group: true
+                artwork: cover
+            state_filter:
+              - playing
+            show_empty: false
+          - type: entity-filter
+            entities:
+              - type: custom:mini-media-player
+                entity: media_player.bathroom_assistant
+                icon: mdi:google-home
+                group: true
+                artwork: cover
+            state_filter:
+              - playing
+            show_empty: false
+          - type: entity-filter
+            entities:
+              - type: custom:mini-media-player
+                entity: media_player.bedroom_speaker
+                icon: mdi:google-home
+                group: true
+                artwork: cover
+            state_filter:
+              - playing
+            show_empty: false
+          - type: entity-filter
+            entities:
+              - type: custom:mini-media-player
+                entity: media_player.master_suite
+                icon: mdi:google-home
+                group: true
+                artwork: cover
+            state_filter:
+              - playing
+            show_empty: false
           - type: entities
             entities:
               - entity: light.master_bedroom
