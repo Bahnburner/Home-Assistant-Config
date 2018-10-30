@@ -5,7 +5,7 @@ resources:
     type: js
   - url: /local/resources/cards/slider-entity-row.js?v=1
     type: js
-  - url: /local/resources/cards/mini-media-player.js?v=0.8.9
+  - url: /local/resources/cards/mini-media-player3.js?v=0.8.9
     type: module
 
 title: Hidden Ridge
