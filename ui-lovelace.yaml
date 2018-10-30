@@ -60,6 +60,7 @@ views:
                 icon: mdi:google-home
                 group: true
                 artwork: cover
+                hide_volume: true
             state_filter:
               - playing
             show_empty: false
@@ -254,7 +255,8 @@ views:
                 entity: media_player.mancave_directv
                 icon: mdi:google-home
                 group: true
-                artwork: default
+                artwork: cover
+                hide_volume: true
             state_filter:
               - playing
             show_empty: false
@@ -274,7 +276,7 @@ views:
                 entity: media_player.mancave_assistant
                 icon: mdi:google-home
                 group: true
-                artwork: default
+                artwork: cover
             state_filter:
               - playing
             show_empty: false
