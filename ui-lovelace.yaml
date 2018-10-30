@@ -274,7 +274,7 @@ views:
                 entity: media_player.mancave_assistant
                 icon: mdi:google-home
                 group: true
-                artwork: cover
+                artwork: default
             state_filter:
               - playing
             show_empty: false
