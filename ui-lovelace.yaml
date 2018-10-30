@@ -22,7 +22,6 @@ views:
     id: home
     cards:
 ####   FAMILY STACK
-
       - id: 68d4695e2bda4b15b0a2b6f95e97b9d3  # Automatically created id
         type: vertical-stack
         cards:
@@ -54,6 +53,16 @@ views:
             entity: light.living_room
             name: Livingroom
             tap_action: toggle
+          - type: entity-filter
+            entities:
+              - type: custom:mini-media-player
+                entity: media_player.livingroom_directv
+                icon: mdi:google-home
+                group: true
+                artwork: cover
+            state_filter:
+              - playing
+            show_empty: false            
           - type: entities
             entities:
               - sensor.current_activity
