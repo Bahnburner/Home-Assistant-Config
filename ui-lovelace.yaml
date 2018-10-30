@@ -252,9 +252,6 @@ views:
               - light.front_floods
               - light.rear_floods
               - light.patio_lights
-      - id: 83b5c93f379e416faecf8f4910cbfb5d  # Automatically created id
-        type: weather-forecast
-        entity: weather.forecast
 #### OFFICE STACK
       - id: 1f7dc905f46b4942b71c62cd5ea1f7d3  # Automatically created id
         type: vertical-stack
@@ -312,6 +309,9 @@ views:
             name: Foyer Light
           - entity: light.dining_room
             name: Dining Room Lights
+      - id: 83b5c93f379e416faecf8f4910cbfb5d  # Automatically created id
+        type: weather-forecast
+        entity: weather.forecast            
       - type: conditional
         conditions:
           - entity: input_boolean.christmas_lights
