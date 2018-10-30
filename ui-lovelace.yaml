@@ -59,7 +59,7 @@ views:
                 entity: media_player.rasplex
                 icon: mdi:plex
                 group: true
-                artwork: cover
+                artwork: none
             state_filter:
               - playing
             show_empty: false
@@ -358,7 +358,7 @@ views:
             entity: media_player.all_assistants
             icon: mdi:cast-connected
             group: true
-            artwork: cover
+            artwork: none
         state_filter:
           - playing
         show_empty: false 
@@ -368,7 +368,7 @@ views:
             entity: media_player.all_speakers
             icon: mdi:cast-connected
             group: true
-            artwork: cover
+            artwork: none
         state_filter:
           - playing
         show_empty: false
@@ -378,7 +378,7 @@ views:
             entity: media_player.garage_speaker
             icon: mdi:cast-connected
             group: true
-            artwork: cover
+            artwork: none
         state_filter:
           - playing
         show_empty: false
@@ -388,7 +388,7 @@ views:
             entity: media_player.house_party_protocol
             icon: mdi:cast-connected
             group: true
-            artwork: cover
+            artwork: none
         state_filter:
           - playing
         show_empty: false
@@ -398,11 +398,10 @@ views:
             entity: media_player.nursery_assistant
             icon: mdi:google-home
             group: true
-            artwork: cover
+            artwork: none
         state_filter:
           - playing
         show_empty: false
-
 
 ##########
 # LIGHTS #
