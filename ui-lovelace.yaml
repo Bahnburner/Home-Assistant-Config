@@ -54,13 +54,9 @@ views:
             entity: light.living_room
             name: Livingroom
             tap_action: toggle
-          - type: conditional
-            conditions:
-              - entity: media_player.livingroom_directv
-                state: 'playing'
+          - type: custom:monster-card
             card:
-              type: media-control
-              entity: media_player.livingroom_directv
+              type: custom:mini-media-player
           - type: entities
             entities:
               - sensor.current_activity
