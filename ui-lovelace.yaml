@@ -57,9 +57,9 @@ views:
             entities:
               - type: custom:mini-media-player
                 entity: media_player.livingroom_directv
-                icon: mdi:google-home
+                icon: mdi:television
                 group: true
-                artwork: cover
+                artwork: none
                 hide_volume: true
             state_filter:
               - playing
@@ -68,9 +68,9 @@ views:
             entities:
               - type: custom:mini-media-player
                 entity: media_player.livingroom_tv
-                icon: mdi:google-home
+                icon: mdi:cast-connected
                 group: true
-                artwork: cover
+                artwork: none
             state_filter:
               - playing
             show_empty: false
@@ -78,9 +78,9 @@ views:
             entities:
               - type: custom:mini-media-player
                 entity: media_player.livingroom_speaker
-                icon: mdi:google-home
+                icon: mdi:cast-connected
                 group: true
-                artwork: cover
+                artwork: none
             state_filter:
               - playing
             show_empty: false
@@ -90,7 +90,7 @@ views:
                 entity: media_player.livingroom_assistant
                 icon: mdi:google-home
                 group: true
-                artwork: cover
+                artwork: none
             state_filter:
               - playing
             show_empty: false
@@ -98,9 +98,9 @@ views:
             entities:
               - type: custom:mini-media-player
                 entity: media_player.party_mode
-                icon: mdi:google-home
+                icon: mdi:cast-connected
                 group: true
-                artwork: cover
+                artwork: none
             state_filter:
               - playing
             show_empty: false
@@ -134,7 +134,7 @@ views:
                 entity: media_player.bedroom_assistant
                 icon: mdi:google-home
                 group: true
-                artwork: cover
+                artwork: none
             state_filter:
               - playing
             show_empty: false
@@ -144,7 +144,7 @@ views:
                 entity: media_player.bathroom_assistant
                 icon: mdi:google-home
                 group: true
-                artwork: cover
+                artwork: none
             state_filter:
               - playing
             show_empty: false
@@ -152,9 +152,9 @@ views:
             entities:
               - type: custom:mini-media-player
                 entity: media_player.bedroom_speaker
-                icon: mdi:google-home
+                icon: mdi:cast-connected
                 group: true
-                artwork: cover
+                artwork: none
             state_filter:
               - playing
             show_empty: false
@@ -162,9 +162,9 @@ views:
             entities:
               - type: custom:mini-media-player
                 entity: media_player.master_suite
-                icon: mdi:google-home
+                icon: mdi:cast-connected
                 group: true
-                artwork: cover
+                artwork: none
             state_filter:
               - playing
             show_empty: false
@@ -190,9 +190,9 @@ views:
             entities:
               - type: custom:mini-media-player
                 entity: media_player.dining_room_speaker
-                icon: mdi:google-home
+                icon: mdi:cast-connected
                 group: true
-                artwork: cover
+                artwork: none
             state_filter:
               - playing
             show_empty: false 
@@ -200,9 +200,9 @@ views:
             entities:
               - type: custom:mini-media-player
                 entity: media_player.kitchen_display
-                icon: mdi:google-home
+                icon: mdi:youtube-tv
                 group: true
-                artwork: cover
+                artwork: none
             state_filter:
               - playing
             show_empty: false 
@@ -210,9 +210,9 @@ views:
             entities:
               - type: custom:mini-media-player
                 entity: media_player.kitchen
-                icon: mdi:google-home
+                icon: mdi:cast-connected
                 group: true
-                artwork: cover
+                artwork: none
             state_filter:
               - playing
             show_empty: false 
@@ -253,9 +253,9 @@ views:
             entities:
               - type: custom:mini-media-player
                 entity: media_player.mancave_directv
-                icon: mdi:google-home
+                icon: mdi:television
                 group: true
-                artwork: cover
+                artwork: none
                 hide_volume: true
             state_filter:
               - playing
@@ -264,9 +264,9 @@ views:
             entities:
               - type: custom:mini-media-player
                 entity: media_player.mancave_tv
-                icon: mdi:google-home
+                icon: mdi:cast-connected
                 group: true
-                artwork: cover
+                artwork: none
             state_filter:
               - playing
             show_empty: false
@@ -276,7 +276,7 @@ views:
                 entity: media_player.mancave_assistant
                 icon: mdi:google-home
                 group: true
-                artwork: cover
+                artwork: none
             state_filter:
               - playing
             show_empty: false
