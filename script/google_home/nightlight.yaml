@@ -4,7 +4,7 @@ nightlight:
       entity_id: 
         - light.communal
       data:
-        brightness: 50
+        brightness: 13
         transition: 5
         color_temp: 500
     - delay:
