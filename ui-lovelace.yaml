@@ -642,25 +642,25 @@ views:
                 entity: sensor.cpu_usage
                 min: 0
                 max: 100
-                scale: 40px
+                scale: 35px
               - type: gauge
                 title: Memory
                 entity: sensor.memory_usage
                 min: 0
                 max: 100
-                scale: 40px
+                scale: 35px
           - type: horizontal-stack
             cards:
               - type: gauge
                 title: Plex (Z:)
                 entity: sensor.plex
-                scale: 40px
+                scale: 35px
                 min: 0
                 max: 100
               - type: gauge
                 title: Storage (Y:)
                 entity: sensor.storage
-                scale: 40px
+                scale: 35px
                 min: 0
                 max: 100
       - id: 7d705fd6d16940d686e2c6f8a61d5d87  # Automatically created id
