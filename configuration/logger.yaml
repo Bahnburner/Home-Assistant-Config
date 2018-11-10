@@ -1,1 +1,3 @@
-default: debug
+default: info
+logs:
+  homeassistant.components.media_player: critical
