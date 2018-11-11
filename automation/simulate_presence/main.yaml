@@ -32,7 +32,7 @@
   initial_state: 'off'
   trigger:
     platform: time
-    at: '18:45:00'
+    at: '17:45:00'
   action:
     - delay: '00:{{ (range(0, 30)|random|int) }}:00'
     - service: light.turn_on
@@ -45,7 +45,7 @@
   initial_state: 'off'
   trigger:
     platform: time
-    at: '19:30:00'
+    at: '18:30:00'
   action:
     - delay: '00:{{ (range(0, 15)|random|int) }}:00'
     - service: light.turn_on
@@ -59,7 +59,7 @@
   initial_state: 'off'
   trigger:
     platform: time
-    at: '20:15:00'
+    at: '19:15:00'
   action:
     - delay: '00:{{ (range(0, 30)|random|int) }}:00'
     - service: light.turn_off
@@ -81,11 +81,13 @@
   initial_state: 'off'
   trigger:
     platform: time
-    at: '22:15:00'
+    at: '21:15:00'
   action:
     - delay: '00:{{ (range(0, 30)|random|int) }}:00'
     - service: light.turn_on
-      entity_id: light.master_bedroom
+      entity_id: 
+        - light.master_bedroom
+        - light.desk_lamp
       data:
         brightness: 150
         color_temp: 500
@@ -103,8 +105,9 @@
       entity_id: remote.livingroom
     - delay: '00:{{ (range(0, 4)|random|int) }}:{{ (range(1,59)|random|int) }}'
     - service: light.turn_off
-      entity_id: light.living_room
-
+      entity_id: 
+        - light.living_room
+        - light.desk_lamp
 
 - alias: Simulate Presence 7
   hide_entity: True
