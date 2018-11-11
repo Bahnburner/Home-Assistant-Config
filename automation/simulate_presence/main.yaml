@@ -21,11 +21,13 @@
     value_template: '{{ state.attributes.elevation }}'
     below: 8
   action:
-    service: light.turn_on
-    entity_id: light.living_room
-    data:
-      brightness: 254
-      transition: 900
+    - service: light.turn_on
+      entity_id: light.living_room
+      data:
+        brightness: 254
+        transition: 900
+    - service: light.turn_on
+      entity: light.patio_lights
 
 - alias: Simulate Presence 2
   hide_entity: True
@@ -85,13 +87,13 @@
   action:
     - delay: '00:{{ (range(0, 30)|random|int) }}:00'
     - service: light.turn_on
-      entity_id: 
-        - light.master_bedroom
-        - light.desk_lamp
+      entity_id: light.master_bedroom
       data:
         brightness: 150
         color_temp: 500
         transition: 60
+     - service: light.turn_on
+       entity: light.desk_lamp
 
 - alias: Simulate Presence 6
   hide_entity: True
@@ -105,9 +107,11 @@
       entity_id: remote.livingroom
     - delay: '00:{{ (range(0, 4)|random|int) }}:{{ (range(1,59)|random|int) }}'
     - service: light.turn_off
-      entity_id: 
-        - light.living_room
-        - light.desk_lamp
+      entity_id: light.living_room
+    - service: light.turn_off
+      entity_id: light.desk_lamp
+    - service: light.turn_off
+      entity_id: light.patio_lights
 
 - alias: Simulate Presence 7
   hide_entity: True
@@ -118,6 +122,4 @@
   action:
     - delay: '00:{{ (range(0, 15)|random|int) }}:00'
     - service: light.turn_off
-      entity_id: light.master_bedroom
-
-      
+      entity_id: light.master_bedrood
