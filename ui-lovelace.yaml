@@ -440,6 +440,7 @@ views:
           - light.front_door
           - light.front_floods
           - light.rear_floods
+          - light.patio_lights
       - id: cb03591a77cf4d6bb79a62bc31756f11  # Automatically created id
         type: entities
         title: Foyer
