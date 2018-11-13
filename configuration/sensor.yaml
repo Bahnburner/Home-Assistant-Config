@@ -255,7 +255,8 @@
   name: Download
   scan_interval:
     minutes: 30
-  command: 'ssh retina@10.0.0.111 | speedtest --server 5109 --json --no-upload
+  command: 'ssh retina@10.0.0.111 | speedtest --server 5109 --json --no-upload'
+  value_template: '{{value_json[0].download}}'
 #- platform: command_line
 #  name: air_quality
 #  scan_interval:
