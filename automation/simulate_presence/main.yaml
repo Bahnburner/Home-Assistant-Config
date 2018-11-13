@@ -27,7 +27,7 @@
         brightness: 254
         transition: 900
     - service: light.turn_on
-      entity: light.patio_lights
+      entity_id: light.patio_lights
 
 - alias: Simulate Presence 2
   hide_entity: True
