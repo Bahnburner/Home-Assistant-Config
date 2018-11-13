@@ -251,6 +251,11 @@
   name: Plex
   value_template: '{{ value_json[2].percent| round(1) }}'
   unit_of_measurement: '%'
+- platform: command_line
+  name: Download
+  scan_interval:
+    minutes: 30
+  command: 'ssh retina@10.0.0.111 | speedtest --server 5109 --json --no-upload
 #- platform: command_line
 #  name: air_quality
 #  scan_interval:
