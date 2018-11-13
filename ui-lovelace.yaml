@@ -636,12 +636,9 @@ views:
             entities:
               - sensor.cpu_usage
               - sensor.memory_usage
-          - type: sensor
+          - type: history-graph
             icon: mdi:cloud-download
             entity: sensor.download
-            name: Download Speed
-            height: 75
-            unit: mbps
           - type: horizontal-stack
             cards:
               - type: gauge
