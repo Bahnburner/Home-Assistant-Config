@@ -637,6 +637,7 @@ views:
               - sensor.cpu_usage
               - sensor.memory_usage
           - type: sensor
+            icon: mdi:cloud-download
             entity: sensor.download
             name: Download Speed
             height: 75
