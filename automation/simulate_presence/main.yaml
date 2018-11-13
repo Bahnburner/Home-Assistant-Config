@@ -93,7 +93,7 @@
         color_temp: 500
         transition: 60
     - service: light.turn_on
-      entity: light.desk_lamp
+      entity_id: light.desk_lamp
 
 - alias: Simulate Presence 6
   hide_entity: True
@@ -122,4 +122,4 @@
   action:
     - delay: '00:{{ (range(0, 15)|random|int) }}:00'
     - service: light.turn_off
-      entity_id: light.master_bedrood
+      entity_id: light.master_bedroom
