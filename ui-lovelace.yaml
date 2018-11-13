@@ -636,8 +636,6 @@ views:
             entities:
               - sensor.cpu_usage
               - sensor.memory_usage
-          - type: history-graph
-            entity: sensor.download
           - type: horizontal-stack
             cards:
               - type: gauge
