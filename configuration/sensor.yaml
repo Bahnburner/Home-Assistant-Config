@@ -255,7 +255,7 @@
   name: Download
   scan_interval:
     minutes: 30
-  command: 'ssh titan@10.0.0.110 | speedtest --server 5109 --json --no-upload'
+  command: 'ssh -t -o LogLevel=QUIET titan@10.0.0.110 "speedtest --server 5109 --no-download --json"'
   value_template: '{{(value_json.download/1048576) | round(2)}}'
 #- platform: command_line
 #  name: air_quality
