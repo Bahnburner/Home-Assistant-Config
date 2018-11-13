@@ -637,7 +637,6 @@ views:
               - sensor.cpu_usage
               - sensor.memory_usage
           - type: history-graph
-            icon: mdi:cloud-download
             entity: sensor.download
           - type: horizontal-stack
             cards:
