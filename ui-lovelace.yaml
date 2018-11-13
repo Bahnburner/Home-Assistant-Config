@@ -642,7 +642,7 @@ views:
                 entity: sensor.download
                 name: Download Speed
                 height: 75
-                unit: 'mbps'
+                unit: mbps
             cards:
               - type: gauge
                 title: CPU
