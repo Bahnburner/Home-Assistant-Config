@@ -638,6 +638,12 @@ views:
               - sensor.memory_usage
           - type: horizontal-stack
             cards:
+              - type: sensor
+                entity: sensor.download
+                name: Download Speed
+                height: 75
+                unit: 'mbps'
+            cards:
               - type: gauge
                 title: CPU
                 entity: sensor.cpu_usage
