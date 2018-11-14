@@ -1,8 +1,9 @@
 - alias: Sunrise - Unoccupied
   hide_entity: True
   trigger:
-    platform: time
-    at: '00:00:00'
+    platform: numeric_state
+    entity_id: sun.sun
+    value_template: '{{ state.attributes.elevation }}'
   condition: 
     condition: state
     entity_id: group.family
