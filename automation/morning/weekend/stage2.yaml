@@ -36,13 +36,31 @@
     - service: lock.unlock
       entity_id: lock.back_door
     - service: script.fan_on
-    - service: media_player.media_stop
-      entity_id: 
-        - media_player.master_suite
+    - service: media_player.play_media
+      entity_id: media_player.master_suite
+      data:
+        media_content_id: "http://smrtho.us/storage/30secsilence.mp3"
+        media_content_type: "audio/mp3"
+    - delay:
+        seconds: 5
     - service: media_player.volume_set
       entity_id: media_player.master_suite
       data: 
-        volume_level: 0.40
+        volume_level: 0.50
+    - service: media_player.volume_set
+      entity_id: media_player.bedroom_speaker
+      data: 
+        volume_level: 0.40        
+    - service: media_player.volume_set
+      entity_id: media_player.bedroom_assistant
+      data:
+        volume_level: 0.60
+    - service: media_player.volume_set
+      entity_id: media_player.bathroom_assistant
+      data:
+        volume_level: 0.60
+    - delay:
+        seconds: 5
     - service: media_player.turn_off
       entity_id: 
         - media_player.master_suite
