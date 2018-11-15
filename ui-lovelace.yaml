@@ -73,12 +73,6 @@ views:
                 artwork: none
                 hide_power: true
                 hide_volume: true
-              - type: custom:mini-media-player
-                entity: media_player.vizio_smartcast            
-                group: true
-                hide_controls: true
-                hide_info: true
-                hide_power: true
             state_filter:
               - playing
             show_empty: false
