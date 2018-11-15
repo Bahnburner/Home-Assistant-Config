@@ -40,7 +40,7 @@
     - service: lock.unlock
       entity_id: lock.back_door
     - service: media_player.play_media
-      entity_id: media_player.party_mode
+      entity_id: media_player.master_suite
       data:
         media_content_id: "http://smrtho.us/storage/30secsilence.mp3"
         media_content_type: "audio/mp3"
