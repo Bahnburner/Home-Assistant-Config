@@ -126,6 +126,7 @@ views:
                 hide_power: true
             state_filter:
               - playing
+            show_empty: false
           - type: entities
             entities:
               - sensor.current_activity
