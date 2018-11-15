@@ -30,3 +30,7 @@ whitenoise:
       entity_id: media_player.master_suite
       data: 
         volume_level: 0.19
+    - service: media_player.volume_set
+      entity_id: media_player.bedroom_speaker
+      data: 
+        volume_level: 0.10
