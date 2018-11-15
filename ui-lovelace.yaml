@@ -116,6 +116,16 @@ views:
             state_filter:
               - playing
             show_empty: false
+          - type: entity-filter
+            entities:            
+              - type: custom:mini-media-player
+                entity: media_player.vizio_smartcast            
+                group: true
+                hide_controls: true
+                hide_info: true
+                hide_power: true
+            state_filter:
+              - playing
           - type: entities
             entities:
               - sensor.current_activity
