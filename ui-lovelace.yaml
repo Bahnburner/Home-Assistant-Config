@@ -73,7 +73,10 @@ views:
                 name: DirecTv
                 artwork: none
                 hide_power: true
-                hide_volume: true  
+                hide_volume: true
+            state_filter:
+              - playing
+            show_empty: false
           - type: entity-filter
             entities:
               - type: custom:mini-media-player
@@ -86,7 +89,6 @@ views:
                 hide_volume: true              
             state_filter:
               - playing
-              - on
             show_empty: false
           - type: entity-filter
             entities:
@@ -97,7 +99,6 @@ views:
                 artwork: none           
             state_filter:
               - playing
-              - on
             show_empty: false
           - type: entity-filter
             entities:
