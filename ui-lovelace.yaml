@@ -81,6 +81,7 @@ views:
                 hide_power: true                
             state_filter:
               - playing
+              - paused
               - on
             show_empty: false
           - type: entity-filter
