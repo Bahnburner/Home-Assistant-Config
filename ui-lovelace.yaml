@@ -72,9 +72,10 @@ views:
                 hide_volume: true    
               - type: custom:mini-media-player
                 entity: media_player.livingroom_tv
-                icon: mdi:cast-connected
+#                icon: mdi:cast-connected
                 group: true
-                artwork: none
+                artwork: cover
+                hide_icon: true
                 hide_volume: true
               - type: custom:mini-media-player
                 entity: media_player.vizio_smartcast            
