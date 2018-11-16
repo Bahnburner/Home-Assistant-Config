@@ -72,22 +72,21 @@ views:
                 name: DirecTv
                 artwork: none
                 hide_power: true
-                hide_volume: true
-              - type: conditional
-                conditions:
-                  - entity: sensor.current_activity
-                    state: "Watch DirecTv"
-                card:
-                  - type: custom:mini-media-player
-                    entity: media_player.vizio_smartcast            
-                    group: true
-                    hide_controls: true
-                    hide_info: true
-                    hide_power: true              
+                hide_volume: true           
             state_filter:
               - playing
-              - on
             show_empty: false
+          - type: conditional
+            conditions:
+              - entity: sensor.current_activity
+                state: "Watch DirecTv"
+            card:
+              - type: custom:mini-media-player
+                entity: media_player.vizio_smartcast            
+                group: true
+                hide_controls: true
+                hide_info: true
+                hide_power: true               
           - type: entity-filter
             entities:
               - type: custom:mini-media-player
