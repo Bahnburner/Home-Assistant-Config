@@ -58,7 +58,6 @@ views:
               - type: custom:mini-media-player
                 entity: media_player.rasplex
                 hide_icon: true
-                show_progress: true
                 group: true
                 artwork: cover
                 hide_volume: true
@@ -305,7 +304,6 @@ views:
                 icon: mdi:television
                 group: true
                 artwork: none
-                scroll_info: true
                 hide_power: true
                 hide_volume: true
                 name: DirecTV
