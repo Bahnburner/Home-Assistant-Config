@@ -75,6 +75,7 @@ views:
                 artwork: cover
                 hide_icon: true
                 hide_volume: true
+                hide_power: true                
               - type: custom:mini-media-player
                 entity: media_player.vizio_smartcast            
                 group: true
@@ -150,21 +151,25 @@ views:
                 icon: mdi:google-home
                 group: true
                 artwork: none
+                hide_power: true                
               - type: custom:mini-media-player
                 entity: media_player.bathroom_assistant
                 icon: mdi:google-home
                 group: true
                 artwork: none   
+                hide_power: true
               - type: custom:mini-media-player
                 entity: media_player.bedroom_speaker
                 icon: mdi:cast-connected
                 group: true
                 artwork: none  
+                hide_power: true
               - type: custom:mini-media-player
                 entity: media_player.master_suite
                 icon: mdi:cast-connected
                 group: true
-                artwork: none                
+                artwork: none   
+                hide_power: true             
             state_filter:
               - playing
             show_empty: false           
