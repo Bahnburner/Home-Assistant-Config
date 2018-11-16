@@ -66,15 +66,14 @@ views:
                 artwork: none
           - type: entity-filter
             entities:
-              type: custom:mini-media-player
-              entity: media_player.rasplex
-              icon: mdi:plex
-              group: true
-              artwork: none              
-            state_filter:
-              - playing
-              - on
-            show_empty: false
+              - type: custom:mini-media-player
+                entity: media_player.rasplex
+                icon: mdi:television
+                group: true
+                name: DirecTv
+                artwork: none
+                hide_power: true
+                hide_volume: true  
           - type: entity-filter
             entities:
               - type: custom:mini-media-player
