@@ -238,7 +238,6 @@ views:
                 artwork: none
             state_filter:
               - playing
-              - paused
             show_empty: false 
           - type: entities
             entities:
@@ -337,7 +336,6 @@ views:
                 hide_power: true  
             state_filter:
               - playing
-              - paused
             show_empty: false
           - type: entities
             entities:
