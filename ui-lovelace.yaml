@@ -53,10 +53,14 @@ views:
             entity: light.living_room
             name: Livingroom
             tap_action: toggle
-          - type: entity-filter
-            entities:
+          
+          - type: conditional
+            conditions:
+              - entity: media_player.livingroom_directv
+                state: "playing"
+            card: 
               - type: custom:mini-media-player
-                entity: media_player.rasplex
+                entity: media_player.livingroom_directv
                 icon: mdi:plex
                 group: true
                 artwork: none
@@ -65,7 +69,14 @@ views:
                 group: true
                 hide_controls: true
                 hide_info: true
-                hide_power: true                 
+                hide_power: true  
+          - type: entity-filter
+            entities:
+              - type: custom:mini-media-player
+                entity: media_player.rasplex
+                icon: mdi:plex
+                group: true
+                artwork: none              
             state_filter:
               - playing
               - on
@@ -79,13 +90,7 @@ views:
                 name: DirecTv
                 artwork: none
                 hide_power: true
-                hide_volume: true
-              - type: custom:mini-media-player
-                entity: media_player.vizio_smartcast            
-                group: true
-                hide_controls: true
-                hide_info: true
-                hide_power: true                 
+                hide_volume: true              
             state_filter:
               - playing
               - on
@@ -96,13 +101,7 @@ views:
                 entity: media_player.livingroom_tv
                 icon: mdi:cast-connected
                 group: true
-                artwork: none
-              - type: custom:mini-media-player
-                entity: media_player.vizio_smartcast            
-                group: true
-                hide_controls: true
-                hide_info: true
-                hide_power: true                 
+                artwork: none           
             state_filter:
               - playing
               - on
