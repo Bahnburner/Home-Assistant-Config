@@ -2,14 +2,3 @@
   username: !secret myq_user
   password: !secret myq_pass
   type: chamberlain
-- platform: template
-  covers:
-    volume:
-      friendly_name: "Volume"
-      position_template: "{{ 50 }}"
-      open_cover:
-        service: script.cover_volume_up
-      close_cover:
-        service: script.cover_volume_down
-      stop_cover:
-        service: script.mute
