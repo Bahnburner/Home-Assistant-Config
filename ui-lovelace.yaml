@@ -67,7 +67,7 @@ views:
               - entity: media_player.livingroom_directv
                 state: "playing"
             card: 
-              - type: entity-filter
+              - type: entities
                 entities:
                   - type: custom:mini-media-player
                     entity: media_player.livingroom_directv
