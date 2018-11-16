@@ -51,8 +51,8 @@ views:
           - type: entity-filter
             entities:
               - type: custom:mini-media-player
-                entity: media_player.rasplex
-                icon: mdi:television
+                entity: media_player.livingroom_directv
+                icon: mdi:plex
                 group: true
                 name: DirecTv
                 artwork: none
@@ -67,16 +67,26 @@ views:
               - entity: media_player.livingroom_directv
                 state: "playing"
             card: 
-              - type: custom:mini-media-player
-                entity: media_player.livingroom_directv
-                icon: mdi:plex
-                group: true
-                artwork: none
+              - type: entity-filter
+                entities:
+                  - type: custom:mini-media-player
+                    entity: media_player.livingroom_directv
+                    icon: mdi:plex
+                    group: true
+                    name: DirecTv
+                    artwork: none
+                    hide_power: true
+                    hide_volume: true
+                state_filter:
+                  - playing
+                show_empty: false
+                
+                
           - type: entity-filter
             entities:
               - type: custom:mini-media-player
                 entity: media_player.rasplex
-                icon: mdi:television
+                icon: mdi:plex
                 group: true
                 name: DirecTv
                 artwork: none
