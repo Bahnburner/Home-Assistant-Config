@@ -79,7 +79,7 @@ views:
           - type: conditional
             conditions:
               - entity: sensor.current_activity
-                state: "Watch DirecTv"
+                state: "Watch DirecTV"
             card:
               - type: custom:mini-media-player
                 entity: media_player.vizio_smartcast            
