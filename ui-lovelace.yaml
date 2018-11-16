@@ -169,7 +169,34 @@ views:
                 icon: mdi:cast-connected
                 group: true
                 artwork: none   
-                hide_power: true             
+                hide_power: true
+                
+              - type: custom:mini-media-player
+                entity: media_player.bedroom_assistant
+
+                group: true
+                hide_controls: true
+                hide_info: true
+                hide_power: true                 
+              - type: custom:mini-media-player
+                entity: media_player.bathroom_assistant
+
+                group: true
+                hide_controls: true
+                hide_info: true
+                hide_power: true   
+              - type: custom:mini-media-player
+                entity: media_player.bedroom_speaker
+                group: true
+                hide_controls: true
+                hide_info: true
+                hide_power: true   
+              - type: custom:mini-media-player
+                entity: media_player.master_suite
+                group: true
+                hide_controls: true
+                hide_info: true
+                hide_power: true   
             state_filter:
               - playing
             show_empty: false           
