@@ -60,11 +60,6 @@ views:
                 icon: mdi:plex
                 group: true
                 artwork: none
-            state_filter:
-              - playing
-            show_empty: false
-          - type: entity-filter
-            entities:
               - type: custom:mini-media-player
                 entity: media_player.livingroom_directv
                 icon: mdi:television
@@ -72,19 +67,15 @@ views:
                 name: DirecTv
                 artwork: none
                 hide_power: true
-                hide_volume: true           
-            state_filter:
-              - playing
-            show_empty: false
-          - type: entity-filter
-            entities:
+                hide_volume: true    
               - type: custom:mini-media-player
                 entity: media_player.livingroom_tv
                 icon: mdi:cast-connected
                 group: true
-                artwork: none
+                artwork: none                
             state_filter:
               - playing
+              - on
             show_empty: false
           - type: entity-filter
             entities:
@@ -121,12 +112,6 @@ views:
               - entity: input_select.harmony
                 icon: mdi:television
               - sensor.current_activity
-              - type: custom:mini-media-player
-                entity: media_player.vizio_smartcast            
-                group: true
-                hide_controls: true
-                hide_info: true
-                hide_power: true
               - entity: light.living_room
                 name: Lights
                 type: custom:slider-entity-row
