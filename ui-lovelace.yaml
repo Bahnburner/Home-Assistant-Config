@@ -51,40 +51,6 @@ views:
           - type: entity-filter
             entities:
               - type: custom:mini-media-player
-                entity: media_player.livingroom_directv
-                icon: mdi:plex
-                group: true
-                name: DirecTv
-                artwork: none
-                hide_power: true
-                hide_volume: true
-            state_filter:
-              - playing
-            show_empty: false
-          
-          - type: conditional
-            conditions:
-              - entity: media_player.livingroom_directv
-                state: "playing"
-            card: 
-              - type: entities
-                entities:
-                  - type: custom:mini-media-player
-                    entity: media_player.livingroom_directv
-                    icon: mdi:plex
-                    group: true
-                    name: DirecTv
-                    artwork: none
-                    hide_power: true
-                    hide_volume: true
-                state_filter:
-                  - playing
-                show_empty: false
-                
-                
-          - type: entity-filter
-            entities:
-              - type: custom:mini-media-player
                 entity: media_player.rasplex
                 icon: mdi:plex
                 group: true
