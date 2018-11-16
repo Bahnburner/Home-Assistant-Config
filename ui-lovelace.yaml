@@ -67,7 +67,7 @@ views:
               - entity: media_player.livingroom_directv
                 state: "playing"
             card: 
-              - type: media_controller
+              - type: custom:mini-media-player
                 entity: media_player.livingroom_directv
                 icon: mdi:plex
                 group: true
