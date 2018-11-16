@@ -1,6 +1,6 @@
 <h1 style="text-align: center;"><strong>Home Assistant Configuration</strong></h1>
 
-<img src="https://raw.githubusercontent.com/Bahnburner/Home-Assistant-Config/2a206c4d9c5884fcf40a62d3a882ed7a16188b93/screenshot.png">
+<img src="https://github.com/Bahnburner/Home-Assistant-Config/blob/master/screenshot.png">
 
 <p>This is the&nbsp;home assistant configuration for my home. Other home assistant users may find some benefit in the automations and work-arounds I've written to control my smart devices.&nbsp;</p>
 <p><strong>Controllable devices:</strong></p>
