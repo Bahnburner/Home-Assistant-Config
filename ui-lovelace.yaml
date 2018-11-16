@@ -198,21 +198,11 @@ views:
                 icon: mdi:cast-connected
                 group: true
                 artwork: none
-            state_filter:
-              - playing
-            show_empty: false 
-          - type: entity-filter
-            entities:
               - type: custom:mini-media-player
                 entity: media_player.kitchen_display
                 icon: mdi:youtube-tv
                 group: true
                 artwork: none
-            state_filter:
-              - playing
-            show_empty: false 
-          - type: entity-filter
-            entities:
               - type: custom:mini-media-player
                 entity: media_player.kitchen
                 icon: mdi:cast-connected
@@ -220,6 +210,7 @@ views:
                 artwork: none
             state_filter:
               - playing
+              - paused
             show_empty: false 
           - type: entities
             entities:
@@ -297,21 +288,11 @@ views:
                 hide_power: true
                 hide_volume: true
                 name: DirecTV
-            state_filter:
-              - playing
-            show_empty: false
-          - type: entity-filter
-            entities:
               - type: custom:mini-media-player
                 entity: media_player.mancave_tv
                 icon: mdi:cast-connected
                 group: true
                 artwork: none
-            state_filter:
-              - playing
-            show_empty: false
-          - type: entity-filter
-            entities:
               - type: custom:mini-media-player
                 entity: media_player.mancave_assistant
                 icon: mdi:google-home
@@ -319,6 +300,7 @@ views:
                 artwork: none
             state_filter:
               - playing
+              - paused
             show_empty: false
           - type: entities
             entities:
@@ -349,41 +331,21 @@ views:
             icon: mdi:cast-connected
             group: true
             artwork: none
-        state_filter:
-          - playing
-        show_empty: false 
-      - type: entity-filter
-        entities:
           - type: custom:mini-media-player
             entity: media_player.all_speakers
             icon: mdi:cast-connected
             group: true
             artwork: none
-        state_filter:
-          - playing
-        show_empty: false
-      - type: entity-filter
-        entities:
           - type: custom:mini-media-player
             entity: media_player.garage_speaker
             icon: mdi:cast-connected
             group: true
             artwork: none
-        state_filter:
-          - playing
-        show_empty: false
-      - type: entity-filter
-        entities:
           - type: custom:mini-media-player
             entity: media_player.house_party_protocol
             icon: mdi:cast-connected
             group: true
             artwork: none
-        state_filter:
-          - playing
-        show_empty: false
-      - type: entity-filter
-        entities:
           - type: custom:mini-media-player
             entity: media_player.nursery_assistant
             icon: mdi:google-home
@@ -391,7 +353,7 @@ views:
             artwork: none
         state_filter:
           - playing
-        show_empty: false
+        show_empty: false 
 
 ##########
 # LIGHTS #
