@@ -328,6 +328,7 @@ views:
                 group: true
                 artwork: none   
                 hide_volume: true
+                hide_power: true
               - type: custom:mini-media-player
                 entity: media_player.mancave_assistant
                 group: true
