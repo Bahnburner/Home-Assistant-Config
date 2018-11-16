@@ -131,6 +131,12 @@ views:
             entities:
               - sensor.current_activity
               - input_select.harmony
+              - type: custom:mini-media-player
+                entity: media_player.vizio_smartcast            
+                group: true
+                hide_controls: true
+                hide_info: true
+                hide_power: true      
               - cover.volume
               - entity: light.living_room
                 name: Lights
