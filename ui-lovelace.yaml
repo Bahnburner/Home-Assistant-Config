@@ -76,17 +76,6 @@ views:
             state_filter:
               - playing
             show_empty: false
-          - type: conditional
-            conditions:
-              - entity: sensor.current_activity
-                state: "Watch DirecTV"
-            card:
-              - type: custom:mini-media-player
-                entity: media_player.vizio_smartcast            
-                group: true
-                hide_controls: true
-                hide_info: true
-                hide_power: true               
           - type: entity-filter
             entities:
               - type: custom:mini-media-player
@@ -130,14 +119,13 @@ views:
           - type: entities
             entities:
               - sensor.current_activity
-              - input_select.harmony
               - type: custom:mini-media-player
                 entity: media_player.vizio_smartcast            
                 group: true
                 hide_controls: true
                 hide_info: true
-                hide_power: true      
-              - cover.volume
+                hide_power: true
+              - input_select.harmony
               - entity: light.living_room
                 name: Lights
                 type: custom:slider-entity-row
