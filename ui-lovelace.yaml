@@ -48,11 +48,19 @@ views:
       - id: 7b206580259e4dd5b8402ffd9ffaa2f0  # Automatically created id
         type: vertical-stack
         cards:
-          - type: picture-entity
-            image: /local/resources/images/lovelace/livingroom_edited.jpg
-            entity: light.living_room
-            name: Livingroom
-            tap_action: toggle
+          - type: entity-filter
+            entities:
+              - type: custom:mini-media-player
+                entity: media_player.rasplex
+                icon: mdi:television
+                group: true
+                name: DirecTv
+                artwork: none
+                hide_power: true
+                hide_volume: true
+            state_filter:
+              - playing
+            show_empty: false
           
           - type: conditional
             conditions:
