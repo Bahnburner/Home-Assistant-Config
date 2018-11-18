@@ -613,7 +613,7 @@ views:
                 icon: mdi:account-multiple
                 name: Simulate Presence
                 action_name: Toggle
-                service: homeassistant.toggle
+                service: homeassistant.turn_on
                 service_data:
                   entity_id: group.simulate_presence
               - input_boolean.disable_all_automations
