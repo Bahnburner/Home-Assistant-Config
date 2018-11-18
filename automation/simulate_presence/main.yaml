@@ -1,25 +1,14 @@
-- alias: Simulate Presence Trigger
-  hide_entity: true
-  trigger:
-    platform: state
-    entity_id: input_boolean.simulate_presence
-  action:
-    service_template: >
-      {% if input_boolean.simulate_presence == 'on' %}
-        homeassistant.turn_on
-      {% else %}
-        homeassistant.turn_off
-      {% endif %}
-    entity_id: group.simulate_presence
-
 - alias: Simulate Presence 1
   hide_entity: True
-  initial_state: 'off'
   trigger:
     platform: numeric_state
     entity_id: sun.sun
     value_template: '{{ state.attributes.elevation }}'
     below: 8
+  condition: 
+    condition: state
+    entity_id: input_boolean.simulate_presence
+    state: 'on'
   action:
     - service: light.turn_on
       entity_id: light.living_room
@@ -31,10 +20,13 @@
 
 - alias: Simulate Presence 2
   hide_entity: True
-  initial_state: 'off'
   trigger:
     platform: time
     at: '17:45:00'
+  condition: 
+    condition: state
+    entity_id: input_boolean.simulate_presence
+    state: 'on'
   action:
     - delay: '00:{{ (range(0, 30)|random|int) }}:00'
     - service: light.turn_on
@@ -44,10 +36,13 @@
     
 - alias: Simulate Presence 3
   hide_entity: True
-  initial_state: 'off'
   trigger:
     platform: time
     at: '18:30:00'
+  condition: 
+    condition: state
+    entity_id: input_boolean.simulate_presence
+    state: 'on'
   action:
     - delay: '00:{{ (range(0, 15)|random|int) }}:00'
     - service: light.turn_on
@@ -58,10 +53,13 @@
       
 - alias: Simulate Presence 4
   hide_entity: True
-  initial_state: 'off'
   trigger:
     platform: time
     at: '19:15:00'
+  condition: 
+    condition: state
+    entity_id: input_boolean.simulate_presence
+    state: 'on'
   action:
     - delay: '00:{{ (range(0, 30)|random|int) }}:00'
     - service: light.turn_off
@@ -80,10 +78,13 @@
 
 - alias: Simulate Presence 5
   hide_entity: True
-  initial_state: 'off'
   trigger:
     platform: time
     at: '21:15:00'
+  condition: 
+    condition: state
+    entity_id: input_boolean.simulate_presence
+    state: 'on'
   action:
     - delay: '00:{{ (range(0, 30)|random|int) }}:00'
     - service: light.turn_on
@@ -97,10 +98,13 @@
 
 - alias: Simulate Presence 6
   hide_entity: True
-  initial_state: 'off'
   trigger:
     platform: time
     at: '23:45:00'
+  condition: 
+    condition: state
+    entity_id: input_boolean.simulate_presence
+    state: 'on'
   action:
     - delay: '00:{{ (range(0, 10)|random|int) }}:00'
     - service: remote.turn_off
@@ -115,10 +119,13 @@
 
 - alias: Simulate Presence 7
   hide_entity: True
-  initial_state: 'off'
   trigger:
     platform: time
     at: '00:05:00'
+  condition: 
+    condition: state
+    entity_id: input_boolean.simulate_presence
+    state: 'on'
   action:
     - delay: '00:{{ (range(0, 15)|random|int) }}:00'
     - service: light.turn_off
