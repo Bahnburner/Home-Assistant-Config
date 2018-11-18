@@ -609,7 +609,7 @@ views:
               - input_boolean.disable_away_mode
               - input_boolean.disable_alarm
               - switch.vacation_mode
-              - entity: input_boolean.simulate_presence
+              - entity: group.simulate_presence
                 name: Simulate Presence
               - input_boolean.disable_all_automations
           - type: iframe
