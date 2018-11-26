@@ -2,14 +2,14 @@
 #  track_new_devices: false
 #  consider_home: 180
 #- platform: bluetooth_le_tracker
-- platform: asuswrt
-  host: 10.0.0.1
-  protocol: ssh
+#- platform: asuswrt
+#  host: 10.0.0.1
+#  protocol: ssh
 #  mode: router
-  username: !secret router_user
-  password: !secret router_pass
-  track_new_devices: false
-  consider_home: 180
+#  username: !secret router_user
+#  password: !secret router_pass
+#  track_new_devices: false
+#  consider_home: 180
 - platform: google_maps
   username: !secret maps_user
   password: !secret maps_pass
