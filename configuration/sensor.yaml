@@ -143,7 +143,7 @@
     chromecast_man_cave:
       entity_id: device_tracker.chromecast_man_cave
       value_template: '{% if is_state("device_tracker.chromecast_man_cave", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Chromecast (Man Cave)'
+      friendly_name: 'Chromecast (Mancave)'
     chromecast_audio_dining_room:
       entity_id: device_tracker.chromecast_audio_dining_room
       value_template: '{% if is_state("device_tracker.chromecast_audio_dining_room", "home") %}Online{% else %}Offline{% endif %}'
