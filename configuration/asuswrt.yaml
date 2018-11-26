@@ -2,4 +2,3 @@
   protocol: ssh
   username: !secret router_user
   password: !secret router_pass
-  consider_home: 180
