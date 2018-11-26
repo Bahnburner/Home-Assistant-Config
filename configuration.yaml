@@ -23,6 +23,7 @@ recorder: !include ./configuration/recorder.yaml
 sun:
 updater:
 
+asuswrt: !include ./configuration/asuswrt.yaml
 automation: !include_dir_merge_list automation
 binary_sensor: !include ./configuration/binary_sensor.yaml
 #cast: !include ./configuration/cast.yaml
