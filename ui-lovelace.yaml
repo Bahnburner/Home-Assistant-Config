@@ -65,7 +65,7 @@ views:
                 entity: media_player.livingroom_directv
                 icon: mdi:television
                 group: true
-                name: DirecTv
+                name: DirecTV
                 artwork: none
                 hide_power: true
                 hide_volume: true    
