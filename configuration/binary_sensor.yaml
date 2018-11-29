@@ -51,9 +51,9 @@
       delay_off:
         seconds: 60
       value_template: >
-        {% if (states.sun.sun.attributes.elevation | int > 8) %} true 
-        {% elif ( (states.sun.sun.attributes.elevation | int < 8) and (states.sensor.dark_sky_cloud_coverage.state | int > 30)) %}true
-        {% elif ( (states.sun.sun.attributes.elevation | int < 15) and (states.sensor.dark_sky_cloud_coverage.state | int > 45)) %}true
+        {% if (states.sun.sun.attributes.elevation < 8) %}true
+        {% elif ( (states.sun.sun.attributes.elevation | int < 12) and (states.sensor.dark_sky_cloud_coverage.state | int > 30)) %}true
+        {% elif ( (states.sun.sun.attributes.elevation | int < 16) and (states.sensor.dark_sky_cloud_coverage.state | int > 45)) %}true
         {% elif ( (states.sun.sun.attributes.elevation | int < 20) and (states.sensor.dark_sky_cloud_coverage.state | int > 70)) %}true
         {% elif (states.sensor.dark_sky_cloud_coverage.state | int > 90) %}true
         {% else %}false
