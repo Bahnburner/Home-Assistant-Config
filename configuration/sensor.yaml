@@ -251,6 +251,10 @@
   name: Plex
   value_template: '{{ value_json[2].percent| round(1) }}'
   unit_of_measurement: '%'
+
+- platform: tautulli
+  api_key: 
+  host: 10.0.0.109
 #- platform: command_line
 #  name: Download
 #  scan_interval:
