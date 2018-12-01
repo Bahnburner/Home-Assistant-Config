@@ -44,6 +44,7 @@ views:
               - lock.front_door
               - lock.back_door
               - cover.garage_door_opener
+              - automation.automation.redgreen_spin
 #### LIVINGROOM STACK
       - id: 7b206580259e4dd5b8402ffd9ffaa2f0  # Automatically created id
         type: vertical-stack
