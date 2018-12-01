@@ -53,22 +53,22 @@
       entity_id: light.dining_room_left
       data:
         brightness: 255
-        rgb_color: 0,255,0
+        rgb_color: [0,255,0]
     - service: light.turn_on
       entity_id: light.dining_room_right
       data:
         brightness: 255
-        rgb_color: 255,0,0
+        rgb_color: [255,0,0]
     - delay:
         seconds: 3
     - service: light.turn_on
       entity_id: light.dining_room_right
       data:
         brightness: 255
-        rgb_color: 0,255,0
+        rgb_color: [0,255,0]
     - service: light.turn_on
       entity_id: light.dining_room_left
       data:
         brightness: 255
-        rgb_color: 255,0,0
+        rgb_color: [255,0,0]
        
