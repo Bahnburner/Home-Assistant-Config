@@ -20,6 +20,26 @@
     - platform: state
       entity_id: input_boolean.goodnight_initiated
       to: 'on'
+  condition: 
+    condition: template
+    value_template: '{{ now().month == 12 }}'      
+  action:
+    - service: switch.turn_off
+      entity_id: switch.christmas_lights
+
+- alias: Christmas Lights away OFF
+  hide_entity: True
+  trigger:
+    - platform: state
+      entity_id: group.family
+      state: "not_home"
+  condition:
+    - condition: template
+      value_template: '{{ now().month == 12 }}'
+    - condition: numeric_state
+      entity: id: sun.sun
+      value_template: '{{ state.attributes.elevation }}'
+      above: 8
   action:
     - service: switch.turn_off
       entity_id: switch.christmas_lights
