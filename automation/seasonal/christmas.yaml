@@ -32,7 +32,7 @@
   trigger:
     - platform: state
       entity_id: group.family
-      state: "not_home"
+      to: "not_home"
   condition:
     - condition: template
       value_template: '{{ now().month == 12 }}'
