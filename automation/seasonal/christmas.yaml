@@ -37,7 +37,7 @@
     - condition: template
       value_template: '{{ now().month == 12 }}'
     - condition: numeric_state
-      entity: id: sun.sun
+      entity_id: sun.sun
       value_template: '{{ state.attributes.elevation }}'
       above: 8
   action:
