@@ -505,7 +505,6 @@ views:
         entity: camera.upstairs_nursery
         camera_image: camera.upstairs_nursery
       - type: map
-        aspect_ratio: 74.75%
         entities:
           - entity: device_tracker.google_maps_102616309312724957780
           - entity: device_tracker.google_maps_110746778193138728717
