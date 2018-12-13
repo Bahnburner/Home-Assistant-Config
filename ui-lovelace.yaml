@@ -607,6 +607,7 @@ views:
                 max: 100
       - type: entities
         title: Critical Devices
+        show_header_toggle: false
         entities:
           - sensor.huebridge
           - sensor.lightifybridge
@@ -619,6 +620,7 @@ views:
           - sensor.nesthello
       - type: entities
         title: Cast Devices
+        show_header_toggle: false
         entities:
           - sensor.google_home_livingroom
           - sensor.google_home_hub_kitchen
