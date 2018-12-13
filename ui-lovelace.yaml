@@ -57,7 +57,7 @@ views:
                 entity: media_player.rasplex
                 hide_icon: true
                 group: true
-                artwork: cover
+                artwork: full-cover
                 hide_volume: true
               - type: custom:mini-media-player
                 entity: media_player.livingroom_directv
@@ -70,7 +70,7 @@ views:
               - type: custom:mini-media-player
                 entity: media_player.livingroom_tv
                 group: true
-                artwork: cover
+                artwork: full-cover
                 hide_icon: true
                 hide_volume: true
                 hide_power: true                
@@ -147,28 +147,28 @@ views:
                 entity: media_player.bedroom_assistant
                 icon: mdi:google-home
                 group: true
-                artwork: none
+                artwork: full-cover
                 hide_power: true    
                 hide_volume: true
               - type: custom:mini-media-player
                 entity: media_player.bathroom_assistant
                 icon: mdi:google-home
                 group: true
-                artwork: none   
+                artwork: full-cover   
                 hide_power: true   
                 hide_volume: true
               - type: custom:mini-media-player
                 entity: media_player.bedroom_speaker
                 icon: mdi:cast-connected
                 group: true
-                artwork: none  
+                artwork: full-cover  
                 hide_power: true   
                 hide_volume: true
               - type: custom:mini-media-player
                 entity: media_player.master_suite
                 icon: mdi:cast-connected
                 group: true
-                artwork: none   
+                artwork: full-cover   
                 hide_power: true   
                 hide_volume: true               
               - type: custom:mini-media-player
@@ -221,17 +221,17 @@ views:
                 entity: media_player.dining_room_speaker
                 icon: mdi:cast-connected
                 group: true
-                artwork: none
+                artwork: full-cover
               - type: custom:mini-media-player
                 entity: media_player.kitchen_display
                 icon: mdi:youtube-tv
                 group: true
-                artwork: none
+                artwork: full-cover
               - type: custom:mini-media-player
                 entity: media_player.kitchen
                 icon: mdi:cast-connected
                 group: true
-                artwork: none
+                artwork: full-cover
             state_filter:
               - playing
             show_empty: false 
@@ -313,13 +313,13 @@ views:
                 entity: media_player.mancave_tv
                 icon: mdi:cast-connected
                 group: true
-                artwork: none   
+                artwork: full-cover   
                 hide_volume: true
               - type: custom:mini-media-player
                 entity: media_player.mancave_assistant
                 icon: mdi:google-home
                 group: true
-                artwork: none   
+                artwork: full-cover   
                 hide_volume: true
                 hide_power: true
               - type: custom:mini-media-player
