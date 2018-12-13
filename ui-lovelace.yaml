@@ -22,8 +22,7 @@ views:
     id: home
     cards:
 ####   FAMILY STACK
-      - id: 68d4695e2bda4b15b0a2b6f95e97b9d3  # Automatically created id
-        type: vertical-stack
+      - type: vertical-stack
         cards:
           - type: picture-glance
             entities:
@@ -45,8 +44,7 @@ views:
               - lock.back_door
               - cover.garage_door_opener
 #### LIVINGROOM STACK
-      - id: 7b206580259e4dd5b8402ffd9ffaa2f0  # Automatically created id
-        type: vertical-stack
+      - type: vertical-stack
         cards:
           - type: picture-entity
             image: /local/resources/images/lovelace/livingroom_edited.jpg
@@ -136,8 +134,7 @@ views:
             type: weather-forecast
             entity: weather.forecast
 #### BEDROOM STACK
-      - id: 45e3267b69794ed18d233904273c99ff  # Automatically created id
-        type: vertical-stack
+      - type: vertical-stack
         cards:
           - type: picture-entity
             image: /local/resources/images/lovelace/master_bedroom_edited.jpg
@@ -211,8 +208,7 @@ views:
               - light.crystals_nightstand
               - light.tristans_nightstand
 #### KITCHEN STACK
-      - id: ddcae7cc77864a998c970ea4f67c6471  # Automatically created id
-        type: vertical-stack
+      - type: vertical-stack
         cards:
           - type: picture-entity
             image: /local/resources/images/lovelace/kitchen_edited.jpg
@@ -281,8 +277,7 @@ views:
               - entity: sensor.water_heater_leak_sensor
                 name: WH              
 #### EXTERIOR STACK
-      - id: 142667485a3a4707969f08e8adfa3b56  # Automatically created id
-        type: vertical-stack
+      - type: vertical-stack
         cards:
           - type: picture-entity
             image: /local/resources/images/lovelace/house_exterior_edited.jpg
@@ -297,8 +292,7 @@ views:
               - light.rear_floods
               - light.patio_lights
 #### OFFICE STACK
-      - id: 1f7dc905f46b4942b71c62cd5ea1f7d3  # Automatically created id
-        type: vertical-stack
+      - type: vertical-stack
         cards:
           - type: picture-entity
             name: Office
@@ -398,50 +392,43 @@ views:
     name: Lights
     id: lights
     cards:
-      - id: d10c17946bb049d0b5be75d90739ea6a  # Automatically created id
-        type: entities
+      - type: entities
         title: Living Room
         entities:
           - light.floor_lamp_left
           - light.floor_lamp_right
           - light.table_lamp
-      - id: 27f3708d30f545ba9a3c4051d4137ad8  # Automatically created id
-        type: entities
+      - type: entities
         title: Master Bedroom
         entities:
           - light.tristans_nightstand
           - light.crystals_nightstand
           - light.bedroom_floor_lamp
-      - id: c7650f2239244947bd0eb2957ce9f44e  # Automatically created id
-        type: entities
+      - type: entities
         title: Kitchen
         entities:
           - light.overhead_light
           - light.chandelier
           - light.recessed_lights
           - light.pantry
-      - id: 3d5f31f81f8e4be1ad264c9910710b2d  # Automatically created id
-        type: entities
+      - type: entities
         title: Exterior
         entities:
           - light.front_door
           - light.front_floods
           - light.rear_floods
           - light.patio_lights
-      - id: cb03591a77cf4d6bb79a62bc31756f11  # Automatically created id
-        type: entities
+      - type: entities
         title: Foyer
         show_header_toggle: false
         entities:
           - light.foyer
-      - id: 04f782533cab47e8bf59851a9770fe02  # Automatically created id
-        type: entities
+      - type: entities
         title: Dining Room
         show_header_toggle: false
         entities:
           - light.dining_room
-      - id: a4b244ab58254791bb1cf40070f4fe3d  # Automatically created id
-        type: entities
+      - type: entities
         title: Accent Lights
         show_header_toggle: false
         entities:
@@ -456,65 +443,45 @@ views:
     name: Media
     id: media
     cards:
-      - id: dc2d82b944c14d318c8bcba62c929e43  # Automatically created id
-        type: media-control
+      - type: media-control
         entity: media_player.all_assistants
-      - id: 3828f379ae264cb1a906901b904c77f2  # Automatically created id
-        type: media-control
+      - type: media-control
         entity: media_player.all_speakers
-      - id: 47dff11f477942b4b660509f61b35582  # Automatically created id
-        type: media-control
+      - type: media-control
         entity: media_player.bathroom_assistant
-      - id: 49dfba4c113249bf88fa5e0060a8c0ec  # Automatically created id
-        type: media-control
+      - type: media-control
         entity: media_player.bedroom_assistant
-      - id: ed2211bb64274413914ec87393e70ffe  # Automatically created id
-        type: media-control
+      - type: media-control
         entity: media_player.bedroom_speaker
-      - id: e022a7f2ad7c46a2ad3bb5e322d1504e  # Automatically created id
-        type: media-control
+      - type: media-control
         entity: media_player.dining_room_speaker
-      - id: 9688f7484f094767b66c149bc4252b97  # Automatically created id
-        type: media-control
+      - type: media-control
         entity: media_player.garage_speaker
-      - id: 466debec177d4ff08116e49b8d6ce542  # Automatically created id
-        type: media-control
+      - type: media-control
         entity: media_player.house_party_protocol
-      - id: 5a34c1efb19640e7840c2de21ec8807f  # Automatically created id
-        type: media-control
+      - type: media-control
         entity: media_player.kitchen_display
-      - id: de8af0b9946c400f992f8df9b0679837  # Automatically created id
-        type: media-control
+      - type: media-control
         entity: media_player.livingroom_assistant
-      - id: 4ce0624bbd8747d99bf234b3f9418f21  # Automatically created id
-        type: media-control
+      - type: media-control
         entity: media_player.livingroom_directv
-      - id: c0873a7299434f53a91a503517aaf4bd  # Automatically created id
-        type: media-control
+      - type: media-control
         entity: media_player.livingroom_speaker
-      - id: a99449618bce495c9645a880e6333e60  # Automatically created id
-        type: media-control
+      - type: media-control
         entity: media_player.livingroom_tv
-      - id: 6f979b3acb03403cbcbcd975b2c35156  # Automatically created id
-        type: media-control
+      - type: media-control
         entity: media_player.mancave_assistant
-      - id: d45d48254e584258b3f52030a632f6b3  # Automatically created id
-        type: media-control
+      - type: media-control
         entity: media_player.mancave_directv
-      - id: 3be16caa997b48e3b54c745340179c00  # Automatically created id
-        type: media-control
+      - type: media-control
         entity: media_player.mancave_tv
-      - id: c7031768071a431c9e56a591a3ebc8b6  # Automatically created id
-        type: media-control
+      - type: media-control
         entity: media_player.master_suite
-      - id: ad7ca969787241fcaefdf82421d43841  # Automatically created id
-        type: media-control
+      - type: media-control
         entity: media_player.nursery_assistant
-      - id: 3d2e1a0388db4c5388926097372ed2e8  # Automatically created id
-        type: media-control
+      - type: media-control
         entity: media_player.party_mode
-      - id: 15e0463e1f944ed4b5c48b44c5df0f00  # Automatically created id
-        type: media-control
+      - type: media-control
         entity: media_player.rasplex
 
 ###########
@@ -525,23 +492,19 @@ views:
     name: Camera
     id: camera
     cards:
-      - id: 011e38be36f84f6787e79430bf12258a  # Automatically created id
-        type: picture-entity
+      - type: picture-entity
         name: Front Door
         entity: camera.downstairs_front_door
         camera_image: camera.downstairs_front_door
-      - id: 5bf7aecd55da4e839e6fe71e7747c948  # Automatically created id
-        type: picture-entity
+      - type: picture-entity
         name: Backyard
         entity: camera.downstairs_yard
         camera_image: camera.downstairs_yard
-      - id: 0c907df8ca2c42c8a8b374f5db24f6aa  # Automatically created id
-        type: picture-entity
+      - type: picture-entity
         name: Nursery
         entity: camera.upstairs_nursery
         camera_image: camera.upstairs_nursery
-      - id: cd553b7683b14fecac9358b0546b4193  # Automatically created id
-        type: map
+      - type: map
         aspect_ratio: 74.75%
         entities:
           - entity: device_tracker.google_maps_102616309312724957780
@@ -558,8 +521,7 @@ views:
     name: Settings
     id: settings
     cards:
-      - id: 9e3390e6ca9d4d44a16b80a5025f959a  # Automatically created id
-        type: entity-filter
+      - type: entity-filter
         entities:
           - entity: sensor.front_door_lock_battery
             name: Front Door
@@ -599,8 +561,7 @@ views:
         card:
           type: glance
           title: Low batteries
-      - id: 9c5c3e0df8bc48c6bf1c0fd98e051f2e  # Automatically created id
-        type: vertical-stack
+      - type: vertical-stack
         cards:
           - type: entities
             title: Administration
@@ -614,8 +575,7 @@ views:
           - type: iframe
             url: https://embed.windy.com/embed2.html?lat=35.127&lon=-89.843&zoom=7&level=surface&overlay=radar&menu=&message=true&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=35.127&detailLon=-89.843&metricWind=mph&metricTemp=%C2%B0F&radarRange=-1
             aspect_ratio: 100%
-      - id: 0eaf07303e0048d88e5abf3241507312  # Automatically created id
-        type: vertical-stack
+      - type: vertical-stack
         cards:
           - type: history-graph
             title: Titan
@@ -646,8 +606,7 @@ views:
                 entity: sensor.storage
                 min: 0
                 max: 100
-      - id: 7d705fd6d16940d686e2c6f8a61d5d87  # Automatically created id
-        type: entities
+      - type: entities
         title: Critical Devices
         entities:
           - sensor.huebridge
@@ -659,8 +618,7 @@ views:
           - sensor.rasplex
           - sensor.directv_genie
           - sensor.nesthello
-      - id: 32158f91e21b4de183769df6b45a3830  # Automatically created id
-        type: entities
+      - type: entities
         title: Cast Devices
         entities:
           - sensor.google_home_livingroom
