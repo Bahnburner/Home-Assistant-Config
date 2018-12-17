@@ -80,7 +80,7 @@ views:
                 group: true
                 hide_controls: true
                 hide_info: true
-                hide_power: true                
+                hide_power: true
             state_filter:
               - playing
               - paused
