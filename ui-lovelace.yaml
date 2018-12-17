@@ -50,7 +50,8 @@ views:
             image: /local/resources/images/lovelace/livingroom_edited.jpg
             entity: light.living_room
             name: Livingroom
-            tap_action: toggle
+            tap_action: 
+              action: toggle
           - type: entity-filter
             entities:
               - type: custom:mini-media-player
@@ -140,7 +141,8 @@ views:
             image: /local/resources/images/lovelace/master_bedroom_edited.jpg
             entity: light.master_bedroom
             name: Master Bedroom
-            tap_action: toggle
+            tap_action: 
+              action: toggle
           - type: entity-filter
             entities:
               - type: custom:mini-media-player
@@ -214,7 +216,8 @@ views:
             image: /local/resources/images/lovelace/kitchen_edited.jpg
             entity: group.kitchen_lighting
             name: Kitchen
-            tap_action: toggle
+            tap_action: 
+              action: toggle
           - type: entity-filter
             entities:
               - type: custom:mini-media-player
@@ -283,7 +286,8 @@ views:
             image: /local/resources/images/lovelace/house_exterior_edited.jpg
             entity: group.exterior
             name: Exterior
-            tap_action: toggle
+            tap_action: 
+              action: toggle
           - type: entities
             entities:
               - entity: light.front_door
@@ -298,7 +302,8 @@ views:
             name: Office
             image: /local/resources/images/lovelace/office_edited.jpg
             entity: light.desk_lamp
-            tap_action: toggle
+            tap_action: 
+              action: toggle
           - type: entity-filter
             entities:
               - type: custom:mini-media-player
