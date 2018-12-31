@@ -18,7 +18,7 @@
         media_content_type: "audio/mp3"  
     - service: light.turn_on
       entity_id:
-        - light.communal
+        - light.living_room
         - light.dining_room
         - light.foyer
         - light.cabinet_lights
@@ -31,4 +31,7 @@
       entity_id: media_player.vizio_smartcast
       data: 
         is_volume_muted: false
-    - service: script.livingroom_on
+    - service: light.turn_on
+      entity_id: light.living_room
+      data: 
+        color_temp: 500
