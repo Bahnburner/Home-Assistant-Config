@@ -31,22 +31,4 @@
       entity_id: media_player.vizio_smartcast
       data: 
         is_volume_muted: false
-    - service: light.turn_on
-      entity_id: light.living_room
-      data: 
-        brightness: 254
-      data_template:
-        color_temp: >
-          {% if (states.sensor.decimal_time.state | round(2)) <= 05.00 %}
-            500
-          {% elif (states.sensor.decimal_time.state | round(2)) <= 09.50 %}
-            200
-          {% elif (states.sensor.decimal_time.state | round(2)) >= 22.25 %}
-            500
-          {% elif states.sun.sun.attributes.elevation < 8 %}
-            366
-          {% elif (states.sensor.decimal_time.state | round(2)) > 9.50 %}
-            300
-          {% else %}
-            366
-          {% endif %}
+    - service: script.livingroom_on
