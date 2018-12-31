@@ -1,26 +1,35 @@
-#- alias: NYE 
-#  hide_entity: True
-#  trigger:
-#    platform: time
-#    at: '00:00:00'
-#  condition:
-#    condition: template
-#    value_template: '{{ now().month == 1 and now().day == 1 }}'
-#  action:
-#    - service: media_player.play_media
-#      entity_id: media_player.party_mode
-#      data:
-#        media_content_id: "http://smrtho.us/storage/auld_lang_syne.mp3"
-#        media_content_type: "audio/mp3"  
-#    - service: light.turn_on
-#      entity_id:
-#        - light.communal
-#        - light.dining_room
-#        - light.foyer
-#        - light.master_hallway
-#      data:
-#        effect: colorloop
-#    - delay:
-#        seconds: 129
-#    - service: script.turn_on
-#      entity_id: script.revert
+- alias: NYE 
+  hide_entity: True
+  trigger:
+    platform: time
+    at: '00:00:00'
+  condition:
+    condition: template
+    value_template: '{{ now().month == 1 and now().day == 1 }}'
+  action:
+    - service: media_player.volume_mute
+      entity_id: media_player.vizio_smartcast
+      data: 
+        is_volume_muted: true
+    - service: media_player.play_media
+      entity_id: media_player.party_mode
+      data:
+        media_content_id: "http://smrtho.us/storage/auld_lang_syne.mp3"
+        media_content_type: "audio/mp3"  
+    - service: light.turn_on
+      entity_id:
+        - light.communal
+        - light.dining_room
+        - light.foyer
+        - light.cabinet_lights
+        - light.bias_light
+        - light.desk_lamp
+      data:
+        effect: colorloop
+    - delay:
+        seconds: 129
+    - service: script.revert
+    - service: media_player.volume_mute
+      entity_id: media_player.vizio_smartcast
+      data: 
+        is_volume_muted: false
