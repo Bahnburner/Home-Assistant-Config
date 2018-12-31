@@ -31,6 +31,10 @@
       entity_id: media_player.vizio_smartcast
       data: 
         is_volume_muted: false
+    - service: light.turn_off
+      entity_id: light.living_room
+    - delay: 
+        seconds: 1
     - service: light.turn_on
       entity_id: light.living_room
       data: 
