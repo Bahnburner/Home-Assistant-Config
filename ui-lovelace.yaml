@@ -104,7 +104,7 @@ views:
                 group: true
                 artwork: none
             state_filter:
-              - playing
+              - "playing"
             show_empty: false
           - type: entity-filter
             entities:
@@ -114,7 +114,7 @@ views:
                 group: true
                 artwork: none
             state_filter:
-              - playing
+              - "playing"
             show_empty: false
           - type: entities
             entities:
@@ -198,7 +198,7 @@ views:
                 hide_info: true
                 hide_power: true   
             state_filter:
-              - playing
+              - "playing"
             show_empty: false           
           - type: entities
             entities:
@@ -236,7 +236,7 @@ views:
                 group: true
                 artwork: none
             state_filter:
-              - playing
+              - "playing"
             show_empty: false 
           - type: entities
             entities:
@@ -334,7 +334,7 @@ views:
                 hide_info: true
                 hide_power: true  
             state_filter:
-              - playing
+              - "playing"
             show_empty: false
           - type: entities
             entities:
