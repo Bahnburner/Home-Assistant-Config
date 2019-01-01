@@ -94,7 +94,7 @@ views:
                 group: true
                 artwork: none
             state_filter:
-              - playing
+              - "playing"
             show_empty: false
           - type: entity-filter
             entities:
