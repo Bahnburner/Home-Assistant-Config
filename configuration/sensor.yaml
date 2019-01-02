@@ -266,6 +266,7 @@
 - platform: tautulli
   api_key: 06c026da13d149308c932cba8c771bc4
   host: 10.0.0.109
+  scan_interval: 5
 - platform: pi_hole
   host: 10.0.0.3
 #- platform: command_line
