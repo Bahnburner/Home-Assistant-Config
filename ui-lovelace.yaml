@@ -610,6 +610,13 @@ views:
                 entity: sensor.storage
                 min: 0
                 max: 100
+          - type: history-graph
+            title: Tautulli
+            entities:
+              - entity: sensor.tautulli_streams
+                name: 'Streams'
+              - entity: sensor.tautulli_transcodes
+                name: 'Transcodes'                
           - type: horizontal-stack
             cards:
               - type: gauge
@@ -622,13 +629,6 @@ views:
                 entity: sensor.tautulli_transcodes
                 min: 0
                 max: 10
-          - type: history-graph
-            title: Tautulli
-            entities:
-              - entity: sensor.tautulli_streams
-                name: 'Streams'
-              - entity: sensor.tautulli_transcodes
-                name: 'Transcodes'
       - type: entities
         title: Critical Devices
         show_header_toggle: false
