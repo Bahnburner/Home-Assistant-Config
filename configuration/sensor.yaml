@@ -193,12 +193,12 @@
     tautulli_streams:
       entity_id: sensor.tautulli
       value_template: '{{ states.sensor.tautulli.attributes.stream_count }}'
-      icon: mdi:cloud-upload-outline
+      icon_template: mdi:cloud-upload-outline
       friendly_name: 'Streams'
     tautulli_transcodes:
       entity_id: sensor.tautulli
       value_template: '{{ states.sensor.tautulli.attributes.stream_count_transcode }}'
-      icon: mdi:cloud-upload
+      icon_template: mdi:cloud-upload
       friendly_name: 'Transcodes'
 - platform: random
   name: whitenoise
