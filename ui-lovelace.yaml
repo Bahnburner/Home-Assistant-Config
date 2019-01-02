@@ -611,7 +611,7 @@ views:
                 min: 0
                 max: 100
           - type: history-graph
-            title: Titan
+            title: Tautulli
             entities:
               - entity: sensor.tautulli_streams
                 name: 'Streams'
