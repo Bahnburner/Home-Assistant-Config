@@ -610,6 +610,13 @@ views:
                 entity: sensor.storage
                 min: 0
                 max: 100
+          - type: history-graph
+            title: Titan
+            entities:
+              - entity: sensor.tautulli_streams
+                name: 'Streams'
+              - entity: sensor.tautulli_transcodes
+                name: 'Transcodes'
       - type: entities
         title: Critical Devices
         show_header_toggle: false
