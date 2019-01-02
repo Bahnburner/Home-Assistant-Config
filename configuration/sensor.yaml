@@ -192,12 +192,12 @@
       friendly_name: 'Water Heater Leak Sensor' 
     tautulli_streams:
       entity_id: sensor.tautulli
-      value_template: {{ states.sensor.tautulli.attributes.stream_count }}
+      value_template: '{{ states.sensor.tautulli.attributes.stream_count }}'
       icon: mdi:cloud-upload-outline
       friendly_name: 'Streams'
     tautulli_transcodes:
       entity_id: sensor.tautulli
-      value_template: {{ states.sensor.tautulli.attributes.stream_count_transcode }}
+      value_template: '{{ states.sensor.tautulli.attributes.stream_count_transcode }}'
       icon: mdi:cloud-upload
       friendly_name: 'Transcodes'
 - platform: random
