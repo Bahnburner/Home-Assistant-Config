@@ -190,6 +190,16 @@
       value_template: '{% if is_state("binary_sensor.water_heater_leak_sensor", "off") %}Dry{% elif is_state("binary_sensor.water_heater_leak_sensor", "on") %}Wet{% endif %}'
       icon_template: '{% if is_state("binary_sensor.water_heater_leak_sensor", "off") %}mdi:water-off{% elif is_state("binary_sensor.water_heater_leak_sensor", "on") %}mdi:water{% endif %}'
       friendly_name: 'Water Heater Leak Sensor' 
+    tautulli_streams:
+      entity_id: sensor.tautulli
+      value_template: {{ states.sensor.tautulli.attributes.stream_count }}
+      icon: mdi:cloud-upload-outline
+      friendly_name: 'Streams'
+    tautulli_transcodes:
+      entity_id: sensor.tautulli
+      value_template: {{ states.sensor.tautulli.attributes.stream_count_transcode }}
+      icon: mdi:cloud-upload
+      friendly_name: 'Transcodes'
 - platform: random
   name: whitenoise
   minimum: 1
