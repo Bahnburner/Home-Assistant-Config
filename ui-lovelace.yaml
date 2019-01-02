@@ -612,6 +612,7 @@ views:
                 max: 100
           - type: history-graph
             title: Tautulli
+            unit_of_measurement: 'streams'
             entities:
               - entity: sensor.tautulli_streams
                 name: 'Streams'
