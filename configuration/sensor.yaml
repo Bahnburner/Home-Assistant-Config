@@ -195,11 +195,13 @@
       value_template: '{{ states.sensor.tautulli.attributes.stream_count }}'
       icon_template: mdi:cloud-upload-outline
       friendly_name: 'Streams'
+      unit_of_measurement: 'streams'
     tautulli_transcodes:
       entity_id: sensor.tautulli
       value_template: '{{ states.sensor.tautulli.attributes.stream_count_transcode }}'
       icon_template: mdi:cloud-upload
       friendly_name: 'Transcodes'
+      unit_of_measurement: 'streams'
 - platform: random
   name: whitenoise
   minimum: 1
