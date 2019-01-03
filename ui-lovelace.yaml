@@ -610,6 +610,8 @@ views:
                 entity: sensor.storage
                 min: 0
                 max: 100
+      - type: vertical-stack
+        cards:
           - type: history-graph
             title: Tautulli
             entities:
@@ -642,19 +644,19 @@ views:
           - sensor.rasplex
           - sensor.directv_genie
           - sensor.nesthello
-      - type: entities
-        title: Cast Devices
-        show_header_toggle: false
-        entities:
-          - sensor.google_home_livingroom
-          - sensor.google_home_hub_kitchen
-          - sensor.google_home_mini_mancave
-          - sensor.google_home_mini_bedroom
-          - sensor.google_home_mini_bathroom
-          - sensor.google_home_mini_nursery
-          - sensor.chromecast_man_cave
-          - sensor.chromecast_audio_dining_room
-          - sensor.chromecast_audio_garage
-          - sensor.viziocrave360
-          - sensor.vizio_m70e3
-          - sensor.lg_sj9
+#      - type: entities
+#        title: Cast Devices
+#        show_header_toggle: false
+#        entities:
+#          - sensor.google_home_livingroom
+#          - sensor.google_home_hub_kitchen
+#          - sensor.google_home_mini_mancave
+#          - sensor.google_home_mini_bedroom
+#          - sensor.google_home_mini_bathroom
+#          - sensor.google_home_mini_nursery
+#          - sensor.chromecast_man_cave
+#          - sensor.chromecast_audio_dining_room
+#          - sensor.chromecast_audio_garage
+#          - sensor.viziocrave360
+#          - sensor.vizio_m70e3
+#          - sensor.lg_sj9
