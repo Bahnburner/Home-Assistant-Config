@@ -45,10 +45,8 @@
     - service: script.turn_on
       data_template:
         entity_id: >
-          {% if states.sun.sun.attributes.elevation <= 8 %}
-            script.away_mode__night
-          {% elif is_state('binary_sensor.rain', 'on') %}
-            script.away_mode__rain
+          {% elif is_state('binary_sensor.virtually_dark', 'on') %}
+            script.away_mode__living_room
           {% else %}
             script.away_mode__day
           {% endif %}
