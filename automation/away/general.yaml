@@ -45,7 +45,7 @@
     - service: script.turn_on
       data_template:
         entity_id: >
-          {% elif is_state('binary_sensor.virtually_dark', 'on') %}
+          {% if is_state('binary_sensor.virtually_dark', 'on') %}
             script.away_mode__living_room
           {% else %}
             script.away_mode__day
