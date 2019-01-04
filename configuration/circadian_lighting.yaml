@@ -1,3 +1,5 @@
+min_colortemp: 153
+max_colortemp: 500
 sunset_time: '10:00:00'
 interval: 300
 transition: 300
