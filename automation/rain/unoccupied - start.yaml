@@ -13,7 +13,7 @@
       entity_id: light.living_room
       data:
         brightness: 150
-        transition: 300
+        transition: 60
       data_template:
         color_temp: >
           {% if (states.sensor.decimal_time.state | round(2)) <= 05.00 %}
