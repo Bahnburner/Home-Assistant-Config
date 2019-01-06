@@ -250,13 +250,18 @@
   scan_interval: 3
 - platform: rest
   resource: http://10.0.0.109:61209/api/3/fs
+  name: Titan
+  value_template: '{{ value_json[0].percent| round(1) }}'
+  unit_of_measurement: '%'
+- platform: rest
+  resource: http://10.0.0.109:61209/api/3/fs
   name: Storage
-  value_template: '{{ value_json[3].percent| round(1) }}'
+  value_template: '{{ value_json[1].percent| round(1) }}'
   unit_of_measurement: '%'
 - platform: rest
   resource: http://10.0.0.109:61209/api/3/fs
   name: Plex
-  value_template: '{{ value_json[4].percent| round(1) }}'
+  value_template: '{{ value_json[2].percent| round(1) }}'
   unit_of_measurement: '%'
 - platform: tautulli
   api_key: 06c026da13d149308c932cba8c771bc4
