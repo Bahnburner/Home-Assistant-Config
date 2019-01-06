@@ -2,12 +2,15 @@
   hide_entity: True
   trigger:
     - platform: state
-      entity_id: binary_sensor.virtually_dark
+      entity_id: binary_sensor.rain
       to: 'off'
       for:
         minutes: 20
   condition:
-
+    - condition: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation }}'
+      above: 8
     - condition: state
       entity_id: group.family
       state: 'not_home'
