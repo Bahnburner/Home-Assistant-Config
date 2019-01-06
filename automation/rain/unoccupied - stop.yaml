@@ -16,4 +16,4 @@
         - light.living_room
         - light.pantry
       data: 
-        transition: 300
+        transition: 60
