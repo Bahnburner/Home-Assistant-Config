@@ -1,9 +1,10 @@
 - alias: Exterior Front - Dusk
   hide_entity: True
   trigger:
-    platform: state
-    entity_id: binary_sensor.virtually_dark
-    to: 'on'
+    platform: numeric_state
+    entity_id: sun.sun
+    value_template: '{{ state.attributes.elevation }}'
+    below: 8
   action:
     - service: light.turn_on
       entity_id:
