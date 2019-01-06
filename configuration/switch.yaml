@@ -23,6 +23,4 @@
   payload_on: "on"
   payload_off: "off"
   retain: true
-- platform: circadian_lighting
-  lights_ct:
-    - light.desk_lamp
+
