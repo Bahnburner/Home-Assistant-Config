@@ -5,8 +5,6 @@
     entity_id: binary_sensor.virtually_dark
     to: 'off'
   action:
-    - service: automation.turn_off
-      entity_id: automation.exterior_front__dim  
     - service: light.turn_off
       entity_id: 
         - light.front_door
