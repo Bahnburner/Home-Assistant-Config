@@ -1,0 +1,18 @@
+- alias: Sunrise - Unoccupied
+  hide_entity: True
+  trigger:
+    platform: numeric_state
+    entity_id: sun.sun
+    value_template: '{{ state.attributes.elevation }}'
+    above: 8
+  condition: 
+    condition: state
+    entity_id: group.family
+    state: 'not_home'
+  action:
+    - service: light.turn_off
+      entity_id: 
+        - light.living_room
+        - light.pantry
+      data: 
+        transition: 60
