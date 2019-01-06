@@ -29,7 +29,6 @@ asuswrt: !include ./configuration/asuswrt.yaml
 automation: !include_dir_merge_list automation
 binary_sensor: !include ./configuration/binary_sensor.yaml
 #cast: !include ./configuration/cast.yaml
-circadian_lighting: !include ./configuration/circadian_lighting.yaml
 climate: !include ./configuration/climate.yaml
 cover: !include ./configuration/cover.yaml
 device_tracker: !include ./configuration/device_tracker.yaml
