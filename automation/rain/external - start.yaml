@@ -2,8 +2,20 @@
   hide_entity: True
   trigger:
     - platform: state
-      entity_id: binary_sensor.virtually_dark
+      entity_id: binary_sensor.rain
       to: 'on'
+    - platform: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation }}'
+      above: 8
+  condition:
+    - condition: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation }}'
+      above: 8
+    - condition: state
+      entity_id: binary_sensor.rain
+      state: 'on'
   action:
     - service: light.turn_on
       entity_id: light.front_door
