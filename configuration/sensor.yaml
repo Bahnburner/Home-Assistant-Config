@@ -237,24 +237,24 @@
 - platform: dnsip
   scan_interval: 300
 - platform: rest
-  resource: http://10.0.0.109:61209/api/3/quicklook/cpu
+  resource: http://10.0.0.109:61208/api/3/quicklook/cpu
   name: "CPU Usage"
   value_template: '{{ value_json.cpu }}'
   unit_of_measurement: '%'
   scan_interval: 3
 - platform: rest
-  resource: http://10.0.0.109:61209/api/3/mem/percent
+  resource: http://10.0.0.109:61208/api/3/mem/percent
   name: "Memory Usage"
   value_template: '{{ value_json.percent }}'
   unit_of_measurement: '%'
   scan_interval: 3
 - platform: rest
-  resource: http://10.0.0.109:61209/api/3/fs
+  resource: http://10.0.0.109:61208/api/3/fs
   name: Storage
   value_template: '{{ value_json[2].percent| round(1) }}'
   unit_of_measurement: '%'
 - platform: rest
-  resource: http://10.0.0.109:61209/api/3/fs
+  resource: http://10.0.0.109:61208/api/3/fs
   name: Plex
   value_template: '{{ value_json[3].percent| round(1) }}'
   unit_of_measurement: '%'
