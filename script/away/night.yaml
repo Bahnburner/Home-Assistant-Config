@@ -1,4 +1,4 @@
-away_mode__night:
+away_mode_night:
   sequence:
     service: light.turn_on
     entity_id: light.living_room
