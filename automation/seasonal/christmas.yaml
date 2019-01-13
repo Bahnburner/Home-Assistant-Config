@@ -61,34 +61,3 @@
         input_boolean.turn_off
       {% endif %}
     entity_id: input_boolean.christmas_lights
-
-- alias: Red-Green Spin
-  hide_entity: True
-  initial_state: false
-  trigger:
-    platform: time
-    seconds: /6
-  action: 
-    - service: light.turn_on
-      entity_id: light.dining_room_left
-      data:
-        brightness: 255
-        rgb_color: [0,255,0]
-    - service: light.turn_on
-      entity_id: light.dining_room_right
-      data:
-        brightness: 255
-        rgb_color: [255,0,0]
-    - delay:
-        seconds: 2
-    - service: light.turn_on
-      entity_id: light.dining_room_right
-      data:
-        brightness: 255
-        rgb_color: [0,255,0]
-    - service: light.turn_on
-      entity_id: light.dining_room_left
-      data:
-        brightness: 255
-        rgb_color: [255,0,0]
-       
