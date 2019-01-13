@@ -1,4 +1,4 @@
-- alias: Exterior Front - Dawn
+- alias: Exterior Front Dawn
   hide_entity: True
   trigger:
     platform: numeric_state
