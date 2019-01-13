@@ -38,7 +38,7 @@
       data_template:
         option: "Select Input"
 
-- alias: Harmony Light Control - Start
+- alias: Harmony Light Control Start
   hide_entity: true
   trigger: 
     - platform: state
@@ -112,7 +112,7 @@
           {% else %}
           {% endif %}
       
-- alias: Harmony Light Control - End
+- alias: Harmony Light Control End
   hide_entity: true
   trigger: 
     - platform: state
@@ -209,7 +209,7 @@
       data:
         brightness: 254
 
-- alias: Harmony Cast Control - Start
+- alias: Harmony Cast Control Start
   hide_entity: true
   trigger: 
     - platform: state
@@ -221,7 +221,7 @@
       data:
         activity: 28122446
 
-- alias: Movie Mode - Start
+- alias: Movie Mode Start
   hide_entity: true
   trigger: 
     platform: state
@@ -258,7 +258,7 @@
         transition: 15
         brightness: 175
         
-- alias: Movie Mode - Stop
+- alias: Movie Mode Stop
   hide_entity: true
   trigger: 
     platform: state
