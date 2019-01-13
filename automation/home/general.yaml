@@ -1,4 +1,4 @@
-- alias: Home Mode - General
+- alias: Home Mode General
   hide_entity: True
   trigger:
     platform: state
