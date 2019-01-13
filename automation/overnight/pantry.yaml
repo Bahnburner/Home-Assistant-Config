@@ -1,4 +1,4 @@
-- alias: Overnight - Pantry Dim
+- alias: Overnight Pantry Dim
   hide_entity: true
   trigger:
     platform: time
@@ -14,7 +14,7 @@
       brightness: 50
       transition: 30
       
-- alias: Overnight - Pantry Off
+- alias: Overnight Pantry Off
   hide_entity: true
   trigger:
     platform: time
@@ -32,7 +32,7 @@
     - service: light.turn_off
       entity_id: light.living_room
        
-- alias: Overnight - Pantry ReDim
+- alias: Overnight Pantry ReDim
   hide_entity: true
   trigger:
     platform: numeric_state
@@ -54,7 +54,7 @@
         brightness: 50
         transition: 30
 
-- alias: Overnight - Pantry ReOff
+- alias: Overnight Pantry ReOff
   hide_entity: true
   trigger:
     platform: numeric_state
