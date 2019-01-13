@@ -1,4 +1,4 @@
-- alias: lock on close - front door
+- alias: lock on close front door
   hide_entity: true
   trigger: 
     platform: state
@@ -18,7 +18,7 @@
     - service: lock.lock
       entity_id: lock.front_door
 
-- alias: lock on close - back door
+- alias: lock on close back door
   hide_entity: true
   trigger: 
     platform: state
