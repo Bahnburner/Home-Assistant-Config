@@ -1,4 +1,4 @@
-- alias: Away Mode - General
+- alias: Away Mode General
   hide_entity: True
   trigger:
     platform: state
