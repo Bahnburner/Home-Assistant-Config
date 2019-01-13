@@ -1,4 +1,4 @@
-- alias: Bias Light - On
+- alias: Bias Light On
   hide_entity: true
   trigger:
     - platform: state
@@ -53,7 +53,7 @@
           {% else %}
           {% endif %}
         
-- alias: Bias Light - Off
+- alias: Bias Light Off
   hide_entity: true
   trigger:
     - platform: state
@@ -78,7 +78,7 @@
     - service: light.turn_off
       entity_id: light.bias_light
 
-- alias: Bias Light - Fade
+- alias: Bias Light Fade
   hide_entity: True
   trigger:
     platform: time
