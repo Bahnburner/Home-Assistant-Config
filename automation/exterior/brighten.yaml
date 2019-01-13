@@ -1,4 +1,4 @@
-- alias: Exterior - Brighten
+- alias: Exterior Brighten
   hide_entity: True
   trigger:
     platform: numeric_state
