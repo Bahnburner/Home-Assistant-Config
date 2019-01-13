@@ -1,4 +1,4 @@
-- alias: Rain - Exterior Lights - Start
+- alias: Rain Exterior Lights Start
   hide_entity: True
   trigger:
     - platform: state
