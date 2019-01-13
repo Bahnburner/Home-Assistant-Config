@@ -1,4 +1,4 @@
-- alias: Kitchen Uplighting - Off
+- alias: Kitchen Uplighting Off
   hide_entity: true
   trigger:
     - platform: state
