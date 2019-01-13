@@ -1,4 +1,4 @@
-- alias: Garage door open - Home
+- alias: Garage door open Home
   hide_entity: True
   trigger:
     platform: state
@@ -21,7 +21,7 @@
       data: 
         message: 'Heads up, the garage is currently open.'
  
-- alias: Garage door open - Away
+- alias: Garage door open Away
   hide_entity: True
   trigger:
     platform: state
