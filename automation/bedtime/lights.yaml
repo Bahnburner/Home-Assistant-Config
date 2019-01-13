@@ -1,4 +1,4 @@
-- alias: Bedtime - Lights
+- alias: Bedtime Lights
   hide_entity: True
   trigger:
     platform: time
