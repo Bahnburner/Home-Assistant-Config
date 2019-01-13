@@ -1,4 +1,4 @@
-- alias: Rain - Exterior Lights - Stop
+- alias: Rain Exterior Lights Stop
   hide_entity: True
   trigger:
     - platform: state
