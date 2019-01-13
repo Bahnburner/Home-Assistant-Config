@@ -1,4 +1,4 @@
-- alias: Exterior Front - Dusk
+- alias: Exterior Front Dusk
   hide_entity: True
   trigger:
     platform: numeric_state
