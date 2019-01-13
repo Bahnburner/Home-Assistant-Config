@@ -1,4 +1,4 @@
-- alias: Home Mode - Bedroom
+- alias: Home Mode Bedroom
   hide_entity: True
   trigger:
     platform: state
