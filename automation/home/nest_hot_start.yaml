@@ -1,4 +1,4 @@
-- alias: Home Mode - Nest Hot Start - Leaving Work
+- alias: Home Mode Nest Hot Start Leaving Work
   hide_entity: true
   trigger:
     - platform: state
@@ -25,7 +25,7 @@
       data:
         away_mode: false
 
-- alias: Home Mode - Nest Hot Start - Arriving Home 
+- alias: Home Mode Nest Hot Start Arriving Home 
   hide_entity: true
   trigger:
     platform: state
@@ -43,7 +43,7 @@
       data:
         away_mode: false
 
-- alias: Home Mode - Nest Hot Start - Leaving Home 
+- alias: Home Mode Nest Hot Start Leaving Home 
   hide_entity: true
   trigger:
     platform: state
