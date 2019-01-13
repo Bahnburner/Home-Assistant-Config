@@ -1,4 +1,4 @@
-- alias: Morning - Weekend - Stage 1
+- alias: Morning Weekend Stage 1
   hide_entity: True
   trigger:
     platform: time
