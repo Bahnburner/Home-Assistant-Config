@@ -1,4 +1,4 @@
-- alias: Evening - Lights
+- alias: Evening Lights
   hide_entity: True
   trigger:
     platform: numeric_state
