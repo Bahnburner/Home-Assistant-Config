@@ -1,4 +1,4 @@
-- alias: Home Mode - Garage Hot Start
+- alias: Home Mode Garage Hot Start
   hide_entity: true
   trigger:
     - platform: state
