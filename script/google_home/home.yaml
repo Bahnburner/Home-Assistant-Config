@@ -3,11 +3,11 @@ home:
     - service: cover.close_cover
       entity_id: cover.garage_door_opener  
     - service: automation.trigger
-      entity_id: automation.home_mode__livingroom
+      entity_id: automation.home_mode_livingroom
     - service: automation.trigger
-      entity_id: automation.home_mode__general
+      entity_id: automation.home_mode_general
     - service: automation.trigger
-      entity_id: automation.home_mode__bedroom
+      entity_id: automation.home_mode_bedroom
     - service: remote.turn_on
       entity_id: remote.livingroom
       data:
