@@ -12,6 +12,7 @@
     to: 'Emergency'
   action:
     - service: light.turn_on
+      entity_id: all
       data:
         brightness: 254
         color_temp: 300
