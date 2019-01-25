@@ -85,9 +85,9 @@ exclude:
       - light.master_bedroom
       - light.saved_brightness
       - script.abc
-      - script.away_mode__day
-      - script.away_mode__night
-      - script.away_mode__rain
+      - script.away_mode_day
+      - script.away_mode_night
+      - script.away_mode_rain
       - script.back_door_open
       - script.bedtime_lights
       - script.both_doors_open
