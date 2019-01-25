@@ -163,9 +163,9 @@ override:
     - input_boolean.simulate_presence
     - input_boolean.disable_all_automations
 vacation_mode:
-  - automation.away_mode__puppies
-  - automation.sunset__unoccupied
-  - automation.sunrise__unoccupied
+  - automation.away_mode_puppies
+  - automation.sunset_unoccupied
+  - automation.sunrise_unoccupied
 inputs:
   - automation.harmony
   - automation.harmony_off
@@ -215,86 +215,86 @@ cast_devices:
 disable_all_automations:
   - automation.activate_siren
   - automation.alarm_triggered
-  - automation.away_mode__bedroom
-  - automation.away_mode__general
-  - automation.away_mode__puppies
-  - automation.bedtime__lights
-  - automation.bias_light__fade
-  - automation.bias_light__off
-  - automation.bias_light__on
+  - automation.away_mode_bedroom
+  - automation.away_mode_general
+  - automation.away_mode_puppies
+  - automation.bedtime_lights
+  - automation.bias_light_fade
+  - automation.bias_light_off
+  - automation.bias_light_on
   - automation.brighten_entryway_on_unlock
   - automation.christmas_light_panel_visiblity
   - automation.christmas_lights_off
   - automation.christmas_lights_on
   - automation.close_garage_event
-  - automation.evening__lights
-  - automation.exterior__brighten
-  - automation.exterior_front__dawn
-  - automation.exterior_front__dim
-  - automation.exterior_front__driveway_motion
-  - automation.exterior_front__dusk
-  - automation.exterior_front__entranceway_motion
-  - automation.foyer_lights__doorbell_pushed
+  - automation.evening_lights
+  - automation.exterior_brighten
+  - automation.exterior_front_dawn
+  - automation.exterior_front_dim
+  - automation.exterior_front_driveway_motion
+  - automation.exterior_front_dusk
+  - automation.exterior_front_entranceway_motion
+  - automation.foyer_lights_doorbell_pushed
   - automation.garage_notify
-  - automation.garage_door_open__away
-  - automation.garage_door_open__home
+  - automation.garage_door_open_away
+  - automation.garage_door_open_home
   - automation.garbage_reminder
   - automation.goodnight
   - automation.harmony
-  - automation.harmony_cast_control__start
-  - automation.harmony_light_control__end
-  - automation.harmony_light_control__start
+  - automation.harmony_cast_control_start
+  - automation.harmony_light_control_end
+  - automation.harmony_light_control_start
   - automation.harmony_off
   - automation.hide_media_player_directv
   - automation.hide_media_player_group
   - automation.hide_media_player_smartcast
-  - automation.home_mode__bedroom
-  - automation.home_mode__garage_hot_start
-  - automation.home_mode__general
-  - automation.home_mode__livingroom
-  - automation.home_mode__nest_hot_start__arriving_home
-  - automation.home_mode__nest_hot_start__leaving_home
-  - automation.home_mode__nest_hot_start__leaving_work
+  - automation.home_mode_bedroom
+  - automation.home_mode_garage_hot_start
+  - automation.home_mode_general
+  - automation.home_mode_livingroom
+  - automation.home_mode_nest_hot_start_arriving_home
+  - automation.home_mode_nest_hot_start_leaving_home
+  - automation.home_mode_nest_hot_start_leaving_work
   - automation.home_mode_delay
   - automation.ip_address_changed
-  - automation.kitchen_uplighting__off
-  - automation.kitchen_uplighting__weekdays
-  - automation.kitchen_uplighting__weekends
+  - automation.kitchen_uplighting_off
+  - automation.kitchen_uplighting_weekdays
+  - automation.kitchen_uplighting_weekends
   - automation.media_player_initialize
-  - automation.morning__stage_1
-  - automation.morning__stage_2
-  - automation.morning__stage_4
-  - automation.morning__weekend__stage_1
-  - automation.morning__weekend__stage_2
-  - automation.movie_mode__start
-  - automation.movie_mode__stop
+  - automation.morning_stage_1
+  - automation.morning_stage_2
+  - automation.morning_stage_4
+  - automation.morning_weekend_stage_1
+  - automation.morning_weekend_stage_2
+  - automation.movie_mode_start
+  - automation.movie_mode_stop
   - automation.nest_protect_emergency
   - automation.nest_protect_normal
-  - automation.overnight__pantry_dim
-  - automation.overnight__pantry_off
-  - automation.overnight__pantry_redim
-  - automation.overnight__pantry_reoff
-  - automation.rain__exterior_lights__start
-  - automation.rain__exterior_lights__stop
-  - automation.rain__unoccupied__start
-  - automation.rain__unoccupied__stop
+  - automation.overnight_pantry_dim
+  - automation.overnight_pantry_off
+  - automation.overnight_pantry_redim
+  - automation.overnight_pantry_reoff
+  - automation.rain_exterior_lights_start
+  - automation.rain_exterior_lights_stop
+  - automation.rain_unoccupied_start
+  - automation.rain_unoccupied_stop
   - automation.restart_system_event
   - automation.set_saved_brightness
   - automation.show_media_player_group
-  - automation.show_media_player_group__directv
+  - automation.show_media_player_group_directv
   - automation.startup
-  - automation.sunrise__unoccupied
-  - automation.sunset__occupied
-  - automation.sunset__unoccupied
+  - automation.sunrise_unoccupied
+  - automation.sunset_occupied
+  - automation.sunset_unoccupied
   - automation.system_cpu_too_high
   - automation.system_temp_too_high
   - automation.wan_down
-  - automation.wan_down__off
-  - automation.wan_down__on
+  - automation.wan_down_off
+  - automation.wan_down_on
   - automation.windows_closed
   - automation.windows_open
   - automation.disable_all_automations
   - automation.input_boolean_off
-  - automation.lock_on_close__back_door
-  - automation.lock_on_close__front_door
+  - automation.lock_on_close_back_door
+  - automation.lock_on_close_front_door
   - automation.update_available
