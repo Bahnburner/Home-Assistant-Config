@@ -5,7 +5,7 @@
     at: '00:00:00'
   action:
     - service: automation.turn_on
-      entity_id: automation.exterior_front__dim
+      entity_id: automation.exterior_front_dim
     - service: light.turn_on
       entity_id:  
         - light.front_door
