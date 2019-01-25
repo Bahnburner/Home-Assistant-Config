@@ -41,4 +41,4 @@
       entity_id: group.family
       state: 'not_home'
     - service: automation.trigger
-      entity_id: automation.away_mode__general
+      entity_id: automation.away_mode_general
