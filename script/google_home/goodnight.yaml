@@ -21,8 +21,8 @@ goodnight:
       entity_id: script.goodnight_timer_off
     - service: automation.turn_off
       entity_id: 
-        - automation.kitchen_uplighting__weekends
-        - automation.kitchen_uplighting__weekdays
+        - automation.kitchen_uplighting_weekends
+        - automation.kitchen_uplighting_weekdays
     - service: media_player.turn_off
       entity_id: 
         - media_player.dining_room_speaker
@@ -55,7 +55,7 @@ goodnight:
             script.whitenoise
           {% endif %}
     - service: automation.turn_on
-      entity_id: automation.exterior_front__dim
+      entity_id: automation.exterior_front_dim
     - service: light.turn_on
       entity_id:
         - light.front_door
@@ -85,8 +85,8 @@ goodnight:
         seconds: 30
     - service: automation.turn_on
       entity_id: 
-        - automation.kitchen_uplighting__weekends
-        - automation.kitchen_uplighting__weekdays
+        - automation.kitchen_uplighting_weekends
+        - automation.kitchen_uplighting_weekdays
     - service: script.turn_on
       entity_id: script.goodnight_timer_off
 
