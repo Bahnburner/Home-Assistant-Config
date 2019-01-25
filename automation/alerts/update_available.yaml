@@ -7,7 +7,7 @@
     data:
       message: "Home Assistant update available."
       data:
-        target: Tristans Phone 
+        target: tristans phone 
         title: "Home Assistant Alert"
         url: "https://home-assistant.io/blog/"
 
