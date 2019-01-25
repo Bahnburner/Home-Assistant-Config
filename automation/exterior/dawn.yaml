@@ -10,10 +10,9 @@
     value_template: '{{ states.binary_sensor.rain.state == "off" }}'
   action:
     - service: automation.turn_off
-      entity_id: automation.exterior_front__dim
+      entity_id: automation.exterior_front_dim
     - service: light.turn_off
-      entity_id: 
-        - light.front_door
+      entity_id: light.front_door
       data:
         transition: 180
     - service: light.turn_off
