@@ -602,12 +602,12 @@ views:
             cards:
               - type: gauge
                 title: Plex (Z:)
-                entity: sensor.plex
+                entity: sensor.disk_2
                 min: 0
                 max: 100
               - type: gauge
                 title: Storage (Y:)
-                entity: sensor.storage
+                entity: sensor.disk_1
                 min: 0
                 max: 100
       - type: vertical-stack
