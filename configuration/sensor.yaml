@@ -250,12 +250,22 @@
   scan_interval: 3
 - platform: rest
   resource: http://10.0.0.109:61208/api/3/fs
-  name: Storage
+  name: Disk 0
+  value_template: '{{ value_json[0].percent| round(1) }}'
+  unit_of_measurement: '%'  
+- platform: rest
+  resource: http://10.0.0.109:61208/api/3/fs
+  name: Disk 1
+  value_template: '{{ value_json[1].percent| round(1) }}'
+  unit_of_measurement: '%'  
+- platform: rest
+  resource: http://10.0.0.109:61208/api/3/fs
+  name: Disk 2
   value_template: '{{ value_json[2].percent| round(1) }}'
   unit_of_measurement: '%'
 - platform: rest
   resource: http://10.0.0.109:61208/api/3/fs
-  name: Plex
+  name: Disk 3
   value_template: '{{ value_json[3].percent| round(1) }}'
   unit_of_measurement: '%'
 - platform: tautulli
