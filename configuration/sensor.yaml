@@ -262,31 +262,67 @@
 - platform: rest
   resource: http://10.0.0.109:61208/api/3/fs
   name: Disk 1
+  json_attributes:
+    - device_name
+    - used
+    - free
+    - size
+    - percent  
   value_template: '{{ value_json[1].percent| round(1) }}'
   unit_of_measurement: '%'  
 - platform: rest
   resource: http://10.0.0.109:61208/api/3/fs
   name: Disk 2
+  json_attributes:
+    - device_name
+    - used
+    - free
+    - size
+    - percent  
   value_template: '{{ value_json[2].percent| round(1) }}'
   unit_of_measurement: '%'
 - platform: rest
   resource: http://10.0.0.109:61208/api/3/fs
   name: Disk 3
+  json_attributes:
+    - device_name
+    - used
+    - free
+    - size
+    - percent  
   value_template: '{{ value_json[3].percent| round(1) }}'
   unit_of_measurement: '%'
 - platform: rest
   resource: http://10.0.0.109:61208/api/3/fs
   name: Disk 4
+  json_attributes:
+    - device_name
+    - used
+    - free
+    - size
+    - percent  
   value_template: '{{ value_json[4].percent| round(1) }}'
   unit_of_measurement: '%'
 - platform: rest
   resource: http://10.0.0.109:61208/api/3/fs
   name: Disk 5
+  json_attributes:
+    - device_name
+    - used
+    - free
+    - size
+    - percent  
   value_template: '{{ value_json[5].percent| round(1) }}'
   unit_of_measurement: '%'
 - platform: rest
   resource: http://10.0.0.109:61208/api/3/fs
   name: Disk 6
+  json_attributes:
+    - device_name
+    - used
+    - free
+    - size
+    - percent  
   value_template: '{{ value_json[6].percent| round(1) }}'
   unit_of_measurement: '%'    
 - platform: tautulli
