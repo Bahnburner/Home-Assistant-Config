@@ -268,6 +268,21 @@
   name: Disk 3
   value_template: '{{ value_json[3].percent| round(1) }}'
   unit_of_measurement: '%'
+- platform: rest
+  resource: http://10.0.0.109:61208/api/3/fs
+  name: Disk 4
+  value_template: '{{ value_json[4].percent| round(1) }}'
+  unit_of_measurement: '%'
+- platform: rest
+  resource: http://10.0.0.109:61208/api/3/fs
+  name: Disk 5
+  value_template: '{{ value_json[5].percent| round(1) }}'
+  unit_of_measurement: '%'
+- platform: rest
+  resource: http://10.0.0.109:61208/api/3/fs
+  name: Disk 6
+  value_template: '{{ value_json[6].percent| round(1) }}'
+  unit_of_measurement: '%'    
 - platform: tautulli
   api_key: 06c026da13d149308c932cba8c771bc4
   host: 10.0.0.109
