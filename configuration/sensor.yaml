@@ -251,6 +251,12 @@
 - platform: rest
   resource: http://10.0.0.109:61208/api/3/fs
   name: Disk 0
+  json_attributes:
+    - device_name
+    - used
+    - free
+    - size
+    - percent
   value_template: '{{ value_json[0].percent| round(1) }}'
   unit_of_measurement: '%'  
 - platform: rest
