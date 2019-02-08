@@ -253,6 +253,7 @@
   name: Disk 0
   json_attributes:
     - device_name
+    - fs_type
     - used
     - free
     - size
@@ -264,6 +265,7 @@
   name: Disk 1
   json_attributes:
     - device_name
+    - fs_type
     - used
     - free
     - size
@@ -275,6 +277,7 @@
   name: Disk 2
   json_attributes:
     - device_name
+    - fs_type
     - used
     - free
     - size
@@ -286,6 +289,7 @@
   name: Disk 3
   json_attributes:
     - device_name
+    - fs_type
     - used
     - free
     - size
@@ -297,6 +301,7 @@
   name: Disk 4
   json_attributes:
     - device_name
+    - fs_type
     - used
     - free
     - size
@@ -308,6 +313,7 @@
   name: Disk 5
   json_attributes:
     - device_name
+    - fs_type
     - used
     - free
     - size
@@ -319,6 +325,7 @@
   name: Disk 6
   json_attributes:
     - device_name
+    - fs_type
     - used
     - free
     - size
