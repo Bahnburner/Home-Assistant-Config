@@ -1,0 +1,21 @@
+- alias: turn on desk lamp
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: device_tracker.10_0_0_160_fc_42_03_9e_4b_2d
+    from: 'not_home'
+    to: 'home'
+  action:
+    - service: light.turn_on
+      entity_id: light.desk_lamp
+      
+- alias: turn on desk lamp
+  hide_entity: True
+  trigger:
+    platform: state
+    entity_id: device_tracker.10_0_0_160_fc_42_03_9e_4b_2d
+    from: 'home'
+    to: 'not_home'
+  action:
+    - service: light.turn_off
+      entity_id: light.desk_lamp
