@@ -6,3 +6,4 @@
   password: !secret maps_pass
 - platform: googlehome
   host: 10.0.0.160
+  rssi_threshold: -60
