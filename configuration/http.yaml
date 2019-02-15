@@ -1,9 +1,15 @@
 server_port: 8123
-base_url: smrtho.us
+base_url: 
+  - smrtho.us
+  - johndenverschoolofflight.com
 trusted_networks:
    - 10.0.0.0/24
 ip_ban_enabled: True
 login_attempts_threshold: 3
-ssl_certificate: /certbot/live/smrtho.us/fullchain.pem
-ssl_key: /certbot/live/smrtho.us/privkey.pem
+ssl_certificate:
+  - /certbot/live/smrtho.us/fullchain.pem
+  - /certbot/live/johndenverschoolofflight.com
+ssl_key:
+  - /certbot/live/smrtho.us/privkey.pem
+  - /certbot/live/johndenverschoolofflight.com
 ssl_profile: intermediate
