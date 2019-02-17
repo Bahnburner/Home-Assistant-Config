@@ -215,6 +215,9 @@
     - platform: state
       entity_id: media_player.livingroom_tv
       to: 'playing'
+  condition:
+    condition: template
+    value_template: "{{ states.sensor.current_activity.state != 'Watch Chromecast'}}"   
   action: 
     - service: remote.turn_on
       entity_id: remote.livingroom
