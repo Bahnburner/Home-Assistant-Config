@@ -1,2 +1,11 @@
 host: !secret octoprint_host
 api_key: !secret octoprint_api_key
+name: "Mini"
+port: 5000
+bed: true
+number_of_tools: 2
+sensors:
+  monitored_conditions:
+binary_sensors:
+  monitored_conditions:
+  
