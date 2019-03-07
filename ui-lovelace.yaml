@@ -650,15 +650,17 @@ views:
                 name: 'Target Bed Temp'
               - entity: sensor.maker_select_mini_v1_target_tool0_temp
                 name: 'Target Hotend Temp'                    
-          - type: custom:useful-markdown-card
-            title: 'Time Remaining:'
-            content: >              
-              [[ sensor.maker_select_mini_v1_print_time_remaining ]]
-          - type: gauge
-            name: 'Job Progress'
-            entity: sensor.maker_select_mini_v1_job_percentage
-            min: 0
-            max: 100
+          - type: entities
+            entities:
+              - type: custom:useful-markdown-card
+                title: 'Time Remaining:'
+                content: >              
+                  [[ sensor.maker_select_mini_v1_print_time_remaining ]]
+              - type: gauge
+                name: 'Job Progress'
+                entity: sensor.maker_select_mini_v1_job_percentage
+                min: 0
+                max: 100
 
 #      - type: entities
 #        title: Critical Devices
