@@ -1,4 +1,6 @@
 resources:
+  - url: /customcards/github/thomasloven/card-tools.js?track=true
+    type: js
   - url: /local/resources/cards/gauge-card.js?v=2
     type: js
   - url: /local/resources/cards/bignumber-card.js?v=1
