@@ -619,7 +619,7 @@ views:
       - type: vertical-stack
         cards:
           - type: history-graph
-            title: Tautulli
+            title: Plex Media Server
             entities:
               - entity: sensor.tautulli_streams
                 name: 'Streams'
