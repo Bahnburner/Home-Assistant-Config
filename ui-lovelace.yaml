@@ -633,19 +633,40 @@ views:
                 entity: sensor.tautulli_transcodes
                 min: 0
                 max: 10
-      - type: entities
-        title: Critical Devices
-        show_header_toggle: false
-        entities:
-          - sensor.huebridge
-          - sensor.lightifybridge
-          - sensor.harmonyhub
-          - sensor.smartthingshub
-          - sensor.myq
-          - sensor.macmini
-          - sensor.rasplex
-          - sensor.directv_genie
-          - sensor.nesthello
+     - type: vertical-stack
+        cards:
+          - type: history-graph
+            title: Maker Select Mini v1
+            entities:
+              - entity: sensor.maker_select_mini_v1_actual_bed_temp
+                name: 'Bed Temp'
+              - entity: sensor.maker_select_mini_v1_actual_tool0_temp
+                name: 'Hotend'                
+          - type: horizontal-stack
+            cards:
+              - type: gauge
+                title: Job Completion
+                entity: sensor.maker_select_mini_v1_job_percentage
+                min: 0
+                max: 100
+              - type: gauge
+                title: Plex Transcodes
+                entity: sensor.tautulli_transcodes
+                min: 0
+                max: 10
+#      - type: entities
+#        title: Critical Devices
+#        show_header_toggle: false
+#        entities:
+#          - sensor.huebridge
+#          - sensor.lightifybridge
+#          - sensor.harmonyhub
+#          - sensor.smartthingshub
+#          - sensor.myq
+#          - sensor.macmini
+#          - sensor.rasplex
+#          - sensor.directv_genie
+#          - sensor.nesthello
 #      - type: entities
 #        title: Cast Devices
 #        show_header_toggle: false
