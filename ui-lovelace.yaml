@@ -633,7 +633,7 @@ views:
                 entity: sensor.tautulli_transcodes
                 min: 0
                 max: 10
-     - type: vertical-stack
+      - type: vertical-stack
         cards:
           - type: history-graph
             title: Maker Select Mini v1
