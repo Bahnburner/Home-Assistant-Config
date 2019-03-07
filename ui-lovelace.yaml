@@ -7,6 +7,8 @@ resources:
     type: js
   - url: /local/resources/cards/monster-card.js?v=1
     type: js    
+  - url: /local/resources/cards/useful-markdown-card.js?v=1
+    type: js        
   - url: /local/resources/cards/mini-media-player-bundle.js?v=0.9.2
     type: module
 
