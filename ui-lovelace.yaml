@@ -645,7 +645,7 @@ views:
           - type: horizontal-stack
             cards:
               - type: gauge
-                title: Job Completion
+                title: "Job Completion"
                 entity: sensor.maker_select_mini_v1_job_percentage
                 min: 0
                 max: 100
