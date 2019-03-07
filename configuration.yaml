@@ -2,8 +2,6 @@ homeassistant:
   auth_providers:
     - type: homeassistant  
     - type: trusted_networks
-      trusted_networks:
-        - 10.0.0.0/24
   name: Hidden Ridge
   latitude: !secret latitude
   longitude: !secret longitude
