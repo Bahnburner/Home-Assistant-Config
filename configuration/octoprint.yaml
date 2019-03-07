@@ -2,7 +2,7 @@ host: !secret octoprint_host
 api_key: !secret octoprint_api_key
 name: "Maker Select Mini v1"
 bed: true
-number_of_tools: 2
+number_of_tools: 1
 sensors:
   monitored_conditions:
     - 'Current State'
