@@ -656,6 +656,7 @@ views:
             min: 0
             max: 100
           - type: custom:useful-markdown-card
+            name: Time Remaining
             content: >
               # Time Remaining:
               
