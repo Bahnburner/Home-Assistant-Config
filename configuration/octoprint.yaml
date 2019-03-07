@@ -13,4 +13,4 @@ sensors:
 binary_sensors:
   monitored_conditions:
     - 'Printing'
-    - 'Print Error'
+    - 'Printing Error'
