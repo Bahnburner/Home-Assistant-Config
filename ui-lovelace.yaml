@@ -624,12 +624,12 @@ views:
           - type: horizontal-stack
             cards:
               - type: gauge
-                title: Streams
+                name: Streams
                 entity: sensor.tautulli_streams
                 min: 0
                 max: 10
               - type: gauge
-                title: Plex Transcodes
+                name: Transcodes
                 entity: sensor.tautulli_transcodes
                 min: 0
                 max: 10
@@ -645,12 +645,12 @@ views:
           - type: horizontal-stack
             cards:
               - type: gauge
-                title: "Job Completion"
+                name: Job Completion
                 entity: sensor.maker_select_mini_v1_job_percentage
                 min: 0
                 max: 100
               - type: gauge
-                title: Plex Transcodes
+                name: Transcodes
                 entity: sensor.tautulli_transcodes
                 min: 0
                 max: 10
