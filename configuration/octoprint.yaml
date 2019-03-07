@@ -5,6 +5,8 @@ bed: true
 number_of_tools: 2
 sensors:
   monitored_conditions:
+    - 'Current State'
+    - 'Job Percentage'
 binary_sensors:
   monitored_conditions:
   
