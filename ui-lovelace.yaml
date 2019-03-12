@@ -652,18 +652,23 @@ views:
                 name: 'Target Hotend Temp'                    
           - type: conditional
             conditions:
-              - entity: binary_sensor.maker_select_mini_v1_printing
-                state: "on"
+              entity: binary_sensor.maker_select_mini_v1_printing
+              state: "on"
             card:
-              - type: custom:useful-markdown-card
-                title: 'Time Remaining:'
-                content: >              
-                  [[ sensor.maker_select_mini_v1_print_time_remaining ]]
-              - type: gauge
-                name: 'Job Progress'
-                entity: sensor.maker_select_mini_v1_print_job_percentage
-                min: 0
-                max: 100
+              type: custom:useful-markdown-card
+              title: 'Time Remaining:'
+              content: >              
+                [[ sensor.maker_select_mini_v1_print_time_remaining ]]
+          - type: conditional
+            conditions:
+              entity: binary_sensor.maker_select_mini_v1_printing
+              state: "on"
+            card:
+              type: gauge
+              name: 'Job Progress'
+              entity: sensor.maker_select_mini_v1_print_job_percentage
+              min: 0
+              max: 100
 
 #      - type: entities
 #        title: Critical Devices
