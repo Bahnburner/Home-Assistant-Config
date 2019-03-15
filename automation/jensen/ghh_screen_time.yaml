@@ -1,0 +1,18 @@
+- alias: ghh youtube disabler
+  hide_entity: true
+  trigger: 
+    - platform: state
+      entity_id: media_player.kitchen_display
+      to: 'playing'
+    - platform: state
+      entity_id: input_boolean.ghh_disabler
+      to: 'on'
+  condition:
+    - platform: state
+      entity_id: input_boolean.ghh_disabler
+      state: 'on'
+    - platform: template
+      value_template: {{states.media_player.kitchen_display.attributes.app_name == "YouTube" }}
+  action: 
+    service: media_player.turn_off
+    entity_id: media_player.kitchen_display
