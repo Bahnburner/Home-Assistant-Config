@@ -577,6 +577,7 @@ views:
             entities:
               - entity: input_boolean.ghh_disabler
                 name: "Disable Google Home Hub"
+                icon: mdi:youtube
               - input_boolean.disable_away_mode
               - input_boolean.disable_alarm
               - switch.vacation_mode
