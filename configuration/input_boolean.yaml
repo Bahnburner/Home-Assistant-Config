@@ -32,3 +32,5 @@
     icon: mdi:account-multiple
   christmas_lights:
     initial: off
+  ghh_disabler:
+    initial: off
