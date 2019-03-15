@@ -8,10 +8,10 @@
       entity_id: input_boolean.ghh_disabler
       to: 'on'
   condition:
-    - platform: state
+    - condition: state
       entity_id: input_boolean.ghh_disabler
       state: 'on'
-    - platform: template
+    - condition: template
       value_template: '{{states.media_player.kitchen_display.attributes.app_name == "YouTube" }}'
   action: 
     service: media_player.turn_off
