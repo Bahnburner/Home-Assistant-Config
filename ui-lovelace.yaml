@@ -643,10 +643,6 @@ views:
                 max: 10
       - type: vertical-stack
         cards:
-          - type: picture-entity
-            name: MP Select Mini v1
-            entity: camera.octoprint
-            camera_image: camera.octoprint
           - type: history-graph
             title: Maker Select Mini v1
             entities:
@@ -657,7 +653,13 @@ views:
               - entity: sensor.maker_select_mini_v1_target_bed_temp
                 name: 'Target Bed Temp'
               - entity: sensor.maker_select_mini_v1_target_tool0_temp
-                name: 'Target Hotend Temp'                    
+                name: 'Target Hotend Temp'
+          - type: picture-entity
+            name: MP Select Mini v1
+            entity: camera.octoprint
+            camera_image: camera.octoprint
+            show_name: false
+            show_state: false                
           - type: conditional
             conditions:
               - entity: binary_sensor.maker_select_mini_v1_printing
