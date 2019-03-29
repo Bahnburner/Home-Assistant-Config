@@ -643,6 +643,10 @@ views:
                 max: 10
       - type: vertical-stack
         cards:
+          - type: picture-entity
+            name: MP Select Mini v1
+            entity: camera.octoprint
+            camera_image: camera.octoprint
           - type: history-graph
             title: Maker Select Mini v1
             entities:
