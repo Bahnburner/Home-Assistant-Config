@@ -5,8 +5,8 @@
   icon: mdi:school
 
 - name: Sedgwick
-  latitude: 35.0576241
-  longitude: -89.7915722
+  latitude: 35.057951
+  longitude: -89.790546
   radius: 250
   icon: mdi:city
 
