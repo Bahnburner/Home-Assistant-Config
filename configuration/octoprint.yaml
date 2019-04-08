@@ -1,4 +1,5 @@
 host: !secret octoprint_host
+port: !secret octoprint_port
 api_key: !secret octoprint_api_key
 name: "Maker Select Mini v1"
 bed: true
