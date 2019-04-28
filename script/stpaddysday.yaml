@@ -7,7 +7,7 @@ stpaddysday:
       data:
         brightness: 255
         rgb_color: [2,255,0]
-    - service: tts.google_say
+    - service: tts.google_translate_say
       entity_id: media_player.bedroom_speaker
       data: 
         message: "OK google. Play Flogging Molly Radio on All Speakers."
