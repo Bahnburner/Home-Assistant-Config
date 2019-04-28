@@ -8,8 +8,9 @@
 #  region_name: 'us-east-1'
 - name: chrome_notifications
   platform: html5
-  gcm_api_key: !secret gcm_sender_key
-  gcm_sender_id: !secret gcm_sender_id
+  vapid_pub_key: !secret vapid_pub_key
+  vapid_prv_key: !secret vapid_prv_key
+  vapid_email: !secret vapid_email
 - name: Google Assistant
   platform: rest
   resource: http://10.0.0.110:5000/broadcast_message
