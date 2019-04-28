@@ -10,7 +10,7 @@
     entity_id: input_boolean.front_door_open
     state: 'on'
   action:
-    - service: tts.google_say
+    - service: tts.google_translate_say
       entity_id:
         - media_player.all_assistants
       data:
@@ -30,7 +30,7 @@
     entity_id: input_boolean.back_door_open
     state: 'on'
   action:
-    - service: tts.google_say
+    - service: tts.google_translate_say
       entity_id:
         - media_player.all_assistants
       data:
