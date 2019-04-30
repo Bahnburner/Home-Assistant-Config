@@ -22,7 +22,7 @@ views:
 #############
 
   - icon: mdi:home
-    name: Home
+    title: Home
     id: home
     cards:
 ####   FAMILY STACK
@@ -398,7 +398,7 @@ views:
 ##########
 
   - icon: mdi:lightbulb
-    name: Lights
+    title: Lights
     id: lights
     cards:
       - type: entities
@@ -449,7 +449,7 @@ views:
 #################
 
   - icon: mdi:cast
-    name: Media
+    title: Media
     id: media
     cards:
       - type: media-control
@@ -498,7 +498,7 @@ views:
 ###########
 
   - icon: mdi:video
-    name: Camera
+    title: Cameras
     id: camera
     cards:
       - type: picture-entity
@@ -526,7 +526,7 @@ views:
 #########
 
   - icon: mdi:settings
-    name: Settings
+    title: Settings
     id: settings
     cards:
       - type: entity-filter
