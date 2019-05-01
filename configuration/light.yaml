@@ -1,44 +1,44 @@
 - platform: osramlightify
   host: 10.0.0.214
   allow_lightify_groups: true
-- platform: mqtt
-  name: 'Overhead Light'
-  state_topic: "smartthings/Overhead Light/switch"
-  command_topic: "smartthings/Overhead Light/switch"
-  payload_on: "on"
-  payload_off: "off"
-  retain: true
-- platform: mqtt
-  name: 'Recessed Lights'
-  state_topic: "smartthings/Recessed Lights/switch"
-  command_topic: "smartthings/Recessed Lights/switch"
-  brightness_scale: 100
-  brightness_state_topic: "smartthings/Recessed Lights/level"
-  brightness_command_topic: "smartthings/Recessed Lights/level"
-  payload_on: "on"
-  payload_off: "off"
-  retain: true
-- platform: mqtt
-  name: 'Chandelier'
-  state_topic: "smartthings/Chandelier/switch"
-  command_topic: "smartthings/Chandelier/switch"
-  payload_on: "on"
-  payload_off: "off"
-  retain: true
-- platform: mqtt
-  name: 'Fan'
-  state_topic: "smartthings/Fan/switch"
-  command_topic: "smartthings/Fan/switch"
-  brightness_scale: 100
-  brightness_state_topic: "smartthings/Fan/level"
-  brightness_command_topic: "smartthings/Fan/level"
-  payload_on: "on"
-  payload_off: "off"
-  retain: true
-- platform: mqtt
-  name: 'Patio Lights'
-  state_topic: "smartthings/Patio Lights/switch"
-  command_topic: "smartthings/Patio Lights/switch"
-  payload_on: "on"
-  payload_off: "off"
-  retain: true
+#- platform: mqtt
+#  name: 'Overhead Light'
+#  state_topic: "smartthings/Overhead Light/switch"
+#  command_topic: "smartthings/Overhead Light/switch"
+#  payload_on: "on"
+#  payload_off: "off"
+#  retain: true
+#- platform: mqtt
+#  name: 'Recessed Lights'
+#  state_topic: "smartthings/Recessed Lights/switch"
+#  command_topic: "smartthings/Recessed Lights/switch"
+#  brightness_scale: 100
+#  brightness_state_topic: "smartthings/Recessed Lights/level"
+#  brightness_command_topic: "smartthings/Recessed Lights/level"
+#  payload_on: "on"
+#  payload_off: "off"
+#  retain: true
+#- platform: mqtt
+#  name: 'Chandelier'
+#  state_topic: "smartthings/Chandelier/switch"
+#  command_topic: "smartthings/Chandelier/switch"
+#  payload_on: "on"
+#  payload_off: "off"
+#  retain: true
+#- platform: mqtt
+#  name: 'Fan'
+#  state_topic: "smartthings/Fan/switch"
+#  command_topic: "smartthings/Fan/switch"
+#  brightness_scale: 100
+#  brightness_state_topic: "smartthings/Fan/level"
+#  brightness_command_topic: "smartthings/Fan/level"
+#  payload_on: "on"
+#  payload_off: "off"
+#  retain: true
+#- platform: mqtt
+#  name: 'Patio Lights'
+#  state_topic: "smartthings/Patio Lights/switch"
+#  command_topic: "smartthings/Patio Lights/switch"
+#  payload_on: "on"
+#  payload_off: "off"
+#  retain: true
