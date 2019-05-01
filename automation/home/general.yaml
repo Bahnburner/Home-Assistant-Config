@@ -38,6 +38,6 @@
     - condition: numeric_state
       entity_id: sensor.decimal_time
       above: 12
-    - service: light.turn_on
-      entity_id: light.patio_lights
+    - service: switch.turn_on
+      entity_id: switch.patio_lights
       
