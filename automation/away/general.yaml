@@ -37,7 +37,7 @@
         - group.stairway
         - light.recessed_lights
         - light.desk_lamp
-    - switch: turn_off
+    - service: switch.turn_off
       entity_id: 
         - switch.overhead_light
         - switch.chandelier
