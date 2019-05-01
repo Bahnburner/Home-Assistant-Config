@@ -34,8 +34,8 @@
       data:
         brightness: 254
         transition: 600
-    - service: light.turn_on
-      entity_id: light.patio_lights
+    - service: switch.turn_on
+      entity_id: switch.patio_lights
     - condition: state
       entity_id: group.tristal
       state: 'home'
