@@ -181,8 +181,8 @@ pantry_lights:
 
 patio_lights:
   sequence:
-    service: light.turn_on
-    entity_id: light.patio_lights
+    service: switch.turn_on
+    entity_id: switch.patio_lights
 
 deadend:
   sequence:
