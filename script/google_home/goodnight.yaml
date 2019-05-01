@@ -42,7 +42,7 @@ goodnight:
         - light.dining_room
         - light.stairway
     - service: switch.turn_off
-      entity_id: light.patio_lights
+      entity_id: switch.patio_lights
       data:
         transition: 30
     - service_template: >
