@@ -53,10 +53,10 @@ light.foyer_right:
 light.recessed_lights:
   entity_picture: /local/resources/images/devices/smartthings.png
   icon: mdi:spotlight-beam
-light.overhead_light:
+switch.overhead_light:
   entity_picture: /local/resources/images/devices/smartthings.png
   icon: mdi:led-strip
-light.chandelier:
+switch.chandelier:
   entity_picture: /local/resources/images/devices/smartthings.png
   icon: mdi:ceiling-light
 light.fan:
@@ -77,7 +77,7 @@ light.rear_floods:
 light.bias_light:
   friendly_name: "Bias Light"
   entity_picture: /local/resources/images/devices/lightify.png
-light.patio_lights:
+switch.patio_lights:
   entity_picture: /local/resources/images/devices/smartthings.png
   icon: mdi:ceiling-light
 light.exterior_front:
