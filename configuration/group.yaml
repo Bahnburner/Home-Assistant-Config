@@ -118,23 +118,23 @@ living_room_lights:
 kitchen:
   control: hidden
   entities:
-    - light.overhead_light
-    - light.chandelier
+    - switch.overhead_light
+    - switch.chandelier
     - light.recessed_lights
     - light.pantry
     - light.cabinet_lights
     - sensor.protect_kitchen
 kitchen_lights:
   entities:
-    - light.overhead_light
-    - light.chandelier
+    - switch.overhead_light
+    - switch.chandelier
     - light.recessed_lights
     - light.pantry
     - light.cabinet_lights
 kitchen_lighting:
   entities:
-    - light.overhead_light
-    - light.chandelier
+    - switch.overhead_light
+    - switch.chandelier
     - light.recessed_lights
 dining_room:
   - light.dining_room
