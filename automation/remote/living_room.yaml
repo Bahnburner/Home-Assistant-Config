@@ -241,11 +241,13 @@
         - light.table_lamp
         - light.cabinet_lights
         - light.recessed_lights
-        - light.overhead_light
-        - light.chandelier
         - light.pantry
       data:
         transition: 15
+    - service: switch.turn_off
+      entity_id: 
+        - switch.overhead_light
+        - switch.chandelier
     - service: light.turn_on
       entity_id:
         - light.floor_lamp_left
