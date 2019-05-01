@@ -19,4 +19,5 @@
       entity_id: 
         - light.front_floods
         - light.rear_floods
-        - light.patio_lights
+    - service: switch.turn_off
+      entity_id: switch.patio_lights
