@@ -35,11 +35,13 @@
         - light.master_hallway
         - light.dining_room
         - group.stairway
-        - light.overhead_light
         - light.recessed_lights
-        - light.chandelier
         - light.desk_lamp
-        - light.patio_lights
+    - switch: turn_off
+      entity_id: 
+        - switch.overhead_light
+        - switch.chandelier
+        - switch.patio_lights
     - service: cover.close_cover
       entity_id: cover.garage_door_opener
     - service: script.turn_on
