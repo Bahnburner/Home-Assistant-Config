@@ -41,7 +41,8 @@ goodnight:
         - light.master_hallway
         - light.dining_room
         - light.stairway
-        - light.patio_lights
+    - service: switch.turn_off
+      entity_id: light.patio_lights
       data:
         transition: 30
     - service_template: >
@@ -77,10 +78,12 @@ goodnight:
     - service: script.goodnight_bedroom
     - service: light.turn_off
       entity_id:
-        - light.chandelier
-        - light.overhead_light
         - light.recessed_lights
         - light.desk_lamp
+    - service: switch.turn_off
+      entity_id:
+        - switch.chandelier
+        - switch.overhead_light
     - delay:
         seconds: 30
     - service: automation.turn_on
