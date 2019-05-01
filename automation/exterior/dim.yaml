@@ -14,5 +14,5 @@
       data:
         brightness: 100
         transition: 300      
-    - service: light.turn_off
-      entity_id: light.patio_lights
+    - service: switch.turn_off
+      entity_id: switch.patio_lights
