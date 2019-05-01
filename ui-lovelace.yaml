@@ -416,8 +416,8 @@ views:
       - type: entities
         title: Kitchen
         entities:
-          - light.overhead_light
-          - light.chandelier
+          - switch.overhead_light
+          - switch.chandelier
           - light.recessed_lights
           - light.pantry
       - type: entities
@@ -426,7 +426,7 @@ views:
           - light.front_door
           - light.front_floods
           - light.rear_floods
-          - light.patio_lights
+          - switch.patio_lights
       - type: entities
         title: Foyer
         show_header_toggle: false
