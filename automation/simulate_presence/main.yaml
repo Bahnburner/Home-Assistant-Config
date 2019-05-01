@@ -15,8 +15,8 @@
       data:
         brightness: 254
         transition: 900
-    - service: light.turn_on
-      entity_id: light.patio_lights
+    - service: switch.turn_on
+      entity_id: switch.patio_lights
 
 - alias: Simulate Presence 2
   hide_entity: True
@@ -30,9 +30,9 @@
   action:
     - delay: '00:{{ (range(0, 30)|random|int) }}:00'
     - service: light.turn_on
-      entity_id:
-        - light.overhead_light
-        - light.recessed_lights
+      entity_id: light.recessed_lights
+    - service: switch.turn_on
+      entity_id: switch.overhead_light
     
 - alias: Simulate Presence 3
   hide_entity: True
@@ -45,11 +45,11 @@
     state: 'on'
   action:
     - delay: '00:{{ (range(0, 15)|random|int) }}:00'
-    - service: light.turn_on
-      entity_id: light.chandelier
+    - service: switch.turn_on
+      entity_id: switch.chandelier
     - delay: '00:{{ (range(0, 3)|random|int) }}:{{ (range(1,59)|random|int) }}'
-    - service: light.turn_off
-      entity_id: light.overhead_light
+    - service: switch.turn_off
+      entity_id: switch.overhead_light
       
 - alias: Simulate Presence 4
   hide_entity: True
@@ -62,10 +62,10 @@
     state: 'on'
   action:
     - delay: '00:{{ (range(0, 30)|random|int) }}:00'
+    - service: switch.turn_off
+      entity_id: switch.chandelier
     - service: light.turn_off
-      entity_id: 
-        - light.chandelier
-        - light.recessed_lights
+      entity_id: light.recessed_lights
     - delay:
         seconds: 60
     - service: light.turn_on
@@ -114,8 +114,8 @@
       entity_id: light.living_room
     - service: light.turn_off
       entity_id: light.desk_lamp
-    - service: light.turn_off
-      entity_id: light.patio_lights
+    - service: switch.turn_off
+      entity_id: switch.patio_lights
 
 - alias: Simulate Presence 7
   hide_entity: True
