@@ -41,10 +41,10 @@ goodnight:
         - light.master_hallway
         - light.dining_room
         - light.stairway
+      data:
+        transition: 30  
     - service: switch.turn_off
       entity_id: switch.patio_lights
-      data:
-        transition: 30
     - service_template: >
           {% if states.media_player.master_suite.state == 'playing' %}
             {% if states.media_player.master_suite.attributes.media_content_id.startswith('http://smrtho.us/storage/whitenoise') %}
