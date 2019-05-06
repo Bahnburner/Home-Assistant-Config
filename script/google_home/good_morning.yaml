@@ -52,8 +52,6 @@ good_morning:
           before: '10:00:00'
     - delay:
         seconds: 25
-    - service: remote.send_command
+    - service: remote.harmony_change_channel
       entity_id: remote.livingroom
-      data:
-        device: 35163109
-        command: ['1', '3', 'NumberEnter']
+      channel: '13'
