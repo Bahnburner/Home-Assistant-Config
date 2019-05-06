@@ -232,7 +232,7 @@
     from: "off"
     to: "on"
   action: 
-    - service: input_number.select_value
+    - service: input_number.set_value
       entity_id: input_number.movie_mode
       data_template:
         value: '{{states.light.living_room.attributes.brightness | int}}'
