@@ -17,6 +17,8 @@
             28121828
           {% elif is_state("input_select.harmony", "Watch Smartcast") %}
             28101990
+          {$ elif is_state("input_select.harmony", "Play Switch") %}
+            39577141
           {% else %}
           {% endif %}
     - service: input_select.select_option
@@ -139,6 +141,9 @@
         - condition: state
           entity_id: sensor.current_activity
           state: 'Watch Smartcast'
+        - condition: state
+          entity_id: sensor.current_activity
+          state: 'Play Switch'
         - condition: state
           entity_id: sensor.current_activity
           state: 'PowerOff'
