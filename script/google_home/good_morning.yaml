@@ -54,4 +54,4 @@ good_morning:
         seconds: 25
     - service: remote.harmony_change_channel
       entity_id: remote.livingroom
-        channel: '13'
+      channel: '13'
