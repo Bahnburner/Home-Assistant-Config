@@ -9,9 +9,9 @@
     condition: and
     conditions:
       - condition: template
-        value_template: "{{ device_tracker.google_maps_110746778193138728717 != "Home" }}"
+        value_template: "{{ device_tracker.google_maps_110746778193138728717 != 'Home' }}"
       - condition: template
-        value_template: "{{ device_tracker.google_maps_102616309312724957780 != "Home" }}"   
+        value_template: "{{ device_tracker.google_maps_102616309312724957780 != 'Home' }}"   
   action:
     - entity_id: climate.downstairs_hallway
       service: climate.set_away_mode
