@@ -13,7 +13,7 @@
       minutes: 30
   condition: 
     - condition: time
-      weekday: mon
+      weekday: wed
   action:
     - service: media_player.volume_set
       entity_id: media_player.all_assistants
@@ -24,3 +24,23 @@
     - service: notify.google_assistant
       data: 
         message: 'Heads up, tomorrow is trash day.'
+
+- alias: Garbage reminder 2
+  hide_entity: true
+  trigger:
+    platform: time
+    at: '07:30:00'
+  condition: 
+    - condition: time
+      weekday: thur
+  action:
+    - service: media_player.volume_set
+      entity_id: media_player.all_assistants
+      data: 
+        volume_level: 0.5
+#    - service: tts.google_say
+#      entity_id: media_player.all_assistants
+    - service: notify.google_assistant
+      data: 
+        message: 'Heads up, tomorrow is trash day.'
+
