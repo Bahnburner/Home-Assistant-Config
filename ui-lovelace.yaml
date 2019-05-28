@@ -579,7 +579,7 @@ views:
                 entity: sensor.tautulli_transcodes
                 min: 0
                 max: 10
-     - type: vertical-stack
+      - type: vertical-stack
         cards:
           - type: history-graph
             title: Ender 3 Pro
@@ -617,8 +617,7 @@ views:
               entity: sensor.ender_3_pro_print_job_percentage
               min: 0
               max: 100
-              
-      - type: vertical-stack
+       - type: vertical-stack
         cards:
           - type: history-graph
             title: MP Select Mini
@@ -650,7 +649,7 @@ views:
               entity: sensor.mp_select_mini_print_job_percentage
               min: 0
               max: 100                
-                
+
       - type: entity-filter
         entities:
           - entity: sensor.front_door_lock_battery
