@@ -617,7 +617,7 @@ views:
               entity: sensor.ender_3_pro_print_job_percentage
               min: 0
               max: 100
-       - type: vertical-stack
+      - type: vertical-stack
         cards:
           - type: history-graph
             title: MP Select Mini
