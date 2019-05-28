@@ -523,9 +523,9 @@ views:
 # ADMIN #
 #########
 
-  - icon: mdi:settings
-    title: Settings
-    id: settings
+  - icon: mdi:lan
+    title: Devices
+    id: devices
     cards:
       - type: vertical-stack
         cards:
@@ -560,6 +560,8 @@ views:
                 name: 'Plex'
                 min: 0
                 max: 100
+      - type: vertical-stack
+        cards:                
           - type: history-graph
             title: Plex Media Server
             entities:
@@ -649,7 +651,10 @@ views:
               entity: sensor.mp_select_mini_print_job_percentage
               min: 0
               max: 100                
-
+  - icon: mdi:settings
+    title: Settings
+    id: settings
+    cards:
       - type: entity-filter
         entities:
           - entity: sensor.front_door_lock_battery
