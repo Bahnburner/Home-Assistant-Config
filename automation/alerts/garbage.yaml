@@ -32,7 +32,7 @@
     at: '07:30:00'
   condition: 
     - condition: time
-      weekday: thur
+      weekday: thu
   action:
     - service: media_player.volume_set
       entity_id: media_player.all_assistants
