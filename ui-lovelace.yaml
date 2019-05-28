@@ -642,16 +642,106 @@ views:
       - type: vertical-stack
         cards:
           - type: history-graph
-            title: Maker Select Mini v1
+            title: Ender 3 Pro
             entities:
-              - entity: sensor.maker_select_mini_v1_actual_bed_temp
+              - entity: sensor.ender_3_pro_actual_bed_temp
                 name: 'Actual Bed Temp'
-              - entity: sensor.maker_select_mini_v1_actual_tool0_temp
+              - entity: sensor.ender_3_pro_actual_tool0_temp
                 name: 'Actual Hotend Temp'
-              - entity: sensor.maker_select_mini_v1_target_bed_temp
+              - entity: sensor.ender_3_pro_target_bed_temp
                 name: 'Target Bed Temp'
-              - entity: sensor.maker_select_mini_v1_target_tool0_temp
+              - entity: sensor.ender_3_pro_target_tool0_temp
                 name: 'Target Hotend Temp'
+          - type: picture-entity
+            name: Ender 3 Pro
+            entity: camera.octoprint
+            camera_image: camera.octoprint
+            show_name: false
+            show_state: false                
+          - type: conditional
+            conditions:
+              - entity: binary_sensor.ender_3_pro_printing
+                state: "on"
+            card:
+              type: custom:useful-markdown-card
+              title: 'Time Remaining:'
+              content: >              
+                [[ sensor.ender_3_pro_print_time_remaining ]]
+          - type: conditional
+            conditions:
+              - entity: binary_sensor.ender_3_pro_printing
+                state: "on"
+            card:
+              type: gauge
+              name: 'Job Progress'
+              entity: sensor.ender_3_pro_print_job_percentage
+              min: 0
+              max: 100
+          - type: picture-entity
+            name: Ender 3 Pro
+            entity: camera.octoprint
+            camera_image: camera.octoprint
+            show_name: false
+            show_state: false                
+          - type: conditional
+            conditions:
+              - entity: binary_sensor.ender_3_pro_printing
+                state: "on"
+            card:
+              type: custom:useful-markdown-card
+              title: 'Time Remaining:'
+              content: >              
+                [[ sensor.ender_3_pro_print_time_remaining ]]
+          - type: conditional
+            conditions:
+              - entity: binary_sensor.ender_3_pro_printing
+                state: "on"
+            card:
+              type: gauge
+              name: 'Job Progress'
+              entity: sensor.ender_3_pro_print_job_percentage
+              min: 0
+              max: 100
+              
+              
+      - type: vertical-stack
+        cards:
+          - type: history-graph
+            title: Ender 3 Pro
+            entities:
+              - entity: sensor.ender_3_pro_actual_bed_temp
+                name: 'Actual Bed Temp'
+              - entity: sensor.ender_3_pro_actual_tool0_temp
+                name: 'Actual Hotend Temp'
+              - entity: sensor.ender_3_pro_target_bed_temp
+                name: 'Target Bed Temp'
+              - entity: sensor.ender_3_pro_target_tool0_temp
+                name: 'Target Hotend Temp'
+          - type: picture-entity
+            name: Ender 3 Pro
+            entity: camera.octoprint
+            camera_image: camera.octoprint
+            show_name: false
+            show_state: false                
+          - type: conditional
+            conditions:
+              - entity: binary_sensor.ender_3_pro_printing
+                state: "on"
+            card:
+              type: custom:useful-markdown-card
+              title: 'Time Remaining:'
+              content: >              
+                [[ sensor.ender_3_pro_print_time_remaining ]]
+          - type: conditional
+            conditions:
+              - entity: binary_sensor.ender_3_pro_printing
+                state: "on"
+            card:
+              type: gauge
+              name: 'Job Progress'
+              entity: sensor.ender_3_pro_print_job_percentage
+              min: 0
+              max: 100
           - type: picture-entity
             name: MP Select Mini v1
             entity: camera.octoprint
@@ -676,8 +766,7 @@ views:
               name: 'Job Progress'
               entity: sensor.maker_select_mini_v1_print_job_percentage
               min: 0
-              max: 100
-
+              max: 100              
 #      - type: entities
 #        title: Critical Devices
 #        show_header_toggle: false
