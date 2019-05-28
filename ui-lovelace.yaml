@@ -677,11 +677,6 @@ views:
               entity: sensor.ender_3_pro_print_job_percentage
               min: 0
               max: 100
-          - type: picture-entity
-            name: Ender 3 Pro
-            entity: camera.octoprint
-            camera_image: camera.octoprint
-              
               
       - type: vertical-stack
         cards:
@@ -695,13 +690,7 @@ views:
               - entity: sensor.ender_3_pro_target_bed_temp
                 name: 'Target Bed Temp'
               - entity: sensor.ender_3_pro_target_tool0_temp
-                name: 'Target Hotend Temp'
-          - type: picture-entity
-            name: Ender 3 Pro
-            entity: camera.octoprint
-            camera_image: camera.octoprint
-            show_name: false
-            show_state: false                
+                name: 'Target Hotend Temp'            
           - type: conditional
             conditions:
               - entity: binary_sensor.ender_3_pro_printing
