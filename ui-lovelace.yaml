@@ -681,27 +681,6 @@ views:
             name: Ender 3 Pro
             entity: camera.octoprint
             camera_image: camera.octoprint
-            show_name: false
-            show_state: false                
-          - type: conditional
-            conditions:
-              - entity: binary_sensor.ender_3_pro_printing
-                state: "on"
-            card:
-              type: custom:useful-markdown-card
-              title: 'Time Remaining:'
-              content: >              
-                [[ sensor.ender_3_pro_print_time_remaining ]]
-          - type: conditional
-            conditions:
-              - entity: binary_sensor.ender_3_pro_printing
-                state: "on"
-            card:
-              type: gauge
-              name: 'Job Progress'
-              entity: sensor.ender_3_pro_print_job_percentage
-              min: 0
-              max: 100
               
               
       - type: vertical-stack
@@ -742,31 +721,6 @@ views:
               entity: sensor.ender_3_pro_print_job_percentage
               min: 0
               max: 100
-          - type: picture-entity
-            name: MP Select Mini v1
-            entity: camera.octoprint
-            camera_image: camera.octoprint
-            show_name: false
-            show_state: false                
-          - type: conditional
-            conditions:
-              - entity: binary_sensor.maker_select_mini_v1_printing
-                state: "on"
-            card:
-              type: custom:useful-markdown-card
-              title: 'Time Remaining:'
-              content: >              
-                [[ sensor.maker_select_mini_v1_print_time_remaining ]]
-          - type: conditional
-            conditions:
-              - entity: binary_sensor.maker_select_mini_v1_printing
-                state: "on"
-            card:
-              type: gauge
-              name: 'Job Progress'
-              entity: sensor.maker_select_mini_v1_print_job_percentage
-              min: 0
-              max: 100              
 #      - type: entities
 #        title: Critical Devices
 #        show_header_toggle: false
