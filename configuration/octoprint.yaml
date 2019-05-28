@@ -18,7 +18,7 @@
 - host: !secret octoprint_host_mini
   port: !secret octoprint_port_mini
   api_key: !secret octoprint_api_key_mini
-  name: "Ender 3 Pro"
+  name: "MP Select Mini"
   bed: true
   number_of_tools: 1
   sensors:
