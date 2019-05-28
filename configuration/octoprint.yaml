@@ -1,17 +1,34 @@
-host: !secret octoprint_host
-port: !secret octoprint_port
-api_key: !secret octoprint_api_key
-name: "Maker Select Mini v1"
-bed: true
-number_of_tools: 1
-sensors:
-  monitored_conditions:
-    - 'Current State'
-    - 'Job Percentage'
-    - 'Time Remaining'
-    - 'Temperatures'
-    - 'Time Elapsed'
-binary_sensors:
-  monitored_conditions:
-    - 'Printing'
-    - 'Printing Error'
+- host: !secret octoprint_host_ender
+  port: !secret octoprint_port_ender
+  api_key: !secret octoprint_api_key_ender
+  name: "Ender 3 Pro"
+  bed: true
+  number_of_tools: 1
+  sensors:
+    monitored_conditions:
+      - 'Current State'
+      - 'Job Percentage'
+      - 'Time Remaining'
+      - 'Temperatures'
+      - 'Time Elapsed'
+  binary_sensors:
+    monitored_conditions:
+      - 'Printing'
+      - 'Printing Error'
+- host: !secret octoprint_host_mini
+  port: !secret octoprint_port_mini
+  api_key: !secret octoprint_api_key_mini
+  name: "Ender 3 Pro"
+  bed: true
+  number_of_tools: 1
+  sensors:
+    monitored_conditions:
+      - 'Current State'
+      - 'Job Percentage'
+      - 'Time Remaining'
+      - 'Temperatures'
+      - 'Time Elapsed'
+  binary_sensors:
+    monitored_conditions:
+      - 'Printing'
+      - 'Printing Error'
