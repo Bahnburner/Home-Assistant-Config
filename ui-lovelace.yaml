@@ -490,6 +490,8 @@ views:
         entity: media_player.nursery_assistant
       - type: media-control
         entity: media_player.party_mode
+      - type: media_control
+        entity: media_player.rasplex
 
 ###########
 # CAMERAS #
