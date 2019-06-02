@@ -63,20 +63,20 @@ light.fan:
   entity_picture: /local/resources/images/devices/smartthings.png
   icon: mdi:fan
 light.flood_lights:
-  friendly_name: "Front Flood Lights"
-  entity_picture: /local/resources/images/devices/lightify.png
+  friendly_name: "Flood Lights"
+  entity_picture: /local/resources/images/devices/smartthings.png
   icon: mdi:spotlight-beam
 light.front_floods:
   friendly_name: "Front Flood Lights"
-  entity_picture: /local/resources/images/devices/lightify.png
+  entity_picture: /local/resources/images/devices/smartthings.png
   icon: mdi:spotlight-beam
 light.rear_floods:
   friendly_name: "Rear Flood Lights"
-  entity_picture: /local/resources/images/devices/lightify.png
+  entity_picture: /local/resources/images/devices/smartthings.png
   icon: mdi:spotlight-beam
 light.bias_light:
   friendly_name: "Bias Light"
-  entity_picture: /local/resources/images/devices/lightify.png
+  entity_picture: /local/resources/images/devices/smartthings.png
 switch.patio_lights:
   entity_picture: /local/resources/images/devices/smartthings.png
   icon: mdi:ceiling-light
