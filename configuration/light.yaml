@@ -1,6 +1,3 @@
-- platform: osramlightify
-  host: 10.0.0.214
-  allow_lightify_groups: true
 #- platform: mqtt
 #  name: 'Overhead Light'
 #  state_topic: "smartthings/Overhead Light/switch"
