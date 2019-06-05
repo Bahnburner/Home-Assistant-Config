@@ -42,5 +42,5 @@
 #      entity_id: media_player.all_assistants
     - service: notify.google_assistant
       data: 
-        message: 'Heads up, tomorrow is trash day.'
+        message: 'Heads up, today is trash day.'
 
