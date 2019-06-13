@@ -1,5 +1,4 @@
 - platform: plex
-  entity_namespace: 'plex'
   scan_interval: 5
   show_all_controls: false
   use_custom_entity_ids: true
