@@ -1,3 +1,4 @@
 username: !secret tuya_user
 password: !secret tuya_password
 country_code: !secret tuya_country_code
+platform: smart_life
