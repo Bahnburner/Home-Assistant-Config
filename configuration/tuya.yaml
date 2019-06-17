@@ -1,3 +1,3 @@
-username: YOUR_TUYA_USERNAME
-password: YOUR_TUYA_PASSWORD
-country_code: secret!
+username: !secret tuya_user
+password: !secret tuya_password
+country_code: !secret tuya_country_code
