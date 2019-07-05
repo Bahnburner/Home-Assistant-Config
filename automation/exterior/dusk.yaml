@@ -25,7 +25,6 @@
         - light.front_door      
       data:
         brightness: 255
-  action:
     - service: light.turn_on
       entity_id:
         - light.front_floods
