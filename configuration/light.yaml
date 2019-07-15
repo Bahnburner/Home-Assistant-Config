@@ -15,3 +15,6 @@
     - light.front_flood_2 
     - light.rear_flood_1
     - light.rear_flood_2
+- platform: osramlightify
+  host: 10.0.0.214
+  allow_lightify_groups: true
