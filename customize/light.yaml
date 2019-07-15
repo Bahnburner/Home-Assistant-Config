@@ -76,7 +76,7 @@ light.rear_floods:
   icon: mdi:spotlight-beam
 light.bias_light:
   friendly_name: "Bias Light"
-  entity_picture: /local/resources/images/devices/smartthings.png
+  entity_picture: /local/resources/images/devices/lightify.png
 switch.patio_lights:
   entity_picture: /local/resources/images/devices/smartthings.png
   icon: mdi:ceiling-light
