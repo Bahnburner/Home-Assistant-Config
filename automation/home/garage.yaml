@@ -7,7 +7,6 @@
     - platform: state
       entity_id: sensor.front_door
       from: 'closed'
-      to: 'open'
   condition: 
     condition: state
     entity_id: group.family
