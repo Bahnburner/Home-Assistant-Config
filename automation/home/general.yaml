@@ -4,7 +4,7 @@
     platform: state
     entity_id: group.family
     from: 'not_home'
-    to: 'home'
+    to: 'Home'
   action:
     - service: climate.set_away_mode
       entity_id: climate.downstairs_hallway
