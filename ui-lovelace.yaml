@@ -273,12 +273,12 @@ views:
                 name: Back
               - entity: binary_sensor.hvac_leak_sensor_water
                 name: HVAC
-              - entity: sensor.big_attic_temp
+              - entity: sensor.hvac_leak_sensor_temperature_measurement
                 name: N Attic
                 icon: mdi:thermometer
               - entity: sensor.garage_door
                 name: Garage
-              - entity: sensor.small_attic_temp
+              - entity: sensor.water_heater_leak_sensor_temperature_measurement
                 name: S Attic
                 icon: mdi:thermometer
               - entity: binary_sensor.water_heater_leak_sensor_water
@@ -661,10 +661,10 @@ views:
           - entity: sensor.back_door_lock_battery
             name: Back Door
             icon: mdi:key-variant
-          - entity: sensor.hvac_water_sensor_battery
+          - entity: sensor.hvac_leak_sensor_battery
             name: HVAC
             icon: mdi:water
-          - entity: sensor.wh_water_sensor_battery
+          - entity: sensor.water_heater_leak_sensor_battery
             name: Water Heater
             icon: mdi:water
         state_filter:
