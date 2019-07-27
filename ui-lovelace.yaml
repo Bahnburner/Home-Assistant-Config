@@ -271,7 +271,7 @@ views:
                 name: Back
               - entity: sensor.back_door
                 name: Back
-              - entity: sensor.hvac_leak_sensor
+              - entity: binary_sensor.hvac_leak_sensor_water
                 name: HVAC
               - entity: sensor.big_attic_temp
                 name: N Attic
