@@ -655,10 +655,10 @@ views:
     cards:
       - type: entity-filter
         entities:
-          - entity: sensor.front_door_lock_battery
+          - entity: sensor.front_door_battery
             name: Front Door
             icon: mdi:key-variant
-          - entity: sensor.back_door_lock_battery
+          - entity: sensor.back_door_battery
             name: Back Door
             icon: mdi:key-variant
           - entity: sensor.hvac_leak_sensor_battery
