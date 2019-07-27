@@ -6,10 +6,11 @@
     from: 'not_home'
     to: 'Home'
   action:
-    - service: climate.set_away_mode
-      entity_id: climate.downstairs_hallway
+    - service: nest.set_away_mode
       data:
-        away_mode: false
+        away_mode: home
+        structure:
+          - Hidden Ridge
     - service: light.turn_on
       entity_id: 
         - light.pantry
