@@ -92,90 +92,6 @@
       friendly_name: 'Back Windows'
       value_template: '{% if states.binary_sensor.back_windows.state == "off" and states.binary_sensor.front_windows.state == "off" %}Closed{% else %}Open{% endif %}'
       icon_template: '{% if states.binary_sensor.back_windows.state == "off" and states.binary_sensor.front_windows.state == "off" %}mdi:window-closed{% else %}mdi:window-open{% endif %}'
-    huebridge:
-      entity_id: device_tracker.huebridge
-      value_template: '{% if is_state("device_tracker.huebridge", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Hue Bridge'
-    harmonyhub:
-      entity_id: device_tracker.harmonyhub
-      value_template: '{% if is_state("device_tracker.harmonyhub", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Harmony Hub'
-    smartthingshub:
-      entity_id: device_tracker.smartthingshub
-      value_template: '{% if is_state("device_tracker.smartthingshub", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'SmartThings Hub'
-    myq:
-      entity_id: device_tracker.myq
-      value_template: '{% if is_state("device_tracker.myq", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'MyQ Bridge'
-    macmini:
-      entity_id: device_tracker.macmini
-      value_template: '{% if is_state("device_tracker.macmini", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Mac Mini'
-    directv_genie:
-      entity_id: device_tracker.directv_genie
-      value_template: '{% if is_state("device_tracker.directv_genie", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'DirecTv Genie'
-    google_home_livingroom:
-      entity_id: device_tracker.google_home_livingroom
-      value_template: '{% if is_state("device_tracker.google_home_livingroom", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Google Home (Livingroom)' 
-    google_home_mini_mancave:
-      entity_id: device_tracker.google_home_mini_mancave
-      value_template: '{% if is_state("device_tracker.google_home_mini_mancave", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Google Home Mini (Mancave)' 
-    google_home_mini_nursery:
-      entity_id: device_tracker.google_home_mini_nursery
-      value_template: '{% if is_state("device_tracker.google_home_mini_nursery", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Google Home Mini (Nursery)'       
-    google_home_hub_kitchen:
-      entity_id: device_tracker.google_home_hub_kitchen
-      value_template: '{% if is_state("device_tracker.google_home_hub_kitchen", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Google Home Hub (Kitchen)'  
-    google_home_mini_bedroom:
-      entity_id: device_tracker.google_home_mini_bedroom
-      value_template: '{% if is_state("device_tracker.google_home_mini_bedroom", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Google Home Mini (Bedroom)'
-    google_home_mini_bathroom:
-      entity_id: device_tracker.google_home_mini_bathroom
-      value_template: '{% if is_state("device_tracker.google_home_mini_bathroom", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Google Home Mini (Bathroom)' 
-    chromecast_man_cave:
-      entity_id: device_tracker.chromecast_man_cave
-      value_template: '{% if is_state("device_tracker.chromecast_man_cave", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Chromecast (Mancave)'
-    chromecast_audio_dining_room:
-      entity_id: device_tracker.chromecast_audio_dining_room
-      value_template: '{% if is_state("device_tracker.chromecast_audio_dining_room", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Chromecast Audio (Dining Room)'
-    chromecast_audio_garage:
-      entity_id: device_tracker.chromecast_audio_garage
-      value_template: '{% if is_state("device_tracker.chromecast_audio_garage", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Chromecast Audio (Garage)'  
-    viziocrave360:
-      entity_id: device_tracker.viziocrave360
-      value_template: '{% if is_state("device_tracker.viziocrave360", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Vizio Crave 360' 
-    vizio_m70e3:
-      entity_id: device_tracker.vizio_m70e3
-      value_template: '{% if is_state("device_tracker.vizio_m70e3", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Vizio M70'
-    lg_sj9:
-      entity_id: device_tracker.lg_sj9
-      value_template: '{% if is_state("device_tracker.lg_sj9", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'LG SJ9' 
-    rasplex:
-      entity_id: device_tracker.rasplex
-      value_template: '{% if is_state("device_tracker.rasplex", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'RasPlex'
-    nesthello:
-      entity_id: device_tracker.nest_hello
-      value_template: '{% if is_state("device_tracker.nest_hello", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Nest Hello'
-    lightifybridge:
-      entity_id: device_tracker.lightify_bridge
-      value_template: '{% if is_state("device_tracker.lightify_bridge", "home") %}Online{% else %}Offline{% endif %}'
-      friendly_name: 'Lightify Bridge'
     away_toggle:
       entity_id: input_boolean.disable_away_mode
       value_template: '{% if is_state("input_boolean.disable_away_mode", "on") %}home{% else %}not_home{% endif %}'
@@ -228,30 +144,6 @@
   state_topic: "plex"
   name: "Rasplex Status"
   value_template: '{{ value_json.body }}'
-- platform: mqtt
-  state_topic: smartthings/Water Heater Leak Sensor/temperature
-  name: "Small Attic Temp"
-  unit_of_measurement: '°F'
-- platform: mqtt
-  state_topic: smartthings/Water Heater Leak Sensor/battery
-  name: "WH water sensor battery"
-  unit_of_measurement: '%'
-- platform: mqtt
-  state_topic: smartthings/HVAC Leak Sensor/temperature
-  name: "Big Attic Temp"
-  unit_of_measurement: '°F'
-- platform: mqtt
-  state_topic: smartthings/Back Door/battery
-  name: "Back Door Lock Battery"
-  unit_of_measurement: '%'
-- platform: mqtt
-  state_topic: smartthings/Front Door/battery
-  name: "Front Door Lock Battery"
-  unit_of_measurement: '%'
-- platform: mqtt
-  state_topic: smartthings/HVAC Leak Sensor/battery
-  name: "HVAC water sensor battery"
-  unit_of_measurement: '%'
 - platform: dnsip
   scan_interval: 300
 - platform: rest
@@ -307,15 +199,3 @@
   scan_interval: 5
 - platform: pi_hole
   host: 10.0.0.3
-#- platform: command_line
-#  name: Download
-#  scan_interval:
-#    minutes: 30
-#  command: 'ssh titan@10.0.0.110 | speedtest --server 5109 --json --no-upload'
-#  value_template: '{{(value_json.download/1048576) | round(2)}}'
-#- platform: command_line
-#  name: air_quality
-#  scan_interval:
-#    minutes: 10
-#  command: 'curl -X GET -H "Content-type: application/json" -H "Accept: application/json" "http://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=38016&distance=25&API_KEY=BB4DF57E-645A-4867-935F-3BC241441002"'
-#  value_template: '{{value_json[0]["AQI"]}}'
