@@ -6,10 +6,11 @@
     from: 'home'
     to: 'not_home' 
   action:
-    - entity_id: climate.downstairs_hallway
-      service: climate.set_away_mode
+    - service: nest.set_away_mode
       data:
-        away_mode: true
+        away_mode: away
+        structure:
+          - Hidden Ridge
     - service: media_player.turn_off
       entity_id:
         - media_player.all_assistants
