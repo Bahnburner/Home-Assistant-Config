@@ -281,7 +281,7 @@ views:
               - entity: sensor.small_attic_temp
                 name: S Attic
                 icon: mdi:thermometer
-              - entity: sensor.water_heater_leak_sensor_water
+              - entity: binary_sensor.water_heater_leak_sensor_water
                 name: WH              
 #### EXTERIOR STACK
       - type: vertical-stack
