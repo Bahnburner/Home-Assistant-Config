@@ -42,7 +42,12 @@
         {% endif %}
     brightness_lr:
       entity_id: light.living_room
-      value_template: '{{ states.light.living_room.attributes.brightness }}'
+      value_template: >
+        {% if states.light.living_room.state == 'off'%}
+          0
+        {% else %}
+          {{states.light.living_room.attributes.brightness}}
+        {% endif %}
     decimal_time:
       entity_id: sensor.time
       value_template: '{{(now().strftime("%H") | int) + (now().strftime("%M")|int / 60) | round(2)}}'
