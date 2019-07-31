@@ -146,7 +146,7 @@ cabinet_lights_weekday:
     service: light.turn_on
     entity_id: light.cabinet_lights
     data_template:
-      brightness: '{{ {{ states.sensor.brightness_lr.state | int }} }}'
+      brightness: '{{ states.sensor.brightness_lr.state }}'
       color_temp: >
         {% if (states.sensor.decimal_time.state | round(2)) <= 05.00 %}
           450
@@ -169,7 +169,7 @@ cabinet_lights_weekend:
     data:
       xy_color: [0.1605,0.3299]
     data_template:
-      brightness: '{{ {{ states.sensor.brightness_lr.state | int }} }}'
+      brightness: '{{ states.sensor.brightness_lr.state }}'
       
 pantry_lights:
   sequence:
