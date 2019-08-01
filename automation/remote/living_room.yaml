@@ -74,7 +74,7 @@
     - service: input_number.set_value
       entity_id: input_number.harmony_dim
       data_template:
-        value: '{{states.light.living_room.attributes.brightness | int}}'
+        value: '{{states.sensor.brightness_lr.state}}'
     - service: light.turn_on
       entity_id: light.living_room
       data_template:
@@ -240,7 +240,7 @@
     - service: input_number.set_value
       entity_id: input_number.movie_mode
       data_template:
-        value: '{{states.light.living_room.attributes.brightness | int}}'
+        value: '{{states.sensor.brightness_lr.state}}'
     - service: light.turn_off
       entity_id:
         - light.table_lamp
