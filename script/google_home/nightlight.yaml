@@ -10,7 +10,7 @@ nightlight:
     - delay:
         minutes: 10
     - condition: template
-      value_template: '{{ states.light.living_room.attributes.brightness == 50 }}'
+      value_template: '{{ states.sensor.brightness_lr.state == 50 }}'
     - service: light.turn_off
       entity_id: 
         - light.communal
