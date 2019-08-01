@@ -98,7 +98,7 @@ goodnight_timer_off:
     - delay: 
         minutes: 5
     - condition: template
-      value_template: '{{ states.light.living_room.attributes.brightness <= 200 }}'
+      value_template: '{{ states.sensor.brightness_lr.state <= 200 }}'
     - service: light.turn_off
       entity_id: light.communal
     - service: light.turn_off
@@ -134,7 +134,7 @@ goodnight_bedroom:
         transition: 30
       data_template:
         brightness: > 
-          {% if states.light.master_bedroom.state == 'off' or states.light.master_bedroom.attributes.brightness < 50 %}
+          {% if states.light.master_bedroom.state == 'off' or states.sensor.brightness_lr.state < 50 %}
             50
           {% else %}
             100
