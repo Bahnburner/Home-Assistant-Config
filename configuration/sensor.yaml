@@ -38,7 +38,7 @@
         {% if states.light.pantry.state == 'off'%}
           0
         {% else %}
-          {{states.light.pantry.attributes.brightness}}
+          {{states.light.pantry.attributes.brightness | int}}
         {% endif %}
     brightness_lr:
       entity_id: light.living_room
@@ -46,7 +46,7 @@
         {% if states.light.living_room.state == 'off'%}
           0
         {% else %}
-          {{states.light.living_room.attributes.brightness}}
+          {{states.light.living_room.attributes.brightness | int}}
         {% endif %}
     decimal_time:
       entity_id: sensor.time
