@@ -4,7 +4,6 @@
     platform: state
     entity_id: group.family
     from: 'not_home'
-    to: 'Home'
   action:
     - service: nest.set_away_mode
       data:
