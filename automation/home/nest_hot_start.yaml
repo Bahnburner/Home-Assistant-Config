@@ -39,10 +39,11 @@
     condition: template
     value_template: '{{ states.climate.downstairs_hallway.attributes.away_mode == "on" }}'
   action:
-    - service: climate.set_away_mode
-      entity_id: climate.downstairs_hallway
+    - service: nest.set_away_mode
       data:
-        away_mode: false
+        away_mode: home
+        structure:
+          - Hidden Ridge
 
 - alias: Home Mode Nest Hot Start Leaving Home 
   hide_entity: true
