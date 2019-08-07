@@ -4,6 +4,6 @@
     platform: state
     entity_id: group.family
     from: 'not_home'
-    to: 'Home'
+    to: 'home'
   action:
     - service: script.livingroom_on
