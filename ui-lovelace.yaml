@@ -149,27 +149,6 @@ views:
               action: toggle
           - type: entity-filter
             entities:
-#              - type: custom:mini-media-player
-#                entity: media_player.bedroom_assistant
-#                icon: mdi:google-home
-#                group: true
-#                artwork: none
-#                hide_power: true    
-#                hide_volume: true
-#              - type: custom:mini-media-player
-#                entity: media_player.bathroom_assistant
-#                icon: mdi:google-home
-#                group: true
-#                artwork: none   
-#                hide_power: true   
-#                hide_volume: true
-#              - type: custom:mini-media-player
-#                entity: media_player.bedroom_speaker
-#                icon: mdi:cast-connected
-#                group: true
-#                artwork: none  
-#                hide_power: true   
-#                hide_volume: true
               - type: custom:mini-media-player
                 entity: media_player.master_suite
                 icon: mdi:cast-connected
@@ -177,24 +156,6 @@ views:
                 artwork: none   
                 hide_power: true   
                 hide_volume: true               
-#              - type: custom:mini-media-player
-#                entity: media_player.bedroom_assistant
-#                group: true
-#                hide_controls: true
-#                hide_info: true
-#                hide_power: true                 
-#              - type: custom:mini-media-player
-#                entity: media_player.bathroom_assistant
-#                group: true
-#                hide_controls: true
-#                hide_info: true
-#                hide_power: true   
-#              - type: custom:mini-media-player
-#                entity: media_player.bedroom_speaker
-#                group: true
-#                hide_controls: true
-#                hide_info: true
-#                hide_power: true   
               - type: custom:mini-media-player
                 entity: media_player.master_suite
                 group: true
@@ -764,3 +725,20 @@ views:
           - id: 83b5c93f379e416faecf8f4910cbfb5d  # Automatically created id
             type: weather-forecast
             entity: weather.forecast
+      - type: vertical-stack
+        cards:
+          - type: picture-entity
+            image: /local/resources/images/lovelace/master_bedroom_edited.jpg
+            entity: light.master_bedroom
+            name: Master Bedroom
+            tap_action: 
+              action: toggle
+          - type: entities
+            entities:
+              - entity: light.master_bedroom
+                name: Lights
+                type: custom:slider-entity-row
+                hide_toggle: true
+              - light.bedroom_floor_lamp
+              - light.crystals_nightstand
+              - light.tristans_nightstand            
