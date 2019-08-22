@@ -753,13 +753,6 @@ views:
               - switch.overhead_light
               - light.recessed_lights
               - switch.chandelier
-          - type: entities
-            entities:
-              - entity: light.foyer
-                name: Foyer Light 
-              - entity: light.dining_room
-                name: Dining Room Lights
-
       - type: vertical-stack
         cards:
           - type: picture-entity
@@ -774,7 +767,13 @@ views:
                 name: Lights
                 type: custom:slider-entity-row
                 hide_toggle: true
-              - climate.upstairs_hallway        
+              - climate.upstairs_hallway
+          - type: entities
+            entities:
+              - entity: light.foyer
+                name: Foyer Light 
+              - entity: light.dining_room
+                name: Dining Room Lights              
       - type: conditional
         conditions:
           - entity: input_boolean.christmas_lights
