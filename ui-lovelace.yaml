@@ -696,8 +696,6 @@ views:
             entity: group.tristal
           - type: entities
             entities:
-              - lock.front_door
-              - lock.back_door
               - cover.garage_door_opener
           - type: picture-entity
             image: /local/resources/images/lovelace/house_exterior_edited.jpg
