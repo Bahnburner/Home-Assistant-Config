@@ -711,7 +711,6 @@ views:
             entities:
               - entity: input_select.harmony
                 icon: mdi:television
-              - sensor.current_activity
               - entity: light.living_room
                 name: Lights
                 type: custom:slider-entity-row
@@ -721,7 +720,6 @@ views:
                 type: custom:slider-entity-row
                 hide_toggle: true
               - climate.downstairs_hallway
-              - sensor.protect_down
       - type: vertical-stack
         cards:
           - type: picture-entity
@@ -752,9 +750,6 @@ views:
               - switch.overhead_light
               - light.recessed_lights
               - switch.chandelier
-              - light.pantry
-              - light.cabinet_lights
-              - sensor.protect_kitchen
           - type: entities
             entities:
               - entity: light.foyer
@@ -769,13 +764,6 @@ views:
             name: Exterior
             tap_action: 
               action: toggle
-          - type: entities
-            entities:
-              - entity: light.front_door
-                name: Entryway Light
-              - light.front_floods
-              - light.rear_floods
-              - switch.patio_lights
       - type: vertical-stack
         cards:
           - type: picture-entity
@@ -790,8 +778,7 @@ views:
                 name: Lights
                 type: custom:slider-entity-row
                 hide_toggle: true
-              - climate.upstairs_hallway
-              - sensor.protect_up            
+              - climate.upstairs_hallway        
       - type: conditional
         conditions:
           - entity: input_boolean.christmas_lights
