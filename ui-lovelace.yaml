@@ -699,6 +699,12 @@ views:
               - lock.front_door
               - lock.back_door
               - cover.garage_door_opener
+          - type: picture-entity
+            image: /local/resources/images/lovelace/house_exterior_edited.jpg
+            entity: group.exterior
+            name: Exterior
+            tap_action: 
+              action: toggle              
       - type: vertical-stack
         cards:
           - type: picture-entity
@@ -753,14 +759,7 @@ views:
                 name: Foyer Light 
               - entity: light.dining_room
                 name: Dining Room Lights
-      - type: vertical-stack
-        cards:
-          - type: picture-entity
-            image: /local/resources/images/lovelace/house_exterior_edited.jpg
-            entity: group.exterior
-            name: Exterior
-            tap_action: 
-              action: toggle
+
       - type: vertical-stack
         cards:
           - type: picture-entity
