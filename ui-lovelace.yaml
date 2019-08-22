@@ -485,9 +485,6 @@ views:
     title: Devices
     id: devices
     cards:
-      - type: cast
-        name: Cast
-        view: cast    
       - type: vertical-stack
         cards:
           - type: history-graph
@@ -662,6 +659,9 @@ views:
             title: Administration
             show_header_toggle: false
             entities:
+              - type: cast
+                name: Cast
+                view: cast                
               - entity: input_boolean.ghh_disabler
                 name: "Disable Google Home Hub"
                 icon: mdi:youtube
