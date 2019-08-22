@@ -761,3 +761,42 @@ views:
                 name: Foyer Light 
               - entity: light.dining_room
                 name: Dining Room Lights
+      - type: vertical-stack
+        cards:
+          - type: picture-entity
+            image: /local/resources/images/lovelace/house_exterior_edited.jpg
+            entity: group.exterior
+            name: Exterior
+            tap_action: 
+              action: toggle
+          - type: entities
+            entities:
+              - entity: light.front_door
+                name: Entryway Light
+              - light.front_floods
+              - light.rear_floods
+              - switch.patio_lights
+      - type: vertical-stack
+        cards:
+          - type: picture-entity
+            name: Office
+            image: /local/resources/images/lovelace/office_edited.jpg
+            entity: light.desk_lamp
+            tap_action: 
+              action: toggle
+          - type: entities
+            entities:
+              - entity: light.desk_lamp
+                name: Lights
+                type: custom:slider-entity-row
+                hide_toggle: true
+              - climate.upstairs_hallway
+              - sensor.protect_up            
+      - type: conditional
+        conditions:
+          - entity: input_boolean.christmas_lights
+            state: "on"
+        card:
+          type: entities
+          entities:
+            - switch.christmas_lights                           
