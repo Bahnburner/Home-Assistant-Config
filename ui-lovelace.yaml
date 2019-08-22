@@ -742,3 +742,25 @@ views:
               - light.bedroom_floor_lamp
               - light.crystals_nightstand
               - light.tristans_nightstand            
+      - type: vertical-stack
+        cards:
+          - type: picture-entity
+            image: /local/resources/images/lovelace/kitchen_edited.jpg
+            entity: group.kitchen_lighting
+            name: Kitchen
+            tap_action: 
+              action: toggle
+          - type: entities
+            entities:
+              - switch.overhead_light
+              - light.recessed_lights
+              - switch.chandelier
+              - light.pantry
+              - light.cabinet_lights
+              - sensor.protect_kitchen
+          - type: entities
+            entities:
+              - entity: light.foyer
+                name: Foyer Light 
+              - entity: light.dining_room
+                name: Dining Room Lights
