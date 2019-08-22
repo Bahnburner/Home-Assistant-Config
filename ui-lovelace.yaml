@@ -738,3 +738,29 @@ views:
               - lock.front_door
               - lock.back_door
               - cover.garage_door_opener
+      - type: vertical-stack
+        cards:
+          - type: picture-entity
+            image: /local/resources/images/lovelace/livingroom_edited.jpg
+            entity: light.living_room
+            name: Livingroom
+            tap_action: 
+              action: toggle
+          - type: entities
+            entities:
+              - entity: input_select.harmony
+                icon: mdi:television
+              - sensor.current_activity
+              - entity: light.living_room
+                name: Lights
+                type: custom:slider-entity-row
+                hide_toggle: true
+              - entity: light.fan
+                name: Fan
+                type: custom:slider-entity-row
+                hide_toggle: true
+              - climate.downstairs_hallway
+              - sensor.protect_down
+          - id: 83b5c93f379e416faecf8f4910cbfb5d  # Automatically created id
+            type: weather-forecast
+            entity: weather.forecast
