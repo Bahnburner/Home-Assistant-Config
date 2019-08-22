@@ -481,11 +481,13 @@ views:
 #########
 # ADMIN #
 #########
-
   - icon: mdi:lan
     title: Devices
     id: devices
     cards:
+      - type: cast
+        name: Cast
+        view: cast    
       - type: vertical-stack
         cards:
           - type: history-graph
