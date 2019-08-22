@@ -722,9 +722,6 @@ views:
                 hide_toggle: true
               - climate.downstairs_hallway
               - sensor.protect_down
-          - id: 83b5c93f379e416faecf8f4910cbfb5d  # Automatically created id
-            type: weather-forecast
-            entity: weather.forecast
       - type: vertical-stack
         cards:
           - type: picture-entity
