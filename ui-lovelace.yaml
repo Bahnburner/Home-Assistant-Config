@@ -522,7 +522,6 @@ views:
             title: HASS VM Load (5m)
             entities: 
               - entity: sensor.load_5m
-                name: Load 5m
       - type: vertical-stack
         cards:                
           - type: history-graph
