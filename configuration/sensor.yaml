@@ -204,3 +204,6 @@
   scan_interval: 5
 - platform: pi_hole
   host: 10.0.0.3
+- platform: systemmonitor
+  resources:
+   - type: load_5m
