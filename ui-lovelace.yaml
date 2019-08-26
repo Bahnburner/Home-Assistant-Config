@@ -519,9 +519,10 @@ views:
                 min: 0
                 max: 100
           - type: history-graph
+            title: HASS VM Load (5m)
             entities: 
               - entity: sensor.load_5m
-                name: Docker Load 5m
+                name: Load 5m
       - type: vertical-stack
         cards:                
           - type: history-graph
