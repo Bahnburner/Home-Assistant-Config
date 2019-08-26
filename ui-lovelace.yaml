@@ -518,6 +518,10 @@ views:
                 name: 'Plex'
                 min: 0
                 max: 100
+          - type: history-graph
+            entities: 
+              - entity: sensor.load_5m
+                name: Docker Load 5m
       - type: vertical-stack
         cards:                
           - type: history-graph
