@@ -30,10 +30,10 @@ views:
         cards:
           - type: picture-glance
             entities:
-              - entity: person.tristan
+              - entity: device_tracker.tristans_phone_wifi
                 icon: mdi:human-male
                 name: Tristan
-              - entity: person.crystal
+              - entity: device_tracker.crystals_phone_wifi
                 icon: mdi:human-female
                 name: Crystal
             image: /local/resources/images/lovelace/family_edited.jpg
