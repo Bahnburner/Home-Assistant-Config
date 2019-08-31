@@ -85,6 +85,10 @@ tristal:
   - group.tristans_phone
   - group.crystals_phone
   - sensor.away_toggle
+away_image:
+  - device_tracker.tristans_phone_wifi
+  - device_tracker.crystals_phone_wifi
+  - sensor.away_toggle
 christmas:
   switch.christmas_lights
 door_locks:

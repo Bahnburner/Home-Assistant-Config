@@ -41,7 +41,7 @@ views:
             state_image:
               not_home: /local/resources/images/lovelace/family_away_edited.jpg
               home: /local/resources/images/lovelace/family_edited.jpg
-            entity: group.tristal
+            entity: group.away_image
           - type: entities
             entities:
               - lock.front_door
