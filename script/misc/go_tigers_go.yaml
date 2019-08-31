@@ -1,5 +1,9 @@
 go_tigers_go:
   sequence:
+    - service: media_player.volume_mute
+      entity_id: media_player.vizio_smartcast
+      data: 
+        is_volume_muted: true
     - service: media_player.play_media
       entity_id: media_player.party_mode
       data:
@@ -19,5 +23,11 @@ go_tigers_go:
 timer_off:
   sequence:
     - delay:
-        seconds: 60
+        seconds: 75
     - service: script.livingroom_on
+    - service: media_player.media_stop
+      entity_id: media_player.party_mode
+    - service: media_player.volume_mute
+      entity_id: media_player.vizio_smartcast
+      data: 
+        is_volume_muted: false
