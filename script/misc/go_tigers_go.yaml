@@ -23,7 +23,7 @@ go_tigers_go:
 timer_off:
   sequence:
     - delay:
-        seconds: 75
+        seconds: 77
     - service: script.livingroom_on
     - service: media_player.media_stop
       entity_id: media_player.party_mode

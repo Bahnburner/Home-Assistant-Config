@@ -12,15 +12,15 @@
   latitude: !secret latitude
   longitude: !secret longitude
   monitored_conditions:
-    - icon
-    - daily_summary
-    - summary
-    - precip_probability
-    - temperature
-    - temperature_high
-    - temperature_low
-    - cloud_cover
-    - uv_index
+#    - icon
+#    - daily_summary
+#    - summary
+#    - precip_probability
+#    - temperature
+#    - temperature_high
+#    - temperature_low
+#    - cloud_cover
+#    - uv_index
 - platform: template
   sensors:
     current_activity:
