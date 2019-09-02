@@ -11,16 +11,23 @@
   api_key: !secret darksky
   latitude: !secret latitude
   longitude: !secret longitude
-#  monitored_conditions:
-#    - icon
-#    - daily_summary
-#    - summary
-#    - precip_probability
-#    - temperature
-#    - temperature_high
-#    - temperature_low
-#    - cloud_cover
-#    - uv_index
+  forecast: 
+    - 0
+  monitored_conditions:
+    - icon
+    - daily_summary
+    - summary
+    - precip_probability
+    - temperature
+    - temperature_high
+    - temperature_low
+    - cloud_cover
+    - uv_index
+    - apparent_temperature
+    - wind_speed
+    - wind_bearing
+    - temperature_high
+    - temperature_low
 - platform: template
   sensors:
     current_activity:
