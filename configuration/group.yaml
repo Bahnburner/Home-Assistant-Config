@@ -68,19 +68,14 @@ settings:
     - camera.upstairs_nursery
 tristans_phone:
   - device_tracker.tristans_phone_wifi
-  - device_tracker.google_maps_110746778193138728717
+#  - device_tracker.google_maps_110746778193138728717
 crystals_phone:
   - device_tracker.crystals_phone_wifi
-  - device_tracker.google_maps_102616309312724957780
+#  - device_tracker.google_maps_102616309312724957780
 family:
   - sensor.away_toggle
   - group.tristans_phone
   - group.crystals_phone
-  - device_tracker.erins_phone
-  - device_tracker.matts_phone
-  - device_tracker.taylors_phone
-  - device_tracker.donnas_phone
-  - device_tracker.stephens_phone
 tristal:
   - group.tristans_phone
   - group.crystals_phone
