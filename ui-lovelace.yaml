@@ -603,7 +603,7 @@ views:
               - entity: binary_sensor.mp_select_mini_printing
                 state: "on"
             card:
-              type: custom:useful-markdown-card
+              type: markdown
               title: 'Time Remaining:'
               content: >              
                 [[ sensor.mp_select_mini_print_time_remaining ]]
