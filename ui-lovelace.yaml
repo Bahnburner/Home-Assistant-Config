@@ -562,7 +562,7 @@ views:
             camera_image: camera.octoprint
             show_name: false
             show_state: false
-          - type: custom:useful-markdown-card
+          - type: custom:markdown
             title: 'Time Remaining:'
             content: >              
               [[ sensor.ender_3_pro_print_time_remaining ]] 
@@ -571,7 +571,7 @@ views:
               - entity: binary_sensor.ender_3_pro_printing
                 state: "on"
             card:
-              type: custom:useful-markdown-card
+              type: custom:markdown
               title: 'Time Remaining:'
               content: >              
                 [[ sensor.ender_3_pro_print_time_remaining ]]                
@@ -603,7 +603,7 @@ views:
               - entity: binary_sensor.mp_select_mini_printing
                 state: "on"
             card:
-              type: markdown
+              type: custom:useful-markdown-card
               title: 'Time Remaining:'
               content: >              
                 [[ sensor.mp_select_mini_print_time_remaining ]] 
