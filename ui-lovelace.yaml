@@ -605,8 +605,7 @@ views:
             card:
               type: markdown
               title: 'Time Remaining:'
-              content: >              
-                [[ sensor.mp_select_mini_print_time_remaining ]]
+              content: "This is a test."
           - type: conditional
             conditions:
               - entity: binary_sensor.mp_select_mini_printing
