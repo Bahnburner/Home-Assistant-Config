@@ -509,13 +509,13 @@ views:
               - type: gauge
                 title: Plex (Z:)
                 entity: sensor.disk_3
-                name: 'Storage'
+                name: 'Plex'
                 min: 0
                 max: 100
               - type: gauge
                 title: Storage (Y:)
-                entity: sensor.disk_4
-                name: 'Plex'
+                entity: sensor.disk_2
+                name: 'Storage'
                 min: 0
                 max: 100
           - type: history-graph
