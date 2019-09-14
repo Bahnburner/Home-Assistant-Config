@@ -508,13 +508,13 @@ views:
             cards:
               - type: gauge
                 title: Plex (Z:)
-                entity: sensor.disk_3
+                entity: sensor.disk_4
                 name: 'Plex'
                 min: 0
                 max: 100
               - type: gauge
                 title: Storage (Y:)
-                entity: sensor.disk_2
+                entity: sensor.disk_3
                 name: 'Storage'
                 min: 0
                 max: 100
