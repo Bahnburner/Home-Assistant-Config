@@ -165,13 +165,14 @@ views:
                 hide:
                   power: true
                   volume: true
+                  progress: true
               - type: custom:mini-media-player
                 entity: media_player.bedroom_tv
                 group: true
                 artwork: cover
                 hide:
                   icon: true
-                  volume: true
+                  volume: false
                   power: true
               - type: custom:mini-media-player
                 entity: media_player.vizio_smartcast_bedroom_tv
