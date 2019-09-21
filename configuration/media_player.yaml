@@ -16,5 +16,8 @@
   device: 347A60F399D9
 - platform: vizio
   host: 10.0.0.150
-  access_token: !secret vizio_access_token
+  access_token: !secret vizio_access_token_livingroom_tv
+- platform: vizio
+  host: 10.0.0.63
+  access_token: !secret vizio_access_token_bedroom_tv
 
