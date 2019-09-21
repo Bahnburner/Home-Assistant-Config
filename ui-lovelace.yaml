@@ -94,6 +94,7 @@ views:
                   controls: true
                   info: true
                   power: true
+                  icon: true
                   volume: false
             state_filter:
               - "playing"
@@ -183,6 +184,7 @@ views:
                 hide:
                   controls: true
                   info: true
+                  icon: true
                   power: true
                   name: true
                   source: true
