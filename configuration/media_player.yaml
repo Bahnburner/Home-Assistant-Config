@@ -7,7 +7,7 @@
 - platform: directv
   host: 10.0.0.151
   port: 8080
-  name: Mancave DirecTV
+  name: Bedroom DirecTV
   device: 88F7C7A17C19
 - platform: directv
   host: 10.0.0.151

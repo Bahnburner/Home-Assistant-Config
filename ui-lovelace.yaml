@@ -80,7 +80,7 @@ views:
                 hide_volume: true
                 hide_power: true                
               - type: custom:mini-media-player
-                entity: media_player.vizio_smartcast            
+                entity: media_player.vizio_smartcast_livingroom_tv
                 group: true
                 hide_controls: true
                 hide_info: true
@@ -149,6 +149,27 @@ views:
               action: toggle
           - type: entity-filter
             entities:
+              - type: custom:mini-media-player
+                entity: media_player.bedroom_directv
+                icon: mdi:satellite-variant
+                group: true
+                name: DirecTV
+                artwork: none
+                hide_power: true
+                hide_volume: true    
+              - type: custom:mini-media-player
+                entity: media_player.bedroom_tv
+                group: true
+                artwork: cover
+                hide_icon: true
+                hide_volume: true
+                hide_power: true                
+              - type: custom:mini-media-player
+                entity: media_player.vizio_smartcast_bedroom_tv
+                group: true
+                hide_controls: true
+                hide_info: true
+                hide_power: true
               - type: custom:mini-media-player
                 entity: media_player.master_suite
                 icon: mdi:cast-connected
@@ -271,14 +292,6 @@ views:
               action: toggle
           - type: entity-filter
             entities:
-              - type: custom:mini-media-player
-                entity: media_player.mancave_directv
-                icon: mdi:satellite-variant
-                group: true
-                artwork: none
-                hide_power: true
-                hide_volume: true
-                name: DirecTV
               - type: custom:mini-media-player
                 entity: media_player.mancave_tv
                 icon: mdi:cast-connected
