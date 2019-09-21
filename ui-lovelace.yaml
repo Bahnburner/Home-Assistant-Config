@@ -64,6 +64,7 @@ views:
                 group: true
                 artwork: none
                 hide_volume: true
+                hide_power: true
                 name: Plex
               - type: custom:mini-media-player
                 entity: media_player.livingroom_directv
