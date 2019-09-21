@@ -60,6 +60,7 @@ views:
             entities:
               - type: custom:mini-media-player
                 entity: media_player.rasplex
+                icon: mdi:plex
                 hide_icon: true
                 group: true
                 artwork: none
