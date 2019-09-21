@@ -66,6 +66,7 @@ views:
                 hide:
                   volume: true
                   power: true
+                  progress: true
                 name: Plex
               - type: custom:mini-media-player
                 entity: media_player.livingroom_directv
@@ -73,21 +74,24 @@ views:
                 group: true
                 name: DirecTV
                 artwork: none
-                hide_power: true
-                hide_volume: true    
+                hide:
+                  power: true
+                  volume: true    
               - type: custom:mini-media-player
                 entity: media_player.livingroom_tv
                 group: true
                 artwork: cover
-                hide_icon: true
-                hide_volume: true
-                hide_power: true                
+                hide:
+                  icon: true
+                  volume: true
+                  power: true
               - type: custom:mini-media-player
                 entity: media_player.vizio_smartcast_livingroom_tv
                 group: true
-                hide_controls: true
-                hide_info: true
-                hide_power: true
+                hide:
+                  controls: true
+                  info: true
+                  power: true
             state_filter:
               - "playing"
               - "paused"
@@ -158,34 +162,39 @@ views:
                 group: true
                 name: DirecTV
                 artwork: none
-                hide_power: true
-                hide_volume: true    
+                hide:
+                  power: true
+                  volume: true
               - type: custom:mini-media-player
                 entity: media_player.bedroom_tv
                 group: true
                 artwork: cover
-                hide_icon: true
-                hide_volume: true
-                hide_power: true                
+                hide:
+                  icon: true
+                  volume: true
+                  power: true
               - type: custom:mini-media-player
                 entity: media_player.vizio_smartcast_bedroom_tv
                 group: true
-                hide_controls: true
-                hide_info: true
-                hide_power: true
+                hide:
+                  controls: true
+                  info: true
+                  power: true
               - type: custom:mini-media-player
                 entity: media_player.master_suite
                 icon: mdi:cast-connected
                 group: true
-                artwork: none   
-                hide_power: true   
-                hide_volume: true               
+                artwork: none
+                hide:
+                  power: true
+                  volume: true
               - type: custom:mini-media-player
                 entity: media_player.master_suite
                 group: true
-                hide_controls: true
-                hide_info: true
-                hide_power: true   
+                hide:
+                  controls: true
+                  info: true
+                  power: true
             state_filter:
               - "playing"
             show_empty: false           
@@ -300,20 +309,23 @@ views:
                 icon: mdi:cast-connected
                 group: true
                 artwork: none   
-                hide_volume: true
+                hide:
+                  volume: true
               - type: custom:mini-media-player
                 entity: media_player.mancave_assistant
                 icon: mdi:google-home
                 group: true
                 artwork: none   
-                hide_volume: true
-                hide_power: true
+                hide:
+                  volume: true
+                  power: true
               - type: custom:mini-media-player
                 entity: media_player.mancave_assistant
                 group: true
-                hide_controls: true
-                hide_info: true
-                hide_power: true  
+                hide:
+                  controls: true
+                  info: true
+                  power: true  
             state_filter:
               - "playing"
             show_empty: false
