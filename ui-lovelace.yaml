@@ -62,7 +62,7 @@ views:
                 entity: media_player.rasplex
                 hide_icon: true
                 group: true
-                artwork: cover
+                artwork: none
                 hide_volume: true
                 name: Plex
               - type: custom:mini-media-player
