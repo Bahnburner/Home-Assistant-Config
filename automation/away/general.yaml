@@ -26,6 +26,7 @@
         - media_player.livingroom_assistant
         - media_player.master_suite
         - media_player.party_mode
+        - media_player.bedroom_tv
     - service: script.fan_off
     - service: remote.turn_off
       entity_id: remote.livingroom
