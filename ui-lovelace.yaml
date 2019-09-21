@@ -64,6 +64,7 @@ views:
                 group: true
                 artwork: cover
                 hide_volume: true
+                name: Plex
               - type: custom:mini-media-player
                 entity: media_player.livingroom_directv
                 icon: mdi:satellite-variant
