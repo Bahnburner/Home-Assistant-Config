@@ -453,7 +453,7 @@ views:
       - type: media-control
         entity: media_player.mancave_assistant
       - type: media-control
-        entity: media_player.mancave_directv
+        entity: media_player.bedroom_directv
       - type: media-control
         entity: media_player.mancave_tv
       - type: media-control
