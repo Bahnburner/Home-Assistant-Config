@@ -86,12 +86,13 @@ views:
                   volume: true
                   power: true
               - type: custom:mini-media-player
-                entity: media_player.vizio_smartcast_livingroom_tv
+                entity: media_player.vizio_smartcast
                 group: true
                 hide:
                   controls: true
                   info: true
                   power: true
+                  volume: false
             state_filter:
               - "playing"
               - "paused"
@@ -175,7 +176,7 @@ views:
                   volume: false
                   power: true
               - type: custom:mini-media-player
-                entity: media_player.vizio_smartcast_bedroom_tv
+                entity: media_player.vizio_smartcast_2
                 group: true
                 hide:
                   controls: true
