@@ -185,6 +185,8 @@ views:
                   volume: false
                   power: true
                   controls: true
+                  progress: true
+                  volume: true
               - type: custom:mini-media-player
                 entity: media_player.vizio_smartcast_2
                 group: true
@@ -219,6 +221,7 @@ views:
                   volume: false
             state_filter:
               - "playing"
+              - "on"
             show_empty: false           
           - type: entities
             entities:
