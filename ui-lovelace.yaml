@@ -215,6 +215,7 @@ views:
                   info: true
                   power: true
                   icon: true
+                  progress: true
                   volume: false
             state_filter:
               - "playing"
