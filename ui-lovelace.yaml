@@ -207,10 +207,13 @@ views:
                 entity: media_player.master_suite
                 group: true
                 hide:
+                  name: true
+                  source: true
                   controls: true
                   info: true
                   power: true
-                  progress: true
+                  icon: true
+                  volume: false
             state_filter:
               - "playing"
             show_empty: false           
