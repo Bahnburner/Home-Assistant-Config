@@ -79,6 +79,7 @@ views:
                   power: true
                   volume: true
                   controls: true
+                  progress: true
               - type: custom:mini-media-player
                 entity: media_player.livingroom_tv
                 group: true
@@ -201,6 +202,7 @@ views:
                 hide:
                   power: true
                   volume: true
+                  progress: true
               - type: custom:mini-media-player
                 entity: media_player.master_suite
                 group: true
@@ -208,6 +210,7 @@ views:
                   controls: true
                   info: true
                   power: true
+                  progress: true
             state_filter:
               - "playing"
             show_empty: false           
