@@ -180,7 +180,7 @@ views:
                 entity: media_player.bedroom_tv
                 group: true
                 artwork: cover
-                icon: mdi:cast
+                icon: mdi:cast-connected
                 hide:
                   icon: true
                   volume: false
