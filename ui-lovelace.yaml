@@ -182,7 +182,6 @@ views:
                 artwork: cover
                 icon: mdi:cast-connected
                 hide:
-                  icon: true
                   volume: false
                   power: true
                   controls: true
