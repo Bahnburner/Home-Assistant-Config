@@ -100,6 +100,7 @@ views:
                   power: true
                   icon: true
                   volume: false
+                  progress: true
             state_filter:
               - "playing"
               - "paused"
@@ -194,6 +195,7 @@ views:
                   power: true
                   name: true
                   source: true
+                  progress: true
               - type: custom:mini-media-player
                 entity: media_player.master_suite
                 icon: mdi:cast-connected
