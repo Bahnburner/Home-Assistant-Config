@@ -34,7 +34,7 @@ goodnight:
         - media_player.all_speakers
         - media_player.garage_speaker
         - media_player.house_party_protocol
-        - media_player.bedroom_tv
+        - media_player.vizio_smartcast_2
     - service: script.fan_off
     - service: light.turn_off
       entity_id:
