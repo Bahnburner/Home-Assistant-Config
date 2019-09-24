@@ -1,9 +1,3 @@
-- platform: plex
-  scan_interval: 5
-  show_all_controls: false
-  use_episode_art: true
-  remove_unavailable_clients: true
-  client_remove_interval: 600
 - platform: directv
   host: 10.0.0.151
   port: 8080
