@@ -525,7 +525,7 @@ views:
       - type: map
         entities:
           - entity: device_tracker.google_maps_tcaulfld_gmail_com
-          - entity: device_tracker.google_maps_110746778193138728717
+          - entity: device_tracker.google_maps_102616309312724957780
           - zone.home
           - zone.sedgwick
           - zone.ttc
