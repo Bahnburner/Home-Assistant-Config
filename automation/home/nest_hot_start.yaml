@@ -2,7 +2,7 @@
   hide_entity: true
   trigger:
     - platform: state
-      entity_id: device_tracker.google_maps_110746778193138728717
+      entity_id: device_tracker.google_maps_tcaulfld_gmail_com
       from: 'Sedgwick'
     - platform: state
       entity_id: device_tracker.google_maps_102616309312724957780
@@ -31,7 +31,7 @@
   trigger:
     platform: state
     entity_id:
-      - device_tracker.google_maps_110746778193138728717
+      - device_tracker.google_maps_tcaulfld_gmail_com
       - device_tracker.google_maps_102616309312724957780
     from: 'not_home'
     to: 'Heading Home'
@@ -50,7 +50,7 @@
   trigger:
     platform: state
     entity_id:
-      - device_tracker.google_maps_110746778193138728717
+      - device_tracker.google_maps_tcaulfld_gmail_com
       - device_tracker.google_maps_102616309312724957780
     from: 'Heading Home'
     to: 'not_home'
