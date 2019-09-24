@@ -52,7 +52,7 @@ nest: !include ./configuration/nest.yaml
 notify: !include ./configuration/notify.yaml
 octoprint: !include ./configuration/octoprint.yaml
 person:
-pi_hole: !include ./configuration/pi-hole.yaml
+pi_hole: !include ./configuration/pi_hole.yaml
 plex: !include ./configuration/plex.yaml
 #remote: !include ./configuration/remote.yaml
 script: !include_dir_merge_named script
