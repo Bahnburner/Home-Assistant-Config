@@ -1,0 +1,5 @@
+scan_interval: 5
+show_all_controls: false
+use_episode_art: true
+host: 10.0.0.109
+token: !secret plex_token
