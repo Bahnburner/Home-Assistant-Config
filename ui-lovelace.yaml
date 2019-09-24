@@ -186,7 +186,6 @@ views:
                   power: true
                   controls: true
                   progress: true
-                  volume: true
               - type: custom:mini-media-player
                 entity: media_player.vizio_smartcast_2
                 group: true
