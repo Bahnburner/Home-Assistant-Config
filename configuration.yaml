@@ -35,11 +35,11 @@ camera: !include ./configuration/camera.yaml
 climate: !include ./configuration/climate.yaml
 cover: !include ./configuration/cover.yaml
 device_tracker: !include ./configuration/device_tracker.yaml
-hue: !include ./configuration/hue.yaml
 google: !include ./configuration/calendar.yaml
 #google_assistant: !include ./configuration/google_assistant.yaml
 group: !include ./configuration/group.yaml
 http: !include ./configuration/http.yaml
+hue: !include ./configuration/hue.yaml
 ifttt: !include ./configuration/ifttt.yaml
 input_boolean: !include ./configuration/input_boolean.yaml
 input_number: !include ./configuration/input_number.yaml
@@ -52,6 +52,8 @@ nest: !include ./configuration/nest.yaml
 notify: !include ./configuration/notify.yaml
 octoprint: !include ./configuration/octoprint.yaml
 person:
+pi-hole: !include ./configuration/pi-hole.yaml
+plex: !include ./configuration/plex.yaml
 #remote: !include ./configuration/remote.yaml
 script: !include_dir_merge_named script
 sensor: !include ./configuration/sensor.yaml
