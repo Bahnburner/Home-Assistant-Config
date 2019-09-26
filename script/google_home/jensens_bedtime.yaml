@@ -1,11 +1,11 @@
 jensens_bedtime:
   sequence:
     - service_template: >
-      {% if states.media_player.vizio_smartcast_2 == 'on' %}
-        script.tv_timer
-      {% else %}
-        script.whitenoise
-      {% endif %}
+        {% if states.media_player.vizio_smartcast_2 == 'on' %}
+          script.tv_timer
+        {% else %}
+          script.whitenoise
+        {% endif %}
     - service: light.turn_on
       entity_id: light.master_bedroom
       data:
