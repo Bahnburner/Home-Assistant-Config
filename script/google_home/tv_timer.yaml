@@ -1,0 +1,8 @@
+tv_timer:
+  sequence:
+    - wait_template: "{{ is_state('media_player.vizio_smartcast_2', 'off') }}"
+      timeout: '00:15:00'
+      continue_on_timeout: 'true'
+    - service: media_player.turn_off
+      entity_id: media_player.vizio_smartcast_2
+    - service: script.whitenoise
