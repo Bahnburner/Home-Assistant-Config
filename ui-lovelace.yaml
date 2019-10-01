@@ -83,7 +83,7 @@ views:
               - type: custom:mini-media-player
                 entity: media_player.livingroom_tv
                 group: true
-                artwork: cover
+                artwork: none
                 hide:
                   icon: true
                   volume: true
@@ -179,7 +179,7 @@ views:
               - type: custom:mini-media-player
                 entity: media_player.bedroom_tv
                 group: true
-                artwork: cover
+                artwork: none
                 icon: mdi:cast-connected
                 hide:
                   volume: false
