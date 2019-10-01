@@ -1,7 +1,7 @@
 jensens_bedtime:
   sequence:
     - service_template: >
-        {% if states.media_player.vizio_smartcast_2 == 'on' %}
+        {% if states.media_player.vizio_smartcast_2.state == 'on' %}
           script.tv_timer
         {% else %}
           script.whitenoise
