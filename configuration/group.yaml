@@ -68,10 +68,10 @@ settings:
     - camera.upstairs_nursery
 tristans_phone:
   - device_tracker.tristans_phone_wifi
-#  - device_tracker.google_maps_tcaulfld_gmail_com
+  - device_tracker.google_maps_tcaulfld_gmail_com
 crystals_phone:
   - device_tracker.crystals_phone_wifi
-#  - device_tracker.google_maps_102616309312724957780
+  - device_tracker.google_maps_102616309312724957780
 family:
   - sensor.away_toggle
   - group.tristans_phone
