@@ -24,5 +24,7 @@
 <li>GE Z-wave wall receptacles</li>
 <li>Wired magnetic alarm sensors <i>via RPi GPIO</i></li>
 <li>HTML5 push notifications</li> 
+<li>Plex and Tautulli status information</li>
+<li>Octoprint status information</li>
 
 </ul>
