@@ -1,9 +1,4 @@
-#- platform: wunderground
-#  api_key: 1e3e716e93f82a3c
-#  monitored_conditions:
-#    - alerts
-#    - weather_1d
-#    - precip_1d
+
 - platform: time_date
   display_options:
     - 'time'

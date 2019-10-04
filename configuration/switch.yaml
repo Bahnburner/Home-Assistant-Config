@@ -16,11 +16,5 @@
       turn_off:
         - service: automation.turn_on
           entity_id: group.disable_all_automations
-#- platform: mqtt
-#  name: 'Christmas Lights'
-#  state_topic: "smartthings/Christmas Lights/switch"
-#  command_topic: "smartthings/Christmas Lights/switch"
-#  payload_on: "on"
-#  payload_off: "off"
-#  retain: true
+
 
