@@ -2,5 +2,3 @@
   api_key: !secret darksky
   mode: daily
   name: 'Forecast'
-#- platform: yweather
-#  woeid: !secret woeid
