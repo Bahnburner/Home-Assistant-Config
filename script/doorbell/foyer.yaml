@@ -1,8 +1,0 @@
-foyer_lights_off:
-  sequence:
-    - delay:
-        minutes: 2
-    - service: light.turn_off
-      entity_id: light.foyer
-      data:
-        transition: 30
