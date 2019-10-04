@@ -20,7 +20,7 @@
 <li>Kwikset Z-wave deadbolts</li>
 <li>Chamberlain MyQ Garage door opener</li>
 <li>Darksky weather forecasting</li>
-<li>Smartthings Hub <i>via MQTT</i></li>
+<li>Smartthings Hub</li>
 <li>GE Z-wave wall receptacles</li>
 <li>Wired magnetic alarm sensors <i>via RPi GPIO</i></li>
 <li>HTML5 push notifications</li> 
