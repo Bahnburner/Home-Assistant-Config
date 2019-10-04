@@ -80,10 +80,6 @@ tristal:
   - group.tristans_phone
   - group.crystals_phone
   - sensor.away_toggle
-away_image:
-  - device_tracker.tristans_phone_wifi
-  - device_tracker.crystals_phone_wifi
-  - sensor.away_toggle
 christmas:
   switch.christmas_lights
 door_locks:
@@ -145,13 +141,6 @@ exterior:
   - light.front_door
   - light.front_floods
   - light.rear_floods
-chromecasts:
-  - media_player.livingroom_tv
-  - media_player.guestroom_tv
-weather:
-  - sensor.current_temp
-  - sensor.high_temp
-  - sensor.low_temp
 override:
   control: hidden
   entities:
@@ -176,9 +165,6 @@ simulate_presence:
   - automation.simulate_presence_5
   - automation.simulate_presence_6
   - automation.simulate_presence_7
-shell_commands:
-  - shell_command.lock_doors
-  - shell_command.unlock_doors
 alarm_zones:
   - sensor.front_door
   - sensor.front_windows
@@ -190,27 +176,6 @@ windows:
   - sensor.front_windows
   - sensor.back_windows
   - sensor.bedroom_windows
-devices:
-  - sensor.huebridge
-  - sensor.lightifybridge
-  - sensor.harmonyhub
-  - sensor.smartthingshub
-  - sensor.myq
-  - sensor.macmini
-  - sensor.rasplex
-  - sensor.directv_genie
-  - sensor.nesthello
-cast_devices:
-  - sensor.google_home_livingroom
-  - sensor.google_home_mini_kitchen
-  - sensor.google_home_mini_bedroom
-  - sensor.google_home_mini_bathroom
-  - sensor.chromecast_man_cave
-  - sensor.chromecast_audio_dining_room
-  - sensor.chromecast_audio_garage
-  - sensor.viziocrave360
-  - sensor.vizio_m70e3
-  - sensor.lg_sj9
 disable_all_automations:
   - automation.activate_siren
   - automation.alarm_triggered
