@@ -606,9 +606,11 @@ views:
           - type: horizontal-stack
             cards:
               - type: custom:mini-graph-card
+                font_size: 50
                 entities:
                  - sensor.rt_ac88u_kbyte_sec_received
               - type: custom:mini-graph-card
+                font_size: 50
                 entities:
                  - sensor.rt_ac88u_kbyte_sec_sent              
       - type: vertical-stack
