@@ -69,15 +69,15 @@ views:
                   volume: true
                   controls: true            
               - type: custom:mini-media-player
-                  entity: media_player.rasplex
-                  icon: mdi:plex
-                  group: true
-                  artwork: none
-                  hide:
-                    volume: true
-                    power: true
-                    progress: true
-                    controls: true
+                entity: media_player.rasplex
+                icon: mdi:plex
+                group: true
+                artwork: none
+                hide:
+                  volume: true
+                  power: true
+                  progress: true
+                  controls: true
                   name: Plex
               - type: custom:mini-media-player
                 entity: media_player.livingroom_tv
@@ -102,41 +102,41 @@ views:
                   icon: true
                   volume: false
                   progress: true                  
-              state_filter:
-                - "playing"
-                - "paused"
-                - "on"
-              show_empty: false
-            - type: entity-filter
-              entities:
-                - type: custom:mini-media-player
-                  entity: media_player.livingroom_speaker
-                  icon: mdi:cast-connected
-                  group: true
-                  artwork: none
-              state_filter:
-                - "playing"
-              show_empty: false
-            - type: entity-filter
-              entities:
-                - type: custom:mini-media-player
-                  entity: media_player.livingroom_assistant
-                  icon: mdi:google-home
-                  group: true
-                  artwork: none
-              state_filter:
-                - "playing"
-              show_empty: false
-            - type: entity-filter
-              entities:
-                - type: custom:mini-media-player
-                  entity: media_player.party_mode
-                  icon: mdi:cast-connected
-                  group: true
-                  artwork: none
-              state_filter:
-                - "playing"
-              show_empty: false
+            state_filter:
+              - "playing"
+              - "paused"
+              - "on"
+            show_empty: false
+          - type: entity-filter
+            entities:
+              - type: custom:mini-media-player
+                entity: media_player.livingroom_speaker
+                icon: mdi:cast-connected
+                group: true
+                artwork: none
+            state_filter:
+              - "playing"
+            show_empty: false
+          - type: entity-filter
+            entities:
+              - type: custom:mini-media-player
+                entity: media_player.livingroom_assistant
+                icon: mdi:google-home
+                group: true
+                artwork: none
+            state_filter:
+              - "playing"
+            show_empty: false
+          - type: entity-filter
+            entities:
+              - type: custom:mini-media-player
+                entity: media_player.party_mode
+                icon: mdi:cast-connected
+                group: true
+                artwork: none
+            state_filter:
+              - "playing"
+            show_empty: false
           - type: entities
             entities:
               - entity: input_select.harmony
