@@ -57,18 +57,7 @@ views:
             tap_action: 
               action: toggle
           - type: entity-filter
-            entities:
-              - type: custom:mini-media-player
-                entity: media_player.livingroom_directv
-                icon: mdi:satellite-variant
-                group: true
-                name: DirecTV
-                artwork: none
-                hide:
-                  power: true
-                  volume: true
-                  controls: true
-                  progress: true            
+            entities:        
               - type: custom:mini-media-player
                 entity: media_player.rasplex
                 icon: mdi:plex
@@ -89,6 +78,17 @@ views:
                   volume: true
                   power: true
                   controls: true
+              - type: custom:mini-media-player
+                entity: media_player.livingroom_directv
+                icon: mdi:satellite-variant
+                group: true
+                name: DirecTV
+                artwork: none
+                hide:
+                  power: true
+                  volume: true
+                  controls: true
+                  progress: true                      
               - type: custom:mini-media-player
                 entity: media_player.vizio_smartcast
                 group: true
