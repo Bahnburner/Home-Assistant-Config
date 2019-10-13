@@ -62,7 +62,8 @@ views:
                 state: "Watch DirecTV"
             card:
               type: entities
-              entity: light.living_room
+              entities:
+                - light.living_room
           - type: entity-filter
             entities:        
               - type: custom:mini-media-player
