@@ -61,9 +61,8 @@ views:
               - entity: sensor.current_activity
                 state: "Watch DirecTV"
             card:
-              type: entities
-              entities:
-                - light.table_lamp
+              type: media-control
+              entity: media_player.livingroom_directv
           - type: entity-filter
             entities:        
               - type: custom:mini-media-player
