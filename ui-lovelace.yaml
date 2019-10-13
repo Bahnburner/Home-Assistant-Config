@@ -224,6 +224,9 @@ views:
             show_empty: false           
           - type: entities
             entities:
+              - entity: input_select.harmony
+                icon: mdi:television
+              - sensor.current_activity_bedroom
               - entity: light.master_bedroom
                 name: Lights
                 type: custom:slider-entity-row
