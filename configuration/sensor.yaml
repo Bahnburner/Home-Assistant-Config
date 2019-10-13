@@ -39,11 +39,11 @@
       entity_id: media_player.bedroom_tv
       value_template: >
         {% if states.media_player.bedroom_tv.attributes.source == "HDMI-2" %}
-          'DirecTV'
+          'Watch DirecTV'
         {% elif states.media_player.bedroom_tv.attributes.source == "HDMI-3" %}
-          'Nintendo Switch'
+          'Play Nintendo Switch'
         {% elif states.media_player.bedroom_tv.attributes.source == "CAST" %}
-          'Smartcast'
+          'Watch Smartcast'
         {% elif states.media_player.bedroom_tv.attributes.source == "Unknown" %}
           'Unknown'
         {% else %}
