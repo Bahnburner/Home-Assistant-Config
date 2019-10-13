@@ -42,7 +42,7 @@
           'Watch DirecTV'
         {% elif states.media_player.bedroom_tv.attributes.source == "HDMI-3" %}
           'Play Nintendo Switch'
-        {% elif states.media_player.bedroom_tv.attributes.source == "CAST" %}
+        {% elif states.media_player.bedroom_tv.attributes.source == "cast" %}
           'Watch Smartcast'
         {% elif states.media_player.bedroom_tv.attributes.source == "Unknown" %}
           'Unknown'
