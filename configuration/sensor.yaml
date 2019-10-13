@@ -34,7 +34,7 @@
         {% else %}
           {{states.remote.livingroom.attributes.current_activity}}
         {% endif %}
-    current_activity:
+    current_activity_bedroom_tv:
       friendly_name: 'Current Activity'
       entity_id: media_player.bedroom_tv
       value_template: >
