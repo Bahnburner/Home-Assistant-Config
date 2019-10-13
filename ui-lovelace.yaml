@@ -13,6 +13,8 @@ resources:
     type: js        
   - url: /local/resources/cards/mini-media-player-bundle.js?v=1.3.1
     type: module
+  - url: /local/resources/cards/mini-graph-card-bundle.js?v=0.7.0
+    type: module    
 
 title: Hidden Ridge
 views:
@@ -601,6 +603,14 @@ views:
                 entity: sensor.tautulli_transcodes
                 min: 0
                 max: 10
+          - type: horizontal-stack
+            cards:
+              - type: custom:mini-graph-card
+                entities:
+                 - sensor.rt_ac88u_kbyte_sec_received
+              - type: custom:mini-graph-card
+                entities:
+                 - sensor.rt_ac88u_kbyte_sec_sent              
       - type: vertical-stack
         cards:
           - type: history-graph
