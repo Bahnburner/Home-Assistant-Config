@@ -56,61 +56,63 @@ views:
             name: Livingroom
             tap_action: 
               action: toggle   
-          - type: conditional
-            conditions:
-              - entity: sensor.current_activity
-                state: "Watch DirecTV"
-            card:
-              type: custom:mini-media-player
-              entity: media_player.livingroom_directv
-              icon: mdi:satellite-variant
-              name: DirecTV
-              artwork: none
-              hide:
-                power: true
-                volume: true
-                controls: true
-          - type: entity-filter
-            entities:        
-              - type: custom:mini-media-player
-                entity: media_player.rasplex
-                icon: mdi:plex
-                group: true
-                artwork: none
-                hide:
-                  volume: true
-                  power: true
-                  progress: true
-                  controls: true
-                name: Plex
-              - type: custom:mini-media-player
-                entity: media_player.livingroom_tv
-                group: true
-                artwork: none
-                hide:
-                  icon: true
-                  volume: true
-                  power: true
-                  controls: true
-                  progress: true
-              - type: custom:mini-media-player
-                entity: media_player.vizio_smartcast
-                group: true
-                name: Volume
-                hide:
-                  name: false
-                  source: true
-                  controls: true
-                  info: true
-                  power: true
-                  icon: true
-                  volume: false
-                  progress: true                  
-            state_filter:
-              - "playing"
-              - "paused"
-              - "on"
-            show_empty: false
+          - type: vertical-stack
+            cards:              
+              - type: conditional
+                conditions:
+                  - entity: sensor.current_activity
+                    state: "Watch DirecTV"
+                card:
+                  type: custom:mini-media-player
+                  entity: media_player.livingroom_directv
+                  icon: mdi:satellite-variant
+                  name: DirecTV
+                  artwork: none
+                  hide:
+                    power: true
+                    volume: true
+                    controls: true
+              - type: entity-filter
+                entities:        
+                  - type: custom:mini-media-player
+                    entity: media_player.rasplex
+                    icon: mdi:plex
+                    group: true
+                    artwork: none
+                    hide:
+                      volume: true
+                      power: true
+                      progress: true
+                      controls: true
+                    name: Plex
+                  - type: custom:mini-media-player
+                    entity: media_player.livingroom_tv
+                    group: true
+                    artwork: none
+                    hide:
+                      icon: true
+                      volume: true
+                      power: true
+                      controls: true
+                      progress: true
+                  - type: custom:mini-media-player
+                    entity: media_player.vizio_smartcast
+                    group: true
+                    name: Volume
+                    hide:
+                      name: false
+                      source: true
+                      controls: true
+                      info: true
+                      power: true
+                      icon: true
+                      volume: false
+                      progress: true                  
+                state_filter:
+                  - "playing"
+                  - "paused"
+                  - "on"
+                show_empty: false
           - type: entity-filter
             entities:
               - type: custom:mini-media-player
