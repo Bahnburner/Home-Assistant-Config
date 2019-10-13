@@ -38,13 +38,13 @@
       friendly_name: 'Current Activity'
       entity_id: media_player.bedroom_tv
       value_template: >
-        {% if states.media_player.bedroom_tv.attributes.source == "HDMI-2" %}
+        {% if states.media_player.vizio_smartcast_2.attributes.source == "HDMI-2" %}
           Watch DirecTV
-        {% elif states.media_player.bedroom_tv.attributes.source == "HDMI-3" %}
+        {% elif states.media_player.vizio_smartcast_2.attributes.source == "HDMI-3" %}
           Play Nintendo Switch
-        {% elif states.media_player.bedroom_tv.attributes.source == "cast" %}
+        {% elif states.media_player.vizio_smartcast_2.attributes.source == "cast" %}
           Watch Smartcast
-        {% elif states.media_player.bedroom_tv.attributes.source == "Unknown" %}
+        {% elif states.media_player.vizio_smartcast_2.attributes.source == "Unknown" %}
           Unknown
         {% else %}
           Power Off
