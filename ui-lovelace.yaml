@@ -142,7 +142,8 @@ views:
             entities:
               - entity: input_select.harmony
                 icon: mdi:television
-              - sensor.current_activity
+              - entity: sensor.current_activity
+                name: Livingroom TV
               - entity: light.living_room
                 name: Lights
                 type: custom:slider-entity-row
