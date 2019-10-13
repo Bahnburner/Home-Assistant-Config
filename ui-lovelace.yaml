@@ -65,6 +65,7 @@ views:
                 group: true
                 artwork: none
                 hide:
+                  progress: true
                   power: true
                   volume: true
                   controls: true            
