@@ -56,11 +56,8 @@ views:
             name: Livingroom
             tap_action: 
               action: toggle
-          - type: conditional
-            conditions:
-              - entity: sensor.current_activity
-                state: "Watch DirecTV"
-            card:
+          - type: entity-filter
+            entities:
               - type: custom:mini-media-player
                 entity: media_player.livingroom_directv
                 icon: mdi:satellite-variant
@@ -71,9 +68,7 @@ views:
                   power: true
                   volume: true
                   controls: true
-                  progress: true
-          - type: entity-filter
-            entities:
+                  progress: true            
               - type: custom:mini-media-player
                 entity: media_player.rasplex
                 icon: mdi:plex
@@ -169,11 +164,8 @@ views:
             name: Master Bedroom
             tap_action: 
               action: toggle
-          - type: conditional
-            conditions:
-              - entity: sensor.current_activity_bedroom_tv
-                state: "Watch DirecTV"
-            card:
+          - type: entity-filter
+            entities:
               - type: custom:mini-media-player
                 entity: media_player.bedroom_directv
                 icon: mdi:satellite-variant
@@ -184,9 +176,7 @@ views:
                   power: true
                   volume: true
                   progress: true
-                  controls: true
-          - type: entity-filter
-            entities:
+                  controls: true            
               - type: custom:mini-media-player
                 entity: media_player.bedroom_tv
                 group: true
@@ -238,7 +228,7 @@ views:
             entities:
               - entity: input_select.harmony
                 icon: mdi:television
-              - sensor.current_activity_bedroom
+              - sensor.current_activity_bedroom_tv
               - entity: light.master_bedroom
                 name: Lights
                 type: custom:slider-entity-row
