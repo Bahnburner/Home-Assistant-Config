@@ -56,6 +56,22 @@ views:
             name: Livingroom
             tap_action: 
               action: toggle
+          - type: conditional
+            conditions:
+              - entity: sensor.current_activity
+                state: "Watch DirecTV"
+            card:
+              - type: custom:mini-media-player
+                entity: media_player.livingroom_directv
+                icon: mdi:satellite-variant
+                group: true
+                name: DirecTV
+                artwork: none
+                hide:
+                  power: true
+                  volume: true
+                  controls: true
+                  progress: true
           - type: entity-filter
             entities:        
               - type: custom:mini-media-player
