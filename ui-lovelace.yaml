@@ -57,13 +57,13 @@ views:
             tap_action: 
               action: toggle
           - type: conditional
-            condition:
+            conditions:
               - entity: sensor.current_activity
                 state: "Watch DirecTV"
             card:
               type: entities
               entities:
-                - light.living_room
+                - light.table_lamp
           - type: entity-filter
             entities:        
               - type: custom:mini-media-player
