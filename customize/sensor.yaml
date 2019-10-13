@@ -2,6 +2,10 @@ sensor.current_activity:
   hidden: false
   entity_picture: /local/resources/images/devices/harmony.png
   friendly_name: "Current Activity"
+sensor.current_activity_bedroom_tv:
+  hidden: false
+  entity_picture: /local/resources/images/devices/smartcast.png
+  friendly_name: "Current Activity"
 sensor.protect_down:
   friendly_name: "Protect"
   entity_picture: /local/resources/images/devices/nestprotect.png
