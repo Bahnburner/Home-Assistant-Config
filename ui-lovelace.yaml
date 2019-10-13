@@ -67,6 +67,7 @@ views:
                   entity: media_player.livingroom_directv
                   icon: mdi:satellite-variant
                   name: DirecTV
+                  group: true
                   artwork: none
                   hide:
                     power: true
