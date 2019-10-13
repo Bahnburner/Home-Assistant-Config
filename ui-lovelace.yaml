@@ -56,6 +56,22 @@ views:
             name: Livingroom
             tap_action: 
               action: toggle
+          - type: conditional
+            conditions:
+              - entity: sensor.current_activity
+                state: "Watch DirecTV"
+            card:
+              - type: custom:mini-media-player
+                entity: media_player.livingroom_directv
+                icon: mdi:satellite-variant
+                group: true
+                name: DirecTV
+                artwork: none
+                hide:
+                  power: true
+                  volume: true
+                  controls: true
+                  progress: true
           - type: entity-filter
             entities:
               - type: custom:mini-media-player
@@ -70,17 +86,6 @@ views:
                   controls: true
                 name: Plex
               - type: custom:mini-media-player
-                entity: media_player.livingroom_directv
-                icon: mdi:satellite-variant
-                group: true
-                name: DirecTV
-                artwork: none
-                hide:
-                  power: true
-                  volume: true
-                  controls: true
-                  progress: true
-              - type: custom:mini-media-player
                 entity: media_player.livingroom_tv
                 group: true
                 artwork: none
@@ -92,8 +97,9 @@ views:
               - type: custom:mini-media-player
                 entity: media_player.vizio_smartcast
                 group: true
+                name: Volume
                 hide:
-                  name: true
+                  name: false
                   source: true
                   controls: true
                   info: true
@@ -163,8 +169,11 @@ views:
             name: Master Bedroom
             tap_action: 
               action: toggle
-          - type: entity-filter
-            entities:
+          - type: conditional
+            conditions:
+              - entity: sensor.current_activity_bedroom_tv
+                state: "Watch DirecTV"
+            card:
               - type: custom:mini-media-player
                 entity: media_player.bedroom_directv
                 icon: mdi:satellite-variant
@@ -176,6 +185,8 @@ views:
                   volume: true
                   progress: true
                   controls: true
+          - type: entity-filter
+            entities:
               - type: custom:mini-media-player
                 entity: media_player.bedroom_tv
                 group: true
@@ -189,12 +200,13 @@ views:
               - type: custom:mini-media-player
                 entity: media_player.vizio_smartcast_2
                 group: true
+                name: Volume
                 hide:
                   controls: true
                   info: true
                   icon: true
                   power: true
-                  name: true
+                  name: false
                   source: true
                   progress: true
               - type: custom:mini-media-player
