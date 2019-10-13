@@ -29,11 +29,26 @@
       friendly_name: 'Current Activity'
       entity_id: remote.livingroom
       value_template: >
-        {% if states.remote.livingroom.attributes.current_activity == null%}
+        {% if states.remote.livingroom.attributes.current_activity == null or states.remote.livingroom.attributes.current_activity == "Unknown" %}
           'Unknown'
         {% else %}
           {{states.remote.livingroom.attributes.current_activity}}
         {% endif %}
+    current_activity:
+      friendly_name: 'Current Activity'
+      entity_id: media_player.bedroom_tv
+      value_template: >
+        {% if states.media_player.bedroom_tv.attributes.source == "HDMI-2" %}
+          'Watch DirecTV'
+        {% elif states.media_player.bedroom_tv.attributes.source == "HDMI-3" %}
+          'Play Nintendo Switch'
+        {% elif states.media_player.bedroom_tv.attributes.source == "CAST" %}
+          'Watch Smartcast'
+        {% elif states.media_player.bedroom_tv.attributes.source == "Unknown" %}
+          'Unknown'
+        {% else %}
+          'Power Off'
+        {% endif %}        
     brightness_pantry:
       entity_id: light.pantry
       value_template: >
