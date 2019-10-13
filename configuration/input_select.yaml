@@ -9,3 +9,12 @@ harmony:
     - Play Switch
     - Power Off
   icon: mdi:monitor
+bedroom_tv:
+  name: Bedroom TV
+  options:
+    - Select Input
+    - Watch DirecTV
+    - Watch Smartcast
+    - Play Switch
+    - Power Off
+  icon: mdi:monitor
