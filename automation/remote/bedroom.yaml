@@ -1,4 +1,4 @@
-- alias: Bedoom Remote
+- alias: Bedroom Remote
   hide_entity: True
   trigger:
     platform: state
