@@ -36,11 +36,10 @@
         {% endif %}
     current_activity_bedroom_tv:
       friendly_name: 'Current Activity'
-      entity_id: media_player.bedroom_tv
       value_template: >
-        {% if states.media_player.vizio_smartcast_2.attributes.source == "HDMI-2" %}
+        {% if states.media_player.vizio_smartcast_2.attributes.source == "hdmi2" %}
           Watch DirecTV
-        {% elif states.media_player.vizio_smartcast_2.attributes.source == "HDMI-3" %}
+        {% elif states.media_player.vizio_smartcast_2.attributes.source == "hdmi3" %}
           Play Nintendo Switch
         {% elif states.media_player.vizio_smartcast_2.attributes.source == "cast" %}
           Watch Smartcast
