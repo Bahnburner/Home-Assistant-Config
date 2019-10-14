@@ -6,13 +6,13 @@
     from: 'Select Input'
   action:
     - service_template: >
-          {% if is_state("input_select.bedroom_tv", "Watch DirecTV") %}
+          {% if states.input_select.bedroom_tv.state == "Watch DirecTV" %}
             script.bedroom_tv_directv
-          {% elif is_state("input_select.bedroom_tv", "Watch Smartcast") %}
+          {% elif states.input_select.bedroom_tv.state == "Watch Smartcast" %}
             script.bedroom_tv_smartcast
-          {$ elif is_state("input_select.bedroom_tv", "Play Switch") %}
+          {$ elif states.input_select.bedroom_tv.state == "Play Switch" %}
             script.bedroom_tv_switch
-          {$ elif is_state("input_select.bedroom_tv", "Power Off") %}
+          {$ elif states.input_select.bedroom_tv.state == "Power Off" %}
             script.bedroom_tv_poweroff
           {% else %}
           {% endif %}
