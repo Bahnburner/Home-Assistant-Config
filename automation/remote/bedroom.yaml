@@ -17,6 +17,6 @@
           {% else %}
           {% endif %}
     - service: input_select.select_option
-      entity_id: input_select.harmony
+      entity_id: input_select.bedroom_tv
       data_template:
         option: "Select Input"
