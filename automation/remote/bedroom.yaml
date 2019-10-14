@@ -10,9 +10,9 @@
             script.bedroom_tv_directv
           {% elif states.input_select.bedroom_tv.state == "Watch Smartcast" %}
             script.bedroom_tv_smartcast
-          {$ elif states.input_select.bedroom_tv.state == "Play Switch" %}
+          {% elif states.input_select.bedroom_tv.state == "Play Switch" %}
             script.bedroom_tv_switch
-          {$ elif states.input_select.bedroom_tv.state == "Power Off" %}
+          {% elif states.input_select.bedroom_tv.state == "Power Off" %}
             script.bedroom_tv_poweroff
           {% else %}
           {% endif %}
