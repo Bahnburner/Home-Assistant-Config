@@ -22,7 +22,7 @@ bedroom_tv_switch:
   sequence: 
     - service: media_player.turn_on
       entity_id: media_player.vizio_smartcast_2 
-      service: media_player.select_source
+    - service: media_player.select_source
       entity_id: media_player.vizio_smartcast_2
       data:
         source: HDMI-3
@@ -31,5 +31,5 @@ bedroom_tv_poweroff:
   sequence:
     - service: media_player.turn_on
       entity_id: media_player.vizio_smartcast_2  
-      service: media_player.turn_off
+    - service: media_player.turn_off
       entity_id: media_player.vizio_smartcast_2
