@@ -186,7 +186,7 @@ views:
                 artwork: none
                 icon: mdi:cast-connected
                 hide:
-                  volume: false
+                  volume: true
                   power: true
                   controls: true
                   progress: true
