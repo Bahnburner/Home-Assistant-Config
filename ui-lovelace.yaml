@@ -15,6 +15,10 @@ resources:
     type: module
   - url: /local/resources/cards/mini-graph-card-bundle.js?v=0.7.0
     type: module    
+  - url: /local/resources/cards/card-tools.js
+    type: js
+  - url: /local/resources/cards/secondaryinfo-entity-row.js
+    type: module
 
 title: Hidden Ridge
 views:
@@ -48,7 +52,8 @@ views:
             entities:
               - lock.front_door
               - lock.back_door
-              - cover.garage_door_opener
+              - entity: cover.garage_door_opener
+                secondary_info: "Current State: [[ cover.garage_door_opener.state ]]"
 #### LIVINGROOM STACK
       - type: vertical-stack
         cards:
