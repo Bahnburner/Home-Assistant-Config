@@ -35,7 +35,7 @@ timer_off:
         {% else %}
           script.cabinet_lights_weekday
         {% endif %}
-    - service: media_player.media_stop
+    - service: media_player.turn_off
       entity_id: media_player.party_mode
     - service: media_player.volume_mute
       entity_id: media_player.vizio_smartcast
