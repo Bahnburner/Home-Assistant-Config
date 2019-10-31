@@ -659,7 +659,7 @@ views:
               - entity: sensor.load_5m
           - type: custom:mini-graph-card
             name: Fiber Connection
-            hours_to_show: 80
+            hours_to_show: 24
             points_per_hour: 1
             aggregate_func: max
             icon: mdi:wan
