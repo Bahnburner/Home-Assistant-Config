@@ -578,10 +578,6 @@ views:
                 name: 'Storage'
                 min: 0
                 max: 100
-          - type: history-graph
-            title: Virtual Machine
-            entities: 
-              - entity: sensor.load_5m
       - type: vertical-stack
         cards:                
           - type: custom:mini-graph-card
@@ -605,16 +601,6 @@ views:
                 entity: sensor.tautulli_transcodes
                 min: 0
                 max: 10
-          - type: custom:mini-graph-card
-            name: Fiber Connection
-            hours_to_show: 80
-            points_per_hour: 1
-            aggregate_func: avg
-            entities:
-              - entity: sensor.speedtest_down
-                name: Downstream Bandwidth
-              - entity: sensor.speedtest_up                
-                name: Upstream Bandwidth
 #          - type: horizontal-stack
 #            cards:
 #              - type: custom:mini-graph-card
@@ -666,35 +652,49 @@ views:
       - type: vertical-stack
         cards:
           - type: history-graph
-            title: MP Select Mini
+            title: Virtual Machine
+            entities: 
+              - entity: sensor.load_5m
+          - type: custom:mini-graph-card
+            name: Fiber Connection
+            hours_to_show: 80
+            points_per_hour: 1
+            aggregate_func: avg
             entities:
-              - entity: sensor.mp_select_mini_actual_bed_temp
-                name: 'Actual Bed Temp'
-              - entity: sensor.mp_select_mini_actual_tool0_temp
-                name: 'Actual Hotend Temp'
-              - entity: sensor.mp_select_mini_target_bed_temp
-                name: 'Target Bed Temp'
-              - entity: sensor.mp_select_mini_target_tool0_temp
-                name: 'Target Hotend Temp'            
-          - type: conditional
-            conditions:
-              - entity: binary_sensor.mp_select_mini_printing
-                state: "on"
-            card:
-              type: custom:useful-markdown-card
-              title: 'Time Remaining:'
-              content: >              
-                {{ states.sensor.mp_select_mini_print_time_remaining.state }}
-          - type: conditional
-            conditions:
-              - entity: binary_sensor.mp_select_mini_printing
-                state: "on"
-            card:
-              type: gauge
-              name: 'Job Progress'
-              entity: sensor.mp_select_mini_print_job_percentage
-              min: 0
-              max: 100                
+              - entity: sensor.speedtest_down
+                name: Downstream Bandwidth
+              - entity: sensor.speedtest_up                
+                name: Upstream Bandwidth
+#          - type: history-graph
+#            title: MP Select Mini
+#            entities:
+#              - entity: sensor.mp_select_mini_actual_bed_temp
+#                name: 'Actual Bed Temp'
+#              - entity: sensor.mp_select_mini_actual_tool0_temp
+#                name: 'Actual Hotend Temp'
+#              - entity: sensor.mp_select_mini_target_bed_temp
+#                name: 'Target Bed Temp'
+#              - entity: sensor.mp_select_mini_target_tool0_temp
+#                name: 'Target Hotend Temp'            
+#          - type: conditional
+#            conditions:
+#              - entity: binary_sensor.mp_select_mini_printing
+#                state: "on"
+#            card:
+#              type: custom:useful-markdown-card
+#              title: 'Time Remaining:'
+#              content: >              
+#                {{ states.sensor.mp_select_mini_print_time_remaining.state }}
+#          - type: conditional
+#            conditions:
+#              - entity: binary_sensor.mp_select_mini_printing
+#                state: "on"
+#            card:
+#              type: gauge
+#              name: 'Job Progress'
+#              entity: sensor.mp_select_mini_print_job_percentage
+#              min: 0
+#              max: 100                
   - icon: mdi:settings
     title: Settings
     id: settings
