@@ -547,8 +547,8 @@ views:
     cards:
       - type: vertical-stack
         cards:
-          - type: history-graph
-            title: Titan
+          - type: custom:mini-graph-card
+            name: Titan
             entities:
               - sensor.cpu_usage
               - sensor.memory_usage
@@ -584,8 +584,8 @@ views:
               - entity: sensor.load_5m
       - type: vertical-stack
         cards:                
-          - type: history-graph
-            title: Plex Media Server
+          - type: custom:mini-graph-card
+            name: Plex Media Server
             entities:
               - entity: sensor.tautulli_streams
                 name: 'Streams'
@@ -625,8 +625,8 @@ views:
 #                 - sensor.rt_ac88u_kbyte_sec_sent              
       - type: vertical-stack
         cards:
-          - type: history-graph
-            title: Ender 3 Pro
+          - type: custom:mini-graph-card
+            name: Ender 3 Pro
             entities:
               - entity: sensor.ender_3_pro_actual_bed_temp
                 name: 'Actual Bed Temp'
