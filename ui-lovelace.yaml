@@ -603,9 +603,11 @@ views:
                 entity: sensor.tautulli_transcodes
                 min: 0
                 max: 10
-          - type: history-graph
-            title: Fiber Connection
+          - type: custom:mini-graph-card
+            name: Fiber Connection
             hours_to_show: 80
+            points_per_hour: 1
+            aggregate_func: avg
             entities:
               - entity: sensor.speedtest_down
                 name: Downstream Bandwidth
