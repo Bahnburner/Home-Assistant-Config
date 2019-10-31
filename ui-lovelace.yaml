@@ -661,7 +661,7 @@ views:
             name: Fiber Connection
             hours_to_show: 24
             points_per_hour: 1
-            aggregate_func: max
+            aggregate_func: avg
             icon: mdi:wan
             
             entities:
