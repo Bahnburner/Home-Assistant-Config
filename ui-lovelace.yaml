@@ -651,8 +651,10 @@ views:
               max: 100
       - type: vertical-stack
         cards:
-          - type: history-graph
-            title: Virtual Machine
+          - type: custom:mini-graph-card
+            name: Virtual Machine
+            hours_to_show: 24
+            points_per_hour: 60
             entities: 
               - entity: sensor.load_5m
           - type: custom:mini-graph-card
