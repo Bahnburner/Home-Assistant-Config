@@ -605,6 +605,7 @@ views:
                 max: 10
           - type: history-graph
             title: Fiber Connection
+            hours_to_show: 80
             entities:
               - entity: sensor.speedtest_down
                 name: Downstream Bandwidth
