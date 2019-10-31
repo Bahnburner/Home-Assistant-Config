@@ -662,6 +662,7 @@ views:
             hours_to_show: 80
             points_per_hour: 1
             aggregate_func: avg
+            icon: mdi:wan
             entities:
               - entity: sensor.speedtest_down
                 name: Downstream Bandwidth
