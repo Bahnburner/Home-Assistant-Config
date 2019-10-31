@@ -606,7 +606,7 @@ views:
           - type: history-graph
             title: Fiber Connection
             entities:
-             - entity: sensor.speedtest_down
+              - entity: sensor.speedtest_down
                 name: Downstream Bandwidth
               - entity: sensor.speedtest_up                
                 name: Upstream Bandwidth
