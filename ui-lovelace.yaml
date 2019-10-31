@@ -586,6 +586,8 @@ views:
         cards:                
           - type: custom:mini-graph-card
             name: Plex Media Server
+            points_per_hour: 60
+            hours_to_show: 24
             entities:
               - entity: sensor.tautulli_streams
                 name: 'Streams'
