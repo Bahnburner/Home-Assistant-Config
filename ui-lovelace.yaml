@@ -579,7 +579,7 @@ views:
                 min: 0
                 max: 100
           - type: history-graph
-            title: Virtual Machine Load
+            title: Virtual Machine
             entities: 
               - entity: sensor.load_5m
       - type: vertical-stack
