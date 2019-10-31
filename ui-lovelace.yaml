@@ -661,7 +661,7 @@ views:
             name: Fiber Connection
             hours_to_show: 80
             points_per_hour: 1
-            aggregate_func: avg
+            aggregate_func: max
             icon: mdi:wan
             entities:
               - entity: sensor.speedtest_down
