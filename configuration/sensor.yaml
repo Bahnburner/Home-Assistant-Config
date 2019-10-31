@@ -220,11 +220,11 @@
    - type: load_5m
 - platform: file
   name: Speedtest Down
-  file_path: speedtest_sensor.json
+  file_path: /config/speedtest_sensor.json
   value_template: '{{value_json.download.bandwidth / 131072 }}'
   unit_of_measurement: "mbps"
 - platform: file
   name: Speedtest Up
-  file_path: speedtest_sensor.json
+  file_path: /config/speedtest_sensor.json
   value_template: '{{value_json.upload.bandwidth / 131072 }}'
   unit_of_measurement: "mbps"
