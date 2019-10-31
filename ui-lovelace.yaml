@@ -604,9 +604,9 @@ views:
                 min: 0
                 max: 10
           - type: history-graph
-            title: Titan
+            title: Fiber Connection
             entities:
-              - entity: sensor.speedtest_down
+             - entity: sensor.speedtest_down
                 name: Downstream Bandwidth
               - entity: sensor.speedtest_up                
                 name: Upstream Bandwidth
