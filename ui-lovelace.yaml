@@ -663,8 +663,7 @@ views:
             points_per_hour: 1
             aggregate_func: max
             icon: mdi:wan
-            lower_bound: 250
-            upper_bound: 1000
+            
             entities:
               - entity: sensor.speedtest_up                
                 name: Upstream Bandwidth            
