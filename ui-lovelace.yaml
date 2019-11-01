@@ -585,6 +585,7 @@ views:
             points_per_hour: 60
             hours_to_show: 24
             decimals: 0
+            aggregate_func: max
             entities:
               - entity: sensor.tautulli_streams
                 name: 'Streams'
