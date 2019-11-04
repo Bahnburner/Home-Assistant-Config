@@ -617,6 +617,8 @@ views:
         cards:
           - type: custom:mini-graph-card
             name: Ender 3 Pro
+            hours_to_show: 24
+            points_per_hour: 120
             entities:
               - entity: sensor.ender_3_pro_actual_bed_temp
                 name: 'Actual Bed Temp'
