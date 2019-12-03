@@ -53,7 +53,7 @@
 #      entity_id: sensor.current_activity
 #      to: 'Watch Plex'
     - platform: state
-      entity_id: sensor.rasplex_status
+      entity_id: media_player.plex_mibox_s
       to: 'playing'
     - platform: state
       entity_id: sensor.current_activity
@@ -123,10 +123,10 @@
       entity_id: sensor.current_activity
       from: 'Watch Plex'
     - platform: state
-      entity_id: sensor.rasplex_status
+      entity_id: media_player.plex_mibox_s
       to: 'paused'    
     - platform: state
-      entity_id: sensor.rasplex_status
+      entity_id: media_player.plex_mibox_s
       to: 'stopped'
     - platform: state
       entity_id: sensor.current_activity
@@ -149,6 +149,9 @@
         - condition: state
           entity_id: sensor.current_activity
           state: 'PowerOff'
+        - condition: state
+          entity_id: sensor.current_activity
+          state: 'Watch Android TV'
     - condition: state
       entity_id: light.living_room
       state: 'on'
