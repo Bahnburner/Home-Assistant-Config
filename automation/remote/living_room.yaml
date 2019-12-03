@@ -19,6 +19,8 @@
             28101990
           {$ elif is_state("input_select.harmony", "Play Switch") %}
             39577141
+          {% elif is_state("input_select.harmony", "Watch Android TV") %}
+            42159503
           {% else %}
           {% endif %}
     - service: input_select.select_option
