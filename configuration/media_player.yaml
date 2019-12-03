@@ -19,3 +19,17 @@
 - platform: androidtv
   name: Mi Box S
   host: 10.0.0.55
+  apps: {'com.google.android.youtube.tvunplugged': 'Youtube TV'}
+  state_detection_rules: 
+    'com.plexapp.android':
+      - 'media_session_state'
+    'com.turner.cnvideoapp':
+      - 'media_session_state'
+    'com.google.android.youtube.tvunplugged':
+      - 'media_session_state'
+    'com.hulu.livingroomplus':
+      - 'media_session_state'
+    'com.google.android.tvlauncher':
+      - 'standby'
+    
+    
