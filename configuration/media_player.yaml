@@ -16,4 +16,6 @@
   name: vizio_smartcast_2
   host: 10.0.0.63
   access_token: !secret vizio_access_token_bedroom_tv
-
+- platform: androidtv
+  name: Mi Box S
+  host: 10.0.0.55
