@@ -13,7 +13,7 @@
       entity_id: switch.christmas_lights
   # adjust the floodlights to make light projector pop. 
     - delay:
-      seconds: 10
+        seconds: 10
     - service: light.turn_on
       entity_id: light.front_flood_2
       brightness: 50
