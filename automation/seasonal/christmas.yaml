@@ -16,7 +16,8 @@
         seconds: 10
     - service: light.turn_on
       entity_id: light.front_flood_2
-      brightness: 50
+      data:
+        brightness: 50
     - service: light.turn_off
       entity_id: light.front_flood_1
      
