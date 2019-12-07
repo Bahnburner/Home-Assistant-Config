@@ -9,14 +9,22 @@
     condition: template
     value_template: '{{ now().month == 12 }}'
   action:
-    service: switch.turn_on
-    entity_id: switch.christmas_lights
+    - service: switch.turn_on
+      entity_id: switch.christmas_lights
+  # adjust the floodlights to make light projector pop. 
+    - delay:
+      seconds: 10
+    - service: light.turn_on
+      entity_id: light.front_flood_2
+      brightness: 50
+    - service: light.turn_off
+      entity_id: light.front_flood_1
      
 - alias: Christmas Lights OFF
   hide_entity: True
   trigger:
     - platform: time
-      at: '00:00:00'
+      at: '11:59:55'
     - platform: state
       entity_id: input_boolean.goodnight_initiated
       to: 'on'
@@ -27,6 +35,7 @@
     - service: switch.turn_off
       entity_id: switch.christmas_lights
 
+#I don't think it ever actually triggers, but I'm leaving it on as a secondary catch to kill the lights. 
 - alias: Christmas Lights away OFF
   hide_entity: True
   trigger:
