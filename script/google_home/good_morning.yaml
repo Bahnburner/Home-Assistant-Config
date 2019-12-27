@@ -52,7 +52,7 @@ good_morning:
           before: '10:00:00'
     - delay:
         seconds: 25
-    - service: remote.harmony_change_channel
+    - service: harmony.change_channel
       data: 
         entity_id: remote.livingroom
         channel: '13'
