@@ -16,3 +16,10 @@
       data:
         media_content_id: "http://smrtho.us/storage/i_wanna_be_sedated.mp3"
         media_content_type: "audio/mp3" 
+    - delay:
+        seconds: 149
+    - service: script.revert
+    - service: media_player.volume_mute
+      entity_id: media_player.vizio_smartcast
+      data: 
+        is_volume_muted: false
