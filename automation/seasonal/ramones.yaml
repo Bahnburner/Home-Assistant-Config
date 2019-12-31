@@ -1,4 +1,4 @@
-- alias: NYE 
+- alias: ramones
   hide_entity: True
   trigger:
     platform: time
