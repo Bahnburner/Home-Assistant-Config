@@ -22,8 +22,7 @@
         - light.dining_room
         - light.foyer
         - light.cabinet_lights
-      data:
-        effect: colorloop
+      effect: colorloop
     - delay:
         seconds: 129
     - service: script.revert
