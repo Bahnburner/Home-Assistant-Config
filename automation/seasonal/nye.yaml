@@ -22,6 +22,7 @@
         - light.dining_room
         - light.foyer
         - light.cabinet_lights
+        - light.bias_lights
       data:
         effect: colorloop
     - service: light.turn_off
