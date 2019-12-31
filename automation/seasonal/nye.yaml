@@ -34,7 +34,4 @@
       entity_id: light.living_room
     - delay: 
         seconds: 1
-    - service: light.turn_on
-      entity_id: light.living_room
-      data: 
-        color_temp: 500
+    - service: script.livingroom_on
