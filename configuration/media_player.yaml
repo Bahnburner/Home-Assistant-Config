@@ -11,17 +11,17 @@
   name: Mi Box S
   host: 10.0.0.55
   apps: 
-    - com.google.android.youtube.tvunplugged: "Youtube TV"
-    - com.plexapp.android: "Plex"
-    - com.nest.android: "Nest"
-    - com.spotify.tv.android: "Spotify"
-    - com.google.android.youtube.tvkids: "Youtube Kids"
-    - com.amazon.amazonvideo.livingroom: "Prime Video"
-    - com.google.android.music: "Google Music"
-    - com.hulu.livingroomplus: "Hulu"
-    - com.google.android.youtube.tv: "YouTube"
-    - com.netflix.ninja: "Netflix"
-    - com.disney.disneyplus: "Disney Plus"
+    com.google.android.youtube.tvunplugged: "Youtube TV"
+    com.plexapp.android: "Plex"
+    com.nest.android: "Nest"
+    com.spotify.tv.android: "Spotify"
+    com.google.android.youtube.tvkids: "Youtube Kids"
+    com.amazon.amazonvideo.livingroom: "Prime Video"
+    com.google.android.music: "Google Music"
+    com.hulu.livingroomplus: "Hulu"
+    com.google.android.youtube.tv: "YouTube"
+    com.netflix.ninja: "Netflix"
+    com.disney.disneyplus: "Disney Plus"
   state_detection_rules: 
     'com.plexapp.android':
       - 'media_session_state'
