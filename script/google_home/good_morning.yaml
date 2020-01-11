@@ -35,24 +35,3 @@ good_morning:
           script.deadend
         {% endif %}
     - service: script.fan_on
-    - service: remote.turn_on
-      entity_id: remote.livingroom
-      data:
-        activity: 19594181
-    - condition: and
-      conditions: 
-        - condition: time
-          weekday:
-          - mon
-          - tue
-          - wed
-          - thu
-          - fri
-        - condition: time
-          before: '10:00:00'
-    - delay:
-        seconds: 25
-    - service: harmony.change_channel
-      data: 
-        entity_id: remote.livingroom
-        channel: '13'
