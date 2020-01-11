@@ -9,7 +9,7 @@
       entity_id: remote.livingroom
       data_template:
         activity: >
-          {$ if is_state("input_select.harmony", "Play Switch") %}
+          {% if is_state("input_select.harmony", "Play Switch") %}
             39577141
           {% elif is_state("input_select.harmony", "Watch Android TV") %}
             42159503
