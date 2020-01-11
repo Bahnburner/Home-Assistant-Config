@@ -9,14 +9,6 @@
       entity_id: remote.livingroom
       data_template:
         activity: >
-          {% if is_state("input_select.harmony", "Watch DirecTV") %}
-            19594181
-          {% elif is_state("input_select.harmony", "Watch Plex") %}
-            28102020
-          {% elif is_state("input_select.harmony", "Watch Netflix") %}
-            28121828
-          {% elif is_state("input_select.harmony", "Watch Smartcast") %}
-            28101990
           {$ elif is_state("input_select.harmony", "Play Switch") %}
             39577141
           {% elif is_state("input_select.harmony", "Watch Android TV") %}
@@ -49,15 +41,9 @@
       entity_id: input_boolean.harmony_lighting_control
       from: 'off'
       to: 'on'
-#    - platform: state
-#      entity_id: sensor.current_activity
-#      to: 'Watch Plex'
     - platform: state
       entity_id: media_player.plex_mibox_s
       to: 'playing'
-    - platform: state
-      entity_id: sensor.current_activity
-      to: 'Watch Netflix'
   condition:
     - condition: state
       entity_id: input_boolean.harmony_lighting_control
@@ -120,29 +106,14 @@
   hide_entity: true
   trigger: 
     - platform: state
-      entity_id: sensor.current_activity
-      from: 'Watch Plex'
-    - platform: state
       entity_id: media_player.plex_mibox_s
       to: 'paused'    
     - platform: state
       entity_id: media_player.plex_mibox_s
       to: 'stopped'
-    - platform: state
-      entity_id: sensor.current_activity
-      from: 'Watch Netflix'
   condition: 
     - condition: or
       conditions:
-        - condition: state
-          entity_id: sensor.current_activity
-          state: 'Watch Plex'
-        - condition: state
-          entity_id: sensor.current_activity
-          state: 'Watch DirecTV'
-        - condition: state
-          entity_id: sensor.current_activity
-          state: 'Watch Smartcast'
         - condition: state
           entity_id: sensor.current_activity
           state: 'Play Switch'
@@ -223,16 +194,16 @@
   hide_entity: true
   trigger: 
     - platform: state
-      entity_id: media_player.livingroom_tv
+      entity_id: media_player.mi_box_s
       to: 'playing'
   condition:
     condition: template
-    value_template: "{{ states.sensor.current_activity.state != 'Watch Chromecast'}}"   
+    value_template: "{{ states.sensor.current_activity.state != 'Watch Android TV'}}"   
   action: 
     - service: remote.turn_on
       entity_id: remote.livingroom
       data:
-        activity: 28122446
+        activity: 42159503
 
 - alias: Movie Mode Start
   hide_entity: true
