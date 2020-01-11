@@ -1,13 +1,4 @@
-- platform: directv
-  host: 10.0.0.151
-  port: 8080
-  name: Bedroom DirecTV
-  device: 88F7C7A17C19
-- platform: directv
-  host: 10.0.0.151
-  port: 8080
-  name: Livingroom DirecTV
-  device: 347A60F399D9
+
 - platform: vizio
   name: vizio_smartcast
   host: 10.0.0.150
@@ -19,11 +10,20 @@
 - platform: androidtv
   name: Mi Box S
   host: 10.0.0.55
-  apps: {'com.google.android.youtube.tvunplugged': 'Youtube TV'}
+  apps: 
+    com.google.android.youtube.tvunplugged: "Youtube TV"
+    com.plexapp.android: "Plex"
+    com.nest.android: "Nest"
+    com.spotify.tv.android: "Spotify"
+    com.google.android.youtube.tvkids: "Youtube Kids
+    com.amazon.amazonvideo.livingroom: "Prime Video"
+    com.google.android.music: "Google Music"
+    com.hulu.livingroomplus: "Hulu"
+    com.google.android.youtube.tv: "YouTube"
+    com.netflix.ninja: "Netflix"
+    com.disney.disneyplus: "Disney Plus"
   state_detection_rules: 
     'com.plexapp.android':
-      - 'media_session_state'
-    'com.turner.cnvideoapp':
       - 'media_session_state'
     'com.google.android.youtube.tvunplugged':
       - 'media_session_state'
@@ -31,5 +31,12 @@
       - 'media_session_state'
     'com.google.android.tvlauncher':
       - 'standby'
-    
+    'com.amazon.amazonvideo.livingroom':
+      - 'media_session_state'
+    'com.netflix.ninja':
+      - 'media_session_state'
+    'com.disney.disneyplus':
+      - 'media_session_state'
+    'com.google.android.youtube.tv':
+      - 'media_session_state'
     
