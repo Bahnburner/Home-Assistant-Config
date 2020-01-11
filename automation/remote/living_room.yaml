@@ -44,6 +44,8 @@
     - platform: state
       entity_id: media_player.plex_mibox_s
       to: 'playing'
+    - platform: template
+      value_template: "{{ states.media_player.mi_box_s.attributes.app_name == "Netflix" and states.media_player.mi_box_s.state == "playing" }}"
   condition:
     - condition: state
       entity_id: input_boolean.harmony_lighting_control
@@ -111,6 +113,8 @@
     - platform: state
       entity_id: media_player.plex_mibox_s
       to: 'stopped'
+    - platform: template
+      value_template: "{{ states.media_player.mi_box_s.attributes.app_name == "Netflix" and states.media_player.mi_box_s.state == "idle" }}"      
   condition: 
     - condition: or
       conditions:
@@ -139,13 +143,9 @@
   action: 
     service: light.turn_on
     entity_id: light.living_room
+    data:
+      transition: 3
     data_template:
-      transition: > 
-        {% if states.sensor.rasplex_status.state == 'stopped' %}
-          5
-        {% else %}
-          1
-        {% endif %}
       brightness:
         '{{states.input_number.harmony_dim.state | int }}'
       color_temp: >
