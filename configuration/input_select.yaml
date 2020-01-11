@@ -2,10 +2,6 @@ harmony:
   name: Livingroom TV
   options:
     - Select Input
-    - Watch DirecTV
-    - Watch Smartcast
-    - Watch Netflix    
-    - Watch Plex
     - Watch Android TV
     - Play Switch
     - Power Off
@@ -14,7 +10,6 @@ bedroom_tv:
   name: Bedroom TV
   options:
     - Select Input
-    - Watch DirecTV
     - Watch Smartcast
     - Play Switch
     - Power Off
