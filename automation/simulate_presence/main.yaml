@@ -72,9 +72,6 @@
       entity_id: light.living_room
       data:
         brightness: 100
-    - service: remote.turn_on
-      entity_id: remote.livingroom
-      data: {"activity": "Watch DirecTV"}
 
 - alias: Simulate Presence 5
   hide_entity: True
