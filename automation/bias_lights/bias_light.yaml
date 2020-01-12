@@ -7,9 +7,6 @@
     - platform: state
       entity_id: remote.livingroom
       to: 'on'
-    - platform: state
-      entity_id: media_player.livingroom_directv
-      to: 'on'
   condition:
     - condition: state
       entity_id: light.bias_light
