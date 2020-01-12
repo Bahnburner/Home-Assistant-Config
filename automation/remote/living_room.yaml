@@ -204,7 +204,21 @@
       entity_id: remote.livingroom
       data:
         activity: 42159503
-
+        
+- alias: Harmony Gaming Control Start
+  hide_entity: true
+  trigger: 
+    - platform: template
+      value_template: "{{ states.media_player.vizio_smartcast.attributes.source == 'HDMI-3' }}"
+  condition:
+    condition: template
+    value_template: "{{ states.sensor.current_activity.state != 'Play Switch'}}"   
+  action: 
+    - service: remote.turn_on
+      entity_id: remote.livingroom
+      data:
+        activity: 39577141
+        
 - alias: Movie Mode Start
   hide_entity: true
   trigger: 
