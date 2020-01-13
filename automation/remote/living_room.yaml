@@ -45,7 +45,7 @@
       entity_id: media_player.plex_mibox_s
       to: 'playing'
     - platform: template
-      value_template: '{{ states.media_player.mi_box_s.attributes.app_name == "Netflix" and states.media_player.mi_box_s.state == "playing" }}'
+      value_template: '{{ states.media_player.mi_box_s.attributes.app_name == "Netflix"  and states.media_player.mi_box_s.state == "playing" }}'
   condition:
     - condition: state
       entity_id: input_boolean.harmony_lighting_control
