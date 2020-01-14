@@ -62,7 +62,7 @@ views:
             entities:
               - type: custom:mini-media-player
                 entity: media_player.mi_box_s
-                icon: mdi:android
+                icon: mdi:youtube-tv
                 name: Android TV
                 group: true
                 artwork: none
