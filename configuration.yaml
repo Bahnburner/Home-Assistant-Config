@@ -63,7 +63,6 @@ sensor: !include ./configuration/sensor.yaml
 shell_command: !include ./configuration/shell_command.yaml
 system_health:
 switch: !include ./configuration/switch.yaml
-tuya: !include ./configuration/tuya.yaml
 tts: !include ./configuration/tts.yaml
 weather: !include ./configuration/weather.yaml  
 zone: !include ./configuration/zone.yaml
