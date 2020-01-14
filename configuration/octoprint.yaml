@@ -15,20 +15,20 @@
     monitored_conditions:
       - 'Printing'
       - 'Printing Error'
-- host: !secret octoprint_host_mini
-  port: !secret octoprint_port_mini
-  api_key: !secret octoprint_api_key_mini
-  name: "MP Select Mini"
-  bed: true
-  number_of_tools: 1
-  sensors:
-    monitored_conditions:
-      - 'Current State'
-      - 'Job Percentage'
-      - 'Time Remaining'
-      - 'Temperatures'
-      - 'Time Elapsed'
-  binary_sensors:
-    monitored_conditions:
-      - 'Printing'
-      - 'Printing Error'
+#- host: !secret octoprint_host_mini
+#  port: !secret octoprint_port_mini
+#  api_key: !secret octoprint_api_key_mini
+#  name: "MP Select Mini"
+#  bed: true
+#  number_of_tools: 1
+#  sensors:
+#    monitored_conditions:
+#      - 'Current State'
+#      - 'Job Percentage'
+#      - 'Time Remaining'
+#      - 'Temperatures'
+#      - 'Time Elapsed'
+#  binary_sensors:
+#    monitored_conditions:
+#      - 'Printing'
+#      - 'Printing Error'
