@@ -61,8 +61,8 @@ views:
           - type: entity-filter
             entities:
               - type: custom:mini-media-player
-                entity: media_player.livingroom_directv
-                icon: mdi:satellite-variant
+                entity: media_player.mi_box_s
+                icon: mdi:android
                 name: DirecTV
                 group: true
                 artwork: none
