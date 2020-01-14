@@ -63,7 +63,7 @@ views:
               - type: custom:mini-media-player
                 entity: media_player.mi_box_s
                 icon: mdi:android
-                name: DirecTV
+                name: Android TV
                 group: true
                 artwork: none
                 hide:
@@ -168,18 +168,7 @@ views:
             tap_action: 
               action: toggle
           - type: entity-filter
-            entities:
-              - type: custom:mini-media-player
-                entity: media_player.bedroom_directv
-                icon: mdi:satellite-variant
-                group: true
-                name: DirecTV
-                artwork: none
-                hide:
-                  power: true
-                  volume: true
-                  progress: true
-                  controls: true            
+            entities:          
               - type: custom:mini-media-player
                 entity: media_player.bedroom_tv
                 group: true
@@ -545,39 +534,39 @@ views:
     title: Devices
     id: devices
     cards:
-      - type: vertical-stack
-        cards:
-          - type: custom:mini-graph-card
-            name: Titan
-            entities:
-              - sensor.cpu_usage
-              - sensor.memory_usage
-          - type: horizontal-stack
-            cards:
-              - type: gauge
-                title: CPU
-                entity: sensor.cpu_usage
-                min: 0
-                max: 100
-              - type: gauge
-                title: Memory
-                entity: sensor.memory_usage
-                min: 0
-                max: 100
-          - type: horizontal-stack
-            cards:
-              - type: gauge
-                title: Plex (Z:)
-                entity: sensor.disk_4
-                name: 'Plex'
-                min: 0
-                max: 100
-              - type: gauge
-                title: Storage (Y:)
-                entity: sensor.disk_3
-                name: 'Storage'
-                min: 0
-                max: 100
+#      - type: vertical-stack
+#        cards:
+#          - type: custom:mini-graph-card
+#            name: Titan
+#            entities:
+#              - sensor.cpu_usage
+#              - sensor.memory_usage
+#          - type: horizontal-stack
+#            cards:
+#              - type: gauge
+#                title: CPU
+#                entity: sensor.cpu_usage
+#                min: 0
+#                max: 100
+#              - type: gauge
+#                title: Memory
+#                entity: sensor.memory_usage
+#                min: 0
+#                max: 100
+#          - type: horizontal-stack
+#            cards:
+#              - type: gauge
+#                title: Plex (Z:)
+#                entity: sensor.disk_4
+#                name: 'Plex'
+#                min: 0
+#                max: 100
+#              - type: gauge
+#                title: Storage (Y:)
+#                entity: sensor.disk_3
+#                name: 'Storage'
+#                min: 0
+#                max: 100
       - type: vertical-stack
         cards:                
           - type: custom:mini-graph-card
