@@ -44,9 +44,6 @@
     - platform: state
       entity_id: media_player.plex_mibox_s
       to: 'playing'
-    - platform: state
-      entity_id: media_player.mi_box_s
-      from: 'playing'
   condition:
     - condition: state
       entity_id: input_boolean.harmony_lighting_control
