@@ -10,6 +10,7 @@
 - platform: androidtv
   name: Mi Box S
   host: 10.0.0.55
+  get_sources: false
   apps: 
     com.google.android.youtube.tvunplugged: "Youtube TV"
     com.plexapp.android: "Plex"
