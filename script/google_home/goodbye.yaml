@@ -30,5 +30,6 @@ goodbye:
         - media_player.house_party_protocol
         - media_player.bathroom_assistant
         - media_player.vizio_smartcast_2
+        - media_player.vizio_m70
     - service: automation.trigger
       entity_id: automation.away_mode_puppies
