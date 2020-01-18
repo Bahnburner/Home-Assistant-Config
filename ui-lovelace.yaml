@@ -70,7 +70,8 @@ views:
                   progress: true
                   power: true
                   volume: true
-                  controls: true            
+                  controls: true  
+                  source: true
               - type: custom:mini-media-player
                 entity: media_player.rasplex
                 icon: mdi:plex
