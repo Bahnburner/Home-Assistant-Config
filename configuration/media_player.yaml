@@ -9,6 +9,7 @@
   access_token: !secret vizio_access_token_bedroom_tv
 - platform: androidtv
   name: Mi Box S
+  get_sources: false
   host: 10.0.0.55
   apps: 
     com.google.android.youtube.tvunplugged: "Youtube TV"
