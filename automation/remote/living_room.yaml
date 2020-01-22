@@ -193,13 +193,8 @@
       entity_id: media_player.mi_box_s
       to: 'playing'
   condition:
-    condition: or
-    conditions:
-      - condition: template
-        value_template: "{{ states.sensor.current_activity.state != 'Watch Android TV'}}"
-      - condition: state
-        entity_id: media_player.vizio_smartcast
-        state: off
+    condition: template
+    value_template: "{{ states.sensor.current_activity.state != 'Watch Android TV'}}"
   action: 
     - service: remote.turn_on
       entity_id: remote.livingroom
