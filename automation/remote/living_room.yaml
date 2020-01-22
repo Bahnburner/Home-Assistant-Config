@@ -12,7 +12,7 @@
           {% if is_state("input_select.harmony", "Play Switch") %}
             39577141
           {% elif is_state("input_select.harmony", "Watch Android TV") %}
-            42159503
+            42178212
           {% else %}
           {% endif %}
     - service: input_select.select_option
@@ -193,13 +193,19 @@
       entity_id: media_player.mi_box_s
       to: 'playing'
   condition:
-    condition: template
-    value_template: "{{ states.sensor.current_activity.state != 'Watch Android TV'}}"   
+    condition: or
+    conditions:
+      - condition: template
+        value_template: "{{ states.sensor.current_activity.state != 'Watch Android TV'}}"
+      - condition: state
+        entity_id: media_player.vizio_smartcast
+        state: off
+    
   action: 
     - service: remote.turn_on
       entity_id: remote.livingroom
       data:
-        activity: 42159503
+        activity: 42178212
         
 - alias: Harmony Gaming Control Start
   hide_entity: true
