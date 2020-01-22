@@ -200,7 +200,6 @@
       - condition: state
         entity_id: media_player.vizio_smartcast
         state: off
-    
   action: 
     - service: remote.turn_on
       entity_id: remote.livingroom
