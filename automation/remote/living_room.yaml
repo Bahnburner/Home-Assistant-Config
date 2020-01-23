@@ -12,7 +12,7 @@
           {% if is_state("input_select.harmony", "Play Switch") %}
             39577141
           {% elif is_state("input_select.harmony", "Watch Android TV") %}
-            42178212
+            43103950
           {% else %}
           {% endif %}
     - service: input_select.select_option
@@ -199,7 +199,7 @@
     - service: remote.turn_on
       entity_id: remote.livingroom
       data:
-        activity: 42178212
+        activity: 43103950
         
 - alias: Harmony Gaming Control Start
   hide_entity: true
