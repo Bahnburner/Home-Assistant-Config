@@ -42,7 +42,7 @@
       from: 'off'
       to: 'on'
     - platform: state
-      entity_id: media_player.plex_mibox_s
+      entity_id: media_player.plex_shield_android_tv
       to: 'playing'
   condition:
     - condition: state
@@ -106,7 +106,7 @@
   hide_entity: true
   trigger: 
     - platform: state
-      entity_id: media_player.plex_mibox_s
+      entity_id: media_player.plex_shield_android_tv
       to: 
         - 'paused'    
         - 'stopped'
@@ -190,7 +190,7 @@
   hide_entity: true
   trigger: 
     - platform: state
-      entity_id: media_player.mi_box_s
+      entity_id: media_player.shield_tv
       to: 'playing'
   condition:
     condition: template
