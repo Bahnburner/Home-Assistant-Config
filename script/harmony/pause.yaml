@@ -1,52 +1,11 @@
 pause:
   sequence:
-    - service: script.turn_on
-      data_template:
-        entity_id: >
-          {% if is_state('sensor.current_activity', 'Watch DirecTV') %}
-            script.pause_directv 
-          {% elif is_state('sensor.current_activity', 'Watch Plex') %}
-            script.pause_plex
-          {% else %}
-            script.pause_other
-          {% endif %}
+    - service: remote.send_command
+      entity_id: remote.livingroom
+      data: {"device": "67632960", "command": "Select"}
 
 unpause:
   sequence:
-    - service: script.turn_on
-      data_template:
-        entity_id: >
-          {% if is_state('sensor.current_activity', 'Watch DirecTV') %}
-            script.unpause_directv 
-          {% elif is_state('sensor.current_activity', 'Watch Plex') %}
-            script.pause_plex
-          {% else %}
-            script.unpause_other
-          {% endif %}
-
-pause_directv:
-  sequence:
-    - service: media_player.media_pause
-      entity_id: media_player.livingroom_directv
-
-pause_plex:        
-  sequence:
-    - service: media_player.media_play_pause
-      entity_id: media_player.rasplex
-
-pause_other:
-  sequence:
     - service: remote.send_command
       entity_id: remote.livingroom
-      data: {"device": "47158865", "command": "OK"}
-        
-unpause_directv:
-  sequence:
-    - service: media_player.media_play
-      entity_id: media_player.livingroom_directv
-
-unpause_other:          
-  sequence:
-    - service: remote.send_command
-      entity_id: remote.livingroom
-      data: {"device": "47158865", "command": "OK"}
+      data: {"device": "67632960", "command": "Select"}
