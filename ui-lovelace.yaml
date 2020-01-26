@@ -71,7 +71,7 @@ views:
                   power: true
                   volume: true
                   controls: true  
-                  source: true
+#                  source: true
               - type: custom:mini-media-player
                 entity: media_player.rasplex
                 icon: mdi:plex
