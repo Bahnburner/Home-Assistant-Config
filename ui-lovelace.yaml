@@ -178,7 +178,7 @@ views:
                 hide:
                   volume: true
                   power: true
-                  controls: true
+                  controls: false
                   progress: true
                   source: true
               - type: custom:mini-media-player
