@@ -18,3 +18,16 @@
       entity_id: input_select.bedroom_tv
       data_template:
         option: "Select Input"
+
+- alias: Bedroom Cast Control Start
+  hide_entity: true
+  trigger: 
+    - platform: state
+      entity_id: media_player.mi_box_s
+      to: 'playing'
+  condition:
+    condition: template
+    value_template: "{{ states.media_player.vizio_smartcast_2.state != 'off'}}"
+  action: 
+    - service: media_player.turn_on
+      entity_id: media_player.vizio_smartcast_2
