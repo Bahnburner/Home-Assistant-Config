@@ -173,6 +173,19 @@ views:
           - type: entity-filter
             entities:          
               - type: custom:mini-media-player
+                entity: media_player.plex_mibox_s
+                icon: mdi:plex
+                group: true
+                artwork: full-cover
+                hide:
+                  volume: true
+                  power: true
+                  progress: true
+                  controls: true
+                  info: false
+                  icon: true
+                  name: Plex
+              - type: custom:mini-media-player
                 entity: media_player.mi_box_s
                 group: true
                 artwork: none
