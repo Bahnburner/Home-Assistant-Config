@@ -64,7 +64,7 @@ views:
                 entity: media_player.plex_shield_android_tv
                 icon: mdi:plex
                 group: true
-                artwork: full-cover
+                artwork: full-cover-fit
                 hide:
                   volume: true
                   power: true
