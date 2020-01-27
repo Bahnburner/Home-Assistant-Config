@@ -174,7 +174,7 @@ views:
                 entity: media_player.mi_box_s
                 group: true
                 artwork: none
-                icon: mdi:cast-connected
+                icon: mdi:youtube-tv
                 hide:
                   volume: true
                   power: true
