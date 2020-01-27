@@ -64,13 +64,13 @@ views:
                 entity: media_player.plex_shield_android_tv
                 icon: mdi:plex
                 group: true
-                artwork: full-cover-fit
+                artwork: full-cover
                 hide:
                   volume: true
                   power: true
                   progress: true
                   controls: true
-                  info: true
+                  info: false
                   icon: true
                   name: Plex
               - type: custom:mini-media-player
