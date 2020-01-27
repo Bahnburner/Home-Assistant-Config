@@ -499,9 +499,9 @@ views:
       - type: media-control
         entity: media_player.party_mode
       - type: media-control
-        entity: media_player.shield_tv
-      - type: media-control
         entity: media_player.vizio_smartcast
+      - type: media-control
+        entity: media_player.shield_tv
       - type: media-control
         entity: media_player.mi_box_s
       - type: media-control
