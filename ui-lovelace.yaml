@@ -496,6 +496,18 @@ views:
         entity: media_player.nursery_assistant
       - type: media-control
         entity: media_player.party_mode
+      - type: media-control
+        entity: media_player.shield_android_tv
+      - type: media-control
+        entity: media_player.vizio_m70
+      - type: media-control
+        entity: media_player.mi_box_s
+      - type: media-control
+        entity: media_player.vizio_v50
+      - type: media-control
+        entity: media_player.plex_shield_tv
+      - type: media-control
+        entity: media_player.plex_mibox_s
 
 ###########
 # CAMERAS #
