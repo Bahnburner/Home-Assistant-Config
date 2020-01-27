@@ -499,19 +499,11 @@ views:
       - type: media-control
         entity: media_player.shield_tv
       - type: media-control
-        entity: media_player.plex_shield_android_tv
-      - type: media-control
         entity: media_player.vizio_smartcast
-      - type: media-control
-        entity: media_player.vizio_m70
       - type: media-control
         entity: media_player.mi_box_s
       - type: media-control
-        entity: media_player.plex_mibox_s
-      - type: media-control
         entity: media_player.vizio_smartcast_2
-      - type: media-control
-        entity: media_player.vizio_v50
 
 ###########
 # CAMERAS #
