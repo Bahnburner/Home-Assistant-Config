@@ -2,10 +2,10 @@ pause:
   sequence:
     - service: remote.send_command
       entity_id: remote.livingroom
-      data: {"device": "67632960", "command": "Select"}
+      data: {"device": "67632960", "command": "Pause"}
 
 unpause:
   sequence:
     - service: remote.send_command
       entity_id: remote.livingroom
-      data: {"device": "67632960", "command": "Select"}
+      data: {"device": "67632960", "command": "Play"}
