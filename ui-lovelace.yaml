@@ -503,9 +503,11 @@ views:
       - type: media-control
         entity: media_player.vizio_smartcast
       - type: media-control
+        name: Livingroom TV
         entity: media_player.mi_box_s
       - type: media-control
         entity: media_player.vizio_smartcast_2
+        name: Bedroom TV
 
 ###########
 # CAMERAS #
