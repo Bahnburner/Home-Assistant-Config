@@ -61,6 +61,19 @@ views:
           - type: entity-filter
             entities:
               - type: custom:mini-media-player
+                entity: media_player.plex_shield_android_tv
+                icon: mdi:plex
+                group: true
+                artwork: full-cover
+                hide:
+                  volume: true
+                  power: true
+                  progress: true
+                  controls: true
+                  info: true
+                  icon: true
+                  name: Plex
+              - type: custom:mini-media-player
                 entity: media_player.shield_tv
                 icon: mdi:youtube-tv
                 name: Android TV
@@ -72,17 +85,6 @@ views:
                   volume: true
                   controls: false  
                   source: true
-              - type: custom:mini-media-player
-                entity: media_player.plex_shield_android_tv
-                icon: mdi:plex
-                group: true
-                artwork: none
-                hide:
-                  volume: true
-                  power: true
-                  progress: true
-                  controls: true
-                  name: Plex
               - type: custom:mini-media-player
                 entity: media_player.livingroom_tv
                 group: true
