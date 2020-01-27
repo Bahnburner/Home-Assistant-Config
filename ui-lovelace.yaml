@@ -73,7 +73,7 @@ views:
                   controls: false  
                   source: true
               - type: custom:mini-media-player
-                entity: media_player.rasplex
+                entity: media_player.plex_shield_android_tv
                 icon: mdi:plex
                 group: true
                 artwork: none
