@@ -70,7 +70,7 @@ views:
                   progress: true
                   power: true
                   volume: true
-                  controls: true  
+                  controls: false  
                   source: true
               - type: custom:mini-media-player
                 entity: media_player.rasplex
