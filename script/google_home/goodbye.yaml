@@ -32,8 +32,6 @@ goodbye:
         - media_player.vizio_smartcast_2
         - media_player.vizio_m70
         - media_player.vizio_v50
-    - service: media_player.media_stop
-      entity_id:
         - media_player.livingroom_tv
         - media_player.bedroom_tv
         - media_player.mi_box_s
