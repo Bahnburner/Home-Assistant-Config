@@ -4,5 +4,5 @@ tv_timer:
       timeout: '00:15:00'
       continue_on_timeout: 'true'
     - service: media_player.turn_off
-      entity_id: media_player.vizio_smartcast_2
+      entity_id: media_player.mi_box_s
     - service: script.whitenoise
