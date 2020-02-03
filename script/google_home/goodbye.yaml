@@ -15,26 +15,6 @@ goodbye:
       entity_id: light.bias_light
     - service: remote.turn_off
       entity_id: remote.livingroom
-    - service: media_player.turn_off
-      entity_id: 
-        - media_player.dining_room_speaker
-        - media_player.kitchen_display
-        - media_player.mancave_assistant
-        - media_player.livingroom_assistant
-        - media_player.bedroom_speaker
-        - media_player.bedroom_assistant
-        - media_player.party_mode
-        - media_player.all_speakers
-        - media_player.garage_speaker
-        - media_player.house_party_protocol
-        - media_player.bathroom_assistant
-        - media_player.vizio_smartcast
-        - media_player.vizio_smartcast_2
-        - media_player.vizio_m70
-        - media_player.vizio_v50
-        - media_player.livingroom_tv
-        - media_player.bedroom_tv
-        - media_player.mi_box_s
-        - media_player.shield_tv
+    - service: script.media_player_off
     - service: automation.trigger
       entity_id: automation.away_mode_puppies
