@@ -1,5 +1,8 @@
 media_player_off:
   sequence:
+    - service: media_player.media_stop
+      entity_id:
+        - media_player.mi_box_s
     - service: media_player.turn_off
       entity_id: 
         - media_player.dining_room_speaker
@@ -10,8 +13,6 @@ media_player_off:
         - media_player.all_speakers
         - media_player.garage_speaker
         - media_player.house_party_protocol
-        - media_player.vizio_smartcast
         - media_player.vizio_smartcast_2
         - media_player.vizio_v50
         - media_player.bedroom_tv
-        - media_player.mi_box_s
