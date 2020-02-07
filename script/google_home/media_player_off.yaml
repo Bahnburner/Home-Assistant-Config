@@ -12,9 +12,6 @@ media_player_off:
         - media_player.house_party_protocol
         - media_player.vizio_smartcast
         - media_player.vizio_smartcast_2
-        - media_player.vizio_m70
         - media_player.vizio_v50
-        - media_player.livingroom_tv
         - media_player.bedroom_tv
         - media_player.mi_box_s
-        - media_player.shield_tv
