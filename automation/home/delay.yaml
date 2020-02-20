@@ -1,6 +1,5 @@
 - id: home_mode_delay
   alias: 'Home Mode Delay'
-  hide_entity: true
   trigger:
     - platform: homeassistant
       event: start
