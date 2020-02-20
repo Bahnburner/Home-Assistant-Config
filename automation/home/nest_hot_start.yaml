@@ -1,5 +1,4 @@
 - alias: Home Mode Nest Hot Start Leaving Work
-  hide_entity: true
   trigger:
     - platform: state
       entity_id: device_tracker.google_maps_tcaulfld_gmail_com
