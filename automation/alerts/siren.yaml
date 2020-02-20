@@ -1,5 +1,4 @@
 - alias: 'Activate Siren'
-  hide_entity: true
   trigger:
     platform: event
     event_type: html5_notification.clicked
