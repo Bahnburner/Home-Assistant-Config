@@ -1,5 +1,4 @@
 - alias: disable all automations
-  hide_entity: True
   trigger:
     - platform: state
       entity_id: input_boolean.disable_all_automations
