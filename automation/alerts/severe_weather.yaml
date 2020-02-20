@@ -1,5 +1,4 @@
 #- alias: Severe Weather
-#  hide_entity: True
 #  trigger:
 #    - platform: template
 #      value_template: "{{ states.sensor.pws_alerts.attributes.Description_WRN == 'Severe Thunderstorm Warning' }}"
