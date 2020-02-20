@@ -1,5 +1,4 @@
 - alias: Exterior Front Dim
-  hide_entity: True
   trigger:
     platform: time
     at: '00:00:00'
