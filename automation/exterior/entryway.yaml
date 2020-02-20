@@ -1,5 +1,4 @@
 - alias: Brighten entryway on unlock
-  hide_entity: true
   trigger:
     platform: state
     entity_id: lock.front_door
