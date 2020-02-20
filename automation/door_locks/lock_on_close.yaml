@@ -1,5 +1,4 @@
 - alias: lock on close front door
-  hide_entity: true
   trigger: 
     platform: state
     entity_id: sensor.front_door
@@ -19,7 +18,6 @@
       entity_id: lock.front_door
 
 - alias: lock on close back door
-  hide_entity: true
   trigger: 
     platform: state
     entity_id: sensor.back_door
@@ -39,7 +37,6 @@
       entity_id: lock.back_door
 
 - alias: input_boolean off
-  hide_entity: True
   trigger:
     platform: state
     entity_id:
