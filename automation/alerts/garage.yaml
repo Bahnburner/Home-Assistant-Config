@@ -1,5 +1,4 @@
 - alias: Garage door open Home
-  hide_entity: True
   trigger:
     platform: state
     entity_id: cover.garage_door_opener
