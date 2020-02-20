@@ -1,5 +1,4 @@
 - alias: Garbage reminder
-  hide_entity: true
   trigger:
     platform: state
     entity_id: 
