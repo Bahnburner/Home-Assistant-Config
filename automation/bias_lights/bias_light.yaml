@@ -1,5 +1,4 @@
 - alias: Bias Light On
-  hide_entity: true
   trigger:
     - platform: state
       entity_id: media_player.vizio_smartcast
@@ -51,7 +50,6 @@
           {% endif %}
         
 - alias: Bias Light Off
-  hide_entity: true
   trigger:
     - platform: state
       entity_id: media_player.vizio_smartcast
@@ -76,7 +74,6 @@
       entity_id: light.bias_light
 
 - alias: Bias Light Fade
-  hide_entity: True
   trigger:
     platform: time
     at: '9:30:00'
