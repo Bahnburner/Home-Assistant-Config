@@ -1,5 +1,4 @@
 - alias: leak detected
-  hide_entity: True
   trigger:
     - platform: state
       entity_id:
