@@ -1,5 +1,4 @@
 - alias: Kitchen Uplighting
-  hide_entity: true
   trigger:
     - platform: state
       entity_id: sensor.brightness_lr
