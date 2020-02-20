@@ -1,5 +1,4 @@
 - alias: Exterior Front Dawn
-  hide_entity: True
   trigger:
     platform: numeric_state
     entity_id: sun.sun
