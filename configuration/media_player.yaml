@@ -1,12 +1,4 @@
 
-- platform: vizio
-  name: vizio_smartcast
-  host: 10.0.0.150
-  access_token: !secret vizio_access_token_livingroom_tv
-- platform: vizio
-  name: vizio_smartcast_2
-  host: 10.0.0.63
-  access_token: !secret vizio_access_token_bedroom_tv
 - platform: androidtv
   name: Shield TV
   get_sources: false
