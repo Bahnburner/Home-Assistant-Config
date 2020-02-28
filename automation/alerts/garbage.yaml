@@ -25,7 +25,6 @@
         message: 'Heads up, tomorrow is trash day.'
 
 - alias: Garbage reminder 2
-  hide_entity: true
   trigger:
     platform: time
     at: '07:30:00'

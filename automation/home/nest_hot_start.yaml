@@ -26,7 +26,6 @@
           - Hidden Ridge
 
 - alias: Home Mode Nest Hot Start Arriving Home 
-  hide_entity: true
   trigger:
     platform: state
     entity_id:
@@ -45,7 +44,6 @@
           - Hidden Ridge
 
 - alias: Home Mode Nest Hot Start Leaving Home 
-  hide_entity: true
   trigger:
     platform: state
     entity_id:

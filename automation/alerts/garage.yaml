@@ -21,7 +21,6 @@
         message: 'Heads up, the garage is currently open.'
  
 - alias: Garage door open Away
-  hide_entity: True
   trigger:
     platform: state
     entity_id: cover.garage_door_opener
@@ -52,7 +51,6 @@
 
 
 - alias: 'Close Garage Event'
-  hide_entity: true
   trigger:
     platform: event
     event_type: html5_notification.clicked
@@ -82,7 +80,6 @@
           {% endif %}
     
 - alias: Garage Notify
-  hide_entity: true
   trigger:
     - platform: state
       entity_id: cover.garage_door_opener

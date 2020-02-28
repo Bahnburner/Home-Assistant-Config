@@ -1,6 +1,5 @@
 - alias: Rain Exterior Lights Start
-  hide_entity: True
-  trigger:
+    trigger:
     - platform: state
       entity_id: binary_sensor.rain
       to: 'on'

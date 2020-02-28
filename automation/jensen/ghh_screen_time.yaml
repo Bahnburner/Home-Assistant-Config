@@ -1,5 +1,4 @@
 - alias: ghh youtube disabler
-  hide_entity: true
   trigger: 
     - platform: state
       entity_id: media_player.kitchen_display

@@ -1,6 +1,5 @@
 - alias: Harmony
-  hide_entity: True
-  trigger:
+    trigger:
     platform: state
     entity_id: input_select.harmony
     from: 'Select Input'
@@ -21,8 +20,7 @@
         option: "Select Input"
 
 - alias: Harmony Off
-  hide_entity: True
-  trigger:
+    trigger:
     platform: state
     entity_id: input_select.harmony
     to: 'Power Off'
@@ -35,8 +33,7 @@
         option: "Select Input"
 
 - alias: Harmony Light Control Start
-  hide_entity: true
-  trigger: 
+    trigger: 
     - platform: state
       entity_id: input_boolean.harmony_lighting_control
       from: 'off'
@@ -103,8 +100,7 @@
           {% endif %}
       
 - alias: Harmony Light Control End
-  hide_entity: true
-  trigger: 
+    trigger: 
     - platform: state
       entity_id: media_player.plex_shield_android_tv
       to: 
@@ -159,8 +155,7 @@
           {% endif %}
 
 - alias: Harmony Lighting Control Off
-  hide_entity: true
-  trigger: 
+    trigger: 
     - platform: state
       entity_id: input_boolean.harmony_lighting_control
       from: 'on'
@@ -174,8 +169,7 @@
     
 
 - alias: Set Saved Brightness
-  hide_entity: True
-  trigger:
+    trigger:
     - platform: homeassistant
       event: start
   action:
@@ -187,8 +181,7 @@
         brightness: 254
 
 - alias: Harmony Cast Control Start
-  hide_entity: true
-  trigger: 
+    trigger: 
     - platform: state
       entity_id: media_player.shield_tv
       to: 'playing'
@@ -202,8 +195,7 @@
         activity: 43103950
         
 - alias: Harmony Gaming Control Start
-  hide_entity: true
-  trigger: 
+    trigger: 
     - platform: template
       value_template: "{{ states.media_player.vizio_smartcast.attributes.source == 'HDMI-3' }}"
   condition:
@@ -216,8 +208,7 @@
         activity: 39577141
         
 - alias: Movie Mode Start
-  hide_entity: true
-  trigger: 
+    trigger: 
     platform: state
     entity_id: input_boolean.movie_mode
     from: "off"
@@ -255,8 +246,7 @@
         brightness: 175
         
 - alias: Movie Mode Stop
-  hide_entity: true
-  trigger: 
+    trigger: 
     platform: state
     entity_id: input_boolean.movie_mode
     from: "on"

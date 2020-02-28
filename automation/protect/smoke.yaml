@@ -1,6 +1,5 @@
 - alias: Nest protect emergency
-  hide_entity: true
-  trigger: 
+    trigger: 
     platform: state
     entity_id:
       - sensor.upstairs_nest_protect_smoke_status
@@ -23,8 +22,7 @@
       entity_id: script.unlock_doors
     
 - alias: Nest protect normal
-  hide_entity: true
-  trigger: 
+    trigger: 
     platform: state
     entity_id:
       - sensor.upstairs_nest_protect_smoke_status

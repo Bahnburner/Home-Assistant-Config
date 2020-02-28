@@ -1,6 +1,5 @@
 - id: startup
   alias: 'Startup'
-  hide_entity: true
   trigger:
     - platform: homeassistant
       event: start

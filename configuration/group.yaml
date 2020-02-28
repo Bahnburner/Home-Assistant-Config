@@ -87,8 +87,7 @@ door_locks:
     - lock.front_door
     - lock.back_door
 living_room:
-  control: hidden
-  entities:
+    entities:
     - sensor.current_activity
     - input_select.harmony
     - light.living_room
@@ -111,8 +110,7 @@ living_room_lights:
   - light.floor_lamp_right
   - light.table_lamp
 kitchen:
-  control: hidden
-  entities:
+    entities:
     - switch.overhead_light
     - switch.chandelier
     - light.recessed_lights
@@ -142,8 +140,7 @@ exterior:
   - light.front_floods
   - light.rear_floods
 override:
-  control: hidden
-  entities:
+    entities:
     - updater.updater
     - input_boolean.disable_away_mode
     - input_boolean.disable_alarm

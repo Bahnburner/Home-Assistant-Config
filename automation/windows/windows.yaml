@@ -1,6 +1,5 @@
 #- alias: Windows Open
-#  hide_entity: True
-#  trigger:
+#  #  trigger:
 #    platform: state
 #    entity_id: 
 #      - sensor.front_windows
@@ -21,8 +20,7 @@
 #      operation_mode: 'eco'
  
 #- alias: Windows Closed
-#  hide_entity: True
-#  trigger:
+#  #  trigger:
 #    platform: state
 #    entity_id: 
 #      - sensor.front_windows

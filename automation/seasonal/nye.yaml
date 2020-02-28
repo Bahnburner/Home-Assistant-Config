@@ -1,6 +1,5 @@
 - alias: NYE 
-  hide_entity: True
-  trigger:
+    trigger:
     platform: time
     at: '00:00:00'
   condition:

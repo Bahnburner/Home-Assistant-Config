@@ -1,6 +1,5 @@
 - alias: Christmas Lights ON
-  hide_entity: True
-  trigger: 
+    trigger: 
     platform: numeric_state
     entity_id: sun.sun
     value_template: '{{ state.attributes.elevation }}'
@@ -22,8 +21,7 @@
       entity_id: light.front_flood_1
      
 - alias: Christmas Lights OFF
-  hide_entity: True
-  trigger:
+    trigger:
     - platform: time
       at: '23:59:55'
     - platform: state
@@ -38,8 +36,7 @@
 
 #I don't think it ever actually triggers, but I'm leaving it on as a secondary catch to kill the lights. 
 - alias: Christmas Lights away OFF
-  hide_entity: True
-  trigger:
+    trigger:
     - platform: state
       entity_id: group.family
       to: "not_home"
@@ -57,8 +54,7 @@
 
 - id: christmas_light_panel_visiblity
   alias: 'Christmas Light Panel Visiblity'
-  hide_entity: true
-  trigger:
+    trigger:
     - platform: homeassistant
       event: start
     - platform: time

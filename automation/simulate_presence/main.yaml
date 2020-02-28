@@ -1,6 +1,5 @@
 - alias: Simulate Presence 1
-  hide_entity: True
-  trigger:
+    trigger:
     platform: numeric_state
     entity_id: sun.sun
     value_template: '{{ state.attributes.elevation }}'
@@ -19,8 +18,7 @@
       entity_id: switch.patio_lights
 
 - alias: Simulate Presence 2
-  hide_entity: True
-  trigger:
+    trigger:
     platform: time
     at: '17:45:00'
   condition: 
@@ -35,8 +33,7 @@
       entity_id: switch.overhead_light
     
 - alias: Simulate Presence 3
-  hide_entity: True
-  trigger:
+    trigger:
     platform: time
     at: '18:30:00'
   condition: 
@@ -52,8 +49,7 @@
       entity_id: switch.overhead_light
       
 - alias: Simulate Presence 4
-  hide_entity: True
-  trigger:
+    trigger:
     platform: time
     at: '19:15:00'
   condition: 
@@ -74,8 +70,7 @@
         brightness: 100
 
 - alias: Simulate Presence 5
-  hide_entity: True
-  trigger:
+    trigger:
     platform: time
     at: '21:15:00'
   condition: 
@@ -94,8 +89,7 @@
       entity_id: light.desk_lamp
 
 - alias: Simulate Presence 6
-  hide_entity: True
-  trigger:
+    trigger:
     platform: time
     at: '23:45:00'
   condition: 
@@ -115,8 +109,7 @@
       entity_id: switch.patio_lights
 
 - alias: Simulate Presence 7
-  hide_entity: True
-  trigger:
+    trigger:
     platform: time
     at: '00:05:00'
   condition: 

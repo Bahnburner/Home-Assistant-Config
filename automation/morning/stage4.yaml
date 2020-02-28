@@ -1,5 +1,4 @@
 - alias: Morning Stage 4
-  hide_entity: True
   trigger:
     platform: time
     at: '9:30:00'
