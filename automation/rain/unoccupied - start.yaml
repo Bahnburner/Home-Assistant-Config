@@ -1,5 +1,5 @@
 - alias: Rain Unoccupied Start
-    trigger:
+  trigger:
     - platform: state
       entity_id: binary_sensor.rain
       to: 'on'

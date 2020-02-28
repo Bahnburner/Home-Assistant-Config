@@ -1,5 +1,5 @@
 - alias: Bedroom Remote
-    trigger:
+  trigger:
     platform: state
     entity_id: input_select.bedroom_tv
     from: 'Select Input'
@@ -19,7 +19,7 @@
         option: "Select Input"
 
 - alias: Bedroom Cast Control Start
-    trigger: 
+  trigger: 
     - platform: state
       entity_id: media_player.mi_box_s
       to: 'playing'

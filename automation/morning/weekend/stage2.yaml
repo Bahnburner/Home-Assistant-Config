@@ -1,5 +1,5 @@
 - alias: Morning Weekend Stage 2
-    trigger:
+  trigger:
     platform: time
     at: '07:30:00'
   condition:

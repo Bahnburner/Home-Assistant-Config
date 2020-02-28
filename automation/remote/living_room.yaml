@@ -1,5 +1,5 @@
 - alias: Harmony
-    trigger:
+  trigger:
     platform: state
     entity_id: input_select.harmony
     from: 'Select Input'
@@ -20,7 +20,7 @@
         option: "Select Input"
 
 - alias: Harmony Off
-    trigger:
+  trigger:
     platform: state
     entity_id: input_select.harmony
     to: 'Power Off'
@@ -33,7 +33,7 @@
         option: "Select Input"
 
 - alias: Harmony Light Control Start
-    trigger: 
+  trigger: 
     - platform: state
       entity_id: input_boolean.harmony_lighting_control
       from: 'off'
@@ -100,7 +100,7 @@
           {% endif %}
       
 - alias: Harmony Light Control End
-    trigger: 
+  trigger: 
     - platform: state
       entity_id: media_player.plex_shield_android_tv
       to: 
@@ -155,7 +155,7 @@
           {% endif %}
 
 - alias: Harmony Lighting Control Off
-    trigger: 
+  trigger: 
     - platform: state
       entity_id: input_boolean.harmony_lighting_control
       from: 'on'
@@ -169,7 +169,7 @@
     
 
 - alias: Set Saved Brightness
-    trigger:
+  trigger:
     - platform: homeassistant
       event: start
   action:
@@ -181,7 +181,7 @@
         brightness: 254
 
 - alias: Harmony Cast Control Start
-    trigger: 
+  trigger: 
     - platform: state
       entity_id: media_player.shield_tv
       to: 'playing'
@@ -195,7 +195,7 @@
         activity: 43103950
         
 - alias: Harmony Gaming Control Start
-    trigger: 
+  trigger: 
     - platform: template
       value_template: "{{ states.media_player.vizio_smartcast.attributes.source == 'HDMI-3' }}"
   condition:
@@ -208,7 +208,7 @@
         activity: 39577141
         
 - alias: Movie Mode Start
-    trigger: 
+  trigger: 
     platform: state
     entity_id: input_boolean.movie_mode
     from: "off"
@@ -246,7 +246,7 @@
         brightness: 175
         
 - alias: Movie Mode Stop
-    trigger: 
+  trigger: 
     platform: state
     entity_id: input_boolean.movie_mode
     from: "on"

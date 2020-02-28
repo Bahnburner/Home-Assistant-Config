@@ -1,5 +1,5 @@
 - alias: Overnight Pantry Dim
-    trigger:
+  trigger:
     platform: time
     at: '22:00:00'
   condition:
@@ -14,7 +14,7 @@
       transition: 30
       
 - alias: Overnight Pantry Off
-    trigger:
+  trigger:
     platform: time
     at: '01:30:00'
   condition:
@@ -31,7 +31,7 @@
       entity_id: light.living_room
        
 - alias: Overnight Pantry ReDim
-    trigger:
+  trigger:
     platform: numeric_state
     entity_id: sensor.brightness_pantry
     above: 50
@@ -52,7 +52,7 @@
         transition: 30
 
 - alias: Overnight Pantry ReOff
-    trigger:
+  trigger:
     platform: numeric_state
     entity_id: sensor.brightness_pantry
     above: 50
