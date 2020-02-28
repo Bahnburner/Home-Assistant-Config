@@ -1,5 +1,4 @@
 default_view:
-  view: yes
   icon: mdi:home
   name: Hidden Ridge
   entities: 
@@ -17,7 +16,6 @@ default_view:
     - group.foyer
     - group.christmas
 lights:
-  view: yes
   icon: mdi:lightbulb
   name: Lights
   entities:
@@ -29,7 +27,6 @@ lights:
     - group.kitchen_lights
     - group.christmas
 media:
-  view: yes
   icon: mdi:cast
   name: Media Players
   entities:
@@ -54,7 +51,6 @@ media:
     - media_player.master_suite
     - media_player.house_party_protocol
 settings:
-  view: yes
   icon: mdi:settings
   name: Settings
   entities:
