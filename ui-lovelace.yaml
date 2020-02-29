@@ -555,39 +555,6 @@ views:
     title: Devices
     id: devices
     cards:
-#      - type: vertical-stack
-#        cards:
-#          - type: custom:mini-graph-card
-#            name: Titan
-#            entities:
-#              - sensor.cpu_usage
-#              - sensor.memory_usage
-#          - type: horizontal-stack
-#            cards:
-#              - type: gauge
-#                title: CPU
-#                entity: sensor.cpu_usage
-#                min: 0
-#                max: 100
-#              - type: gauge
-#                title: Memory
-#                entity: sensor.memory_usage
-#                min: 0
-#                max: 100
-#          - type: horizontal-stack
-#            cards:
-#              - type: gauge
-#                title: Plex (Z:)
-#                entity: sensor.disk_4
-#                name: 'Plex'
-#                min: 0
-#                max: 100
-#              - type: gauge
-#                title: Storage (Y:)
-#                entity: sensor.disk_3
-#                name: 'Storage'
-#                min: 0
-#                max: 100
       - type: vertical-stack
         cards:                
           - type: custom:mini-graph-card
@@ -612,17 +579,7 @@ views:
                 name: Transcodes
                 entity: sensor.tautulli_transcodes
                 min: 0
-                max: 10
-#          - type: horizontal-stack
-#            cards:
-#              - type: custom:mini-graph-card
-#                font_size: 50
-#                entities:
-#                 - sensor.rt_ac88u_kbyte_sec_received
-#              - type: custom:mini-graph-card
-#                font_size: 50
-#                entities:
-#                 - sensor.rt_ac88u_kbyte_sec_sent              
+                max: 10           
       - type: vertical-stack
         cards:
           - type: custom:mini-graph-card
@@ -683,37 +640,6 @@ views:
                 name: Downstream Bandwidth
               - entity: sensor.speedtest_up                
                 name: Upstream Bandwidth
-
-#          - type: history-graph
-#            title: MP Select Mini
-#            entities:
-#              - entity: sensor.mp_select_mini_actual_bed_temp
-#                name: 'Actual Bed Temp'
-#              - entity: sensor.mp_select_mini_actual_tool0_temp
-#                name: 'Actual Hotend Temp'
-#              - entity: sensor.mp_select_mini_target_bed_temp
-#                name: 'Target Bed Temp'
-#              - entity: sensor.mp_select_mini_target_tool0_temp
-#                name: 'Target Hotend Temp'            
-#          - type: conditional
-#            conditions:
-#              - entity: binary_sensor.mp_select_mini_printing
-#                state: "on"
-#            card:
-#              type: custom:useful-markdown-card
-#              title: 'Time Remaining:'
-#              content: >              
-#                {{ states.sensor.mp_select_mini_print_time_remaining.state }}
-#          - type: conditional
-#            conditions:
-#              - entity: binary_sensor.mp_select_mini_printing
-#                state: "on"
-#            card:
-#              type: gauge
-#              name: 'Job Progress'
-#              entity: sensor.mp_select_mini_print_job_percentage
-#              min: 0
-#              max: 100                
   - icon: mdi:settings
     title: Settings
     id: settings
