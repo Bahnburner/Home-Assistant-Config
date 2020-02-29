@@ -13,7 +13,7 @@ resources:
     type: js        
   - url: /local/resources/cards/mini-media-player-bundle.js?v=1.3.1
     type: module
-  - url: /local/resources/cards/mini-graph-card-bundle.js?v=0.8.2
+  - url: /local/resources/cards/mini-graph-card-bundle.js?v=0.9.3
     type: module    
 
 title: Hidden Ridge
