@@ -55,7 +55,6 @@ goodnight:
       data:
         brightness: 100
         transition: 15
-
     - service: input_boolean.turn_off
       entity_id: input_boolean.harmony_lighting_control
     - service_template: >
@@ -88,7 +87,7 @@ goodnight_timer_off:
     - delay: 
         minutes: 5
     - condition: template
-      value_template: '{{ states.sensor.brightness_lr.state <= 200 }}'
+      value_template: '{{ states.sensor.brightness_lr.state|int <= 200 }}'
     - service: light.turn_off
       entity_id: light.communal
     - service: light.turn_off
