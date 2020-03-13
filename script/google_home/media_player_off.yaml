@@ -12,6 +12,7 @@ media_player_off:
         - media_player.house_party_protocol
         - media_player.vizio_smartcast_2
         - media_player.vizio_v50
+        - media_player.nursery_tv
     - condition: state
       entity_id: media_player.mi_box_s
       state: 'playing'
