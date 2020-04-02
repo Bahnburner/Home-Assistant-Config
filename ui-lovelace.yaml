@@ -337,7 +337,7 @@ views:
           - type: picture-entity
             name: Office
             image: /local/resources/images/lovelace/office_edited.jpg
-            entity: light.desk_lamp
+            entity: light.office_lights
             tap_action: 
               action: toggle
           - type: entity-filter
