@@ -59,7 +59,6 @@ views:
             tap_action: 
               action: toggle   
           - type: entity-filter
-            show_header_toggle: false
             entities:
               - type: custom:mini-media-player
                 entity: media_player.plex_shield_android_tv
@@ -114,6 +113,7 @@ views:
               - "paused"
               - "on"
             show_empty: false
+            show_header_toggle: false
           - type: entity-filter
             entities:
               - type: custom:mini-media-player
@@ -124,6 +124,7 @@ views:
             state_filter:
               - "playing"
             show_empty: false
+            show_header_toggle: false
           - type: entity-filter
             entities:
               - type: custom:mini-media-player
@@ -134,6 +135,7 @@ views:
             state_filter:
               - "playing"
             show_empty: false
+            show_header_toggle: false
           - type: entity-filter
             entities:
               - type: custom:mini-media-player
@@ -145,6 +147,7 @@ views:
               - "playing"
             show_empty: false
           - type: entities
+            show_header_toggle: false
             entities:
               - entity: input_select.harmony
                 icon: mdi:television
