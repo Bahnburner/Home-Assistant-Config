@@ -59,6 +59,7 @@ views:
             tap_action: 
               action: toggle   
           - type: entity-filter
+            show_header_toggle: false
             entities:
               - type: custom:mini-media-player
                 entity: media_player.plex_shield_android_tv
@@ -113,8 +114,8 @@ views:
               - "paused"
               - "on"
             show_empty: false
-            show_header_toggle: false
           - type: entity-filter
+            show_header_toggle: false
             entities:
               - type: custom:mini-media-player
                 entity: media_player.livingroom_speaker
@@ -124,8 +125,8 @@ views:
             state_filter:
               - "playing"
             show_empty: false
-            show_header_toggle: false
           - type: entity-filter
+            show_header_toggle: false
             entities:
               - type: custom:mini-media-player
                 entity: media_player.livingroom_assistant
@@ -135,8 +136,8 @@ views:
             state_filter:
               - "playing"
             show_empty: false
-            show_header_toggle: false
           - type: entity-filter
+            show_header_toggle: false
             entities:
               - type: custom:mini-media-player
                 entity: media_player.party_mode
@@ -147,7 +148,6 @@ views:
               - "playing"
             show_empty: false
           - type: entities
-            show_header_toggle: false
             entities:
               - entity: input_select.harmony
                 icon: mdi:television
@@ -175,6 +175,7 @@ views:
             tap_action: 
               action: toggle
           - type: entity-filter
+            show_header_toggle: false
             entities:          
               - type: custom:mini-media-player
                 entity: media_player.plex_mibox_s
@@ -259,6 +260,7 @@ views:
             tap_action: 
               action: toggle
           - type: entity-filter
+            show_header_toggle: false
             entities:
               - type: custom:mini-media-player
                 entity: media_player.dining_room_speaker
@@ -345,6 +347,7 @@ views:
             tap_action: 
               action: toggle
           - type: entity-filter
+            show_header_toggle: false
             entities:
               - type: custom:mini-media-player
                 entity: media_player.mancave_tv
@@ -394,6 +397,7 @@ views:
 ##################################
 
       - type: entity-filter
+      show_header_toggle: false
         entities:
           - type: custom:mini-media-player
             entity: media_player.all_assistants
@@ -638,6 +642,7 @@ views:
     id: settings
     cards:
       - type: entity-filter
+        show_header_toggle: false
         entities:
           - entity: sensor.front_door_battery
             name: Front Door
