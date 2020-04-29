@@ -148,6 +148,7 @@ views:
               - "playing"
             show_empty: false
           - type: entities
+            show_header_toggle: false
             entities:
               - entity: input_select.harmony
                 icon: mdi:television
@@ -239,6 +240,7 @@ views:
               - "on"
             show_empty: false           
           - type: entities
+            show_header_toggle: false
             entities:
               - entity: input_select.bedroom_tv
                 icon: mdi:television
@@ -281,6 +283,7 @@ views:
               - "playing"
             show_empty: false 
           - type: entities
+            show_header_toggle: false
             entities:
               - switch.overhead_light
               - light.recessed_lights
@@ -289,6 +292,7 @@ views:
               - light.cabinet_lights
               - sensor.protect_kitchen
           - type: entities
+            show_header_toggle: false
             entities:
               - entity: light.foyer
                 name: Foyer Light 
@@ -331,6 +335,7 @@ views:
             tap_action: 
               action: toggle
           - type: entities
+            show_header_toggle: false
             entities:
               - entity: light.front_door
                 name: Entryway Light
@@ -375,6 +380,7 @@ views:
               - "playing"
             show_empty: false
           - type: entities
+            show_header_toggle: false
             entities:
               - entity: light.desk_lamp
                 name: Lights
@@ -437,18 +443,21 @@ views:
     id: lights
     cards:
       - type: entities
+        show_header_toggle: false
         title: Living Room
         entities:
           - light.floor_lamp_left
           - light.floor_lamp_right
           - light.table_lamp
       - type: entities
+        show_header_toggle: false
         title: Master Bedroom
         entities:
           - light.tristans_nightstand
           - light.crystals_nightstand
           - light.bedroom_floor_lamp
       - type: entities
+        show_header_toggle: false
         title: Kitchen
         entities:
           - switch.overhead_light
@@ -456,6 +465,7 @@ views:
           - light.recessed_lights
           - light.pantry
       - type: entities
+        show_header_toggle: false
         title: Exterior
         entities:
           - light.front_door
@@ -463,16 +473,19 @@ views:
           - light.rear_floods
           - switch.patio_lights
       - type: entities
+        show_header_toggle: false
         title: Foyer
         show_header_toggle: false
         entities:
           - light.foyer
       - type: entities
+        show_header_toggle: false
         title: Dining Room
         show_header_toggle: false
         entities:
           - light.dining_room
       - type: entities
+        show_header_toggle: false
         title: Accent Lights
         show_header_toggle: false
         entities:
@@ -685,6 +698,7 @@ views:
       - type: vertical-stack
         cards:
           - type: entities
+            show_header_toggle: false
             title: Administration
             show_header_toggle: false
             entities:    
