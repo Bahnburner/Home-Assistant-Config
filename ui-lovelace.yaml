@@ -59,6 +59,7 @@ views:
             tap_action: 
               action: toggle   
           - type: entity-filter
+            show_header_toggle: false
             entities:
               - type: custom:mini-media-player
                 entity: media_player.plex_shield_android_tv
