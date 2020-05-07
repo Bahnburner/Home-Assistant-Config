@@ -8,8 +8,6 @@
     condition: template
     value_template: '{{ states.binary_sensor.rain.state == "off" }}'
   action:
-    - service: automation.turn_off
-      entity_id: automation.exterior_front_dim
     - service: light.turn_off
       entity_id: light.front_door
       data:
