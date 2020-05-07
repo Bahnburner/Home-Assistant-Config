@@ -173,12 +173,12 @@
     - platform: homeassistant
       event: start
   action:
-    - service: light.turn_on
+    - service: input_number.set_value
       entity_id: 
-        - light.saved_brightness
-        - light.movie_mode
+        - input_number.saved_brightness
+        - input_number.movie_mode
       data:
-        brightness: 254
+        value: 254
 
 - alias: Harmony Cast Control Start
   trigger: 
