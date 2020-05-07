@@ -29,6 +29,7 @@ goodnight:
       entity_id: 
         - switch.overhead_light
         - switch.chandelier
+        - switch.christmas_lights        
     - service_template: >
           {% if states.media_player.master_suite.state == 'playing' %}
             {% if states.media_player.master_suite.attributes.media_content_id.startswith('http://smrtho.us/storage/whitenoise') %}
