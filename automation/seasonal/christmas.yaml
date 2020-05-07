@@ -24,9 +24,6 @@
   trigger:
     - platform: time
       at: '23:59:55'
-    - platform: state
-      entity_id: input_boolean.goodnight_initiated
-      to: 'on'
   condition: 
     condition: template
     value_template: '{{ now().month == 12 }}'      
