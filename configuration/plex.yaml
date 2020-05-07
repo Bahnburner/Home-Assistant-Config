@@ -1,6 +1,5 @@
 host: 10.0.0.109
 token: !secret plex_token
 media_player:
-  show_all_controls: false
   use_episode_art: true
 
