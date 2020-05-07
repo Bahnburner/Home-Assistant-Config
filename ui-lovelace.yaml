@@ -475,19 +475,16 @@ views:
       - type: entities
         show_header_toggle: false
         title: Foyer
-        show_header_toggle: false
         entities:
           - light.foyer
       - type: entities
         show_header_toggle: false
         title: Dining Room
-        show_header_toggle: false
         entities:
           - light.dining_room
       - type: entities
         show_header_toggle: false
         title: Accent Lights
-        show_header_toggle: false
         entities:
           - light.cabinet_lights
           - light.bias_light
@@ -700,7 +697,6 @@ views:
           - type: entities
             show_header_toggle: false
             title: Administration
-            show_header_toggle: false
             entities:    
               - entity: input_boolean.ghh_disabler
                 name: "Disable Google Home Hub"
