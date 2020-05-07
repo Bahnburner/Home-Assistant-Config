@@ -22,8 +22,7 @@ frontend: !include ./configuration/frontend.yaml
 history: !include ./configuration/history.yaml
 logbook: !include ./configuration/logbook.yaml
 logger: !include ./configuration/logger.yaml
-lovelace:
-  mode: yaml
+lovelace: !include ./configuration/lovelace.yaml
 map:
 recorder: !include ./configuration/recorder.yaml
 sun:
