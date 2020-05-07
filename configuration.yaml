@@ -33,12 +33,9 @@ asuswrt: !include ./configuration/asuswrt.yaml
 automation: !include_dir_merge_list automation
 binary_sensor: !include ./configuration/binary_sensor.yaml
 camera: !include ./configuration/camera.yaml
-#cast: !include ./configuration/cast.yaml
 climate: !include ./configuration/climate.yaml
 cover: !include ./configuration/cover.yaml
 device_tracker: !include ./configuration/device_tracker.yaml
-#google: !include ./configuration/calendar.yaml
-#google_assistant: !include ./configuration/google_assistant.yaml
 group: !include ./configuration/group.yaml
 http: !include ./configuration/http.yaml
 hue: !include ./configuration/hue.yaml
@@ -55,8 +52,6 @@ nest: !include ./configuration/nest.yaml
 notify: !include ./configuration/notify.yaml
 octoprint: !include ./configuration/octoprint.yaml
 person:
-pi_hole: !include ./configuration/pi_hole.yaml
-#remote: !include ./configuration/remote.yaml
 script: !include_dir_merge_named script
 sensor: !include ./configuration/sensor.yaml
 shell_command: !include ./configuration/shell_command.yaml
