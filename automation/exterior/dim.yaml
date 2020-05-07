@@ -3,8 +3,6 @@
     platform: time
     at: '00:00:00'
   action:
-    - service: automation.turn_on
-      entity_id: automation.exterior_front_dim
     - service: light.turn_on
       entity_id:  
         - light.front_door
@@ -12,6 +10,6 @@
         - light.rear_floods
       data:
         brightness: 100
-        transition: 300      
+        transition: 15      
     - service: switch.turn_off
       entity_id: switch.patio_lights

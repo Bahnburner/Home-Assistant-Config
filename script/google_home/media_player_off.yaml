@@ -10,11 +10,8 @@ media_player_off:
         - media_player.all_speakers
         - media_player.garage_speaker
         - media_player.house_party_protocol
-        - media_player.vizio_smartcast_2
-        - media_player.vizio_v50
+        - media_player.bedroom_tv
         - media_player.nursery_tv
-    - condition: state
-      entity_id: media_player.mi_box_s
-      state: 'playing'
-    - service: media_player.turn_off
-      entity_id: media_player.mi_box_s
+        - media_player.nursery_assistant
+        - media_player.mancave_tv
+        
