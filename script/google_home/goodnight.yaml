@@ -3,8 +3,6 @@ goodnight:
     - service: frontend.set_theme
       data:
         name: 'dark_theme'
-    - service: input_boolean.turn_on
-      entity_id: input_boolean.goodnight_initiated
     - service: climate.set_temperature
       entity_id: climate.downstairs_hallway
       data:
@@ -13,28 +11,24 @@ goodnight:
     - service: script.door_status_check
     - service: cover.close_cover
       entity_id: cover.garage_door_opener
+    - service: remote.turn_off
+      entity_id: remote.livingroom
     - service: light.turn_off
       entity_id: light.bias_light
-    - service: remote.turn_off
-      entity_id: remote.livingroom  
-    - service: script.turn_off
-      entity_id: script.goodnight_timer_off
-    - service: automation.turn_off
-      entity_id: 
-        - automation.kitchen_uplighting_weekends
-        - automation.kitchen_uplighting_weekdays
     - service: script.media_player_off
     - service: script.fan_off
     - service: light.turn_off
       entity_id:
         - light.foyer
-        - light.master_hallway
         - light.dining_room
-        - light.stairway
+        - light.recessed_lights
+        - light.desk_lamp
       data:
-        transition: 30  
+        transition: 30
     - service: switch.turn_off
-      entity_id: switch.patio_lights
+      entity_id: 
+        - switch.overhead_light
+        - switch.chandelier
     - service_template: >
           {% if states.media_player.master_suite.state == 'playing' %}
             {% if states.media_player.master_suite.attributes.media_content_id.startswith('http://smrtho.us/storage/whitenoise') %}
@@ -45,77 +39,17 @@ goodnight:
           {% else %}
             script.whitenoise
           {% endif %}
-    - service: automation.turn_on
+    - service: automation.trigger
       entity_id: automation.exterior_front_dim
-    - service: light.turn_on
-      entity_id:
-        - light.front_door
-        - light.front_floods
-        - light.rear_floods
-      data:
-        brightness: 100
-        transition: 15
     - service: input_boolean.turn_off
       entity_id: input_boolean.harmony_lighting_control
-    - service_template: >
-        {% if states.light.pantry.state == 'on' and states.sensor.decimal_time.state|float <= 1.50 %}
-          script.pantry_lights
-        {% else %}
-          script.deadend
-        {% endif %}
-    - service: script.goodnight_livingroom
-    - service: script.goodnight_bedroom
-    - service: light.turn_off
-      entity_id:
-        - light.recessed_lights
-        - light.desk_lamp
-    - service: switch.turn_off
-      entity_id:
-        - switch.chandelier
-        - switch.overhead_light
-    - delay:
-        seconds: 30
-    - service: automation.turn_on
-      entity_id: 
-        - automation.kitchen_uplighting_weekends
-        - automation.kitchen_uplighting_weekdays
-    - service: script.turn_on
-      entity_id: script.goodnight_timer_off
-
-goodnight_timer_off:
-  sequence:
-    - delay: 
-        minutes: 5
-    - condition: template
-      value_template: '{{ states.sensor.brightness_lr.state|int <= 200 }}'
-    - service: light.turn_off
-      entity_id: light.communal
-    - service: light.turn_off
-      entity_id: light.pantry
-    - service: input_boolean.turn_off
-      entity_id: input_boolean.goodnight_initiated
-
-goodnight_livingroom:
-  sequence:
-    - condition: state
-      entity_id: light.living_room
-      state: 'on'
+    - service: script.pantry_lights
     - service: light.turn_on
       entity_id: light.living_room
       data:
         color_temp: 500
         brightness: 100
-        transition: 30
-    - service: light.turn_on
-      entity_id:
-        - light.cabinet_lights
-      data:
-        color_temp: 450
-        brightness: 100
-        transition: 30
-
-goodnight_bedroom:
-  sequence: 
+        transition: 30       
     - service: light.turn_on
       entity_id: light.master_bedroom
       data:
@@ -123,8 +57,18 @@ goodnight_bedroom:
         transition: 30
       data_template:
         brightness: > 
-          {% if states.light.master_bedroom.state == 'off' or states.sensor.brightness_lr.state|int < 50 %}
+          {% if states.light.master_bedroom.state == 'off' %}
+            50
+          {% elif states.light.master_bedroom.attributes.brightness|int < 50 %}
             50
           {% else %}
             100
           {% endif %}
+    - wait_template: "{{ is_state('light.master_bedroom', 'off') }}"
+      timeout: '00:05:00'
+    - condition: template
+      value_template: '{{ states.sensor.brightness_lr.state|int <= 200 }}'
+    - service: light.turn_off
+      entity_id: light.living_room
+    - service: light.turn_off
+      entity_id: light.cabinet_lights
