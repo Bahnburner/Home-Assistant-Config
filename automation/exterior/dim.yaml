@@ -10,6 +10,6 @@
         - light.rear_floods
       data:
         brightness: 100
-        transition: 300      
+        transition: 15      
     - service: switch.turn_off
       entity_id: switch.patio_lights
