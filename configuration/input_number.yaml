@@ -10,3 +10,9 @@ movie_mode:
   min: 0
   max: 254
   step: 1
+saved_brightness:
+  name: Saved Brightness
+  initial: 254
+  min: 0
+  max: 254
+  step: 1
