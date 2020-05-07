@@ -1,0 +1,18 @@
+mode: yaml
+resources:
+  - url: /local/resources/cards/card-tools.js?track=true
+    type: js
+  - url: /local/resources/cards/gauge-card.js?v=2
+    type: js
+  - url: /local/resources/cards/bignumber-card.js?v=1
+    type: js
+  - url: /local/resources/cards/slider-entity-row.js?v=1
+    type: js
+  - url: /local/resources/cards/monster-card.js?v=1
+    type: js    
+  - url: /local/resources/cards/useful-markdown-card.js?v=1
+    type: js        
+  - url: /local/resources/cards/mini-media-player-bundle.js?v=1.3.1
+    type: module
+  - url: /local/resources/cards/mini-graph-card-bundle.js?v=0.9.3
+    type: module    
