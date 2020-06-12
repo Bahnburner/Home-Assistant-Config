@@ -1,6 +1,5 @@
 server_port: 8123
 ip_ban_enabled: True
-external_url: https://smrtho.us
 login_attempts_threshold: 3
 ssl_certificate: /certbot/live/smrtho.us/fullchain.pem
 ssl_key: /certbot/live/smrtho.us/privkey.pem
