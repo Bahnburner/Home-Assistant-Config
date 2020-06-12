@@ -16,3 +16,13 @@
         - light.rear_floods
     - service: switch.turn_off
       entity_id: switch.patio_lights
+    - delay:
+        seconds: 30
+    - service: light.turn_off
+      entity_id: light.front_door
+    - service: light.turn_off
+      entity_id: 
+        - light.front_floods
+        - light.rear_floods        
+        
+      
