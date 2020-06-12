@@ -1,5 +1,6 @@
 server_port: 8123
-base_url: smrtho.us
+external_url: https://smrtho.us
+internal_url: http://10.0.0.110:8123
 ip_ban_enabled: True
 login_attempts_threshold: 3
 ssl_certificate: /certbot/live/smrtho.us/fullchain.pem
