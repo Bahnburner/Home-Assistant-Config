@@ -55,6 +55,13 @@
     - condition: state
       entity_id: input_boolean.movie_mode
       state: 'off'
+    - condition: template
+      value_template: >
+        {% if trigger.entity_id == "media_player.plex_shield_android_tv" %}
+          {{ states.media_player.plex_shield_android_tv.attributes.app_name in ["Movies", "UHD Movies"] and states.media_player.plex_shield_android_tv.attributes.media_content_rating in ["R", "NC-17", "Unrated", "TV-MA"]}}
+        {% else %}}
+          true
+        {% endif %}
   action:
     - service: input_number.set_value
       entity_id: input_number.harmony_dim
