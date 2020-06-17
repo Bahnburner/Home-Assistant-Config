@@ -58,7 +58,7 @@
     - condition: template
       value_template: >
         {% if trigger.entity_id == "media_player.plex_shield_android_tv" %}
-          {{ states.media_player.plex_shield_android_tv.attributes.app_name in ["Movies", "UHD Movies"] and states.media_player.plex_shield_android_tv.attributes.media_content_rating in ["R", "NC-17", "Unrated", "TV-MA"]}}
+          {{ states.media_player.plex_shield_android_tv.state = "Playing" and states.media_player.plex_shield_android_tv.attributes.app_name in ["Movies", "UHD Movies"] and states.media_player.plex_shield_android_tv.attributes.media_content_rating in ["R", "NC-17", "Unrated", "TV-MA"]}}
         {% else %}}
           true
         {% endif %}
