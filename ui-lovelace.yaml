@@ -337,7 +337,7 @@ views:
           - type: entities
             show_header_toggle: false
             entities:
-              - entity: light.front_door
+              - entity: light.frontdoor
                 name: Entryway Light
               - light.front_floods
               - light.rear_floods
