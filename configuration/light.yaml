@@ -1,3 +1,9 @@
 - platform: osramlightify
   host: 10.0.0.214
   allow_lightify_groups: true
+- platform: group
+  name: Front Floods
+  entities:
+    - light.front_flood_light_1
+    - light.front_flood_light_2
+    
