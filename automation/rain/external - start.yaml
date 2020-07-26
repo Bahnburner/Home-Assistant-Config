@@ -17,7 +17,7 @@
       state: 'on'
   action:
     - service: light.turn_on
-      entity_id: light.front_door
+      entity_id: light.frontdoor
       data: 
         brightness: 254
         transition: 60
