@@ -13,7 +13,7 @@
         brightness: 255
     - service: light.turn_on
       entity_id:  
-        - light.front_door      
+        - light.frontdoor      
       data:
         brightness: 255
         transition: 300
