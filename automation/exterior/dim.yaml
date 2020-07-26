@@ -5,7 +5,7 @@
   action:
     - service: light.turn_on
       entity_id:  
-        - light.front_door
+        - light.frontdoor
         - light.front_floods
         - light.rear_floods
       data:
