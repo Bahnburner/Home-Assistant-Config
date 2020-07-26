@@ -23,7 +23,7 @@ front_door_entranceway_motion:
       below: -5
     - service: light.turn_on
       entity_id: 
-        - light.front_door
+        - light.frontdoor
       data:
         brightness: 100
         transition: 30
