@@ -9,8 +9,8 @@
 - platform: group
   name: Rear Floods
   entities:
-    - light.rear_flood_1
-    - light.rear_flood_2
+    - light.rear_flood_light_1
+    - light.rear_flood_light_2
 - platform: group
   name: Flood Lights
   entities:
