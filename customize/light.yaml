@@ -27,8 +27,8 @@ light.bedroom_floor_lamp:
 light.pantry:
   entity_picture: /local/resources/images/devices/hue.png
   icon: mdi:door
-light.front_door:
-  entity_picture: /local/resources/images/devices/hue.png
+light.frontdoor:
+  entity_picture: /local/resources/images/devices/smartthings.png
   icon: mdi:ceiling-light
 light.cabinet_lights:
   entity_picture: /local/resources/images/devices/hue.png
@@ -76,7 +76,7 @@ light.rear_floods:
   icon: mdi:spotlight-beam
 light.bias_light:
   friendly_name: "Bias Light"
-  entity_picture: /local/resources/images/devices/lightify.png
+  entity_picture: /local/resources/images/devices/smartthings.png
 switch.patio_lights:
   entity_picture: /local/resources/images/devices/smartthings.png
   icon: mdi:ceiling-light
