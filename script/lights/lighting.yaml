@@ -122,7 +122,7 @@ exterior_lights_on:
   sequence:
     service: light.turn_on
     entity_id: 
-      - light.front_door
+      - light.frontdoor
       - light.front_floods
       - light.rear_floods
     data_template:
@@ -137,7 +137,7 @@ exterior_lights_off:
   sequence: 
     service: light.turn_off
     entity_id:
-      - light.front_door
+      - light.frontdoor
       - light.front_floods
       - light.rear_floods
       
