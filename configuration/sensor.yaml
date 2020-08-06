@@ -228,3 +228,6 @@
 #  file_path: /config/speedtest_sensor.json
 #  value_template: '{{ (value_json.upload.bandwidth / 131072) | round(2) }}'
 #  unit_of_measurement: "mbps"
+- platform: nws_alerts
+  zone_id: 'TNC157'
+  name: Severe Weather Alerts
