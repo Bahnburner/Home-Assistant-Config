@@ -1,4 +1,1 @@
-bridges:
-  - host: 10.0.0.208
-    allow_unreachable: true
-    allow_hue_groups: true
+
