@@ -647,7 +647,7 @@ views:
             points_per_hour: 60
             entities: 
               - entity: sensor.load_5m
-  - icon: mdi:settings
+  - icon: mdi:cog
     title: Settings
     id: settings
     cards:
