@@ -36,7 +36,6 @@ climate: !include ./configuration/climate.yaml
 device_tracker: !include ./configuration/device_tracker.yaml
 group: !include ./configuration/group.yaml
 http: !include ./configuration/http.yaml
-hue: !include ./configuration/hue.yaml
 ifttt: !include ./configuration/ifttt.yaml
 input_boolean: !include ./configuration/input_boolean.yaml
 input_number: !include ./configuration/input_number.yaml
