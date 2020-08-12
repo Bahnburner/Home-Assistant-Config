@@ -1,6 +1,7 @@
 
 - platform: androidtv
   name: Shield TV
+  scan_interval: 30
   get_sources: false
   host: 10.0.0.38
   apps: 
