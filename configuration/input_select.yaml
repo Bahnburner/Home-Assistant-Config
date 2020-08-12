@@ -10,7 +10,12 @@ bedroom_tv:
   name: Bedroom TV
   options:
     - Select Input
-    - Watch Smartcast
-    - Play Switch
+    - YouTubeTV
+    - YouTube
+    - Netflix
+    - Hulu
+    - Disney+
+    - Plex
+    - Prime Video
     - Power Off
   icon: mdi:monitor

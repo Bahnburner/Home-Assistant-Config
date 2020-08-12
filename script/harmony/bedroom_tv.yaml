@@ -1,35 +1,67 @@
-bedroom_tv_directv: 
-  sequence: 
-    - service: media_player.turn_on
-      entity_id: media_player.vizio_smartcast_2
-    - service: media_player.turn_on
-      entity_id: media_player.bedroom_directv
-    - service: media_player.select_source
-      entity_id: media_player.vizio_smartcast_2
-      data:
-        source: HDMI-2
-
-bedroom_tv_smartcast: 
+bedroom_tv_youtubetv: 
   sequence: 
     - service: media_player.turn_on
       entity_id: media_player.vizio_smartcast_2    
     - service: media_player.select_source
       entity_id: media_player.vizio_smartcast_2
       data:
-        source: cast
-      
-bedroom_tv_switch: 
+        source: YouTubeTV
+
+bedroom_tv_youtube: 
+  sequence: 
+    - service: media_player.turn_on
+      entity_id: media_player.vizio_smartcast_2    
+    - service: media_player.select_source
+      entity_id: media_player.vizio_smartcast_2
+      data:
+        source: YouTube
+
+bedroom_tv_netflix: 
+  sequence: 
+    - service: media_player.turn_on
+      entity_id: media_player.vizio_smartcast_2    
+    - service: media_player.select_source
+      entity_id: media_player.vizio_smartcast_2
+      data:
+        source: Netflix
+
+bedroom_tv_hulu: 
+  sequence: 
+    - service: media_player.turn_on
+      entity_id: media_player.vizio_smartcast_2    
+    - service: media_player.select_source
+      entity_id: media_player.vizio_smartcast_2
+      data:
+        source: Hulu
+
+bedroom_tv_disneyplus: 
   sequence: 
     - service: media_player.turn_on
       entity_id: media_player.vizio_smartcast_2 
     - service: media_player.select_source
       entity_id: media_player.vizio_smartcast_2
       data:
-        source: HDMI-3
-      
-bedroom_tv_poweroff: 
-  sequence:
+        source: Disney+
+
+bedroom_tv_plex: 
+  sequence: 
     - service: media_player.turn_on
-      entity_id: media_player.vizio_smartcast_2  
+      entity_id: media_player.vizio_smartcast_2    
+    - service: media_player.select_source
+      entity_id: media_player.vizio_smartcast_2
+      data:
+        source: Plex
+
+bedroom_tv_primevideo: 
+  sequence: 
+    - service: media_player.turn_on
+      entity_id: media_player.vizio_smartcast_2    
+    - service: media_player.select_source
+      entity_id: media_player.vizio_smartcast_2
+      data:
+        source: Prime Video
+
+bedroom_tv_poweroff: 
+  sequence: 
     - service: media_player.turn_off
       entity_id: media_player.vizio_smartcast_2

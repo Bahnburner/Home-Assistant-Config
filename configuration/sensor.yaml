@@ -42,7 +42,7 @@
         {% elif states.media_player.vizio_smartcast_2.attributes.source == "hdmi3" %}
           Play Nintendo Switch
         {% elif states.media_player.vizio_smartcast_2.attributes.source == "cast" %}
-          Watch Smartcast
+          {{states.media_player.vizio_smartcast_2.attributes.app_name}}
         {% elif states.media_player.vizio_smartcast_2.attributes.source == "Unknown" %}
           Unknown
         {% else %}
@@ -144,16 +144,7 @@
       entity_id: sensor.ender_3_pro_job_percentage
       value_template: '{{ states.sensor.ender_3_pro_job_percentage.state|int }}'
       friendly_name: 'Job Progress'
-      unit_of_measurement: '%'      
-#    mp_select_mini_print_time_remaining:
-#      value_template: >
-#        {% set minutes = (states.sensor.mp_select_mini_time_remaining.state|int/60) | int %}{% set hours = (minutes/60) |int %}{% set minutes = minutes-(hours*60)%}{% set seconds = states.sensor.mp_select_mini_time_remaining.state|int - (minutes*60) - ((hours*60)*60) %}{%if hours==0 %}{% elif hours==1%}{{hours}} hour, {% else %}{{hours}} hours, {% endif %}{%if minutes==0 %}{% elif minutes==1%}{{minutes}} minute{% else %}{{minutes}} minutes{% endif %}{% if hours == 0 and minutes == 0 and seconds > 30 %}Less than a minute{%elif hours == 0 and minutes == 0 and seconds == 0 and states.sensor.mp_select_mini_print_job_percentage.state == "100"%}Print Complete{%elif states.sensor.mp_select_mini_time_remaining.state == "unknown" %}Calculating...{%elif hours == 0 and minutes == 0 and seconds <= 30 and states.sensor.mp_select_mini_time_remaining != "unknown" %}A few seconds{%endif%}
-#      friendly_name: 'Time Remaining'
-#    mp_select_mini_print_job_percentage:
-#      entity_id: sensor.mp_select_mini_job_percentage
-#      value_template: '{{ states.sensor.mp_select_mini_job_percentage.state|int }}'
-#      friendly_name: 'Job Progress'
-#      unit_of_measurement: '%'       
+      unit_of_measurement: '%'          
 - platform: random
   name: whitenoise
   minimum: 1
@@ -164,70 +155,10 @@
   value_template: '{{ value_json.body }}'
 - platform: dnsip
   scan_interval: 300
-#- platform: rest
-#  resource: http://10.0.0.109:61209/api/3/quicklook/cpu
-#  name: "CPU Usage"
-#  value_template: '{{ value_json.cpu }}'
-#  unit_of_measurement: '%'
-#  scan_interval: 3
-#- platform: rest
-#  resource: http://10.0.0.109:61209/api/3/mem/percent
-#  name: "Memory Usage"
-#  value_template: '{{ value_json.percent }}'
-#  unit_of_measurement: '%'
-#  scan_interval: 3
-#- platform: rest
-#  resource: http://10.0.0.109:61209/api/3/fs
-#  name: Disk 0
-#  value_template: '{{ value_json[0].percent| round(1) }}'
-#  unit_of_measurement: '%'  
-#- platform: rest
-#  resource: http://10.0.0.109:61209/api/3/fs
-#  name: Disk 1
-#  value_template: '{{ value_json[1].percent| round(1) }}'
-#  unit_of_measurement: '%'  
-#- platform: rest
-#  resource: http://10.0.0.109:61209/api/3/fs
-#  name: Disk 2
-#  value_template: '{{ value_json[2].percent| round(1) }}'
-#  unit_of_measurement: '%'
-#- platform: rest
-#  resource: http://10.0.0.109:61209/api/3/fs
-#  name: Disk 3
-#  value_template: '{{ value_json[3].percent| round(1) }}'
-#  unit_of_measurement: '%'
-#- platform: rest
-#  resource: http://10.0.0.109:61209/api/3/fs
-#  name: Disk 4
-#  value_template: '{{ value_json[4].percent| round(1) }}'
-#  unit_of_measurement: '%'
-#- platform: rest
-#  resource: http://10.0.0.109:61209/api/3/fs
-#  name: Disk 5
-#  value_template: '{{ value_json[5].percent| round(1) }}'
-#  unit_of_measurement: '%'
-#- platform: rest
-#  resource: http://10.0.0.109:61209/api/3/fs
-#  name: Disk 6 
-#  value_template: '{{ value_json[6].percent| round(1) }}'
-#  unit_of_measurement: '%'    
 - platform: tautulli
   api_key: !secret tautulli
   host: 10.0.0.109
   scan_interval: 5
-- platform: systemmonitor
-  resources:
-   - type: load_5m
-- platform: file
-  name: Speedtest Down
-  file_path: /config/speedtest_sensor.json
-  value_template: '{{ (value_json.download.bandwidth / 131072) | round(2) }}'
-  unit_of_measurement: "mbps"
-#- platform: file
-#  name: Speedtest Up
-#  file_path: /config/speedtest_sensor.json
-#  value_template: '{{ (value_json.upload.bandwidth / 131072) | round(2) }}'
-#  unit_of_measurement: "mbps"
 - platform: nws_alerts
   zone_id: 'TNC157'
   name: Severe Weather Alerts

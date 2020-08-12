@@ -5,10 +5,20 @@
     from: 'Select Input'
   action:
     - service_template: >
-          {% if states.input_select.bedroom_tv.state == "Watch Smartcast" %}
-            script.bedroom_tv_smartcast
-          {% elif states.input_select.bedroom_tv.state == "Play Switch" %}
-            script.bedroom_tv_switch
+          {% if states.input_select.bedroom_tv.state == "YouTubeTV" %}
+            script.bedroom_tv_youtubetv
+          {% elif states.input_select.bedroom_tv.state == "YouTube" %}
+            script.bedroom_tv_youtube
+          {% elif states.input_select.bedroom_tv.state == "Netflix" %}
+            script.bedroom_tv_netflix
+          {% elif states.input_select.bedroom_tv.state == "Hulu" %}
+            script.bedroom_tv_hulu
+          {% elif states.input_select.bedroom_tv.state == "Disney+" %}
+            script.bedroom_tv_disneyplus
+          {% elif states.input_select.bedroom_tv.state == "Plex" %}
+            script.bedroom_tv_plex
+          {% elif states.input_select.bedroom_tv.state == "Prime Video" %}
+            script.bedroom_tv_primevideo
           {% elif states.input_select.bedroom_tv.state == "Power Off" %}
             script.bedroom_tv_poweroff
           {% else %}
