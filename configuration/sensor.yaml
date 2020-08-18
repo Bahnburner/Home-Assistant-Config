@@ -162,3 +162,5 @@
 - platform: nws_alerts
   zone_id: 'TNC157'
   name: Severe Weather Alerts
+
+- platform: plex_assistant
