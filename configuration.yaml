@@ -49,6 +49,7 @@ nest: !include ./configuration/nest.yaml
 notify: !include ./configuration/notify.yaml
 octoprint: !include ./configuration/octoprint.yaml
 person:
+plex_assistant: !include plex_assistant.yaml
 script: !include_dir_merge_named script
 sensor: !include ./configuration/sensor.yaml
 shell_command: !include ./configuration/shell_command.yaml
