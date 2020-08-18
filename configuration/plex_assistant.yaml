@@ -1,5 +1,5 @@
   url: 'http://10.0.0.109:32400'
   token: !secret plex_token
-  default_cast: 'Livingroom TV'
+  default_cast: 'Living Room TV'
   language: 'en'
   tts_errors: true
