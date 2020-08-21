@@ -57,8 +57,8 @@
       state: 'off'
     - condition: template
       value_template: >
-        {% if states.media_player.plex_shield_android_tv.state == "Playing" %}
-          {{ states.media_player.plex_shield_android_tv.state == "Playing" and states.media_player.plex_shield_android_tv.attributes.app_name in ["Movies", "UHD Movies"] and states.media_player.plex_shield_android_tv.attributes.media_content_rating in ["PG-13", "R", "NC-17", "Unrated", "TV-MA"]}}
+        {% if states.media_player.plex_shield_android_tv.state == "playing" %}
+          {{ states.media_player.plex_shield_android_tv.state == "playing" and states.media_player.plex_shield_android_tv.attributes.app_name in ["Movies", "UHD Movies"] and states.media_player.plex_shield_android_tv.attributes.media_content_rating in ["PG-13", "R", "NC-17", "Unrated", "TV-MA"]}}
         {% else %}}
           true
         {% endif %}
