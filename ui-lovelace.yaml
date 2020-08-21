@@ -346,7 +346,7 @@ views:
       - type: vertical-stack
         cards:
           - type: picture-entity
-            name: Office
+            name: Man Cave
             image: /local/resources/images/lovelace/office_edited.jpg
             entity: group.office_lights
             tap_action: 
@@ -464,6 +464,12 @@ views:
           - switch.chandelier
           - light.recessed_lights
           - light.pantry
+      - type: entities
+        show_header_toggle: false
+        title: Man Cave
+        entities:
+          - light.desk_lamp
+          - light.man_cave_floor_lamp
       - type: entities
         show_header_toggle: false
         title: Exterior
