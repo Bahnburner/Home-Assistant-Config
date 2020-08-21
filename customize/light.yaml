@@ -34,6 +34,8 @@ light.cabinet_lights:
   entity_picture: /local/resources/images/devices/hue.png
 light.desk_lamp:
   entity_picture: /local/resources/images/devices/hue.png
+light.man_cave_floor_lamp:
+  entity_picture: /local/resources/images/devices/hue.png
 light.dining_room:
   entity_picture: /local/resources/images/devices/hue.png
 light.dining_room_left:
