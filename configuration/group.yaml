@@ -257,4 +257,4 @@ disable_all_automations:
   - automation.update_available
 office_lights:
   - light.desk_lamp
-  - light.office_floor_lamp
+  - light.man_cave_floor_lamp
