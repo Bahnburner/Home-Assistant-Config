@@ -11,11 +11,6 @@
       data:
         data:
           tag: 'alarm-notification'
-          target:
-            - Tristans Phone
-            - Tristans Work Laptop
-            - Crystals Phone
-            - Tristans Laptop  
           title: "Home Assistant Alert"
           url: "https://smrtho.us"  
       data_template:
