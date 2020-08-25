@@ -24,10 +24,6 @@
     data:
       data:
         tag: 'alarm-notification'
-        target:
-          - tristans phone
-          - tristans work laptop
-          - crystals phone
         title: "Home Assistant Alert"
         url: "https://smrtho.us"
         actions:
