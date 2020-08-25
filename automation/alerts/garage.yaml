@@ -38,9 +38,6 @@
         title: "Home Assistant Alert"
         url: "https://smrtho.us"
         message: "The Garage Door is open."
-        target:
-          - Tristans Phone
-          - Crystals Phone
         actions:
         - action: open
           icon: "/local/resources/images/notifications/chrome.png"
