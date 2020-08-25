@@ -16,4 +16,8 @@
   entities:
     - light.front_floods
     - light.rear_floods
-    
+ - platform: group
+  name: Flood Lights
+  entities:
+    - light.desk_lamp
+    - light.man_cave_floor_lamp
