@@ -348,7 +348,7 @@ views:
           - type: picture-entity
             name: Man Cave
             image: /local/resources/images/lovelace/office_edited.jpg
-            entity: group.office_lights
+            entity: light.mancave_lights
             tap_action: 
               action: toggle
           - type: entity-filter
@@ -382,7 +382,7 @@ views:
           - type: entities
             show_header_toggle: false
             entities:
-              - entity: group.office_lights
+              - entity: light.mancave_lights
                 name: Lights
                 type: custom:slider-entity-row
                 hide_toggle: true
