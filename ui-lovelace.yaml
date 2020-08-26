@@ -386,6 +386,7 @@ views:
                 name: Lights
                 type: custom:slider-entity-row
                 hide_toggle: true
+                icon: /local/resources/images/devices/hue.png
               - climate.upstairs_hallway
               - sensor.protect_up            
       - type: conditional
