@@ -21,3 +21,8 @@
   entities:
     - light.desk_lamp
     - light.man_cave_floor_lamp
+    - light.desk_light
+light:
+  - platform: switch
+    name: Desk Light
+    entity_id: switch.desk_light
