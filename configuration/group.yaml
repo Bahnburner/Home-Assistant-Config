@@ -258,3 +258,4 @@ disable_all_automations:
 office_lights:
   - light.desk_lamp
   - light.man_cave_floor_lamp
+  - light.desk_light
