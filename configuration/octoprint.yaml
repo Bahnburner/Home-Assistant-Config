@@ -4,7 +4,6 @@
   name: "Ender 3 Pro"
   bed: true
   number_of_tools: 1
-  scan_interval: 10
   sensors:
     monitored_conditions:
       - 'Current State'
