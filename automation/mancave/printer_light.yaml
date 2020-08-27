@@ -10,7 +10,7 @@
 - alias: Printer Light Off
   trigger:
     platform: template
-    value_template: '{{ (states.sensor.ender_3_pro_target_bed_temp.state | int == 32.0 and states.sensor.ender_3_pro_target_tool0_temp.state | int == 32.0 and states.sensor.ender_3_pro_actual_bed_temp.state | int < 100 and states.sensor.ender_3_pro_actual_tool0_temp.state | int < 100 and states.sensor.ender_3_pro_current_state.state != "Printing" }}'
+    value_template: '{{ states.sensor.ender_3_pro_target_bed_temp.state | int == 32.0 and states.sensor.ender_3_pro_target_tool0_temp.state | int == 32.0 and states.sensor.ender_3_pro_actual_bed_temp.state | int < 100 and states.sensor.ender_3_pro_actual_tool0_temp.state | int < 100 and states.sensor.ender_3_pro_current_state.state != "Printing" }}'
   action:    
     service: switch.turn_off
     entity_id: switch.printer_light
