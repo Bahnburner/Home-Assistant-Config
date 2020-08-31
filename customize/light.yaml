@@ -45,13 +45,13 @@ light.dining_room_right:
   hidden: true
   entity_picture: /local/resources/images/devices/hue.png
 light.foyer:
-  entity_picture: /local/resources/images/devices/hue.png
+  entity_picture: /local/resources/images/devices/smartthings.png
 light.foyer_left:
   hidden: true
-  entity_picture: /local/resources/images/devices/hue.png
+  entity_picture: /local/resources/images/devices/smartthings.png
 light.foyer_right:
   hidden: true
-  entity_picture: /local/resources/images/devices/hue.png
+  entity_picture: /local/resources/images/devices/smartthings.png
 light.recessed_lights:
   entity_picture: /local/resources/images/devices/smartthings.png
   icon: mdi:spotlight-beam
