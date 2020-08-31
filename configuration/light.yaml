@@ -22,6 +22,11 @@
     - light.desk_lamp
     - light.man_cave_floor_lamp
     - light.desk_light
+- platform: group
+  name: Foyer Light
+  entities:
+    - light.foyer_left
+    - light.foyer_right
 - platform: switch
   name: Desk Light
   entity_id: switch.desk_light
