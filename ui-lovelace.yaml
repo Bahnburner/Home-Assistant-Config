@@ -365,7 +365,7 @@ views:
                 entity: media_player.plex_mibox_s
                 icon: mdi:plex
                 group: true
-                artwork: none   
+                artwork: full-cover    
                 hide:
                   volume: true                
               - type: custom:mini-media-player
