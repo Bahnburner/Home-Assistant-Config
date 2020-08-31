@@ -179,7 +179,7 @@ views:
             show_header_toggle: false
             entities:          
               - type: custom:mini-media-player
-                entity: media_player.plex_mibox_s
+                entity: media_player.plex_plex_for_vizio_bedroom_tv
                 icon: mdi:plex
                 group: true
                 artwork: full-cover
@@ -192,7 +192,7 @@ views:
                   icon: true
                   name: Plex
               - type: custom:mini-media-player
-                entity: media_player.mi_box_s
+                entity: media_player.bedroom_tv
                 group: true
                 artwork: none
                 icon: mdi:youtube-tv
@@ -361,6 +361,13 @@ views:
                 artwork: none   
                 hide:
                   volume: true
+              - type: custom:mini-media-player
+                entity: media_player.plex_mibox_s
+                icon: mdi:plex
+                group: true
+                artwork: none   
+                hide:
+                  volume: true                
               - type: custom:mini-media-player
                 entity: media_player.mancave_assistant
                 icon: mdi:google-home
