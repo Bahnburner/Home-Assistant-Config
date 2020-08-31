@@ -23,7 +23,7 @@
     - light.man_cave_floor_lamp
     - light.desk_light
 - platform: group
-  name: Foyer Light
+  name: Foyer
   entities:
     - light.foyer_left
     - light.foyer_right
