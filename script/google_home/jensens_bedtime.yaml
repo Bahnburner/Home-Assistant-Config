@@ -1,14 +1,5 @@
 jensens_bedtime:
   sequence:
-    - service_template: >
-        {% if states.media_player.vizio_smartcast_2.state == 'on' %}
-          script.tv_timer
-        {% else %}
-          script.whitenoise
-        {% endif %}
-    - service: light.turn_on
-      entity_id: light.master_bedroom
-      data:
-        color_temp: 500
-        brightness: 13
-        transition: 30 
+    - service: media_player.turn_off
+      entity_id: media_player.nursery_tv
+    - service: script.jensens_whitenoise
