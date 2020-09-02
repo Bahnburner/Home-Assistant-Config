@@ -4,7 +4,7 @@ whitenoise_jensen:
       entity_id: media_player.nursery_assistant
       data: 
         volume_level: 0.19
-    - service: delay
+    - delay:
         seconds: 2
     - service: media_player.play_media
       entity_id: media_player.nursery_assistant
