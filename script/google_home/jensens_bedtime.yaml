@@ -2,4 +2,4 @@ jensens_bedtime:
   sequence:
     - service: media_player.turn_off
       entity_id: media_player.nursery_tv
-    - service: script.jensens_whitenoise
+    - service: script.whitenoise_jensen
