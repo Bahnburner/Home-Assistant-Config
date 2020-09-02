@@ -1,4 +1,4 @@
-jensens_whitenoise:
+whitenoise_jensen:
   sequence:
     service: media_player.play_media
     entity_id: media_player.master_suite
