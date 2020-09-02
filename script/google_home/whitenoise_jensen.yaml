@@ -1,7 +1,13 @@
 whitenoise_jensen:
   sequence:
-    service: media_player.play_media
-    entity_id: media_player.nursery_assistant
-    data:
-      media_content_type: "audio/mp3" 
-      media_content_id: http://smrtho.us/storage/whitenoise_jensen.mp3
+    - service: media_player.volume_set
+      entity_id: media_player.nursery_assistant
+      data: 
+        volume_level: 0.19
+    - service: delay
+        seconds: 2
+    - service: media_player.play_media
+      entity_id: media_player.nursery_assistant
+      data:
+        media_content_type: "audio/mp3" 
+        media_content_id: http://smrtho.us/storage/whitenoise_jensen.mp3
