@@ -1,7 +1,7 @@
 whitenoise_jensen:
   sequence:
     service: media_player.play_media
-    entity_id: media_player.master_suite
+    entity_id: media_player.nursery_assistant
     data:
       media_content_type: "audio/mp3" 
       media_content_id: http://smrtho.us/storage/whitenoise_jensen.mp3
