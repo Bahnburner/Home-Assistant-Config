@@ -408,7 +408,16 @@ views:
             service: script.jensens_bedtime
             show_state: false
             entity: automation.startup
-
+          - type: custom:mini-media-player
+            entity: media_player.nursery_tv
+            icon: mdi:google-home
+            group: true
+            artwork: none        
+          - type: custom:mini-media-player
+            entity: media_player.nursery_assistant
+            icon: mdi:cast-connected
+            group: true
+            artwork: none   
 
 ##################################
 # Filter cards for Misc Media Players #
