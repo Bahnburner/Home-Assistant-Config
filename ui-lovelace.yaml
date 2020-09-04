@@ -408,7 +408,7 @@ views:
 #### Nursery STACK
       - type: vertical-stack
         cards:
-          - type: picture
+          - type: picture-entity
             name: Jensen's Room
             image: /local/resources/images/lovelace/nursery_edited.jpg
             tap_action: none
