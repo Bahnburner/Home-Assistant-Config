@@ -411,6 +411,9 @@ views:
           - type: picture
             name: Jensen's Room
             image: /local/resources/images/lovelace/nursery_edited.jpg
+            tap_action: none
+            hold_action: call_service
+            service: script.jensens_bedtime
 
 
 ##################################
