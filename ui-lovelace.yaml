@@ -163,9 +163,7 @@ views:
                 hide_toggle: true
               - climate.downstairs_hallway
               - sensor.protect_down
-          - id: 83b5c93f379e416faecf8f4910cbfb5d  # Automatically created id
-            type: weather-forecast
-            entity: weather.forecast
+
 #### BEDROOM STACK
       - type: vertical-stack
         cards:
@@ -297,7 +295,10 @@ views:
               - entity: light.foyer
                 name: Foyer Light 
               - entity: light.dining_room
-                name: Dining Room Lights          
+                name: Dining Room Lights
+          - id: 83b5c93f379e416faecf8f4910cbfb5d  # Automatically created id
+            type: weather-forecast
+            entity: weather.forecast                
 #### EXTERIOR STACK
       - type: vertical-stack
         cards:
