@@ -297,7 +297,24 @@ views:
               - entity: light.foyer
                 name: Foyer Light 
               - entity: light.dining_room
-                name: Dining Room Lights
+                name: Dining Room Lights          
+#### EXTERIOR STACK
+      - type: vertical-stack
+        cards:
+          - type: picture-entity
+            image: /local/resources/images/lovelace/house_exterior_edited.jpg
+            entity: group.exterior
+            name: Exterior
+            tap_action: 
+              action: toggle
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - entity: light.frontdoor
+                name: Entryway Light
+              - light.front_floods
+              - light.rear_floods
+              - switch.patio_lights
           - id: a85d6987bce14c1abf0a2e4830f47f59  # Automatically created id
             type: glance
             title: Alarm
@@ -324,24 +341,7 @@ views:
                 name: S Attic
                 icon: mdi:thermometer
               - entity: binary_sensor.water_heater_leak_sensor_water
-                name: WH              
-#### EXTERIOR STACK
-      - type: vertical-stack
-        cards:
-          - type: picture-entity
-            image: /local/resources/images/lovelace/house_exterior_edited.jpg
-            entity: group.exterior
-            name: Exterior
-            tap_action: 
-              action: toggle
-          - type: entities
-            show_header_toggle: false
-            entities:
-              - entity: light.frontdoor
-                name: Entryway Light
-              - light.front_floods
-              - light.rear_floods
-              - switch.patio_lights
+                name: WH                    
 #### OFFICE STACK
       - type: vertical-stack
         cards:
