@@ -410,7 +410,7 @@ views:
         cards:
           - type: picture-entity
             name: Jensen's Room
-            image: /local/resources/images/lovelace/office_edited.jpg
+            image: /local/resources/images/lovelace/nursery_edited.jpg
             entity: light.mancave_lights
             tap_action: 
               action: toggle
