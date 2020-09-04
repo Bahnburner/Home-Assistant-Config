@@ -363,7 +363,7 @@ views:
                 hide:
                   volume: true
               - type: custom:mini-media-player
-                entity: media_player.plex_mibox_s
+                entity: media_player.plex_mancave_tv
                 icon: mdi:plex
                 group: true
                 artwork: full-cover    
