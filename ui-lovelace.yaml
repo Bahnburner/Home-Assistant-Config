@@ -414,7 +414,7 @@ views:
             tap_action: none
             hold_action: call_service
             service: script.jensens_bedtime
-
+            show_name: true
 
 ##################################
 # Filter cards for Misc Media Players #
