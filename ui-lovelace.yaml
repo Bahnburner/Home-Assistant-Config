@@ -411,12 +411,12 @@ views:
           - type: custom:mini-media-player
             entity: media_player.nursery_tv
             icon: mdi:google-home
-            group: true
-            artwork: none        
+            group: false
+            artwork: cover-full       
           - type: custom:mini-media-player
             entity: media_player.nursery_assistant
             icon: mdi:cast-connected
-            group: true
+            group: false
             artwork: none   
 
 ##################################
