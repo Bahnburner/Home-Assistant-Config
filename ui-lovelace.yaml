@@ -408,12 +408,10 @@ views:
 #### Nursery STACK
       - type: vertical-stack
         cards:
-          - type: picture-entity
+          - type: picture
             name: Jensen's Room
             image: /local/resources/images/lovelace/nursery_edited.jpg
-            entity: light.mancave_lights
-            tap_action: 
-              action: toggle
+
 
 ##################################
 # Filter cards for Misc Media Players #
