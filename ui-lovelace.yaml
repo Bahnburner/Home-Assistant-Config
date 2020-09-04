@@ -373,17 +373,14 @@ views:
                 entity: media_player.mancave_assistant
                 icon: mdi:google-home
                 group: true
-                artwork: none   
-                hide:
-                  volume: true
-                  power: true
-              - type: custom:mini-media-player
-                entity: media_player.mancave_assistant
-                group: true
-                hide:
-                  controls: true
-                  info: true
-                  power: true  
+                artwork: full-cover
+#              - type: custom:mini-media-player
+#                entity: media_player.mancave_assistant
+#                group: true
+#                hide:
+#                  controls: true
+#                  info: true
+#                  power: true  
             state_filter:
               - "playing"
             show_empty: false
