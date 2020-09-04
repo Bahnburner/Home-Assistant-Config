@@ -405,7 +405,15 @@ views:
           type: entities
           entities:
             - switch.christmas_lights             
-
+#### Nursery STACK
+      - type: vertical-stack
+        cards:
+          - type: picture-entity
+            name: Jensen's Room
+            image: /local/resources/images/lovelace/office_edited.jpg
+            entity: light.mancave_lights
+            tap_action: 
+              action: toggle
 
 ##################################
 # Filter cards for Misc Media Players #
