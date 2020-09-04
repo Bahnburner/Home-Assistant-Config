@@ -410,12 +410,12 @@ views:
             entity: automation.startup
           - type: custom:mini-media-player
             entity: media_player.nursery_tv
-            icon: mdi:google-home
+            icon: mdi:cast-connected
             group: true
             artwork: cover-full       
           - type: custom:mini-media-player
             entity: media_player.nursery_assistant
-            icon: mdi:cast-connected
+            icon: mdi:google-home
             group: true
             artwork: none   
 
