@@ -1,4 +1,4 @@
-- platform: androidTV
+- platform: androidtv
   name: Mancave TV
   scan_interval: 30
   get_sources: false
