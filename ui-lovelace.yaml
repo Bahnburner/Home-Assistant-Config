@@ -359,7 +359,7 @@ views:
                 entity: media_player.mancave_assistant
                 icon: mdi:google-home
                 group: true
-                artwork: full-cover           
+                artwork: none        
                 hide:
                   controls: false
               - type: custom:mini-media-player
