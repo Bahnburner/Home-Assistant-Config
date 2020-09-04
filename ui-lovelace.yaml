@@ -415,6 +415,8 @@ views:
             hold_action: call_service
             service: script.jensens_bedtime
             show_state: false
+            entity: automation.startup
+
 
 ##################################
 # Filter cards for Misc Media Players #
