@@ -10,7 +10,9 @@
       entity_id: group.tristal
       state: 'home'
     - service: media_player.volume_set
-      entity_id: media_player.livingroom_assistant
+      entity_id: 
+        - media_player.livingroom_assistant
+        - media_player.mancave_assistant
       data: 
         volume_level: 0.5
     - service: media_player.play_media
