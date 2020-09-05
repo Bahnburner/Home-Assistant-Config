@@ -368,7 +368,7 @@ views:
                 group: true
                 artwork: none   
                 hide:
-                  volume: true
+                  volume: false
               - type: custom:mini-media-player
                 entity: media_player.plex_mancave_tv
                 icon: mdi:plex
