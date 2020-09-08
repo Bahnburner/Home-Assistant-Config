@@ -31,7 +31,7 @@
       value_template: >
         {% if states.remote.livingroom.attributes.current_activity == null or states.remote.livingroom.attributes.current_activity == "Unknown" %}
           'Unknown'
-        {% elif states.remote.livingroom.atrributes.current_activity == "PowerOff" %}
+        {% elif states.remote.livingroom.attributes.current_activity == "PowerOff" %}
           'Power Off'
         {% else %}
           {{states.remote.livingroom.attributes.current_activity}}
