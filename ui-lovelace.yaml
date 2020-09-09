@@ -489,8 +489,14 @@ views:
         show_header_toggle: false
         title: Man Cave
         entities:
-          - light.desk_lamp
-          - light.man_cave_floor_lamp
+          - entity: light.desk_lamp
+            name: Monitor Bias Light
+          - entity: light.man_cave_floor_lamp
+            name: Floor Lamp
+          - entity: light.desk_light
+            name: Desk Lamp
+          - entity: light.printer_light
+            name: Printer Light
       - type: entities
         show_header_toggle: false
         title: Exterior
