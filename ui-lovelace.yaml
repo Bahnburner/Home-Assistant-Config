@@ -491,12 +491,16 @@ views:
         entities:
           - entity: light.desk_lamp
             name: Monitor Bias Light
+            image: /local/resources/images/devices/hue.png
           - entity: light.man_cave_floor_lamp
             name: Floor Lamp
+            image: /local/resources/images/devices/hue.png
           - entity: light.desk_light
             name: Desk Lamp
+            image: /local/resources/images/devices/smartthings.png
           - entity: switch.printer_light
             name: Printer Light
+            image: /local/resources/images/devices/smartthings.png
       - type: entities
         show_header_toggle: false
         title: Exterior
