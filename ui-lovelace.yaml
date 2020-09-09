@@ -571,7 +571,7 @@ views:
       - type: media-control
         entity: media_player.shield_tv
       - type: media-control
-        entity: media_player.mi_box_s
+        entity: media_player.nursery_tv
       - type: media-control
         entity: media_player.vizio_smartcast_2
 
