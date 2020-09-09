@@ -495,7 +495,7 @@ views:
             name: Floor Lamp
           - entity: light.desk_light
             name: Desk Lamp
-          - entity: light.printer_light
+          - entity: switch.printer_light
             name: Printer Light
       - type: entities
         show_header_toggle: false
