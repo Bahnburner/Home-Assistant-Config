@@ -1,3 +1,0 @@
-project_id: smarthome-c36e1
-service_account: !include /config/HiddenRidge-8256a07a87bf.json
-report_state: true
