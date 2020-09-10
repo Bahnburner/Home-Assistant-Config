@@ -1,4 +1,3 @@
-google_assistant:
-  project_id: smarthome-c36e1
-  service_account: !include HiddenRidge-8256a07a87bf.json
-  report_state: true
+project_id: smarthome-c36e1
+service_account: !include HiddenRidge-8256a07a87bf.json
+report_state: true
