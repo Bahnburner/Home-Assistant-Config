@@ -35,7 +35,6 @@ camera: !include ./configuration/camera.yaml
 climate: !include ./configuration/climate.yaml
 device_tracker: !include ./configuration/device_tracker.yaml
 group: !include ./configuration/group.yaml
-google_assistant: !include ./configuration/google_assistant.yaml
 http: !include ./configuration/http.yaml
 ifttt: !include ./configuration/ifttt.yaml
 input_boolean: !include ./configuration/input_boolean.yaml
