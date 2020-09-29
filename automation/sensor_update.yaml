@@ -5,4 +5,4 @@ automation:
         minutes: '/1'
     action:
       - service: homeassistant.update_entity
-        entity_id: sensor.decimal_time.
+        entity_id: sensor.decimal_time
