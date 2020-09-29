@@ -2,7 +2,7 @@ automation:
   - alias: 'sensor_update'
     trigger:
       - platform: time_pattern
-        minutes: '/1'
+        minutes: '*'
     action:
       - service: homeassistant.update_entity
         entity_id: sensor.decimal_time
