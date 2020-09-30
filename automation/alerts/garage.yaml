@@ -90,11 +90,17 @@
       entity_id: light.foyer
       data:
         brightness: 255
-        flash: short
     - delay:
-        seconds: 5
+        seconds: 1
+    - service: light.turn_off
+      entity_id: light.foyer  
+    - delay:
+        seconds: 3
     - service: light.turn_on
       entity_id: light.foyer
       data:
         brightness: 255
-        flash: short
+    - delay:
+        seconds: 1
+    - service: light.turn_off
+      entity_id: light.foyer
