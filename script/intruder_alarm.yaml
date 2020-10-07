@@ -11,7 +11,8 @@ intruder_alarm:
         rgb_color: 255, 58, 191
     - service: media_player.play_media
       entity_id: media_player.mancave
-      media_content_id: /local/resources/barbie.mp3
-      media_content_type: music
+      data:
+        media_content_id: /local/resources/barbie.mp3
+        media_content_type: music
         
       
