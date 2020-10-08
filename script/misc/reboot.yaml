@@ -3,7 +3,7 @@ reboot:
     - service: media_player.volume_set
       entity_id: media_player.livingroom_assistant
       data: 
-        volume_level: 0.5    
+        volume_level: 0.4
     - service: media_player.play_media
       entity_id: media_player.livingroom_assistant
       data:
