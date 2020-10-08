@@ -17,7 +17,7 @@
     - service: media_player.volume_set
       entity_id: media_player.all_assistants
       data: 
-        volume_level: 0.5
+        volume_level: 0.4
 #    - service: tts.google_say
 #      entity_id: media_player.all_assistants
     - service: notify.google_assistant
@@ -35,7 +35,7 @@
     - service: media_player.volume_set
       entity_id: media_player.all_assistants
       data: 
-        volume_level: 0.5
+        volume_level: 0.4
 #    - service: tts.google_say
 #      entity_id: media_player.all_assistants
     - service: notify.google_assistant
