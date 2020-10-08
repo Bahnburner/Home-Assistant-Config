@@ -5,7 +5,7 @@ goodbye:
       entity_id: 
         - media_player.all_speakers
       data: 
-        volume_level: 0.5
+        volume_level: 0.4
     - condition: state
       entity_id: group.family
       state: 'home'
