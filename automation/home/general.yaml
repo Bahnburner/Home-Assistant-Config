@@ -29,7 +29,7 @@
         - media_player.bedroom_assistant
         - media_player.bathroom_assistant
       data: 
-        volume_level: 0.6
+        volume_level: 0.4
     - condition: numeric_state
       entity_id: sun.sun
       value_template: '{{ state.attributes.elevation }}'
