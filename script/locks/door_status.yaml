@@ -20,7 +20,7 @@ front_door_open:
       entity_id: 
         - media_player.all_assistants
       data: 
-        volume_level: 0.5
+        volume_level: 0.4
     - delay:
         seconds: 3
     - service: notify.google_assistant
@@ -38,7 +38,7 @@ back_door_open:
       entity_id: 
         - media_player.all_assistants
       data: 
-        volume_level: 0.5
+        volume_level: 0.4
     - delay:
         seconds: 3
     - service: notify.google_assistant
@@ -57,7 +57,7 @@ both_doors_open:
       entity_id: 
         - media_player.all_assistants
       data: 
-        volume_level: 0.5
+        volume_level: 0.4
     - delay:
         seconds: 3
     - service: notify.google_assistant
