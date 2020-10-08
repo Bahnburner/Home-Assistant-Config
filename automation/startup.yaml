@@ -14,7 +14,7 @@
         - media_player.livingroom_assistant
         - media_player.mancave_assistant
       data: 
-        volume_level: 0.5
+        volume_level: 0.4
     - service: media_player.play_media
       entity_id: 
         - media_player.livingroom_assistant
