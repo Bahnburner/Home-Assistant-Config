@@ -597,8 +597,8 @@ views:
         camera_image: camera.upstairs_nursery
       - type: map
         entities:
-          - entity: device_tracker.google_maps_tcaulfld_gmail_com
-          - entity: device_tracker.google_maps_102616309312724957780
+          - entity: person.tristan
+          - entity: person.crystal
           - zone.home
           - zone.sedgwick
           - zone.ttc
