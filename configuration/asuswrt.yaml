@@ -2,3 +2,4 @@
   protocol: ssh
   username: !secret router_user
   password: !secret router_pass
+  track_new_devices: false
