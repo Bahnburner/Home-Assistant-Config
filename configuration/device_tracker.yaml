@@ -3,3 +3,4 @@
 #  consider_home: 180
 - platform: google_maps
   username: !secret maps_user
+  track_new_devices: false
