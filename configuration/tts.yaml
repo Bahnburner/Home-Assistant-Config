@@ -1,1 +1,2 @@
-platform: google_translate
+- platform: google_translate
+  base_url: htts://smrtho.us
