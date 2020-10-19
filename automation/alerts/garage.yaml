@@ -63,9 +63,6 @@
         data:
           title: "Home Assistant Alert"
           url: "https://smrtho.us"
-          target:
-            - Tristans Phone
-            - Crystals Phone
       data_template:
         message: >
           {% if  states.cover.garage_door_opener.state == 'closed' %}
