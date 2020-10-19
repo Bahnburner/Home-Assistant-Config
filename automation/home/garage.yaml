@@ -3,6 +3,10 @@
     - platform: state
       entity_id: cover.garage_door_opener
       from: 'closed'
+      to: 
+        - 'opening'
+        - 'open'
+        - 'closing'
     - platform: state
       entity_id: sensor.front_door
       from: 'closed'
