@@ -18,9 +18,8 @@
       entity_id: media_player.all_assistants
       data: 
         volume_level: 0.4
-#    - service: tts.google_say
-#      entity_id: media_player.all_assistants
-    - service: notify.google_assistant
+    - service: tts.google_say
+      entity_id: media_player.all_assistants
       data: 
         message: 'Heads up, tomorrow is trash day.'
 
@@ -36,9 +35,8 @@
       entity_id: media_player.all_assistants
       data: 
         volume_level: 0.4
-#    - service: tts.google_say
-#      entity_id: media_player.all_assistants
-    - service: notify.google_assistant
+    - service: tts.google_say
+      entity_id: media_player.all_assistants
       data: 
         message: 'Heads up, today is trash day.'
 
