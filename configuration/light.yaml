@@ -30,3 +30,9 @@
 - platform: switch
   name: Desk Light
   entity_id: switch.desk_light
+- platform: group
+  name: Office bias light
+  entities:
+    - light.office_bias_light_left
+    - light.office_bias_light_right
+    - light.office_bias_light_center
