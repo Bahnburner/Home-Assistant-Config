@@ -79,6 +79,15 @@ light.rear_floods:
 light.bias_light:
   friendly_name: "Bias Light"
   entity_picture: /local/resources/images/devices/hue.png
+light.office_bias_light_left:
+  entity_picture: /local/resources/images/devices/hue.png
+light.office_bias_light_right:
+  entity_picture: /local/resources/images/devices/hue.png
+light.office_bias_light_center:
+  entity_picture: /local/resources/images/devices/hue.png  
+light.office_bias_light:
+  friendly_name: "Bias Light"
+  entity_picture: /local/resources/images/devices/hue.png  
 switch.patio_lights:
   entity_picture: /local/resources/images/devices/smartthings.png
   icon: mdi:ceiling-light
