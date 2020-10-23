@@ -37,7 +37,7 @@
         - light.dining_room
         - group.stairway
         - light.recessed_lights
-        - light.desk_lamp
+        - light.mancave_lights
     - service: switch.turn_off
       entity_id: 
         - switch.overhead_light
