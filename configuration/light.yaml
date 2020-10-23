@@ -19,7 +19,7 @@
 - platform: group
   name: Mancave Lights
   entities:
-    - light.desk_lamp
+    - light.office_bias_light
     - light.man_cave_floor_lamp
     - light.desk_light
 - platform: group
