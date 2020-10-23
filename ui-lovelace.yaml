@@ -343,7 +343,7 @@ views:
                 icon: mdi:thermometer
               - entity: binary_sensor.water_heater_leak_sensor_water
                 name: WH                    
-#### OFFICE STACK
+#### MANCAVE / OFFICE STACK
       - type: vertical-stack
         cards:
           - type: picture-entity
@@ -489,7 +489,7 @@ views:
         show_header_toggle: false
         title: Man Cave
         entities:
-          - entity: light.desk_lamp
+          - entity: light.office_bias_light
             name: Monitor Bias Light
             image: /local/resources/images/devices/hue.png
           - entity: light.man_cave_floor_lamp
