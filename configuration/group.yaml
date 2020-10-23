@@ -260,4 +260,5 @@ office_lights:
   - light.man_cave_floor_lamp
   - light.office_bias_light_left
   - light.office_bias_light_right
-  - light.office_bias_light_center  
+  - light.office_bias_light_center
+  - light.office_corner_lamp  
