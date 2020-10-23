@@ -22,7 +22,7 @@ goodnight:
         - light.foyer
         - light.dining_room
         - light.recessed_lights
-        - light.desk_lamp
+        - light.mancave_lights
       data:
         transition: 30
     - service: switch.turn_off
