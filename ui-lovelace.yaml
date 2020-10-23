@@ -495,6 +495,9 @@ views:
           - entity: light.man_cave_floor_lamp
             name: Floor Lamp
             image: /local/resources/images/devices/hue.png
+          - entity: light.office_corner_lamp
+            name: Corner Lamp
+            image: /local/resources/images/devices/hue.png            
           - entity: light.desk_light
             name: Desk Lamp
             image: /local/resources/images/devices/smartthings.png
