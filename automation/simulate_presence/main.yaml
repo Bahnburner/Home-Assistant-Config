@@ -86,7 +86,7 @@
         color_temp: 500
         transition: 60
     - service: light.turn_on
-      entity_id: light.desk_lamp
+      entity_id: light.mancave_lights
 
 - alias: Simulate Presence 6
   trigger:
@@ -104,7 +104,7 @@
     - service: light.turn_off
       entity_id: light.living_room
     - service: light.turn_off
-      entity_id: light.desk_lamp
+      entity_id: light.mancave_lights
     - service: switch.turn_off
       entity_id: switch.patio_lights
 
