@@ -17,7 +17,7 @@
         media_content_type: "audio/mp3"  
     - service: light.turn_on
       entity_id:
-        - light.living_room
+        - light.living_room_lights
         - light.dining_room
         - light.foyer
         - light.cabinet_lights
@@ -40,7 +40,7 @@
       data: 
         is_volume_muted: false
     - service: light.turn_off
-      entity_id: light.living_room
+      entity_id: light.living_room_lights
     - delay: 
         seconds: 2
     - service: script.livingroom_on
