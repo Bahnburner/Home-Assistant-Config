@@ -86,7 +86,7 @@ living_room:
     entities:
     - sensor.current_activity
     - input_select.harmony
-    - light.living_room
+    - light.living_room_lights
     - light.bias_light
     - light.fan
     - climate.downstairs_hallway
