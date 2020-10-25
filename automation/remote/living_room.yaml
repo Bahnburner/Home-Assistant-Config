@@ -46,7 +46,7 @@
       entity_id: input_boolean.harmony_lighting_control
       state: 'on'
     - condition: state
-      entity_id: light.living_room
+      entity_id: light.living_room_lights
       state: 'on'
     - condition: numeric_state
       entity_id: sun.sun
@@ -68,7 +68,7 @@
       data_template:
         value: '{{states.sensor.brightness_lr.state}}'
     - service: light.turn_on
-      entity_id: light.living_room
+      entity_id: light.living_room_lights
       data_template:
         brightness: >
           {% if states.input_number.harmony_dim.state|int >=60 %}
@@ -127,7 +127,7 @@
           entity_id: sensor.current_activity
           state: 'Watch Android TV'
     - condition: state
-      entity_id: light.living_room
+      entity_id: light.living_room_lights
       state: 'on'
     - condition: numeric_state
       entity_id: sun.sun
@@ -141,7 +141,7 @@
       state: 'off'
   action: 
     service: light.turn_on
-    entity_id: light.living_room
+    entity_id: light.living_room_lights
     data:
       transition: 3
     data_template:
@@ -169,7 +169,7 @@
       to: 'off'
   action: 
     service: light.turn_on
-    entity_id: light.living_room
+    entity_id: light.living_room_lights
     data_template:
       brightness: 
         '{{ states.input_number.harmony_dim.state | int }}'
@@ -254,7 +254,7 @@
           {% if states.input_number.movie_mode.state | int == (states.light.floor_lamp_left.attributes.brightness | int + states.light.floor_lamp_right.attributes.brightness | int) /2%}
             light.table_lamp
           {% else %}
-            light.living_room
+            light.living_room_lights
           {% endif %}
         brightness:
           '{{ states.input_number.movie_mode.state | int }}'
