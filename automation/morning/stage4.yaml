@@ -9,13 +9,13 @@
       entity_id: group.family
       state: 'home'
     - condition: state
-      entity_id: light.living_room
+      entity_id: light.living_room_lights
       state: 'on'
     - condition: template
-      value_template: '{{ states.light.living_room.attributes.color_temp == 200 }}'
+      value_template: '{{ states.light.living_room_lights.attributes.color_temp == 200 }}'
   action:
     - service: light.turn_on
-      entity_id: light.living_room
+      entity_id: light.living_room_lights
       data:
         color_temp: 300
         brightness: 254
