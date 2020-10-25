@@ -1,7 +1,7 @@
 - alias: Kitchen Uplighting Off
   trigger:
     - platform: state
-      entity_id: light.living_room
+      entity_id: light.living_room_lights
       from: 'on'
       to: 'off'
     - platform: state
