@@ -36,3 +36,9 @@
     - light.office_bias_light_left
     - light.office_bias_light_right
     - light.office_bias_light_center
+- platform: group
+  name: Living Room Lights
+  entities:
+    - light.floor_lamp_left
+    - light.floor_lamp_right
+    - light.table_lamp
