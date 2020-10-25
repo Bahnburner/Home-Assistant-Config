@@ -10,7 +10,7 @@
     state: 'on'
   action:
     - service: light.turn_on
-      entity_id: light.living_room
+      entity_id: light.living_room_lights
       data:
         brightness: 254
         transition: 900
@@ -65,7 +65,7 @@
     - delay:
         seconds: 60
     - service: light.turn_on
-      entity_id: light.living_room
+      entity_id: light.living_room_lights
       data:
         brightness: 100
 
@@ -102,7 +102,7 @@
       entity_id: remote.livingroom
     - delay: '00:{{ (range(0, 4)|random|int) }}:{{ (range(1,59)|random|int) }}'
     - service: light.turn_off
-      entity_id: light.living_room
+      entity_id: light.living_room_lights
     - service: light.turn_off
       entity_id: light.mancave_lights
     - service: switch.turn_off
