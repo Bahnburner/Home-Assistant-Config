@@ -46,7 +46,7 @@ goodnight:
       entity_id: input_boolean.harmony_lighting_control
     - service: script.pantry_lights
     - service: light.turn_on
-      entity_id: light.living_room
+      entity_id: light.living_room_lights
       data:
         color_temp: 500
         brightness: 100
@@ -70,6 +70,6 @@ goodnight:
     - condition: template
       value_template: '{{ states.sensor.brightness_lr.state|int <= 200 }}'
     - service: light.turn_off
-      entity_id: light.living_room
+      entity_id: light.living_room_lights
     - service: light.turn_off
       entity_id: light.cabinet_lights
