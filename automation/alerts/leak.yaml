@@ -7,12 +7,14 @@
       from: 'off'
       to: 'on'
   action:
-    - service: notify.chrome_notifications
+    - service: notify.all_devices
       data:
         data:
-          tag: 'alarm-notification'
+          group: Leak
           title: "Home Assistant Alert"
-          url: "https://smrtho.us"  
+          clickAction: "https://smrtho.us"  
+          icon_url: "https://github.com/home-assistant/home-assistant-assets/blob/master/logo-round-192x192.png?raw=true"
+          importance: high
       data_template:
         message: >
           {% if  states.binary_sensor.hvac_leak_sensor.state == 'on' %}
@@ -20,18 +22,5 @@
           {% elif states.binary_sensor.water_heater_leak_sensor.state == 'on' %}
             The water heater is leaking.
           {% else %}
-            Error.
+            There has been an unexpected error with a moisture sensor.
           {% endif %}
-    - service: notify.facebook
-      data_template:
-        message: >
-          {% if  states.binary_sensor.hvac_leak_sensor.state == 'on' %}
-            The HVAC unit is leaking.
-          {% elif states.binary_sensor.water_heater_leak_sensor.state == 'on' %}
-          The water heater is leaking.
-          {% else %}
-            Error.
-          {% endif %}
-        target:
-          - '+19019219988'
-          - '+19016524510'
