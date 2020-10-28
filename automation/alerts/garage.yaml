@@ -32,19 +32,15 @@
     entity_id: group.family
     state: 'not_home'
   action:
-    service: notify.chrome_notifications
+    service: notify.mobile_app_tristal
     data:
       data:
         title: "Home Assistant Alert"
-        url: "https://smrtho.us"
+        clickAction: "https://smrtho.us"
+        icon_url: "https://github.com/home-assistant/home-assistant-assets/blob/master/logo-round-192x192.png?raw=true"
+        group: Garage
         message: "The Garage Door is open."
-        actions:
-        - action: open
-          icon: "/local/resources/images/notifications/chrome.png"
-          title: Open Home Assistant
-        - action: close_garage
-          icon: "/local/resources/images/notifications/garage.png"
-          title: Close Garage Door  
+
 
 
 - alias: 'Close Garage Event'
