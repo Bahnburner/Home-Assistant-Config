@@ -1,11 +1,3 @@
-- name: messenger_notifications
-  platform: facebook
-  page_access_token: !secret facebook_token
-#- name: Amazon SMS
-#  platform: aws_sns
-#  aws_access_key_id: !secret aws_access_key_id
-#  aws_secret_access_key: !secret aws_secret_access_key 
-#  region_name: 'us-east-1'
 - name: chrome_notifications
   platform: html5
   vapid_pub_key: !secret vapid_pub_key
@@ -14,3 +6,13 @@
 - name: Google Assistant
   platform: rest
   resource: http://10.0.0.110:5000/broadcast_message
+- name: mobile_app_tristal
+  platform: group
+  services:
+    - service: mobile_app_tristan_s_note_20_ultra
+    - service: mobile_app_sm_n986u
+- name: all_devices
+  platform: group
+  services:
+    - mobile_app_tristal
+    - chrome_notifications_cerberus_3
