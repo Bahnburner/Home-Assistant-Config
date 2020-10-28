@@ -3,11 +3,9 @@
     platform: state
     entity_id: updater.updater
   action:
-    service: notify.chrome_notifications
+    service: notify.mobile_app_tristan_s_note_20_ultra
     data:
-      message: "Home Assistant update available."
-      data:
-        target: tristans phone 
-        title: "Home Assistant Alert"
-        url: "https://home-assistant.io/blog/"
-
+      message: "An update to Home Assistant is available."
+      title: "Home Assistant Alert"
+      clickAction: "https://home-assistant.io/blog"
+      group: update
