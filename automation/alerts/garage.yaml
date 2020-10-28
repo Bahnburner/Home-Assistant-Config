@@ -39,6 +39,7 @@
         clickAction: "https://smrtho.us"
         icon_url: "https://github.com/home-assistant/home-assistant-assets/blob/master/logo-round-192x192.png?raw=true"
         group: Garage
+        importance: high
         message: "The Garage Door is open."
 
     
