@@ -41,33 +41,6 @@
         group: Garage
         message: "The Garage Door is open."
 
-
-
-- alias: 'Close Garage Event'
-  trigger:
-    platform: event
-    event_type: html5_notification.clicked
-    event_data:
-     action: close_garage
-  action:
-    - service: cover.close
-      entity_id: cover.garage_door_opener
-    - delay: 
-        minutes: 1
-    - service: notify.chrome_notifications
-      data:
-        data:
-          title: "Home Assistant Alert"
-          url: "https://smrtho.us"
-      data_template:
-        message: >
-          {% if  states.cover.garage_door_opener.state == 'closed' %}
-            The garage is now closed.
-          {% elif states.cover.garage_door_opener.state == 'open' %}
-            An error occurred closing the garage. 
-          {% else %}
-            An error occurred closing the garage. 
-          {% endif %}
     
 - alias: Garage Notify
   trigger:
