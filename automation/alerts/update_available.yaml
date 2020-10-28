@@ -8,4 +8,5 @@
       message: "An update to Home Assistant is available."
       title: "Home Assistant Alert"
       clickAction: "https://home-assistant.io/blog"
+      icon_url: "https://github.com/home-assistant/home-assistant-assets/blob/master/logo-round-192x192.png?raw=true"
       group: update
