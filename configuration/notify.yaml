@@ -14,5 +14,5 @@
 - name: all_devices
   platform: group
   services:
-    - mobile_app_tristal
-    - chrome_notifications_cerberus_3
+    - service: mobile_app_tristal
+    - service: chrome_notifications_cerberus_3
