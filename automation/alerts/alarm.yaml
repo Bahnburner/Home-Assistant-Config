@@ -20,33 +20,35 @@
       entity_id: input_boolean.disable_alarm
       state: 'off'
   action:
-    service: notify.chrome_notifications
+    service: notify.all_devices
     data:
       data:
-        tag: 'alarm-notification'
+        group: alarm
         title: "Home Assistant Alert"
-        url: "https://smrtho.us"
-        actions:
-          - action: open
-            icon: "/local/resources/images/notifications/chrome.png"
-            title: Open Home Assistant
-          - action: activate_siren
-            icon: "/local/resources/images/notifications/alarm.png"
-            title: Activate Siren  
+        clickAction: "https://smrtho.us"
+        icon_url: "https://github.com/home-assistant/home-assistant-assets/blob/master/logo-round-192x192.png?raw=true"
+        importance: high
+#        actions:
+#          - action: open
+#            icon: "/local/resources/images/notifications/chrome.png"
+#            title: Open Home Assistant
+#          - action: activate_siren
+#            icon: "/local/resources/images/notifications/alarm.png"
+#            title: Activate Siren  
     data_template:
       message: >
         {% if  states.binary_sensor.back_door.state == 'on' %}
-          The back door has just opened unexpectedly.
+          "The back door has just opened unexpectedly."
         {% elif states.binary_sensor.front_windows.state == 'on' %}
-          A front window has just opened unexpectedly.
+          "A front window has just opened unexpectedly."
         {% elif states.binary_sensor.bedroom_windows.state == 'on' %}
-          A bedroom window has just opened unexpectedly.
+          "A bedroom window has just opened unexpectedly."
         {% elif states.binary_sensor.back_windows.state == 'on' %}
-          A back window has just opened unexpectedly.
+          "A back window has just opened unexpectedly."
         {% elif states.binary_sensor.front_door.state == 'on' %}
-          The front door has just opened unexpectedly.
+          "The front door has just opened unexpectedly."
         {% elif states.binary_sensor.garage_door.state == 'on' %}
-          The garage door has just opened unexpectedly.
+          "The garage door has just opened unexpectedly."
         {% else %}
-          Error.
+          "An unexpected error has occurred with the alarm sensors."
         {% endif %}
