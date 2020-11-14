@@ -5,6 +5,8 @@ homeassistant:
       trusted_networks:
         - 10.0.0.0/24
   name: Hidden Ridge
+  external_url: "https://smrtho.us"
+  internal_url: "https://smrtho.us"
   latitude: !secret latitude
   longitude: !secret longitude
   elevation: 360
