@@ -47,7 +47,6 @@ lock: !include ./configuration/lock.yaml
 mobile_app:
 media_player: !include ./configuration/media_player.yaml
 mqtt: !include ./configuration/mqtt.yaml
-nest: !include ./configuration/nest.yaml
 notify: !include ./configuration/notify.yaml
 octoprint: !include ./configuration/octoprint.yaml
 person:
