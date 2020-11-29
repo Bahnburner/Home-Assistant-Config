@@ -1,4 +1,4 @@
-light.living_room:
+light.living_room_lights:
   entity_picture: /local/resources/images/devices/hue.png
   icon: mdi:floor-lamp
 light.floor_lamp_left:
