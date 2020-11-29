@@ -54,7 +54,7 @@ views:
         cards:
           - type: picture-entity
             image: /local/resources/images/lovelace/livingroom_edited.jpg
-            entity: light.living_room
+            entity: light.living_room_lights
             name: Livingroom
             tap_action: 
               action: toggle   
@@ -153,7 +153,7 @@ views:
               - entity: input_select.harmony
                 icon: mdi:television
               - entity: sensor.current_activity
-              - entity: light.living_room
+              - entity: light.living_room_lights
                 name: Lights
                 type: custom:slider-entity-row
                 hide_toggle: true
