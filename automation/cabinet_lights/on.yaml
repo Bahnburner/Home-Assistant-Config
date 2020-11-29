@@ -3,7 +3,7 @@
     - platform: state
       entity_id: sensor.brightness_lr
     - platform: state
-      entity_id: light.living_room
+      entity_id: light.living_room_lights
       from: 'off'
       to: 'on'
     - platform: state
