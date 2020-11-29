@@ -9,7 +9,7 @@ good_morning:
       data:
         brightness: 255
     - service: light.turn_on
-      entity_id: light.living_room
+      entity_id: light.living_room_lights
       data: 
         brightness: 255
       data_template:
