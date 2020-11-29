@@ -56,7 +56,7 @@ livingroom_on:
   sequence:
     service: light.turn_on
     entity_id: 
-      - light.living_room
+      - light.living_room_lights
     data: 
       brightness: 254
     data_template:
