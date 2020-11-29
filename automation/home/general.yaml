@@ -26,7 +26,8 @@
         - media_player.dining_room_speaker
         - media_player.kitchen_display
         - media_player.mancave_assistant
-        - media_player.bedroom_assistant
+        - media_player.tristans_clock
+        - media_player.crystals_clock
         - media_player.bathroom_assistant
       data: 
         volume_level: 0.4
