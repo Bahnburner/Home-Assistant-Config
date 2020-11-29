@@ -10,7 +10,7 @@
     state: 'home'
   action:
     - service: light.turn_on
-      entity_id: light.living_room
+      entity_id: light.living_room_lights
       data:
         brightness: 254
         transition: 600
