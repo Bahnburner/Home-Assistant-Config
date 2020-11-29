@@ -9,7 +9,7 @@
       entity_id: group.family
       state: 'home'
     - condition: state
-      entity_id: light.living_room
+      entity_id: light.living_room_lights
       state: 'on'
     - condition: template
       value_template: '{{ states.input_boolean.movie_mode.state == "off" }}'
