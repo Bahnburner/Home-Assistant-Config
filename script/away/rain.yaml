@@ -1,7 +1,7 @@
 away_mode_rain:
   sequence:
     service: light.turn_on
-    entity_id: light.living_room
+    entity_id: light.living_room_lights
     data:
       color_temp: 300
       brightness: 100
