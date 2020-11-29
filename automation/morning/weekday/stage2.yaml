@@ -52,9 +52,13 @@
     - service: media_player.volume_set
       entity_id: media_player.bedroom_speaker
       data: 
-        volume_level: 0.40        
+        volume_level: 0.40
     - service: media_player.volume_set
-      entity_id: media_player.bedroom_assistant
+      entity_id: media_player.tristans_clock
+      data:
+        volume_level: 0.40
+    - service: media_player.volume_set
+      entity_id: media_player.crystals_clock
       data:
         volume_level: 0.40
     - service: media_player.volume_set
