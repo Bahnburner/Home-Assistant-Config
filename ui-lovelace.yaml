@@ -396,7 +396,9 @@ views:
         card:
           type: entities
           entities:
-            - switch.christmas_lights             
+            - entity: switch.christmas_lights             
+              image: /local/resources/images/devices/smartthings.png
+              name: Christmas Lights
 #### Nursery STACK
       - type: vertical-stack
         cards:
