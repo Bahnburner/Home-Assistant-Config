@@ -5,4 +5,4 @@ switch.routines:
   friendly_name: 'Disable All Automations'
   icon: mdi:power
 switch.christmas_lights:
-  entity_picture: /local/resources/images/devices/tree.png
+  entity_picture: /local/resources/images/devices/smartthings.png
