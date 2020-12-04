@@ -27,9 +27,11 @@ whitenoise:
             http://smrtho.us/storage/whitenoise1.mp3
           {% endif %}
     - service: media_player.volume_set
-      entity_id: media_player.master_suite
+      entity_id: 
+        - media_player.tristans_clock
+        - media_player.crystals_clock
       data: 
-        volume_level: 0.19
+        volume_level: 0.3
     - service: media_player.volume_set
       entity_id: media_player.bedroom_speaker
       data: 
