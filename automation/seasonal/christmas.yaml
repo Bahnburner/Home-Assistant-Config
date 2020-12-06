@@ -25,21 +25,21 @@
       entity_id: switch.christmas_lights
 
 #I don't think it ever actually triggers, but I'm leaving it on as a secondary catch to kill the lights. 
-- alias: Christmas Lights away OFF
-  trigger:
-    - platform: state
-      entity_id: group.family
-      to: "not_home"
-  condition:
-    - condition: template
-      value_template: '{{ now().month == 12 }}'
-    - condition: numeric_state
-      entity_id: sun.sun
-      value_template: '{{ state.attributes.elevation }}'
-      above: 8
-  action:
-    - service: switch.turn_off
-      entity_id: switch.christmas_lights
+#- alias: Christmas Lights away OFF
+#  trigger:
+#    - platform: state
+#      entity_id: group.family
+#      to: "not_home"
+#  condition:
+#    - condition: template
+#      value_template: '{{ now().month == 12 }}'
+#    - condition: numeric_state
+#      entity_id: sun.sun
+#      value_template: '{{ state.attributes.elevation }}'
+#      above: 8
+#  action:
+#    - service: switch.turn_off
+#      entity_id: switch.christmas_lights
 
 
 - id: christmas_light_panel_visiblity
