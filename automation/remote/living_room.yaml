@@ -174,32 +174,32 @@
       brightness: 
         '{{ states.input_number.harmony_dim.state | int }}'
 
-- alias: Harmony Cast Control Start
-  trigger: 
-    - platform: state
-      entity_id: media_player.shield_tv
-      to: 'playing'
-  condition:
-    condition: template
-    value_template: "{{ states.sensor.current_activity.state != 'Watch Android TV'}}"
-  action: 
-    - service: remote.turn_on
-      entity_id: remote.livingroom
-      data:
-        activity: 43103950
+#- alias: Harmony Cast Control Start
+#  trigger: 
+#    - platform: state
+#      entity_id: media_player.shield_tv
+#      to: 'playing'
+#  condition:
+#    condition: template
+#    value_template: "{{ states.sensor.current_activity.state != 'Watch Android TV'}}"
+#  action: 
+#    - service: remote.turn_on
+#      entity_id: remote.livingroom
+#      data:
+#        activity: 43103950
         
-- alias: Harmony Gaming Control Start
-  trigger: 
-    - platform: template
-      value_template: "{{ states.media_player.vizio_smartcast.attributes.source == 'HDMI-3' }}"
-  condition:
-    condition: template
-    value_template: "{{ states.sensor.current_activity.state != 'Play Switch'}}"   
-  action: 
-    - service: remote.turn_on
-      entity_id: remote.livingroom
-      data:
-        activity: 39577141
+#- alias: Harmony Gaming Control Start
+#  trigger: 
+#    - platform: template
+#      value_template: "{{ states.media_player.vizio_smartcast.attributes.source == 'HDMI-3' }}"
+#  condition:
+#    condition: template
+#    value_template: "{{ states.sensor.current_activity.state != 'Play Switch'}}"   
+#  action: 
+#    - service: remote.turn_on
+#      entity_id: remote.livingroom
+#      data:
+#        activity: 39577141
         
 - alias: Movie Mode Start
   trigger: 
