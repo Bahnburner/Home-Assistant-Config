@@ -1,0 +1,10 @@
+soundbar: 
+  sequence: 
+    - service: switch.turn_off
+      entity_id: switch.soundbar
+    - delay:
+      seconds: 10
+    - service: switch.turn_on
+      entity_id: switch.soundbar
+
+    
