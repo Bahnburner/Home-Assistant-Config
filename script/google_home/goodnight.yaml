@@ -11,8 +11,8 @@ goodnight:
     - service: script.door_status_check
     - service: cover.close_cover
       entity_id: cover.garage_door_opener
-    - service: remote.turn_off
-      entity_id: remote.livingroom
+    - service: media_player.turn_off
+      entity_id: media_player.shield_tv
     - service: light.turn_off
       entity_id: light.bias_light
     - service: script.media_player_off

@@ -1,178 +1,178 @@
-- alias: Harmony
-  trigger:
-    platform: state
-    entity_id: input_select.harmony
-    from: 'Select Input'
-  action:
-    - service: remote.turn_on
-      entity_id: remote.livingroom
-      data_template:
-        activity: >
-          {% if is_state("input_select.harmony", "Play Switch") %}
-            39577141
-          {% elif is_state("input_select.harmony", "Watch Android TV") %}
-            43103950
-          {% else %}
-          {% endif %}
-    - service: input_select.select_option
-      entity_id: input_select.harmony
-      data_template:
-        option: "Select Input"
+# - alias: Harmony
+#   trigger:
+#     platform: state
+#     entity_id: input_select.harmony
+#     from: 'Select Input'
+#   action:
+#     - service: remote.turn_on
+#       entity_id: remote.livingroom
+#       data_template:
+#         activity: >
+#           {% if is_state("input_select.harmony", "Play Switch") %}
+#             39577141
+#           {% elif is_state("input_select.harmony", "Watch Android TV") %}
+#             43103950
+#           {% else %}
+#           {% endif %}
+#     - service: input_select.select_option
+#       entity_id: input_select.harmony
+#       data_template:
+#         option: "Select Input"
 
-- alias: Harmony Off
-  trigger:
-    platform: state
-    entity_id: input_select.harmony
-    to: 'Power Off'
-  action:
-    - service: remote.turn_off
-      entity_id: remote.livingroom
-    - service: input_select.select_option
-      entity_id: input_select.harmony
-      data_template:
-        option: "Select Input"
+#- alias: Harmony Off
+#  trigger:
+#    platform: state
+#    entity_id: input_select.harmony
+#    to: 'Power Off'
+#  action:
+#    - service: remote.turn_off
+#      entity_id: remote.livingroom
+#    - service: input_select.select_option
+#      entity_id: input_select.harmony
+#      data_template:
+#        option: "Select Input"
 
-- alias: Harmony Light Control Start
-  trigger: 
-    - platform: state
-      entity_id: input_boolean.harmony_lighting_control
-      from: 'off'
-      to: 'on'
-    - platform: state
-      entity_id: media_player.plex_shield_android_tv
-      to: 'playing'
-  condition:
-    - condition: state
-      entity_id: input_boolean.harmony_lighting_control
-      state: 'on'
-    - condition: state
-      entity_id: light.living_room_lights
-      state: 'on'
-    - condition: numeric_state
-      entity_id: sun.sun
-      value_template: '{{ state.attributes.elevation }}'
-      below: 12
-    - condition: state
-      entity_id: input_boolean.movie_mode
-      state: 'off'
-    - condition: template
-      value_template: >
-        {% if states.media_player.plex_shield_android_tv.state == "playing" %}
-          {{ states.media_player.plex_shield_android_tv.state == "playing" and states.media_player.plex_shield_android_tv.attributes.app_name in ["Movies", "UHD Movies"] and states.media_player.plex_shield_android_tv.attributes.media_content_rating in ["PG-13", "R", "NC-17", "Unrated", "TV-MA"]}}
-        {% else %}}
-          true
-        {% endif %}
-  action:
-    - service: input_number.set_value
-      entity_id: input_number.harmony_dim
-      data_template:
-        value: '{{states.sensor.brightness_lr.state}}'
-    - service: light.turn_on
-      entity_id: light.living_room_lights
-      data_template:
-        brightness: >
-          {% if states.input_number.harmony_dim.state|int >=60 %}
-            60
-          {% else %}
-            {{ states.input_number.harmony_dim.state }}
-          {% endif %}
-        color_temp: >
-          {% if (states.sensor.decimal_time.state | round(2)) <= 05.00 %}
-            500
-          {% elif (states.sensor.decimal_time.state | round(2)) <= 09.50 %}
-            200
-          {% elif (states.sensor.decimal_time.state | round(2)) >= 22.25 %}
-            500
-          {% elif states.sun.sun.attributes.elevation < 8 %}
-            366
-          {% elif (states.sensor.decimal_time.state | round(2)) > 9.50 %}
-            300
-          {% else %}
-          {% endif %}
-    - service: light.turn_on
-      entity_id: light.bias_light
-      data_template:
-        color_temp: >
-          {% if (states.sensor.decimal_time.state | round(2)) <= 05.00 %}
-            500
-          {% elif (states.sensor.decimal_time.state | round(2)) <= 09.50 %}
-            200
-          {% elif (states.sensor.decimal_time.state | round(2)) >= 22.25 %}
-            500
-          {% elif states.sun.sun.attributes.elevation < 8 %}
-            300
-          {% elif (states.sensor.decimal_time.state | round(2)) > 9.50 %}
-            250
-          {% else %}
-          {% endif %}
+# - alias: Harmony Light Control Start
+#   trigger: 
+#     - platform: state
+#       entity_id: input_boolean.harmony_lighting_control
+#       from: 'off'
+#       to: 'on'
+#     - platform: state
+#       entity_id: media_player.plex_shield_android_tv
+#       to: 'playing'
+#   condition:
+#     - condition: state
+#       entity_id: input_boolean.harmony_lighting_control
+#       state: 'on'
+#     - condition: state
+#       entity_id: light.living_room_lights
+#       state: 'on'
+#     - condition: numeric_state
+#       entity_id: sun.sun
+#       value_template: '{{ state.attributes.elevation }}'
+#       below: 12
+#     - condition: state
+#       entity_id: input_boolean.movie_mode
+#       state: 'off'
+#     - condition: template
+#       value_template: >
+#         {% if states.media_player.plex_shield_android_tv.state == "playing" %}
+#           {{ states.media_player.plex_shield_android_tv.state == "playing" and states.media_player.plex_shield_android_tv.attributes.app_name in ["Movies", "UHD Movies"] and states.media_player.plex_shield_android_tv.attributes.media_content_rating in ["PG-13", "R", "NC-17", "Unrated", "TV-MA"]}}
+#         {% else %}}
+#           true
+#         {% endif %}
+#   action:
+#     - service: input_number.set_value
+#       entity_id: input_number.harmony_dim
+#       data_template:
+#         value: '{{states.sensor.brightness_lr.state}}'
+#     - service: light.turn_on
+#       entity_id: light.living_room_lights
+#       data_template:
+#         brightness: >
+#           {% if states.input_number.harmony_dim.state|int >=60 %}
+#             60
+#           {% else %}
+#             {{ states.input_number.harmony_dim.state }}
+#           {% endif %}
+#         color_temp: >
+#           {% if (states.sensor.decimal_time.state | round(2)) <= 05.00 %}
+#             500
+#           {% elif (states.sensor.decimal_time.state | round(2)) <= 09.50 %}
+#             200
+#           {% elif (states.sensor.decimal_time.state | round(2)) >= 22.25 %}
+#             500
+#           {% elif states.sun.sun.attributes.elevation < 8 %}
+#             366
+#           {% elif (states.sensor.decimal_time.state | round(2)) > 9.50 %}
+#             300
+#           {% else %}
+#           {% endif %}
+#     - service: light.turn_on
+#       entity_id: light.bias_light
+#       data_template:
+#         color_temp: >
+#           {% if (states.sensor.decimal_time.state | round(2)) <= 05.00 %}
+#             500
+#           {% elif (states.sensor.decimal_time.state | round(2)) <= 09.50 %}
+#             200
+#           {% elif (states.sensor.decimal_time.state | round(2)) >= 22.25 %}
+#             500
+#           {% elif states.sun.sun.attributes.elevation < 8 %}
+#             300
+#           {% elif (states.sensor.decimal_time.state | round(2)) > 9.50 %}
+#             250
+#           {% else %}
+#           {% endif %}
       
-- alias: Harmony Light Control End
-  trigger: 
-    - platform: state
-      entity_id: media_player.plex_shield_android_tv
-      to: 
-        - 'paused'    
-        - 'stopped'
-        - 'idle'
-  condition: 
-    - condition: or
-      conditions:
-        - condition: state
-          entity_id: sensor.current_activity
-          state: 'Play Switch'
-        - condition: state
-          entity_id: sensor.current_activity
-          state: 'PowerOff'
-        - condition: state
-          entity_id: sensor.current_activity
-          state: 'Watch Android TV'
-    - condition: state
-      entity_id: light.living_room_lights
-      state: 'on'
-    - condition: numeric_state
-      entity_id: sun.sun
-      value_template: '{{ state.attributes.elevation }}'
-      below: 12
-    - condition: state
-      entity_id: input_boolean.movie_mode
-      state: 'off'
-    - condition: state
-      entity_id: input_boolean.goodnight_initiated
-      state: 'off'
-  action: 
-    service: light.turn_on
-    entity_id: light.living_room_lights
-    data:
-      transition: 3
-    data_template:
-      brightness:
-        '{{states.input_number.harmony_dim.state | int }}'
-      color_temp: >
-          {% if (states.sensor.decimal_time.state | round(2)) <= 05.00 %}
-            500
-          {% elif (states.sensor.decimal_time.state | round(2)) <= 09.50 %}
-            200
-          {% elif (states.sensor.decimal_time.state | round(2)) >= 22.25 %}
-            500
-          {% elif states.sun.sun.attributes.elevation < 8 %}
-            366
-          {% elif (states.sensor.decimal_time.state | round(2)) > 9.50 %}
-            300
-          {% else %}
-          {% endif %}
+# - alias: Harmony Light Control End
+#   trigger: 
+#     - platform: state
+#       entity_id: media_player.plex_shield_android_tv
+#       to: 
+#         - 'paused'    
+#         - 'stopped'
+#         - 'idle'
+#   condition: 
+#     - condition: or
+#       conditions:
+#         - condition: state
+#           entity_id: sensor.current_activity
+#           state: 'Play Switch'
+#         - condition: state
+#           entity_id: sensor.current_activity
+#           state: 'PowerOff'
+#         - condition: state
+#           entity_id: sensor.current_activity
+#           state: 'Watch Android TV'
+#     - condition: state
+#       entity_id: light.living_room_lights
+#       state: 'on'
+#     - condition: numeric_state
+#       entity_id: sun.sun
+#       value_template: '{{ state.attributes.elevation }}'
+#       below: 12
+#     - condition: state
+#       entity_id: input_boolean.movie_mode
+#       state: 'off'
+#     - condition: state
+#       entity_id: input_boolean.goodnight_initiated
+#       state: 'off'
+#   action: 
+#     service: light.turn_on
+#     entity_id: light.living_room_lights
+#     data:
+#       transition: 3
+#     data_template:
+#       brightness:
+#         '{{states.input_number.harmony_dim.state | int }}'
+#       color_temp: >
+#           {% if (states.sensor.decimal_time.state | round(2)) <= 05.00 %}
+#             500
+#           {% elif (states.sensor.decimal_time.state | round(2)) <= 09.50 %}
+#             200
+#           {% elif (states.sensor.decimal_time.state | round(2)) >= 22.25 %}
+#             500
+#           {% elif states.sun.sun.attributes.elevation < 8 %}
+#             366
+#           {% elif (states.sensor.decimal_time.state | round(2)) > 9.50 %}
+#             300
+#           {% else %}
+#           {% endif %}
 
-- alias: Harmony Lighting Control Off
-  trigger: 
-    - platform: state
-      entity_id: input_boolean.harmony_lighting_control
-      from: 'on'
-      to: 'off'
-  action: 
-    service: light.turn_on
-    entity_id: light.living_room_lights
-    data_template:
-      brightness: 
-        '{{ states.input_number.harmony_dim.state | int }}'
+# - alias: Harmony Lighting Control Off
+#   trigger: 
+#     - platform: state
+#       entity_id: input_boolean.harmony_lighting_control
+#       from: 'on'
+#       to: 'off'
+#   action: 
+#     service: light.turn_on
+#     entity_id: light.living_room_lights
+#     data_template:
+#       brightness: 
+#         '{{ states.input_number.harmony_dim.state | int }}'
 
 #- alias: Harmony Cast Control Start
 #  trigger: 

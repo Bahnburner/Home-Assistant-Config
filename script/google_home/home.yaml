@@ -8,7 +8,5 @@ home:
       entity_id: automation.home_mode_general
     - service: automation.trigger
       entity_id: automation.home_mode_bedroom
-    - service: remote.turn_on
-      entity_id: remote.livingroom
-      data:
-        activity: 19594181
+    - service: media_player.turn_on
+      entity_id: media_player.shield_tv

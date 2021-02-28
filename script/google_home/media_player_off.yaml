@@ -14,4 +14,4 @@ media_player_off:
         - media_player.nursery_tv
         - media_player.nursery_assistant
         - media_player.mancave_tv
-        
+        - media_player.shield_tv

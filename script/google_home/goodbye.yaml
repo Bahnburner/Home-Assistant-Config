@@ -13,8 +13,8 @@ goodbye:
       entity_id: cover.garage_door_opener
     - service: light.turn_off
       entity_id: light.bias_light
-    - service: remote.turn_off
-      entity_id: remote.livingroom
+    - service: media_player.turn_off
+      entity_id: media_player.shield_tv
     - service: script.media_player_off
     - service: automation.trigger
       entity_id: automation.away_mode_puppies
