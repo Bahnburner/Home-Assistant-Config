@@ -25,16 +25,6 @@
     - temperature_low
 - platform: template
   sensors:
-    current_activity:
-      friendly_name: 'Current Activity'
-      value_template: >
-        {% if states.remote.livingroom.attributes.current_activity == null or states.remote.livingroom.attributes.current_activity == "Unknown" %}
-          Unknown
-        {% elif states.remote.livingroom.attributes.current_activity == "PowerOff" %}
-          Power Off
-        {% else %}
-          {{states.remote.livingroom.attributes.current_activity}}
-        {% endif %}
     current_activity_bedroom_tv:
       friendly_name: 'Current Activity'
       value_template: >
