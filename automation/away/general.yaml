@@ -34,9 +34,7 @@
       entity_id:
         - light.pantry
         - light.foyer
-        - light.master_hallway
         - light.dining_room
-        - group.stairway
         - light.recessed_lights
         - light.mancave_lights
     - service: switch.turn_off
