@@ -41,9 +41,8 @@
       entity_id: media_player.vizio_smartcast
       to: 'off'
     - platform: state
-      entity_id: switch.livingroom_speaker
-      from: 'off'
-      to: 'on'
+      entity_id: media_player.vizio_smartcast
+      to: 'unknown'
 #    - platform: state
 #      entity_id: remote.livingroom
 #      to: 'off'
