@@ -3,7 +3,7 @@
     - platform: state
       entity_id: media_player.vizio_smartcast
       to: 'on'
-    - platfrom: state
+    - platform: state
       entity_id: switch.livingroom_speaker
       from: 'off'
       to: 'on'
