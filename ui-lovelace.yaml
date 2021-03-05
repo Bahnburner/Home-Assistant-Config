@@ -561,8 +561,6 @@ views:
       - type: media-control
         entity: media_player.livingroom_tv
       - type: media-control
-        entity: media_player.livingroom_speaker
-      - type: media-control
         entity: media_player.mancave_assistant
       - type: media-control
         entity: media_player.mancave_tv
