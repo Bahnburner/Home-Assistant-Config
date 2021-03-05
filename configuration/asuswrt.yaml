@@ -1,4 +1,4 @@
-  host: 10.0.0.1
-  protocol: ssh
-  username: !secret router_user
-  password: !secret router_pass
+#  host: 10.0.0.1
+#  protocol: ssh
+#  username: !secret router_user
+#  password: !secret router_pass
