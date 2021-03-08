@@ -132,8 +132,8 @@
   api_key: !secret tautulli
   host: 10.0.0.109
   scan_interval: 5
-- platform: nws_alerts
-  zone_id: 'TNC157'
-  name: Severe Weather Alerts
+#- platform: nws_alerts
+#  zone_id: 'TNC157'
+#  name: Severe Weather Alerts
 
 - platform: plex_assistant
