@@ -60,7 +60,7 @@
     at: '9:30:00'
   condition:
     - condition: state
-      entity_id: light.bias_light
+      entity_id: switch.livingroom_speaker
       state: 'on'
     - condition: template
       value_template: '{{ states.light.bias_light.attributes.color_temp == 200 }}'
