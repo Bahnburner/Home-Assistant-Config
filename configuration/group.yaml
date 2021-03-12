@@ -259,7 +259,5 @@ disable_all_automations:
 office_lights:
   - light.desk_light
   - light.man_cave_floor_lamp
-  - light.office_bias_light_left
-  - light.office_bias_light_right
-  - light.office_bias_light_center
+  - light.hue_play_bar
   - light.office_corner_lamp  
