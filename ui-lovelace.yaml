@@ -457,11 +457,6 @@ views:
             icon: mdi:cast-connected
             group: true
             artwork: none
-          - type: custom:mini-media-player
-            entity: media_player.nursery_assistant
-            icon: mdi:google-home
-            group: true
-            artwork: none
         state_filter:
           - playing
         show_empty: false 
