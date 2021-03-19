@@ -1,6 +1,6 @@
 #- platform: bluetooth_tracker
 #  track_new_devices: false
 #  consider_home: 180
-- platform: google_maps
-  username: !secret maps_user
-  track_new_devices: false
+#- platform: google_maps
+#  username: !secret maps_user
+#  track_new_devices: false
