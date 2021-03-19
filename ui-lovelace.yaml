@@ -417,6 +417,12 @@ views:
             icon: mdi:google-home
             group: true
             artwork: none   
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - entity: light.nightlight
+                image: /local/resources/images/devices/smartthings.png          
+            
 
 ##################################
 # Filter cards for Misc Media Players #
