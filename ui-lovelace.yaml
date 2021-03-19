@@ -407,16 +407,22 @@ views:
             service: script.jensens_bedtime
             show_state: false
             entity: automation.startup
-          - type: custom:mini-media-player
-            entity: media_player.nursery_tv
-            icon: mdi:cast-connected
-            group: true
-            artwork: cover-full       
-          - type: custom:mini-media-player
-            entity: media_player.nursery_assistant
-            icon: mdi:google-home
-            group: true
-            artwork: none   
+          - type: entity-filter
+            show_header_toggle: false
+            entities:
+            - type: custom:mini-media-player
+              entity: media_player.nursery_assistant
+              icon: mdi:google-home
+              group: true
+              artwork: none
+            - type: custom:mini-media-player
+              entity: media_player.media_player.nursery_tv
+              icon: mdi:cast-connected
+              group: true
+              artwork: none              
+            state_filter:
+              - playing
+            show_empty: false             
           - type: entities
             show_header_toggle: false
             entities:
