@@ -71,11 +71,11 @@ crystals_phone:
   - device_tracker.sm_n986u_2
 family:
   - sensor.away_toggle
-  - group.tristans_phone
-  - group.crystals_phone
+  - person.crystal
+  - person.tristan
 tristal:
-  - group.tristans_phone
-  - group.crystals_phone
+  - person.tristan
+  - person.crystal
   - sensor.away_toggle
 christmas:
   switch.christmas_lights
