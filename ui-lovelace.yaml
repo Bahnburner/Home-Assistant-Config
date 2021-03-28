@@ -405,8 +405,8 @@ views:
             tap_action: none
             hold_action: call_service
             service: script.jensens_bedtime
-            show_state: false
-            entity: automation.startup
+            show_state: true
+            entity: light.ceiling_light
           - type: entity-filter
             show_header_toggle: false
             entities:
