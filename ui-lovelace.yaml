@@ -427,7 +427,7 @@ views:
             show_header_toggle: false
             entities:
               - entity: light.ceiling_light
-                image: /local/resources/images/devices/smartthigns.png
+                image: /local/resources/images/devices/smartthings.png
               - entity: switch.nightlight
                 image: /local/resources/images/devices/smartthings.png          
             
