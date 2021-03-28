@@ -430,6 +430,7 @@ views:
                 image: /local/resources/images/devices/smartthings.png
               - entity: switch.nightlight
                 image: /local/resources/images/devices/smartthings.png          
+                name: Nightlight
             
 
 ##################################
