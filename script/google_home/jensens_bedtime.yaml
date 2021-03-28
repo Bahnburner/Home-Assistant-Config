@@ -3,3 +3,9 @@ jensens_bedtime:
     - service: media_player.turn_off
       entity_id: media_player.nursery_tv
     - service: script.whitenoise_jensen
+    - service: light.turn_on
+      entity_id: light.ceiling_light
+      data:
+        brightness: 5
+        transition: 15
+        

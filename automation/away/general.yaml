@@ -32,6 +32,7 @@
       entity_id: media_player.shield_tv
     - service: light.turn_off
       entity_id:
+        - light.ceiling_light
         - light.pantry
         - light.foyer
         - light.dining_room
