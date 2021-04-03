@@ -1,9 +1,6 @@
 - alias: Bias Light On
   trigger:
     - platform: state
-      entity_id: media_player.vizio_smartcast
-      to: 'on'
-    - platform: state
       entity_id: switch.livingroom_speaker
       from: 'off'
       to: 'on'
@@ -34,12 +31,6 @@
         
 - alias: Bias Light Off
   trigger:
-    - platform: state
-      entity_id: media_player.vizio_smartcast
-      to: 'off'
-    - platform: state
-      entity_id: media_player.vizio_smartcast
-      to: 'unknown'
     - platform: state
       entity_id: switch.livingroom_speaker
       from: 'on'
