@@ -195,7 +195,7 @@ office_on:
       - light.office_corner_lamp  
     data:
       brightness: 255
-      color_temp: 300
+      color_temp: 350
       
 office_off:
   mode: restart
