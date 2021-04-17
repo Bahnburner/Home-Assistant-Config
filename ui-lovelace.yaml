@@ -48,7 +48,8 @@ views:
             entities:
               - lock.front_door
               - lock.back_door
-              - cover.garage_door_opener
+              - entity: cover.garage_door_opener
+                secondary_info: position
 #### LIVINGROOM STACK
       - type: vertical-stack
         cards:
