@@ -12,9 +12,12 @@
       entity_id: group.family
       state: 'not_home'
   action:
-    service: light.turn_on
-    entity_id: light.living_room_lights
-    data:
-      color_temp: 366
-      brightness: 150
-      transition: 600
+    - service: light.turn_on
+      entity_id: light.living_room_lights
+      data:
+        color_temp: 366
+        brightness: 150
+        transition: 600
+    - service: switch.turn_on
+      entity_id: switch.nightlight
+      
