@@ -49,7 +49,6 @@ views:
               - lock.front_door
               - lock.back_door
               - entity: cover.garage_door_opener
-                secondary_info: position
 #### LIVINGROOM STACK
       - type: vertical-stack
         cards:
@@ -432,6 +431,9 @@ views:
               - entity: switch.nightlight
                 image: /local/resources/images/devices/smartthings.png          
                 name: Nightlight
+              - entity: script.jensens_bedtime
+                name: Jensen's Bedtime Routine
+                image: /local/resources/images/devices/google_home.png
             
 
 ##################################
