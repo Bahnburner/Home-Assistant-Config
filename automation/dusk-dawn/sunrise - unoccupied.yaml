@@ -15,3 +15,5 @@
         - light.pantry
       data: 
         transition: 60
+    - service: swtich.turn_off
+      entity_id: switch.nightlight
