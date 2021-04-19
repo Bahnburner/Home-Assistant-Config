@@ -13,7 +13,7 @@ homeassistant:
   unit_system: imperial
   time_zone: America/Chicago
   customize: !include_dir_merge_named customize
-  whitelist_external_dirs:
+  allowlist_external_dirs:
     - '/config'
 
 
