@@ -14,7 +14,8 @@ homeassistant:
   time_zone: America/Chicago
   customize: !include_dir_merge_named customize
   allowlist_external_dirs:
-    - '/config'
+    - /config
+    - /config/www
 
 
 config:
