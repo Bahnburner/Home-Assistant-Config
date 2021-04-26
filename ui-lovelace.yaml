@@ -50,8 +50,6 @@ views:
               - lock.front_door
               - lock.back_door
               - entity: cover.garage_door_opener
-                type: "custom:secondaryinfo-entity-row"
-                secondary_info: "[[ cover.garage_door_opener.state ]]"
                 
                 
 #### LIVINGROOM STACK
