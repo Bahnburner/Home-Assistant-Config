@@ -15,9 +15,9 @@ resources:
     type: module
   - url: /local/resources/cards/mini-graph-card-bundle.js?v=0.9.3
     type: module    
-  - url: /local/community/lovelace-card-tools/card-tools.js
+  - url: /local/resources/cards/lovelace-card-tools/card-tools.js
     type: module
-  - url: /local/community/secondaryinfo-entity-row/secondaryinfo-entity-row.js
+  - url: /local/resources/cards/secondaryinfo-entity-row/secondaryinfo-entity-row.js
     type: module
 
 title: Hidden Ridge
