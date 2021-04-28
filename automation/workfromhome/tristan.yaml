@@ -1,0 +1,42 @@
+- alias: tristan wfh start
+  trigger:
+    platform: time
+    at: "09:30:00"
+  condition: 
+    - condition: state
+      entity_id: person.crystal
+      state: "not_home"
+    - condition: state
+      entity_id: person.tristan
+      state: "home"
+    - condition: state
+      entity_id: light.office_bias_light
+      state: "on"
+    - condition: state
+      entity_id: media_player.shield_tv
+      state: "off"
+  action: 
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.tristan_wfh
+    - service: light.turn_off
+      entity_id: 
+        - light.living_room_lights
+        - light.bedroom_lights
+      
+- alias: tristan wfh stop
+  trigger: 
+    platform: time
+    at: "16:30:00"
+  condition:
+    condition: state
+    entity_id: input_boolean.tristan_wfh
+    state: "on"
+  action:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.tristan_wfh
+    - service: light.turn_on
+      entity_id: 
+        - light.living_room_lights
+        - light.bedroom_lights
+    
+      
