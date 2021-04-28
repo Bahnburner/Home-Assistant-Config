@@ -504,6 +504,9 @@ views:
         show_header_toggle: false
         title: Man Cave
         entities:
+          - entity: light.man_cave_ceiling_light
+            name: Ceiling Light
+            image: /local/resources/images/devices/smartthings.png
           - entity: light.office_bias_light
             name: Monitor Bias Light
             image: /local/resources/images/devices/hue.png
