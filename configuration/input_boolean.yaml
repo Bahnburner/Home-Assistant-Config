@@ -34,3 +34,5 @@
     initial: off
   ghh_disabler:
     initial: off
+  tristan_wfh:
+    initial: off    
