@@ -224,6 +224,9 @@ office_off:
       entity_id: light.man_cave_floor_lamp
     - delay:
         seconds: 150
+    - condition: state
+      entity_id: light.hue_play_bar
+      state: "off"
     - service: light.turn_off
       entity_id: light.man_cave_ceiling_light
       
