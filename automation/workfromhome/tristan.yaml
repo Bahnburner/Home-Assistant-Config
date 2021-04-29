@@ -5,7 +5,9 @@
   condition: 
     - condition: state
       entity_id: person.crystal
-      state: "not_home"
+      state: 
+        - "not_home"
+        - "TTC"
     - condition: state
       entity_id: person.tristan
       state: "home"
