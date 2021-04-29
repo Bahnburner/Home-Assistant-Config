@@ -3,9 +3,8 @@
     platform: time
     at: "09:30:00"
   condition: 
-    - condition: state
-      entity_id: person.crystal
-      state: "not_home"
+    - condition: template
+      value_template: '{{ states.person.crystal.state != "home" }}'
     - condition: state
       entity_id: person.tristan
       state: "home"
