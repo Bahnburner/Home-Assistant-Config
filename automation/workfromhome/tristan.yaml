@@ -17,6 +17,13 @@
     - condition: state
       entity_id: media_player.shield_tv
       state: "off"
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
   action: 
     - service: input_boolean.turn_on
       entity_id: input_boolean.tristan_wfh
@@ -41,4 +48,48 @@
         - light.living_room_lights
         - light.bedroom_lights
     
-      
+- alias: wfh lunch start
+  trigger:
+    platform: state
+    entity_id: lights.office_bias_light
+    from: "on"
+    to: "off"
+  condition:
+    - condition: state
+      entity_id: input_boolean.tristan_wfh
+      state: "on"
+    - condition: time
+      after: "11:00:00"
+      before: "14:00:00"
+  action:
+    - service: turn_on
+      entity_id:
+        - light.living_room_lights
+        - light.bedroom_lights
+        - light.recessed_lights
+    - service: media_player.turn_on
+      entity_id: media_player.shield_tv
+    - service: lock.unlock
+      entity_id: lock.back_door
+     
+- alias: wfh lunch end
+  trigger: 
+    platform: state
+    entity_id: light.office_bias_light
+    state: "on"
+  condition:
+    - condition: state
+      entity_id: input_boolean.tristan_wfh
+      state: "on"
+    - condition: time
+      after: "11:00:00"
+      before: "15:00:00"
+  action:
+    - service: turn_off
+      entity_id:
+        - light.living_room_lights
+        - light.bedroom_lights
+        - light.recessed_lights
+    - service: media_player.turn_off
+      entity_id: media_player.shield_tv
+    
