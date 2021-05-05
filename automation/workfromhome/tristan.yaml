@@ -76,7 +76,7 @@
   trigger: 
     platform: state
     entity_id: light.office_bias_light
-    state: "on"
+    to: "on"
   condition:
     - condition: state
       entity_id: input_boolean.tristan_wfh
