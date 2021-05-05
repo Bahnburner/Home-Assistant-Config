@@ -30,7 +30,7 @@
     - service: light.turn_off
       entity_id: 
         - light.living_room_lights
-        - light.bedroom_lights
+        - light.master_bedroom
       
 - alias: tristan wfh stop
   trigger: 
@@ -46,7 +46,7 @@
     - service: light.turn_on
       entity_id: 
         - light.living_room_lights
-        - light.bedroom_lights
+        - light.master_bedroom
     
 - alias: wfh lunch start
   trigger:
@@ -65,7 +65,7 @@
     - service: turn_on
       entity_id:
         - light.living_room_lights
-        - light.bedroom_lights
+        - light.master_bedroom
         - light.recessed_lights
     - service: media_player.turn_on
       entity_id: media_player.shield_tv
@@ -88,7 +88,7 @@
     - service: turn_off
       entity_id:
         - light.living_room_lights
-        - light.bedroom_lights
+        - light.master_bedroom
         - light.recessed_lights
     - service: media_player.turn_off
       entity_id: media_player.shield_tv
