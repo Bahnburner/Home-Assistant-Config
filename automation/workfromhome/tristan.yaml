@@ -60,7 +60,7 @@
       state: "on"
     - condition: time
       after: "11:00:00"
-      before: "14:00:00"
+      before: "15:00:00"
   action:
     - service: lights.turn_on
       entity_id:
@@ -83,7 +83,7 @@
       state: "on"
     - condition: time
       after: "11:00:00"
-      before: "15:00:00"
+      before: "16:00:00"
   action:
     - service: light.turn_off
       entity_id:
