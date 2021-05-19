@@ -51,8 +51,7 @@
 - alias: wfh lunch start
   trigger:
     platform: state
-    entity_id: lights.office_bias_light
-    from: "on"
+    entity_id: light.office_bias_light
     to: "off"
   condition:
     - condition: state
