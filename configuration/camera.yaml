@@ -1,4 +1,4 @@
 - platform: mjpeg
   name: OctoPrint
-  still_image_url: http://10.0.0.152:88/webcam/?action=snapshot
-  mjpeg_url: http://10.0.0.152:88/webcam/?action=stream
+  still_image_url: http://10.0.0.152/webcam/?action=snapshot
+  mjpeg_url: http://10.0.0.152/webcam/?action=stream
