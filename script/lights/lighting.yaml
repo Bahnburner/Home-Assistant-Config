@@ -188,24 +188,18 @@ office_on:
   mode: restart
   sequence:
     - service: light.turn_on
-      entity_id: light.hue_play_bar
-      data:
-        brightness: 255
-        color_temp: 350
-    - delay:
-        seconds: 3
-    - service: light.turn_on
       entity_id:
         - light.desk_light
         - light.man_cave_floor_lamp
         - light.office_corner_lamp  
+        - light.hue_play_bar
       data:
         brightness: 255
         color_temp: 350
     - service: light.turn_on
       entity_id: light.man_cave_ceiling_light
       data: 
-        brightness: 255
+        brightness: 100
       
 office_off:
   mode: restart
