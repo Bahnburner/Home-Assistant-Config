@@ -61,7 +61,7 @@
       after: "11:00:00"
       before: "15:00:00"
   action:
-    - service: lights.turn_on
+    - service: light.turn_on
       entity_id:
         - light.living_room_lights
         - light.master_bedroom
