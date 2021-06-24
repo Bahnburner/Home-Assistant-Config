@@ -199,7 +199,7 @@ office_on:
     - service: light.turn_on
       entity_id: light.man_cave_ceiling_light
       data: 
-        brightness: 100
+        brightness: 200
       
 office_off:
   mode: restart
