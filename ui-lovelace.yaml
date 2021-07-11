@@ -286,7 +286,8 @@ views:
               - switch.overhead_light
               - light.recessed_lights
               - switch.chandelier
-              - light.pantry
+              - entity: light.pantry
+                image: /local/resources/images/devices/smartthings.png
               - light.cabinet_lights
               - sensor.protect_kitchen
           - type: entities
