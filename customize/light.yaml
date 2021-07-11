@@ -25,7 +25,7 @@ light.bedroom_floor_lamp:
   entity_picture: /local/resources/images/devices/hue.png
   icon: mdi:floor-lamp
 light.pantry:
-  entity_picture: /local/resources/images/devices/hue.png
+  entity_picture: /local/resources/images/devices/smartthings.png
   icon: mdi:door
 light.frontdoor:
   entity_picture: /local/resources/images/devices/smartthings.png
